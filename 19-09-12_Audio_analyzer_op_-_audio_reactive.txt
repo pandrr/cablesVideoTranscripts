@@ -1,7 +1,7 @@
 https://www.youtube.com/watch?v=3m-2F2T1f6w
 Hi there, and welcome to another video of Made with Cables.
 My name is Mark, my handle on the forums is Andro,
-and today I'll be giving you a basic introduction to audio analysis techniques inside of Cables GL.
+and today I'll be giving you a basic introduction to audio analysis techniques inside of cables.gl.
 So what does this mean?
 It means that we're going to be loading up an audio setup later so we can grab an audio file,
 play it off, analyze it, and do something with the data that we get out of that.

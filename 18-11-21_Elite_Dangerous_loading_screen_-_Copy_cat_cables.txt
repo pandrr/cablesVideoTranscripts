@@ -5,7 +5,7 @@ So, we're going to start off today with trying to recreate something that's from
 Elite Dangerous has this really nice effect on the loading screen where you see the ship and it's outlined in orange and you have this nice glow.
 And if you look at different ships, you get kind of different effects.
 I just really love this and I thought it was a really great simple thing to start off with for the Copycat series.
-So, I'd also like to say thanks to Panda for showing me how to get this done because I was a little bit stuck with it.
+So, I'd also like to say thanks to pandur for showing me how to get this done because I was a little bit stuck with it.
 So, let's get started.
 So, we're going to go to our Cables patch here.
 First of all, I'm going to set up with a Main Loop.

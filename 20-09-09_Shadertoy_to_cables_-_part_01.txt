@@ -1,7 +1,7 @@
 https://www.youtube.com/watch?v=j_ins4RW0c8
 Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
 forums is Andrew and today I'll be showing you how to put this shader from shadertoy.com into
-a Cables GL patch with the custom shader op. Now we get this question quite a lot sometimes like
+a cables.gl patch with the custom shader op. Now we get this question quite a lot sometimes like
 how do I put something from shadertoy into cables and it's actually really not that difficult once
 you know how. So I really like this shader, it's a great way to start the tutorial series off with
 and it's audio reactive which is also really cool. So the audio level here is changing the brightness

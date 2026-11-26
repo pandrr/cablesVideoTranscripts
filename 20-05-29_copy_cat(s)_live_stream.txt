@@ -1,11 +1,11 @@
 https://www.youtube.com/watch?v=iNdHuqGWF8A
-good evening everybody uh can you guys hear me hey panda i just want to check
+good evening everybody uh can you guys hear me hey pandur i just want to check
 yo hello hello everybody ah good evening ah it's always nice when somebody responds
 and you shout out into the the void hello we're machenbund hope i'm saying that right with my
 amazing german accent there uh as you all know i'm really good with that uh let's let's get something
 started up so um i'm going to start in just a minute or two give uh people a little bit of time
 to uh come in hello from imi the void shot is back hot oh that's sweet um so yeah um i hope some of you
-were able to catch the awesome stream last week from panda and um steam they did a really cool one
+were able to catch the awesome stream last week from pandur and um steam they did a really cool one
 with html and css ops if you missed it then you should totally um check it out because i also
 learned a whole lot of uh new things uh from that hold it wait do i i don't think i need this tonight
 let's get the microphone a bit in a better position okay um so uh that was a really great stream i'm
@@ -39,7 +39,7 @@ trying um some of these basically uh and i'm gonna give myself like maybe 15 20 
 quicker that's great um if it doesn't um then yeah i mean i'm not going to spend all night getting
 stuck um on one basically that's not something that i want to do and there's a really high chance of
 failure because of course the more different things i'm going to try on the stream uh the more chance
-there is that things that go wrong so i'm hoping that uh panda or any other knowledgeable cables user
+there is that things that go wrong so i'm hoping that uh pandur or any other knowledgeable cables user
 might be able to uh point out um what i could do so as you can see there's a lot of really cool um
 little ideas here you know and i was thinking of doing something like this um these these these um
 display sphere things to start with and it looks really simple and i've got an idea and that's the
@@ -197,7 +197,7 @@ there we go that's that's closer and i could tweak all the lighting and try and 
 now but um i'm not going to do that because this was close enough for me all right so
 that's another one down god this is intense okay oh i don't know if i could do that one that's uh
 that is really not as simple as it seems
-maybe panda would notice if i do that with mesh instancer if vertex displacement would then
+maybe pandur would notice if i do that with mesh instancer if vertex displacement would then
 yeah i don't know i could do that with it okay no and this one i'm not too sure about
 oh right and then it presents like the simpler version right hmm would this one be possible i've
 got a feeling that'll be difficult i might come back to it later i might come back to it later let's
@@ -347,7 +347,7 @@ okay yeah and then this on
 i have 10 right okay i'm just gonna cheat
 i need to do all of the the matrix math right now let's put on one and then we should get a kind of like endless thing okay
 um what's the url of that gif page um if i'm gonna give that out i'm i'm not taking requests right now all i might do
-uh is right here panda
+uh is right here pandur
 here we go so guys this is the stuff i'm looking at right now
 um feel free to uh look at it and ask me to do really difficult stuff that i might say no to
 um so for this i'm actually probably just gonna go like this i'm gonna say image compose
@@ -625,10 +625,10 @@ uh i think that's enough time on this one close enough all right um
 oof that was tricky all right this is a feedback setup um feedback's actually not that difficult but
 it's really hard to get right so i'm not going to do that one right now i don't have like a
 i don't remember how to do feedback out of my head oh god and whoa
-panda do you think i could do this one with the new msdf op
+pandur do you think i could do this one with the new msdf op
 this will be really difficult right like really really really difficult i think like wow each one of
 those is completely um different
-huh go figure this is panda in the house because he made uh the cool new uh msdf uh uh op
+huh go figure this is pandur in the house because he made uh the cool new uh msdf uh uh op
 um oh god and i've completely forgot oh i've not been saving the patches i've just
 been disposing of everything okay all right uh okay so focused on the screen there uh i'm gonna
 call this copper cap mini pedals and i'll i'll i'll i'll redo the rest later um tomorrow ah so silly
@@ -660,7 +660,7 @@ sorry um for the people that didn't see the question later on the stream didn't 
 now i think it did i don't know let's take a quick look
 oh that's the font my bad um
 yes it did totally did all right but that's going to take a bit longer and i think i can remember a
-really cool um old school uh trick that panda showed me with this stuff from his mighty demo scene
+really cool um old school uh trick that pandur showed me with this stuff from his mighty demo scene
 knowledge now that you can see that stuff there but that's that's like manipulating all of those array
 things that's just going to be hell on earth for me right now so let's go back to this the n just
 goes up and down so we're just going to do this right um bump and we're going to move this minus one
@@ -786,7 +786,7 @@ so okay let me save this one um as a copycat mini
 yeah that's a that's a good one oh
 all right that's that one
 hard work mini copycats hard work and uh i'm really sure this could be done
-um with um the the new msdf um text um up the panda made a short while ago that came out in the last
+um with um the the new msdf um text um up the pandur made a short while ago that came out in the last
 update um that would just require a lot of um treating very single arrays but you know it'd be
 really super fast and we wouldn't end up with all these text meshes you just have one
 um like text objects on the screen so it'll be really super fast but that would just be watching andro
@@ -800,9 +800,9 @@ wow wow yeah
 yeah a list as you wouldn't give a 3d list as you wouldn't give the sphere
 uh we've got an op um
 okay hold it let me just do this
-panda what was the up that we had that
+pandur what was the up that we had that
 uh
-random point sphere sort by axis okay let's do this panda you're gonna have to guide me
+random point sphere sort by axis okay let's do this pandur you're gonna have to guide me
 through this one so we're gonna get the random points for okay let's let's just get rid of this
 and this and whoa i'll just add all that later if i need it all right
 random point sphere okay yeah um and that's going to give us
@@ -812,7 +812,7 @@ there
 save hello anybody there
 what is happening oh didn't run this extra okay there we go
 all right let's do this all right let's do this i don't need to sequence ops
-yeah i'm going to do that in a minute uh panda i just wanted to see that this was working it's
+yeah i'm going to do that in a minute uh pandur i just wanted to see that this was working it's
 always nice to get an idea of the amount of stuff on the screen let's do 100 for now
 so uh what was it to sort um is it sorry free by distance
 sort by axis
@@ -864,7 +864,7 @@ it's on the radius down
 yo all right
 i mean that's already kind of cool right there
 yeah that's working in 3d now yeah of course these points aren't matching up anymore because like
-pando said uh basically you know if we get this and we plug that into the works but then we get a
+pandur said uh basically you know if we get this and we plug that into the works but then we get a
 million uh points basically so let me just disconnect this
 because he's just basically got a few would that work with repeat god would andro use a repeat for a
 second time in the evening good god find out in next week's episode of um
@@ -883,7 +883,7 @@ and what was it again time has to go into offset that was it okay so we get time
 that can go
 still don't see why it's not exactly adding up is it because of this
 what am i missing there
-spread to zero okay yes thank you panda that was it
+spread to zero okay yes thank you pandur that was it
 all right so now we put this on orthogonal and we go to point material and we can make those points
 bigger let's take a look at this again he just does all white right and we're doing a copycat so
 that's the look we're going to go for
@@ -901,19 +901,19 @@ array path full of particles a really awesome one seriously cool
 that is
 that is not too bad i might add because
 does that
-panda we've got that one uh that i made a patch with ages ago um where you you you throw in an array of
+pandur we've got that one uh that i made a patch with ages ago um where you you you throw in an array of
 coordinates and then they're mapped to a sphere do you remember which one that is
-i am by the way everybody um panda just said spline mesh sucks well you got to have something
-panda better spline tech coming up soon i got a sneak preview today of some cool new stuff that
-panda's working on with um new spline mesh technology coming soon to cables and it's really really really
+i am by the way everybody um pandur just said spline mesh sucks well you got to have something
+pandur better spline tech coming up soon i got a sneak preview today of some cool new stuff that
+pandur's working on with um new spline mesh technology coming soon to cables and it's really really really
 awesome you you didn't know you needed it until it's going to appear in the next update
-okay yeah i really don't remember it panda you know which op i mean you just give it
+okay yeah i really don't remember it pandur you know which op i mean you just give it
 yeah it's a geocords one um map geocords spherical
 that was the one
 this one right here
 so basically um we could also use this to get any array and um you have latitude and longitude
 and then it gets mapped to a sphere um basically um i'm just really curious what this is going to do
-right now uh panda let's just take a peek
+right now uh pandur let's just take a peek
 ah okay
 right yeah this isn't gonna work
 no this isn't gonna work because these all need to be
@@ -993,7 +993,7 @@ depth map
 because i see it here
 but i'm not seeing it there do i have to change the far plane
 and there we go okay oh wow that's really affecting uh yeah for a strum
-uh there we go okay that's just way too much thanks panda 10
+uh there we go okay that's just way too much thanks pandur 10
 um
 um
 um
@@ -1009,9 +1009,9 @@ so let's just do it like this
 oh
 cosine
 and it's a lot lot brighter
-panda freshstrom near to 0.01
+pandur freshstrom near to 0.01
 um
-panda do you move the orthogonal because that's already on 0.01
+pandur do you move the orthogonal because that's already on 0.01
 uh
 ah okay great all right i mean
 this gives marder
@@ -1117,7 +1117,7 @@ actually that should just be happening only here we don't need to do that on eve
 too expensive but it's not actually expensive i'm just thinking in terms of efficiency
 so the thing is the first one is always the brightest right and that's not happening here so
 i need to find some way let's get this array
-one minus alpha right panda you mean get an array of one and subtract this from that
+one minus alpha right pandur you mean get an array of one and subtract this from that
 that sounds like it could work
 yeah i've got to use this array here though for it to match up that's this oh i think
 there's something really right there's something really simple that i'm missing
@@ -1158,7 +1158,7 @@ hmm
 yeah
 seems so simple seems so simple
 okay okay so look it's it's almost there it's just it's not
-so basically this this array i mean i think from me and panda are right there you know this this array has to be offset
+so basically this this array i mean i think from me and pandur are right there you know this this array has to be offset
 you know i'm doing that here is it because i've got to rotate it the other way
 is that it
 i already did one um minus x
@@ -1169,7 +1169,7 @@ i don't think we've got a way to normal
 i don't think we've got a way to normal
 i'll write like that of course which uh this one right
 but isn't that gonna stop them
-do you mean just panda
+do you mean just pandur
 or am i misunderstanding you
 oh into the alpha right okay my bad
 of course right okay
@@ -1216,15 +1216,15 @@ let's see who can be the first one to nail it
 if you've got the patch i'm working uh please post a link inside of the um chat and i'll open it
 straight away
 okay yeah this is um this is the exciting part of the stream everybody where uh i'm waiting with
-uh baited breath and anticipation up pandas already got it but boom okay um
+uh baited breath and anticipation up pandur's already got it but boom okay um
 let's see what he did because now i'm super curious
 oh he used map range okay
 i completely didn't think about it god mode activated
-nice one panda love it all right that was awesome okay i'm stuck one one all right um
+nice one pandur love it all right that was awesome okay i'm stuck one one all right um
 i'm stuck one one one
 it works
 it works wood
-thanks panda yeah sometimes the solution is like so simple and um looking you in the face
+thanks pandur yeah sometimes the solution is like so simple and um looking you in the face
 look at that there's so much cleaner now love it love it that was great i keep forgetting to use this
 it's like when we developed all the stuff of erase we never had the map range up
 when we made it we didn't realize why we didn't have it anymore all right so let's just take one quick
@@ -1242,7 +1242,7 @@ it's very passive you know you can ask a few things but it's like a lot of watch
 it feels like a keeper i really enjoyed it and uh i'm sorry if i went a little bit quieter sometimes
 for five minutes i was just completely trying to get into the zone of just like um realizing uh these
 things um that i had to do so i i absolutely loved it tonight with uh everybody it was it was great and
-like this part like right at the end that was also great when panda said hey can you just publish
+like this part like right at the end that was also great when pandur said hey can you just publish
 the patch and publishes the patch bam 30 seconds later it's fixed it's great for me as well uh i'm
 also learning some stuff off that uh thank you we're mackabund thank you everybody it's i i really i really
 i really enjoyed this i feel like this is the this is a thing to do way more often um because you know
@@ -1258,15 +1258,15 @@ with this and i think it's just nice that like every 15 20 minutes that uh we ha
 do right you know that uh it's not only going to be one thing for a few hours so um thank you everybody
 for um joining us um if i'm correct next week banda will be doing a stream i think i have a clue what it
 is i don't know if it's okay for me to mention it now to get the the the hype train uh going i'm uh
-uh i'm looking to my left uh yes okay cool he popped in so panda is gonna do how to demo
-because uh okay panda already said it well i'm just gonna throw it in there uh as a lot of you know
-panda has made some absolutely amazing wicked stuff by himself and with multiple people uh for demos for
+uh i'm looking to my left uh yes okay cool he popped in so pandur is gonna do how to demo
+because uh okay pandur already said it well i'm just gonna throw it in there uh as a lot of you know
+pandur has made some absolutely amazing wicked stuff by himself and with multiple people uh for demos for
 demo parties with cables for the people that don't know demo parties please go after the whole pandemic
 corona fingers over um so he's gonna show us all how to demo i'm i'm incredibly hyped about this like my
 hype train is like off the scale it's like uh and you might think well andro uses this stuff a lot yeah
 okay but making a demo that's an art into itself pretty much no matter what software um that you're
 using so i'm really excited about that so tune in next week tuesday 7 30 central european standard time
-to watch panda how to demo uh i'm not too sure what it's gonna do um but i'm sure it's just gonna be
+to watch pandur how to demo uh i'm not too sure what it's gonna do um but i'm sure it's just gonna be
 pretty damn awesome non-interactive real-time anime latons yeah anime latons that's the thing from now
 we don't make animations we make anime latons uh so yeah that's that's kind of cool so um tomorrow i'm gonna
 i'm gonna basically uh make the recreate the first two or three little patches that i forgot to save

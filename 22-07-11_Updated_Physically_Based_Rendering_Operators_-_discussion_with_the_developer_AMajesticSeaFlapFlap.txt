@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=C2FjpdRWPxw
-Hello, this is Alex from Cables.gl, and today I am joined by Alex, aka a majestic C-flap-flap, who you might know as the creator and the mastermind behind some of the cool new operators we've been seeing in the last updates in Cables.gl.
+Hello, this is Alex from cables.gl, and today I am joined by Alex, aka a majestic C-flap-flap, who you might know as the creator and the mastermind behind some of the cool new operators we've been seeing in the last updates in cables.gl.
 Especially the PBR materials and PBR environment map lighting, texture-based lighting for the PBR material.
 And in the last update, you made some more additions to the operator, and we're going to try to talk about them all.
 And hopefully it's not going to take a while, but I am in your example gallery right now, and you made this with the last update, and used a bunch of your new operators as well.
@@ -325,7 +325,7 @@ that we talk about
 where it's like,
 hey, that would be cool,
 and then someone else,
-like Panda,
+like pandur,
 adds it to another operator
 and then it allows us
 to play around
@@ -2308,7 +2308,7 @@ what
 you're
 doing
 with
-pander
+pandur
 on
 this
 stuff

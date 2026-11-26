@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=xsoM3uFWsT4
-Welcome to another tutorial. My name is Tom on KBITS and Discord. My name is Pandur and
+Welcome to another tutorial. My name is Tom on KBITS and Discord. My name is pandur and
 today I want to talk about socket clusters. This allows you to create patches that communicate
 over the internet. As you can see, I have three browser windows open and when I move
 my mouse in one, my position is transferred to the other browsers as well. This transfers

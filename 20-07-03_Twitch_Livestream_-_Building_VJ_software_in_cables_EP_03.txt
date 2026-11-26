@@ -6,7 +6,7 @@ something's gonna go wrong the last minute with stuff
 let's go set up one or two more little things
 sounds good great glad to hear it okay um so i'll just talk on a little bit in the meantime uh
 before we start for the people that are already here welcome um thanks for joining us um so tonight
-i'm going to be continuing um some more on the vj software that i'm building inside of cables gl
+i'm going to be continuing um some more on the vj software that i'm building inside of cables.gl
 as usual this is a quite an unplanned affair um so i'm going to be um building some new visuals tonight
 um and i'm not sure if i'm going to do it tonight i might start plugging in a little bit of simple
 midi hardware um but i'll just have to see how that goes uh basically because um when i'm going to do
@@ -118,7 +118,7 @@ it's okay we gotta just break this stuff down as we go now this was pretty cool 
 this kind of like system um to trigger random numbers and make it happen at a certain point in
 a loop and everything you know and basically i can just reuse this part now which is really cool
 so i'm actually going to do that in a minute with what i'm going to do so a little bit like what um
-panda did on a live stream where i um co-piloted with how we make demos and cables or more how panda
+pandur did on a live stream where i um co-piloted with how we make demos and cables or more how pandur
 uh makes demos and cables um we used uh he used this trick you know with the um the root trigger
 now the thing is we could try and build like an entire transition system in here where it blends from
 one to the other but at least the vj software that i've built in the past i didn't like that i i like being
@@ -948,7 +948,7 @@ a real big fan of Atari teenage riot um actually maybe maybe we should just do l
 live visuals to it and who knows maybe Alec Empire will contact me and say hey you want to do some
 live visuals that would be kind of cool um so yeah okay you know what i'm i'm blabbling on right now but
 it's fun because it's also engaging with people
-it'd be really nice to be able to i think panda said that the other day kind of like
+it'd be really nice to be able to i think pandur said that the other day kind of like
 be able to have a way where we could maybe have a voice chat with people in discord during the stream
 um i think these kind of moments with talks have become much more interesting because cables isn't
 only about uh patching of course it's about talking about the theory and the approach and the design of
@@ -969,7 +969,7 @@ that's it for tonight everybody i'd like to thank everybody um that joined in to
 cool especially at the end to be having a chat about some stuff hardy once again sorry i missed uh some
 of the comments there um that you were putting down i was so in the zone here with uh patching i'm sure
 you know how that is so uh i'm going to wish all you lovely people um a lovely night and um i don't
-think i'll be doing the stream next week it's probably going to be something from panda uh or steam or
+think i'll be doing the stream next week it's probably going to be something from pandur uh or steam or
 and steam and um i'll be back in uh probably just over two weeks maybe three we'll see we're just taking
 sense of this and we're figuring it all out um as we go all right uh hope you all have a good night
 and uh speak to you soon bye

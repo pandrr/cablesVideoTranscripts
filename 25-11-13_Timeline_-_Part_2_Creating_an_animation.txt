@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=KMhAjqn_fGg
 - Hello and welcome to another KBITS tutorial.
-On KBITS my name is Pandor and today I want to show you
+On KBITS my name is pandur and today I want to show you
 how to create your own keyframed animation
 with a new timeline.
 So I prepared a really simple patch here

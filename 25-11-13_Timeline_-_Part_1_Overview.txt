@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=wzpKR7vbCXg
 Hello and welcome to another Cables tutorial.
-My name is Pandor on Cables and today I want to talk about animation.
+My name is pandur on Cables and today I want to talk about animation.
 So in Cables there's a lot of ways and operators to create animations, mostly procedurally,
 but sometimes you want to have full control over your animation.
 What is happening, when is it happening, how fast is stuff happening.

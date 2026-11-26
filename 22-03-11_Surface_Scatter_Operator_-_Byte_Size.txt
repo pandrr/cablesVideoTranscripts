@@ -2,7 +2,7 @@ https://www.youtube.com/watch?v=tQr9hdNqBmQ
 hello this is Alex from cables.gl I'd like to show you the surface scatter
 operator and this operator is very easy to set up but it has changed a little bit
 so we're gonna go over what we need to do to make it work and I have this patch
-open right here made by pander and it's a really great illustration of how to
+open right here made by pandur and it's a really great illustration of how to
 use this operator to for example in here make a little planet made out of
 different meshes and then they're scattered all over this sphere and then
 you get this kind of interesting effect of meshes on top of a sphere and then

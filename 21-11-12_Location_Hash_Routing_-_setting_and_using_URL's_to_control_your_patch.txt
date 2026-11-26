@@ -1,8 +1,8 @@
 https://www.youtube.com/watch?v=hUdHnFtBTNU
-Hello everybody my name is Pandor and with me is Steem. Hi Steem. Hey there. And today we want to
+Hello everybody my name is pandur and with me is Steem. Hi Steem. Hey there. And today we want to
 show you a little tutorial about how to use the URL in your browser to control the theme like what
 it is showing. Yeah you might know this from other websites but what we're using is the location hash
-so everything that's behind this little hashtag thingy in your URL bar and as you can see if Pandor
+so everything that's behind this little hashtag thingy in your URL bar and as you can see if pandur
 now changes the number of the scene from zero to one or back. It will change from our sphere to our
 cube and if we did this a few times we can also use the browser back and forth buttons and navigate
 as if we were on a real web page and also we can set this from inside like change the URL parameters
@@ -56,7 +56,7 @@ right now but after everything is connected and we changed url to sphere um we s
 um the scenes because it's not cube anymore but sphere um so we're seeing the sphere and not the cube
 yeah so you can also see that the trigger is just switching between both of the
 uh objects basically so now i can also click my browser back and forth button and you see um
-it's switching between them and as we've seen before or as pandeo said before we're not reloading
+it's switching between them and as we've seen before or as pandur said before we're not reloading
 the entire page even though we're changing the url we're just changing um data in the url
 and having this information um available immediately without the reload so a nice way of um yeah changing
 scenes in your patches yeah but it also works if you just start from scratch right so if i just you can

@@ -1,7 +1,7 @@
 https://www.youtube.com/watch?v=bVsW0FUo-zg
 Sorry, I'll just ask you one more time. I think I just had to refresh Twitch. Could somebody just type in if you hear me?
 I'd really appreciate that. Ah, great, perfect, thanks. I just had to press refresh with the Twitch.
-A lot of new stuff tonight, talking with two people. Last time I did it with Panda, he'd taken care of the technical hassle.
+A lot of new stuff tonight, talking with two people. Last time I did it with pandur, he'd taken care of the technical hassle.
 So, hi everybody. Great that you're all here. As you can see, we're trying to mix up some different things again by doing the Cables Jam announcement, and then after that, the Copycat with Cables, first time.
 I'd just like to check, is my voice loud and clear? Is it okay? Because now I'm using some different audio settings than before.
 Just want to make sure everybody can hear me okay, without me having to eat the microphone. Great, loud and clear.
@@ -81,7 +81,7 @@ So, I'm going to make these 0.1, 0.1, and 0.1.
 Smaller cube.
 So, I'm going to use something like this, but then a different op.
 And as you can see, this already lets you quickly and easily get like a lot of...
-There's a ticket already, I think, says Panda.
+There's a ticket already, I think, says pandur.
 Okay.
 All right.
 So, let me...
@@ -304,7 +304,7 @@ because I want to save bandwidth so I don't get any dropouts.
 So can you guys hear me okay?
 Ah, great.
 Okay, perfect.
-Thanks, Panda.
+Thanks, pandur.
 So this one.
 So look, if I now turn this number here,
 I'm rotating them all like that, right?
@@ -420,7 +420,7 @@ No, no.
 Team straight lines for the win.
 For me, it seems straight lines for life.
 I'm not putting this on curved cables.
-You have to watch Pandestream for that.
+You have to watch pandur's stream for that.
 I'm not even going to tell the people how to change this.
 I mean, they have to Google this themselves.
 It's like a rite of passage.
@@ -1168,7 +1168,7 @@ Now, let's say I don't want people to be able to rotate this.
 I can just get rid of the orbit controls, right?
 Okay, and we've got this really cool thing here now.
 I'm just putting this on some resolution.
-Panda added this really nice option.
+pandur added this really nice option.
 So I'm going to put it on 16 by 9.
 And I know what I'm seeing is definitely 16 by 9 there on the screen.
 So let's change the scale a little bit.
@@ -1224,7 +1224,7 @@ All right.
 So what I'm just going to do right now is I'm going to pause this and reset it just to put it back for now.
 I'll remember this for later.
 Okay.
-So now I'm going to follow Panda's suggestion.
+So now I'm going to follow pandur's suggestion.
 Could I set the brightness by rotation value?
 Could look cool like worms.
 All right.
@@ -1259,7 +1259,7 @@ We want it in the length.
 And I'm going to plug this into...
 One minute, everybody.
 Let's just plug it into...
-It was brightness that Panda said.
+It was brightness that pandur said.
 Brightness array.
 Okay.
 And let's now...
@@ -1298,7 +1298,7 @@ It's been a long time since I did this stuff.
 So let's disconnect this.
 Great.
 Okay.
-So Panda said brightness based upon position.
+So pandur said brightness based upon position.
 Now that becomes a little bit tricky, I think, because what number is this?
 Array vector length.
 It's not between zero and one.
@@ -1344,7 +1344,7 @@ Let's just put it back the way it was.
 I'm not trying to get mathematical perfection right now just to get the thing working.
 So yeah, this is working pretty good.
 What am I doing wrong here?
-It is Panda.
+It is pandur.
 It's just, it's really subtle.
 Oh no, I'm not working with the angle.
 I'm working with the distance from that point.
@@ -1369,7 +1369,7 @@ Multiply, add, normal, right?
 Yeah, this is some new stuff that we added a little while ago.
 That's why multiply is doing this now.
 So basically, if I'm correct, undefined country, but I should know this.
-Yeah, I can do that in a minute, Panda.
+Yeah, I can do that in a minute, pandur.
 Basically, this material blend mode, multiply, add on normal,
 that's working with the material that's being applied here.
 So you've got this RGB alpha array going into mesh instance, right?
@@ -1398,11 +1398,11 @@ This is becoming way too much.
 So if we do this...
 Yeah, okay.
 And the thing is, this is actually way easier to do with a color area op, basically.
-But hold it, what panda was saying before.
+But hold it, what pandur was saying before.
 We have...
 This, this, and that.
 Okay, give me a minute.
-Sorry, so I'm just tickling my brain with what I think panda meant before.
+Sorry, so I'm just tickling my brain with what I think pandur meant before.
 Here we've got the rotation.
 Let's grab this array modulo.
 And let's modulo it at 360.
@@ -1436,7 +1436,7 @@ Okay.
 Now we're getting different colors.
 Right?
 Yeah.
-Kind of like this, I think, Panda.
+Kind of like this, I think, pandur.
 I mean, it's not probably exactly what you're going for.
 But you mean that the rotation changes the what?
 Look at that.
@@ -1578,7 +1578,7 @@ I really love the way, um, this is working, the way this is turning out.
 It's really a lot of fun, uh, to play around with.
 Okay.
 Um, any other awesome, wild suggestions with what could be done, uh, to this patch?
-Uh, that was a really cool idea from Panda.
+Uh, that was a really cool idea from pandur.
 I didn't get it, um, at first since it was a little bit difficult to patch and, uh, think ahead,
 basically.
 Look at this.
@@ -2073,7 +2073,7 @@ It's like it's like it's like kind of mentally drumming, I suppose, so I'm going
 I'd like to say once again, very big.
 Thank you. Thank you to everybody that's following us and supporting us with what we do.
 We love it and we really appreciate it.
-And we love seeing the things that people are making with cables GL every single day.
+And we love seeing the things that people are making with cables.gl every single day.
 And we just want to do everything we can to make that as accessible and as cool and as fun for you as possible.
 So I'll probably be seeing you next week.
 So I hope you all have a good night and I hope you're all doing well in these slightly difficult times with the coronavirus.

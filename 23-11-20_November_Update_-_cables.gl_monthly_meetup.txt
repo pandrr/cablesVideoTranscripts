@@ -17,7 +17,7 @@ So, if we can chip in some money, just be aware that we're actually spending thi
 and infrastructure and we have some more things up our sleeves that we want to do with the money.
 Thanks for the support of everyone, keep on giving.
 Yes.
-Yeah, and as Pandor also shows, like you get your name.
+Yeah, and as pandur also shows, like you get your name.
 Like if you can't connect your Patreon account with cables, you get some credits on the credits page.
 And also, like an icon on your user profile.
 So, that being said, that's what we do with the money that comes in through Patreon.
@@ -28,15 +28,15 @@ And then with the last releases, we kind of fine-tuned on permissions and how th
 But this invite page was a bit convoluted for what we thought.
 So, we created a place where we basically combine any and all activity that is going on on cables
 around you or your teams and patches in the new activity feed.
-Pandor already clicked on the icon that is new on the top right in the navigation next to your avatar.
-And for Pandor, it also has like an indicator that there's something that needs some attention.
+pandur already clicked on the icon that is new on the top right in the navigation next to your avatar.
+And for pandur, it also has like an indicator that there's something that needs some attention.
 So, all the invites, you being invited, you request someone requesting access to your patches or teams or whatever
 will now appear in the activity feed with this red bubble up there.
 But we are also collecting even more than this.
 So, if we scroll down a bit, we will now see that whenever someone follows you on cables or likes your patches
 or even just reacts to your invitations or requests, we are putting this here.
 So, you are always able to see what's up.
-So, if you don't have any actionable things, so if Pandor now exacts my invite basically, then this thing will be empty.
+So, if you don't have any actionable things, so if pandur now exacts my invite basically, then this thing will be empty.
 And if you get some new like for your patch or something, this will update and have like a small white indicator
 for you to see that things happen.
 We're trying to build more on this, so patch lists will surely follow on something happened to a patch list
@@ -72,7 +72,7 @@ I don't really want it on the desktop, but on the phone, it's really handy that 
 So, yeah, we try to keep it non-spammy and I think then it's really useful and not annoying in the end.
 That's the hope.
 Yeah, along with that, as always, came some improvements to different parts of the website.
-For example, the patch page, but you will see this on the blog post, but more updates on the editor changes, small quality of life thingies that I guess Panda will show you around a bit.
+For example, the patch page, but you will see this on the blog post, but more updates on the editor changes, small quality of life thingies that I guess pandur will show you around a bit.
 Yeah, so we improved the texture preview functionality, I really use it a lot.
 So, if you click on a texture and open this panel here, you see the preview.
 And you can now easier zoom it in and out.

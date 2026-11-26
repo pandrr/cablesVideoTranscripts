@@ -1,7 +1,7 @@
 https://www.youtube.com/watch?v=G8SkK484oto
 - Hello and welcome to another tutorial.
 My name is Tom on Discord and on cables.
-My name is Pandwa.
+My name is pandur.
 And today I want to talk about the standalone version
 and programming using NPM package manager,
 programming with an external editor

@@ -33,7 +33,7 @@ if anybody would like to say hi back that would be lovely
 just need some caffeine for the next hour or two okay so um first thing is this in a minute
 i'm gonna just explain what my general plan is going to be for the rest of the night um the reason
 i don't have the typical green screen on is because most of the time you're going to be looking at my
-midi controllers uh that i set up so in the last stream i had the midi fighter from panda um that's
+midi controllers uh that i set up so in the last stream i had the midi fighter from pandur um that's
 now being returned to him and i've got my bcf 2000 which sounds like some big gun from um doom
 which it kind of is for me it's a very trustable awesome midi controller so i'm going to use in
 launchpad midi bcf 2000 so in a little bit i'll be going off the cam just pointing it there so you can
@@ -1333,6 +1333,6 @@ doing one next week because doing one every week was becoming kind of intense i'
 will be doing a stream uh with undev next week uh just keep your eyes open on the social media channels
 mainly twitter um on our facebook page as well um in case you missed it we brought out uh one or two
 blog posts uh with the last twitch stream or two a lot of really cool patches and some stuff there that
-you can see so um if you missed that maybe you want to check that out on the cables gl blog and um
+you can see so um if you missed that maybe you want to check that out on the cables.gl blog and um
 that's a wrap so uh i hope you are all uh well in these uh interesting times and uh can't wait to see what
 what you guys are going to make with cables all right have a good one bye

@@ -122,7 +122,7 @@ I'll be asking people on air.
 All right.
 I have no idea how I can see how many people are watching right now.
 So I'm just going to give it one more minute.
-And then I'm going to start with the first Cables GL live stream.
+And then I'm going to start with the first cables.gl live stream.
 So just a little bit in the meantime.
 We still need to figure out a little bit what it is that we want to do with the live stream.
 So tonight I'm just going to focus on making some pretty things basically.
@@ -139,7 +139,7 @@ And I thought it would be a really interesting challenge to try and figure out h
 Now obviously I'm not going to go for any realism like water or things like that.
 Realism is kind of hard.
 But I want to just try and make something a little bit artistic that's been inspired by this.
-So Panda and Steam from Endev will be helping me tonight with moderating.
+So pandur and Steam from undev will be helping me tonight with moderating.
 Which basically means if I'm really focused on what I'm doing and I miss a question, they're going to throw that towards me.
 So this is the whole idea of the live stream, of course, is that if you're not following anything or you want to know anything, then please just ask.
 And I can hit the brakes and then go into a more elaborate explanation and maybe make a little mini patch or something to try and make something clear.
@@ -241,7 +241,7 @@ And if I'm going to go to matcap material, we also have just one moment.
 I'm doing a lot right now.
 Okay.
 So yeah, this was a great one.
-Thanks Panda for pointing that one out.
+Thanks pandur for pointing that one out.
 So basically, now we have screen space normals, as you can see.
 And now we're actually seeing the texture exactly displacing all the vertices.
 So if we turn this off, it's kind of smooth, and if we turn it like this, it's like that.
@@ -329,7 +329,7 @@ Okay.
 Hey, everybody.
 Sorry I'm seeing the hellos a little bit late.
 I'm not picking that up when I'm looking over here.
-So Panda just told me I could replace my cap material new with basic material.
+So pandur just told me I could replace my cap material new with basic material.
 I'm going to do that later, though.
 Because right now I'm just in this flow of just getting this to work.
 So, so far so good.
@@ -876,7 +876,7 @@ let's see if I hover with the mouse over here. That's what we see. And this is t
 So another thing that I'm missing right now is let's add some fog. Yeah, render fog as a texture effect using a depth texture.
 Okay. So I go back to render detection. As you can see, I forgot to mention that before we've got the normal texture output.
 If I hover with the mouse over here, that's what we see. And this is the depth texture. And I don't know if it's possible
-for you to see with the stream, but it's red there. I've forgotten why it's red. Maybe Panda could elaborate on that
+for you to see with the stream, but it's red there. I've forgotten why it's red. Maybe pandur could elaborate on that
 into the chat for a moment. I'm sure there's a really good reason for this that I forgot. But basically, you know,
 if you see this red thing here, that's your depth texture out. So I need to get the depth texture.
 I'm going to plug this into fog. Hey, I'm not sure if I'm saying it the right way. Thanks for joining.
@@ -957,7 +957,7 @@ different position. That's what kind of gives this like really crazy, uh, wobble
 really not too bad. That gives a, a really different, nice kind of look. And what happens
 if I add it here, you know, uh, and then add more of an amount. Oh, that's nice. That's just,
 oh, wow. That kind of lets us add these, these kind of like little waves. Oh, that's cool. That's
-a great idea, Panda. So I'm going to, I'm going to go on this a little bit more. So I'm just going to
+a great idea, pandur. So I'm going to, I'm going to go on this a little bit more. So I'm just going to
 crank this up for now so I can just see what's happening. And I'm going to put the scale and say 20.
 So we have the set parameter. Yeah. Oh, well, look at that. Okay. That's really cool.
 That's a great suggestion. So we've got a good old timer for that. Um, and because I want everything
@@ -1016,7 +1016,7 @@ that there and also put this on white. So what I'm going to do now is I'm going 
 and, um, let's make the size smaller as multiply invert. There we go. Multiply invert. So as you can
 see, we've got this smaller circle and we're taking that out of the bigger one. So if I'm now going to
 move this over here and this up there, Hey, cool. We have a quick rough moon. Works for me for now.
-Sky. How do I add a sky to this? How do I make something like clouds? Panda, you got any suggestions?
+Sky. How do I add a sky to this? How do I make something like clouds? pandur, you got any suggestions?
 Uh, 2d texture trick that I could do pog gradient. Okay. Sure. Gradient. That's actually really simple.
 Let's try it out, but that would work. Uh, here we go.
 Point cloud. Oh, we could use the point cloud for stars, right? If we want, want to do something like
@@ -1112,12 +1112,12 @@ Yeah. Surface Scatter would do it on the, uh, on the edges. I'm just trying to t
 if I do vertex displacement on, uh, on a cube, then I could get something like that. Um,
 Hmm. You know, the, the, the first thing that comes to mind is like going, um, um, going online and
 downloading, um, a rock model, um, getting a circle up, uh, that would output the points of a circle,
-grabbing half of that. And. Hmm. So Panda, do you mean like a 2D, uh, thing?
+grabbing half of that. And. Hmm. So pandur, do you mean like a 2D, uh, thing?
 Hmm. Think, think, think. Okay. You know what? Let's just do this for a minute.
 Right. Okay. Yeah, actually that could work. Uh, you know what? One minute. I'm gonna just save this.
 Um, and I'm just gonna, I'm just gonna jump into, um, a new patch. Because this one's getting pretty full.
 So what I want to do right now is, um, I want to just make some low poly, uh, spheres. It was a great
-idea, uh, from Panda. So I'm gonna go here, uh, and I'm gonna grab a mesh instancer. Um, I'm gonna plug
+idea, uh, from pandur. So I'm gonna go here, uh, and I'm gonna grab a mesh instancer. Um, I'm gonna plug
 in a sphere. I'm gonna give it for now just a matcap material. I'm gonna plug this in there. Okay. So we
 get this sphere. I'm gonna put this in 0.5 and let's put this in, say, 4 and 8 or 3 and 9. I don't know.
 Let's, let's try something out. 3 and 5. Grab an orbit controls. No guarantees this is gonna look great,
@@ -1465,7 +1465,7 @@ Yeah. I'm just going to leave it on this for now. Okay.
 All right. Um, I think I'm going to call
 a wrap right now. Uh, it's 9 30, just been working on this for, uh, just under, wow.
 I think it's almost two hours now. Wow. How the time flies, uh, when you're patching with cables.
-Um, yeah, I'm, I'm really, uh, happy with this, um, for the first, uh, cables GL, uh, live stream.
+Um, yeah, I'm, I'm really, uh, happy with this, um, for the first, uh, cables.gl, uh, live stream.
 Uh, it's kind of tense and exciting to, um, patch something on the go, uh, and then to be open to some
 suggestions. Uh, I think the moon is probably, uh, one of the best parts of it actually. Um,
 and as you could see, we, we could really go very far with all of this, you know, you could start to
@@ -1476,7 +1476,7 @@ right now. So what I'll be doing is, um, in, um, in a few, in a minute or two, I
 if they've got any questions. Uh, if you don't, that's fine. I think absorbing all of this for
 over two hours is, uh, is a lot to ask. Um, once I'm done, I'll be, um, making the patch public.
 Uh, I'm not going to tidy it up right now. I'll, uh, do that tomorrow. Um, so the moment the stream's
-over, you'll be able to go to cables GL, this patch will be published and you can open it up. You can
+over, you'll be able to go to cables.gl, this patch will be published and you can open it up. You can
 play around with it and, um, see what you'd like to do with it basically. So, um, if anybody has any
 questions, uh, now's the time, uh, to ask them, but I'm putting a freeze on a request with what should
 happen in the actual patch. So does anybody have any questions?
@@ -1501,7 +1501,7 @@ You guys know how to, um, bypass this stuff now. D or shift D.
 Undefined, country boy, Sal Hamdula Das, Priyata Shift, Segal Gloss. I'm not too sure what that
 means. Um, I would not download a wolf right now. Uh, no, I'm not doing it right now. I'm not adding
 a wolf to this, this thing of beauty, uh, even though the inner Bob Ross inside of me, um, is not
-able to, uh, put the wolf in there right now. Um, yeah, Panda made a great suggestion there. Um,
+able to, uh, put the wolf in there right now. Um, yeah, pandur made a great suggestion there. Um,
 if you've got any idea for, uh, future streams, you could just like write it right now, um, in the chat.
 That would be great. Um, I've been considering, um, doing a multi-part, um, stream, um, soon where I
 actually from scratch, uh, build a rough prototype of, um, some VJ software with cables, which is being
@@ -1524,15 +1524,15 @@ the response was already really good for the first stream. So I'd like to thank 
 here tonight and, uh, start 51 pirates. Yeah. We'll, uh, we'll be ready for the wolf. Maybe you
 can pop in there and modify this published patch and add your own wolf. That would be great. We would
 love to see that. So, um, hit us up on the forums, uh, if you want, uh, if you've got any ideas for
-future cables GL Twitch streams, um, the more suggestions, the better, because we'd like to do
+future cables.gl Twitch streams, um, the more suggestions, the better, because we'd like to do
 stuff that you would like to see, uh, and would like to learn from. Otherwise we're just taking a
 little bit of a random guess with what you'd like. Um, so I'd like to thank everybody, um, who's
 tuned in, who's watched along, who's participated. It's been really wonderful that you're here. I'm
 really happy with how it went, uh, for the first stream. I was a little bit of overwhelmed at the
 beginning with chat and the, the window and talking and thinking of everything. But at one point it's, uh,
-become a really cool experience and I really enjoyed it. So on the behalf of me and panda and, uh,
-steam and undev, I'd like to say, uh, thank you very much for tuning into the first, uh, cables GL
-live stream. This patch will be published in about, um, five minutes max. Uh, just log into cables GL and
+become a really cool experience and I really enjoyed it. So on the behalf of me and pandur and, uh,
+steam and undev, I'd like to say, uh, thank you very much for tuning into the first, uh, cables.gl
+live stream. This patch will be published in about, um, five minutes max. Uh, just log into cables.gl and
 then you can see it there and then you can, um, copy the patch and modify it and pull it apart and do as
 you'd like to it. All right. I forgot and defined a country boy because that name is just too
 difficult to remember. Thank you, Simo. Um, so guys, thank you very much. I hope you all have a

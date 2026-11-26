@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=3tZQtsEiicw
-hello this Alex from cables.gl and today I'm joined by pander from undev who is
+hello this Alex from cables.gl and today I'm joined by pandur from undev who is
 responsible for a lot of the things you see in cables and of course there's a
 other members that aren't joining us today but we're gonna cover the new
 release of cables and this thing is pretty huge if you haven't seen the blog

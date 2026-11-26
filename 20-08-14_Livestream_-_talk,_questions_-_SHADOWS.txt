@@ -724,7 +724,7 @@ stuff i'm sure a lot of people will come up with cool ideas for this stuff so yo
 threshold for the alpha values right so let me just do a quick blur here just to show show the capability so
 we'll take the fade out to 0.5
 3 and now you will see so we have we have this faded out texture and now we can use the threshold
-to actually decide which which parts we want to blur right so that's another thing and as pandu already
+to actually decide which which parts we want to blur right so that's another thing and as pandur already
 mentioned um we are actually able to use it in conjunction with mesh instancing so i put up an example here
 let me open it in editor editor so i don't know maybe you can navigate around it because i'm using the
 wasd camera yeah and i'll just talk a bit um

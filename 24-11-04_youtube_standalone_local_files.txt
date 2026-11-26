@@ -1,7 +1,7 @@
 https://www.youtube.com/watch?v=6CTWhGxDEws
 - Hello, and welcome to another tutorial.
 My name is Tom on cables.
-My nickname is Pandua and I want to talk today
+My nickname is pandur and I want to talk today
 about the standalone again and about working
 with local files in the standalone version.
 So just something to explain about URLs
@@ -18,7 +18,7 @@ I can just drag it into the patch field
 and then I get this operator, like an automatic operator.
 So when I hover this file, I'm here,
 you see file colon double slash.
-So on cables.jl, you see an asset pass.
+So on cables.gl, you see an asset pass.
 And both of those use URLs,
 like URLs, like starting with HTTPS colon double slash,
 or in this case, file colon double slash.

@@ -3,9 +3,9 @@ yeah so welcome everyone so we finally do something that we wanted to do for a l
 um talk about html operators in cables and how they work and which are the most important ones
 and what you can do with it and give like a overview of what is there and how we use them
 basically and build some small examples i don't know if we if we planned too much or not but yeah
-we'll just try to um to do this and and see what comes out of it so um my name is pandua and this is
+we'll just try to um to do this and and see what comes out of it so um my name is pandur and this is
 steam um we are the founders of undev studio the company behind cables basically and we're both
-developers and developing cables gl right yeah hi guys um as tom just said um we've been waiting a long
+developers and developing cables.gl right yeah hi guys um as tom just said um we've been waiting a long
 time to do this because it's um um just as audio and midi and stuff like that is another real big part
 of cables that you can do stuff with and um it's like a completely different word from um from the
 3d stuff but really goes well together with all the um interactions and animations uh that we have um as
@@ -184,7 +184,7 @@ another program to remote control my pc when our tests were really successful wi
 okay let's see how this works and the scrolling is uh not working like i'm scrolling up and down and
 not in and out
 this works okay great um
-so uh what pander said before is um we have the ability to give these different elements an id and a
+so uh what pandur said before is um we have the ability to give these different elements an id and a
 class um maybe if you come from from a web development background and do some front-end
 development you know these already um these are um pretty convenient to um group different styles
 so say we have um not only this different element but we have another one
@@ -234,7 +234,7 @@ uh so as we um saw we have like uh two um well basically three different um poss
 um put style too thank you um to put style on the element we now work with um the global css in
 classes um by giving classes to our elements um we can do the um individual styling of the element in
 in the editor on the element um itself and now we have the css property which gives us um the nice
-visibility of um what panda just did controlling the value of the property from the outside world say we
+visibility of um what pandur just did controlling the value of the property from the outside world say we
 put a um an animation um on top of it to further go from there um we can um work with these classes right
 um so um these classes can be you can have multiple classes but we can also give um more you can have
 multiple classes oh you can yeah you absolutely can have multiple classes right um um but we can also
@@ -292,7 +292,7 @@ em to the end so this is why we have strings only yeah well i mean you can work 
 that number two string obviously um and then go from there and then um to um
 whatever um so that sign and which would be in a proper range to go from oh no it goes up to 200.
 yeah right whatever you can do a number to string and then um basically tweak this number on 0.21 um and then go from there and then
-you have control over this number and put it um on whatever you want yeah and pando as
+you have control over this number and put it um on whatever you want yeah and pandur as
 explicitly asked me to show the um documentation the example of um this one
 um because it also shows uh a thing that i actually no it's not the one uh it's the the color one uh css
 i am right that's a um nice um set css variable color one um that basically takes um takes all the work of

@@ -35,7 +35,7 @@ Sounds good.
 Yeah.
 Like, actually, I think like, I just want to put this out there to everybody, you know, like points, uh, three, four and five, and maybe even like, maybe each one of these points is something you could actually do a whole stream over.
 Yeah.
-If you really wanted to go in depth with it, right, Panda.
+If you really wanted to go in depth with it, right, pandur.
 But it's like, we want to just, we just want to, I think the important thing is just to show tonight, like, look, you can just throw some stuff together.
 And get something that's working with all these elements.
 And, you know, whether it's finished or not, isn't the point you can make a block.
@@ -53,7 +53,7 @@ So it's not about how, how we like in an artist way, uh, conceptualize our demos
 We just want to show like how to patch it in case.
 And that's it.
 And the content is, uh, you have to come up with this yourself.
-So in Panda, if I'm right about this, like this template you're talking about, right?
+So in pandur, if I'm right about this, like this template you're talking about, right?
 Like, you know, if you're using the timer or the timeline, and I think later on some ops, like root trigger and stuff like that, you could actually make a really simple template and then make some sub patches.
 And you could use that to make lots of different demos, right?
 Yeah.
@@ -121,7 +121,7 @@ Um, I've, I've not been around for a really long time.
 So to me, when I went to my first demo party, it was, um, seeing real time visuals with sound or music.
 That was the best way I can say on a big screen and a really friendly gathering of, uh, people.
 Um, and it was later on that I got more of an idea of the technology because of course, demo students love to talk about this stuff.
-And it blew my mind that, like, uh, Panda said that, uh, you know, people are still developing, um, demos for the Commodore 64, which is still pushing what this really old piece of hardware can do or the Amiga or the Atari ST.
+And it blew my mind that, like, uh, pandur said that, uh, you know, people are still developing, um, demos for the Commodore 64, which is still pushing what this really old piece of hardware can do or the Amiga or the Atari ST.
 Um, and to me, you know, a demo, of course, a demo is a very different thing for a lot of different people, but it's, it's when you're trying to either make something that's really visually, um, and aesthetically pleasing, also with the music and sound.
 Uh, that you, you're trying to make a complete thing and you're trying to push the technology as much as you can and also yourself.
 And then I think you've got the old school stuff, which is also doing that, but it has a lot more, um, restrictions.
@@ -129,7 +129,7 @@ And to me, the main reason to make a demo is just to have a reason to go to a pa
 You don't need one anyway, but you need, you need demos to have a demo party, right?
 You know, to sit down and enjoy, uh, everything together.
 Um, my, my background is pretty much more 64 case with, uh, PooBrain.
-Um, so, you know, I'm really curious to see what Pando's going to do tonight with cables.
+Um, so, you know, I'm really curious to see what pandur's going to do tonight with cables.
 Cause I've been using cables quite a while now, but I didn't make a demo of it.
 I just did some music for a demo.
 We did a demo together, man.
@@ -166,15 +166,15 @@ Yeah.
 Um, okay.
 So, um, let me get the agenda again.
 So, um, general setup.
-One thing I just like to say first, Panda, for me, for anybody that's normally the demo, the thing that was a real challenge for me at the beginning was like, how do you sync Rana's stuff?
+One thing I just like to say first, pandur, for me, for anybody that's normally the demo, the thing that was a real challenge for me at the beginning was like, how do you sync Rana's stuff?
 Yeah.
-And that's something Panda is really going to cover in this because normally the demo has visuals, audio and music.
+And that's something pandur is really going to cover in this because normally the demo has visuals, audio and music.
 And you normally have scenes just like a film where you're going to want to switch from like, say scene A to scene B to scene C.
 And maybe you want to go back to scene A, but then with a different view or something like that.
 Um, that's normally the main problem.
 A lot of people can tackle when they're starting to make a demo.
 And I think we're pretty much going to get that covered tonight with the general setup part.
-Right, Panda?
+Right, pandur?
 Yeah.
 I think, um, like syncing to music, I think you can have a demo that's only a cube.
 And if it's sent to the music in a great way, the people will love it.
@@ -227,13 +227,13 @@ That's why we will not go into detail.
 Um, but yeah, so you can see it executing those subpatches we call them.
 So when I go in here, um, you see, this is the actual effect in there.
 So there's a lot of stuff hidden in those little, um, subpatch ops basically.
-I think, I think that's a good thing to say, Panda is just for people that might not be so familiar with cables.
+I think, I think that's a good thing to say, pandur is just for people that might not be so familiar with cables.
 You know, the subpatch is just a collection of ops.
 So instead of having 5,000 on the screen, you can say, I'm going to work on the scene and it's all good.
 And now I'm going to tuck it into a subpatch because I'm pretty much done with it for now.
 And I'm going to jump back to the main, um, level and then I'm going to carry on doing this again.
 So each of those subpatches that you see, there's kind of an experiment.
-Right, Panda?
+Right, pandur?
 Yeah.
 It's a scene basically.
 And then in the end, the scenes, uh, are drawn on the screen basically.
@@ -252,7 +252,7 @@ Um, and yeah, here we have the post-processing stuff, but we will show that.
 So, um, yeah, let's, let's just start from zero and, um, try to make a demo now.
 Yeah.
 And one other thing I want to say to everybody is once again, I'm just assuming you need to demo.
-And so like that thing that you saw there from Panda, it could seem really complicated,
+And so like that thing that you saw there from pandur, it could seem really complicated,
 but all those different scenes, you could just say, uh, we're going to, we're going to see a cube for the first 30 seconds.
 It's turning.
 And then we're going to see a rectangle turning for the next 30 seconds.
@@ -449,7 +449,7 @@ So, um, but this is okay.
 So basically we can now, like our gray clear screen could be the, the intro of the, of the whole demo.
 Um, so we can display, I don't know credits there or some introduction or like fading in, um, slowly.
 And then when the music starts, uh, the demo would start.
-I'd just like to say a little something there for people, you know, what you see here, the panda set up.
+I'd just like to say a little something there for people, you know, what you see here, the pandur set up.
 This is your template for making a demo.
 You've got some music from somebody, or you, if you don't have music from somebody,
 we've got MP3s in the library files that you can just use to make something to get the hang of it.
@@ -529,7 +529,7 @@ Until the, the scene starts.
 So I will add another map range.
 Um, and connect it to time and time and go from, I don't know where I'll be to, uh, like 17.
 Okay.
-One little finger when I just, um, say, um, uh, by the way, Panda, I think something that
+One little finger when I just, um, say, um, uh, by the way, pandur, I think something that
 just got changed with audio.
 I'm hearing, maybe I'm quieter.
 Uh, can anybody on the switch just confirm if I'm audible, if I can be heard?
@@ -776,7 +776,7 @@ It's a little bit deep now, but I just want to touch it.
 Yeah.
 Uh, you use the loading status up that when a patch loads, you want to like send out one trigger to all of your scenes.
 Basically it's like an initialization and then cables is ready, um, to render this stuff.
-So you saw when Panda went back there and then press play again, it was super smooth.
+So you saw when pandur went back there and then press play again, it was super smooth.
 I think he's going to cover this later.
 Yeah.
 Why it paused for a moment.
@@ -902,11 +902,11 @@ You can just, uh, create a whole post-processing chain.
 And there, there are a lot of tutorials that are covering this, like what effects we have.
 Um, we can just, we can just add them here.
 So, but I want to say this to everybody.
-So the time sequence set up there of Panda, right.
+So the time sequence set up there of pandur, right.
 You know, where you're swapping between different scenes, you could do this with post-processing too.
 So you could set up like two or three or four, um, effects chains, if incorrect.
 Right.
-Panda.
+pandur.
 And you could also make those swap at certain times of the timeline.
 Right.
 Yeah.
@@ -969,7 +969,7 @@ If you, if you talk something up or something is bad or something you want an ol
 But you can also always say save as, and save it as a backup thing.
 Um, so, uh, just one little thing I want to, um, say, because I've finished a really cool feature with cable.
 So, you know, you could, you could make like five or six patches and they're all different things.
-Um, the, uh, Panda, if you go back to the patch settings, just the thing we've given, um, oh, I'm forgetting that.
+Um, the, uh, pandur, if you go back to the patch settings, just the thing we've given, um, oh, I'm forgetting that.
 Um, the, the project, uh, namespace namespace is a really handy one.
 Um, so you could call it like, um, evoke, um, demo 2020.
 And if you would give that namespace to all of your separate patches, you can later on cables and filter everything.
@@ -986,7 +986,7 @@ Like we've got some patches there.
 We've showed how you can just 10 seconds copy and paste something from one patch, um, into another.
 Um, with the post-processing, I would have, I don't know, but that's just me.
 Okay.
-So I'm just curious here right now, Panda.
+So I'm just curious here right now, pandur.
 Like, can you have more than one full screen rectangle in a patch?
 And if you disable the trigger on one, that the other one is automatically visible.
 You know what I mean?
@@ -1105,10 +1105,10 @@ So here you can change, you can change like an area that you want to center.
 How do you say this in the music screen?
 The frequency spectrum there, so the left is bass and it goes bass, bass mid, mid, high.
 So the left side is the bass, right high is the high, right side is the high.
-So that little rectangle that Panda's putting there, that allows you to sample a piece of the frequency spectrum basically.
+So that little rectangle that pandur's putting there, that allows you to sample a piece of the frequency spectrum basically.
 Yeah. The bigger you make it like basically like, so the result you get here, that line that you see is like the average value of what is in this rectangle.
 So if I make it pretty small, then you see it's, it's super fast. Like it's changing super fast. And if I make this bigger, then it's, it's quite smooth because the average is, is not that.
-One little thing I want to say here is like, so if, if Panda would want to get the bass, right, just for the kick, you'd make the width not so wide, you'd move it all the way to the left.
+One little thing I want to say here is like, so if, if pandur would want to get the bass, right, just for the kick, you'd make the width not so wide, you'd move it all the way to the left.
 Right. And then you'd high max and you'd probably move it up a bit. And now you'd only be, it would only be responding to the bass kick basically.
 And just this little shape that he's got there. You could now make two or three copies of that and you could have it respond to the bass, the snare and a high hat for example.
 Yeah. Yeah. Yeah. You can have multiple of those and, um, um, and use them to analyze the audio. Um, so I'm not sure if we should do this right now.
@@ -1117,7 +1117,7 @@ And, um, this one has another input, um, FFT array. So the audio analyzer output
 Um, this is in this area and we can use this in the FFT area, um, to analyze them. So, so this is why I had this zoom here.
 So when I click this off, you see this little graphic again that we saw before in this example. So when I press, um, um, play again, I'm muted.
 You see it's already, uh, looking quite good. So when I click this off, you see this, this thing again. So I can go here and, um, make this a little bit bigger.
-So with this base, uh, panda, you basically want to, um, move it a little bit to the right with X cause that's sub, sub base.
+So with this base, uh, pandur, you basically want to, um, move it a little bit to the right with X cause that's sub, sub base.
 Yeah. And then you get X and you move it a bit to the right. Cause like sub base is really slow. Yeah. That's your kick basically.
 Yeah. So you can, you can try to find this very much depending on the music, like how, how the music is basically. So we most of the time only use this for like stroboscope effects or something.
 So, um, um, I basically, uh, no, I tucked it away. So, so I want to use this value here now for, uh, make a stroboscope effect. So, um, I just do this. I will just connect this to our post pro sub patch.
@@ -1134,7 +1134,7 @@ So when I play it, you see this flashing of the base. So, um, when I turn it red
 It's just working. I don't know this adds so much to the demo. I mean, we probably it's a bit too bright. So let's multiply this down to like 0.6 or something. So that's just a little bit. You could also, um, like that.
 I'd, I'd, I'd use the threshold up with this and bang, but that's me. That's my patching style.
 Yeah. This I want to use with the midi stuff basically. So this is for me just like, you get some value. I'd use it. And the midi stuff is more like you get like a trigger, like a bang. And I'd use it then.
-So do we have any questions or anything? It's really quiet. I think you've got the whole audience captivated, uh, Panda.
+So do we have any questions or anything? It's really quiet. I think you've got the whole audience captivated, uh, pandur.
 Pardon? You've got them captivated. It's, uh, very quiet over there. Is everybody still in the stream? Or did it just drop out? And we don't know.
 Okay. Okay. Um, so, uh, another method, uh, to get like information about the, the audio track is that you create a midi file. So, um, you know, those old midi music files that you can hear that sounds really crappy. Um, they are really good for something because they are just the data.
 The data, which instrument is played when, and you just don't want to play it, but you just want to read those information.
@@ -1217,8 +1217,8 @@ Um, so I already created a MIDI JSON app and, um, um, um, so this also works lik
 You basically, you just put in a time and then it gives you some results.
 So we want to connect this time input here also to, uh, timeline time.
 And one thing I just want to say to everybody is this, right?
-So let's say in this case, just correct me from Range Panda.
-Uh, Panda has been working with Ronnie on this demo.
+So let's say in this case, just correct me from Range pandur.
+Uh, pandur has been working with Ronnie on this demo.
 So Ronnie supplies like an audio track.
 And after he's exported the audio track, he exports the MIDI data as well.
 And because they both, they're both connected to timeline time.
@@ -1296,7 +1296,7 @@ And we just do it basically like in an offline mode, like without the, the DAW, 
 Um, but you can also use this for live visuals and live synchronization to, to music software.
 Um, and, um, so you talked about the bang.
 Um, so I want to show we can, like, can we?
-What do you want to do, Pando?
+What do you want to do, pandur?
 Um, so I want to trigger an animation basically when this note is playing.
 So, um, basically we have this bang on.
 So this is triggered, um,
@@ -1381,10 +1381,10 @@ things happen. Yeah, it's not happening in the early part. Yeah, so this is the 
 You do something, you create a little overlay in the end. As we just did, I will do it again, text mesh, and I will create a system that shows me stuff. So we have this text mesh here, and we have another text mesh, which we want to show the current time.
 Sorry, I wanted to interrupt. Don't we have an op called Timeline UI, which bundles a lot of this stuff all into?
 Yeah, not really. Oh, okay. Yeah, the plan is that it does that, but it's really not that good right now.
-Okay, all right. So basically, Panda right now is creating visual feedback for himself, so he knows where he is and what's happening and things like that. That's always a really handy thing to do.
+Okay, all right. So basically, pandur right now is creating visual feedback for himself, so he knows where he is and what's happening and things like that. That's always a really handy thing to do.
 Yeah, so I want to see, like, the current time that we are at.
 And just put it up here. And you think we have to just restart OBS for this? Or?
-Yeah, you could do. I mean, really, Panda, for what you're showing with the stream, it's fine. I can see it's quite annoying with the FPS drops there on the renderer, but everything you're doing right now is completely visible.
+Yeah, you could do. I mean, really, pandur, for what you're showing with the stream, it's fine. I can see it's quite annoying with the FPS drops there on the renderer, but everything you're doing right now is completely visible.
 Yeah. A lot of people watching what you're watching what you're watching right now.
 So I'm just creating this debug information basically and so I could create another if true then and add an op that's called keypress learn.
 So I just want to press D and then I want to see this debug information basically. So I can click learn here and press D and now when I press the D button, I see this value so I can watch my demo again and also in full screen or something and then I can press the patch and press D and then I see that information.
@@ -1392,7 +1392,7 @@ That's correct. So often we create like an overlay with a lot of information lik
 Yeah.
 Like the debug system.
 And I would just put this away again.
-What Panda just said makes complete sense. You know, if you're using any kind of program, if it's Photoshop or Illustrator or After Effects or something, you know, if you wouldn't have visual feedback of what's going on where you are at time and things like that, it's really difficult to use. So, you know, it's a good idea to kind of make that yourself like Panda just did. Just a really quick, simple thing with keypress. Great. I don't know if you're going to use it. It's a good idea to kind of make that yourself like Panda just did. Just a really quick, simple thing with keypress.
+What pandur just said makes complete sense. You know, if you're using any kind of program, if it's Photoshop or Illustrator or After Effects or something, you know, if you wouldn't have visual feedback of what's going on where you are at time and things like that, it's really difficult to use. So, you know, it's a good idea to kind of make that yourself like pandur just did. Just a really quick, simple thing with keypress. Great. I don't know if you're going to use it. It's a good idea to kind of make that yourself like pandur just did. Just a really quick, simple thing with keypress.
 Great. I didn't think of it.
 Yeah, it's just, it's just a handy shortcut for some things. Yeah. That was the media information.
 Great. That was great. Do we have, do we, do we have like an example MIDI file in the library files? No. No. Yeah, we should totally do that. Yeah. I mean, I can probably get like a really small audio snippet on the MIDI file from somebody or you could as well. I think that'd be really handy for people.
@@ -1417,15 +1417,15 @@ So I'm just trying to encourage people not to be intimidated whenever they see l
 Like, we just did something in two hours. And I think with a little bit of training, I think everyone can pull this off. And I mean, ignore the media stuff and just chaining like the time sequence, like just chaining scenes together.
 Um, this is already half, half of the rent, right? Um, and, um, and yeah, just don't, don't concentrate on the whole, like concentrate on the little things like on the scenes, this is important stuff, putting it together like this, like if you did this once, it's, it's a really easy setup.
 Um, the most important thing is basically to have like the scenes and they look good and they fit together. And, and this is the kind of stuff.
-Uh, one thing I was thinking of Pando before you carry on is, um, you know, so a lot of people that make demos, everybody, it's a collaborative effort, right?
-It could be one person making all the visuals and one person doing the music. Maybe there's two people working on the visuals. So imagine that Pando would want to make me a collaborator of this patch, right?
+Uh, one thing I was thinking of pandur before you carry on is, um, you know, so a lot of people that make demos, everybody, it's a collaborative effort, right?
+It could be one person making all the visuals and one person doing the music. Maybe there's two people working on the visuals. So imagine that pandur would want to make me a collaborator of this patch, right?
 You know, normally his patch would be private right now, but he's like, Hey, Andrew, I want you to go in there and paste that stuff that you've been working on and put it in there.
-So you can go to collaborators. You can type in the name of the user there. Uh, you hit the send invitation button. I will, if I accept that invitation, I now have access to that patch together with Pando. Um, and you don't want to both be working on it on the same time.
+So you can go to collaborators. You can type in the name of the user there. Uh, you hit the send invitation button. I will, if I accept that invitation, I now have access to that patch together with pandur. Um, and you don't want to both be working on it on the same time.
 Cause you know, you've only got one state that you can save, but you could arrange of each of like, Hey, you're going to work on a patch tomorrow. Cool. And basically you can do that without publishing your secret demo.
 So yeah, most of the time we have like one, one person that is basically like the master of the demo, like the, um, the one who puts stuff in here.
 And, um, and then often we, we just switch seats basically. And, um, everyone is working on it, but most of the time there's one that puts everything together.
 And, uh, the others are producing scenes basically. And then they say, here's my patch. Here's my effect. Uh, just copy it over. And, um, this is how we do it most of the time. Yeah.
-And if you're working with a musician, for example, and they think, Oh, I'm working on some music tonight and Pando's not online. You know, if he's a collaborator, he can export his music, just reimport it.
+And if you're working with a musician, for example, and they think, Oh, I'm working on some music tonight and pandur's not online. You know, if he's a collaborator, he can export his music, just reimport it.
 And as long as he knows which two ops to go to, to say, browse to this file and browse to that file, he can see the visuals and go, Oh, is this working the right way?
 So that opens up a lot of possibilities. I would to collaborate. I think.
 Yeah.
@@ -1445,7 +1445,7 @@ I don't know.
 Yeah.
 Yeah.
 And then it switches and now it's, it's playing the demo.
-Uh, Panda, can you just explain to people how you could use the loading status up to do the like initialization of like, um, the, the things that haven't been triggered yet.
+Uh, pandur, can you just explain to people how you could use the loading status up to do the like initialization of like, um, the, the things that haven't been triggered yet.
 You know, that's sure at the beginning.
 I think it's really hard to explain right now because I cannot like the, um, performance of would just show.
 Hmm.
@@ -1658,7 +1658,7 @@ So yeah.
 So we, we already have, uh, I didn't know this really.
 Yeah.
 So I just wanted to say that now.
-So when Pando is going to do the custom shader tutorial, you might want to just dive into this
+So when pandur is going to do the custom shader tutorial, you might want to just dive into this
 one for 10 or 15 minutes and try it a bit yourself.
 And then it's going to be a lot easier to follow.
 I think one or two small things have changed, but pretty much almost everything is exactly
@@ -1706,7 +1706,7 @@ Fuck racism.
 Yeah.
 Crazy times, crazy times, crazy times, crazy times indeed.
 All right.
-Uh, Panda.
+Uh, pandur.
 I don't think, um, anybody's got any questions.
 I mean, I think that was already a great overload of good information.
 Uh, there you go.
@@ -1719,13 +1719,13 @@ That's so, uh, that's so nice to hear that kind of stuff.
 Um, well, I think it's a great question.
 Um, okay.
 So I think that's pretty much it for tonight then.
-Right, Panda?
+Right, pandur?
 Yeah.
 That's it.
 Okay.
 Yeah.
 Thank you all for joining in and, um, see you next week.
-Ah, sorry, Panda.
+Ah, sorry, pandur.
 One quick question.
 Are we, are we going to try and make a really stripped down version of this patch for people
 and publish it at some point in the near future?

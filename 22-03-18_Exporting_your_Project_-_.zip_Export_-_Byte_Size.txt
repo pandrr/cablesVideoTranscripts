@@ -37,7 +37,7 @@ Yeah, that's basically just this saying, "Hello."
 Mm-hmm. So, now I open this, mark all these files and directories, and just copy it over.
 And this will then tell me that it will override the index HTML, and then can refresh this, and then refresh the page, and there we go.
 Oh, yeah. Nice.
-So, now I'm completely, like, no strings attached to cables.go.
+So, now I'm completely, like, no strings attached to cables.gl.
 True. All of the stuff that you do is now the downloaded version of your patch.
 So, if you make changes here now, you need to re-export and upload it again.
 And this is not talking to any cable servers at all anymore. So, this is yours now.

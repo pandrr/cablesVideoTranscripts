@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=R9-D4SxBd90
-Hello everyone to the last Cables.jl monthly meetup of 2023.
+Hello everyone to the last cables.gl monthly meetup of 2023.
 For today we have two participants showing us how to win a fast demo competition at a
 demo party in Portugal.
 And also we will hear something about spatial audio by Topa and after that the both of us
@@ -8,7 +8,7 @@ Questions are fine during all the talks, so feel free to ask if you don't want t
 your microphone, just feel free to ask in the Meetup channel and I will try to relay the
 questions.
 So if everyone's ready, especially Anticore, then we look into how to win a fast compo with
-Cables.jl by Anticore.
+cables.gl by Anticore.
 Hey guys, small correction, this demo did not win a fast compo, it participated in the normal
 demo competition.
 Oh yeah.
@@ -104,7 +104,7 @@ in the Inertia demo party.
 But yeah.
 So this demo, in terms of patch,
 it uses the demo template created
-by Pandor, I think.
+by pandur, I think.
 This has some small adaptations
 that we did for our workflow.
 as well.

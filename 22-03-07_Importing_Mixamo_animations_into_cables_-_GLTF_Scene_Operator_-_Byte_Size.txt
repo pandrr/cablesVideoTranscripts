@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=aJrThtp4j0A
-Hello, this is Alex from Cables.gl. I want to show you how to upload an animation that you get out of Mixamo.com, which is a helpful website for rigging your unrigged models or applying kind of like clip art animations that are for rigged models.
+Hello, this is Alex from cables.gl. I want to show you how to upload an animation that you get out of Mixamo.com, which is a helpful website for rigging your unrigged models or applying kind of like clip art animations that are for rigged models.
 So you can rig it in Blender, for example, in a specific way that Mixamo likes and then upload it to Mixamo and then apply an animation that you might want to use in your project.
 So right now I have this really weird scene of this scary looking guy in the middle of nowhere.
 And it was actually a static model that I got out of Sketchfab that I'll link below and I was able to un-pose him and then upload him to Mixamo and then apply another animation.

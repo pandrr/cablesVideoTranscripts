@@ -1,7 +1,7 @@
 https://www.youtube.com/watch?v=PRjTSMtEzzc
 hi everybody welcome to the twitch stream for tonight we're going to be trying something
-different uh i'm andro um that's panda if i'm pointing the right way and door right now yeah
-over there okay find the right way um and on monday we released the latest update to cables gl
+different uh i'm andro um that's pandur if i'm pointing the right way and door right now yeah
+over there okay find the right way um and on monday we released the latest update to cables.gl
 it was a really big one um huge amount of enhancements fixes features quite a lot of
 new ops as well so tonight we're going to try something new and we're going to try and go
 through the the highlights of the the latest update we're going to try and show you the things that we
@@ -9,7 +9,7 @@ think are the coolest how to find the results of the changelog and the things th
 update and we're just going to actually try to talk a little bit about this like we do at work
 because you know sometimes one of us makes something new and then we show it to the other one and we have
 a discussion about it and it's been such a hectic uh period with the update there's a lot of new stuff
-in there that i've actually still got discovered that panda um made so um the first thing i'd like to
+in there that i've actually still got discovered that pandur um made so um the first thing i'd like to
 start with is that at the end of the twitch stream not right now i'll be announcing the um the upcoming
 cables jam and the cables jam is basically we give a theme people have till a certain deadline to um
 create a cables patch and we judge what the best patches are and they basically get cable swag which
@@ -19,7 +19,7 @@ going gone uh but we're working on it in case anybody there in the room goes whe
 so at the end of the twitch stream i'll be announcing that and tomorrow i'll be releasing a proper blog
 post and everything on the social media with the rest of the theme and like what the result uh what the
 the rules of that will be um so um basically we're gonna run through um some of the stuff from the
-changelog so first of all i'm gonna ask panda if you can just open the changelog page yeah so people
+changelog so first of all i'm gonna ask pandur if you can just open the changelog page yeah so people
 can see where it is so you can always find it um when you hover in the menu and go to changelog basically
 or you find it in the footer but you can go here and then we see the changelog and the changelog for
 us is like so all the developers on kbiz.gl they are collecting like all the stuff they do um
@@ -57,7 +57,7 @@ your head then you're not going to be able to um use it so if you ever follow a 
 like that and you go hey i can't find this op anymore you just basically want to go to this page do
 control f type in the name of the old op and then you're going to find it and it will tell you it's
 been renamed to this but we barely do any renaming right now but of course some of the tutorials we did
-they were created before the renaming process took place so yeah as panda said this is where we've got
+they were created before the renaming process took place so yeah as pandur said this is where we've got
 everything from the update and if you want to just find out what we've been up to you can just go here
 maybe tom can just show you that if you're on any pretty much any page from cables and you scroll down to
 the bottom uh to the footer um because i always forget to click on it in the main bar basically
@@ -112,7 +112,7 @@ scale it up even more to make it visible on the screen i guess on the stream i g
 okay too much
 you gotta come down with it yeah yeah so there you see the artifacts that this produces blurry on
 the edges and um also this method um which is quite okay for for most of the stuff but the the
-font kerning is also not great so what's funk kerning panda yeah so the the distance between the
+font kerning is also not great so what's funk kerning pandur yeah so the the distance between the
 characters um right okay so this is like a science itself basically right okay and
 um the msdf font has like a database like how the kerning is between the characters this is not
 not yet fully implemented but it will be and it's already working quite quite good is the text mesh
@@ -217,7 +217,7 @@ this looks great and like you say this is pretty much a free because it's part o
 yeah yeah i mean it's it's sampling this algorithm again but um yeah it's it's not that heavy for for
 little things um you can do this you know yeah then there are the the other options like texture color
 and mask um yeah yeah oh legendary i love it
-uh doc retro is asking panda have you thought about super sampling basically looking at the font four
+uh doc retro is asking pandur have you thought about super sampling basically looking at the font four
 times of a slight sub pixel shift um yeah i think um i'm not sure but i think that doesn't help much
 with the msdf but i'm not sure i i can test it but i i really never um had a problem with the with
 precision so that was always it's always fine but um it's a good idea to to try this out doc d
@@ -254,7 +254,7 @@ something else like that you can work on a model and we're all kind of like used
 view right where you have like a grid um and you have like your colors of your direction shown with like
 red green blue um kind of like a gizmo so we started encountering a lot where we can import a
 3d model you know is it pointing the right way and of course we know that because we use the program
-but for everybody else maybe that's not so um obviously simple so um panda came up with the floor
+but for everybody else maybe that's not so um obviously simple so um pandur came up with the floor
 grid uh op which is just basically a great way to simulate what you've got in other 3d environments
 you can correct each unit there is a unit of one yeah exactly yeah it's it's just uh it's just a handy op
 when you are positioning stuff um then you can you can measure the distances of stuff and and it's just
@@ -290,7 +290,7 @@ i can click those circles and then i'm going to the transform
 in in the patch view so it's super easy like imagine if you have like a huge patch
 it's just super easy to find your stuff so you have a lot of objects there and you just turn this on
 and then you can switch back and forth between them basically
-so panda just a little question because that went a little bit fast i was looking at something else where did you click to enable
+so pandur just a little question because that went a little bit fast i was looking at something else where did you click to enable
 um the option so um this canvas menu here yeah um got some new options that we can talk about later
 after that so this has this toggle helper button now yeah so i can click this and i can turn on um
 and off multiple things so so for example if you have a random cluster
@@ -301,12 +301,12 @@ of stuff we want to do more and want to do it better so so it's easier to see wh
 and um yeah you can also turn this on like all the time so it's always there basically
 yeah so just for everybody normal the term we use is like helper meshes
 um i think right yeah which is yeah we we use that word but i guess it's not a good word but yeah
-we'll just call them helpers so helpers are just there to help you like like panda just said you know
+we'll just call them helpers so helpers are just there to help you like like pandur just said you know
 random cluster it has like a maximum bounding box around it and uh sometimes when you're working in
 3d you know as you can see you can really lose track of stuff so we think these are a great addition
 to helping people uh figure out what's going on inside of their uh scene
 yeah that's really great stuff yeah this is really helpful if you have a big a big patch
-and maybe you think a lot of people don't know tom uh sorry panda i'm gonna say panda
+and maybe you think a lot of people don't know tom uh sorry pandur i'm gonna say pandur
 tom is fine dude tom can just grab hold of um the gizmo there now and actually move
 uh the the shape around in 3d space without having to move the transform is something i think a lot of
 people don't know so this is really handy now imagine you'd have like five objects there and
@@ -431,9 +431,9 @@ um let me just
 i love the way that we've got 16 people waiting for rick astley right now
 how not to rick roll okay let me youtube
 player
-this is the correct uh one don't forget everybody you're learning incredibly valuable cables gl skills
+this is the correct uh one don't forget everybody you're learning incredibly valuable cables.gl skills
 right now how to get rick in the youtube player there we go i mean isn't that one of the most
-beautiful things you have ever seen rick astley running in cables gl i mean i don't know if you can
+beautiful things you have ever seen rick astley running in cables.gl i mean i don't know if you can
 top this anymore tom i think this is like one of the crowning achievements yeah everything that will ever be achieved
 so why don't we hear anything now by the way um that's probably my my system or something i don't
 know right okay i mean i'm not gonna push for that i was just curious um i i was hearing it yeah that's
@@ -727,7 +727,7 @@ it changes the shape uh after time yeah
 yeah so we we will soon update this page and then there are way more examples um
 on here um what you can do what people did with cables actually yeah yeah yeah because azillo asked
 um he says actually still looking for a way on how to call a cables patch via a link without
-the cables gl dev environment to just present after a login is done and i think steam answered with
+the cables.gl dev environment to just present after a login is done and i think steam answered with
 you can just put the export the cables patch and embed it on your own server if i'm correct
 um what is the question yeah i think azillo thinks that um
 you can only um access a cables patch via um the cables um environment and i think you didn't
@@ -772,7 +772,7 @@ and win right tom we know no damn it okay that's such a shame so yeah so that's 
 create a fake user and then you can take take part in it don't tell them they'll find out so
 so that's going to be um that's going to be the new uh cables jam uh that's going to be uh coming out
 and it's something we want to try and do uh each month for a while and see how that goes because we
-really love seeing what people come up with and who doesn't want a cables gl shirt and other
+really love seeing what people come up with and who doesn't want a cables.gl shirt and other
 the various swag uh like really i mean come on like uh it's going to be very exclusive
 um so that's the announcement of the cables jam i think we've covered pretty much everything now with
 the highlights and we want like the plan is that so the deadline is like one day before our next stream

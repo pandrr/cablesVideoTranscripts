@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=tu49qg8BpBU
-that great thanks panda okay so I had a lot of fun with that I think it was just
+that great thanks pandur okay so I had a lot of fun with that I think it was just
 over two three weeks ago yeah that was a really interesting stream I really
 loved it so we're gonna start again in a minute in the meantime I just want to
 say and so the copycats cables that I'm gonna do tonight let me just grab a link
@@ -244,7 +244,7 @@ better
 let me just save for a moment
 okay
 ah yeah
-panda
+pandur
 I just saw it
 right now
 yeah
@@ -339,11 +339,11 @@ I would expect
 this
 click
 let's get repeated
-says panda
+says pandur
 okay
 yeah that's true
 aha
-thank you panda
+thank you pandur
 that was it
 okay
 there we go
@@ -363,7 +363,7 @@ we're getting
 closer
 thanks for that
 catch
-panda
+pandur
 appreciate it
 okay
 I'm not trying to
@@ -450,7 +450,7 @@ this different way
 for now
 thanks for pointing
 that out
-panda
+pandur
 so you know
 I've got this
 repeat number
@@ -1322,10 +1322,10 @@ right now
 is it
 percent
 okay
-panda
+pandur
 thank you
 so yeah
-panda was
+pandur was
 right
 I could
 use the
@@ -1345,14 +1345,14 @@ quick for the sake of
 the stream
 so
 I wouldn't want
-panda to feel
+pandur to feel
 not listening
 and just
 caught between
 everything
 there we go
 and percent
-thank you panda
+thank you pandur
 look at this
 all right
 so the only
@@ -1380,14 +1380,14 @@ really quickly
 and
 um
 no no
-panda
+pandur
 please don't
 shut up
 this is the
 whole idea
 it's great
 so
-panda's
+pandur's
 saying
 this is for
 the video
@@ -1824,7 +1824,7 @@ merge
 wow
 yep
 brilliant
-pando
+pandur
 thanks
 so
 now
@@ -2388,11 +2388,11 @@ um sometimes it's uh how things um seem
 all right um i'm gonna call that one down
 what what do you guys think
 it's okay right it's close enough
-i mean considering how quick uh that went i'm pretty happy with a great tip there from panda with the um merge um geometry merge up that was i've never used it before and it was pretty self-explanatory so that was really really cool
+i mean considering how quick uh that went i'm pretty happy with a great tip there from pandur with the um merge um geometry merge up that was i've never used it before and it was pretty self-explanatory so that was really really cool
 all right i would say totally nailed okay so this one's um saved copycats two so we're going to save a new one now
 so we're going to save a new one now uh kiyoshi copycats three okay just give me a moment
 yeah so this one should hopefully go really really quickly because i'm gonna just rip a tutorial thing that i did uh so he's done uh switch 10 print which i think is a kind of ode like what i did a while ago to um the commodore 64
-go to 10 so this is how we do it kids um we uh well ring one there's only one cables and that's cables gl
+go to 10 so this is how we do it kids um we uh well ring one there's only one cables and that's cables.gl
 okay so um i'm just gonna go here i'm just gonna find this patch that i did um ages ago and then sweet and modify because this is how it goes as well you know it's completely uh fine doing this stuff
 um so i'm gonna click copycat cables for playlist 20 go to 10. i'm just interested in the patch uh basically i'm probably gonna have to add one or two ops and it's all good
 but actually i'm gonna have to do like the merge geometry thing
@@ -2501,7 +2501,7 @@ though it looks kind of cool
 so once more too many rotating
 as we can see they keep on changing around now so it's just one or the other
 um break a brain how do we do this now
-the initial panda says but you lose the initial randomness by multiplying with zero um not really because
+the initial pandur says but you lose the initial randomness by multiplying with zero um not really because
 um i only want them to flip between zero and one
 i don't want them to do anything different than that uh basically i don't want them to turn
 um more than that because then they'll spin a lot and we'll lose this look of them just
@@ -2658,7 +2658,7 @@ move this stuff right so let's just do it like this for now
 and put the material back in black okay so let's make them a little bit wider
 let's see 0.15
 hey alchemai uh what's that omg omg omg we has a poo brainer uh just for us
-alchemai is this the first time that uh you're you're seeing the cables gl live stream
+alchemai is this the first time that uh you're you're seeing the cables.gl live stream
 alchemai is a really nice guy i know from the demo scene he's been really
 no i mean you've been here before right yeah that's what i thought
 memory is a little bit fuzzy you should totally check out what alchemai does with um shaders uh the
@@ -2837,13 +2837,13 @@ and this isn't gonna make a difference
 yeah like i said this could help a bit but it's gonna make values
 bleed over as you can see there we get something like this which is not what i want
 yeah i don't i'm not too sure how i'm gonna
-fix that right now stuff is too small is the noise scale panda just said all right let's let's give that a try
-yeah panda is right
-yeah yeah definitely okay once again uh thank you to panda for the catch
+fix that right now stuff is too small is the noise scale pandur just said all right let's let's give that a try
+yeah pandur is right
+yeah yeah definitely okay once again uh thank you to pandur for the catch
 i'm just gonna leave it on this one for now
 oh yeah that was titleable okay
 yeah all right
-panda like the smooth version better anyway is that the one with the the blur panda yeah you know because
+pandur like the smooth version better anyway is that the one with the the blur pandur yeah you know because
 i mean i could do a smooth array on this i'm thinking you know what let's just try it for a minute i've
 been throwing smooth array at everything tonight i don't know how it's gonna work out
 yeah we need to do the severe tech show this definitely that's that's another one of those
@@ -2881,7 +2881,7 @@ something pretty close i know what let's just i step yeah banda was right it's t
 basically i mean this is more like yunkiyoshi had it yeah you know and if we put this um
 uh i kind of get why this is happening now that i'm seeing it like this i think maybe this just isn't
 really a bad thing after all and it's more than he's got that's for sure
-um so panda was definitely right with that
+um so pandur was definitely right with that
 i'm wondering if
 i know this is only gonna make it bigger
 ah yeah and then we've got here clamped edge so that isn't gonna work the same yeah i know okay
@@ -2896,7 +2896,7 @@ copycats
 and i think um i'm gonna make this the last one um i'm a little bit on the tired side um
 right now
 yeah right okay so the last one i wanted to do
-i think was this one i might be might bite enough more than the consumer oh pandas online um
+i think was this one i might be might bite enough more than the consumer oh pandur's online um
 something like this
 i mean we're not going to create something of a random walker
 i don't even know if that's gonna work
@@ -2909,7 +2909,7 @@ why is ops dot mesh taking me here i want to have ops dot gl mesh
 uh ops dot gl dot mesh okay this is where i want to be
 uh cross cubes
 polyhedron now you know i'm i'm not going to go exactly for this um sphere that yeah geosphere i think
-it's this one panda uh polyhedron do we have a triangle sphere up one minute that would be really cool
+it's this one pandur uh polyhedron do we have a triangle sphere up one minute that would be really cool
 uh hey yeah
 okay um sphere mesh of uniform distributed vertices
 that's that thanks tuner let's just check
@@ -2922,10 +2922,10 @@ that looks good enough to me yeah i'm totally going to save over the
 um patch so people know this one there okay actually let's just do it like this because
 that's if mouse over
 just give me one moment everybody i just want to do this
-uh lambert okay let's just save this for now okay thanks tuna um all right so i'm glad panda's there
+uh lambert okay let's just save this for now okay thanks tuna um all right so i'm glad pandur's there
 because we're going into um i have no idea exactly how this um stuff works territory
 so first of all let's paste this in
-now i already asked panda tonight um what the uh ops were um
+now i already asked pandur tonight um what the uh ops were um
 i should probably use for this let's just take a look again ah there we go so
 randomized triangles randomized the order of triangles and the geometry
 um so let's get this and let's grab the render
@@ -2976,7 +2976,7 @@ let's just do a save and reload
 all right i'm not sure what it is
 i think i need the geometry and index for the randomized to work
 ah right
-bomb thank you panda panda panda explained this to me quite a while ago
+bomb thank you pandur pandur pandur explained this to me quite a while ago
 um i've forgotten um what it does now exactly
 um but is this gonna crash again if i remove this material yeah okay that's a bug
 it's okay that's why we look for this stuff
@@ -3006,7 +3006,7 @@ and this is just purely random there's no way to get it to flow from one value t
 walker or with noise uh basically draft
 um you could sample only once for each triangle on a custom shader
 probably
-but not tonight because i wouldn't have a clue where to start with that that's probably more uh pandas
+but not tonight because i wouldn't have a clue where to start with that that's probably more uh pandur's
 uh thing to show maybe he can do that at some point in the future because he
 he still wants to do this uh the stream with vertex um show the stuff which by the way there's
 amazing stuff that comes out from that um yeah so okay this one didn't work out um i'm sorry to say
@@ -3022,10 +3022,10 @@ erase some people go ah raise it's really difficult yeah you know everything's d
 but you put some time and effort into it and you can learn it also without really cool tutorials on youtube
 um they will really help you um get them some memory with this kind of stuff well you know um i tried six
 of them tonight i'd say five of them were really successful and this one at least has random triangles
-on the sphere not bad i learned a lot of new stuff tonight or so uh big thanks to panda for pointing
+on the sphere not bad i learned a lot of new stuff tonight or so uh big thanks to pandur for pointing
 out um some catches and some tips uh i also learned some new um ops tonight which is great uh because the
 more ups you know the more you can do i suppose uh the merge geometry one that's really cool and i think
-panda's gonna probably make a version where you don't need to um trigger it but i'll just probably update
+pandur's gonna probably make a version where you don't need to um trigger it but i'll just probably update
 uh when you change uh the geometry uh going in um so yeah i think i'm gonna wrap it up at this i'm a
 little bit tired it was a bit of an intense stream i think two hours it's not a bad uh amount of time
 um so i'd like to give a big thank you uh to everybody that uh came and joined along tonight and uh
@@ -3035,7 +3035,7 @@ will come back into youtube so you can follow it later again on twitch or you ca
 our youtube twitch um channel um so yeah i'd like to say once one last time thank you so much for joining
 us and um following us and um i think we're gonna be back with a new um stream next week i'm not too
 sure what that will be uh right now that's kind of not being um decided um but we'll get there thank you
-panda um yeah i think i'll i think i'll be able to do uh the stream again uh next week but i'm blank right
+pandur um yeah i think i'll i think i'll be able to do uh the stream again uh next week but i'm blank right
 now with what it will be maybe it's another copycats maybe i'll continue with the vj software um i've been
 investigating some new stuff with svgs uh inside of uh cables and scalable vector graphics um so maybe
 that'd be great to do like hi i'm completely thumbling around through this with uh results from

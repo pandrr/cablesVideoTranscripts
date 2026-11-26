@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=1oXJroDteqg
-yeah hello everyone today it's us again my name is pandor on cables and this guy's steam or steam
+yeah hello everyone today it's us again my name is pandur on cables and this guy's steam or steam
 or stefan what what's your name on cables steam steam okay right yeah um yeah and um so
 steam prepared or made like a little carnival costume with led stripes and we thought it's a
 nice project to show on the stream because it's it's not really a lot of soldering it's it's the
@@ -35,7 +35,7 @@ um if you have this on your head all the time it's um quite annoying i'd say so 
 like we have this cables patch that i built and the um the hat basically synchronizes um with the color of
 the cube that we have um and we can also um then um um well basically control single leds um of these by
 using an api that this software um gave me what i did for my costume was um basically uh look around
-the internet and see um what there is for controlling leds and i came across this cool page i think pando
+the internet and see um what there is for controlling leds and i came across this cool page i think pandur
 um may also be um you're sharing the link in the chat then um this one guy that um built a lamp basically
 um and i got a few um few ideas um off of him um mainly like okay using esp uh 8266 uh which also is
 called a node mcu and this is basically like something like an arduino but already with wi-fi and all this
@@ -105,7 +105,7 @@ in the browser so maybe it's a bit clearer so so stefan's the hardware stefan is
 in his local wi-fi um so it has only a local ip address it's not in the internet it's not a device
 that's on the internet you could do this way also like if you have like an internet ip address or
 uh address for this device then you could access this directly but right now it's only in this local
-thing and the browser forbids actually to access local stuff from the cables gl domain this is just
+thing and the browser forbids actually to access local stuff from the cables.gl domain this is just
 something that's there usually this is for your security but in this case it's really annoying so what
 you see there is it cannot access this uh address there where's the address actually but you can see
 here it's like 192 168 10 15 it's a local address so it's trying to access this address but the browser's
@@ -172,7 +172,7 @@ so that's the whole uh whole setup and uh we now have this thing running in my n
 putting this up again um
 we have this uh thing running in my whole network that's uh the ip address of it and um we copy this
 and that was my whole setup for um for carnival basically so no cables in there but then i found
-this page which maybe pandor can also post um hey this thing has a really simple http request api
+this page which maybe pandur can also post um hey this thing has a really simple http request api
 and um actually to make it um more interesting for more hardcore users um it says here that it also
 does output dmx if you need this and um it also does mqtt um which i actually tried to do which also
 works super nice but i really didn't want to do um today because it needs an mqtt broker and that
@@ -581,14 +581,14 @@ so is anyone still following us on stream because i yeah yeah so um
 sievelk uh is happy with the result i think he wanted the white pixel um it wasn't really white i'm sorry it was more of a blueish thing
 um yeah um any questions um any comments um from the viewers
 any ideas any other hardware that you like to be connected or something i think this could be a regular thing
-yeah it turned out to be made more trying things out with steam and panda but i also like it i mean
+yeah it turned out to be made more trying things out with steam and pandur but i also like it i mean
 it's like just connecting this was exactly i was when i bought it i thought like oh man soldering and
 like flashing and firmware and all this open source shit and i actually had it running in half an hour and
 was like massively impressed by the result yeah i mean yeah we we can't show
 our old studio lamp from tim right um we don't have a photo but we have in in our studio here in berlin we
 have a lamp from our company with our company name on it and there's a led strip behind it and um if
-someone registered registers on cables gl then it blinks actually um and we can can also control it from
-cables gl but it's a completely different technology but you can you can connect this to to other
+someone registered registers on cables.gl then it blinks actually um and we can can also control it from
+cables.gl but it's a completely different technology but you can you can connect this to to other
 applications um and control something with it it's all rebuilt it actually um was one of my uh my next
 projects uh will be to recreate this lamp for the office in cologne and um i will i will absolutely use
 this because it's super easy to do yeah so zivilex says now get 192 stripes and make a zx spectrum emulator

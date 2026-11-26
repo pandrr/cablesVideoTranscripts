@@ -70,7 +70,7 @@ people won't see all these export settings because they're not the owners of thi
 okay cool yeah awesome so i don't have to worry about like oh i need to delete my keys before i publish this
 on cables cool so now we export it we just saw the progress information and instead it's done so we
 can now switch back to github and basically just reload this page and see that all our stuff is in there
-super quick um so we also see okay the commit message as it calls is um set to export from cables gl um
+super quick um so we also see okay the commit message as it calls is um set to export from cables.gl um
 and that's basically it if you just want to um have your patch in uh in a git repository in a github
 repository and um now you have all these version control features and um whatever you want to do
 with git but that's only half of it um because now we have the option if um this is our repository and

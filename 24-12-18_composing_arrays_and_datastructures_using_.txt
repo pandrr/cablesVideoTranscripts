@@ -1,7 +1,7 @@
 https://www.youtube.com/watch?v=l2YZuo6d2lM
 - Hello, and welcome to another tutorial.
 My name is Tom and my nickname on cables
-and on Discord is Pandor.
+and on Discord is pandur.
 And I want to talk about the comp array ops
 or about the data compose operator.
 So compose array is one of them,
