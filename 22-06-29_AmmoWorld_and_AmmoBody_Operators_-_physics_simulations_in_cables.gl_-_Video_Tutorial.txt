@@ -1,0 +1,210 @@
+https://www.youtube.com/watch?v=TAhAqgY_EEs
+hello this is alex from cables.gl i think it's time we look at ammo physics as we know them right
+things colliding hitting each other bouncing off um things that have a lot of weight might
+influence things that don't have that much weight a lot differently and all this cool stuff is now
+in cables and we can actually uh do quite fancy and cool simulations with it and uh in our previous
+video we looked at how do we use ammo world and ammo raycast to pick and select things and interact
+with them with our mouse or maybe some other input but precisely hit the kind of collision cage of an
+object so if we have a something like this coin it's not like a square right it's going to be like
+a coin and uh it will interact with other things in the way we sort of expect so uh i'm going to show
+you some examples and then we'll just get into the basics and i'm going to show you uh how to set it up
+and how to connect things and just to start playing around with maybe like a cube or something but some
+of these things are already uh in our patch library so you can play around with um something i'm going to
+show you and you'll find the links in the description but okay here we go so what do we have here we have
+a patch that has a pretty cool japanese coin that is repeated a bunch of times and with it being
+inside of ammo world we can start using physics and giving it some uh cool animation automatically so
+if i press the right mouse button if you see here i connected it to my ammo world for a reset
+uh there it is so when i press my right mouse button i get coins dumped all over this little table i've
+made in the center of the screen and uh in my sidebar here i just connected a bunch of um different
+parameters from the ammo body operator so if we look at ammo body ammo body
+and we'll zoom in on it so we have a bunch of parameters in here that are quite important to
+making the simulation animate in a believable way right so if you have a small coin maybe it shouldn't
+weigh like a thousand or like a ton or something like that and maybe it should have less friction than
+maybe uh sandpaper i don't know you can get into it uh with these parameters and actually get quite
+believable um reaction from your 3d simulation so we got mass friction rolling friction and restitution
+mass you can guess of course is the total like weight and density of an object so maybe the coin is
+actually not featherweight it has some heft to it so you might want to dial something in and then the
+friction you also have to kind of think okay is it metal is it plastic is it uh something super light like a
+feather will it cling on or bounce off of things or slide on surfaces and the the cool thing is
+we have uh of course this little table i set up under the coins and that is also a um a body
+here that has its own settings right and with a massive zero it doesn't really move anywhere it's
+totally stationary so um if you've seen our previous videos with the uh rooms and the through the places
+where you can like walk around the virtual spaces we are using um ammo bodies with zero mass the so
+they're static but they provide collision for other objects so that way we can walk around these spaces
+or maybe like toss balls against a wall or something like that and bounces back so um that's pretty common
+way of of making super static objects that are just like there um so that's what our table is and it has
+its own friction and rolling friction and restitution um i'm gonna tell you what uh these are actually so
+friction of course is is kind of like how slick is this object is it rough is it gonna slide on surface
+um just like what friction means rolling friction is um how grippy is the object to to then induce
+roll on the object so it's kind of kind of a bizarre maybe like an ammo um physics library only term
+but uh you need to kind of play around with it maybe we'll play around with these sidebar settings
+here to to see what they mean and then restitution is if you look it up it's just the the how much energy
+is put back into the object once it collides with something so for example like a rubber ball will
+retain quite a lot of energy so it'll bounce right back at you when you drop it on the floor and something
+like a uh uh hefty like iron bar will maybe stay on the floor a lot quicker so we can play around with
+this uh in this little uh object uh example so when i change the parameters it resets the um simulation
+so that's pretty handy so with a lot of mass we get um okay see that right there is completely stationary
+because there is no mass on the object so it's just floating in space um and then friction let's see
+what happens when we give it very little friction see it says it says as if the table is covered with
+like a soap or something like that right um restitution is again the energy so if we give it
+a lot of restitution then these coins are super bouncy and and then it starts to feel less believable
+right because we don't expect that from coins okay enough with this example let's look at what else we
+can do we can have emitters that um produce objects and then we can play around with collisions between
+these emitted objects which is really cool on this example i'll link below and actually i don't think
+i'm going to go into the physics emitter stuff ammo emitter stuff in this tutorial but i think with
+what we're we will cover it should be quite easy to to figure out and if you look at this patch but i will
+cover it in another tutorial a bit later so this is kind of cool right you can you can uh make some sort
+of toys or or make maybe maybe like create automatic cool auto animations of your objects or some kind of
+generative um things so here we have the emitter slowly spinning around so you get this like kind of cool
+um pattern with these flying sticks um and then here i think it was more of a maybe a real world example
+so i have for example this tape that i want to use as a product or like as a little ad or something on my
+website right and um i wanted to fall into the camera view and look really cool right so i'm using
+the ammo world and ammo body for this and right now i have the simulation paused and if you see over here
+i have uh the keyboard uh button one and two uh to stop and restart the simulation of my uh scene here
+so i have it set up and let's simulate it right so the tape falls here and maybe now now that i uh the
+interesting thing is with computer physics a lot of the times if there aren't any random um parameters
+introduced into the scene you know you have very precise things like this is the mass this is how
+much friction there is there isn't maybe like wind or slight tilts or uh stuff chipping away from your
+model or something like that um unlike in our real world you can predict exactly where this simulation
+will end up so every time i reset the simulation uh this tape is going to end up in the same location
+just because all the settings here are static and i'm not changing them you know my uh tape is
+with specific settings for the friction and rolling friction and all that stuff and so is this table that
+i have uh behind it and uh so yeah then i can on the last kind of frame of the simulation so to say
+like once it kind of comes to a rest i can pose my camera and then restart my simulation and then maybe
+that could be part of a video or something like that for for um some kind of post or i don't know maybe
+like a website intro and for example if i don't like this i can change the mass of the tape and then see
+how that uh affects my simulation so maybe i want it you know jumping a bit more or something like that so
+it's actually quite fun to to play around with this as a sort of composition tool or an animation
+helper or something like that you know i i wouldn't want to keyframe all of that i just want to drop a tape
+on the floor uh drop my hot mixtape and then uh invite people to listen to the music or something like that so
+i love this uh for animating um
+the stuff for for design all right so we looked at some examples and now i'll show you how to set up a
+very quick scene where we're using ammo world and a couple of ammo bodies to um make a cube fall on the
+floor and bounce around a little bit like so see so very very simple scene but i think it basically um
+we'll teach you everything you need to know to to then create um all the other stuff i showed you earlier
+and um maybe help you make sense of the examples that are already in the library um make it a bit easier
+so what do we have we have a main loop orbit controls directional light that's quite standard stuff
+um i put in a directional light because i'm using farm fung materials and i just wanted something else
+other than a default light and then we have ammo world and then the floor and the cube are ammo bodies
+let's take a look at ammo world and it's actually quite a simple
+operator that again we need to set up first and then all the ammo uh physics library related operators
+underneath the ammo world so you see i kind of like to do ammo world and then a sequence
+to then space out the different physics objects and 3d models and things like that under the ammo world
+we have quite some compact parameter panel here we have a simulate toggle which will allow you to maybe
+pause simulation if it's super heavy or maybe um you'll need to pause simulation when you maybe recalibrate
+some of your settings and then run the simulation again but for the most part with it on is fine
+but then again remember that it's there if you need to save on performance maybe you have an intro where
+the cube falls in forms some sort of a logo and then you can stop the simulation and then save on resources
+then we have gravity gravity gravity is really cool because of course in our world
+um it's pretty much
+on the y-axis right we're pulled to the floor like this cube is pulled to this gray uh table rectangle thingy
+um but
+in a simulation you can do whatever you want so actually the gravity i'm putting um to almost like
+half or one third of what it was and then we do the simulation and it changed a little bit
+and we can maybe even get into like moon physics see it slows down a little bit so
+excuse me we can get some very creative cool effects with this especially because we also have gravity on the x
+and z axis so if i um manipulate this i can even manipulate it live right so i'll show you with
+the y so or the cube stays in camera so if i go into positive it should float up but it doesn't why doesn't it
+that's because my cube mo body operator is set to sort of defaults for example
+um yeah they're all very close to what what it usually is but this is what i'm talking about the default
+is this the flags parameters um we have active which means uh you know is it active in the scene
+when we deactivate it we need to actually reset our uh simulation so there it is again
+and then our gravity will be positive and then
+back to the question why is it not working and it's never deactivate flag this um is kind of a smart
+feature of sorts of ammo uh physics library the way it's implemented in cables is when the velocity
+and the kind of activity of an object with other physics objects is below a certain threshold then
+the object goes to sleep basically and then it can be reactivated with um like a trigger
+see for example when we press it the gravity starts to work on it but it doesn't work on it
+to the point where the threshold is um reached so it keeps deactivating the object so that's why we have
+this toggle never deactivate so now our gravity is affecting our cube and then when i put it to minus nine
+there it fell off the table somewhere so anyway pretty cool we can we can use this never deactivate flag and then of
+course um we are constantly calculating uh the scene um physics so that might not be the smartest solution but
+for certain effects it's kind of cool where you can change the gravity live and maybe have it inside of
+like some bounds where it doesn't fly off your screen um you can do some really cool automated animated
+uh gravity adjustment and things like that so that's pretty much the ammo world operator in full and then
+we'll uh focus on this ammo body cube actually you know what i'm gonna do i'm gonna leave my floor and
+i'm gonna delete this pink cube and um create it with you together um and before we do that we'll look at
+the floor so the floor has a mass of zero and this causes it to stick in place because it has no mass
+it has no interaction with the gravity it's just there but it is a solid so other things that collide with it will
+um collide it with it in a specific way due to the friction rolling and restitution and things like that
+because it does affect the other object that collides with it and then we have the box uh shape
+selected for it and we can visualize this with the debugger to debug ammo debugger and uh let me maybe
+disconnect this cube uh so we see just the wireframe and hopefully you can see it on the screen
+it's a bit it's a bit it's a bit thin but um i'll just quickly show you why it's handy so right now
+we have a box with these settings right we have uh y which is the kind of a height of this and then the
+size z and size x affecting our bounding box cage which is our collision mesh and then if we switch to
+sphere then we have a sphere then we have a sphere that we can uh adjust the size of uh cylinder capsule
+cone and then geometry convex hull and geometry convex hull is an automatic calculation um of a
+collision mesh so to speak collision cage from an input geometry so if we look at the ammo body uh input ports we
+have this geometry input and we actually have an error right now shape needs geometry connected so we do
+not have anything connected but we do want to use geometry convex hull and it's complaining that we don't
+have that so we'll go back to box and uh there is our box and then we have this very interesting uh
+for output port called transformed which i think is so helpful compared to if you've used the previous physics
+engine in cables it had uh quite a difficult setup process but now we have this uh kind of reimagined
+and improved optimized way of of fitting your graphical 3d model representations to the
+cage collision cage and this is this wonderful port out here which is called transformed so when we connect
+our one unit cube if we go to the cube it's 111 that's the one unit cube it will uh use the size of the
+collision ammo body which is fantastic right so everything matches up the collision and the 3d representation of
+our object looks great so back to creating a box that will fall onto this little platform
+let's add an ammo body there we go and we don't see it probably because it's inside this
+cube floor so what can we do we have our ammo body by default with a massive zero and whenever it's a massive
+zero again it's a static object and that is a fantastic time for us to use the transform to then
+adjust the location of our physics body and i recommend you maybe plan ahead for example
+i want this box to fall from a certain height onto the floor uh this gray floor here and that's pretty
+much my plan so i don't need to immediately give mass to my cube that's going to fall i'm going to keep
+it at zero because then it's a lot easier for me to visualize where um my box will be and how it will
+shape or or fit with the other shapes in in my scene um because of course we can give it mass and then we
+should see it bounce down and our debug render is also showing the contact points which is kind of cool i'll
+turn them off for now and then we'll talk about them later so i have this box here let me just quickly add
+add another cube under the transformed node and then maybe give it a um a font material as well
+okay so here's our little blue blue cube and we have some mass right so now let me also
+do this reset will be mouse right button
+right click so whenever i right click my canvas i reset the simulation so we have a box but we want
+to change the starting location so we can turn on the gizmo views with these toggle helper menu which
+appears when we click on the canvas uh in our editor and then we can see whenever we select a transform
+where the starting position is but i don't know like sometimes it's helpful but i kind of prefer to just
+turn off my mass and then position this box wherever it needs to be because sometimes you have to like
+position it in between other objects that are collidable so it's a lot easier than just like
+continuously restarting your simulation and going okay i finally found the right place for it um because if you
+maybe put put something inside of another object it will just fly into space because of the insane
+collision it has or uh the simulated uh physics interactions can be super wild so basically this
+is it right we have a box that falls and we can um like change the rotation of this box as well so when we
+start the simulation it has an initial um rotation that will maybe affect the the bounce a little bit more
+interestingly and again without uh this mass set to zero it's a bit difficult to to position this stuff see
+this is a lot easier though like i want it to bounce on the corner um i want it to be a little bit bigger
+like this make it a weird stick thing and then add some mass to then start simulating
+very cool um what else should i show you i want to show you one more thing which is um using geometries
+right this this convex hull thing um i think it's super super neat so i'm going to delete uh this thing
+and then keep my debugger on ammo body i'm going to switch to uh have zero mass and then i'm going to
+going to use this geometry comics hull i have this uh alert again then i go to my files and maybe look at a bunny
+this one then i'm going to connect our gltf scene render it don't really
+actually need it right now i'm just gonna turn off the render and then show structure and then get the
+geometry of this gltf scene for the bunny so i just need the geometry plugged into here and we see this
+green blob that is supposed to be the collision cage of our bunny but it doesn't really look like our bunny
+okay no problem so what do we do we have to pay attention to the simplify max triangles so basically
+right now this collision mesh of a bunny is super simple made out of 50 triangles and sometimes you do
+need that right you might not need super precise collisions for like the bunny ears and the and the
+tape and the tail and things like that you just need like a approximate thing because maybe you have a
+bunch of them in the scene and it's really quick and whatever but if we want to have more precision we of
+course just increase our um amount of triangles to maybe like 10 000 and then we will connect it again
+and then see what happens it doesn't look all that much better but that's actually uh
+the way convex hull works right because let's look at this bunny if we activate it again maybe give it a
+a little bit more of a little bit better so we can see what happens it doesn't look like a little bit more
+and then move it into where we can actually see it
+and right now it's also rescaled i believe so maybe we can turn off rescale and then it matches up our
+collision mesh more i'm gonna turn off this box below maybe a risk reset our scene
+okay so what's going on here why why doesn't it look like our bunny well because look at the bunny it's
+actually if you try to maybe imagine getting like a sheet of um maybe paper or like uh butcher paper or
+something like that or like plastic sheet uh that's that's quite like um tough and and thick right and
+then try to lay it over this bunny try to wrap it and this is basically what you're gonna end up with
+like try to wrap this bunny in a newspaper and that's the convex hull basically so if you want to have
+the bunny ears defined then you need to maybe break apart your um 3d mesh into multiple um objects that
+then will be calculated correctly and then represent this um collision mesh a bit better but i think we
+will cover this in a more specific uh specifically oriented tutorial where we're gonna maybe create like super
+precise uh collision meshes and maybe some simple ones for perhaps a 3d room tutorial maybe we can make one
+together and then uh roll some balls under chairs and tables and things like that where uh this
+approach with creating a convex hull um it needs to be addressed in a special way all right so i hope you
+enjoyed that uh check out the documentation check out the previous tutorial for ray casting i think it
+also kind of goes hand in hand with this stuff i will allow you to do some crazy cool physics slash uh
+interactive um user interfaces in 3d and uh yeah check out the examples in our library i'll link them below
+um have fun and see you soon bye

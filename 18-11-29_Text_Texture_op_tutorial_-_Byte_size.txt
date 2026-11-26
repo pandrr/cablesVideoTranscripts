@@ -1,0 +1,25 @@
+https://www.youtube.com/watch?v=z1Qf9dE67-w
+Hi there and welcome to another video on the Bitesize channel. Today I'll be giving you an
+introduction to the text texture op. I'd like you to pause the video and just make what you see here.
+Okay great let's get started. Let's say that I want to get some text inside of the render view
+here. It's a really easy way to do it. So I'm going to type in text and this op generates a
+texture which reads text. So I'm just going to add it. This needs to be plugged into a material
+because it outputs a texture. So I'm now going to move this over here. As you can see we've got the
+word cables and it's pretty small. So first of all I can make this bigger by increasing the font size.
+If I want to have the quality a little bit sharper, 512 is pretty good, you can go overboard and say
+2048 by 2048. And then I'll have to make my font size bigger. We also have an option maximize size which
+will always make the text fit within a unit of one but then the font size here doesn't work anymore.
+So if I want to edit the text I just click edit. So here I'm going to type cables for the win and click
+save. Now the text appears like this. If I would like it to be multi-line I can just do that inside of the
+editor here and click save. And now we have this. And this is where we can now use different alignment
+options. So we can pick here center, left, or right. Let's put it back to the center. And the vertical line,
+top, center, bottom. So I'm going to put this back to center. We have line distance so you can increase the
+distance between the words. As you can see I'm going outside of this cube and we've got a nice little way to
+visualize that cube now. We can put a border around text as you can see. So I'm going to put this in like 30 and I'm
+going to put the line distance less and I want to have manual control over how far away it is from the side. So I'll just do
+this. If I now close the editor and go to the transform up and rotate this say by 34 degrees and do this you can now see that we
+have the text as a texture which is applied to a basic material which is on all sides of the cube.
+This opt supports any fonts that your browser supports. To find out what those are you'll have to google this as I don't have
+enough time to cover that in this tutorial. I hope this tutorial has been handy for you and that you've
+learned something new today. If you have any questions or comments please feel free to
+leave them in the video below or to post them on the forums. Thanks for your time. Bye!

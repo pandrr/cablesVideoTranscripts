@@ -1,0 +1,992 @@
+https://www.youtube.com/watch?v=NMyNwSPvLBg
+hey everybody good evening just give me a minute to get set up check up it's
+working okay all right
+good evening everybody um my lighting clear just want to test one last time you never know
+something's gonna go wrong the last minute with stuff
+let's go set up one or two more little things
+sounds good great glad to hear it okay um so i'll just talk on a little bit in the meantime uh
+before we start for the people that are already here welcome um thanks for joining us um so tonight
+i'm going to be continuing um some more on the vj software that i'm building inside of cables gl
+as usual this is a quite an unplanned affair um so i'm going to be um building some new visuals tonight
+um and i'm not sure if i'm going to do it tonight i might start plugging in a little bit of simple
+midi hardware um but i'll just have to see how that goes uh basically because um when i'm going to do
+that i actually want to have more stuff set up so i can map it and do it all in one go and actually
+pretty much dedicate an entire stream to that so maybe i'll squeeze something in um near the end but
+we'll see it's work in progress i'm still not too sure where this is all going to go and how it's all
+going to turn out uh i'm pretty sure the results are going to be cool um i've not even really looked
+at what i did from a couple of weeks ago with the last stream so i see some nice stuff moving around
+on the screen when i press play and able to live but outside of that i'm not too sure exactly what
+it is that i've done so i think the first few minutes of the stream are going to be me
+deconstructing that um a little bit so let's get back over here all right wow what a cool more cubes
+more cube stuff okay all right just taking a quick peeker yeah profit gate all right okay so
+ah there we go okay all right yeah okay now i'm uh getting back uh up to date with what i was doing
+okay i don't need that this was this kind of like look at system now remember yeah okay yeah so basically
+i was uh let's just disable some of that um post fx good god why do i have it ah okay here it is all right
+so um let me just actually disable that right okay that was what we had so now remember um so basically
+i made this uh mesh instancer thing let's let's press play for a moment
+yeah and what it did was i made like a kind of sphere which uh flies around
+yeah
+yeah now remember okay
+so when we put global effects on we get this okay okay
+oh yeah all right yeah so it's all a little bit mixed up here right now cool so
+basically what i did last time was um i made this for the people that didn't watch the previous stream
+i made this kind of like um landscape of um cubes as you can see there with a mesh instancer
+and um basically what happens is like every couple of kicks um the camera will move to a random position
+and there's a kind of sphere that's um being followed by the camera i think we can enable the sphere
+right now so we can kind of follow what's going on yeah there we go so we've got that sphere
+um i'm actually just going to turn the music down just a decibel
+what's it because um it feels a little bit loud tonight i hope it's okay for you guys
+all right so yeah we're following the sphere basically um and it's kind of like uh flying
+around and we're giving it a random number on xyz which is kind of within um the constraints of
+this mesh instancer thing so i was i was pretty happy with this because
+it uh was something that looks pretty cool um depending on like what kind of um global effect
+i mean i wanted to have something that would look cool if you just put this global effects on it
+basically that's my whole idea is to make a couple of scenes um and we can use reuse the same post fx
+chain on these scenes to get some different looks and here we have the shape select
+so here we have these kind of like pyramids i think we've got that working at the last minute last time
+yeah okay and this is right this is a slide so this is kind of like the density like how close
+is all this stuff um together basically yeah now remember so this was also mappable i think i put
+the stuff on the sidebar slider that i wanted to have mappable with like a midi controller or
+controlled field live okay so let's do something else right now um now this was this old patch um that i
+worked on and we're gonna we're gonna start needing to do um sub patches now because this stuff is all
+getting uh pretty massive to say it that way god i wish i remembered everything that ponder done now
+uh that followed with the stream without a demo uh some of that setup would have been pretty um nice
+but we can do a really simple version of it right here so that's okay so if i'm looking at this right
+now you know everything below here this render to texture that's this scene okay so what i'm gonna do
+now is i think i just wanna i wanna get this i'm gonna turn all of this into one sub patch because you
+now when you're working on like a really big patch and a big piece of software it's really easy to lose
+the overview so this is why the sub patch function is really handy to break this down so i'm gonna get
+the final post effects and i'm just gonna move that up okay so i'm gonna grab this now i'm gonna do
+ctrl s first to save
+okay okay and now i'm gonna click here create sub patch
+and i'm gonna call this one let me see gotta remember to zoom in more so everybody can see what i'm doing
+more cubes too let's do this okay
+now what i'm gonna do here is i'm gonna put a root trigger so this is gonna trigger one of the output
+posts so right now um this is the next that's just always gonna go through so i'm gonna put this here
+so this is triggering and you know i'm just gonna start breaking stuff down now into
+something that's easier to understand so i'm gonna get this
+let's move it up oh my bad let's just actually connect that one
+so a little trick here when you're going like over a big distance holding um holding your left mouse
+button press space and drag and you can kind of go from one part of the patch to the other
+so i'm going to click execute all right
+and the reason i'm doing that is as i'm lazy i don't want to create this new
+dynamic part so i'm going to get this from a previous stream
+and i'm going to do create a sub patch
+and i have no idea what this was actually so i'm going to put on sub patch two
+now this might break something let's see
+now we're not getting anything okay so let's check out why so if i press f for flow mode
+and i press one okay so we're going in now what's going on what am i saying do i have a render to
+texture probably not so like when you go like this into a patch and you think where is everything
+uh it's a really cool feature just click somewhere and press c
+and it will kind of send to you now for some way the reason the patch input has decided to
+fly into infinity and beyond so let's grab that guy and drag it over
+so basically what we need is we need a render to texture if i'm correct oh we got one here
+okay so we got this right so as you can see this is still synced from what we were doing last time
+ah here we go and i've got all these post effects and everything so i'd already built it like going
+into one um system now yeah this was some cool effects i suppose but you know what i'm just gonna
+i'm gonna get rid of this full screen rectangle i'm just gonna check this for a minute so this is
+doing render to texture and it's going there and basically what i need to do is
+this just give me a minute because right so you see here i'm using these um var set texture
+so those are horrible variable names right now but i'm just gonna reuse them
+um so i'm gonna go here and i'm just gonna disconnect this disconnect this
+i'll explain all this again in a minute everybody i'm just also getting back into
+what it was that i've been doing so this is basically my render target okay and this is my
+depth map so i'm just gonna explain it because that was horrible what i just did there we're going
+so fast but as you can see it's not working i'm just make sure it works and i'll break it down
+so now i should just be able to swap between each scene there we go so this is really cool because i
+can now um just swap between one scene and another and the best part is i can just apply this global
+fx and just still swap this scene cool haha all right that's awesome all right closer some features
+all right it's awfully quiet out there tonight how many people do we have watching
+two yeah that's a low number but let's let's continue um
+and do this um for the stream results for later okay so basically now that i've tidied this up a
+little bit i can make this all make a little bit more sense so this is like the the final post effects
+right so this sidebar here this is just my reminder you know it's like these are cool knobs that do um
+things that i want that i can map later on to midi okay so we can start to look for things in common
+like this shape select you know i could probably go into you know what let's add another sidebar here
+i'm gonna call this slider
+so i'm gonna get a slider and we're gonna call it um scene select cool um i only want to be able
+to go any steps of one so like zero one or two but right now i've only got zero one because of the root
+trigger and because i don't want too many long cables all over the place i'm just going to make a var set
+number and i'm going to call this i'm going to click create new variable scene select all right so now
+we're going to go over here to this root trigger var get number so that allows me to read the variable
+that i just created uh and i'm going to go here to scene select
+i'm going to plug that in down and now i can pick with the slider here in the top right corner
+um which scene and later on we're going to be able to animate this right which is going to be really
+cool so we can make this swap on time with like a kick or with the music so uh it's all it's all coming
+together um but there's there's some stuff that i'm like ah did i did i do a bad job of that or not but
+it's okay we gotta just break this stuff down as we go now this was pretty cool because here i built
+this kind of like system um to trigger random numbers and make it happen at a certain point in
+a loop and everything you know and basically i can just reuse this part now which is really cool
+so i'm actually going to do that in a minute with what i'm going to do so a little bit like what um
+panda did on a live stream where i um co-piloted with how we make demos and cables or more how panda
+uh makes demos and cables um we used uh he used this trick you know with the um the root trigger
+now the thing is we could try and build like an entire transition system in here where it blends from
+one to the other but at least the vj software that i've built in the past i didn't like that i i like being
+able to press a midi button and have that change in time with the music because by the time you've
+thrown it through some post-processing it's just part of the show uh basically and don't forget like
+this patch here we can go way further with this because this is just like a cube and a pyramid that's
+where we got to last time you know we could apply different materials and so that so this patch here is
+rich to be um enhanced more and more to make um cooler things you know we could we could make the
+pyramids flip and half of them flip upside down and half of them the other way so there's just a lot of
+ways to generate stuff with this but what i want to do tonight is um the control system is kind of in
+place you know this this is easy to map to a midi controller so later on what i want to do is this i
+want to build a new scene i want to have three of them and that's kind of like my tester i want to have
+like three pretty different scenes because you know they've got pretty different visual styles
+basically like this one is a lot more colorful just works with two shapes and this one is very busy
+i want to find these common controls which i can from this sidebar here plug into every single patch so
+i don't have to think about am i on patch zero one or two i just want it if i tweak something it just
+changes it in all of them and whichever one is active because when you're vj-ing the last
+thing you want to be doing is tweaking a knob and going oh it's not changing what i've assigned it to
+it should just always do something you know because even if you don't remember everything you've mapped
+at least you know it will do something and you can react um accordingly so um it's going to be time to
+um make something else now so what i'm going to do is um i'm going to go over here i'm going to go to
+sub patch two so just so you know um i'll just give it a very quick breakdown so you know we've got a
+main loop here we've got a sequence these are some of my global triggers this is an old one which could
+probably be replaced uh and this is final render so what happens is let's we're just interested in this
+one this trigger here goes down here and we pick a scene right so this is going to be all of our scenes
+of our vj software and you can see with the flow mode there what's changing right so we go inside the subpatch
+what we're interested in is this infinity and beyond again let's just grab that guy
+it's just something that sometimes happens okay so that's the trigger coming from outside of the
+subpatch right so this is all we're bothered about this render to texture and we're using far set texture
+and we're going to use the same one in our sub patches so these textures they're now assigned as
+variables and we access them here more cubes depth more cubes right so um that's that basically so you
+know if we click here we can see this and if we click here that's not been tweaked for this scene yet
+so that's just it basically we're just getting a scene render it to a texture send it as a as a
+texture over here and then um just apply post processing because i don't want to think about
+everything anymore i just want to work on sub patches because it's going to become really big
+so let's go to scene select right now it only goes up to one let's change that and put it up to two
+so max two so now we can go from zero one and two okay and because we've got nothing going on
+the last texture that was used um it's going to be drawn because i'm not assigning anything so let's
+let's do this so i'm just interested in this part right now um so i'm going to go up here and i'm
+going to pull this out sorry i'm going to paste this and i'm going to plug that in here and we're now
+going to put this into okay so we've got flow mode going whoops that's why i love flow mode so we've got
+it going here but we're not rendering anything to the texture okay so let's just make a sub patch already
+and we're going to go in here all right let's get to infinity and beyond okay come over everybody
+all right so i'm just going to be working on the scene that was inspired by something that i already did
+so what i'm going to do now is um let's grab basic material and actually let's do a sequence
+because it's amazing what you can do with a cube so i'm going to go here and i'm going to make an image
+compose okay and i'm going to go here now to make a um waveform gradient so a really cool um multi-effects
+can generate different texture waveforms sine saw tooth and triangle so i'm going to grab that bad boy
+put it here okay um i'm going to turn off use viewport size i don't need that because i'm going to use this
+as a texture on a material so for now i'm just going to put on fights all by 512 because we want
+everyone's everything to be fast and um optimized okay so let's get this and let's plug it in here
+one minute
+it's a texture and i'm just going to grab a cube
+okay so we've got a cube here believe it or not um and as you can see right now i can change like
+what's shown now so let's put this on let's just put on two so it's a bit clear what's going on turn
+up the power factor all right so i've got to do some things later on like get the clear color and
+map that across all levels but i'm not going to worry about that right now i'm just going to work on
+the basic scene so just so we can be sure we're working on the cube let's go here and type in transform
+and let's just rotate it there we go now you see these scenes here and that's because we've got
+to go to image compose and the wrap is on repeat and we need to put that on clamp to edge i thought
+that would get rid of it well okay i'll figure that out in a little bit no worries all right not again
+changer 45 45 okay so we've got a cupid okay cool so um this cool little um trick that i was playing
+around with was um if you get um face calling this up um so i want you to pay attention to this like
+picture here disable the rendering of the front or the back facing triangles you know because all the
+meshes are made out of triangles so i'm going to add this and if i now click discard the front sides
+um we're only actually looking at the back sides of the cube which i discovered could let me do like a
+let me do like a really cool effect so what i want to do is um i really love the film um interstellar
+and i got really inspired uh by the scene with the tesseract um where the the the traveler is going
+through all these layers where he sees time and dimensions now of course i'm not going to be able
+to make that tonight who knows but i was pretty inspired so i thought let's do something like that
+so um first of all what we're going to do is we're going to make a repeat up
+maybe this would be possible with mesh instancing but right now in my head this is going to work with
+repeat and let's just put it on four for now okay so we've actually got four cubes there but they're all
+exactly the same size which means um that we're only seeing one because they're all occupying the same
+space basically all right so what we need to do is we need to i want to make all of the cubes become
+smaller as they go in right so we've got the um the index number from the repeat all right and what
+we're going to do is we're going to use that um to scale the cube basically so i'm going to grab this
+i'm going to do multiply and i'm going to make it a smaller number i just want to see this work first
+i'm going to plug down to scale that should become bigger let's make it a negative number there we go
+cool um so look here if we just um if we discard um okay one minute right yeah there we go
+yeah sorry that was confusing so if we do a negative scale then the if i'm correct the normals get
+flipped uh so that's what was happening so um i want to discard the front and if i multiply this by a
+negative number they get inverted you know so just trust me on this one i think that's the best
+explanation i can come up with hey hardy thanks for joining us all right so let's do 0.5 so this is
+basically the spacing right and you know let's put this on a nice number like eight this is already
+looking kind of cool so let's get away from gradient and put it on one now so far so good what happens
+if we lower the opacity we can get some blending there now i'm just going to play around just for a minute
+yeah no we don't need to do that all right so we could colorize this
+yeah so this is cool we've got something here we can use to control the color with the colorized
+texture oh it's nice so i'm going to leave it on black and white for now and i'm going to do this so
+let me just use the transform view up because actually let's just grab a little bit what we
+did in the other patches because there's no need to reinvent the wheel here so okay we've got this clear
+color uh which is mapped to the profit gate you know so first of all i'm just going to totally grab
+that and do we have a transform view around here no that was in the other patch so i'm just gonna i'm
+going to jump back and forth into the patches now and i'm just going to reuse things because that will
+also tie um things together so let me pull this down this is the repeat let's get that clear color
+pop it in there now i don't think we've seen anything because we're completely inside the cube
+so let's grab a transform view and let's move back a little bit
+so what we're seeing there in the background this is really cool now because we're just reusing
+the same stuff i mean i could grab something different so the profit gate that's one of the
+midi channels um coming from live that's this one from correct yeah profit um and basically what that's
+going to do is you know it's going to trigger the clear color so the cool part is now even if we go to
+um this scene for example this uses the same effects when we're jumping from one scene to another now
+um we've still got like some continuity which is like really cool basically so you might be thinking well
+okay nice but you know what what can we do with this well um i don't know that's what we're going to
+find out so first of all let's um grab let's just tweak a couple of more effects first right so
+let's say that i want to rotate it based upon its index right i mean yeah this this wow this this is
+going to be really super cool all right you know okay so let's grab this repeat it goes from zero to seven
+right and i can't do much with zero so i'm going to do some i'm just going to add one all right so now
+it's going from uh one to eight because if i multiply by zero nothing's going to happen okay i don't want
+that so let me just pull this down so i want to make these guys rotate based upon their index
+okay yeah this one let's try this one for now rotate z okay so i'm going to get this one and i'm going to
+say multiply by it's going to be 45 on 90. i don't know we'll just find out so press that for flow mode
+as you can see everything under the repeat op just to make that clear you know it's happening it's been
+rendered eight times so i'm going to grab this multiply i'm going to plug it into rotate z
+wow not what i expected let's plug it into 90. now look what we're going to do now is we're going to
+start getting these pretty cool patterns not exactly what i want but it's a start you know what happens
+if i plug it into rotate x yeah yeah okay i like where this is going that's that's that's pretty cool
+yeah all right juicy let's say why other way okay so
+i'm just going to make this guy just rotate for now um
+and should i do it with the transform view probably yeah so we're going to do it with just transform view
+so as you can see the cold faces gives us this really cool effect so i'm going to get this rotate y for now
+and i'm just going to plug in the timer so i just want to just want to see how this works basically
+now let's put it on 20. 40 40. okay i'm going to animate this in a bit but i just want to i just
+want to get some stuff in place and just play around with it basically okay okay um okay
+so i can disable it i'm just playing around there for a minute just to see what i can do
+but this is that thing that gives like a as you can see um each index is rotated 90 degrees right so that's
+what gives this different look down if i put on zero they all look the same 180 gives is that the same
+as zero yeah it is basically so 0 45 and 90. so i know i did a lot of stuff to generate some random
+numbers press c there ah this is some i don't know what it is
+that's something from the very first round let's just not look at that now
+okay so this is where i know that i did a lot of stuff which is like um trigger based
+this nice little um system here basically so i'm going to grab this
+don't remember everything that does i don't think i need to
+so it's going in okay so i want to just do a simple thing here i'm going to paste it
+and this should just still be getting everything yeah okay all right so um
+what i want to do is i want to trigger i want to make it go between 0 45 or 90. so that's zero one
+or two okay so um i can do a hard change here so let's put this first in the minimum of zero
+maximum of two and then put it on an integer and then every time a random number's going to come out
+it'll be zero one or two okay so what that means is we can then do um this this um multiply by 45
+multiply
+yeah i'm not very happy with that um 45 degree look right now to be honest
+um i have no clue what's going to happen if i plug it in there let's take a peek
+wow that's actually kind of interesting but not what i want to do right now okay
+experimentation ladies and gentlemen let's keep it again just keep trying it all right so i'm actually
+going to put it on one or two gives you one or two numbers
+okay let's put some 90
+so what i want to do here is i want to try and build simple rules right
+so um this one as well i could also put it on one and two and i could say like hey you know how is it
+it if we get the smoothed number right sorry so smooth jumps out um jumps in values basically
+let's try again
+also an interesting effect okay let's keep it on the hard change for now
+so i think a lot of the the trick here is to
+i mean you can you can come up with some really simple stuff here so if i'm gonna do some
+um i'm gonna get this smooth number i'm gonna multiply it by 90. ah okay yeah that's gonna be a problem smooth
+isn't gonna work with the repeat up
+but i can just use it as a global multiplier so let's put this here
+yeah you know what this is not working the way it will but that's okay so let's try something else so i'm gonna go over there i think the trick here
+i think the trick here is to do some really nice stuff with the texture
+so actually we can do this
+so this goes from one to eight right
+so this goes from one to eight i'm gonna put in i just want to have an easy way to make it go from zero to one
+because smooth step functions because smooth step functions work best that way
+do multiply
+so this number we're going to smooth step just curious if this is going to do what i want
+oh yeah oh yeah look at that oh damn that's pretty cool
+i like it i like it i like it so that's something else we can do in a bit i can also move this this is
+like those cool tesseract like effects that was going for all right cool leave that there for now
+sorry little wave inspiration hit me down all right so let's just pull this guy down so let's keep
+scrolling up like that so you know we can we can do a lot here with just like making this rotate right
+so um let me grab this again i'm gonna just copy this i'm gonna move it over here i'm gonna copy paste
+i want to get some movement in that cube all right so
+yeah there we go that's what i want to do all right so we're actually just gonna do this now
+um we're gonna multiply so i'm gonna say um
+zero to three actually you know one through four
+this is four values get it as an integer uh one complete rotations smooth gonna multiply it by 90
+so that lets me go from zero to 360. so actually i'm doing it wrong let's do minus two and two
+then zero is also acceptable i want to be able to go both ways so i'm going to grab this and i'm going
+to plug that into rotate y i'm going to make this move really fast
+let's give it a moment there we go cool all right i want to get some movement in there so um
+i'm also going to do the same trick again just here like this why because sometimes the random number is
+going to be zero all the same number which means it won't move which is basically what i want
+i can drop that trigger just pass this one through two straight lines all right and this one i'm going
+to plug into actually just let's plug that into rotate x and this one into rotate y
+so this is on every quarter trigger right but i could then also do this i can grab that i can disconnect this
+actually and i can go here and i can say um give me the kick trigger so this is going to happen on every kick
+if i'm correct
+yeah okay cool so you know we can we can we can get some pretty cool stuff going on there so that quarter
+trigger that's always going to happen on a quarter we can do a kick you know we could even make this
+just into a snare this a lot of stuff we can do you know i just i just want to keep this a bit simple
+for now i really like this module that we've got here we can just pull it apart as you can see simplify
+it and get a lot of really cool stuff so let's grab the snare trigger plug that in there it's on a flow
+mode just going to save i'm just going to pop back to edleton live let's pump it up
+and actually because this just always makes more sense to me let's do the kick then the snare okay
+cool so i'm going to make one more now and this is going to be
+it's already pretty busy right now
+okay nice and subtle so i want to get that bass winder
+um and this one we're actually going to just put on minus one to one so minus one it rotates zero it
+doesn't rotate one it rotates please don't forget if the number's the same then it's not going to
+change either so i like this kind of like i don't know unpredictable stuff so i'm going to get this i'm
+okay this could all use tweaks later but we're working on it as we go
+i put it on a trigger scene one minute
+now this is good to do because i'm testing it and that this is this is horrible this is just like this is
+crazy you know if i was at a party and it was seeing this i wouldn't like it at all
+so this is probably the base trigger here which is doing an awful lot so let's put it on
+let's just grab this which is basically just a way to
+count so this is like doing a trigger counter and every four
+it creates a trigger so we're gonna see so that base was just too much
+so i'm gonna put this into value and this one i'm gonna do again minus one to one
+so every four counts this sends out a trigger which is just more um it's making a bit more sense now
+okay okay all right so we're here at this waveform gradient um we can do some pretty cool stuff with
+this so here we've got the preview mode i'm gonna put it on sawtube
+oh yeah look at this oh i'm liking this this is going pretty cool
+so this is the nice part now this system it's becoming modular and now we can just start making
+scenes adding them turning these effects on and going booyah all right so if we load a power factor here
+this is going to be something that's definitely going to get animated okay i'll just save for a minute
+it's going to reload
+hey howdy um yeah i'm not going to use sin because that's just that's not beat locked
+uh sorry i didn't see uh the the finger said so you know if i'm going to get sin and i'm going to put
+that into the index um then everything's just going to do all these really smooth rotations and um that's
+not the style that i like um with vjing i like very hard abrupt changes uh it's like a snare drum
+you know when you hear a snare drum it's like and it's loud and then it goes down and it decays
+right and you know if you have like a kick drum or a snare drum go off and things are going up and
+they're going down people don't meet the association with an attack of the sound is like a rotation or a
+scale change or something that's at least my experience from doing that parties i don't like doing visuals
+that drift all over the place i really like to beat lock and um beat sync things together basically
+just answer that one but keep them coming by the way
+yeah sure that's what i said with i just saw it right now
+um but yeah please any comments any feedback keep it coming because sometimes it gets really quiet over
+there and i'm like ah there are people all right so i already like the way this has come in and um this is like
+this is getting there but you know we can just swap from one scene to another and that's interesting that
+shouldn't be happening
+what did i do why is it not clearing
+this
+let's take a peek
+so it looks like the it looks like the texture's not being cleaned out
+ah is that the depth texture chain let me just look
+i think it's this one yeah okay all right so what's happening there is we've got this image compose channel
+right and it's got this depth texture in there but we turned off the rendering right and if we go
+here you can see it's moving so the um the this um get texture milk cubes depth it's not getting
+refreshed so it just keeps the last thing um that it got basically which is really interesting because i
+would i thought i connected this stuff let's take a look
+so i've gone some more cubes too this has more cubes that okay there's this one
+this one does as well that's a depth map okay
+and this one also has a depth map okay now that's kind of weird just trying to wrap my head around
+why that is why that is happening
+oh you know what i'll figure that out later
+and a quick comment
+okay
+all right all right so back and track because i don't want to spend a whole live stream letting you
+guys watch me work on stuff here basically
+now that's weird so i've done this finger with switch textures i must have been wanting to do it
+um yeah i don't need to do this because i'm doing this inside of uh with the root trigger
+okay did that have to do with it no really no i don't okay all right okay i'll come back to that
+later all right so here's here's my texture and that's coming from all these different scenes all right check
+back and track so let's just go back to
+scene one
+with this lovely music from overse
+it's been kind enough to make and share this with us you should definitely check him out
+his new eps coming out soon i've been entitled to sneak and listen to it really really great stuff
+if you're into the kind of um cyberpunk like style inspired music you're gonna really love
+i love that when it comes out and we're gonna do an announcement or at least i will
+when um his ep comes out okay back to this
+so i saw here with the waveform gradient i can do some um really cool stuff
+okay i don't know why
+give me one moment everyone i'm gonna just refresh my cache and reload a little problem
+with the ui there not too sure what it was when in doubt press ctrl shift i
+and ctrl shift r and that will um clear your cache basically let me see if this is fixed it i was having
+a problem and i'm dragging the number down still am okay i'm not too sure what that is
+so you know we're still in the experimental stage with things
+okay that's not working all right just give me a minute
+um i'm just gonna grab this um i'm gonna grab a new browser window sorry for the inconvenience everyone
+i'm not too sure what it is right now
+no one need to stop the music though okay let me just give this a quick test here
+okay back to normal no not too sure what that was we'll be sure to look into that after the stream
+tomorrow all right um let's get back to where we were so patch free let's go in there
+okay so i'm going to show you here with the preview um as you can see if i go here to waveform gradient
+i can change the power factor as you can see i can get a lot of different looks you know i can put
+the frequency on like four i can change this to do that you know this really lends itself to
+making some really nice patterns so we've got like sign
+sawtooth let's crank this up a little bit triangle and um square um that actually only works if you're
+going below um zero basically so it allows you to kind of do this so you know what i'm thinking now
+this is a really cool um powerful effect right but it's like how do i control
+all of this in a simple manner without losing my brain right without losing my mind because we have
+here this mode we have this um frequency um we can rotate you know there's so much stuff we can do there
+right so i think it's time for the preset up and i think it's a great way to show people that might not
+um know about it okay cool let's do this so uh ctrl s to save
+um so what when whenever you want to use the preset up and we've got a really cool tutorial about this
+on um youtube sorry just give me one moment i'm gonna grab a sweater it's kind of chilly in here
+okay
+all right where was i one minute okay so basically i want to use the um the preset up
+to manage what i want to do now so i want to just be able to have like um one number
+and then be able to go between different presets without having to remember everything that i've done
+later that's the idea so let's let's look at this first of all when you want to use the preset up you
+got to define what it is you want to do so um if you look here we've got the blend mode index right
+so i'm gonna grab a number and plug that in here and that is the blend mode right
+um so i'm doing the wrong one i mean net mode index number there we go mode index so now i can supply a
+number and change um what the mode is right so you know if i put it on zero it's doing um sign if i put it on one
+then it's doing sawtooth right so the reason i'm gonna do this with numbers is because i just want
+to keep um i want to keep an overview for everybody here i could just plug the preset up straight into
+these things i might want to add modifiers or something like that later so you'll see one in a minute
+so we've got frequency um power factor and cables remembers the last op that i had so i don't have
+to keep on typing in um number basically offset and rotate i can just do later on okay
+so let's say i've got some cool presets now that i want to start so go here and type in preset
+state management of all parameters connected to it i'm going to add that now i'm going to start using this a
+lot with this um vj software because you just you just you find cool combinations of things in mini
+patches and sub patches and you just want to keep them basically so that's what i'm going to do with
+this right now so first of all i'm going to make some presets right so we zoom in let's just make this
+a little bit bigger for everybody so you can see it so we've got here the dynamic um port which allows us
+to create a variable now if you look here nothing's happening right now so drag this to mode index and
+now i get this and put it to zero and basically what's happening is now this you see the port is
+grayed out this is now controlling this right so now i'm going to get this i'm going to connect this to
+frequency i'm going to get this i'm going to connect that down okay so we don't have a preset yet so i'm
+going to i'm going to turn this power value up to say 20. all right mode index could put it on
+16 for a crazier effect but i'm just going to put it on one for now i want to make some basic presets
+so i'm going to click create new preset and i'm going to call it sine one all right and now i want to be
+able to just change it a little bit so i'm going to turn this down to say 10 and i can change all these
+later i'm going to put this on four create new preset sine two okay so now um i'm going to do something
+crazy like wow okay that's all kinds of crazy right i want to get this like soft look down don't want to
+think too much about it sine three let's say you've created these presets and you want to check them out
+you just go here now click create sign three and so all right so now i've got these three presets right
+so with the drop down i can just pick them and i create a duplicate star okay let's get rid of this one
+okay so sometimes if it's not updating just click here in the canvas then click you're up again
+should be up to date okay so now i can just swap between these presets cool let's make a few more
+so you know i'm using this now as a great way to just remember the parameters that i want to control
+so i'm going to put this on one uh which means we're on um sawtooth which is a real favorite of mine
+and we're going to get this we're going to put it on say 0.3 really cool effect
+saw one i'm going to put this on four i'm going to call it saw two i'm just going to make three
+presets perfect here i'm going to turn this up i'm going to put this on eight i'm going to call this saw
+three okay and then i'm going to go here put some two and as you can see that means we're now controlling
+triangle which is coming out from the center right so i'm going to put this on one subtle differences
+compared to sign but it's there i'm going to put this on four create and then i'm going to put it on
+try one and then i'm going to put this on say four that's pretty cool try two let's put this on eight
+it's a bit higher actually a bit lower let's just do this for now you can tweak it all later try three
+okay and the last one we're going to go ahead to absolute mode which requires a power factor lower
+than zero right so i'm going to put some one really cool it gives us these solid hard lines okay
+um i'm going to create a preset i'm going to call it square one i'm gonna make the line a bit bigger i
+like it square two i'm gonna put this on four and i'm gonna make the lines a bit thinner actually let's
+just put it on too much now i could have really taken the time to just make everything exactly the same
+from preset to preset don't want to do that though i just want it to be a little bit spontaneous so cool
+so i just did all this right you might be thinking well why or later on there's going to be a midi
+controller connected to this or i can just use random numbers so let's do that let's go with the preset
+and i'm going to hold out here so i see there's 12 presets stored in there so let's go over here
+this was this was my little chain there so i'm just going to grab this for now let's just explain it so
+every quarter trigger it's going to pick a random number um so i'm going to put the min on zero and
+i might change the amount of presets that i put in here later so i'm just going to get the number of
+presets out and i'm going to put that in here and i'm going to put that on max i might have to subtract one
+from it later i need this t1 trigger as you can see it look cross that if you click it saying okay this
+op cannot do anything without least connecting these ports update plug that in and that should eventually
+disappear okay so um so we've got these numbers between zero and 12 i actually don't think i need a
+smooth right now so we're triggering these random numbers so i'm going to plug this in um i'm going
+to plug into preset a and this isn't going to do anything right now because um it's not on x fade so
+now it's on x fade so every time i'm going to get a random number here it's um gonna trigger hopefully yeah there we go
+cool so i don't have to think about this anymore um this is probably going to look really horrible
+but it's just to show you so i'm going to plug this into smooth okay i'm just going to multiply it by one
+for now because i don't want it to do anything else so what we can do is we can plug it into a b mode and
+what that lets me do is it lets me interplay between preset zero to one one to two two to three three to
+four so this is going to be like bonkers but it's just to show you what we can do here um so i'm going
+to put it on sorry what was that preset a again yeah okay so you get this and i'm going to plug it into
+preset a so it's going to interplay um between them right and this can lead to some really interesting
+um stuff actually it works out pretty cool okay so let's let's put that smooth number on something
+slower so we see more transitions what happens if we put on something really really crazy like 64.
+put that post effects on way too much which just to show you you know this is actually kind of nice
+because we don't get this abrupt jarring um change
+so as you can see now just off this preset up i've got a whole world
+of possibilities and the cool part is i can just go in here now and i can update it so let me just
+disconnect this right i'm just going to save again i can never save two option too often so i want to
+tweak um a preset so i'm going to go here and i think which preset am i on now it's 2.46 so that's
+half of two and three so i'm going to go ah you know what let's look at preset two preset three
+two feels too bright right so click none and i go to preset two this just feels too bright for me okay
+so i'm going to just change the power factor and i'm going to put this down to eight and i'm going to
+make this a lot harder actually so now tweet this preset i'm like okay that was bad i want to make it
+better so now just click update sign three right i go back here to a b and it now feels better with the
+transitions and now i can just plug this back in pre-set a cool and this is just the beginning of
+the stuff we can do here because you know this is all connected to this preset right let's go a step
+further because i like i like this kind of stuff so i don't need to look at these guys anymore it's like
+they're connected i was thinking the other day it'd be really cool if you had a way that if you
+pressed f for flow mode you'd see a kind of connection between these guys in the pre-set up
+i'm sure we spoke about that in the office a while ago all right so this is kind of simulating me
+tweaking a midi controller or changing something else so you know we could do more with this now right
+we could say um what happens if we do an effect on this right something really simple
+edge detection wow okay that's going to struggle with some of the stuff that's not hard edges
+okay making it like this that's a different kind of effect
+all right let's just look for something here so if i have a blank out with what do we have again with
+texture effects you just press escape you go here and you scroll on the left side and then click texture
+effects sometimes i just have to look at the names to um get something triggering in my brain
+now i can't use blur and that kind of stuff because that's already on uh the back uh that's on the post
+effects right now
+nope pull it out
+i'm not also not looking for okay maybe i'm not going to find something we'll see
+um wouldn't be visible on the screen on the clip
+hmm oh wrong one
+this is a nice one because it just lets us turn everything into kind of levels
+nope it might just be good the way it is but hey it's uh it's experimentation time
+mirror actually might not be so bad yeah that that kind of works pretty good though even if we've got
+it on the global fx part okay that could be cool let's just leave that for now i can always get rid of it
+a little bit later
+ah so many so many effects of course use gradients ah boy oh boy
+which is an entire rabbit hole um all of its own making basically
+yeah so we could go really crazy with this load it you know what i'm going to keep that around just
+take it out for now so that's the thing you know with this whole post fx uh thing
+it's sometimes just good to put in something really simple because that means you can go pretty crazy with that
+um um i am just thinking right now it might just be a good idea to do this
+let's go here just so you can see what's going on um so i'm putting on pixelate let's put it on say 16x16
+that's a pretty cool effect
+simple but it gives us a different look out of everything but we need to put in front of the mirror
+so we can use a mount here and add this as a really subtle thing which gives us these like stepped
+um gradients from one thing to another you know so if we put on something like
+uh sorry four to 64. this is just a really nice thing it just gives us a lot of subtle looks here
+which is kind of cool
+this needs to be higher i think yeah by the way with live featuring i think it's completely fine if the
+screen um goes black occasionally it means you're doing it live right um i've had people come to me
+in the past with this like hey man sometimes there was nothing on the screen or it was all red or
+something yeah yeah you have that many things that come together um it can go wrong you know and i like
+that it's like you know if you see a live band um you don't mind if they go wrong if they play something
+wrong you know that's just the way uh the nature of the beast with live performances
+so now i'm thinking we need to add some more movement here and i want to do that with this
+because you know because you know we can go in to layer after layer right
+i'm just curious if we go in that's basic material lower
+i'm just trying something with blending trying to get yeah i see i'm getting the background coming
+through now the only this is actually a really cool look uh but it's not what i wanted and it destroys the
+smoothness okay so this is a little try out ground over there
+i don't want to lose that clear color part you know that's kind of cool
+now this again gives a very different look and this is because we're discarding the transparent pixels
+basically so if we get rid of that it's solid it's just it's a different kind of look right
+um
+yeah right all right just give me a minute
+so we've not even gone into um changing the um the color yeah
+ah boy we can do ah we could do some ah all right so um let's just do it
+just fun can disable this later
+um so we're gonna use this map range actually from the repeat and we could just use that now
+i think just to give um each one of them a different rgb value let's just try it
+i didn't say it was pretty
+so let's get this map range so basically we're getting the amount of so we're getting um one to eight here
+and we're mapping that from zero to one with hue which means we just get all of the available colors
+which isn't what we want right now so let's do this so let's say i'd want it all to just be in the
+red i could go zero to zero point two yeah red yellow
+so put this on 0.4 this is not working exactly the way i'd like
+but it's already kind of interesting but why is it's not working the way i'd like
+hmm
+i just have to make it way more higher numbers basically okay so this is something i can disable
+later i'm just gonna leave it there for now put it on white
+like this i'm just gonna leave it there this is an idea all right
+so i really like this thing before the smooth stop
+can't go lower than zero you know we can just crank this up right i can put it on 16
+and then we can go to smooth stop
+so i'm just trying it now with the mouse with the sweet spot right so let's say two two
+oh where does it start two two
+zero point two okay let's just let's just do that so let's get this one every quarter
+and the reason i'm just copy pasting so much of this is because i just want to be able to
+later on if i want to tweak this stuff randomly so let's i want to create a random number between
+0.2 and two i do not want it to be an integer and i want to grab this smoother so i'm gonna grab this
+and i'm gonna plug that in there so now i'm gonna be able to get my range get the smooth plug this into
+sorry sorry we're looking at the smooth stop
+plug this into max
+i should create this kind of movement
+let's make it faster
+so it's pretty subtle let's put this on four see what we got okay it's too much
+three
+2.5 i want this occasionally to go almost out right
+now i think
+i think i think what i've done there is just messed it up a bit with the presets
+i'll just show why it's going to put something on
+so i want to look for these frequency values here they're just too much now four is already a lot
+eight it's just too much so i'm gonna just put down two i'm gonna say update i just don't like it it's just
+too busy like that it's on four once again eight it's just too much for me it's just ruining it so
+you know this is the beautiful part of the preset up now this is really quick and um easy for me to
+fix this kind of stuff
+let's put down an odd number for the fun let's plug this back in now there's just too many tiny lines
+basically let's put this back on a b
+all right so this is looking okay i want this i want a continual rotation there actually on i think
+it's this one
+yeah i want that to i want that to rotate for a longer period of time
+so the smooth actually i'm going to put on 24
+yeah okay that feels better
+so i'm still trying to figure out a little bit what i can do here with this blending
+does not work in the way that i'd like
+i've just got this feeling that something's missing
+right now and the smooth step is actually going out way too much
+so let's put it on two i do not want to go out
+okay simple rule minus three to three let's try that
+so again i'm just going to get this nice little part here
+it's going to get pretty full but that's okay i can tidy all this up later
+don't worry about this stuff when you're being creative smooth need to trigger
+i'm going to plug that in here
+okay so i want it to go from minus three to three and just get rid of this multiply
+minus three to three i could put it on not integer but i really always want it to move in
+like a stepped um manner so i'm going to put this on eight i'm going to plug this into press the
+spacebar and hold it down transform view x
+i actually don't want to go out of the cube so it's minus two
+might not need this later on but i think it's going to produce more yeah there we go interesting
+effects with this because we're going to use the post processing a lot with this
+okay so it's always good idea to test it with the busier parts
+so later on i'm going to have to come up with something which kind of like creates a unified
+color control scheme through everything later on but i'm not going to worry about that too much
+and the thing i really like about what we're doing right now is you know this is all like real time
+because as i say all we say uh go real time and go home so
+yeah we got some nice stuff okay this is uh going in a good good way
+okay this is actually a really small patch i mean most of what you see here is just the stuff being
+duplicated
+and i'm actually not doing it a lot with the kick and the snare it's just a lot of quarter triggers
+which actually feels pretty good with this patch and the preset changes they're just like a bit too
+intense right now but that's okay so i'm just curious
+what happens if we just create an if true down up
+let's make something different
+so we're gonna get loop i've got a kind of like a unified timer that just goes through everything in the patch but that's really
+not something i want to do right now so i'm going to plug this into z
+okay this is like um animating the noise basically by putting it on loop we get smooth
+changes otherwise we get these abrupt things
+now the thing is if i'm using timer here right you know this stuff isn't
+it's not animating in time basically so you know we could do this where we could say um
+we get the um the trigger counter
+and we plug this into z
+and if we want to tap more often i could put it on like a sixteenth
+and this is like in time with the music now a bit too much let's put it on an eighth
+so these are all those little tricks that we can throw into the slider
+a lot of different stuff we can do
+i'm not too happy with them rainbow all the way all right
+but i'm not happy with that let's let's grab something else
+maybe just maybe i'm overthinking this let's just grab um
+a little bit more texture
+so
+you know and i think this kind of thing can work pretty cool when you do this
+lines are a bit too thin right now and whoops we need to put this back the way it was
+i would have expected this to
+like the clear cauliflower fruit
+might be something in the messer
+oh yeah if you use bell bars that's also going to be fun
+okay okay holding alts right mouse button i'm going to sort this out later
+there's a lot of stuff we could do here
+so the thing like about this is that you know we can go for these hard lines or these soft lines
+we could use the waveform gradient to do it as well but it's not the same effect as a grid
+but it's not the same effect as we can do it as we can do it i don't know why but this grid thing kind of works with those moving lines
+i don't know why but this grid thing kind of works with those moving lines
+you know if we want to be locked as well we get this trigger counter
+and to create like some kind of weird effect here we could say um
+give me the bang up for the duration 0.25
+um
+yeah and then we're getting this like kind of synced thing
+and it's too much of this eighth trigger but as you can see it's just something i wanted to try out
+yeah yeah a lot of stuff we could do this all right i'm just gonna leave that there um for now put this back where it was
+so
+wow this one actually came out pretty good from that old stream i don't know why but it's got some
+really nice stuff um in there the movement just feels um good and right a bit too random right now for
+my taste but i completely forgot um how that was working basically
+so you know that thing i said before about when you've got um these sliders
+you don't want to think or worry about like if i'm sending this now as you're doing something so slider is
+a really bad name but i can see here this is like the density um on this patch so
+let's go back i can rename all this later that's clean up let's not worry about it now
+yeah it's called cube spacing that's a horrible name uh let's rename it because now we can rename stuff
+that was uh um let's just call this fx one okay
+cool i forgot we can rename stuff now brilliant kind of implemented that a while ago
+so let's look at this we're going to just call it fx one so in this patch it does this it does
+something right so now let's go to this patch um and see if we can make it do something there right
+so i'm just going to look because i just want to not have to think too much about this later
+yeah this one was done with a lot of kick and snare stuff so that all like kind of
+beat locks in a really good way
+yeah sorry guys i'm having this thing again with the ui not dragging when i click and drag
+i'm not sure why that's going on right now
+just give me a minute
+okay go back here if it's going to happen again i'm just going to shut down the browser
+do it again
+yeah okay my apologies for the inconvenience just give me a moment
+okay let's go back into business
+okay so i was interested in something the slider that was it so we got this with stripes right okay number
+that's a good one see just number right right here because this slider goes between zero and two which is bad
+we should make that go between zero and one
+and then make everything else get modified afterwards so i'm going to go here to
+this this slider and i say max zero to one now here's a cool thing i forgot to say you know i keep jumping
+between all these sub patches and i'm forgetting to show one of the most important things so let's call this
+patch one let's call it something reasonable
+patch two
+patch three
+see might be better then so you click somewhere in the canvas this pops up so i know i want to go to
+patch two so you just click it it's going to take you inside of the patch so i'm going i'm doing it a bit
+slow right here so i want to be able to change the amount of stripes so far get number right and now i'm
+going to call it get fx1 which is this slider i'm going to plug that into the number and now i know it went
+from one to five so i'm going to grab a multiply i'm going to multiply zero to five by five as you can see
+this is what i get here so this slider just lets me now change something though i'm not very happy with
+the result right now so i might actually just multiply it by higher amount say 10.
+so now in this patch this changes this
+let's put on circular
+okay
+great so i'm just going to leave that like this so this does something now in this patch right
+it's going to save and as you can see it just clicks on the canvas and i'm going to go to patch
+free which is over here and say okay you know i want this slider fx to change something right
+don't know what yet um maybe we can just add a little bit of um hue into it so we need to put the
+brightness in the brightness in the brightness in 0.5
+and you know what i'm going to do this and do
+and i'm going to do
+i'm going to do a sum of 0.2 this is going to be far from perfect
+let's think about it so first of all we get fx one that's this one down okay
+ah that was it and now what we're going to do is we're going to put this into
+new min
+so now i can do this to change the minimum and what i want to do is i want to have this range from like
+that number plus 0.2 right and then i'm going to plug that into the new mac so i'm creating like
+this slidable range now right i didn't say it would look good but it's just this idea there we go
+um i can go in that's if i make this 0.1 it'd be a very subtle
+gradient but this allows for some really cool control 0.3 then we get more of a color like this
+which can be kind of cool um this shouldn't go beyond one though for the hue um so i'm actually
+going to put this i'm going to put a clamp there so it can't go higher than one
+so that means if i push it all the way over here it all becomes one color and as i pull it back
+get this didn't say it look amazing but it's just something i want to get in there right now i just want
+to make that rule that if i change this it doesn't matter what patch i'm in something changes and it
+doesn't always have to be um super noticeable that's just a rule that i am just then following
+so here it does something really noticeable it creates this density if we go here it's also a kind
+of density thing how many lines do we have on the screen and there is the color so here i should also
+maybe make it with density i don't know but that's also a little bit of a cool trick not a fan of the
+color stuff though so i'm going to leave that again for later i'm going to put that in one i'm going to
+grab this fx1 so local rule you know if you've got your sliders or your values going between zero and
+one it doesn't matter what all your values are after going from zero to 32 or zero to five you know you
+um limit their range or bring it to its maximum by just multiplying by one so here for example um this
+this multiply right that's this um
+that's not what i want to do here so frequency is like how many lines we have on the screen right
+so i've decided it with a preset but i can still modify it so go here let's say put this multiply
+and i'm not going to put it on 0.1 and it doesn't 0.2 sorry and that doesn't matter what preset i pick
+and kind of determining how many lines are on the screen right so this is actually more of a thing called
+density so i'm going to get this fx1 it's going between zero and one and then i get whatever that number
+is if i put this now in 0.5 i'm getting half of the lines from the preset up that would determine the
+frequency
+yeah so if we're going to do this now have it as it was and if i turn almost all the way down
+we should have almost no lines basically
+yeah this was this okay cool so this allows me to change something here i don't know why i've got
+the feeling it isn't doing what i think in my head it should be doing
+i lowered everything to not go higher than four that was it okay so when there's a lot of stripes then
+we see it yeah more okay it'll do for now no problem it's just all about getting everything in place okay
+another thing i want to do now is when i have this cube step towards the camera i've kind of got this
+here so for that i can use transform view position z right so let's say we go from
+i don't know minus five to
+minus five to
+one for now okay minus five to one right so let's get a bit more space so i just want to create a loot's
+number so that's difficult so we have a trigger counter
+um i'm going to reset it i'm actually going to get the midi reset all plug that in here so
+follow suit resets whenever we restart
+i'm not sure what happened there save okay so this trigger counter and now i'm going to get a modulo
+and i'm going to say um
+let's move it going eight steps okay and this is going way too fast for me right now
+so i'm going to put it on a quarter trigger
+okay and then what i want to do is i just want to use smooth smooth as your friend stuff like this
+so i'm going to get modulo smooth click that and actually need to map range this
+so i know it's going in from zero to seven right yeah okay so say old main zero old max seven and then
+want it to go from minus five to one that was it right now i'm going to plug this in here to position set
+and actually let's not do it with a quarter trigger let's do it to kick
+i put the increment factor on like 24 it's going to go back slow for a real long time but it's going
+to come fast towards the camera if i'm correct
+you know i can really want it to go back for quite a while
+now let's take a peek with that
+yeah so i've got to come up with a color control system later which goes for all patches okay
+control s all right okay let's go back to me
+okay let's go back to the music slow the epicness down a little bit
+okay so
+so something i want to build in later is this like rgb system on um all the patches
+in the past when i did
+live vj shows a lot of the time you're working with a light technician
+and um if you're in a venue you know they they are not allowed to normally use a lot of lights because
+it's very rare when you get a beamer with say 10 000 onzi lumens that's a very
+rare thing it only happens with really really big productions
+seeing there's two or three strategies and if you're lucky you get a three or four k
+onzi lumens beamer and then the lighting guy can't use um almost any smoke because you know using
+smoke reduces your ansi lumens but and like i will tell you if there's no smoke you don't have any
+lights because you don't see lights you see light illuminating objects like smoke so it's really
+difficult to get this kind of like trade-off that you're able to do the thing you want and
+that they're able to do the thing they want and trust me light technicians are really good like most
+of the time they know what they're doing you know they've they've sat behind that console and they've
+worked with countless bands and countless musicians
+and you know they're normally the master of getting a lot more out of a lot less because you can throw
+a huge amount of things onto like a digital screen for a beamer but you know making like a couple of
+lights look good that's not easy um but a lot of a lot of light technicians can do this and it really
+took me a long time to understand what it is that they need so um i'm gonna build just a basic thing for
+it now you always need to be able to do like a fade out where you just like black everything out right
+um that's just like this you just might need it well you know the lighting guy just says all right
+fade out you know just and you just you just do it and then he goes one two three come in and he just
+did his thing with the lights on the breakdown of the dj with like the snare cracking and pumping and
+everything you know so that's going to be this sidebar is just a place for us to build stuff we're
+going to assign to midi controllers later so um and this is all just coming up in no particular order
+right so um
+i want the default value to be one so move this to one set default so now whenever i load the patch
+it's going to be on one so i'm just going to connect this to um the amount of this master drawer image
+and that allows me to do this and this can also be a cool effect right that you can turn on and off
+with like a toggle button it's kind of like a really super advanced strobe scope if you hit the button
+really rapidly okay so that's one thing um color i always get mixed up with this
+um
+so this allows me to colorize everything now right i didn't say it's going to look pretty
+because you know i've got some color stuff already going on um but it's a real quick way where if the lighting guy says hey you know i'd like the next 10 minutes you're doing like a light a light blue
+and i'm going to do um and i'm going to do a color that complements that and i'll just normally show
+you that on the lighting console it's just really great if you can just do um this right you know
+where you can just do that on command that's like a pretty cool idea basically so i'm not
+going to assign a slider for it i'm going to just call this global color because i'm not sure when but
+after this whole lockdown thing is over i would absolutely love to go somewhere find some electronic
+musician here in berlin um and some nice small sweaty club with um not the best being or the best
+lights and then just stand there and have a couple of best at night and just
+party with the vj setup because the only other way that you know if it works or feels good for you is to
+try it in the live environment nothing nothing beats that basically all right so that's global color
+right and so for look here we've got this fade out and that also has to go here to
+amount and that allows me then to black everything out so we're just doing that with the amount here and
+that basically okay so yeah this is the this is on multiplied blend mode okay yeah and and don't
+forget you know we can we can get a midi controller and assign that here to the blend mode and it's just
+a quick and easy way to get all these different looks on the screen right you know we can now go
+here to color and you know we can we can change this into completely horrible but you know quick and easy
+things all right so let's put this on uh white but as you can see just here by using a different um
+blend mode you know we can get a lot of a lot of different looks basically let's put it back and
+multiply yes this we could also make trigger randomly but that's the kind of thing you don't want to do
+which one of global control okay i notice i'm uh i'm kind of reaching the the the end of the stream um
+right now um
+yeah so i think in the next stream um you're not going to see a lot of me i'm uh i'm gonna
+i'm gonna concentrate on showing using the launch pad um and if i can borrow it from ponder the midi
+fighter um controller with all the knobs on it because like right now my midi controllers are in a
+different place and i've got lots of them i've got like the i used to have the bearing fcb 10 10 foot
+controller the foot one that's really really cool for this kind of stuff because you can do stuff with your
+hands and hit stuff with your feet um but i've got like two or three midi controllers um somewhere else
+with like lots of faders and you know i'd really like to build um like what i used to have but then
+in cables but then like way more awesome and better um so in the next stream i'm gonna focus on that i'm
+going to focus on getting um midi controllers mapped here i'm also going to show how we can then
+um create a couple of ghost tracks instead of able to live which will then allow us to say hey you know
+this thing with like triggering random numbers right um we can like create sequences of randomness here
+which like musical but tied to things you know we're in a perfect world here because we've got music
+from a musician so of course with this vj software there's going to be times where you're going somewhere
+and there is no able to live set and they're playing stuff out of a pioneer mixer and it's also blasting
+into the red because that's something that djs do you know they squash all the dynamics and that makes
+it really difficult to analyze the audio so this vj software um we're going to go into quite a lot
+of different directions with it that i think are really useful for people and one of them will be the
+live audio analysis module that i'm going to build and that'll very quickly allow me um to use stuff
+for the bi-quad filter with um two to three bands people always think three to four bands is necessary
+most of the time too we'll get you down especially when stuff's coming out of a pioneer mixture in the
+red i'll also go more into explaining how um we do things like we use di boxes to lower the the level of
+what's coming in and to make sure that things are stable uh i need to get a sound card again uh because you
+know if you want to get the output from something like a pioneer mixer uh sorry hardy oh sorry hardy
+um i've just been so focused on patching all this i've completely not seen what you're uh posting that
+my bad um okay sorry everybody let me just back up for a minute
+yeah negative values uh yeah uh i know how to do that hardy um we can also just use the map brain job
+but yeah thanks for the tip um music triggers on stage how do you deal with that okay so that's
+exactly what i was covering um so hardy if you go to our youtube channel uh audio midi i gave one to two
+extensive tutorials with videos on how to use the audio analysis ops inside the cables you can do fft
+i prefer not to use fft uh for a very simple reason um a lot of the time
+when you're using fft you're getting already smoothed data values a lot of the time
+and when you've got smooth data values you're losing transient information and when you're losing
+transient information you you're actually behind the actual audio signal when it reaches its maximum
+threshold classic example you know if you hit a guitar with your hands
+it takes around five to six milliseconds maybe five to seven milliseconds depending on the tensileness of
+them before they reach maximum oscillation you know this is a little swoop up when you hit a snare drum
+between one to two point five um milliseconds before it reaches the maximum attack depending on the body
+and the resonance and the make and the diameter of it right so when using fft analysis on this stuff
+um you're always late that's why i prefer to use something like a biquad filter and like what i did in
+those videos we've got a really cool up here called the threshold up and basically what it does is it just
+outputs um a trigger when a threshold is crossed but it won't output a new trigger until the fret until
+it's drops below the threshold and it's gone back above it again you know so for if you have a guitar and
+it goes it's only gonna do it here and this is gonna ignore when it drops back again and does this then
+it triggers again um so that's basically what i would do so your classic um dj setup is you know you've got
+like some dj on the stage uh a lot of the time they just lose track on the night and you know they're
+cranking everything up when you're standing in a dj booth you really don't hear things the way
+they are for everybody else i've worked as a sound technician for many many years
+um so they're listening to the fact this little monitor speaker so they always crank it up really
+loud you know it's rare the dj that is able to keep control the levels and trust the sound guy to
+pump it out um so then what we do is we build something like um a two or three band biquad
+filter analysis module you know so i already built that in the video um that i was talking about so you
+can just go into that patch and you can just copy paste it and use it and then what i would do is i
+would get um a midi controller and then let's imagine this right so you've got um
+okay but all right so hardy's saying if the music is not coming in real time you could just
+read data from an mp3 yeah but you know we're building vj software which is designed to work in a live club
+environment right so that's why i'm talking about these problems we're gonna solve basically and you
+know what it is hardy fft right it gives you like um a um oh no uh uh yeah no no please uh no no it's
+all good it's really good questions um these are very very valid um questions you know i'm just really
+keeping it focused on the live clip routine right now like where you're stood um next to a dj completely
+rocking out with the crowd going wild and you're you're trying to make something on the screen
+complement that so it's just basically when you're out in a dance night um people don't follow um this
+and that's what fft does right you know it's you you have um you you you have like music coming out of
+a dj um track and it's like so you've got like you've got zero to one with your volume and it's almost
+never gonna go below 0.7 right it's just it's full on playing this kick drums the snare drums there's
+bass lines there's like bass lines and everything and music today is even more over mastered and
+compressed and limited than before so if you're fft you don't have zero to one you have like 0.5 or 0.7
+to one this is your range you know so people don't perceive this if you've got a cube moving
+like this what they do perceive is is that when this threshold is crossed and you have a trigger
+and then the cube does this so what we're doing is we're getting around this problem of having very
+little dynamic information in headroom and just being able to say we're going to get an assignable
+threshold with a trigger which comes out of that because i did all this stuff with fft i've also
+built um live visuals that work with an actual live band on the stage with the kick drum snare drum bass
+guitar guitar and it sweeps a lot of years with all these different kind of things and i had a lot of
+different problems um so this like lack of dynamic range especially in modern electronic music you know
+that's really bad live electronics on the other hand when people do stuff with modulars and things like
+that that's amazing because it's not running through a limiter and it's not being squashed and
+this approach you're talking about with fft that can work really good in those environments even if
+it's a little bit late the problem is you can't delay the master output going to the public right
+you can't say to the sound guy like hey can you just delay the dj uh for three to five milliseconds so
+my visuals are in sync with him it's not the way the world works you know you've got to work around
+them because they're the dj you're the vj you're complimenting them for the night um so you know
+that's that's just me speaking about some of my experiences and i'm really happy um that you're
+asking those questions because a lot of the time people have a lot of questions and only one person
+asks them and this is something i could talk about for hours um like really i've had so many different
+situations um with this and the thing is the audio analysis threshold method right it's the simplest
+and therefore the most robust method which is less error prone than any other so let's see so you're
+going to use fft you have some guy doing banging techno electro and then somebody comes out and does
+dubstep your fft is buggered on dubstep it's not going to work it's just way too loud way too much wobbles
+way too much space and bass is like energy and bass is also slow as well it takes time to move subsonic
+um speakers compared to mid-high tweets which are really really fast and rapid so you know that's
+why i use the the the trigger stuff basically because it doesn't matter what style of music's gonna get
+thrown at me i can tweak those thresholds and just get triggers which are gonna respond and i'm gonna do
+it in a different video um what we can do is we can build a kind of system which i mean we've already
+got it in there i've just not built it with the midi controllers yet we can build a kind of system that
+determines how long your system takes with all of these spins and movement and everything based upon
+the trigger and you just assign that to like one or two or three sliders and then you know if the music's
+playing really really fast you can make your your envelope very short and rapid or you can make it
+really long you know of getting these like six numbers with your filters and your thresholds and
+your duration you can handle any live set that any dj is going to throw at you
+uh i've been a massive fan uh of atari teenage riot uh for many years i used to make digital hardcore
+uh actually back in the day when those guys uh came out they were my inspiration to get a
+um a 2000 gilda um loan that i couldn't pay back and buying a kai s20 uh sampler and have no idea what
+i'm doing that's how i became a very unsuccessful musician for over 23 years um yeah they've they've
+always got their knobs all the way to 11 but you could pull it off with that thing i was talking
+about with the triggers and believe it or not you know a lot of their music isn't really over limited
+they use a lot of distortion which is the same kind of problem but in a different way so when you limit
+music you know you squash its dynamic range so a curve all of a sudden becomes more straight right
+when you use a distortion effect it's like you cut a waveform it's a chainsaw right which is what
+gives distortion its sound and digital is very straight and analog has a more rounded curve to
+the straightness as it approaches the the ceiling basically so you know it might be really interesting
+to do you know i want to do a vj um stream again where i just actually showcase different kinds of
+audio like look here's a live kick uh from a band um let's see if we can tweak in like six seconds to
+get a response to that okay there's some rubber kick can we get that as well because that's something
+you've got to practice and you've got to get um a feeling for basically um
+so you should set your changes on silent moments of Atari teenage riot yeah we could do we could do uh yeah i
+sometimes walk past uh Alec Empire here when i'm on the way to the office it's really cool because i'm
+a super fan boy first time i was here um i actually walked past him when i had the Atari teenage riot
+shirt on but i had it under a sweater i totally didn't want to freak him out with uh with uh like hi
+Alec um here's a t-shirt you know even though i think that's uh it's funny how very few people in
+Berlin are a fan to me of Atari teenage riot compared to all the people outside but that's a different topic i'm a
+a real big fan of Atari teenage riot um actually maybe maybe we should just do like at least a 10
+15 minute part of the stream where we just throw a cd of them on and let's see if andro can tweak
+live visuals to it and who knows maybe Alec Empire will contact me and say hey you want to do some
+live visuals that would be kind of cool um so yeah okay you know what i'm i'm blabbling on right now but
+it's fun because it's also engaging with people
+it'd be really nice to be able to i think panda said that the other day kind of like
+be able to have a way where we could maybe have a voice chat with people in discord during the stream
+um i think these kind of moments with talks have become much more interesting because cables isn't
+only about uh patching of course it's about talking about the theory and the approach and the design of
+things and how that all comes together to make something that you want um all right um it's 9 30
+it's been almost a two hour stream um i'm really happy with what came out we've got more pieces in
+in place it's a much tidier uh patch right now always good um it seems straight lines for the
+win just putting that one in there um yeah so i'm pretty happy with where this went um i'm gonna do a
+little bit of cleanup probably in the meantime like this trigger there that's only for one patch um i don't
+want to do that during the stream that's really kind of boring you know so in the next episode uh like
+i said i'm gonna focus on midi controllers um systems and design approach to using midi controllers
+where you don't go crazy in a live situation and that if you forget everything that you can just hit
+the buttons in a random order or sweet knobs and it'll still look cool that's uh that's my motto
+basically at the end of the day uh when you're in a venue and all the lights and smoke and everything
+and the loud music's going bonkers so we're going to focus on that in the next one and then we'll just
+keep the the visual stuff on a bit of a low key in the meantime i'm going to think about a more um
+dynamic modular system for the post fx reading i've got a couple of ideas for that um yeah so
+that's it for tonight everybody i'd like to thank everybody um that joined in tonight it's always
+cool especially at the end to be having a chat about some stuff hardy once again sorry i missed uh some
+of the comments there um that you were putting down i was so in the zone here with uh patching i'm sure
+you know how that is so uh i'm going to wish all you lovely people um a lovely night and um i don't
+think i'll be doing the stream next week it's probably going to be something from panda uh or steam or
+and steam and um i'll be back in uh probably just over two weeks maybe three we'll see we're just taking
+sense of this and we're figuring it all out um as we go all right uh hope you all have a good night
+and uh speak to you soon bye
+so
+so
+so
+so
+we'll be right back to the end of the day
+so
+we'll be right back to the end of the day
+so
+we'll be right back to the end of the day
+so
+we'll be right back to the end of the day
+so
+we'll be right back to the end of the day
+so
+we'll be right back to the end of the day
+so
+we'll be right back to the end of the day

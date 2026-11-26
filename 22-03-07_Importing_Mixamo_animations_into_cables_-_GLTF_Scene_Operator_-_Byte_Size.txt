@@ -1,0 +1,84 @@
+https://www.youtube.com/watch?v=aJrThtp4j0A
+Hello, this is Alex from Cables.gl. I want to show you how to upload an animation that you get out of Mixamo.com, which is a helpful website for rigging your unrigged models or applying kind of like clip art animations that are for rigged models.
+So you can rig it in Blender, for example, in a specific way that Mixamo likes and then upload it to Mixamo and then apply an animation that you might want to use in your project.
+So right now I have this really weird scene of this scary looking guy in the middle of nowhere.
+And it was actually a static model that I got out of Sketchfab that I'll link below and I was able to un-pose him and then upload him to Mixamo and then apply another animation.
+So we're not going to really get into the intricacies of using Mixamo because there are some, obviously.
+It's a super easy to use website, but you might get into some things like, for example, you can't animate a dog or a horse in there because it's pretty much only for kind of like bipedal, two-handed, normally proportioned models.
+You know, so if you have like some kind of funky looking monster with backward knees or something like that, you won't be able to really use Mixamo to successfully animate it really well.
+But if you just want to get started with animating on the web and using 3D animations in your project, I think it's a really nice tool to kind of get the hang of how you can animate and time your animations inside your projects and then, of course, evolve into an awesome rigger that uses some other piece of software.
+So let's look at Mixamo really quickly.
+And you're going to need an account.
+And then I had a really good conversation about the legal use cases for this website, you know, are you able to sell the projects that you make with Mixamo?
+With Mixamo and I'm also not going to get into that check it out.
+I'm pretty sure it's quite quite easy to use in terms of licensing and they don't really go after you that hard.
+And if at all, OK, I'm not going to get into it.
+So what we have here is an animation that I applied to my already uploaded and rigged guy I got from Sketchfab.
+So he's just walking.
+And for example, maybe I want to see him take a punch or throw a punch.
+And it should apply it correctly.
+So we'll just wait a bit for the skeletal animation to load and see what happens.
+There we go.
+So it looks all right, right?
+It's probably not AAA level, but good enough.
+So when you log into Mixamo, you might not have a prepared character and that's OK because they do have some like database of characters you can use and apply different animations to them.
+And I wonder what's happening there.
+There it goes.
+So it has some models that you might want to play around with.
+But also other places on the web have already rigged models or T-posed or A-posed models that you can bring into Mixamo and then rig them up quite easily.
+So anyway, how do we get something that we like after we set it up?
+And definitely check out some tutorials if you need some more Mixamo know how.
+What do we do with our finished rigged animation?
+Alright, so I'll use this one maybe.
+And we're gonna see some settings here for the different energy level and overdrive.
+And this will kind of space out your skeleton rig.
+For example, if I turn up the energy level, it'll just maybe make the animation really fast or exaggerate some of the movements.
+And let's say you pick something that you like and now you're ready, right?
+You're totally ready to get this into cables.
+Alright, so we click on download over here.
+And then you'll have this menu that says format, skin, frames per second, and keyframe reduction.
+And you don't really have to worry about this too much when you're beginning, but I think FBX binary is really good.
+And then the skin part is interesting actually because it will allow you to download the animation without the 3D model.
+So it will just be the skeletal information that you can then apply in, for example, Blender or something like that.
+Or you can just get a ready-made rigged model with a 3D mesh with it, right?
+And we're gonna go with this option because I had some interesting use cases where I wanted to use more than one animation and flip through them in cables.
+And it gets really funky when you're uploading a custom model and it's spaced out a little bit differently than the default rig.
+So watch out because I highly recommend you just download it with the skin.
+Even if you're using something like Blender, it's going to give you the correctly scaled skeleton that you can then put into your actions or apply to your skeleton inside Blender much, much easily, more easily.
+So let's get this guy with the skin and I'm just gonna leave it at 60 frames per second because why not, right?
+But I'm pretty sure it doesn't really matter.
+Actually, let's do 30.
+So let's download this guy.
+It's gonna prepare it a little bit and then give you the final ready to use thing.
+So you get an FBX file and cables does allow you to upload FBX files.
+So if I'm gonna go over to my downloads and I have my FBX here and then go over to a new project and bring this up again, I can just drag and drop this into my project.
+And you'll see that it uploads.
+And then it's inside my patch file library.
+And you'll see that the FBX will automatically get converted to a GLB, which is a format for GLTF scenes, right?
+So when I drag and drop this GLB onto my canvas, it's a GLTF scene and it's named after the FBX that I uploaded.
+So for whatever reason, you can also force the conversion here inside the file menu.
+But you generally won't have to ever do that.
+And what's another interesting thing here with the file menu is that you can actually compress it to Draco.
+So for example, if this guy is 1.13 megabytes, we can maybe squeeze out something even smaller and then you'll just have to use the Draco library.
+But we're not going to do that right now because it's actually not that big.
+And then we'll put down a main loop connected to our GLTF scene and you're going to see that this guy is already here.
+And maybe to sender him a bit better, we can just throw in a transform and then position him a bit lower, maybe scale him down a bit, make this window bigger and close our file menu.
+Alright, so how do we animate this guy?
+We can first kind of explore this GLTF scene again and remind ourselves that there's this thing all the way at the bottom which is called anims.
+And this is an array that you can inspect and you'll see the name of your animation that was applied.
+So in case you're not using MixML, you might be able to put in a bunch of actions in Blender, upload it to cables and then choose the exact animation that you want to play.
+But we're not going to cover that either.
+We have this one, we don't have to set the name for it, it's just going to play the topmost scene animation which is the only one we have.
+So all we need to do is type in or put in a timer here.
+And pretty much it.
+And we can put in an orbit.
+And give him a phong material for now because the other project I have over here is obviously a little bit more intricate with PBR material that I applied and looks pretty nice.
+So here's our guy with a new material and he's using the animation from MixML.
+So incredibly easy, right?
+That's the beauty of cables.
+So, tell me what you think.
+Ask me questions if you have issues with this stuff.
+Because, you know, I'm covering like a very nice example here where everything just works.
+But, you know, even using MixML you can get into some interesting jams.
+So, I'll be happy to cover that and we can talk about it.
+Thank you, bye!

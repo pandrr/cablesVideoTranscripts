@@ -1,0 +1,241 @@
+https://www.youtube.com/watch?v=eMy1kcTghGE
+Hi there, and welcome to another video of Made with Cables.
+My name is Mark, my handle on the phones is Andro, and today with the second part of this
+ongoing tutorial series, I'll be showing you how to use MIDI notes inside of Ableton Live
+to drive and create and generate visuals and animation inside of cables with the MIDI notes
+up.
+So without further ado, let's get started.
+First of all, I just want you to check that you've got a connection if you followed the
+previous tutorial video, so I'm going to press play, press F, and as you can see, I have MIDI
+clock.
+Great.
+Okay, so I just made a really simple beat, so I got the impulse drum computer, and I made
+a really simple pattern, and I'll press play.
+A bit too fast, let's put it there.
+Great.
+Here's Kick.
+Snare.
+Hi-hats.
+To hear them, make sure that this blue icon here is turned on.
+Okay, so I need to get these MIDI notes to cables.
+So this track here is sending audio out.
+So I need to go here and say insert MIDI track, and I'm just going to call it drums MIDI.
+I'm now going to say MIDI from drums, which is this track.
+I want to grab the pre-FX, monitor in.
+I'm going to press play.
+As you can see, I now get MIDI notes.
+So now to send the MIDI to cables, I go to MIDI to, output, loop MIDI port.
+So if you don't have anything there, you've got to make sure with your preferences MIDI that
+track, sync, and remote are all on and sending out.
+So now I'm going to press play.
+And I'm just going to pull out the notes, and I'm going to grab a MIDI note up.
+And I'm going to press F, and I can see that I'm getting MIDI notes.
+Great.
+I'm just going to delete this for now.
+So what I want to do is I want to get the cube.
+I want to get a cube and rotate it one way with a kick, and rotate it another way with a snare,
+and change and alternate the background clear color with the hi-hats.
+So let's get started.
+So I'm going to go here.
+I'm going to make the main loop up.
+I'm going to pull this down.
+I'm going to make a sequence up.
+Let's just zoom in.
+I'm now going to make a render to texture.
+I'm going to pull this down.
+I'm now going to grab a matcap material new.
+Now I'm going to grab a transform.
+And now I'm going to get a cube.
+And we don't see anything yet because it's a texture.
+So I'm going to pull this out, and I'm going to make a full screen rectangle.
+I get the texture.
+Sorry.
+I get the texture out from render to texture and plug it in there.
+I'm going to put MSAA on 8 to get rid of any jaggies.
+So now we have a cube.
+If I click transform, I can rotate it.
+So I want to use MIDI notes to change that over there.
+So without further ado, let's get started.
+I'm going to get the note output.
+I'm going to say MIDI notes.
+And I'm going to pull this over here.
+So let's just zoom in a touch.
+So I'm just going to press stop on everything.
+So there's a few things we can do here.
+We have the MIDI channel.
+We're on MIDI channel 1, as you can see.
+And you can pick the note from a drop-down menu.
+Or you can use the really cool learn function.
+So I'm going to click the up.
+Click learn.
+I'm going to click the kick.
+As you can see, it now maps to C3.
+If I click learn and the snare, it maps the snare.
+Let's put it back to the kick.
+Okay.
+So if normalize velocity is none, then the velocity coming out is between 0 and 127.
+Let's press play in this clip.
+I'm just going to deactivate the hats and the snare.
+So if we scroll down here, we can see the current note, the velocity of the note, and the gate.
+And the gate becomes true if there's a note.
+So if I'm going to pull this out now, as you can see, watch this one here.
+It's open for a longer period of time.
+Great.
+So that's the basics.
+So now I want to use this MIDI note information to make some things happen.
+So I'm going to first of all, pull this down and I'm going to grab the toggle bool op.
+Now, every time it gets a trigger, it alternates between true and false.
+That's pretty much the long and short of it.
+Watch this.
+There we go.
+So now I'm going to pull this down and I'm going to grab the bool anim op.
+Okay.
+So now we need a trigger.
+So I'm going to use a cool little new op over here.
+Just tidy this up.
+I'm going to pull this out and I'm going to grab the trigger send.
+So this allows me to send triggers around the patch.
+So I'm going to make a variable name and I'm going to call it trig one.
+And now I'm going to go over here.
+I'm going to say trigger receive like this.
+And I'm going to give it trig one.
+And now if I plug this in, press F for signal flow.
+You can see I'm getting this trigger and it comes here.
+Really nice way to just stop me having to pull cables over like that.
+So let's pull this over here.
+Tidy this up a little bit.
+So I now have this bool anim.
+And as we can see, when a true or false signal comes in, it goes between value false and value true.
+So zero to one.
+Okay.
+So we can use this to make this cube rotate.
+So I'm going to say, let's get the value and plug it into transform rotate X.
+Not doing a lot because we're only going between zero and one.
+So if I put this on 90.
+There we go.
+So I can change the duration here to be slower and longer.
+So let me just put it back in 0.5.
+There's a little problem with this.
+If I now change the BPM to 200, my animation here never finishes.
+So I like my visuals to follow the BPM.
+It's a really easy way to do this.
+So we're going to go to midi clock and there's a tick duration here.
+And what we're going to do is we're going to grab this and we're going to pull it out.
+And we're going to plug it into duration.
+Now watch what happens.
+It's really fast because tick duration is changing.
+So we're going to go here and we're going to add a multiply up like this.
+And now, as you can see, we've got it on two.
+So if we turn this up, we can make the duration go really slow.
+We could put it on one or 0.5.
+So this is a really cool way to change this.
+And now what happens is if I go to 200, my animation here always finishes.
+If I go to 121, it matches accordingly.
+So using the tick duration and the multiply is a great way to make your bool animations follow the BPM.
+So this was really quick and easy just to set up the kick.
+So let's just tidy this up a little bit.
+And now I'm going to grab this.
+I'm going to move it over here.
+So now what I'm going to do is just tidy it up, zoom in, and I'm just going to copy this.
+Okay, so I'm going to get rid of this.
+So I'm going to use the trigger out from the bool anim and just connect it like this.
+I'm going to get the event out from Medinote and I'm going to put it in there.
+So this is going to be the snare.
+Let's just make a little note here with a comment.
+I'm going to call it kick.
+I'm going to call this one snare.
+Okay, so now this also needs the tick duration.
+So I'm going to pull it down and I'm going to plug it in there.
+Okay, so this one I'm going to use to make the cube rotate the other way.
+So I'm going to grab the value out and I'm going to plug it into the rotate Y.
+But it's listening to the same Medinote, right?
+So let's just stop.
+Let's activate these notes.
+We click Medinote, click Learn.
+Trigger the note and now it's changed.
+And now when we press play.
+So we're now going to get a different animation for the kick and the snare.
+That's how quick and easy it is to set up.
+So now I want to do something a little bit more interesting.
+Let's move this out of the way.
+So I'm going to grab this.
+Ctrl C, Ctrl V.
+And I want to do it now with these two.
+But I don't want to use two Medinote ops for this.
+So we've got a new one for that.
+So I'm going to pull the MIDI event out.
+And I'm going to grab the MIDI note filter.
+This allows you to read a range of notes.
+So this also has a really cool learn function.
+So first of all, let me turn these notes on.
+So I've got this one.
+And this one.
+So I go here to learn.
+Click this.
+And click this.
+And as you can see, it's now mapped correctly.
+So here we have our trigger out.
+I'm going to plug this into toggle bool.
+And I'm going to link the bool anim executable through.
+This is just to stop ourselves having to pull a lot of triggers through.
+It just keeps it nice and tidy.
+So now what I want to do is I want to change the clear color.
+So I'm going to go here.
+I'm going to make the op clear color.
+Let's zoom in a little touch and look at what's happening.
+So I can click here.
+I can change the color.
+Now, something I want to point out is see the alpha here.
+When I change it, it goes black.
+This won't work unless you've got a render to texture.
+Because it needs to be a texture for this to work.
+So just to point that one out.
+So now what I'm going to do is I'm going to say I want to generate a random number on each trigger.
+So I go here and I grab the random two op.
+And this generates a random number on a trigger.
+It's going to get a little bit full because we've got two programs running today.
+So I'm going to just press play.
+And you can see with each high heart.
+We're getting all these different random numbers.
+So I'm going to put it on 0.2 as a minimum.
+And 0.6 as a max.
+Now, why am I doing this?
+Well, I'm going to grab the HSB to RGB op.
+And it's got these RGB outputs.
+I'm going to plug them into the RGB inputs of clear color.
+And now if I change this hue slider.
+As you can see, I'm changing the background over there with just one number.
+It's pretty bright though.
+So I'm going to put saturation on 0.4.
+So as you can see where I'm going with this.
+I'm going to get this random number output.
+And I'm going to plug that into hue.
+And now I get like a different color on every single hi-hat strike.
+And I'm only using the MIDI note filter, not MIDI notes.
+So this could allow me to get like 6 MIDI notes or 12 or 24.
+So now I also want it that on each hi-hat, I want the alpha to change.
+So I click on the bool and in from the hi-hat.
+And I'll say value false 0, value true 1.
+If I look here, we're missing the tick duration.
+I'm just going to plug that in.
+And now I'm going to get this output between 0 and 1.
+And I'm going to plug it into the alpha component.
+As you can see, it's kind of fading in and out, right?
+And this is why we've got that tick duration.
+We could now put this on 0.5.
+It's very fast.
+We could put it on 4.
+And it's like this.
+So I'm going to put it on 0.5.
+I want it to be snappy.
+So this was the real basic example of just how to get MIDI note data from Ableton Live
+and how to use it to create, generate, and animate some live visuals inside of cables.
+I know it's really simple and basic, but you've got to get the grasp on the basics
+before you can do more advanced stuff.
+So that's the end of this second part in the tutorial series.
+In the next video, I'm going to be showing you how to use MIDI CC signals
+and how to set them up in live, send them through to cables,
+and then use them to do some post FX on the output from the render to texture op.
+I hope this video has been educational and informative.
+Thanks for watching, and I'll see you in the next one.
+Have a good one. Bye.

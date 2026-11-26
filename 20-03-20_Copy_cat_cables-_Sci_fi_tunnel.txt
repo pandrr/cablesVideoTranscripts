@@ -1,0 +1,302 @@
+https://www.youtube.com/watch?v=h3SVvk5yb3Y
+Hi there and welcome to another video of Copycat with Cables. My name is Mark, my handle on the forums is Andrew and today I'll be showing you how to create a cool tunnel effect inside of cables inspired by this really cool thing that I found from a user on the internet called Kajiro.
+He does amazing stuff with Unity. You should totally check out his webpage. I'll add a link underneath the video below. So I saw this and I got really inspired to try and create a cool kind of tunnel inside of cables. So I'm not really going to end up pulling this off today with a limited time, but I'm definitely going to give you a really good base template that you can work from to make your own really cool tunnel effects. So without further ado, let's get started. So I'd like you to pause the video and just make what you see here.
+Great. Okay, so here we have a render to texture and this is to turn a 3D scene into a texture for later on. So I'm going to pull this down. I'm going to grab a transform up. Now I'm going to make a mat cap material new and I'm going to apply that to a cylinder.
+Okay, I can use the orbit controls here to rotate the scene. So now I want to make the cylinder longer with a length. So I'm going to put it really huge. I'm going to put it on 30. I'm going to use the mouse wheel to zoom out.
+There we go. All right. So now what I want to do is I want to create this kind of bend effect. So I go here in between. I type in bend and we have to bend up bend objects along an axis.
+So I'm going to click add. Now I'm going to show you why this isn't going to work. I'm going to put the amount on 15. I'm going to turn off limited and then turn up rotate wide to say around 16, 17.
+This just looks funny. So what happened is the cylinder doesn't have enough vertices. So we've got 40 segments, but we need more stacks.
+And as you can see, the moment I turned that up, we've got this smoother kind of curve. So I'm just going to put it on 40 for now.
+I'm going to open the caps, which means that the cylinder has an open end, as you can see there. So if I want to go inside the tube now, I just click orbit controls and I click reset and I'll fly back to the default position.
+So now I want to make the tunnel kind of turn around. So I go to rotate Z and I turn this up and I can see that's making the tunnel turn.
+So I do this and I grab a timer. I'm going to put that on say 10 for now. Okay, great. So now I want to create this kind of like zooming effect that we're flying through the tunnel.
+Now we don't do that with the mesh. We do that with an animated texture. So I'm going to make a basic mockup so you can see what I'll be doing later on in the tutorial, which is a little bit more advanced.
+So I'm making image compose. We really don't need to have this large for performance. So I'm going to put on 512 by 512.
+I'm now going to click and drag this out and I'm going to grab the checkerboard up and I'm now going to apply the output, that texture as a diffuse input.
+As you can see, we now get this on the inside of the tunnel. So how do we create that zooming effect? Really nice and easy.
+We grab the scroll, texture up. Now, if I move X, we get this. But if you look, the texture here is moving left and right and I found this very confusing to work with.
+I want it that if I'm moving amount Y, that this is then flying through the tunnel.
+So if you click the cylinder up and you click flip mapping, it flips it from X to Y.
+And now if I move amount Y, as you can see, this is going parallel to each other. Made a lot more sense to me.
+So we pull out our mind Y and we grab a timer and put the speed on, say 0.1.
+And that is the basic mock-up for what we're going to do for the rest of the tutorial.
+We've got this texture. We're animating it and it makes it seem like we're flying through a tunnel.
+So that's the basic approach. We're going to get rid of this.
+We're going to go over here. Now we're going to build one or two layers, right?
+So I'm going to go over here and I'm going to grab an image compose and I'm going to put it on 512 by 512.
+Okay. I'm now going to pull this out and I'm going to grab the FBM noise op.
+I'm going to click image compose so you can see what's happening.
+Now I need another timer. So I'm going to do control C, control V and paste it.
+And I'm going to plug it into anim for animation. Let's get that and put it here.
+This is far too fast for me. So I'm going to put this now and say 0.6.
+So it's just moving subtly. So now I want to create some kind of blocks.
+So I'll go here and I grab the pixelate op and I'm now going to use this magic number today, 32.
+And as you can see, I get these stripes and now I'm going to put it on 4 and that gives me this.
+So let's go over here now, pull this out, grab a drawer image because I want to build a material together, right?
+Pull this here and I'm going to plug that in there.
+So we get this image and we then put it into a drawer image.
+And we put that there and we apply that as material. That's the basic workflow for now.
+So I'm going to grab this and I'm going to copy the whole chain there and I'm going to paste it here.
+I'm going to give it a trigger and now I'm going to put this pixelate value on 32 by 1.
+Why? I'm going to use this to displace the pixels of the texture.
+You'll see this in a minute.
+So I'll go here and I'm just going to call this my diffuse for now.
+I'm going to pull this out and I'm going to grab the pixel displacement op.
+So it displaces pixels based upon the black and white values coming in.
+So that's what I'm going to use this for.
+So let's first of all plug this in.
+So if it's black, that's zero displacement.
+If it's one, that's full displacement.
+So let's go to the pixel displacement op and turn up amount y.
+Click this.
+There we go.
+I'm going to pull it back down again.
+And if you pay attention here, look in the window, you'll see what's happening.
+So all of a sudden, these things are displaced.
+Let's put the amount y on 8.
+Now everything is really skipping and jumping around.
+That's because our pixel values are between 0 and 255.
+So we need to put this on HDR.
+I'm just going to put them all on HDR for now.
+As you can see, we now get this smooth effect here.
+So I could put this on 4 so it's not as severe.
+So they're now moving up and down.
+But now we want to fly through the tunnel, right?
+So we're going to pull this out and we're going to grab the scroll texture op right here.
+And that's what we did before.
+And now if I move them out y, we fly through the tunnel.
+So let's grab a timer.
+Plug that in there.
+Just slow it down for now to say 0.25 so we can see what's going on.
+So here we can see it moving down.
+And this seam I'm fine with.
+I think that seam gives like an impression of speed like we're flying through a tunnel.
+But I want to exaggerate that a little bit more.
+So let's pull this down, click in between, and grab the grid texture op.
+As you can see straight away, it gives us this grid.
+Let's click image compose.
+There we go.
+So I only want, I don't want these kind of like lines going up into the distance.
+So I'm going to just crank the thickness so it's like this.
+And the cells Y is like how many that I've got there.
+So I can put it on one.
+We'll get it like this.
+I can put it on two so it's more frequent.
+So I'm just going to leave it on two for now.
+And if I move this up, the line thickness, it kind of like makes them a little bit thinner.
+And I get this kind of like dashing impression of speed.
+I'm going to click color picker.
+I'm just going to put it on white.
+But now we lost the original image.
+That's due to the blend mode.
+So I'm going to click grid texture, blend mode.
+I'm going to put it on lighten.
+I don't want it being so white.
+So I'm going to lower the amount to say 0.7.
+So it just gets added and it mixes in a little bit better.
+Okay, great.
+So now I need to somehow colorize this black and white map.
+This black and white texture, sorry.
+So I'm going to move this over here.
+And what I'm going to do is I'm going to use the color map up.
+Right here.
+Now it expects a gradient.
+Please check the example file for a more in-depth explanation on how to use this.
+I'm just going to show you how to get started with it.
+So I can actually copy an image compose, put that here, give it a trigger.
+And now I'm going to grab the gradient up.
+Draw a simple gradient between three colors.
+Okay.
+So what I'm going to do is first, I'm going to put this on XY mode.
+And let's click the image compose so we can see this.
+Now there's three colors that we can pick here.
+So I'm going to put this first one on black.
+And let's just plug this in so you can see what's happening as we do this.
+So I'm going to click image compose, working on the gradient channel.
+And now I'm going to move this somewhere up here and I'm going to make it a bit of a light blue.
+And then I'm going to go down here and I'm going to make this like a little bit more dark.
+Well, as you can see, I can get a mix here between two kinds of colors like this.
+It's a little bit picky, but you've just got to play around with it and now I can move the position.
+And as you can see, I'm already getting something pretty cool here with what I'm looking for.
+I want to make it a little bit more exaggerated with the brighter and darker parts.
+So let's just put it down here for now.
+This will do.
+And let's take a look without it.
+So this is it before and now we've added a little bit of color.
+I'm probably going to have to tweak this a little bit again.
+Now we want to make the image a little bit darker.
+We want to exaggerate that, but we don't want to do this with brightness.
+So I'm going to grab a new op, clamp texture, and I'm going to move the minimum up.
+And I'm going to put this, sorry, on remap smooth.
+Let's now move this up a little bit.
+So this is like kind of tricky to get right with the colors.
+It's a very sensitive setup.
+It took me a little bit of time to get the hang of this.
+So what I'm going to do is now I'm going to go to the gradient and I'm going to make this a little bit brighter.
+There we go.
+And now we've got some more of the colors popping out that I want, basically.
+I just wanted to get more black in there.
+And now we can go to clamp texture and we could move this up.
+So you've just got to play around with these until you get like some colors that you're happy with.
+Okay.
+So I'm going to just turn the speed up a little bit more.
+So it's a bit more like that flying through a tunnel effect.
+Great.
+So now we've got like these basic colors.
+So far, so good.
+So it's pretty bland, a little bit ordinary, but that's normal.
+That's what we've got post-processing for.
+So right now I'm going to set up like a composition channel.
+So I'm going to grab an image compose.
+And this one I'm going to leave under use viewport size.
+So first of all, let's get a draw image.
+And let's disconnect the render to texture output and plug it into draw image.
+Plug that back into full screen rectangle.
+So we're where we were before.
+Okay.
+So now we're here.
+So now I want to add a couple of things like fog and blur and bloom.
+So first of all, let's add the fog because fog gives like an impression of depth.
+So I grabbed this effect.
+It's a texture effect.
+And I add it.
+Now it requires the depth texture output from render to texture.
+So I plug that in.
+And I'm going to put the first run file on, say, 29.
+I just played around with this a little bit.
+And we're going to move the fog end down.
+And as you can see, we've now got like this little bit of fog kicking in there at the end of the tunnel.
+And it already adds this really nice, cool, kind of smooth gradient.
+Now me, I just went for good old white here.
+I just really liked the look of that.
+So by moving the fog end up and playing around with the density, you can really tweak it to get a lot of different effects, basically.
+So there we go.
+We've got some fog.
+Let's move the density up a bit again.
+So I want it to, like, colorize the black a little bit because black isn't normally present most of the time in images.
+It's a little bit brighter.
+So we've got some fog.
+So now what I want to do is I want to add, like, some kind of, how do I put it, some kind of, like, bloom effect.
+So I'm going to go down here and I'm going to add a draw image.
+Now what I'm going to do is I'm going to go over here.
+I'm going to set up one or two channels.
+I'm going to grab an image compose.
+And this can be small, 256 by 256.
+And now I'm going to grab an edge detection.
+And I'm going to plug the texture output into, sorry, my bad.
+I need to make a draw image.
+So image compose to draw image.
+And we add the texture output there.
+So we've got this coming in.
+And as you can see, without the edge detection, it's that.
+And we add the edge detection.
+And now we get this.
+So I'm going to turn the strength down.
+It's a little bit much.
+I'm going to put it on, say, 0.3 something for now.
+So I've got this black and white edge detection now.
+And I'm going to drag that to this draw image.
+And you see we get this now.
+And I'm going to click.
+And this is something I want to show you.
+So you see these white edges here popping around the screen.
+That's because of the wrap mode.
+So it's on repeat right now.
+So I need to put that on clamp to edge.
+As you can see, they're now gone.
+So now I'll go back to draw image.
+And now I'm going to put this on add.
+So now we're getting this brighter.
+Edge applied to everything.
+But it's a little bit harsh for my liking.
+So I'm going to go here.
+And I'm actually just going to blur it a little bit.
+So I'm going to grab blur.
+I'm going to add it.
+And this is way too much.
+Now it's on 10.
+I'm just going to put it on, say, 1.
+Maybe 2.
+And as you can see, that now softens out the look.
+And it makes it look a lot more organic.
+You can use the amount here to determine how much of that
+gets added to your image.
+I'm just exaggerating it all a little bit
+so it's easy and clear to see today.
+So that's another step that we've done
+with the post-processing.
+So another thing I want to do now
+is I want to create some kind of depth of field effect.
+And you can go as far or not as far as you like
+with these kind of effects.
+I just want to show you what we can do here.
+Sorry.
+So let's grab this image compose.
+It's on 256 by 256.
+And I go there.
+I grab this.
+And now I'm going to grab the depth texture focus up.
+Now, you know, this is also a kind of blur,
+which is why we're downsampling and keeping it really small.
+So we need a depth texture.
+So I go to Render to Texture.
+I plug that in.
+Now, the far plane is really large.
+So I'm going to put it on, say, 20.
+And now what I'm going to do is just pay attention here.
+I'm going to move the center,
+which is like the kind of focal point.
+And I'm going to move it down here.
+And I'm going to change the width to something like this.
+Now, we could just do this of a texture,
+but this could be animated late.
+So that's why I wanted to show this in action.
+So I'm going to go in between.
+It is a full screen blur, so it's kind of expensive.
+But I just want to show you what we can do here.
+I'm going to put this on, say, 2.
+And now I'm going to use this to control the blur mask.
+And basically what that's doing is it's going to blur things that are like with the white pixels here.
+So this becomes more blurry.
+And we could crank it up.
+I just want to give you guys the tools to do what you need.
+And look, we're now getting that edge thing popping in again.
+You go to Image Compose and you turn your clamped edge to stop that happening.
+Okay.
+So let's just put this back to 2.
+So it's just another really simple thing, but, you know, it adds everything together.
+Like if we disable all of this by pressing D, that's what we had before.
+Press D to turn it all back on.
+What a difference.
+So we're almost near the end of this tutorial because we've got to keep it as short as we can.
+So now I'm going to grab the good old chromatic aberration.
+And this displaces things in the RGB realm.
+So I'm going to put the pixel on 18.
+It goes all over the place now.
+A bit too much.
+I prefer the smooth look.
+Once again, it's subtle, but we can turn it off.
+And as you can see, it's adding a little bit more color into the image.
+And last but not least, I just think we always need a little bit of noise.
+So I'm going to grab the noise up.
+I'm going to turn off Animated.
+I'm going to put it on RGB.
+And I'm going to put it on Subtract.
+And then I'm going to turn it all the way down to zero.
+And then I'm just going to turn it up a slight touch to add a little bit of grit to the image.
+Okay.
+So it's not, of course, exactly like it was the video that you saw at the beginning.
+You know, I just wanted to show you the basic building blocks here.
+You could go really wild and play around with a huge amount of effects here.
+You could put this on 8.
+You could put this on 16.
+You could put it on 2.
+There's a huge amount of looks that you can go for.
+I just wanted to give you the building blocks.
+You could stack all this together and make multiple colored layers.
+So that was the how to make a really cool tunnel inside of Cable's GL copycat-inspired episode.
+I hope this video has been educational and informative.
+If you've got any questions or comments, please feel free to leave them under the video below
+or to post them on the forums.
+Thanks for watching and have a good one.
+Bye.

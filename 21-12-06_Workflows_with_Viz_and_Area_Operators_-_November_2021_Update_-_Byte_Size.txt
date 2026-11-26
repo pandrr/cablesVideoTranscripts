@@ -1,0 +1,110 @@
+https://www.youtube.com/watch?v=-1vMiU6BcDg
+Hello, this is Alex from cables.gl. I'd like to show you the brand new, fresh out of the oven
+user interface operators and editor workflows that are coming out. Actually, they already came
+out in the November update of cables. And definitely check it out. There's so much cool
+new stuff. And what we're going to do is try to maybe make some sense of this crazy patch that is
+doing some of this pixel diffusion stuff. But what's handy is these operators will allow us to do this
+a lot quicker and organize our patch like really nicely. And if we share it with someone, or if we
+come back to this patch a lot later, it'll be so much more clear to us what is happening and how do I
+quickly change this patch around and I don't have to waste time checking out what does what and what
+this image compose and what is that image compose and all those things. So we're going to go into
+this blank patch and I'm just going to talk about what are the new visualizer operators that we have.
+So if we type in viz, we get these four new operators that are going to allow us to visualize the different
+changes in our values and outputs of our operators on the patch field. So as we're working, we can keep this like visual tab on things or kind of have some cues of something happening that we want or something happening that we don't want. So this graph, let's start with this one. So what does it do? It has a bunch of inputs.
+So there are numbers here and we can interact with them in the parameter panel, of course. So if I start moving it around, nothing is happening. That's weird. Well, that's because this operator doesn't actually work by itself. It needs inputs. So these parameter fields here don't do anything as you would expect. They don't change the values. There's no outputs to this operator.
+So what it's used for is to visualize changes in other operators. So if we put in LFO that we recently looked at, we'll put in a timer here. Now we see a graph being drawn. So over time, the LFO is changing this value and we see that there's a minimum and maximum here.
+And, you know, it looks like a sine wave. And if we look at the vis graph in the parameter field, we have the actual value. So for example, or whatever, you know, for example, like we have an output, right? And I want to grab it and I can grab it from here. Right. So it's, that's one use case for this parameter panel for the vis graph.
+Like we can just click it and then we copied the value to clipboard. But anyway, it's mostly for visualizing changes in your values.
+And we can put in another one just for fun. Give it another timer. Make it super fast and maybe change this to like a ramp up and start this one up again. So you see we'll have like layers of the different value changes and it will auto adjust to your min and maximum.
+So very handy little tool for visualizing, you know, or seeing maybe patterns or where something goes out of bounds or something like that.
+Okay, then we'll look at another kind of related visualizer, which is the vis number. And this one will just show a value on our patch field.
+So for example, if I need to see the output of this LFO, I can of course select it and look at the output here.
+But if I am, for example, changing something in another operator, how do I look at it?
+How do I look at it? Well, now I have this number here telling me that, okay, it's animated and it's changing between some sort of a range like from negative one to one.
+Okay, so that's one use case for us. And that's actually like generally the use case of all these visualizers is you are allowed now to do something else somewhere else, but keep tabs on what's happening in your patch.
+So for example, this string, I want to know when my mouse is in my patch, in my interactive like patch field or I mean patch preview, patch renderers, I'm sorry.
+So yeah, for example, I'm interacting with my renderer. But does the patch know that my mouse is over it? So I would use something like a mouse operator.
+And then you see here that there is a output called mouse over, right? And if we mouse over our patch, it turns to true.
+But for example, if I'm somewhere else, I don't see if it's true or not anymore. And something might not be working correctly.
+So I will do something like a bool to string and then connect it to the string visualizer.
+Pretty cool. And for example, if you're doing like queries to APIs or something like that, and you just want a really quick visualize or a visual of like, did it connect?
+Did it get the value it needs from SoundCloud or something like that? Then this is a super handy operator.
+All right. And of course, the best for last is the vis texture. And this texture, it does have a pass through.
+OK. And if we look at the parameter, it doesn't have much. It just has a texture input.
+So if we grab our famous beach and we put it in here. Nice. We can see it all the time.
+So if we close the typical preview here, you know, we still see what this texture is.
+So really handy, for example, when you're working with someone or just to remember like, OK, this is my beach texture right here.
+You know, I don't have to click in and look at the parameter or look at the preview.
+Really handy when you're working with like a bunch of textures.
+OK, so what else? There's also these awesome new editor workflows that I just can't wait to show you.
+Let's do those on the complicated patch because there is an operator and then there is some workflows that I want to show you.
+But I think it makes a lot of sense to look at something like this and say, OK, I want to organize this.
+How do I do this now? OK, let's say this part where we're pretty sure that this is where everything starts, right?
+It's the beach texture and then this goes to whatever this is doing and then it outputs it to the full screen rectangle.
+That's cool. So I'd like to visually separate this from everything else and just focus on that.
+So when I come back to this patch, I know this is the part I want to change to then change how this looks or, you know, how the underlying image looks.
+Maybe I'll change it to an animation or something like that.
+So now what we can do is select the ops we want to move, for example, and then you'll see this new button here called create area.
+And if we click it, we get this new area operator around the selection we just did.
+And what's cool is I can give it a title. So, for example, it could be input texture.
+OK, then I can comment it, but I don't really want to.
+But then we can also color it. We'll make it red, for example.
+OK, and then the coolest thing is that when we move this operator, it moves all the ops contained inside this area.
+And I'll show you some tricks on how you can maybe reposition stuff.
+So right now nothing is selected.
+Well, actually, stuff is overlapping a little bit.
+So what we can do is we press Alt on our keyboard and then move the op that is the area away.
+And now you see that the ops inside it don't move.
+So, for example, if we want to clear our area, we can just move it out from underneath the ops.
+Or if we want to reposition it to better frame our ops, we can do it this way and then move it around.
+We can also resize it this way.
+And if we drop our selection, we can move individual ops inside this area.
+So visually, you can adjust it this way.
+OK, that's pretty cool. So now we have this input texture right there. Nice.
+And let's say I am now feeling a little bit, you know, at odds with what's happening here.
+Look at those cables. It's just visually kind of crazy looking.
+What we can do now is we can click directly on this cable and we get this new button here that says create trigger send.
+So remember that tutorial from some time ago about trigger send, trigger receive.
+Well, now we can really optimize and arrange our stuff exactly how we want and hide some cables.
+So we'll create this pair. We'll click this button and I'll just say this is my input texture trigger.
+And I'll press OK. And look at that. That cable is completely gone.
+And now what we have is we have that trigger send and trigger receive created automatically.
+So we don't have to go through, you know, this lengthy process of creating new ops or for the trigger, for example, for the trigger send or for the trigger receive and then naming them and using the dropdown.
+Now we just click on this cable, even this texture one.
+And this is another great example. See, we have two cables for the same texture.
+So using a variable here is actually a great use case.
+So if I'll click on this cable, I just say new variable.
+So you'll you'll get this search operator window and we get this button called replace link with new variable.
+And I click on that and I'll say input texture.
+And let's just write image since I already wrote trigger before.
+There we go. So the cable is gone.
+OK, so that's awesome.
+And then what happens with this one?
+Well, we don't need to do that anymore because we just created this var get variable of the texture from from the input.
+So we're using the same one right here.
+So we can either drag a cable from here over to there, which, you know, will kind of mess up our look here.
+But we can just copy paste another copy of it and delete this one and then plug it like so.
+So that's pretty awesome.
+And now we cleaned it up and we have this area by itself for the input texture.
+And when you open this patch, you'll be like, oh, yeah, this is where I change my texture.
+So let's do that.
+I'll open up our library and maybe put in this UV texture field, right?
+I'll select this one or I'll click on this and select it like so.
+There we go.
+Nice.
+So one more thing I wanted to show you like a use case for me, for example, to quickly check what is happening when I change parameters.
+And image compose and I want to see the result in another image compose.
+And I don't have to kind of have visual memory of it.
+I can just directly see what happened.
+So I'll drop down a this texture and connect it to this image compose here.
+And I can, of course, move it around anywhere or I can even destroy this link and move it to another section of the patch.
+And I'll see that, OK, it looks this way.
+There's some nice smoky patterns going on.
+But what happens if I want to maybe make this patch a bit lighter and not use, you know, HDR, for example.
+And obviously I clicked on this image compose and now I can't see the preview for this one.
+But since I have my vis texture, it's fine.
+So I don't even need that preview anymore.
+So I can just zoom in here and then go to the parameter that I want to change and then click off HDR.
+And now I see that, you know, how does it affect this texture when I don't use HDR, for example.
+Yeah, so I hope that's pretty useful for organizing stuff and, you know, making sense of the patches you find in the library.
+Thank you. Bye.

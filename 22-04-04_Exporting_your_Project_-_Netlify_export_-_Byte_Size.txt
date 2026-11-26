@@ -1,0 +1,177 @@
+https://www.youtube.com/watch?v=L5BGMs7vKuI
+- Hello, this is Alex from cables.gl.
+And today I'm joined by Stefan from Undev again,
+because we're talking about exporting from cables.gl.
+We have a project that we like,
+and in our last video we covered how to export a zip file
+directly onto our own server,
+that we have access to via FTP or SSH,
+or maybe a web interface or something like that.
+And now we're gonna look at another service
+that is kind of integrated a bit more interestingly inside cables.
+And yeah, tell us, which one is it?
+- Yeah, the last video was about downloading a zip file,
+putting it onto a server, as you said,
+and now we're at least making further steps in updating easier
+by using the Netlify integration of cables.
+Netlify is a service that provides web hosting for free,
+and has an API where you can upload stuff,
+and it's a really easy way to have a cables patch running on the web
+and not caring about the FTP uploading and everything that is connected to this.
+Might be useful to have previews for client projects or even full-fledged website on it.
+They are really nice and also free, you can check their website.
+And we're about to upload stuff there.
+Nice. So all I need is a cables account, cables patch, and a Netlify account.
+And I see also, again, there's some documentation I can read as well, which is pretty cool.
+But yeah, I've never used Netlify, sounds like it's widely used, I guess, and it's free.
+And I guess I can explore it and I want to know more.
+Yeah, it's pretty cool.
+So the first thing that we have to do, obviously, is to create an account on Netlify.
+That's the website.
+I already have an account, I'm already logged in.
+So if you press the "Log In" button, it will take you to, I guess, what they call a dashboard.
+And I don't have any projects in here.
+Now we have a little catch-22, but also, going back to the last video, we need to start this project.
+We basically need to bootstrap it.
+And this asks us for a folder that basically just has an index.html in there.
+If you watched the last video, it should be pretty easy for you to get something like this by just going into cables, going into the export, clicking download and exporting a zip file.
+Then it's compiling the zip file and now we're downloading it.
+Then we extract that and now we have all the files in our download folder.
+And if we now go back to Netlify, we can just pick this folder that we just extracted from the zip file and upload it here.
+And now it's deploying my site, cog wheels rotating and waiting and now it says my site is deployed.
+So I can actually use the workflow we discussed in the last tutorial to just drag and drop files into this web interface and update my site.
+But that's a bit old school, isn't it?
+Yeah.
+We would have to do this every time we update, we show this, but they give us a URL, which is Wizardly Nightingale something something Netlify app.
+And I can already go there and see my patch.
+Yeah, nice.
+So we have all the interactivity in there and now everything is good to go.
+They offer some services and settings to put this on your own domain so you don't have this Wizardly Nightingale thingy.
+But that's on the Netlify side.
+So check their settings and also what you can do with this.
+So we now have our cables patch published to Netlify.
+Right.
+So now we get into the cool stuff with Netlify and cables integration, right?
+Like if I want to change my patch five times in 30 minutes before my project review, it seems like it would be a lot faster than drag and dropping files and exporting zips and stuff like that.
+Because I saw there was some sort of API key or something like that.
+Yeah, this one we need, but what we saw first in the client project deadline is a good example, so we made a mistake and left the performance op in here, right?
+Yeah.
+So we don't want this on the final side and we could now go back to the patch and remove the performance op.
+That works.
+So now it's gone.
+I'm resaving this, but obviously this one still has it because I need to re-export it.
+And this is what we use the Netlify integration for.
+So now we go to export again, check Netlify and see, okay, it needs a site ID and it needs an access token, which we can generate at this link.
+And the site ID we also get from Netlify.
+Since I need to copy paste this, I'm opening this text editor to keep the stuff.
+So I'm in user settings.
+So if you're on Netlify, you go to your user settings and then these are called personal access token.
+So we create a new one, describe it, client project, generate this token.
+And now you get this weird password-like thingy.
+And they say no one will be able to see the token again.
+So we have to keep this and copy it and this is why I have this text editor open to be sure that I keep it.
+So when I click done, it's gone, right?
+Yeah.
+Now it's done.
+You still see that you created it and you can delete it, which I guess I will do after this tutorial.
+Yeah.
+But I can no longer see it.
+So yeah.
+Okay.
+So now we have this and basically we can close this tab again and go back to our site settings on Netlify.
+So this is where we deployed the stuff from the zip file.
+And now we go to site settings and in general, it gives us a site ID.
+Also long ID thingy, also with a copy button.
+We copy this and now we put this also in the text editor as well.
+So then we can go back to cables, pick the export, pick Netlify.
+and input the information.
+So this one is the site ID and this one is the access token.
+And do I have to enter this each time?
+No.
+Cables will save this and you can then even more quickly, like these do not change your access
+token as long as the value will not change, site ID will also not change.
+So next time you don't have to do the copy pasting, you just deploy to Netlify.
+So it's saved with my patch?
+Yeah.
+Okay.
+So this we now try and we see the same rotating loading indicator.
+It's assembling and talking to Netlify.
+And we also see the summary as we saw in the zip file download.
+It has some legal information and it says successfully exported to Netlify.
+Now we have these two buttons.
+One is View Deployment and the other one is Deployment Overview.
+And the View Deployment brings us to the updated patch side.
+We see the performance of it is no longer here.
+So we updated this patch on Netlify right now.
+Client should be happy.
+No more debug information on it.
+Interactivity is still in there.
+And we just updated the patch on Cables on Netlify.
+Cool.
+So that was actually the button directly from Cables where it said like View Deployment.
+Like because it understood what the URL is.
+Yeah.
+So if I need to refresh the page, I can just click that button after exporting and open the Netlify address.
+Yeah, right.
+That will take you to your deployed website basically.
+And then we have this site overview where we see all the deploys, which is a Netlify feature.
+So whenever you screw something up or deployed something that wasn't supposed to be there,
+you can also revert to older deploys and see what you did and use all these Netlify features.
+Nice.
+Yeah.
+Cool. So it actually has built-in versioning and things like that.
+So with each time I export from Cables, I'll see this in this log here for the production deploys.
+Yes. And it also says exported from cables.gl on exact time.
+So you will always know when you did this.
+Mm-hmm.
+And then because you asked, we don't have to enter all the information again.
+So let's see client still not happy because doesn't want the sidebar.
+We're kind of settled on the colors and everything.
+So we're removing the sidebar entirely.
+And then we're saving this again.
+And this is now a new version.
+Okay. So I have to save the patch before I do this export.
+It will also warn you. So if you change something and try to export, it will say, please save before exporting.
+Mm-hmm.
+So if I now go to export and Netlify again, now all this information is already in there and I can deploy to Netlify.
+It will go through all this deployment process.
+Compilation, yeah.
+Again, it will show me the same information.
+It's less ops and now I can go to view deployment.
+It takes me to the page again.
+And now the sidebar is gone.
+Yeah, that's really quick and nice.
+And one thing I don't know if we mentioned is this is a patch that you own, right?
+This is not something from the library, it's completely your own patch.
+So I think that is one of the prerequisites before you export to something like Netlify using the access token.
+Okay.
+So if you come from an example patch or want to remix something and then publish it on the web, just save as, copy the patch, clone it,
+and then you should be offered with all these options including the Netlify export.
+I should probably check the copyright information of the patch before I do that, but yeah.
+Yeah, that's true.
+Yeah, and with all the other, as with all the other exports, we have a documentation on it.
+Gives also the prerequisites, parameters, basic walkthrough, caveats, export options, explained in what to do with assets and browser compatibility and everything.
+Sweet.
+So yeah, definitely check this.
+This was so easy.
+I don't know.
+There must be a catch or something, but that is great.
+I loved it.
+Yeah, this is so much better than exporting to a zip and then constantly uploading it.
+Nice.
+Yeah, I guess that's about it.
+Do I have any more questions?
+Can I, for example, when we did the export with the zip, we, of course, have all the files and we can edit them.
+And here I'm exporting directly to Netlify and this is more of a Netlify question.
+Like if I want to edit a specific file from my export, would I export a zip from cables first and edit that and then upload it to Netlify or can I do some sort of editing inside Netlify?
+You can't and also that's one of the caveats mentioned in the documentation.
+You can only host one cables patch and every export will overwrite everything that was on the site before.
+So if you really want to do some editing, check on the other options that Netlify has.
+But this way, it basically overwrites every previous export.
+And then in this site overview and production deploys, you can roll back if you somehow published something wrong.
+Nice. Okay. Understood.
+Yeah, pretty good. All right.
+Anything else? Well, I guess tell us in the comments below if you've been successful with using Netlify and what sort of things you found.
+And if you have any questions, definitely ask. We'll be super happy to answer.
+And we're inviting you to our Discord and come and join.
+Yeah. Check it out and let us know. Thanks a lot. Bye. Bye.

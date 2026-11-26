@@ -1,0 +1,134 @@
+https://www.youtube.com/watch?v=Nre7LH0OVw4
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
+forums is Andrew and today I'll be showing you how to create a simple kind of particle-like
+explosion with the array ops and the point material and point cloud from array ops. So
+without further ado let's get started. I'd like you to just pause the video and just make what
+you see here. Great so I'll just explain briefly what's going on. We've got the full screen rectangle
+to render our texture. We're gonna get the scene and we're gonna render it to a texture. Don't worry
+we don't have anything yet. Transform view will allow us to change our view point in the world.
+Orbit control so we can turn the scene with the mouse. Point material applies a material to points
+and point cloud from array allows us to render these points combined with the point material. So
+I'm just gonna move down here a little bit. I'm gonna pull this out and we just need some points
+right now. So I'm gonna grab the random numbers array free op. We're gonna get this array output
+and we're just gonna plug that in here. Great. Now this material is a bit dark so I click point material
+and I'm gonna move it up here and I'm gonna put it on a kind of like slightly brighter blue. There we go.
+So this is now giving me a hundred points. Let's put it on a thousand. With the orbit controls I can click and drag now with the mouse wheel and I can...
+with the mouse button and with the mouse wheel I can zoom in and out. So I'm gonna click point material. I'm gonna turn off random size.
+I'm gonna turn on scale by distance. This means that if a point is closer it becomes bigger. If it's further away it's smaller.
+Let's put that on 20 for now. Okay so now we've got a little bit more of a kind of sense of depth. So now what I'm gonna do is I'm gonna click in between and I'm gonna grab the transform array free op.
+This now needs a trigger. So I'm gonna grab that from here. And now I just want to use this to move the shape around.
+Let me just reset the orbit controls. There we go. Just zoom out of touch. So now I can use transform array and I can move it.
+Most importantly I can rotate it. So I'm just gonna grab a timer op and I want to just move this from left to right.
+Now I'm gonna grab the sign op. And if we look here I'm gonna get this value. Give it a moment. So I'm gonna use this to move this from the left to the right.
+Just a simple, really simple animation. So now I'm gonna copy this. I'm gonna paste it. And I'm gonna get the number of values, pull it out, type in number.
+Now I'm gonna plug that in here. So that if I ever change this number, that they both update accordingly.
+Because when we want to do array math, they have to have the same, the arrays have to be the same length.
+So let's pull this down. And now I want to do something different. So let's pull this out, visualize this array.
+So this one, I'm gonna get rid of the sign. And we're gonna disconnect that timer. And now I'm gonna put this on -4 to 4.
+So they're more spread out. There's more space in between. I can zoom out. So just to show you the difference.
+This is that one. This is this one. And now I'm gonna get this timer. I'm gonna plug it into Rotate X.
+And I'm gonna plug it into Rotate Y. It's going a bit slow. So I'm gonna put it on -15.
+And there you go. So we're now rotating this array on two axes. So now I want to add these results
+together. So I type in array math array. Perform a math operation on two arrays. Now grab this. I plug it in
+there. I get this. And I put it in there. And we've now got the basic mode addition. And as you can see,
+it's turning and we're moving everything away. So the points are a little bit small. So I'm gonna put
+it on -45. That's better. Okay. So I've zoomed out a lot with the Orbit controls. But if we zoom in a touch,
+now it's like we're inside of this kind of like cloud of particles. If you want to know how that is,
+just click Orbit controls. Press reset. And it will put you back to your default position. So I'll zoom out a bit
+with the mouse wheel. Great. So now I want to create this kind of like explosion effect. And
+this is way simpler than it seems. So I'm going to move over here, grab num values, pull it out,
+and I'm going to grab a multiply op. So I'm going to multiply this by three because I'm going to use
+the array op. And the array op doesn't create groups of three points like this array op. It creates
+single numbers. So don't worry if you don't get them. Just click the array length later and you'll follow it.
+So now put it on 0 to 1. Let's put number of values on 10, just so I can show you what happened there.
+So if we click this array and we visualize the contents, it starts from 0 and then it goes all
+the way up to 1, no matter what the length of the array is. So now let's put this on say 2000.
+So these are going from 0 to 1. Let's visualize this because this is what I want to use
+to create the explosion. This is it. So if you keep on adding to X, Y, Z, you're just going to get one
+point flying off in a straight line. So let me just reset the orbit controls again. There we go.
+So now what I want to do is I want to just disconnect this and I want to plug in an array multiply.
+Let me get the array now and plug it back in. So now I'm going to create a timer op. I want to create
+a kind of loop that explodes. So I'm going to grab timer and I'm going to plug that into multiply.
+And if we reset it, watch what happens. It goes out from the center and it'll keep on going and going
+and going. And we could turn this up at one point. And as you can see, they now separate due to the
+distance between them. So put this on 1. I'm going to reset. So I want to create a loop. So that's nice
+and easy. We use the modulo for this. And as you can see, let's just zoom out of touch with the mouse
+wheel. Now get this. So now I'm going to put this in 12. And now it's really simple. This is just a value
+of 0, 0.1, 0.2, really spread out. And we're going to multiply the output of this with this. So we copy
+the array, math array, control C, control V. And I'm going to plug this in here. I'm now going to plug
+this one in there and then put this back into point cloud from array. And now what we're going to do
+is we're going to multiply. Okay. So if we multiply everything there by zero, it's going to be at the
+center. So watch what happens. Give the modulo a minute to kick in. And there we go. We've got like
+our basic explosion effect. And that really isn't so difficult to do. If we put the modulo now in one,
+the explosion will happen repeatedly and far quicker. If I would now turn down the timer,
+we could have it take a longer time to explode and billow out. So these two
+ops here allow you to get that kind of control. But I'm going to put it on 12 because I want them to
+kind of fly out from the center. And this cluster in the middle, that's there because of course,
+some of them are very close to zero. So these points from there aren't going to move. And that's it.
+That's like the basic thing. We've now got the movement down, scale by distance. So we've got some
+kind of depth, but we can make this look better. And to do that, we're going to use a little bit of
+post-processing. So we're going to just ignore the array ops for now. We're going to go up here.
+I want to give ourselves some nice amount of space. So I'm going to disconnect this. I'm going to grab an
+image compose. So the first thing I want to do is I want to create a kind of blur when the particles are
+close by. So let's zoom in a touch. And I'm going to grab the depth, texture, focus up. This requires
+a depth texture. So I go to render the texture, plug that in. And now let's take a look. Now,
+you're not seeing anything because the parameter file plane is too big. So let's put this on 13.
+Okay. So now we're just going to move the center down to say 0.2 something. And I'm going to turn the
+width up. And let's put on 0.3. And as you can see, objects that are now closer to the camera are a
+now closer to the camera are a bright white. And the objects that are further away are darker. And we're
+going to use this in the moment to control a kind of blur. So I'm going to change the resolution here
+because a blur is very expensive. So I'm going to do use viewport size. I'm going to turn it off.
+I'm going to put this on 512 by 256. But now it's like a little bit crispy. So now we just add a blur
+up. And we're just going to put it on 2. And now we get this. Great. Let's move over a little bit.
+So now I'm going to grab a new image compose.
+And I'm going to just disconnect this for a moment. And I want to just see the original scene.
+So I grab a draw image, up, and I'll move that up here. I grab the texture output from render to texture,
+plug that in, grab this, plug that in there. So now we're back to the original scene. So now we want to
+blur objects when they're closer to the camera. Blur. We're now going to use the mask input from blur.
+Let's put it on 2. Let's grab this from the depth texture focus and plug it in. And then what's going
+to happen is, and it's a little bit difficult to see, but when objects become closer to the camera,
+they get a little bit blurry. And we could crank this up more to exaggerate the effect. But 2,
+3 is pretty much enough. You don't want to go too far or it looks a little bit gimmicky.
+So the last thing we're missing now is this kind of like sense of fog, this sense of depth that like
+the things that are further away have a slightly different color than the things that are close by.
+So I'm going to go here in between and I'm going to type in fog. Render fog is a texture effect using a
+depth texture. So I'm going to click add. And you know what, I'm going to put this blur in too.
+Okay, so now this requires a depth texture. So we go here, grab it from render to texture and we plug it in.
+So now I'm going to put this color down a little bit like this. Okay, and now what I need to do is,
+I'm going to pull the frustrum down to say 15 maybe, and I'm going to pull this fog and down and watch what
+starts to happen. Things further away start to get like a different color. And the density I can pull
+down or I can increase. And as you can see, we've now got this kind of like really nice fog effect.
+So I want the point stare to be a little bit brighter. So I'm just going to get this and I'm
+going to pull it up on the point material. Great. So I could make the objects seem to be darker the
+further away they are, or I can make it seem to be brighter. And it's a really cool op, you can get
+really creative with this. I'm just going to leave it like this with a little bit of color.
+Okay, so with this now, we've already got like this really nice post processing chain. If I click
+here and I press shift D, we disable just the fog. What a difference it makes. Let's put it back.
+And if we disable that in the blur with D, this is the basic image, which is pretty bland. If you
+look at it, I'm pressing D again enables them. So with a little bit of simple post processing,
+you can make a scene start to look really good. And now I'm just going to jump through one or two
+slightly different tricks and looks just to show you how later on you can hopefully
+experiment more with this patch and get more of your own looks out of it. So first of all, let's
+let's crank that amount of points up to 4,000. There we go. So it's nice and busy. And now I'm going to
+go to transform view. What would happen if we put this on four? Let's just give it a minute to reset.
+As you can see, we're now kind of like inside of this cloud and you can decide how many points are
+on the screen and how far away they go and everything like that with using these parameters here.
+But as you can see, we get a really different kind of look. Oops, I used the orbit control there. Let's reset.
+Ah, okay. So this is why I wasn't seeing it. I was zoomed out with the mouse wheel. So now I pressed reset
+on the orbit control. So I'm like at the default point. As you can see, we get this really,
+really different kind of look now. We probably don't need that many points when we're that close.
+As you can see, the post process and stuff, it's really coming together and it still works. It's a
+really dynamic patch. We could put the transform view on scale 10 and we get a completely different
+kind of look. So let's put this back on one. I'm just going to zoom out a little bit. And instead of
+zooming out the whole time with the mouse wheel, I'm thinking, let's just use the transform view up and
+put this on, say, minus eight. Okay. There's something I forgot to do early in. So you should
+probably do that later on. There we go. So now I'm more like at the position I'd like to be. Let's put
+it on minus five. Great. Now I can see the cluster in the middle. And one last thing I want to show you,
+because you should just go really wild of these ops and just experiment is, if we put this on divide,
+what's going to happen? Well, division is the opposite of multiplication. So instead of this explosion
+happening from a center point and going outwards, it will start outwards and then it will kind of zoom
+in. So this was a quick tutorial on how to create your own particle explosion, how to use the transform
+array ops and some very simple array math operations to get a lot of different looks. I hope this video
+has been educational and informative. I hope you've learned a lot of new things off this. If you've got
+any questions or comments, please feel free to leave them under the video below or to post them on the forums.
+Thanks for watching and I'll see you in the next video. Bye.

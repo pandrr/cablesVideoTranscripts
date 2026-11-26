@@ -1,0 +1,151 @@
+https://www.youtube.com/watch?v=0Xgj7wKl7Ko
+hello this is Alex from cables.gl I want to show you the texture projection
+operator it is one of my favorites super easy to use but actually quite
+powerful and we're gonna look at some examples maybe look at some kind of
+real-world use cases and of course the funky effects we can do with them and
+we're gonna probably use this scene because it's quite simple for learning
+the operator but let's look at the examples and this one you remember from
+the shadows tutorial if you haven't seen that check it out it's pretty cool but we
+didn't get into the into this caustics effect that I'm doing with the texture
+projection and what I'm doing is all of the shapes in the scene the cube the
+cone they're all getting the same texture which is kind of this wavy chromatic
+aberrated a cell texture and we're getting these interesting effects in the
+background that kind of look like sunlight going through the waves above in the
+pool but really it's just the texture projection and you really just have to
+think of the texture projection just like a real projector right like you plug in a
+video source into a projector like a beamer and then point it at something and
+it will just wrap around the 3d object that you're projecting onto or like a flat
+wall or something like that and that's basically the whole gist of it
+right you don't have to worry about UVs of your model which I think is the the
+real beauty of it so in this example I wanted to have an image in this TV which
+is another scene that I'm feeding into the render to texture and then it goes into
+this image compose but I didn't really want to mess around with the compositing the
+texture the correct way to then put onto the material and all that stuff I just
+wanted to project it from some angle onto the screen and then end up with a pretty
+decent result right it's not bad and actually then I thought maybe I'll add some
+glow and I use texture projection for that too for this blur that is kind of
+simulating the screen glowing then we're going to look at a little bit more
+advanced stuff that the operator allows us to do which is kind of multi material
+multi object projection with the same texture and then this unconnected point
+material stuff that we can also use this operator for but let's go back to this one
+and in this simple scene I'll probably just publish it and you can follow along we
+have a static texture and I'm animating this thing falling over the objects with
+just texture projection operator and a timer because we have some position X and
+position Y offsets that we can do on our texture alright so let's go through all
+these things when you put it down you first have to make sure it's part of your
+material right so it's we have a phone material here so if we disconnect our
+texture projection we just have this phone material with some shadow applied as well
+but if I connect it here see it's not gonna work right so it usually is best
+practice to split up your scene into different materials and then use a
+texture projection per material you can stack texture projections which is pretty
+nice so for example let's try it let's see if we can break this thing kind of doubt it so
+if we plug this into here as well and then change the size see now we have two
+texture projections with one static texture with the with these polka dots and then
+this animated one over here but we don't really need that right now but definitely play around with that
+then we have the blend mode so right now it's multiply if we do normal it kind of
+changes and then add it's similar to Photoshop of course you can layer different texture projections
+or your materials with these blend modes and in texture projection operator we also have this control
+then we have this target and we're gonna cover this a little bit later but for now when you're dealing
+with something like an image projected over a 3d model just use color if you want to use point clouds
+and point size we'll cover that so either skip to that chapter right now or wait a little bit then we have
+the amount of course which is how much are we applying to the scene of this with this texture projection then we have use texture alpha and if our texture has an alpha in it then we can also
+make that part of the projection which is pretty cool and you can um is similar to maybe if you're familiar with color area we have these things called like discard or opacity it's kind of in the same ballpark where you're using the alpha of your texture to
+how much are we applying to the scene of this um with this texture projection then we have used texture alpha and if our texture has an alpha in it then we can also make that part of the projection which is pretty cool and you can um is similar to maybe if you're familiar with color area we have these things called like discard or opacity it's kind of in the same ballpark where you're using the alpha of your texture to
+also hide parts of your mesh with projection so that's pretty cool then we have of course this offset of the texture and then the most interesting thing is this rotation section of the parameters and that is how are we projecting this texture onto our scene so again just think of it as a real world projector beamer and how are we shooting that texture over our meshes this gets
+really cool because you get these interesting distortions uh that i think are super fun to play around with highly recommended and that's really how we're getting those effects with um kind of fake caustics falling on the sides of the cube uh and then on the bottom here it's less distorted so you can get really interesting uh texture projection effects this way and then we have the mapping and this is the direction that
+we're gonna work with right so we're gonna work with right so we're gonna work with right so you can kind of ignore the rotation for now and just think of like from where are we projecting it so if i make these uh rotations all zero zero to make it a little bit easier for us to understand
+we are projecting from the top and the z axis and the way our scene is set up this will affect how
+the texture is distorted along our meshes so if we switch to maybe xz then we get this uh more
+projected from the top and then and then sliding uh along the sides of the cube and and all that
+stuff differently than we would with the yz projection and then we also have xy uh and yeah
+you get completely different effects how this texture spread over your shapes so for example if
+we change this rectangle uh angle the floor we will see how the texture projection is distorted now yeah
+so you can kind of imagine that the the plane is grabbing parts of this texture because it's
+almost like aligned to the projection so now we're getting this really really stretchy um uh texture
+over our model and then when we start to angle the rectangle towards the projection then we're
+getting a less distorted shape um yeah so it's pretty wild and then you start to get into the projection
+angles and it gets super funky but um you just have to play around with it and find what matches the
+the effect you're going for the best so um what else can we do then we have this discard and world space
+settings which are quite interesting and usually i just leave it on repeat on on my image compose
+and on the texture projection i don't use this card but uh sometimes it's very handy where you don't want to
+to repeat the texture all over your um scene and you just want to have it in the center so for
+example if i fix what i did here we will understand this a little bit better and like
+so so now you can see that we're no longer repeating this section all over all over the scene we just have
+this um single bit of it that um the rest of it is discarded and uh it's square and it can be moved
+around so before i start rambling even longer what it allows us to do is to maybe stack more than one
+projection but uh not cover the entire scene now right so when we uncheck this card we're covering
+the whole scene and then when we do want to discard the edges of this texture projection then we're just
+working with the square projection that we can then position in the correct space and you know if you're
+not just doing this for funky cool glitch effects like i am here you can actually use it very precisely to
+maybe fix a shadow or uh add a little text on like a billboard or something like that it's really really
+handy in some cases not to uh constantly repeat your texture all over the place but um what i want to
+show you is if we don't discard but we do clamp our uh texture in the image compose we will then
+um stop kind of repeating the the texture effect which is our uh dots here in the texture but um the
+sides will still be filled with the sides of the texture if that makes sense right so if i maybe adjust
+um this a little bit you'll see how it starts to uh warp on the sides see so we're not repeating the
+texture anymore we're now just um uh clamping it in our image compose so maybe you would need to use this
+but watch out for um repeat and discard with your texture projections all right rambly part of the
+tutorial over let's move on to um maybe taking a look at this again because i'm pretty proud of it so
+what we did here was have a texture projection on a specific part of the model so i i have this tv
+i'll link it in the description and it was all one mesh and i just wanted to make it easy for myself
+because i didn't want to deal with uvs and i wanted to project it just on the screen model so what i did was
+break out the the screen of this tv right so right now i hit it so we don't see it anymore and then i gave
+it a uh its own material and then gave it a texture projection so we can uh ignore uvs and just um
+use texture projection to correctly position our texture on our model so if i offset it you see how
+um i'm controlling the the position with the texture really really nice um and that reminds me
+there's one more mapping mode which is something you might be familiar with from other modeling applications
+which is triplanar and especially if you're well it doesn't look great here but if you're familiar with
+it in other 3d applications it's usually like the super easy quick way to make a repeating texture over a
+model that you don't have uvs for for example or you just want to like project uh some sort of wall
+texture on uh on the walls of a house or something and it's maybe uh doesn't need to be super precise maybe
+some dirt or mud or something like that it's a very handy projection um mapping method that i recommend
+using for cool repeating textures and then we have screen which will use the screen um
+angle i guess the the camera angle to project your texture onto your scene and this has some um specific
+uses maybe you want to project some text that is straight pointing straight at the camera um and you
+don't want to uh warped all over your 3d model it could come come in handy that you're going to need the
+screen um mapping method with the texture projection or you can even get into really interesting effects with
+like feedback feedback from your camera back into the texture projection or maybe faking some sort of um
+uh shadows or uh i don't know like gritty effects you might see in video games or something that just
+happened in the screen mapping uh space so we have this screen mapping method where we can
+just uh have it flat over your screen but also on your scene so um these mapping methods definitely play
+around with them and uh show us what you make with it all right so let's look at the last bit um that we
+don't cover which is the point material and also um splitting your scene into different materials like i
+kind of did with that with that tv but um in this example i didn't like how the cylinder um looked
+when it was just using the same projection method right so what you can do is
+just give it another material give it another texture projection and then use the same texture
+to then uh adjust your scene to get maybe like a more um specific effect you're going for so i can
+change my um settings just for the cylinder and uh kind of maybe make the scene a little bit more
+interesting than i would if the mapping method or the the the way the models are created they don't
+exactly allow us to to stack them correctly together with the same texture projection and the same
+material just remember it doesn't matter break it out into a new material and add another texture
+projection alrighty so let's get into the funky bit which is the point material settings that you can also do
+with the texture projection so if you're familiar with point material you know that we have
+some inputs here for the point size and uh color and things like that right in this point material operator
+but sometimes it can get a little bit complicated to understand how your um point cloud is mapped texture
+wise and you kind of need to to know that when you're when you're using these inputs on the point material but
+since i'm lazy and i don't want to do that i just want to use my point cloud as kind of a
+source for the texture projection and then change also the point size
+and the color of my point cloud so it's pretty handy and let's look at this in detail so i have these
+waveform gradients going right and then one of these texture projections is my point size there it is and
+then the second one is my color so again we're stacking texture projections super easy don't be scared to
+do that it's great um let's maybe
+make the point material size a lot smaller so we can see this effect a little bit better
+all right so what's going on here so i put down the texture projection and instead of color i set it
+to point size and usually you will see that you have this amount slider from zero to one but that
+doesn't mean you can go into extremes and remember this with pretty much any operator if you think like
+yeah okay this range is not exactly what i want or i want to go into negatives you can always just click
+on this parameter or even break it out from the operator itself and then add a number operator
+and then adjust it into more extreme values right so you can really get funky effects try this out with
+with your favorite operators but in this particular case since we're changing the strength of the texture
+on to the point size of the point material we kind of have to do that anyway so either just type in
+a really big number in here like 10 if you don't see anything happening uh or plug in another operator to affect
+this range and then your texture will uh the luma i guess values the white and black values will affect the
+small and the big uh point size effect of your point cloud and then of course we have the
+color on top so we got this easy easy point cloud effect uh without having to bother with uh texture
+coordinates and making sure um we're projecting it in the right way when we're connecting it to the inputs
+of the point material all right so um hope you enjoyed that i really want you to try this out i think it's
+super easy especially if you want you don't want to bother with uvs like me and uh just project some cool
+images onto some 3d models you have or you know do some really funky cool effects with distortion that you can
+get with angling and uh changing the size of the texture projection um but yeah uh definitely comment
+below if you like this post some awesome uh projects you've done with this operator and i don't know let's
+make this operator even better in the future right we just gotta use it thank you bye

@@ -1,0 +1,289 @@
+https://www.youtube.com/watch?v=mQN8VtVOltQ
+Hi there, and welcome to another video of Made with Cables. My name is Mark, my handle on the forums is Andro, and today I'm going to be giving you an advanced tutorial with the texture to color array op.
+I'm going to be showing you how to use this together with the mesh instance op, the array ops, and some texture generators inside the cables to create some really cool generative stuff, but ultimately it might end up looking like Minecraft.
+So, without further ado, let's get started. First of all, I'm going to make a main loop. I'm going to scroll in, and then I'm going to create a sequence op.
+So, first of all, I want to create a texture to use later on to displace these mesh instancing things that we have.
+So, I'm going to make an image composed op, and then I'm going to create a FBM op, and that gives me this texture here.
+So, first of all, I'm going to turn off use viewport size, and then I'm going to type in 512 by 512, and here we can see the texture size change to reflect this.
+So, I now need a kind of preview rectangle here. So, I'm going to go to main loop, and then I'm going to grab a depth test op, more on that later.
+Just disable depth testing right here, and then I'm going to pull this down. I'm going to make a basic material new, make a bit of space.
+And then I'm going to grab a transform op, so I can move the rectangle, and then I'm going to create a rectangle.
+I'm going pretty fast today, so if you can't keep up, just pause the video once in a while.
+So, I'm going to go here, and I'm going to do this.
+So, now I have this rectangle. I grab the texture out, and I plug this into texture.
+So, I'm going to grab the transform, I'm going to move this over here, and I'm just going to scale this down a little bit.
+This is purely just so I can see what's happening real time later on as I'm working on stuff.
+Great. So, let's create a mesh instancer chain.
+So, I'm going to make an orbit control, and then I'm going to plug this into a matcap material new.
+By the way, there's plenty of tutorials covering all these separate concepts.
+So, if you're not keeping up with this, either just watch or just try those out first.
+Mesh instancer. So, the mesh instancer needs a mesh.
+So, I go here, and I grab a trigger once op, because I only want to do this once.
+I'm then going to grab a cube, and I'm going to grab the geometry output from here, and I'll plug that there.
+Okay. So, we have a cube. The beginning of all great things.
+Now, in between, I'm going to add a transform view, because I know that there's going to be a lot of cubes on the screen later.
+So, this, like, kind of changes your origin. Make sure you put it before the orbit controls.
+So, I'm going to pull position C back a lot, and I'm going to pull position Y down a bit, and the cube goes down now.
+Okay. Great. So, this is our mesh instancing chain setup.
+So, now I'm going to go over here, and I'm going to grab a trigger once op.
+And what I'm going to do is, I'm going to create a rectangle, and I'm going to, like, give that rectangle a lot of subdivision vertices,
+and I'm going to use those vertices to give the cubes a positional array.
+So, if that doesn't make sense, don't worry. It will in a minute.
+So, I'm going to grab the rectangle op.
+I'm going to put the width on 100, height on 100, and we don't see it because trigger once is only triggering it once.
+I'm going to put the amount of columns on 100, and the amount of rows on 100.
+Okay. So, now I'm going to pull this down, and I'm going to grab the geometry as a point stop.
+Get the vertices of a geometry as an array 3x, like a point set.
+So, I'm going to click here, and then we plug this into there.
+And as you can see, we've now got this massive array there, 30,603 points.
+So, now I'm going to unpack it. Array unpack 3.
+And then, I'm going to use an array unpack, sorry, array pack 3 to put it back together again.
+So, it's just so I can get the array as it originally was.
+So, we have this x, y, z points, and they get split up here, x, y, z.
+It needs a trigger, so I'm going to grab it from here.
+I'm going to press F for flow mode, which shows we shouldn't grab it from here, because that won't work.
+Okay. I'm going to pull this down.
+I'm going to grab this. I'm going to plug it into positions.
+What is happening? The whole screen's gone grey.
+Well, I'm going to make a lot of mistakes in this tutorial just to show you how to figure out what's going on.
+So, basically, we've got all these cubes being drawn from top to bottom in front of us.
+So, let's put this width, height, and length in 0.9.
+Now, we can see something that's happening.
+So, rectangle has this axis mode, so I'm going to put it on x, c, and follow.
+So, x, y, like this, x, c, like that.
+So, there we go. That's basically what's happening.
+So, right now, we want to get this texture, and we want to use it to change the height of all of these points here.
+So, how are we going to do that? Well, it's a lot easier than you might think.
+So, I'm going to go over here.
+I'm going to grab an image compose.
+Let's move up a little bit.
+And I'm going to grab the texture to color array op. Extract colors from a texture.
+This is the op that most of this is about.
+And what we're going to do now is we're going to get this texture out, and we're going to plug it into that.
+And, as you can see, we now have this really huge array.
+So, this is red, green, blue, alpha.
+This is grayscale, so we only are interested in, like, the red, which is just basically the black and white for us.
+So, I'm going to get this array out, and I'm going to grab an array unpack for.
+This is going to unpack this entire one array into RGB alpha values or XYZ.
+So, I'm going to go here, and then I'm going to grab array multiply op.
+Multiply every number in the array by one number.
+So, I've got to get this to work together with this.
+And this is why you might see why I've unpacked this stuff right now.
+So, I'm going to go here, and I'm going to make an array math op.
+Because I want to add this array to this one.
+But this is going to go wrong, and I'll show you why.
+So, I'll plug this in.
+Array math gives a warning, arrays do not have the same length.
+So, if we click here on array unpack 4, we can see the length of it here.
+And if we click here, we have a completely different length.
+So, let's just think about this for a minute.
+The texture to color array is receiving a bunch of pixels.
+And in this case, it's getting 512 by 512.
+And by the way, my bad.
+This has to be off with used viewport size.
+And I'm also going to put this on the same number as this one here.
+So, we basically need to get these arrays to have the same length.
+So, a pixel has x and y components.
+And that's how we get an array.
+An array is like a 2D bunch of pixels, basically.
+And the rectangle is the same.
+It also has x, y, pixels, vertices.
+Let's just think of it in a very abstract way.
+So, we need to get them to match up.
+So, it's actually way simpler than you think.
+So, I'm going to drag from the width out.
+I'm going to get a value.
+This is the width.
+And I'm going to plug that into the width here.
+I'm going to pull this out from height.
+Sorry.
+And then I'm going to create a value up.
+So, it's value going into the height.
+I'm going to do that here.
+So, this is pretty much the same as the amount of columns and rows.
+So, I'm going to plug this in.
+And it's still not going to work.
+I'll show you why.
+Number of rows.
+And if we now click here.
+There's the length.
+Sorry.
+Array unpack.
+So, there's that length.
+We go here.
+That length is kind of similar.
+But it's not the same.
+So, let's put this on 100.
+This is 100.
+Because too much will choke your computer.
+And what's going on.
+There's just a difference of 1.
+Because we're working with pixels.
+And with vertices.
+And they're not exactly the same kind of data.
+So, without going too deep into it.
+We just add a subtract op here.
+So, we get this number.
+Which is 100.
+And we subtract 1 from it.
+And it becomes 99.
+We look at the height.
+We also add a subtract op.
+And wow.
+What happened there?
+But look.
+The.
+Error is gone.
+The arrays now have the same length.
+So, let's go to array multiply.
+And take a quick look at what's happening.
+So, there's something really weird going on.
+They seem to explode.
+Right?
+So, I think I know what's happening.
+If we go to image compose.
+We need to make sure.
+That HDR is on.
+High dynamic range.
+And I'll explain why.
+So, these pixels.
+Are normally having values between 0 and 255.
+Which is just why exactly.
+When we put multiply on 1.
+These cubes are moving.
+Up and down.
+By 255 steps.
+There's no floating point accuracy.
+So, if we go to image compose.
+And you turn on HDR.
+And I'll do that here as well.
+Now you see.
+There's not so much difference.
+They're only moving between 0 and 1.
+Which is pretty much what we want.
+So, now I'm going to use the array multiply.
+And as you can see.
+We're now using this texture.
+To change.
+What we see there.
+Let's use transform view.
+Go back a little bit more.
+Great.
+So, how can we just do some other cool stuff with this?
+Well, now we've got a very awesome basic pipeline setup.
+So, I'm going to make a timer 2 up.
+And I'm going to plug that into here.
+And then I'm going to plug it into animation.
+And as you can now see.
+This is slowly animating.
+And that's changing what's happening here.
+So, basically each one of these pixels.
+Changes the height of each of those squares.
+So, let's get the cube.
+And let's just put it back on 1, 1 and 1.
+So, how can we get like instant Minecraft with this?
+Well, these are floating point numbers, right?
+So, if I would now grab the array.
+As you can see it's right there.
+And I'm going to grab the array seal up.
+And what this does is.
+It makes all of those floating point numbers into whole numbers.
+Like 0, 1, 2, 3, 4 and 5.
+So, let me turn off the timer.
+As you can see.
+We've kind of got some Minecraft world going on there.
+So, I'm only going to give a little demonstration now.
+I'm going to go here.
+And I'm going to grab the array smooth step up.
+And it allows me to do this kind of interpolation between two values.
+So, I'm going to add it.
+And now I'm going to crank up the min.
+And I'm going to lower the max.
+And as you can see.
+I can now use this to get a lot of different looks out of the terrain.
+And I'll let you play with this as you see fit.
+I'm going to put this in 0.8, 0.1.
+And then I'm going to turn the array multiply down a little bit.
+And as you can see.
+We've now got something very similar to a Minecraft terrain.
+And if you want to get rid of those holes.
+You just go to your cube.
+And put the length on 2.
+And then you shouldn't have any holes anymore.
+So, that's one of the tricks that we can do.
+So, let's get rid of array seal.
+So, we go back to these like floating point numbers.
+And now we can see a little bit better what's happening.
+So, if we put the timer back on.
+As you can see now by using the array smooth step.
+We can get a lot of different looks.
+So, I'm going to put the cube back on 1, 1, 1 for now.
+Just so we can follow what's happening.
+I'm going to put array smooth step on 0.1, 0.9.
+Okay.
+So, what else could we do now?
+Well, this is a texture.
+And we've got a lot of texture ops inside the cables.
+So, I'm going to pull this out.
+And I'm going to grab the humble waveform gradient.
+So, this is why we built this rectangle here for previews.
+We can now see immediately what's happening there.
+So, I'm going to put the frequency on 1.
+And I'm going to turn the power factor up.
+So, we get this tight line.
+I'm now going to create another timer 2 by copying it.
+I'm going to plug this timer 2 into offset.
+Going pretty fast.
+Slow the timer down.
+So, as you can see, what's happening here now is happening there.
+So, we could now go to waveform gradient and say blend mode multiply.
+And now, we get this really cool sine wave texture combined with the FBM noise that we had.
+So, hopefully your imagination is popping a little bit now.
+And you're thinking, wow, I have all of these texture ops inside the cables.
+And I can do a lot of really cool stuff with this.
+So, this is one thing that we can do now.
+So, let me just disconnect this.
+Mesh Instancer also has a scale input over here.
+The scale array.
+So, if we would now get the multiply, crank this up and say get this and plug it into the scale array.
+Now, what happens is the higher a cube is, the bigger it becomes.
+And the lower a cube is, the smaller it becomes.
+And as you can see, we get this really nice cool look with this now.
+So, if I want to change this again, I can just go in between and add an array and multiply up.
+So, say I want the scale to be bigger.
+And I can crank this up.
+And this is just to show you how much control we can get over this now.
+So, you might think, okay, that's pretty nice.
+Well, everything is only going up and down.
+Right?
+From 0 to 1.
+So, how could we change that otherwise?
+Well, if we go here and we add an array, subtract, and we put it on 0.5, we now have our values going from minus 0.5 to 0.5.
+And then when we use multiply, they're going to go more up and down from each other.
+So, I'm not saying this is exactly what you want, but I'm just trying to show you a couple of the basic operations that you can do.
+So, let's get rid of that.
+So, I think this is already more than enough for people to play around with and to experiment with.
+As I said, you can go absolutely crazy over here by adding your own texture patterns here.
+Look, I can't even stop for myself.
+It's crazy.
+I love this stuff so much since I discovered that.
+So, I'm going to grab Pixel Noise 2.
+We see this.
+I'm going to put it on multiply.
+And as you can see, we now get this effect here.
+I can now grab a timer too.
+And I can plug this into Z.
+And as you can see, this is this effect here.
+So, I've really got to stop because this is a tutorial, not me playing around.
+But this is me just trying to show you how you can do some really amazing stuff with this.
+You can go absolutely crazy with it.
+But this is just like already a pretty advanced tutorial.
+And I hope you're just as excited as I am to dive into this kind of patch and just start to pull it apart.
+And then just try and figure out what it is you can do to make your own cool creative patches.
+So, that's the end of this video.
+This was the introduction to the texture, to color array up, combined with a lot of other advanced concepts inside of cables.
+I'll be doing a second video in the near future showing how we can use this to create even more cool, interesting shapes and animations.
+But I already think this is enough for one day.
+So, I hope this video has been educational and informative.
+If you've got any questions or comments, please feel free to leave them under the video below or to post them on the forum.
+Thanks for watching and have a good one. Bye!

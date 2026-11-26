@@ -1,0 +1,45 @@
+https://www.youtube.com/watch?v=SuhEH3TQvT4
+Hi there, and welcome to another video of coding with cables. My name is Mark. My handle on the
+forums is Andrew. And today, I'll be giving you an introduction with how to get started with
+creating your own basic string ops inside of cables. So without further ado, let's get started.
+I'm going to click on the patch, press escape. And I'm going to call my op, my string op,
+I'm going to click this button, create ops dot user dot and draw my string op. Editor pops up. I'm
+going to press escape, escape. Now I'm going to type in my string op. This now adds the op to the
+patch. So there's nothing there yet. So I click the op and I press E to get the editor and get rid of
+this. So now I'm going to make an input port. I'm going to call it const in str. It's my
+short end version for in string. So now I'm going to make the ports op dot in string. I'm going to give
+the port a name. I'm going to call it string in. Okay, so save it. And now I get this. And as you
+can see, I have a string import where I can say I'm going to input a string. So what I want to do is I
+want to get the string in and I want it to come out of a string output port here. Really nice and easy. So I'm
+going to say const out str equals op dot out string. I'm then going to call this string out. Press control S. So we have a string out but by default it's this. It's nothing. So we need to set something up here. So I'm going to make a
+function. I'm going to call it update. You could call this anything you want. And now I'm going to say out str dot set. And then what I need to do is I need to get the data from this
+port. So I'm going to say in str dot get. Okay, I'm going to press control S. Let's put a bit of space here. So it's easier for you guys to see.
+Control S. But nothing's happening. Well, we need to do this when something changes with this port. So I'm going to go down here. I'm going to say in str dot
+dot on change equals update. So this means that when anything changes on this port call update. As you can see, we now get this. So if I go here and make any changes,
+then it's updated down. So that's like the basic flow. So this gets function here gets the data from that port. And you can use this
+with strings and where flows and integers and balls. It's a very common thing. You'll see it more in the videos. So that's the simplest
+thing. Let's show something else. So we can use the built in editor inside of cables to edit strings. So I'm going to say
+give me a bit of space const. I'm going to call it in editor. It's my variable name for the port. I'm going to say
+op dot in string editor. And I'm going to call the port editor. Press control S. And now if you look here on
+the op, I get this edit button here. So I'm going to go in there and type in cable cables is the bomb. I'm going to go
+here and I'm going to say save. So what I want to do is I just basically want to, as you can see, I've
+clicked these tabs. I want to add the string here to the string from the editor. Really nice and simple. So
+let's just show you something else you can do here. So I'm going to say
+var str zero equals in str dot get. And then I'm going to say var str one equals in editor dot get.
+So basically I'm saying create a variable called str zero and get the data from this port,
+which is a string, make another variable called str one, and I get the string from the editor. So now I
+can just first of all replace this with str zero. Watch. And as you can see, this port here then goes down
+here. So now we want to join them together, right? So nice and easy. I'm just going to say str zero plus str one. I just
+wanted to do this to show you how to create variables and then get the data you could have done in str dot get plus in
+editor dot get. But when you work on a lot of code, this can become a long and tedious to type. So I just
+wanted to have some shorthand variable names. So now I'm going to press control s. And we're going to look here.
+Nothing's happened. Well, why is this? Well, we also need to just say that when the in editor changes, that it also
+updates. So I'm also going to say here in editor dot on change equals update control s. And as you can now see, if I
+click the inspect button, I get this. And this can be confusing to some people at the beginning. So I'm
+going to explain it in the simplest way possible. First of all, let's add a space there. So I go here and I add a space. And as you can see,
+it's now good. So what we're saying here is in str on change update is the same as in editor on change
+update. So you could add five or six ports here with on change and they'd all call update. That's the easiest way to
+explain it without going into JavaScript and programming. This will just like make sense at one
+point. So this was the basics of how to create your own string op inside the cables. I hope this video has been
+educational and informative. If you've got any questions or comments, please feel free to leave them under the
+video below or to post them on the forums. Thanks for watching and have a good one. Bye.

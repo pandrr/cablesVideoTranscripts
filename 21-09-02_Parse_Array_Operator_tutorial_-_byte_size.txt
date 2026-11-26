@@ -1,0 +1,68 @@
+https://www.youtube.com/watch?v=Y3qX41TB0bg
+hi this is Alex from cables.gl let's take a look at parse array. parse array is an
+operator that uses a string which for example is a bunch of words or a bunch
+of numbers and then separates them or sees how they're separate and then
+creates an array out of this let's select this operator and take a look at
+the inputs it has a text input which is a string input here but also it has a
+button and we'll get to that later and then it has a separator which is a comma
+okay and then it has some checkboxes we'll get to those later so let's look at
+this edit button and click it and we'll see a string has been written for us
+already one comma two comma three all right let's minimize this and then
+according to the separator the comma we should be getting an array and if we use
+this inspection magnifying glass icon here we can see our array is one two and
+three interesting and if we use our spreadsheet view
+we'll see that index zero is one index one is two and index two is three
+okay that's interesting so if we go back to our string here
+and we add for example dog and then save it we'll get an error but
+why well that's because we actually have one of these checkboxes ticked which is
+numbers if we untick this the error goes away
+and if we look over at our magnifying glass again
+we'll see that our array is now a bunch of strings
+which are words one two and dog interesting all right that's cool
+well what does trim do trim will erase spaces so for example if you can see
+here we have a space before dog so if we untick this and take a look at the
+magnifying glass again we'll see our space appears in our
+string now okay that's pretty much it but then uh
+there's also a parsed trigger and the way this will work is whenever this
+array is created from the string the operator
+will trigger another operator so for example
+if we give it a sequence here just for example's sake we should be
+able to see that a trigger is sent once we change this
+array by for example um changing the separator to
+a period okay you might have seen that it flashed
+but also this will uh allow us to cover another thing
+here um the separator is now a period but
+if we look over at our string it doesn't have any periods
+our separator is a comma but we've incorrectly for now given the separator
+as a period so if we inspect this array we'll see that it's now just a single
+entry because it just doesn't know how to separate the string so
+the array has one entry of length one and it's our entire string
+if we give it again a comma and i'll minimize this if we give it
+again a comma we'll see that our trigger has been sent and also the
+length has changed and also our array is created
+correctly and there's our space again but we'll
+get rid of it by pressing trim nice i hope that helps we can also look at
+the example file actually let's load it up
+all right there's a bunch of stuff going on here but
+at the center of the show is of course parse array
+let's look at it let's edit it with the string editor
+we'll see our default string one two three okay and then this array goes
+into another operator here array to string
+okay so it takes this uh operator will take the string and then actually
+add a separator between the different array entries so our array contains
+the fields one two three
+and then we'll take these uh indexes or these values i'm sorry
+and add a plus in between and that's how
+in the output here on the on our canvas we'll see this nice neat one plus two plus three so for
+example if we change this to uh
+f now we have an f or we change it to a zero oh now we have a zero and it doesn't make sense
+oh no that's not a plus oh that's not a plus there it is
+okay we kind of understand that and then here
+the operator is summing up all of our um array entries so our array entries are one two three and it
+sums the sums sums them up or adds them up and we get a six and then we convert this into a string
+and then we compose a string out of this um we should cover this in another tutorial but
+it's also pretty simple it just takes uh string a here's a dollar sign a and then a string b
+and then another one um and it just kind of like
+combines them okay so if we put a zero that's wrong but uh if we put a
+equal sign then this string looks right and it goes into our text mesh and uh that's how this
+beautiful mathematical equation is constructed out of strings that's it

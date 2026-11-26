@@ -1,0 +1,592 @@
+https://www.youtube.com/watch?v=R9-D4SxBd90
+Hello everyone to the last Cables.jl monthly meetup of 2023.
+For today we have two participants showing us how to win a fast demo competition at a
+demo party in Portugal.
+And also we will hear something about spatial audio by Topa and after that the both of us
+will show you a bit from the boiler room, so what we have for the next releases.
+Questions are fine during all the talks, so feel free to ask if you don't want to unmute
+your microphone, just feel free to ask in the Meetup channel and I will try to relay the
+questions.
+So if everyone's ready, especially Anticore, then we look into how to win a fast compo with
+Cables.jl by Anticore.
+Hey guys, small correction, this demo did not win a fast compo, it participated in the normal
+demo competition.
+Oh yeah.
+I'm sorry.
+No, that's okay.
+So this was a demo that I did for the Inertia demo party, which is the only demo party in Portugal.
+It was from one to three December.
+And yeah, about one week before the party, we had several plans of things to do.
+We had a big demo we were working on.
+So I hosted a seminar on cables there and we also were preparing a big live performance using
+cables as well.
+And so since we had all this stuff, I decided to ditch the big demo and instead work on this.
+So this is Gineo, which is my teammate, did the music.
+It's a trance track that references a local politician here in Gaia.
+And it's funny how much to the person.
+So let's watch.
+It takes a while to load.
+Sorry.
+It takes a while to load.
+Sorry.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+you.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+I'm going to show you the patch now.
+Maybe because it's a fast demo,
+and I talked about fast demo compo.
+How long did you take for this?
+Yeah.
+So this is not the type of fast demos
+we had in previous parties,
+in previous Inertia.
+You guys also did a fast demo competition
+which was in 24 hours.
+This is more fast demo in the sense that
+it was like in the wake of the party
+we started working on this.
+And it actually reuses some stuff
+that we had worked before.
+For example,
+in the same party we had a live performance
+where we did this flyer
+for the performance,
+and then we used that in the demo.
+And that was just a way to do it,
+do the demo quick,
+and also do this mix
+that we're trying to do
+between more digital art stuff
+and more demo scene stuff
+in the Inertia demo party.
+But yeah.
+So this demo, in terms of patch,
+it uses the demo template created
+by Pandor, I think.
+This has some small adaptations
+that we did for our workflow.
+as well.
+But put very simply,
+it has a bunch of assets
+in this sub-patch here.
+This is something we learned
+with other demos
+that it's better to isolate
+every asset
+in this way
+with variables and with triggers
+so you don't reuse them
+and you don't download
+the same stuff
+twice.
+Maybe there's a better way
+to do this,
+but this is the solution
+we found
+to do it quickly.
+Also in some of these,
+sometimes we want to mess
+with just the geometry
+so we will also export
+just geometry.
+that it has the same sub-patches
+that the demo template has.
+It has the music subsection.
+We add this config and sidebar
+that we have already removed
+in the final version.
+Then it loads your assets
+and we're going here
+into the more important
+which is the scenes
+and the post-processing.
+Within this scenes sub-patch,
+there are several sub-patches
+that each in the end
+renders a texture
+and saves it into a variable.
+So I'm going to open
+the first sub-patch here
+and in the end
+of whatever it does,
+it's going to end up
+rendering a texture
+into this variable syntax
+which then is used
+in the post-processing
+post-processing sub-patch.
+And then we add a bunch
+of stuff on top of it
+to try and make it look pretty.
+And yeah.
+So I will just activate here
+dev mode.
+So I have the player control.
+Okay.
+So now we can go scene by scene
+and I'll talk a bit about it.
+let me just mute this.
+Yeah.
+So the soundtrack and the demo
+has a lot of references
+to this character that we're referring,
+but also to just Portuguese culture in general.
+For example, for the name of our group,
+we have decided to call it fast compo productions to refer to the speed that we made this demo.
+But it is also the acronym for the port of football club.
+football club.
+So our logo is just the football club logo with an Amiga ball instead.
+Also, this demo tries to incorporate a bit of the white 2K aesthetic.
+And so this was really helpful that C flap added iridescence to cables because it's a lot in that style.
+I'll show here a bit of my Pinterest on the subject.
+Can you guys see this window?
+No.
+No.
+Firefox window?
+No.
+Maybe I'm streaming.
+Yeah.
+Sorry.
+I'll just copy here one image.
+Let me see.
+I'm sure this is going to work.
+Okay.
+Yeah.
+For example, here, a lot of objects that use extreme iridescence.
+And also, let me see here, a lot of boxes with stuff.
+And so this was the design inspiration because of time we didn't go as deep into it.
+So it looks a bit also like, I don't know, 80s advertisement or something.
+But that was what we were going for.
+And that's why some things look rainbowy.
+Yeah.
+So here, I'll show the sub patch for this scene.
+It's just a simple image composition here.
+But in most of these scenes, we have, we are building here a texture that is just like an hologram plasma, an holographic plasma, or whatever you want to call it.
+And that is just superimposed in everything, used in models, whatever, just to try and make it extra shiny.
+And this just comes from an already holographic texture that gets manipulated with vibrance and pixel displacement and stuff.
+I can show you the original.
+It's just a simple texture like this.
+And then we mess it up in different ways just to create that chain.
+Yeah.
+So a lot of the scenes use the same elements in the background.
+You can see here, it's just a change of color in the background.
+I'll pass to this scene here.
+This is a scene that was also used in the flyer.
+This sub patch is blue because at some point I was using a color code, but then I just gave up and it started turning into spaghetti.
+Okay.
+Okay.
+So here, this was one of the main elements of this demo was the creation of this sub patch here called render rectangle, which is used throughout the demo.
+And what it basically does is it renders.
+So it basically works as an image compose to whatever is below it.
+And it renders that within a rectangle in aspect ratio correct manner.
+So you can move this rectangle resize it and whatever is rendering there, it stays with the correct aspect ratio.
+And so we can see in the beginning of the scene, the box is actually growing and it renders whatever is within.
+And this is used almost all the scenes to try and achieve that Y2K little look.
+Also this blob is just a sphere with PBR material.
+Let me see if I can find it.
+Is this it?
+Yeah.
+And so pretty much in all scenes, the process was doing something with this rectangle frames, building it up.
+Building it up into a kind of nice design and then having an object that abuses iridescence.
+And then whatever came out of that was the scene.
+And this is just a sphere with the vertex displacement and with the iridescence turned all the way up.
+But I think the effect looks quite cool.
+Yeah.
+So here in this one, we started working with, which one is this?
+Give me a second.
+It's the Pew Pew.
+I started working with the particle system ops, not exploring it probably to its full potential here, but just pretty much creating geometries.
+And passing that into a, where is it?
+Geometry to texture.
+And then passing that to a particle system and just playing with the instances with displacement, displacement, instance, displacement maps and stuff.
+So here is just a sphere spawning particles and then some little displacement.
+And then also the instance texture colorize to do the lights effect.
+Also the text on top, it's a very form reference.
+It's we are back in Portuguese in the Northern dialect.
+Portuguese people will understand.
+Here we see again the rectangle frame.
+One cool thing about rectangle frame is we can add a little bit of transparency and that provides a cool effect.
+And also here in the foreground, the spine is also using the iridescence to a little bit of success.
+Pretty much it was just throwing values around until something looked cool.
+Here is another reference to the, to the guy.
+Ninja Gaia means Gaia's ninja, which is the town he comes from.
+And he claimed he trained as a ninja all his life.
+So this is a global screen dedicated to, to his ninja activities.
+It was also an attempt to do two effects here.
+One of them is a refraction.
+So this is done basically by, let me open it.
+It's patch.
+Sorry about all the loading there.
+Ninja.
+So the refraction, it was done basically by rendering the model twice.
+One of the times with the normal material.
+And then passing that render with a normal material as a displacement map.
+And it kind of looks like it's refracted.
+And then also messing with those colorful textures on top of it.
+To try and give it a little bit of that rainbow.
+And also here on the top, it's so here in the, let me see if I can find it here.
+Just give me a second.
+I thought you were using a cube map camera, but that would probably have killed it.
+I tried and I regretted it.
+Yeah.
+There's a lot of stuff that I also already had tried in previous demos, like the screen space reflection that's coming up.
+And I already had some ideas of what was performing or not.
+So I tried to avoid certain stuff.
+Oh yeah.
+So here, I want to talk a little bit about this top box here, which is the Ninja Gaia.
+So it takes the classic Ninja Gaia texture of the NES game, I think.
+And it just applies a dither.
+And then we mess with the dither threshold and it looks like a light flashing.
+And so that's, that's all that, that effect there is, even though it looks a little bit deeper than that.
+And then same here with the mountains, it's just a mountain texture scrolling with dither.
+Okay. So here is the scene of our credits.
+And this has a little bit of also the particles with a sphere just casting the particles.
+This is screen space and stuff.
+And the way the screen space works, it's probably also not the best way to do this.
+But it basically renders a scene twice.
+We renders once normally, you can see it here.
+Also, you can see here the iridescence being used in the text model.
+And then let me just see.
+Oh, it's all within here.
+Sorry.
+Yeah. So we render the floor normal map.
+So we can do a little bit of displacement in the reflection.
+We render the backwards or the flipped, basically we flip the camera to render the scene again, which is the objects we want to reflect.
+And then we compose that into the final image with a pixel displacement of a normal map of the ground, just to give it that little noise in the cracks there.
+But this is an example of something that was very heavy.
+And the reason why this only takes this bit off the screen, which is 1280 by 720 is because of performance problems.
+If we add this full screen, it will drop to like 40 FPS.
+So we just render this bit here.
+And then it gives us this space to do little background stuff.
+little background stuff.
+Okay, but yeah, I mean, it shouldn't be that slow.
+I wonder what's the problem.
+Probably I'm rendering stuff I don't need again.
+Like probably I don't need this this way.
+There's probably other ways to render less times or something.
+So the other demo Tokidoki, it also uses the screen space reflection and I did it full screen and it works okay.
+So I'm not sure.
+Maybe also the particles on top and the maybe the text models are a bit heavy.
+I'm not sure because all the text is actually 3D model because time.
+Yeah.
+Okay.
+So this scene is where we hear the ninja talk and it has a couple interesting stuff about it.
+Let me see.
+It's called Bosino, which is the name we gave the model.
+So basically this is a model of another project we worked on.
+Well, which was more like a professional professional project.
+And it adds the text to rather voice to phonemes animation in models.
+So you heard someone talking the model mouth moved with it.
+And so we had this pre-prepared model that had these blend shapes, but it had one permanent animation that we can control in cables with the GLTF scene time.
+And it just did this one phrase and it ended with this mouth open wide.
+And so basically we time sync whatever the audio sample is saying with this linear animation to try and match what the guy was saying with what the model was doing with his mouth.
+It's not perfect at all, but it adds to the funny effect in my opinion.
+And that was done with one of our custom ops.
+It's called Dope Sheet.
+And what this is, is basically a sync tracker.
+So it's a tool for synchronizing animations or basically manipulating values with time.
+So it takes two inputs.
+One is the time.
+It can be any numeric value.
+So you can pass it the timer.
+Or here we are using the current speed of the song, which is calculated with the timeline time.
+And it passes as the time input.
+And we also have a sheet, which is a text file.
+So this is a text based sync tracker with a syntax that we have created.
+And the way it basically works.
+I don't know how many people use the sync tracker before, but it's just basically.
+Okay.
+Sorry about this.
+Can you see nicely?
+Yes.
+Okay.
+So basically I'm going to move here.
+It takes each, each line takes a time value and then a, a value.
+So basically these outputs here, there are eight numeric outputs and four digital outputs, which are triggers basically.
+And we can pass values to these eight ports.
+So here I don't have any introduction lines.
+So here I say in zero, the output one is 0.75.
+And that time to 60.6, the output is 0.75.
+And then at this time, the output is 0.2.
+And then these letters here are the interpolation function.
+So basically I'm telling that in this time it will be this value.
+And in this time it will be this value.
+Anyway, it will interpolate between the two values using a linear function.
+We also have other functions like a QIO, which is cubic in out.
+CI, which is circular.
+We have bounce, which is like a little bounce animation.
+And we use this to animate basically everything.
+And if I'm correct, this is what animates the mouth.
+Give me a second just to verify.
+Oh, yeah.
+Avatar anime.
+Yes.
+Okay.
+So this is what animates the mouth.
+And this was just hard coding these values until it kind of matched.
+So it was kind of insane.
+But also down here, we see another feature of the loop sheet, which is we can do a relative position.
+So here I'm saying start from A2.
+And when time is zero, value A2 will be one.
+Value A3 will be zero.
+And value A4 will be zero.
+And here I move to A5.
+And I say when it's zero, then the value will be one.
+So we can have these sections here within the file that separate these values outputs into little groups that we can use.
+And we can also have comments to explain what each line is.
+This one, I think it's camera position.
+So basically from A2 to A4, these three values are the camera position.
+Yeah.
+And that is the dope sheet.
+And we use it to animate everything.
+We just, this is super simple to use.
+It just opens an empty file and you just start putting values into it.
+And you see num come out here.
+And also.
+Sorry.
+Yeah.
+Can you scroll down on the parameter panel a bit?
+So your output would be something like A2.
+So yeah, yeah.
+For example, here, you can see this value changing here, which is A1, since it's not markedly, it starts from A1.
+Okay.
+And you can see here the animation moving along.
+Okay.
+And that's just moving in the time of the animation, basically.
+Yeah.
+So let's do it.
+Interesting to see how everyone doing demos and sync seems to be a thing where everyone basically does it differently.
+Yeah.
+We need to find a solution that works for us.
+And this is, we tried also Automaton and we integrated it in cables and that was good too.
+But this just works for everybody because also someone like Lee Cube can, when he's doing his music, he can put markers in the, in his digital audio workstation and export the markers.
+And then he runs a script that automatically exports to this format and we can just input values into it.
+So every important sync moment is already tracked for us and we just put the values in.
+But this, this one was all by hand because also another thing about this scene is that you see here, the background repeats infinitely.
+And that is basically just using the rectangle frame and rendering it, rendering its output to itself.
+So basically whatever this render rectangle produces is captured by this render to texture, which then goes into this image compose, which gets rendered again in the same rectangle.
+So it produces this effect where it goes into infinity.
+That that's basically just an accident.
+I put that there by mistake and it did this and yeah, but basically just.
+This is how demo effects get born.
+Yeah.
+Just out of simplicity of making like this little sub patch with the image compose.
+Found that.
+Yeah.
+Yeah.
+Here.
+Oh yeah.
+Yeah.
+Just copy paste.
+Is it the same thing all over the place or is there small changes?
+Small changes.
+Yes.
+Basically.
+So to solve a bit of the aspect ratio problem, like when I want to use the output of a render rectangle in another image compose and have the same aspect ratio, I created these outputs here with the width and height.
+And that is not in every copy of this sub patch.
+That's true.
+So, but at least, I mean, I'm so glad that copy paste is so good in cables.
+Like I can just pick up a sub patch and put it anywhere and it works.
+So.
+Okay.
+Kudos.
+Yes, I'm saying that.
+But yeah.
+Yeah.
+Yeah.
+Yeah.
+Later we will talk about the new sub patches and I think you will be really happy and.
+Yeah.
+Excited for that.
+I don't know how you did this because.
+Yeah.
+It feels like it's basically really frustrating because of the sub patch functionality, but glad to hear that it works for you.
+It's really.
+Yeah.
+We even have a here in our.
+So this is like a little update to the demo template.
+We have here a sub patches area where basically just says this one for this one, but we just put here all the sub patches and we come here and copy paste and even like collaborating between patches.
+I know that, okay, we don't have the blueprint, but I can work in my patch, create sub patches and then just copy paste and they work.
+Yeah.
+I still see that people find their way around.
+Yeah.
+Yeah.
+Yeah.
+So this is pretty much the final scene.
+At some point, a ninja in the vocal sample refers that he can sing in two voices at the same time, while other other singers need a backup singer, usually a woman in the back.
+So we put a woman in the back dancing here and here we are using the particles again, same tricks, but this time instead of a sphere mesh, it's a mask mesh.
+So it creates a bit more of a face, which isn't really not visible when the particles explode, but if the particles are still like it is.
+So maybe in the first seconds of the scene, it is visible.
+Yeah, you can kind of see it there.
+Ah, sorry.
+I wonder why it's doing that because the resolution is set to full HD all the time, right?
+Well, probably some part of this, it's not efficient and I use the demo recorder and it plays a bit of the demo every time.
+Yeah, maybe the pre-renderer has a bug or something.
+Yeah, okay.
+Well, I think I captured too much with it, I think, but yeah.
+Here for the grits, it's just rendering these little text textures, basically, and triggering four of them.
+I can show it here, triggering four of them with a trigger delay.
+And that would be in the particles one.
+Yes.
+So here you can see the textures being created with the group names.
+And it is just a copy paste of the same image compose several times, but it has these delayed triggers with basically a fourth beat, each one.
+So it's a quick way to create a sync.
+And it just does this cool effect.
+We wanted to fuck it up even, sorry, to mess it up even more, but we ran out of time.
+Oh, I also wanted to mention, mentioning this of quick sync.
+With the dope sheet, another thing you can do is add a modulo to the time.
+So you can create these time loops that run on this sheet over and over.
+So for example, if you modulo the beat, you add a modulo that goes from 0 to 4, then the time is always repeating from 0 to 4.
+And you can have here a little looping anime within your dope sheet, and that's always repeating.
+And so that's how we did the flyer for the live performance that loops.
+And that's how we did also some scenes here.
+They are not synced to the timeline itself.
+They're just synced to a repetitive loop.
+And that's way quicker.
+And yeah, so here the patch crashed.
+I'm just going to reload real quick.
+Just to show the final screen, which is just basically a photo of our guy with some text on top.
+And it's just two textures layered on top with a mask for the text.
+If I can get to it quickly.
+There you go.
+So this is the character with his car.
+And he just says a nice poem about old music.
+And we exit out of the demo.
+I really need to read up on this card.
+I'm not sure if you do, but if that will help you understand the references and watch the demo again.
+That would be cool.
+Yeah, nice.
+And how was it received at the party?
+Oh, yeah.
+Oh, yeah.
+That was really fun because that was actually the party.
+It was the biggest inertia demo party.
+Yes.
+It had, I think, about 80 people and like 10 or 11 nationalities.
+So it was like mix there also.
+But the Portuguese people, I think, understood the jokes and stuff.
+And it was just a lot of fun to make this demo and to just nerd out with people that understood the references and stuff.
+So, yeah.
+And just like, I feel like I'm starting to get good at cables to the point where I can quickly make stuff.
+And that's really exciting.
+Yeah.
+I mean, you also organized the event and thank you for that.
+Another talk and you also did some live visuals.
+Did you sleep at all in that week?
+Oh, yeah, yeah.
+I slept good.
+Because I didn't actually organize that much.
+I was supposed to be organizing, but then they got it mostly covered, even though they kind of went out a bit.
+But I was more busy with preparing the live performance and stuff.
+Okay.
+Yeah, great.
+Thank you.
+Yeah, great stuff.
+Super impressive for one week with side quests.
+Yeah, yeah.
+Thank you.
+So, yeah, basically just gathering whatever I could from other projects and blowing up the air.
+Thank you.
+Also, I just want to say that I would like to talk a bit more about this custom op time sync thing.
+So, at a future date, if you guys are interested, I would like to talk more about that.
+Yeah.
+Or if you guys have questions, you can come to me.
+For sure.
+I also forgot to ask, like, is this like a standard format?
+Like, is it used somewhere else?
+Or did you, did you invent it?
+Well, yeah.
+Well, so the previous demo we did, it was three weeks to make the demo for revision and the soundtrack was like seven minutes.
+So, we needed like efficient for us time sync.
+So, we did it all in that week.
+And we, so Tom, Lee Q, he has previous experience with this stuff and he has a lot of the intuition to do.
+So, this is probably like, we made it up, but it's also like a lot of previous knowledge that he had.
+And a lot of trial and error, especially the trigger stuff is not perfect yet.
+And we have some ideas of functionality.
+Like, also another feature that this does that I didn't mention is that we can also have time offsets.
+So, if you time sync a whole scene and then you move it in your demo and that was all time sync to the timeline time, you can just offset the time with a special line and stuff like that, just to help with the common demo making bullshit.
+Yeah.
+Sorry, I don't know if I can curse.
+Yeah.
+Yeah, really cool.
+Yeah.
+Really cool.
+Yeah.
+Really interesting.
+To see.
+So, yeah, I know that like there are people that do this in code.
+But yeah, this is also like, how does it handle like if you have a typo in there or is it picky?
+No.
+So, we just did it that any invalid line becomes a common line, basically.
+So, you can just write text into it and it ignores it.
+But if it fits that, it's not rejects, but that format, it becomes a timeline, I guess.
+Yeah.
+Yeah.
+Cool.
+Yeah.
+Yeah.
+Maybe you could also make it public at one point.
+The operator.
+Yeah, we would like to.
+Yeah.
+Yeah.
+I mean, you can also just make a Gaia team or something and then, I don't know, make it public.
+Yeah.
+I mean, yeah, I think it's interesting for more people.
+Yeah.
+Yeah.
+Just to answer, Uncle Lex, we used Automaton before, which is by observer, which is like a graphical user interface.
+And then I saw your comment somewhere around this discord that you did everything with map range.
+And the next demo, we decided to do everything with map ranges.
+And that's when we did this solution after.
+So, thank you.
+Okay.
+Nice.
+More questions.
+Otherwise, while waiting for more questions, I will ask Tomi, our next presenter, to fire up the screen share and then we move on to the next one.
+Hey.
+Yeah, thanks for inviting and thanks for the presentation, Andy.
+It was really nice to watch and follow the approaches.
+Yeah.

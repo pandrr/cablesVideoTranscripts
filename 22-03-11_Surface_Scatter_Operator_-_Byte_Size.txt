@@ -1,0 +1,55 @@
+https://www.youtube.com/watch?v=tQr9hdNqBmQ
+hello this is Alex from cables.gl I'd like to show you the surface scatter
+operator and this operator is very easy to set up but it has changed a little bit
+so we're gonna go over what we need to do to make it work and I have this patch
+open right here made by pander and it's a really great illustration of how to
+use this operator to for example in here make a little planet made out of
+different meshes and then they're scattered all over this sphere and then
+you get this kind of interesting effect of meshes on top of a sphere and then
+there's some grass wobbling going on and it looks really nice and let's start a new
+patch actually I'm gonna open one I have here and kind of spoil what we're gonna
+do but let's just delete everything and start from scratch
+all right so what do we need we need a mesh instancer so mesh instancer and we're
+not going to use the mesh instancer from texture although we might look at how to
+do kind of a similar thing with it later so we're going to use this mesh instancer
+that uses array inputs to place the meshes where they need to go and then we're
+going to put in this scatter surface scatter operator all right so let's take a look at
+the surface scatter it has quite a few parameters and let's just go over it so it
+needs to be triggered okay so we'll plug it in then it needs a geometry in here I see and
+then we also have some settings for how many instances will be kind of scattered all over
+this geometry that we give to this operator and then we kind of have some fairly simple settings for
+choosing the location of these instances so for example the distribution could be on the vertices or on the triangle centers sides or just randomized then
+we have a selection drop down which is quite cool and it will basically either look at
+the geometry and randomly select all of your distribution points so for example in
+here at vertex selected so just randomly pick different locations to to place these
+instances and then there's sequential so with sequential you can cover the entire
+model with other meshes and we'll take a look at that then there's a random seed so you can
+kind of randomize the locations a bit more then there's a size output and you'll see here one of the ports is a scale and they'll just directly go into this mesh
+intensor and then the size settings here they will allow us to kind of set the min and max and then they will randomly be chosen for the mission sensor to then change the different scale of our meshes that we're spreading all over this geometry then we have limiter and then a random rotation for these instances okay so we have this thing and let's just give it a sphere
+okay so we have this thing and let's just give it a sphere so we have this thing and let's just give it a sphere so we have this thing and let's just give it a sphere
+and then plug it in so this will be our mesh on which we will spread other ones right we'll scatter something on top of this sphere
+and then plug it in so this will be our mesh on which we will spread other ones right we'll scatter something on top of this sphere and I'm gonna hide it for a sec
+so this will be our mesh on which we will spread other ones right we'll scatter something on top of this sphere and I'm gonna hide it for a sec
+and then see the output ports and they're already populated right that's what we need so we can just plug these into the mesh
+so we'll put the mesh insensor in order so positions scales and then rotations and then for the mesh insensor we of course need to give a geometry for that right so I'll just put down a pyramid
+and then plug it in hide it and I think it's still too big so we will make all these numbers a lot smaller
+okay we're getting somewhere getting somewhere all right so and I'll put down an orbit control so we can spin around this
+uh
+scattered mesh
+okay so we have
+this thing going on right and you see all the pyramids are pointing up and that's kind of strange because we did plug in our rotations and
+uh we kind of expect them like in this example to spread and rotate the correct way around our surface so what's the problem here if you mouse over the port you'll see that it says quaternions right so
+here in the mesh insensor we need to make sure our rotation type is not Euler but quaternions so once we do that we're getting somewhere where we need to be so let's make these a bit more even maybe
+like that and how about a material now right so we'll give it like a phone
+phone material so now if we unhide our sphere we'll see that the pyramids are neatly scattered all over the sphere and we can play around now with the surface scatter operator a bit more so if we look at random seed and change it you'll see that all
+we'll choose some random points and then this number of instances will allow us to increase uh all of the number of instances on our sphere right and i'll hide this again okay so now we have this cool thing going on and then we can also try turning off random rotations so now we have like really neat
+we have like really neat pyramids all over the place what else and we can play around with the size a bit
+and now it's a bit random so we have pyramids going from size 0 to 0.5 or somewhere like that so yeah that's pretty much it and what else can you do now well you can just do all the traditional stuff with the mesh insensor so for example in that other example we had a wobble right so we can try that wobble
+wobble right so we can try that wobble
+and then I'll give it a timer
+and then see what happens we'll increase the area of effect a bit and now our instances are wobbling around in space
+so that's pretty much it well let's actually look at this sequential and uh it's kind of a gotcha so I want to I want to cover it before I end so when you use sequential you might notice um that's not your entire uh incoming geometry is covered but for example if you use sequential you might notice um that's not your entire uh incoming geometry is covered
+but for example if you have random it kind of looks pretty good already right so it visually looks like a bunch of it is getting covered
+but once uh you choose sequential you'll see that actually you need way more instances so just remember to turn this number up
+right and then you will sequentially populate your incoming geometry and uh yeah that's pretty much it so um comment below if you have any issues or you really like this uh operator is uh helps out super cool uh
+is uh helps out super cool um for you to try this and uh make something neat and post it publicly on cables.gl thank you bye

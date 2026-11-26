@@ -1,0 +1,48 @@
+https://www.youtube.com/watch?v=x2iQhsX7P9k
+Hi there, and welcome to another video on the Byte Size channel.
+Today, I'll be giving you an introduction to the Depth Texture Focus op.
+I'd like you to pause the video and just make what you see here.
+Great, let's get started.
+So, I'm going to pull an outlet from here, and I'm going to make an Image Compose op.
+Underneath this, I'm going to create the Depth Texture Focus op.
+This expects a Depth Texture, so I'm going to grab this from Render to Texture and plug it in.
+I'm going to disconnect this so we can just see what's happening.
+Now, we don't see anything because the far plane, which is how far it reaches, is too great.
+So, we need to bring it to the range of where the shapes are.
+So, let's put it around here, 32.
+If I now use Center, as you can see, I'm moving where the focus point is right now,
+which is represented by a gradient.
+That's the white part that you see.
+The width is how wide this is.
+So, if I put it really narrow now, and I move it around, we don't see so much.
+Make it bigger, and we get this smoother gradient applied.
+So, now we need to use this to blur an image.
+So, I'm going to make an image compose, and then I'm going to attach a draw image.
+Let me just tidy this up for a moment.
+And we're going to get the Render to Texture normal output.
+Plug that into image.
+And let's just plug that back over here.
+We've got a few jaggies.
+We click Render to Texture.
+We put MSAA on 8 to get it crisp again.
+So, now, if we add a blur here, just to the output of the image, as you can see, we blur everything.
+So, what we're going to do is we're going to use the mask input from blur with what we got from here.
+It's a little bit confusing at the beginning, but once you get it, it makes perfect sense.
+So, I'm just going to grab the output.
+This was the Depth Texture Focus output, and I'm going to plug it in here.
+And as you can now see, certain parts of the image are blurred, and other parts aren't.
+So, if I now move center, as you can see, it's like this Depth of Focus effect from a camera.
+Now, it doesn't look really too good right now, so we're going to add another blur here.
+And we're going to put this on 5.
+And this blur here, we're also going to have on 5.
+And now we get a much more smoother, natural result.
+So, let's go over to the random cluster.
+Let's crank it up to 300, so we get a lot more shapes.
+I'm going to use the right mouse button to move around, so it can get a bit of a clearer view.
+And as you can see, we've now got more information to look at.
+So, I can now use center to focus on different parts of the image and width to make it more narrow or wider.
+This was an introduction to the Depth Texture Focus up.
+I hope it's been educational for you.
+If you have any questions or comments, please feel free to leave them under the video below.
+Thanks for your time.
+Bye.

@@ -1,0 +1,44 @@
+https://www.youtube.com/watch?v=_ybsy1b0Z54
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the forums is
+Andro and today I'll be giving you an introduction to the array buffer op. I'd just like you to pause
+the video and make what you see here. Great. So before I'm going to explain anything about the
+array buffer op, I just want to set up something first which is going to hopefully make it easier
+to understand what this op is and what it does and why you would use it. So first of all let's make a
+timer 2 op. Move that up here and I'm going to put the speed on 0.5. I'm then going to plug this into
+a Perlin noise op. So just so you can see what's happening here, this is like a seed. We're getting
+a value out of the Perlin noise. So if we hold the mouse over here we can see the values of this kind
+output and they range from minus 1 to 1. They're like nice smooth organic curves. So now let's plug
+this into a multiply op. Multiply by 2. What I'm going to do is I'm going to copy it, click here,
+control V, click here, control V. Let's tidy this up a little bit. So if we now plug this into position
+x and this into position y and this into position z and we make the sphere smaller, let's say 0.05. We now have
+the sphere floating around in space. As you can see it's moving on the x, y and the depth, the z component. I can now
+change these speeds a little bit so they all are completely different from each other and I can also
+plug the timers in to just really generate different unique seeds like this. Okay, so great. So now we have
+this sphere flying around. So this sphere is floating through space and it's following a path. So like each
+frame with main loop transform is getting a number from Perlin noise. So let's get back to this array buffer.
+Let's imagine you had a queue of five people. So the first person walks in, the second, the third, the
+fourth and the fifth. And now let's just agree that this queue cannot be longer than five. So when a sixth
+person comes, we say to the first person, can you leave? So the sixth person enters, the first one goes.
+And now we still have a queue of five. The seventh person comes in and now the second person goes and
+this continues. So we can do that with the array buffer op. So we're actually going to do it to
+visualize the path that that sphere is following. Now if you're not following it, don't worry. It makes
+perfect sense once you put this together. So I'm going to go here. I'm going to make the array buffer op.
+Stores values in an array. First in, first out array buffer. Press enter. So I'm now going to duplicate this
+three times. So what it expects is its maximum length and the values we want to pass in. So first of all,
+let's give them all a trigger. And now let's plug this into value. That's X. Let's plug this into value.
+That's Y. Let's put this into value. That's Z. Now we need to make sure that they're all the same length.
+I'm going to drag that out. I'm going to type in value. And now, as you can see, the value op has grabbed
+the attribute name and called it max length. Now let's put this on 50. So we need a way to visualize
+this. So we need to pack this array. So I'm going to say array pack three. So this is the X component,
+Y component, Z component. Let's give it a trigger. And to visualize it, we're going to use the op simple
+spline. Simple spline expects an array of data to draw a line. Now let's plug this in and see what happens.
+As you can see, the coordinates of the Perlin noise, which are going to the sphere, are being pushed into
+this buffer one after another, every single frame. And what you're then seeing is that the first one
+coming in pushes the old values out. So if we now go to max length and put this, say for example,
+on 200, as you can see, we now have this path. Just give it a moment. And there we go. It keeps on
+erasing the oldest values as the new ones come in. So just to make it a little bit easier to visualize,
+we're going to click here and we're going to add an orbit control. And as you can see, this is a 3D
+path through space. And I think it's a really great way to just like wrap your head around
+what this op is doing. So this is an introduction to the Array buffer op. I hope this video has been
+educational and informative. If you have any questions or comments, please feel free to leave
+them under the video below or to post them on the forums. Thanks for watching. Bye.

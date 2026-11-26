@@ -1,0 +1,18 @@
+https://www.youtube.com/watch?v=iXKo7mU422M
+hello this is Alex from cables.gl we're gonna look at array from numbers and
+this operator is basically a really quick way for you to create arrays and if
+we select this operator and look here on the side on and see all the parameters
+we'll see that it has 30 fields from index 0 to index 29 and a limit field
+which is the length of the array and yeah if you use your mouse or your keyboard
+you can edit the numbers like this or you have of course the input ports for
+each of the indexes and this will fill out the array however you can see that
+there is no array created yet because we've never triggered this op and it
+really needs to be triggered to populate the array so you can either do it with a
+main loop or a constant trigger or you use a single trigger and in this case
+we'll just use the main loop to trigger and create an array of 30 with these values
+for index 0 1 & 2 and if we look over at the output port we will see that it does
+have an array now and if we scroll down on the parameter panel we will see these inspectors
+one is a spreadsheet view and another one is kind of a quick view so if we click on the
+quick view we will see oh there is our array with 30 numbers and three of which we changed
+and if we look at the spreadsheet view we can also see them here and that's pretty much it and you know these
+these arrays can be used with any other operator that needs an array nice

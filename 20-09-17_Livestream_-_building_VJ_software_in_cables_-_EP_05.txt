@@ -1,0 +1,1338 @@
+https://www.youtube.com/watch?v=jUkIjzNUzwU
+good evening everybody time to start the stream thanks for coming along and joining us all right
+be really cool if you guys could tell me if the music's too loud tonight if my vocals not clear
+or something like that because I'm just hearing the music right now I don't listen back to my own
+vocal due to the delay so yeah if there's anything up with the audio levels tonight please just give
+a shout and I'll adjust it accordingly so right now the the awesome mix that's been playing the
+whole time is courtesy of Ronnie Preece I hope I'm pronouncing that right maybe Ronnie will come in
+tonight and read the weather or something from Wikipedia that would be really cool give me one
+moment I need to open my window it's really warm all right okay so I'll just I'll just put a link in
+for this awesome mix that Ronnie supplied us with apparently it's copyright free so we won't be
+hit by any copyright strikes later on I hope I'll be doing some audio editing you're putting some white
+noise in there or something like that all right so I'm I'm gonna just pause the music for now because
+that's kind of distracting all right so um tonight I'm gonna be continuing with um working on the the
+vj software the the gift that keeps on giving the projects that isn't done yet and it's still got quite
+a while to go um so I think it was in the last stream at the end of it there was um some talk about um
+yeah how to do this with like audio analysis because um so far it's all been done with this um ableton live
+track that uh obverse was um kind enough to supply uh to us and to make for us and you know we really
+appreciate that really great stuff but um in the end of the last stream I remember we were talking about
+audio analysis um because like the vj software that I built in the past with other um software
+um you know you you go to a live venue there's djs and you've got no idea what they're gonna play
+and there's a far from ideal world and somehow you've got to make your um visuals uh yeah most of the
+time beat match beat sync um you know if you wonder why you've got to do that well if you see like a
+lighting engineer doing bad lights at a show then you'll be like ah okay you know if they're just
+late or too early or out of time it's very um jarring so you know it's very important to be able to
+um adapt quickly on the fly so this ableton live set you know it's really cool to um get the ball rolling
+uh get things going uh with cables and I think it was really great for people to see how to
+just combine midi um with cables in general so tonight it's actually going to be um maybe it's going to
+seem that way like uh two steps back uh away from this whole setup uh that was built um it's going
+to be going in there and um trying to strip this down to something really minimal um that we can do
+basically um and by the way if anybody would like to say hi uh please go ahead because it always gets
+so um quiet uh over here basically if uh if I don't see anything in the in the chat so hi everybody if
+if anybody would like to say hi back that would be lovely
+just need some caffeine for the next hour or two okay so um first thing is this in a minute
+i'm gonna just explain what my general plan is going to be for the rest of the night um the reason
+i don't have the typical green screen on is because most of the time you're going to be looking at my
+midi controllers uh that i set up so in the last stream i had the midi fighter from panda um that's
+now being returned to him and i've got my bcf 2000 which sounds like some big gun from um doom
+which it kind of is for me it's a very trustable awesome midi controller so i'm going to use in
+launchpad midi bcf 2000 so in a little bit i'll be going off the cam just pointing it there so you can
+see what i'll be doing with my hands so basically what i want to do is i first of all want to kind
+of create like a beat sync um system what that means is i want to be able to basically tap a button
+get roughly the bpm hit a button and re-trigger everything to start again but it's got to be very
+seamless it's got to seem like it's um part of the live visuals so that's going to be the first um goal
+the second goal after that is to combine that with um real-time audio analysis so i asked uh ronnie
+ronnie priest um if you could supply me some mixes he was kind enough to do that he gave me three of
+them they should be copyright free i'll be using one of them tonight i put the link up there in the chat
+did that work when i pointed up that way it's that way i think i think
+yeah okay over there so you can uh check that out later if you want you can download it uh show
+ronnie some love online so i'll be then doing audio analysis on that and i'm going to be combining that
+with the the beat sync stuff that i'm going to set up so we're actually not going to be using the music
+from over us tonight um we're just going to be using this audio mix from ronnie last time i'm going
+to say it please um if my vocal isn't audible or if the music's too loud or something i'm not listening
+back to the vocal and the music on the stream it'd be uh echoey so please just give a shout put that in
+the chat um and uh i'll i'll balance it accordingly so um yeah here we've got the the live visual stuff
+from uh the last stream basically uh let's press c all right so this is pretty much it and uh last
+stream we broke everything down into these kind of like um sub patches like scene one and scene two and
+scene three so it's going to be it's going to be a bit slow going tonight it's actually going to go pretty
+quickly but the stuff we built um the ableton live set we're basically not going to be using most of
+that but the good news is it's going to be pretty quick um getting everything to um work again all
+right so let's jump to live this is where it gets interesting so i'm just going to use ableton live now
+as like a master midi clock host all right and now i'm going to point at the midi controllers because
+that's that's very interesting what i'll be doing tonight i can't get everything on so i'll be using
+these buttons and these knobs so that's kind of clear uh just so you all know there's my lucky mascot for
+mascot for tonight um pickle rick yeah he's going to be uh talking me through this procedure so if
+anybody doesn't type in pickle rick now i'm going to be amazed
+okay so what we're going to do is we're going to get these um two midi controllers but i want to use
+them in live and cables and that's where you hit a really big problem with midi devices that normally use
+usb um once a program claims a midi device it's claimed and it is not available to another one
+so if i would map um the bcf 2000 to ableton live even though it's available in cables i will not be able
+to use it and the midi will just not work that's just a limitation of usb midi same with the launch pad
+if i use this in cables it's not going to be available to ableton live so of course there's
+a workaround for this and it's actually not that difficult so the program that we use on windows is
+loop midi and on macintosh you've got the iac midi driver software so all i did was um and i left this
+alone from the last streams where i set up like this midi um loop that allowed me to um do the midi with the
+over set i just made one extra um virtual midi channel and i just called it loop midi live
+controllers i'll explain why so what's going to happen is i'm going to get these two controllers
+i'm going to send them to ableton live so ableton live will receive everything from them but because
+i'm just interested in midi cc data and midi notes i can just pipe that through ableton live and send it to
+cables okay so it sounds really complicated it's not so um let's go to options in ableton live let's go to
+preferences all right so this is what i mean you see here that this is red right that means that cables
+has claimed it so i had the cables already open um before i um started this right so that's the kind of
+problem so um somewhere in the midi section i'm using um the launch pad i think here we go i'd already set
+it up just to test it out quickly today all right so basically i'm just going to shut this down um i'm
+just going to go um just going to copy this and i'm just going to close it i'm going to go back to
+live yeah it's a bit annoying basically you just have to remember to start live first so let's get
+able to live i just want to show this because it can really just trip you up if you're not used to
+um there's a lot of people really don't understand why um these this control just doesn't work with um
+two of them which i can completely understand so now let's go back here and as you can see my launch
+pad just kicked in uh that's why we've got the yellow bars there so now we go to preferences
+and as you can see there's no red warning um it's really great that live 10 has this because the old
+programs didn't tell you there was like a problem so now if if you look in the top right corner here
+it's not so easy to see like right there where my mouse is if i now move a midi knob or press a button
+there's like key or midi information so that's great the one thing i don't want is and i always
+find this a bit of a shame i don't know why i don't know why live does this i do not want to use these
+as control surfaces um i don't want the software to decide what um my controllers are doing and for some
+weird reason it always turns these back on no matter what i do so just to summarize here i've got input
+launch pad mini midi with track and remote and the bcf 2000 um track and remote and what i've got is
+i've got the um the virtual midi channel output live midi live controllers okay so basically what i'm
+going to do is this let's get rid of these two midi audio tracks i'm going to call this one um launch pad
+and i'll call this one bcf 2000 all right and what i do now i just say midi from can i make this bigger
+oh i spelled that wrong
+let me just see if i can make the zoom bigger in life i think that's kind of tiny uh look feel
+zoom display 120. uh let's try it again so i don't really need to do much here tonight so hopefully this
+makes it all a bit clearer to you so we've got launchpad bcf 2000 so here i say midi from
+launchpad mini and if i'm going to hit the buttons now as you can see um i'm going to put it on monitor
+in i now get input but if i move this i don't and here i say midi from the bcf 2000 monitor in so this
+is the bcf 2000 as you can see and that little yellow dot there shows we've got this so now all i do is i
+send you know so i'm using these two channels to grab um the midi right which means they're also
+available in the rest of life and then i'm going to just say midi 2 loop midi live controllers just to
+recap um i didn't do anything um special there let me just pop this open all i did was i just made with
+the plus button i made an extra virtual midi track and called it loop midi live controllers you can make
+1632 of these so now what happens is this live has now grabbed um the midi devices right
+and now i'm just going to send them through a midi channel to cables right so if i now go back to
+here and i paste that address in
+so i'm just showing you this because if you if you think why is my midi device not working in cables
+or vice versa you know only it can only be going to one program basically so press c to center the patch
+i'm going to go to midi all it's going to go into full screen mode for a minute all right so let's just
+test this so here i've got a loop um midi device input and here are my virtual midi tracks right
+so here you can see um the launch pad isn't available and the reason that you see midi into bcf 2000 is
+because the bcf 2000 can um output two um midi um channels for your usb basically but this this is not
+working it's not activated so i'll go here to loop midi live controllers okay i'm going to press f to go
+into flow mode and if you watch my hands for a minute this is now the bcf 2000 coming again but on
+the same device we have the launch pad right so that's how we get around this limitation uh basically
+so we're just streaming the the midi through okay so far so good so that's not so difficult if you
+just know how to do it so let's go back to live you might be thinking andrew why would you be doing
+this well basically like i said i want to use this as my master midi clock right so i'm going to go to
+midi learn here and what this allows me to do is if you're not familiar with live and midi it allows me
+to click on any of the elements on the screen now that is this kind of bluey color i click it if i press a
+midi button or move a midi knob that will then be mapped there so just to demonstrate for the people
+that aren't familiar with live i'm going to click this following up here and i'll move this on the
+bcf 2000 and as you can see there's a mapping that appears there and now when i move this as you can see
+this goes up and down now if i want to get rid of a midi mapping i click this click there press delete
+all right cool so all i want to do is i want to go to the tap function all right and i'm going to press
+this sorry i've just got to check this is visible in the webcam yes i'm going to press this button okay
+so the bottom right button and then i'm going to go to the play button i'm going to press the next one up
+the stop button i don't want to have accidentally next to these two because i want to be very sure i'm
+going to press it so click that and click midi learn and press this one all the way up here and i go to
+midi now watch what's going to happen so if i'm going to tap like one two three four okay live starts
+to play now pay attention to these numbers these are the bars and the beats the cool part of live is if
+i press play now it just keeps playing with the same bpm but it goes back to one one
+now let's just leave this playing for a minute the vj software should be doing something now there we go
+so what's happening well with our midi setup what we did was we got the midi clock up right here right
+so that's what we're using in the obverse live set and as you can see there's the midi clock and every
+16th every 8th every quarter every half and every full bar there is a trigger okay so this will now follow
+me if i one two three four sync and now the bpm has changed so that is it in a nutshell that is how
+we track and follow a dj that's it it's really not that complicated now i just want to point out in cables
+we've got uh in case you don't have live right or a sequencer to do this we have the bpm tap up um
+and this will allow you to do the kind of same thing so if i tap here a few times uh sorry it
+needs an executable uh trigger sorry so um i'm just gonna do this i just want to show you this i'm just
+doing it with live because that's a lot easier for me to use right now so i'm gonna go here and i'm just
+gonna grab t1 t1 is just an external trigger right so this needs this so i'm gonna go here and i'm gonna go
+one two three four and as you can see we've now got the bpm now and if i go one two three four one
+two three four it goes up so this is another way to do it um i'll show later on in the stream how we
+can kind of use this to um create something similar to this the problem is you can't get anything faster
+than a quarter right now with this um setup so that's what i'll be using live but bpm tap really
+handy and you can replicate everything i'm gonna do roughly without ableton live all right let's save
+so we don't have any music now i already uploaded um ronnie's mix today
+um you could stream this um by using the audio player op the reason i'm not going to do that is
+because i want to be able to jump and skip through um the audio basically so we've got a couple of
+audio ops actually for this we've got the audio buffer and the audio player so the audio buffer
+allows you to hold an audio file on the sample you plug that into the audio player it'll allow you to
+play it that's linked to the timeline but i'm not working with a timeline right if i'm doing a live vj
+show um i'm just freewheeling it the whole night um we got the um audio buffer player and what i'm
+looking for is the media player now let's get one thing clear this media player right if you're going
+to some club or some venue and you want to do what i'm going to do now you're just basically gonna um
+use the microphone up right so you're gonna plug like a mini jack um into um your pc or your macintosh
+so you'd say to the sound guy like hey i need a copy of the dj's output and you just plug that into
+your sound card or into your microphone in and the microphone in would replace what i'm gonna do with
+the media player right now it's just your your music in right so let's go to the media player up like
+i said i already uploaded um ronnie's mix so i click file here in the bottom right corner and then the
+file browser pops open i click this so i'm gonna grab that now and i just need to hear something right
+so to do that we go here and we type in output and that gives us audio output now it's not playing
+yet because we've got to click the play button now um due to browser um security um you basically want
+to use this up the play button so i'm going to grab it it needs a trigger okay and basically what this
+does is it means it creates a user interaction on the screen um because a while ago um the way browser
+technology works changed uh because you know you'd go to a web page and you'd get just music playing all
+the time and stuff would just happen and basically they implemented this where there has to be a user
+interaction to trigger audio most of the time so um here we have the clicked um so i'm gonna drag this
+out uh grab it trigger changed true it will only trigger if the value is changed to true so i'm gonna
+get that i'm gonna grab this i'm gonna plug that into play i'm gonna put the volume on 0.5 and fingers
+crossed and hope it works okay great so let's move this over here
+so um you might think why am i using the media player well you know if i've got to um reload the
+patch because of something um it's got this really cool option here which is um seek position so i can
+just jump ahead in the mix basically this is like really handy uh for doing the stream
+so i'm just gonna save um is the audio balance okay uh can you guys still hear me loud and clear over the
+music i hope so all right so if not please just post it there in the chat so um as you can see my
+visuals are not going in time with um the music right so what i'm going to do now is this
+so i've tapped and then as you can see the visuals are now in time
+that quick and that easy if you've already done a little bit of work
+okay so let's get one thing clear you're gonna get drift right it's like i've tapped the approximate bpm
+and that's going to be good for like i don't know depending on my sense of timing it could be anywhere
+between 30 seconds to a minute and a half so the good news is i can just press the play button
+and as you can see i'm just re i'm re-triggering everything right so i can go one two three four one two three four trigger
+so that's the basic setup that's like how you do things to stay in sync with a dj during a live set
+so just to recap because i know this might be a lot for people to take in if they're not used to this
+um ableton live is sending its midi clock out right if we go here to preferences uh midi
+um this is what we're looking at loop midi to cables sync so this thing here sync this is sending the midi clock
+and you see that here in the top left corner that little flashing blue square so
+that means that when i press this button here this starts again right
+goes to one one every time so here i can tap
+beat as you can see i just did something stupid it's 280 but i could tap double speed like
+and then re-trigger and then go back
+so that's just it and you know this is nice because it takes practice right you've got to
+you've got to be able to um you've got at least be able to tap along to the music
+and that that pressing play again it's like stop play instantly but it's so fast that you know people
+don't notice the visuals are still going so that's step number one all right so now of course
+the whole system that we had for the visuals um it's not going to add up anymore because we built it to
+this um over set right so that means all of this might not work so good anymore so look here we've got
+like a snare trigger um we've got a kick trigger you know and it all came in from like exact midi notes
+from the ableton live files that just isn't going to work anymore right so um let's create something
+similar to it so we're gonna have to make this more simplified version because the over set gave us a
+wealth of information like kick snare hi-hat baseline um two to three lead synths you know we don't have
+that information anymore all we've got is a bpm midi clock um triggers which go in a 1 16th 1 8th 1
+quarter 1 half and a bar and now we're going to build an audio analyzer setup okay
+now i actually want to have um this all with the um midi i want to have the audio in the midi together
+because like i just don't want to have to jump back between patches so i'm gonna cut this
+stops the audio go into midi all and this is all the um the midi so you know what i'm just gonna um
+i'm just gonna go over here to the side so the play button needs a trigger so i'm gonna zoom in
+i'm gonna pull this up i'm gonna grab a trigger receive off and uh my my the way i do it is just
+t1 trigger one that's just like this extra um trigger basically um and i'm gonna reset this
+now sometimes when i want to reset this and go from the beginning it's just a little trick i do
+you know you can do this in your own way i grab the mouse and i just most of the time i use like
+the right mouse button so if i just want to reset it i just you know i'm playing and if i right click
+i get that play button back it's just a little force of habit with stuff that i do
+so this is why i use the media player up now i can jump forward
+um in time or go back to where we were okay all right so um
+just taking a quick look yeah
+all right let's just fold this up for a minute okay
+all right so what we want to do now is we want to set up this um audio analysis so the good news is
+hold it give me one moment
+there's absolutely no need to reinvent the wheel um i just need to find something for a minute
+there we go
+there we go okay i just needed to find a link
+okay
+so um this is actually um something that i made for um a tutorial a while ago
+um and it was about audio analysis in the bi-quad filter up
+so i don't remember everything um that i do
+in cables so you know it's great to have these resources to go into
+okay so basically i'm interested in this let's just take a quick peek this is the audio buffer player
+right that's like the audio uh output uh i've got a visualizer section there
+um okay so i already built like um a low mid high filter setup you guys can grab this as well that's
+exactly what i'm gonna do because the the trick is gonna be um mapping this to do what i want
+okay so let's move this up for a minute out of the way it might be a good idea just to grab that
+whole thing there right yeah let's just do this okay um all right so just copied i'm gonna go into the patch
+okay so let's make this a little bit easier to follow so i'm just gonna add a comment i like i like things
+to be um clear so i'm just gonna audio stuff all right so i'm gonna paste all that in so this needs
+a trigger obviously a trigger obviously so i'm just gonna go here trigger receive and i'm gonna get a t1
+okay now the reason i'm probably not seeing anything is because
+okay so this is our audio right so i'm just gonna grab this let's move this up here
+so it's kind of like how it was in the other patch so we're gonna grab that i'm gonna plug it in here
+i'm gonna plug that in there zoom in a bit so it's easier for everybody to see
+okay press f low mode okay
+let's just close this all right just kind of a confused of what i was hearing all right i'm just
+confused why i'm not seeing any audio out
+audio in audio out is it playing should be because i'm hearing audio
+i'm just gonna save just gonna reload i'm not sure what that is should cut out the audio okay
+you know this is not stuff i've ever really done um before with cable so um you know stuff can go
+wrong stuff will go wrong i suppose that's the whole point of um this being live let's press play
+all right now that is incredibly strange to me
+so i'm not sure what it is right now with flow mode because we're not seeing any um audio activity
+but there is audio activity i can see that right now from the audio um analyzer with the average volume
+okay so right now i want to get a visualizer
+all right you know what i'm just gonna pause this for a minute okay so right now aha okay i need to plug this
+into here still not seeing anything no so um this is being rendered after everything there basically
+let's just check this for a minute so t1 and then we have final render so i click final render there and i
+get t1 and i'll put it afterwards there we go and so basically what was happening was um t1 was sending
+the trigger and that was rendering some rectangles on the screen uh but then the final render trigger
+was going through um and that was overriding what was there basically so let's go back in here let's just render order
+basically um and let's let's just scale all of this because this is just from a different patch so i can't
+expect that to magically match up all right so let's just press play for a minute so a right click with
+the mouse button press play okay this is my visualizer um
+so this is really it's kind of challenging in a live environment to um tweak this to um act correctly
+it's it's really not an easy thing to do you know it takes practice it's it's kind of like having a
+living instrument you know you've gotta you gotta keep working with it to get better at it that's
+something i always loved about doing live visuals just you know things can go wrong and that's awesome
+that's just like live music basically so what i'm going to do now is um i'm going to move this down
+i want to have this visualized at the bottom of the screen right so i'm just going to put it there
+and now it shouldn't matter what scene that i go into we've got that okay cool that's working pretty good
+all right so these visuals to me aren't gonna like match up exactly right now because um they were made
+to the able to live set which is something very different so first of all what i'm going to do now
+is i want to i want to be able to um tweak this right so let's take a look at the base
+so as we can see here i'm going to make this window bigger all right so you see the little yellow um
+rectangle there that's like the the area right now that the audio analyzer is um looking at okay
+so what i've got here is like this um threshold and this is really difficult to get right it's like
+it's it's really kind of difficult um and as we can see here i'm going to hold the mouse over this
+and i see this like a minimum of 0.03 and a max of 0.05 now that's happening because we're like grabbing
+this really small um slice right if i'm going to open up the frequency now
+like this let's say put it on 400 as you can see there's more information there now but what's happening
+the thing is um with the we actually need to do this we get the audio analyzer output ah all right
+let me disconnect this so i'm gonna get this i just want to see only this one let me jump in so
+we've got this fft array out basically um right there we go yeah so there you see that yellow square
+there that's basically what we're using to um yeah this is tricky because here i'm using the average
+volume and this is probably going to give me better results i might just swap this up for tonight actually
+um yeah you know what let's just do this so i'm not going to go with the average volume all right let's
+just do this for now all right so i'm just gonna disconnect these guys i just i just don't want to
+see anything but that right now so this is threshold let's get this fft area average needs a trigger
+let's patch that back in okay so we're going to get the um the threshold up now the threshold up
+that's really key here what it does is um levels go up and down and like if you'd use a standard if
+check i don't know if the number is greater than 0.5 send a trigger you know every single frame it's
+above 0.5 you're going to get a trigger it'll be like a machine gun so what the threshold up that
+does is it says and give me a number give me a threshold if i go above the threshold i send out
+a trigger but i won't send out a new one until i've gone under the threshold and back above it again
+so that's a really good way to kind of tame audio stuff so i'm going to go here to um fft
+i'm going to put this on input and this now just needs this
+now we're not seeing any movement yet because um let's take a look at this
+now i've got a more dynamic range instead of like 0.03 and 0.05 0.13 max 0.31 so let's put this on 0.3
+okay press f still too much 0.2
+now we're getting a lot of false triggers there
+now the thing is this number is really jumping up and down in a it's very noisy right when you do audio
+analysis um it's it's very noisy you know a lot of people really think this is an exact science but
+it's not um it doesn't work like that so what i want to do now is i just want to grab
+um let me get rid of this so this is going to be what i'll use so fft area average has this texture out
+so i'm going to use this now to debug stuff right so there i can see the volume all right let's put that
+width
+down height i can make a lot smaller so i'm going to turn off f flow mode that always slows the frame rate down
+okay so min 0.4 max 0.8 okay
+so right now i only want to get this working with the base so let's grab the bi-quad filter output
+here's the problem so we've still got i forgot to lower the frequency so we've still got a lot of
+mid in there so now put it on 100 my mistake this is why this stuff is really handy if you can um
+visualize it so let's just take a look here yeah okay so this is why all right let's put it on 0.4
+0.35 it's getting better
+so the thing is um what i can do is i can throw and right now i'm just using the bang up for this right
+so that there's a trigger so i'm just thinking if i grab the smooth up this smooth out jumps in values
+so what i want to do is i want to i want to i want to have really sharp transient still but i want to
+have it go down a little bit slower so it's less um jittery so i'm gonna put it on one and i don't know
+eight let's take a look at the value i think i've got it the wrong way around eight and one
+it could be too much so the problem i've got here is it's just there's not enough dynamic range
+let's try and get some more down
+so if i make this bigger the average is going to be
+and this is the thing i'm thinking about now like 100 hertz it's okay but it's kind of flappy
+okay so now i'm just going to put it on a really high queue so you're going to check out the tutorial
+to see what that is i'm just trying to get the dynamic range in there it's not so easy right now though
+this is looking better like that yellow bar there you know you you want it to be going from low to high
+basically
+so here's the thing it's now not dropping low enough so let's go here max 0.79
+all right this is really not working so good
+i think i'm on a part of the mix that doesn't really have much bass
+i might have just gone to a part of the mix where run is used
+um the high pass filter to filter out all the bass i think that's what just happened
+ah that's the bass okay which can also happen
+all right let's put this down say four
+something really crazy let's just put it on four it should be okay
+yeah i'm not so happy with this right now there's there's something i'm really
+missing it's been a while since i did this
+okay that's that's the real bass kicking in now
+that number's just almost not changing let's put you back to one
+you know what let's drop the threshold for a minute i just need to be able to see
+you know what let's drop the threshold for a minute i just need to be able to see what's going on there
+um
+let's just plug this into scale
+yeah i just want to see what's happening
+okay let's let's just start from here
+i wish i had like a min max out from this that would be really handy
+so basically i want that square there to be pumping
+so let's see what i gotta do to make that happen
+maybe get a bit of cleaner bass bit pinch here
+so the problem is the audio analyzer always gives this really low number out with the average volume
+hmmm 250 60 for value
+so
+so
+so
+so
+hmmm
+hmm
+yeah i'm not so uh i'm not so happy with this right now
+the audio analysis is always really tricky i've got this feeling i'm really
+missing something
+okay
+okay this will do for now so i'm just going to give myself a note here i'm just going to type in midi
+um
+base and i want to match something later on from this to this like threshold
+it might just even be that i like for the threshold
+i'm just like 0.9 and just add a multiplier up front
+uh because it's like far from an exact science i mean and this is just a visualizer so let's just try this now so i'm gonna go here
+this shouldn't work out oh there we go so now i'm just gonna grab um same stuff as before
+well that was unexpected
+well no it wasn't i accidentally plugged it wasn't the fft uh area average my bad that's what happens if you plug audio into a texture okay let's start again
+yeah i'm gonna have to make a note that that should be checked for and it shouldn't be uh possible basically all right let's start the audio
+and let's go in here
+that was a silly mistake but i wasn't really looking all right so that was uh yeah i'm wondering if i should just use this
+this fft area average
+oh no
+let's just give it a try it's it's a live stream not everything goes
+the way you like when you're doing this stuff especially for the first time
+so let's grab
+this plug that there let's give basic material now a texture
+not audio
+hey there we go all right so what we're doing right now is we're listening to the um the mid right
+so let's see if we can get this to do what we want so we go to the biquad filter
+so i can actually see that this is where most of the it's like this hi-hat part actually
+okay let me listen to all the audio
+you know i i think i'm just gonna
+i'm not gonna focus too much right now on getting the the basement high i think i'm
+just gonna keep it on two for now like base and low basically so let's just disconnect that
+so this is a band pass um which is like a kind of u shape right like a kind of
+only allows a specific band like u shape to pass i could use like um a low pass but let's keep it here
+for now
+put some 3000 that's where you can also find um a snare okay
+so yeah base is always like kind of difficult to um get right
+so because base moves very slowly it doesn't have very sharp um transients
+wow okay yeah you know i think i'm uh i think i'm just not going to use the fft area average
+i'm just getting better values just the average volume out here all right let's see if we can smooth
+it a little bit
+okay
+so if we look here i'm going to put on a really high number now
+you know i want it to really fly up very quickly but to come down smoother right 16 is like way too
+high four is already enough we just want to smooth these transients out a little bit
+um okay put on like 0.2 so it's even faster
+now the thing is what we're going to do later is we're going to just somehow we just gotta like
+we've got a map like this frequency to a midi controller um the queue i'm not going to touch for
+now um and like this threshold right because like here you see the fft area average but we're actually
+actually looking at the the threshold output here
+it's just like 0.3
+oh it's really really noisy
+okay so this is better okay so yeah this threshold that's like kind of key because what
+we're doing is we're just saying that once across across the threshold trick send out a bank you know
+send out a trigger and then we're using bang just to get this um duration uh basically and how fast you
+do it that also has to do um if it feels right you know if we put this on like one second it's a very
+different feeling if we put it on 0.25 the kick though i'm really not happy with the the base analysis
+right now so okay the snare thing feels better let's get let's get back to this one you know and the track
+obviously let's have a good amount of base all right let's disconnect this one make sure we plug in
+the texture into a basic material just going to save
+okay
+so i'm going to go to this biquad filter and i'm actually just going to put it on bandpass now
+yeah okay i think that was the problem so you know if i put this on like
+okay yeah yeah all right
+so if the cue is low it's very wide on the left and the right side of 100 hertz
+which means it gets um a lot more information if we put this in like
+10 then we're really grabbing like i don't even know if you can hear this right now but we're grabbing
+like this subsonic part
+yeah this is better so it sounds like really bad but you know we're not bothered about that because
+we're just doing audio analysis right so let's see if we can get these two now to snap a little bit
+yeah okay this is this is feeling bad now you know this is a trick right you got to learn to play around
+these audio settings
+so this of course isn't only picking up the snare it's picking up some of the um
+synths and stuff like that
+now imagine i wouldn't want this to work anymore like the the snare part and just put this on one
+right doesn't do anything
+this is bad okay this is better great let's save all right so sorry that's a cool while so i'm feeling a
+bit rusty right now with this stuff it's been uh it's been a while but once you get going it's all good
+all right so here's the the bcf 2000 launch pad
+so just to recap um this is all the midi coming in from ableton live
+so let's just set this up nice and quick so what i'm going to do now is um
+it's going to give my there's a slight break so i can just focus it's not so easy to
+do all this with this awesome mix from ronnie so let's go ahead and click pause okay
+so um let's press f for flow mode yeah all right this is working that's cool so what i want to do is um
+and this can take a while to get right because you know audio to visual stuff that's not as easy as it
+sounds so let me update my note so band has to get the kick and pass to get the snare all right so
+the threshold that's a really important part
+i'm not using a smooth because uh on the base because base is already low energy anyway low
+frequency so it moves slower than mid-high frequencies basically if you if you want to
+check that just open it in the spectrum analyzer all right so let's for now just keep it nice and
+simple what we're going to do is we're going to just attach something to the frequency
+the q
+the threshold now you know we could leave the threshold on a fixed number and change the gain
+just speaking out loud to myself
+that could work but i want to i don't know let's just try this out okay so i'm just going to pause it
+so i'm going to go to the um this here so what i'm going to do is um using the controller here so i'm
+going to use these two knobs okay so first of all let's map them and give them a name because
+otherwise i'm not going to remember what all this is later so i'm going to just type here um audio
+and then type in base q and we're going to grab another one of these paste on the dial
+paste on the dial
+and then i'm going to call it um base
+so let me think about this normally i do this with variables but because i know
+these are only going to be controlling these for now i'm just going to pull them over
+like slightly messy but that's okay so it's really important to think first like what's your minimum
+and maximum range that you you want to be doing this with like i constantly know as a sound guy that
+i'm never going to go below 100 or above 300 hertz like and 300 is also just turning right into
+mush but you just never know what you're going to get in a dj set but you know what actually i'm just
+i'm just going to put it on 100 to 300 and then that will mean like 200 which gives you more like
+the the the thumping part of a kick uh just means if i put my dial in the middle i know i'm in the
+center i'm on 200 you've also got to make this stuff in a way that makes sense to you so i'm going to go
+ahead to this midi cc i'm going to click learn and i'm going to turn this and it's updated i'm now
+going to go to this one um let's say clear i'm going to say learn turn this one it's now mapped to
+i'm going to go to this one sorry it's a little bit small there for you guys maybe
+and that's going to be this fader right you know what actually um yeah so what i'm going to do is this
+i'm going to grab another one of these i'm going to add that there um
+sometimes stuff comes in too loud like djs are notorious for crunching their mix into the red which
+is really bad because like you you just have no dynamic information then so there's going to be
+times when you just can't use this so here i'm going to do bass gain okay all right so here we go that was
+this one that's this one that's this one and this one i'm now going to click clear just to be sure
+learn that's this one here did that one come through
+let me just check
+yeah yeah okay it's that numbers that okay and this one is going to be the next fader so i'm going to say
+clear learn here we go recap frequency on the audio frequency range cue the narrowness of the width of
+the cue um the amount of audio gain and the level of the threshold these two are going to be really
+interchangeable with each other so now we've got to think about the min max right so biquad filter
+like i said 100 to 300 so let's make this really nice and easy we're going to get this midi cc and we're
+going to click normalize zero to one okay so i'm going to pull this wrong one i'm going to get the cc
+value out and i'm going to grab the map range up it's your friend map ranges life so let's go here
+so i want to go from zero to one and then from 100 to 300. okay um let's look at the q so the q i put in
+a crazy number like 10. i know that if i'm going to go lower than four it's probably going to suck
+so grab this map range i'm going to pull this down i'm going to grab the cc value out plug that into value
+pull this down so once again zero to one let's put this yeah on zero to one and go here and now i'm
+going to just put it from four to ten okay
+bass gain uh that's only zero to one basically uh audio gain doesn't go any more than that basically
+if i'm correct yeah i'm not sure why it's doing anything if it's on zero though that just might be
+that's really strange okay ah no way are you kidding me are you telling me this thing outputs
+even if it's on zero no okay i have to find out one minute let's try it so right click right click
+i'm not even sure if that's doing anything right now
+let's go into 0.6 0.7
+i i don't think this game is working
+hmm okay so i'm just gonna leave it as it was at zero um hmm
+let's turn the game up
+see if this uh does anything all right turn on flow mode okay um
+i'm very confused right now
+ah okay one minute i have to grab this
+and we need to update these sliders so it can't go below zero
+so that's what i'm gonna do then all right so um that'd be really tricky to kind of
+get right i suppose one let's just keep it on one to zero for now that's okay let's just do that
+all right so i'm gonna get the game control c ctrl v and pop that in here as well okay all right this
+is this is taking more shape now i'm just gonna pause it all right so um i don't need to do a map
+range but you know what i'm gonna do one just in case i need to
+do something differently with it later on on the fly cc value out to value
+we're just gonna leave it on zero to one and zero to one okay
+and this is the threshold so i'm just gonna put that on zero to one basically same thing
+i'm just leaving those ups there just in case i just need to patch something in later
+okay so um this is gonna go to the base frequency and this is going to go into the uh sorry the biquad
+filter q i have to check these ups out again with the gain stuff this is going to go into the gain
+and this is going to go into the threshold
+now you know it's really nice that when i'm like doing this i can look at this min max stuff but you
+know i can't do that in a live environment so now i'm gonna lower this and let's just see if it's working
+okay so this one has to go in zero to one this one as well so look this is the threshold so i'm just
+going to pull it down now cool that works out of the box all right let's get this let's grab this one
+put that one in there so i can raise the threshold and it's going to trigger less
+so if you pull it like down like this it's going to get pretty jittery
+crank it up turn it down a bit i'm just going to turn it down until
+now the thing is i said before oh we don't need that smooth but because we've got like such a
+a narrow queue it's like really really popping through now so we're going to grab this we're
+going to plug that into value we're going to get the trigger like a smooth needs a trigger
+we're going to plug that into threshold now
+aha yes that's what i want to see
+much more stable nice okay all right now now we're getting um in a direction i wanted to go in
+basically let's get rid of these guys so i'm just going to copy this i'm going to paste it there
+uh we're going to get the cc plug it in now all right so this is going to be
+high leave comments for yourself it's just kind of like coding you don't know when you're going to
+be looking at it again and it makes life a little bit easier if you're reading that stuff again in the
+future if anybody's got any questions in the meantime please feel free to throw it into the chat
+um i'll do my best to answer and we've got we've got views tonight but it's kind of quiet
+in the chat room okay so now um let's look at this one so um i'm going to put the i'm going to kind
+of do the same thing but the frequency range is going to be different so i'm going to put the frequency
+on one two four k so we're going to map range one thousand to four thousand this is for the mid okay
+the queue i'm going to put on um four to ten so what i already had yeah okay um gain zero to one yeah okay
+sure let's do this let's plug it in i'm just going to get rid of this for now don't need it
+let's move this down a little bit so it's more spread out okay
+let's plug this into the queue let's get this plug it into the gain
+and this we're gonna plug into the threshold all right
+let's just check this out
+and of course this isn't going to work because i didn't do a midi learn so i'm going to clear
+i'm going to do learn move this one go here click clear learn that's this one go here clear learn move
+the fourth one all right so
+let me just see what's going on there all right so i want to
+so now i'm changing the frequency right move the fresh all that put it all the way in one
+just turn that cue up
+and i just turn that all the way up to three thousand turn that cue down a bit
+not perfect but close enough all right
+that's the basic audio analysis part set up just going to save now let's fade this stuff back in again
+okay so like i said before um
+oh okay looks like we got some kind of bot coming in
+how do we how do we block these people how does this work again
+stein i don't know if you're there would you be able to block this escada 137 so it's not going to
+start posting my stuff in the room i have no idea how to do that during a stream okay
+so now we've got this basic stuff set up so we've got this time and information
+but that means we're going to need to do some retweaking so i'm going to go back to this scene here
+ah the last thing we've got to do is um get this information right
+i've got two options here i can use like the the volume
+right and i can use the bang that comes from the threshold
+all right i'm just going to leave those there for a minute just going to go back
+so we're doing this all now with the um bpm sync so i'm going to go to patch one
+let's start making this a little bit cooler because we've got this stuff here ah okay yeah we've got
+kicking snare right that's where i was going with this okay so um let's just call kick snare like kick
+bass um snare high right so let's let's do here midi
+audio all all right
+let's go in here okay so far so good
+so that's what i want to do so we're actually looking
+here we go uh it's just these two kick and snare trigger so i'm just going to copy them because
+nothing's coming in right i can just reuse them so i'm going to paste them here
+so let's get this guy plug it in there let's get this guy plug it in here
+so if i'm going to put the
+i'm going to put the threshold all the way up on these guys wow load again as well
+and again
+okay look i can just see it
+wow all right yeah i'm really gonna have to investigate the the gain stuff uh because gain zero
+is you know audio multiplied by zero is zero unless it's working like a traditional mixer
+which will be like minus 74 and minus one two eight so you don't have audio
+you guys can't see it but i am nodding my head it's a really cool mix from ronnie
+hey ronnie nice of you to join how's it going thanks for the mix man it's uh really appreciated it's uh
+good stuff
+all right
+so
+now this all needs a tweak again now because it was built to this exact
+ableton live set which does not mean it's going to work the same now so we're just gonna we're
+gonna just break it down just take a peek at this
+so don't forget flow mode always slows the fps down a little bit
+You dance to a music world.
+Okay.
+Okay, so this light needs really long numbers with a smooth.
+Yeah, maybe there's a reason there was so long, let's put it on 12.
+All right, so big part that like makes the visuals look kind of cool is the post effects from
+correct.
+Yeah, okay.
+So this stuff is like taking from the base gate.
+We don't we don't have that because that's the old obverse set.
+So let's grab snare.
+Anything else?
+Is that all the post process?
+I did.
+It's been a while.
+Let's take a look what's going on here, because that zoom blur is not doing a lot.
+Ah, this is a snare gate, right?
+Okay, so this is when the midi note was open or closed.
+Once again, we don't have that, right?
+Or do we?
+Or do we?
+Yeah, yeah, okay, let's let's pan this up to 9000.
+So we've got the snare gate.
+This is just something I want to show.
+So let's go to the midi part.
+Let's go to the midi part here.
+Okay, so let's look.
+Uh, if I'm correct, it's down here with notes.
+Yeah, okay.
+So it's like midi note, right?
+So let's look at snare gate.
+Okay.
+Hmm.
+Yeah, okay, cool.
+Let's try it.
+I mean, I don't need to get rid of this stuff that I did before.
+So we're going to go here and we'll go to, um, ah, that's receiving.
+Okay, midi in notes.
+So don't forget the search function in midi is your friend.
+So I'll go here now and I'm just going to select this control C and press control F.
+It's going to open up search in the patch view.
+I'm going to type this in.
+This is great.
+This now just shows me everywhere where this is being used.
+So this is the get objects.
+This is the set objects.
+I'm going to click it and it's now going to take me there.
+One minute.
+Double click it and make this a bit smaller.
+Ah, there we go.
+All right.
+So that's coming there.
+Just curious.
+Okay, that's because they're sending directly.
+Okay, so I'm just going to try something out.
+Um, so I know I've got this, um, midi coming from the controllers, right?
+So if we go to live, if you think about it, right?
+Um, there's so many ways to generate triggers.
+So I'm going to control shift M or is it, um, control shift T insert a MIDI track.
+Let's go here.
+Let's just get a MIDI note and let's check what the MIDI note was inside the cables.
+So the snare gate was, um, E1 MIDI note 40.
+Okay.
+Let's go here.
+Let's go here.
+E1.
+Let's do that.
+Now we can send the MIDI now to, um, was it loop MIDI pot that we did?
+And then we can send the MIDI to cables that kind of explains it, right?
+So even though I don't have O versus set now.
+Yeah.
+Okay.
+Let's do this.
+Let's just show you guys how we can do this.
+Okay.
+So what I'm doing now is I'm getting one MIDI note and I'm just sending that, um, out of live
+back to the original channel we had before.
+And that's it.
+And that should now trigger this.
+So basically it's, it's really cool.
+Actually, you know, um, maybe I don't want to mix this stuff up now.
+I could just actually just say, send it to loop MIDI live controllers.
+I just, uh, let's just do loop MIDI to cables.
+I don't want to rebuild everything again.
+Okay.
+So like the Overse set, I was just sending, uh, MIDI out, right.
+I was just reading the, the MIDI from, um, Overse's live set.
+So I could go here now and I could just rename this control R and call it, uh, one, one.
+Okay.
+Control D to duplicate.
+I'm going to double tap and then control D.
+I'm going to make this control R one, two.
+This is where it gets really interesting.
+Right.
+So I'll just grab a drink.
+I'm now going to press MIDI.
+Um, I'm going to grab the second.
+Um, sorry if you can't see that.
+Let's slide this over a little bit.
+I'm going to grab the second row here.
+Cause I always think like kicks now.
+All right.
+So let's just say, I'm going to go ahead and press this, go ahead and press this.
+Uh, let's say I want them to stop.
+I always use the top button.
+So I'll go here to the global stop button.
+Press this.
+And what this means is now, um, so I can now beat sync right.
+Retrigger.
+And now I can pick like a different intensity of, um, MIDI data that I'm sending through.
+And it's just general time and information.
+There's nothing really crazy here.
+So let me just grab this now and do this.
+Maybe the mix finished.
+Okay.
+All right.
+Hold it.
+Let's go back here.
+Start from the beginning.
+Okay.
+All right.
+One minute.
+Back on track.
+So basically, um, I'm just using these MIDI clips inside of Ableton Live to store ideas,
+right?
+So let me just, um, go here and show you what I'm talking about.
+So I guys get slightly stranded there.
+MIDI.
+So I just use this kind of rule.
+Like the more I go down, the more intense everything gets.
+Yeah.
+So let's go here now.
+So let's go here now.
+Rename it.
+I'm just calling it one eighth.
+I don't even know if it's one eighth.
+It doesn't really matter.
+Control one.
+And lower the quantization rate.
+You know, we can just like put this on half size.
+Control D.
+And we're going to move it here.
+So, um, now if I go to MIDI, let's map that last one.
+One, two, three, four.
+Okay.
+And this is why at the start I wanted to show you like, hey, if we get these MIDI devices and we route them through to Ableton Live, we can then send them through to cables.
+So I'm now able to control cables and Ableton Live with this one MIDI controller.
+All right.
+Let's take a peek.
+So if I'm going to go here now, I've got that more rapid notes, right?
+Maybe I can make this, um, a little bit easier to see next to each other.
+It's going to become a bit tiny, though.
+So.
+And now you can see that zoom blur is only happening on these notes.
+So this is really, really cool, right?
+I'm like kind of storing these, um, ideas, um, inside of, um, Ableton Live.
+We can totally do this with, um, just cables ops.
+Um, like the interplay numbers array up is really what I would use for this.
+Um, but then just jump through it, um, steps.
+We could give it like dynamic, um, ranges and stuff.
+We can go completely bonkers with that and make it really generative.
+Just don't want to do that right now cause I'm just working on getting, um, the framework set up.
+So let's go here.
+So let's go here.
+Now, of course, all these patches need to be tweaked again.
+I mean, they were built to a completely different Ableton Live set, but I mean, they've already got quite a lot of the, um, beat sync down.
+So let's do this rename.
+I'm just going to call it snare gate.
+You know, we could make another one now.
+Um, control shift T, call it kick gate, base gate, whatever.
+Um, and that's the cool part about what we did with the other Ableton Live set.
+It's kind of like, um, yeah, it's a way to, um, just reuse this stuff without it to go from scratch.
+So if you look here, it's C sharp one for the kick and you want, is it C sharp one?
+Uh, yeah, sub kick is on C one.
+All right.
+So C sharp one.
+So I'm just going to go back to live just, just to try this out.
+And this is the cool part now, right?
+I've got this information here just to control C control V and I'll just paste it there.
+And all I've got to do now is, um, move it to C one.
+So if we look at C sharp one, so that means it's got to go down one, two, three notes.
+So we could transpose all these one for one in the clip, but I'm lazy.
+So we're just going to go to MIDI effects.
+I'm going to go to pitch and minimize this.
+Don't need these audio views, uh, right now.
+Uh, the center return, I mean.
+So here we go.
+E, D sharp, uh, and E, D sharp, D, C sharp.
+So that's down three.
+So we go ahead and we just say pitch minus three.
+And that now means that we've pitched it down three notes.
+And, um, we don't need to do anything more with these clips.
+So I'm going to go loop MIDI to cables.
+And this should now, if we've got the kick gate anywhere, once again, search as your friend.
+I'm going to go here and do control C control F control V to paste.
+And I want to see where it's used.
+Um, just so I've got a clue like what it's doing in the patch.
+So double click it and it takes me here.
+So I'm inside patch two right now.
+Right?
+Yeah.
+That's the one that's running care.
+And what does that actually change?
+How we didn't play it yet.
+Okay.
+Yeah.
+Multitasking, multitasking.
+So go ahead to MIDI.
+Click this.
+Learn.
+Click learn.
+Click learn.
+Click learn.
+Because we didn't trigger them yet to play.
+Right?
+One, two, three, four.
+One, two, three, four.
+So there's the kick gate kicking in.
+Turn off flow mode.
+Now look at this, right?
+This is like pretty beat synced right now.
+And you know, we're not doing it like we did to the traditional obverse stuff.
+We're doing it with just like the BPM tap.
+We're starting to build real simple timing clips inside of, um, Ableton Live.
+This is a really cool framework now because, um, it's like the beginning of something that
+I can just reuse again and again later.
+Um, and it doesn't matter what DJ is going to be though.
+Now, if we look here at the screen, I'm going to just press F11.
+So I'm not seeing any snare stuff.
+Right?
+So I need to lower the threshold.
+This track doesn't really have any snare in there.
+So I can tap half time, right?
+Just to slow it down.
+It feels very frantic to me right now though.
+I'm just going to take a look and see what's happening.
+I think it's that kick trigger.
+It's just making everything go bonkers.
+Yeah.
+Yeah.
+So while we're at it, why don't we check out scene one.
+So, I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+I'm going to go back to the screen.
+Okay.
+Now, of course, I'm not very happy with how everything's come together right now, because it's like
+going from one setup to another.
+So, you know what?
+Let's start tweaking these rules.
+So, we're going to go to scene one.
+So, originally, this had this movement on Z from the snare trigger.
+And this is just moving too fast.
+I think I had this on a quarter before.
+That was it.
+So, let's put this actually on a half.
+Slow it down a bit.
+I think it's also because the set from Overse was about a good 15-20 beats per minute slower
+than this set from Ronnie.
+So, yeah, you know, that also has to change a little bit, I suppose.
+But, I mean, this is kind of getting there.
+So, if I'm going to crank that snare trigger up, it's going to all calm down a lot.
+So, what you're seeing there is that zoom blur, that's caused by the kick, right?
+That's here.
+So, if I'm going to press this one now, it's not going to...
+Or is that the kick gate?
+Or is that the kick gate?
+Let's take a peek.
+Ah, it's the snare gate.
+Okay.
+I'm going to put this on kick gate.
+Now, this is a mistake that I made, right?
+Hmm.
+Yeah, okay.
+Think about it.
+So, you're kicking your snare.
+They're never on the same time.
+But, what was I thinking?
+I got it mixed up.
+So, you know, if this is the kick, right?
+It starts on the downbeat, the down bar there, right?
+But, this wouldn't do that.
+So, what I'm going to do is I'm going to get this now.
+Ah, completely messed this up a little bit here, right?
+So, this has to be half.
+Half.
+Yeah, okay.
+Now, I get what I did wrong.
+Okay.
+So, let's actually just get rid of these.
+I'm going to do copy.
+I'm going to do paste.
+I'm going to go in here.
+I could move this note over here, but I'm lazy.
+So, I'm just going to move the play marker there.
+Halfway through.
+Okay.
+What we need to do is now, this needs a shift up.
+So, this has to be like this.
+Yeah.
+Okay.
+That's me not really being in the flow tonight.
+And this is really boring stuff, right?
+As in, this is just like, um, 4/4 to the flow.
+There's nothing very strange going on here.
+So, let's try this again.
+I'm just going to do one for one.
+So, that's when the kick starts.
+But we want the snare to like start maybe here, right?
+Which could coincide with the kick, which is okay.
+Let's do this.
+Let's put that there for now.
+Let's grab this one.
+Paste it.
+There.
+So, now, I want these to start in between the kicks.
+Right?
+I mean, that's traditionally how most dance music works anyway.
+So, let's go here.
+Let's go here.
+Oh.
+And we're just going to move them one to the side.
+So, they're just falling between the kicks.
+I could move the play marker, but I'll just do it like this for now.
+Control C.
+Control V.
+So, that was the problem.
+Our kick and snare gates were always happening on the same count,
+which is like really kind of boring.
+We shouldn't have to remap the MIDI stuff because live doesn't map that to an actual clip.
+It maps it to the actual slot.
+All right.
+So, let's go.
+Let's just try like this.
+Yeah, I'm just not too happy with the smooth motion, basically.
+I mean, it seems to work.
+Whoa!
+Yeah, this is all way too frantic.
+That's all.
+It's all just way too busy.
+All right.
+Let's go over here.
+Let's turn this off.
+Just one moment.
+I'm just going to close my window.
+The neighborhood's getting rowdy.
+I'm just going to close my window.
+Yeah.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+Okay.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+Just going to close my window.
+I'm just going to close my window.
+You're just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I'm just going to close my window.
+I mean like this is actually not too bad.
+Just got a feeling that the smooth is just there.
+It doesn't have the attack transient in, but that kind of makes sense because, you know,
+this is a number like between minus 20 and 20.
+There's no, there's no way to say I want those transients to be kept.
+So that kind of information.
+Hmm.
+Okay.
+So just to show you something there.
+So like we've got this half trigger, quarter trigger, so we can determine like how often this
+is happening with like how often we module.
+Oh, so this is on four, right?
+So every time it hits zero, yeah, then it's on a downbeat.
+And so if we put this on two, this is going to happen like twice as much basically.
+Put it on four.
+Let's not play with that now.
+That's just wild idea for later.
+I'm just curious why this one is just going so completely bonkers.
+Let's take a peek.
+all right kick gate it's this one let's take a look what's happening to kick
+trigger snare trigger kick trigger a lot of that stuff down
+is that even being used I don't think so that's something left over now we're doing a render
+texture here
+okay so I'm not too sure what's going on okay this was the outside keyboard I'm gonna press D to
+bypass okay so that's the end cube I'm gonna go ahead and press D to bypass okay so I'm just gonna
+disconnect this for a minute I'm just gonna look at these numbers like why is it going so so crazy
+here like why is it so so mad fast now this is happening with the kick trigger so this is very
+jittery that explains why this is a bit yeah if you right now so let's maybe put it on a quarter
+yeah so now this was great in that set from all first but this is like audio reactive now okay this
+makes sense now all right so that the eighth trigger is a little bit too much so let's do this one
+actually on a half just want to slow it down okay yeah this is with that kick gate it's probably this
+one let's take a peek so if I click this one now it's going to go way faster with the kick gate see
+that's that midi note I'm going to put this one half speed I'm going to put on the slowest
+okay and this one triggers random number smooth it just beats RGB okay I'm just really curious here what's um causing all this mad freak out on the screen
+yeah so it's basically all this stuff going in there all right so yeah I mean we spent quite a while tweaking
+it in the previous um stream to get it right
+I'm going to make it snap here
+I'm going to make it snap here
+okay
+so let's put this on one one
+ah okay and basically this is working
+right
+okay yeah
+basically I just got these triggers just like way too high
+half and a quarter is already pretty fast
+I just have the feeling that dial up too
+slow down
+and this is when you kind of like want to bypass stuff right and you can
+so this is getting this um
+kick gate but I think that's just like a little bit too intense basically
+let's put this in a half
+okay okay okay I do want to do this with a kit gate
+okay because this bull item is going really rapidly from one to zero so
+this is an interesting thing now you know um so I can go into live this is why live's really cool
+okay I can go to this kit gate go to the track and click here and I'm going to go to midi effects
+and let's just grab um note length
+let's get a midi
+uh this is just rough right now so it's nothing set in stone um let's grab
+this one
+on the top right there
+so what that means is I can now make the um midi note longer right
+I hope that's visible
+sorry guys trying to keep track of
+no that's not visible okay let's pull this over
+it's a
+sorry it's too much midi gear to fit on tonight so it's uh this knob right here
+so I'm using that to change the um the length of a note right because what's happening is the the blue anim
+um that's the that's like how long the note is right so if I'm going to turn this up now
+voila as you can see uh it's way too long so let's let's lower it now
+so this is really cool because basically I'm just using like a midi note it's like an on off
+you know if I turn this down it's going to become almost pretty much zero right just crank that up a touch
+so there's my midi note so that's having this effect right where that is um snappy but if I'm
+now going to turn this up as you can see it takes longer and this is you can do such amazing stuff
+with this right with just like combining this all together and I know this can be really overwhelming
+if you've not seen all this before the trick is just to get like one little setup and then just learn
+these basics basically now don't forget this thing that I'm doing here like right now with note length
+all of these ideas are interchangeable with each other that's just the equivalent of the smooth up
+inside of cables right so you know you you create a number from zero to one and you add a longer
+smooth factor to it so you give it a fast transient so it goes immediately up and then it goes down so
+I'm just using live because it's very familiar to me I've been using this bad boy since version two
+um but it'd be really interesting to like um try and do this without live I think in the next one
+just for the people that don't have a couple of hundred euro for this software and I think it's a
+really interesting thing to pull this off in cables I did a lot back in the past with uh max msp with
+generative sequences step sequences and things like that so this is just like a really this is just a
+quick and easy way to get stuff going basically all right so let's get that audio analysis a bit back
+now of course this one also needs a little tweak
+so we're gonna go to scene three and these visuals are really built with that specific set so it might
+just be cool just to do them a bit from scratch but keep the whole idea but just uh yeah okay
+quarter trigger once again that's really way too much like let's put it on a half
+yeah this one is doing
+nothing wow what's this ah wow all right forgot about that one sweet
+okay what's happening so ah we use the preset up here that's kind of cool
+so this this one i mean this is using the kick trigger which can be
+pretty intense we've got some here the profit gate um we're not using that right that's that's non-existent
+right now yeah so these all have to slow down a little bit half trigger just going through it general little
+tweaks
+as you can see it's calming down a little bit now
+so you know if we so now we've turned off the um the audio analysis with the kick and the snare
+and as you can see it's chilled out a little bit now if there's a kick or a snare gate in here
+they're going to be controlled by this so let's resync
+still way too active for me right now but it's okay you got to start somewhere
+i think it's just too much reacting to the um
+let me just look at this
+ah brightness zero so it's not changing color
+i'm not too sure what that was doing
+ah right okay let's go here
+so let's get rid of that profit gate for now i'll just leave that there as a kind of reminder
+let's grab the kick gate
+so now i can turn that note length up
+comes longer
+yeah the only problem is there's just some really really crazy values going on here with the numbers
+i'm going to put this on one one don't want it happening so much so if i don't know what everything
+is doing we're just going to go here and just kind of like um check this out i mean i think it's this part here
+yeah so this is where most of that business is coming from yeah these all transformed view
+quarter trigger so let's put it on a half i'm just gonna i'm just going for timing right now quarter
+and i'm also going to put some one one so it's just too busy i want to i want to get it back to a nice
+speed before i round it off uh for tonight later
+okay this is feeling more relaxed now uh not so out of control
+because i mean the obverse um ableton live set you know that was like really
+um a very precise set it was also a minimal track there was a lot of space in there
+and this mix from ronnie is a lot more upbeat and a lot busier
+so yeah but i mean the systems the systems get in there
+you know what just before i round it off for tonight i'm gonna do this
+i love this part of the mix super cool all right let's go here
+um i'm just gonna do something really really simple um i'm gonna grab a transform
+and it's just gonna be so quick and easy let's just do a create a sub patch and we're gonna call it
+patch four uh scene select this is from the sidebar only goes from zero one and two
+so we need to increase this range by one to three all right this is going to make everything vanish
+probably that's what keeps that in the memory all right i'm not sure exactly how i set this up last
+time i think i did everything with a render to texture
+really don't remember
+just give me a minute it has been a while
+how does this go again
+uh so it goes to render to texture called more cubes let's try that um so let's just go here
+render to texture
+and let's just go down to mesh instancer i love mesh instancer i should just get it
+i should just get like a tattoo of mesh instancing i think it's just so good
+got a cube cool um var texture if i'm correct and we go to
+that is unusual
+all right
+texture i'm not sure what's going on there all right let's just jump to another patch check it out
+press c
+yeah must be because there's a new version available right okay i'm just gonna grab this
+so sometimes you get that and we're still working on our versioning system so the reason the variable
+um didn't appear is because um the old the the var set texture was version one and what i just created
+now uh it gives me version two that's why the variable names don't match up hey there we go all
+right cool okay so let's make this uh bad boy a little bit smaller got the tiny humble little cube there
+so let's grab um a random numbers array free for positions
+cool nice and easy let's grab on number one and let's go from a range of zero to um
+let's go from a range of one to four cool and then we're gonna do um we're gonna make them integer
+i'm gonna do array multiply uh by 90 so they're gonna rotate zero 90 180 or 270 degrees
+um i want to make sure these are all the same length so um total points point is xyz i'm gonna grab that
+and pull that up here quick easy way to get something going let's plug this into rotations
+now i'm going to see much difference because the cubes aren't that long yet
+that's pretty long okay and let's turn off that global effect so we can see what's happening that
+looks a bit boring because there's no real material stuff going on there so let's go here and grab the
+lambert material to get some shading kinky all right cool so let's now go and just grab a part of the patch
+because there's no point in rebuilding the cell from scratch again let's go to patch one
+and what i'm looking for now it's just something with this sweet so it's just the the trigger trigger
+counter modulo if it's equal to zero trigger change true great
+now something i've got to do that i keep forgetting is um this i cannot believe i've not done this yet in the
+last few streams bookmarking it's a really cool thing in cables and i still forget to do it i click
+this um sub patch let's go in now okay uh let me just click this i'm gonna bookmark it okay now let's go
+to patch two and i'll just go to render to texture like the top here like this sequence and i'm gonna bookmark
+it i'll i'll label this lately later i just want to do this now before i forget so i'm gonna go in
+let's go here actually let's render the texture i'm gonna bookmark so if you want to use a bookmark you
+just click in the canvas there um and these are the bookmarks right here so i should relabel these
+ups but if i now click this i jump into patch one so let's do this actually um
+i'm just gonna call it p1 cool i'm gonna go here click this p2
+i'm gonna go here i'm gonna call it p3 it's just a great way to um navigate your patches
+okay let's go into patch four go here bookmark so now i don't have to um go up to main and then
+jump into the patch again i just like click one of these and as you can see i just jump from patch four
+straight into patch one click somewhere in the canvas click here jump to patch four great okay so now here
+um great it's still had it in the paste memory great let's move this up a little bit
+all right so this should be giving me a random number once in a while so now let's plug that into
+seed
+and we got to the end of the mix again oh something happened let's just start it again
+all right um and this random number i'm just gonna get a different one
+and i'm gonna put that in yeah and i'm gonna be really lazy right now and i'm just gonna grab
+smooth array so if i need a trigger
+cool let's grab another copy of it this is just to get one little thing going
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+okay so if we turn this on
+i think that's in was taking the snare gate
+all right is the kick go okay
+okay
+ah of course it feels too long we're using this
+note length
+yeah that was a note length
+okay
+yeah all right yeah so the time in those midi notes is just like way way way too much
+okay so now i can use a butt mark i can just jump in here
+so now the cool part is we can just um get this whole chain here
+and
+i'm just gonna grab this yeah i'm just starting again in the smaller patch it's kind of feeling a
+little bit overwhelming with the whole um
+massive patches from the previous streams of course i don't remember exactly how i put them all
+together um so let's do this integer
+let's do one two four
+i'm going to multiply
+by
+90
+i'm going to plug that into a smooth
+just grab this pull it down
+okay
+okay yeah this is this is the difference now of like building it from scratch with this setup compared to
+trying to make a previous
+setup with a lot of tweaking in there and just work out the box it's really not that
+simple
+and so we've got a few jaggies there so we go to this render the texture
+and we're just going to put the msa on times four that's already
+more than enough to get those jags out of the way
+all right so this is a this is a really nice simple one
+and now i'm just going to do some really simple stuff
+um
+i'm just gonna grab this
+and this is going to be slightly messy with the patching but that's okay
+grab this and let's just pull all this up
+let's move this actually over here for now
+boom and boom so all i want to do is when trigger change true
+i'm going to trigger that and i want to trigger this
+so now i'm going to say i'm go between minus two and two
+integer uh don't need to multiply
+and let's just do
+trigger receive because i want to add the gates in a minute i just want to
+get a basic thing down so i'm just going to grab good old t1
+this also goes in here all right so this one i'm just going to plug into uh position x
+and that of course is way too much so let's just do minus one by one
+minus one zero
+when in doubt just try it out
+i just do this it might have the wrong way around
+oh no minus so let's say minus two or minus one that was it so minus two or minus one
+i'm going to plug that into position x
+and actually let's get the um
+kick trigger
+so that's going to be from the controller so
+if i'm correct
+so now we start the kick trigger
+so this one now we're actually going to move back and forth we're going to put that on the snare trigger
+and this one we're going to put on the z axis
+so say um minus two to zero okay get rid of that multiply
+minus two to zero
+whoops and this one i'm going to plug into transform
+on the z axis
+so let's see if we can get that high
+up
+yeah here we go
+yeah here we go
+lower dot q about
+there we go
+close enough
+maybe i should have just started with this at the start of the set it might have been easier for
+everybody to follow um but yeah i have no idea what i'm going to do most of the time when i'm going
+to start these um sets
+yeah okay i should have just started with this but i was really just curious if i could just like patch
+um everything in or not okay um you know this this could be more interesting
+yeah let's put on 45 so it's a 45 and 90 degrees there we go
+that uh
+okay
+can we can make them less on the screen yeah okay i like all right
+yeah okay yeah so basically all those other visuals they just
+they just need to be tweaked right from the ground up with this new audio analysis set you know because
+the whole idea is to make vj software which can run in a club i mean i would totally love to be
+able to uh after the whole covet 19 fingers kind of passed um
+do some visuals in a club uh somewhere here in berlin that would be amazing
+um probably find somebody to spin some tunes though uh in an empty venue uh just to try it out
+like get a feel for it so yeah um okay
+you know i think i'm gonna leave it at this for tonight um i already think it's been pretty cool
+progress with the whole um audio analysis and the bpm tapsing i i put too much time into trying to
+get these old patches to um work with one live set and then a completely different setup but hey you
+know this this is this is building your own creative software right um whatever environment you use
+hopefully use cables because um it takes time it takes experimentation you know these things are
+not just like put together on the first attempt you know it just takes time to make these things work
+the way um that you want them to basically so i mean i'm i'm pretty happy with how um this has gone
+there's a lot of more things to tweak and a lot more things to try i'm really curious about trying it in a stream
+um with recreating the functionality of ableton live but without ableton live because i'm very aware that
+a lot of um our cables users you know don't have access to ableton live um it's a program that costs money
+obviously uh because it's really good software so it might be really nice for me to um just make a stream
+where instead of like focusing so much on building the vj software just trying to show you how to recreate
+um some of the functionality of ableton live with just cables i think that could be a really cool
+um episode actually it might not be so visually amazing but i think that would be really i think
+it would have a lot of utility for people um that really want to build their own vj software inside of
+something like cables um it's got a little bit quiet in the room i get it it's been very technical episode
+um tonight's nothing so focused so much on the pretty stuff even though i think it's pretty nice what's
+coming up though hey um so i'm gonna just ask does anybody have um any questions um i've not been asked
+one tonight which is a rare thing but i get it like i think this is a very specialized kind of thing
+um but who knows maybe um somebody has a question before i wrap it up um for tonight
+i'll uh i'll just give it a minute or two
+and it doesn't only have to be about the vj software right um this is your chance to ask
+anything you just might want to know about cables in general
+all right i don't think there's going to be any questions tonight then okay well i'd like to give a
+a big thank you to everybody that uh came in um tonight and uh followed along with the stream
+once again a little bit different than what we uh usually do even with the vj software stuff
+that i've been working on um i'd also like to give a big thank you to ronnie um for uh supplying
+us with this mix there's another two that i can use so i'm really really happy about that and i'm
+going to continue in this direction now with the whole vj software thing step off the one tweet able to live file
+and go into the world of audio analysis and live tapping along with the beat so let's head in here
+and uh unfortunately put this stuff to a stop where did i put it now audio stuff there we go
+all right so um that was it thank you very much uh see you in the next stream uh i don't think i'll be
+doing one next week because doing one every week was becoming kind of intense i'm not too sure if we
+will be doing a stream uh with undev next week uh just keep your eyes open on the social media channels
+mainly twitter um on our facebook page as well um in case you missed it we brought out uh one or two
+blog posts uh with the last twitch stream or two a lot of really cool patches and some stuff there that
+you can see so um if you missed that maybe you want to check that out on the cables gl blog and um
+that's a wrap so uh i hope you are all uh well in these uh interesting times and uh can't wait to see what
+what you guys are going to make with cables all right have a good one bye

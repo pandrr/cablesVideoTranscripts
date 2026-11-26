@@ -1,0 +1,208 @@
+https://www.youtube.com/watch?v=Ad3GuPEdl1Q
+- Hello and welcome to another tutorial.
+So this is part of our open source tutorials.
+And today we want to go through the steps
+to set up a local development environment.
+So this means you can check out the cable's source code,
+the complete code, compile it on your local machine
+and run it and you can make changes to the code
+and basically develop cables as we do.
+So to do this, we go to the docs and there is a,
+first of all, we will be using the cable standalone.
+So there's a whole category here about the standalone.
+And then there's a category about developing cables,
+which is also in the standalone.
+So we will run the local environment using the standalone,
+which is also called electron sometimes
+because electron is basically the framework
+that cables uses to run locally.
+So electron is basically a Chrome browser
+without the whole Google stuff
+and without the whole user interface.
+So it's basically, you can just put your own HTML
+and JavaScript in there and then it will just show that.
+So for example, Discord or Slack are very well known apps
+that are built on electron.
+So this is a development framework for building offline browser-based programs.
+Okay, so let's do this.
+So for this, so I will do this on, on a Mac, but this should completely be the same on Linux.
+It's basically on Windows, it's basically also the same.
+So there's a little section here about how to set it up on Windows.
+So on Windows, you don't have a nice terminal by default.
+So if you know about this kind of stuff, then it should be no problem for you.
+If you don't, you can always use Visual Studio code.
+So this is an editor, which also brings its own terminal, but yeah.
+So, okay, let's, let's do this now on the Mac.
+So here's my terminal and we just go through those steps here.
+So first of all, you need to install Git.
+So I already installed it.
+I think it's already there in Mac OS nowadays, so you can enter Git.
+And then if you see not an error message, but this kind of stuff, then you have it installed.
+And then it says, we should clone the cables dev repository.
+So for this, I just go into my dev folder.
+So this is where I develop all my stuff and make a new folder.
+Torrel, whatever.
+So go in there.
+So we have an empty tutorial.
+So now I will just copy this Git clone command here and I will run it.
+And, um, that was fast.
+So this now created a directory called cable staff.
+So change into the checked out directory, CD cable staff.
+So, uh, and then you can see there are a bunch of scripts and a bunch of directories,
+but that's not, uh, uh, we will dive into that later.
+So continue below.
+So we go here.
+You have to install the note, uh, version manager.
+Um, so this makes sure we all use the same note version.
+So notice the JavaScript, uh, environment that's running in Chrome.
+And you can also run it on your computer locally.
+And we use it to build, um, cables basically.
+So you have to install that.
+And this makes sure that we all use the same note version because sometimes there are big differences.
+Um, and I also already did that, but yeah, you go to that website and it gives you a, um,
+tutorial about that.
+So after that, you should be able to run this without an error.
+And it just, uh, tells you the version of NBM.
+Um, so if that all works, we want to run this little shell script here, install local.
+So, uh, we do this by entering dot slash install.
+And then this will take some time.
+So this will check out all our, uh, repositories.
+So cables is split into multiple repositories, uh, for simpler or like for more convenient
+development.
+So one repository is for the whole editor and the user interface.
+Then there's a repository just for the electron stuff.
+Then there's a repository for all the core stuff.
+So this is basically the cables core that runs without the user interface.
+For example, if you export something, then you only get like the core and not the,
+the editor, the user interface and the core also includes all, um, core operators.
+So all operators that you see, uh, on this page, basically.
+Um, so it will just check out those, uh, repositories and, um,
+uh, it will install the required node version.
+If you don't have it, then it will check out all the repositories.
+So this is what, what was happening there and then it will install all dependencies.
+So this is all, um, node modules that we use.
+And then it will run NPM run build.
+So this will run like this will build cables for the first time.
+So that you in the best case, you have an executable that you can run.
+So all that, all that happened now.
+So, um, we can scroll up here and we see there's no real error message.
+So nothing really big red happened.
+There it looks really good.
+Okay.
+So now we should be able to run node, uh, minus, minus version.
+And then we have the node version 20, uh, node version 20.
+And, um, yeah, if not, then you have to do something.
+So now we have more directories than before.
+So now we have cables.
+This is the core, uh, as I said before, then we have cables electron.
+This is all the stuff related to electron, the cables UI.
+This is the editor or the user interface.
+Then we have docs.
+This is basically those, all those docs.
+And then we have, uh, node modules, which is installed node modules and shared,
+which is some code that is shared between repositories.
+So that's the whole, uh, cables development environment basically.
+So what do we do with this?
+So first of all, we should now be able to change to cables electron and run npm run start.
+So this will launch electron for the first time.
+So it works out of the box.
+So, uh, let me open this again.
+Um, so now we ran, um, cables locally from our compiled version.
+Uh, where is the welcome thing?
+And you can also check the, this welcome tab always opens when you open cables.
+And it will tell you electron standalone development version.
+So if you download it, it will show you have, uh, which version you downloaded.
+But now you compiled it, like customly compiled it.
+So it doesn't really have a version number, but you, you can see it here.
+So, um, yeah, so we ran cables from our own new compiled version here.
+And you can just use it as you would always like.
+You should all have all, most operators, not the extensions, but about, we will talk about this later.
+Um, so great.
+So let's say you, like you installed this and then a lot of stuff happened.
+A few weeks, uh, went by and you can run it again, but you want to update it right to the newest version of cables.
+You can do this by, um, this command update repo.
+So this will like pull all repositories that you, that you use here and it will, um, get the newest version.
+And then, so you see, I, I just installed it.
+So there's no new versions, but, um, there is basically changes every day in, in, uh, many repositories here.
+So then you can get the newest version.
+Okay, so, um, great.
+So now let's have a little look into how, how we basically develop cables.
+And for this, um, I will use, I will show you a visual studio code.
+So this is visual studio code.
+Um, and in visual studio code, you can, uh, uh, select open workspace from file.
+So now I go to my dev folder and my tutorial folder and I go in here and then you see there's the dev cables
+code workspace.
+So this is basically a workspace file for visual studio code, and we can just open this.
+And then, um, you see everything that we saw before is in here.
+So there's this core directory.
+There's the UI directory and there's the docs directory and so on.
+And now we can, um, browse.
+So you can browse through all the files.
+So for example, the UI, um, you see there's fonts, there's HTML.
+There's, there's the templates for all the dialogues and cables and all this kind of stuff.
+Um, then there is items, then there's SCSS, which is basically the, the style sheets for cables.
+And then there's source of the sources where the magic happens.
+So this is all the JavaScript code.
+So, um, yeah, you, you can see them all and, and make changes to them here.
+So let's make some really simple change, uh, just for, for showing it.
+Um, so I will make a change to, um, the SCSS.
+So SCSS is basically a CSS, but with a more convenient stuff.
+So you can basically combine multiple CSS files into one.
+And you have some helping convenience, uh, syntax, um, stuff.
+So what I want to do is like, I want to add like a little border, um, to the body, um, of cables itself.
+So, um, as I mentioned before, this handy on windows, uh, for sure.
+But it's also handy on, on Macca.
+So I can create a new terminal here.
+And then I can, in my editor without changing the windows, I can, I can do stuff.
+So now I, I'm, I'm already in the right directory here.
+So I, uh, can also run cables from here, basically.
+So I will just change to the electron folder again and just stay and, uh, uh, execute npm run start to start electron again.
+So now you will see nothing changed.
+So our, I expect there's like a red border, uh, on the, on the body element of this, this editor, but there is nothing here.
+This is because we did not rebuild cables.
+So after each change we have to, so the, this, the whole application has to be built again.
+And, um, this would be really annoying to, to execute this all the time.
+So, um, there's also a script there.
+So this you can find later on in the documentation under using standalone to develop cables basically.
+So there's some explanation about those, uh, run commands.
+But the most convenient one is, uh, this watch standalone, which is also shown after you install, use the local install.
+It will also be shown to you, um, that this is the most convenient one.
+Okay.
+So for this, I, uh, I have to go to, sorry, um, to the root directory, to the cabits dev directory.
+And then I will type npm run, run watch standalone.
+And this will watch for changes.
+So, um, when I save this file, you see something happens, right?
+Um, so when I save again, you see there's starting SAS.
+So this is this, this style sheet compiler, um, that, that is doing some work.
+So, uh, great.
+So it did something.
+So now I can, I can again change two cables electron and type in npm run start to start the electron.
+thing again.
+And now you see this red border here, right?
+Um, now it is really annoying to restart the electron thing all the time.
+Um, but in most cases, you don't need to do this, except if you change something in the electron code
+itself, you can just, uh, make a change.
+You see the changes, uh, happening and it's recompiled.
+And now I can go into the electron and press command R like you would do in a browser to
+reload the page.
+So I can reload the page and then you see the new color here.
+So, um, this is really easy.
+And this is really important to us that we can make changes super quick.
+Right.
+Right.
+So I just press command R and then I see the same page with the change.
+So it doesn't even take a second to, to do this.
+Um, so that's, that's really handy.
+And this is the same if you change JavaScript files.
+Um, if you change electron stuff, you have to restart electron again, but all this HTML and
+JavaScript stuff, you can just, uh, this is just built automatically by this, uh, npm run, uh, watch
+standalone and then you can just reload.
+And that's basically the whole setup.
+Um, yeah.
+If you have any questions, come to the discord or go to the, to the GitHub discussions
+and let us know if, if it worked for you.
+Um, if you have questions on windows, et cetera, if it doesn't work, I will also make a tutorial on
+windows, I guess, uh, if there, if there are too many problems, but it should work, um, out of the box.
+Um, yeah, try it out, uh, let us know and, um, send us those poll requests.
+Thank you very much.
+Bye-bye.

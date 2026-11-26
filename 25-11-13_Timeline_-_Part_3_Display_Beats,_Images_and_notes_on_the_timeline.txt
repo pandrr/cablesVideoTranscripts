@@ -1,0 +1,61 @@
+https://www.youtube.com/watch?v=BYQ1Ecy-wsU
+- Hello and welcome to the third part
+of our animation timeline tutorial.
+So in this part, I want to show you really nice tools
+to synchronize your animation to music.
+So for this, we created a possibility for operators
+to draw into the timeline.
+So like the VisOps, they can visualize data
+or just draw shapes or images to the timeline.
+So one example for this is the timeline BPM operator.
+So BPM in this case stands for beats per minute.
+So you can set the parameter beats per minute
+to the BPM number of the music
+that you're synchronizing with
+and you will see those rectangles here.
+So this is the beats in your music then
+and you can scrub through it and you see the number,
+the beat index where you are right now
+in the time, on your timeline.
+In the future also, this will snap the cursor
+like dragging this line should drag the,
+snap the cursor to that beat.
+Yeah, but now you have a really nice overview
+where you are in your music and which beat
+then you can really synchronize cuts and animations
+to those beats.
+And another op that's quite similar is the timeline image
+and this one will add an image to your timeline.
+So you can click Open File Manager and select an image.
+So I generated this image with an external tool.
+Maybe in the future, maybe we will add more ways
+that cables can analyze music
+and directly render it on the timeline.
+And now I can move that image on my timeline
+and I can say the start point
+and the end point of my music.
+And now I see like the frequency analysis of this,
+of this audio file, which is really handy to synchronize to.
+And it's, in the end, it's just a simple image,
+but maybe we will have the, use the waveform op
+in cables to, to draw stuff to the timeline
+and that you can see, that you can see your audio track there.
+- Yeah, so another nice thing about keys
+or another nice feature on the KBITS timeline
+is that you can, you can just select keys
+and scroll down here in the, in the little panel here.
+And you will see there's a comment and a color,
+like, like in the operator.
+So when I select a color, you will see,
+I just colorized this area.
+And when I type my comment, I can write comments.
+So I have some idea what's happening there.
+So I can make some notes in my timeline
+or just colorize it so that, you know, in this area,
+this particular thing is happening,
+or this is the important thing.
+And so I can come back and, and know exactly
+where I have to go without searching and scrubbing.
+You already know it should be in the, in the blue area.
+And yeah, this is really helpful to organize your keys.
+Okay. See you in the next one.

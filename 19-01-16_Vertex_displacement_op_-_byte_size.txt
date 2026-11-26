@@ -1,0 +1,30 @@
+https://www.youtube.com/watch?v=NjG85Qbbl0w
+Hi there! Welcome to another video on the ByteSize channel. Today I'll be giving you
+an introduction to the vertex displacement op. I'd just like you to pause the video and
+just make what you see here. Great, let's get started. So first of all I'm going to go here
+and I'm going to add the vertex displacement op. What this is going to do is going to displace the
+vertices of a mesh depending on the brightness of a pixel from a texture which is going to come in
+here. So let's click this image compose and we can see we've got this texture right there and let's
+plug that into the vertex displacement map up. Now we don't see a lot going on because we've only got
+two triangles so let's increase the amount of subdivisions. Let's put this on 10 by 10. Now
+this is starting to look more like what we've got here. Let's increase the width and the height.
+Great, so as we can see there's kind of some displacement happening based upon what's going
+on now. So if we increase the amount of vertices it starts becoming smoother. So I'm just going to
+put it on 30. The more vertices you use the more expensive it becomes. And let's go over here now
+and make a time or two and let's just animate this so we can just see what's happening. So I'm going to
+plug this into the offset parameter. Let's just slow this down. And as you can see what's happening here
+now is the pixel brightness is displacing the vertices there, right? So we could go really crazy with this.
+We could add another waveform gradient. We could grab it. We can put it on multiply and as you can see we now
+get the effects from here is displacing the things there. If I just rotate this a touch. We already
+start and then there was some really interesting patterns. So I'm going to go over here and you can
+go wild of this. I can use a blur so it kind of becomes smoother. I could just also add a brightness
+contrast up. And with this now I can get very different behaviors and results out of this kind of
+chain of effects that we're stacking together. So let me just like delete this for now. So you could
+also just go here and add the FPM noise up. And as you can see we now get this. And if I go over to the
+rectangle and I'll put it on a really high amount like 60 by 60. As you can see we're now kind of getting
+this like terrain like effect. I can now just scroll through it. We can also add a blur
+to make it a little bit smoother. And you have to experiment with this and with different materials
+because right now we're not touching a lot of subjects like normals and things like that.
+But this was an introduction to the vertex displacement app. I hope this video has been
+educational and informative. If you have any questions or comments please feel free to leave
+them under the video or below or on the forums. Thanks for your time. Bye!

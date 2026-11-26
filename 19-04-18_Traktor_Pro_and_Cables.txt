@@ -1,0 +1,104 @@
+https://www.youtube.com/watch?v=dwLBCdXKH-Q
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the forums is
+andro and today I'll be showing you how to connect Tractor Pro from native instruments to cables with
+the basic MIDI clock signal and how we can use some of that data that's coming in to create some
+very simple basic animations which you can hopefully use to create your own visual live
+sets in the near future so without further ado let's get started so right here I'm inside of
+Tractor Pro I'm going to click file and I'm going to go to preferences so I'm going to click audio setup
+make sure that you've got sound coming from Tractor Pro and now if you click external sync I'll just
+move this over here you need to make sure that enable MIDI clock is on right here and as you can see this
+part appears here and that's what we need to synchronize with cables the last step is we go
+to the controller manager by default the device is on Tractor Scratch 2 so what I'm going to do is I'll
+go here and click add generic MIDI and then I'll add an output and I go to master clock clock trigger
+MIDI sync now we need to send this clock signal to a virtual MIDI port now I would advise you on windows
+to use loop MIDI it's a really cool program and it's free so download that it takes a minute to get up and
+running instructions are really clear on Mac you're going to have to select IAC MIDI driver so here I'm
+going to pick loop MIDI port that now means that the MIDI from Tractor is being sent to loop MIDI port the
+output device target make sure that's on focus and that's it we're good to go so I'm going to go here
+and I'm going to click close now you need to make sure that auto and master is selected here
+and that the sync option is on here and the sync option is on there okay so let me just rewind the
+track so now I'm going to go into my cables patch and this is it and you'll be able to grab this in a
+little bit from underneath the video so if I press F flow mode nothing's happening so let's take a look
+this has my virtual MIDI driver loop MIDI port so this is the data that's coming in from Tractor
+here I've got the op MIDI clock beat this allows me to receive MIDI clock signal and now let's just
+do this so I'm going to go over here I'm going to press play I'm going to turn on sync with this
+now I'm going to press sync one time okay so now let's go back to cables press F for flow mode and as you
+can see we've now got data coming in so if we click MIDI clock beat we can see we've got the sub tick
+we have the bpm we have the tick duration and here we have two triggers coming out so this is beat and
+this is subbeat easiest way to explain it is imagine you're counting one two three four one two three four
+so beats outputs on the one and subbeat outputs on every number that's the easiest explanation that I
+can come up with right now so trigger counts as you can see is keeping count of how many triggers come in
+so if I press the reset button you can see we've got this so this is going way faster than this one here
+from beat because this just is going every time on the one count so we can already use this to do a lot of
+cool stuff inside of cables so I'm going to scroll down and here's a little chain that I've pre-prepared
+so trigger counter is outputting a number so I'm going to grab this I'm going to throw it into modulo
+this is basically going to allow me to loop numbers so modulo is now on eight and if we look here at the
+result we get this kind of loop and this loop is going to allow us to do some really cool things
+so the next up I've got is trigger unchanged because I don't want a trigger every time there's a frame
+called in cables I only want it to happen when a number changes so that you can see here a number
+changes and we get a trigger now the number from modulo as you can see is going into if equals then
+why if this number equals this number zero in this case we then get a trigger later on this will make
+sense this allows me to create an offset does a trigger happen on zero three four seven or eight
+toggle bool last one so when it gets a trigger it outputs a true or a false and it alternates between
+the two as you can see here so now we connect this to bool anim and let's just grab a main loop because
+bool anim needs this to work it's going to go here I'm going to create main loop to bool anim
+and bool anim will go between the value false and the value true whenever it comes in here and the
+duration is determined here so let's put duration on half a second let's put direction on both and if
+we now go here we can see it goes between zero and 90 depending on if true or false is coming in so
+let's use this to animate and make something happen on the screen so I'm going to go here and I'm going to
+grab a matte cap material new just put that over down move down a bit and now I'm going to grab a transform
+and now I'm going to grab a cube and the cube I'm going to put on width one height 0.5
+length 0.5 I think I forgot to put this in cruise mode there we go cruise mode so now it should just play on
+the whole time great so here we have this cube and now we're going to plug this bool anim into the transform
+and we're just going to put it on rotate y
+okay so we've got something happening now so with bool anim by tweaking the duration we can make it
+go slower or faster
+that's the basics now we can pick direction so we can say only happen when it's true
+or only happen when it's false it's kind of like a way of picking the offbeat with the boolean
+so I'm just going to put it on true for now okay so the thing we've got here is if we go to tractor
+if we speed up or slow down the track that duration with bool anim stays the same right so then we've
+got times when an animation like might not finish so there's a really cool little trick for this so
+here we have the tick duration and this change is dependent on the bpm so I'm going to grab value
+I'm going to put this here just make a little bit of space
+turn off flow mode for now so at this tick duration as you can see this will change depending on the bpm
+so now I'm going to get this I'm going to plug it into a multiply
+and this multiply I'm now going to plug into duration
+and if I now turn this down we can make the animation go faster or slower
+you know what let's make this cube a little bit wider so it's just a bit clearer what's happening
+okay great so this is this is the most basic animation in its basic form so if we now go to
+modulo and we put this in four it's going to happen twice as fast put it on two it's going to happen
+like this put it on 16 it's obviously going to take longer so that's just the basic idea there with
+how to determine when things happen so I'm going to grab bool anim it needs a trigger I'm going to grab
+this I'm going to grab the bool and I'm going to plug that in here and now I'm going to get this tick
+duration and I'm going to plug it into duration here and I'm now going to plug this into position z
+so now I want to say go back minus four and come to zero
+but I think this is happening a little bit too quickly so I could grab another multiply
+and this is the best part now I can make the speed independent of this one here so this one's going to
+this bool anim this one's going to go here and I'll plug it into duration and I just want it to have a
+different speed basically so if I go to bool anim and I put it on animate both it's going to go back
+and forth as you can see and I can say I want this to happen a little bit slower now you should definitely
+check out a bool anim the easing modes they allow you to get a lot of really cool behaviors you should
+check out the animation tutorial that we've got for that but just play around with them so this
+is like one of the most basic things we can do here so we could stack this up and make a whole lot
+more stuff go on so let me just grab this and paste it here I'm going to grab this trigger counter
+and I'll put it into the modulo and now I'm going to put this on four I'm going to grab the trigger
+from here now you know what let's grab it from here just to keep it a bit tidier great and now I'm just
+going to grab the clear color op and I'm going to get the bool anim I'm going to output values between zero
+and one on both so I'm now going to get this and I'm going to plug it into red
+green
+and blue and now I'm going to grab this tick duration again I'm going to put this into a multiply
+and now I'm going to put this into duration
+I'm going to make it faster
+and as you can see it's now happening at twice the speed as a cube animation because this is on modulo 4
+and this is on modulo 8 so just to visualize that we have this very short loop there
+and if I go here we have a much longer loop so this I could now also put on an irregular number
+and then it's going to kind of like go in and out of the beat so let's just put on two you can get a
+much faster effect so that's like this is your general chain to just be able to create animations
+that happen on different parts so I could go ahead to bool anim and say only happen on false
+and now I've got this kind of like synchronization going on so the sky's the limit with this this is
+just like the very basics of what you can do but it's more than enough hopeful to get you started
+and inspired to start making your own visuals with midi clock signals so you could use Tractor Pro
+you could use Ableton Live Renoise Cubase anything that just gets midi clock into cables so that was
+this video I hope it's been educational and informative if you've got any questions or comments please feel
+free to leave them under the video below or to post them on the forum thanks for your time and thanks
+for watching have a good one bye

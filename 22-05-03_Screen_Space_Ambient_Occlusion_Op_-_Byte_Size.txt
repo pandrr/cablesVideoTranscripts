@@ -1,0 +1,112 @@
+https://www.youtube.com/watch?v=cxFdQkoIbaM
+Hello, this is Alex from cables.gl. Let's look at SSAO. So SSAO stands for screen space ambient occlusion and ambient occlusion is kind of shadows or places in your 3D scene or in real world where light kind of loses its power and you get these darker areas.
+Maybe in your room, you'll notice that the corners of your room kind of have darker areas than on a side that has the beams of light reaching it. Right. So in 3D, we can do this as a post-processing effect that is driven by the depth of your scene.
+So that means if there's stuff in front of the camera, it would draw in a certain way into this texture called the depth texture and then areas in the back would be darker.
+So you get this luminance or this black and white texture that they can use for masking in this screen space ambient occlusion effect.
+So are you still with me? All right. We're really going to just jump in and take a look at this demo patch you can find in the description or in the user library on cables.gl.
+And we're just going to scan through the parameters and then take a look at some examples and then make something of our own.
+First of all, let's look at the ports, right? There's a lot of input ports for switching modes or adjusting the settings, but then there's this texture input.
+And usually this is a depth texture and you can get a depth texture of your 3D scene with the render to texture operator.
+And you'll see that a lot of times maybe in the previous tutorials, in some of the post-processing tutorials or places where we needed to render our 3D objects onto a texture and then reuse that texture somewhere else.
+We usually use this port right here called, well, I don't know, it's just the image texture, right? What we see with the camera.
+But then the second output is the texture depth and it's on by default, but you can turn it off.
+To be honest, I don't think it has a huge impact on performance, but usually you would use this depth of your scene to then drive kind of like a mask or some sort of driving texture for this association.
+And there's a number of way to manipulate, you know, if you like experimenting, try out and not actual 3D scene depth textures, just pipe in, you know, like a black and white texture into it and see what happens.
+So, alright, so that's the basics, we need to drive this operator with something because if we don't have a texture, then it doesn't really do anything in our post-processing stack, right?
+And by post-processing stack, by the way, I mean, we're actually, yeah, using these render to texture color textures from our scenes or, well, there's two kind of composites here.
+And then putting them into a draw image in an image compose and then, you know, by itself it looks like this, but then we add these extra effects and ssao is one of them.
+So it doesn't do anything without this texture input because it needs to be driven by it.
+And once we have that input, we have these interestingly named parameters here.
+So frustum, I believe, is a very common 3D term of like the space that is being rendered, the kind of the rendering distance of your camera in a 3D scene or how much of a limit you have to the depth of your scene.
+So again, we're kind of working with depth here, right, of your 3D scene.
+So frustum near is like how close all the stuff in our 3D scene or actually in this depth texture will be taken into account as we're drawing this, in this particular case, this like darker version of this kind of spiral thing.
+And then frustum far is how far in the scene are we going to look at to then use these other parameters in here.
+So we have one sample and with a radius of 57 that is then being controlled inside this area that we set.
+And then I just messed it up and I started to move it because it's quite sensitive actually.
+So see, you can get already like interesting kind of weird ink, what's it called, pointillism effects with a noise texture in AO.
+But yeah, we're using this in a bit of an artistic way.
+Actually, let's move on to one of the really nice examples of what traditionally SSAO is used for.
+So it usually acts kind of like a shadow that is from the viewer's perspective that is falling all over the stuff.
+So right here we have this scene and it looks all right, there's some sort of shading going on and then when we turn it off, you see the difference is like totally extreme.
+And this is really clean and obviously, you know, there's some stuff happening in the 3D scene, but it still feels kind of flat in a way because the materials we have in this example are kind of super fake.
+But with this SSAO, you start to get this weird shadow, right, effect going on and you can really manipulate it with these settings right here.
+And the samples kind of increase the quality of this shading, but, you know, it became smoother.
+But you really need to take into consideration your mobile device users or lower CPU, GPU viewers of your project that will, might feel the brunt of this processing effect.
+But don't let that discourage you, just check it against the performance and stuff.
+It's actually not that bad.
+I'm obsessing over it.
+So in this example, we have a bunch of things hooked up to the sidebar, right?
+So if we turn it off, turn it on, we can clamp the AO and clamping will kind of limit or not limit the effect.
+Basically, like clamp or not clamp our shading effect.
+And you see, sometimes you kind of need to dial it in to kind of squeeze in these outlines of your ambient occlusion effect to make it look a bit better.
+But if you go full on, it might actually work in your scene.
+And it's kind of a cool effect.
+Then the radius, of course, is another way to limit the craziness of the effect that you can get.
+Pretty interesting.
+And, of course, you can animate this.
+And then this toggle in the sidebar is just for the animated spheres.
+But enable noise is what I was using in this effect to an extreme, right?
+Where I'm just like, oh, pointillism.
+You might need to use it sometimes.
+And, of course, you can combine it with other post-processing stuff afterwards.
+Like maybe fast blur or with a clamp or maybe denoise thing.
+And this noise that you add into your SSAO might actually allow you to kind of break it up
+and add more realistic sort of feel to your ambient occlusion.
+Because if you zoom in or if I zoom in for you,
+you notice that it's as if it's drawing the scene and kind of drawing it multiple times.
+That's what those samples mean in the parameter bar.
+They kind of repeat the scene over and over again.
+And you have these spheres right now being drawn on screen.
+And then you will see this dark outlines of this 3D scene.
+And something like noise can break this up a little bit.
+And if we clamp it a bit more, we can hide these kind of sample redraw artifacts, I guess,
+if we can call them that.
+So if we go to samples, maybe like 2, and then remove the noise,
+you really see that big outline of the sphere.
+And maybe we can even make it more extreme somehow.
+Yeah, well, is it?
+I don't know.
+I like messing around with kind of incorrect settings to get interesting effects.
+But anyway, the noise helps you break up this kind of pattern of your scene being redrawn to create this SSAO.
+So that's what the noise is for.
+And are there any more?
+No, that's pretty much it.
+That's all the parameters you need to know.
+So again, you need to give it a depth mask or some sort of other black and white texture.
+And then play around with these limits, where to draw, where to start drawing your ambient occlusion.
+And finally, let's look at a more recently added feature, which is layer modes, right?
+So right now, by default, when you drop down this thing, it's always on multiply.
+So it will add to the dark areas and kind of accentuate the darker or supposedly the areas that wouldn't get as much light in your scene with this multiply screen blending mode, right?
+But actually, we have normal, which pretty much, I think, redraws the depth map that we're feeding into this thing.
+So let's see if we can move this closer to the camera or farther.
+You see, it gets a bit darker.
+Anyway, well, you know, I'm going to make another tutorial on how to work, how to manipulate this depth.
+The texture, precisely, because, you know, you wouldn't want to, like, play around with the camera to get the right depth settings for your texture.
+Can we actually break it out? Let's try it.
+I think it's too detailed, I guess, to be visible just in a screen preview.
+It's like super fine colors or the values that are used.
+Anyway, we'll take a look at how to manipulate the depth texture in a professional way,
+as opposed to using the camera and moving your object in the distance to, like, adjust the texture that we can then use in something like SSAO.
+By the way, another tangent, which I think is worthy, is this depth texture, you can use it as a mask for other things.
+Anyway, let's play around with more of the blending mode.
+So right now we're basically seeing how the SSAO is seeing the depth texture, maybe useful for you to create some cool looking kind of ambient inclusion only render looking scenes.
+Or maybe create masks or, I don't know, lighten, it's interesting also, so it takes this depth and kind of applies it in a strange way.
+And, you know, this is actually interesting because if you know screen blending modes, right, lighten would take the white values.
+Ah, okay, well, of course, because this is exactly what we see in the SSAO, so it does have white and dark colors as well.
+So lighten will then redraw or draw on top of our scene and add some interesting effects.
+Oh, yeah, see, it's actually like a basic material, so we can't see any of the detail.
+The only detail we see is what SSAO allows us to composite here with the depth texture input.
+So kind of cool, you can make your own materials kind of with those SSAO and post.
+Darken, multiply, I think there's some more.
+You can get very interesting things like, I don't know, it's almost some sort of backlit or glowy material.
+Anyway, I'll let you explore more of these.
+It will be even a weirder video where I'm just looking at blend modes with you.
+But please subscribe, please don't forget to like.
+It actually does help.
+It's true, I had to do it finally.
+I'm dropping the famous lines.
+Visit us on Discord, ask questions, please use SSAO.
+I want to see what people are making with this.
+I think it's totally underused and I know it's underused.
+So definitely use it and see ya.
+Bye.

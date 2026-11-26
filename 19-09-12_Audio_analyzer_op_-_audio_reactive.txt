@@ -1,0 +1,201 @@
+https://www.youtube.com/watch?v=3m-2F2T1f6w
+Hi there, and welcome to another video of Made with Cables.
+My name is Mark, my handle on the forums is Andro,
+and today I'll be giving you a basic introduction to audio analysis techniques inside of Cables GL.
+So what does this mean?
+It means that we're going to be loading up an audio setup later so we can grab an audio file,
+play it off, analyze it, and do something with the data that we get out of that.
+So today we're just going to focus on the average volume coming out of an audio file,
+how we can get it, visualize it, and do something meaningful with it.
+And we're going to keep it really nice and simple.
+In the upcoming tutorials, we'll ramp up the difficulty and complexity and show more advanced techniques.
+So I'd like you to pause the video and just make what you see here on the screen.
+Great, let's get started.
+So first of all, I'm going to zoom out a little touch, move over here,
+I'm going to press escape, and I'm going to type in audio buffer.
+This holds an audio file or a sample.
+I'm going to click add and move that over here.
+So right now, as you can see, I don't have a file loaded,
+so I'm going to click this file browser.
+Here we have the new file manager inside of Cables.
+You need to be at library files.
+I'm going to scroll all the way down to near the bottom, and here we have music.
+I'm going to load this one, Anthony Naples.
+I'm going to press escape.
+And as you can see, the file is loaded here, and we get the statistics about the audio file.
+It's finished loading, the sample rate, the length, the duration in seconds, number of channels, so it's stereo.
+So first of all, we need to like playback basic audio.
+So I'm going to pull this out, and now I'm going to grab this next up underneath it, audio buffer player.
+Playback audio data stored in an audio buffer.
+I'm going to click add.
+Okay, so it's got a start, stop button.
+So I'm going to press escape, and I'm going to type in play button.
+Shows a playback button for forcing a simple user interaction.
+So basically, if you make an audio reactive patch, and later on you're going to export it or have it somewhere in a web page, browser protocol expects the user to have to press this play button for the audio to start.
+So it's just a good idea to get used to using this now.
+So I'm going to drag this one out, click to false.
+I'm going to put it into start, stop.
+And the last thing we need to do is hear the audio.
+So I'm going to drag this and pull it out, and I'm going to type in output, sends an audio signal to your speakers, and click add.
+Now, this is like the total volume between zero and one.
+I'm going to put it in 0.25 because I'm giving the tutorial today.
+So if I press play now, I should just hear some music.
+Great.
+If I want it to stop, I click play button, and I click reset.
+Okay, so this is our basic audio context, nice and quick and easy to set up.
+So now we need to analyze the audio.
+So I'm going to pull this out.
+I'm going to create the audio analyzer op.
+Extracts FFT or waveform data from an incoming audio signal.
+I'm going to click add.
+Now, this guy needs to trigger.
+So I'm going to pull this out over here.
+And now I'm going to press play, and I want you to pay attention to this part, average volume.
+So this is showing me the average volume of the audio file right now.
+There's a lot of settings here, FFT size and frequency, but we're just going to leave all that on default and just keep it nice and simple for today.
+So I'm going to click play button, and I'm going to click reset to stop.
+So I have this value coming out here.
+So I want to visualize that data.
+So first of all, let's go over here and let's move this rectangle to the side, 0.75, and I'm going to make it bigger, 1.5 by 1.5.
+And now what I'm going to do, I'm going to pull this out and I'm going to actually, let's just copy paste this section.
+Control C, click here, control V.
+Let's click and move this down, and now let's move this over there, say 0.75.
+So I want to visualize this data and the changing data over time.
+We've got a really good op for that.
+So I'm going to click, press escape, and I'm going to type in graph.
+Draw a graph of a value into a texture.
+So I'm going to click add.
+Now, so this op produces a texture.
+So first of all, I need to trigger.
+I'm going to grab the texture output, and I'm going to plug it into this basic material.
+And now here, we just need to plug in a value.
+So I'm going to get this value, and I'm going to plug it into here.
+I'm going to press play, and watch what happens.
+So now we're getting the audio average volume visualized here.
+Now we can see the changes in the values over time, which makes things a lot easier.
+If I click on the graph up, I can also click this option, show min max.
+And this is a really handy way just to, like, tweak and analyze things and look at data that you're working with, not only with audio.
+So I'm going to click reset and stop it.
+Okay.
+So now I want to change the scale and say the rotation of this rectangle on the left-hand side based upon this information here.
+So first of all, let's just take a look at it.
+If I click it and drag and plug it into scale, how is it if it's just, like, raw data and we're doing nothing with it?
+It's going to be very noisy and jittery.
+So that's okay, but it's not exactly what we want.
+We want to have more ways to kind of, like, shape this data.
+So what I'm going to do now is I'm going to look at the min and maximum that I'm getting here.
+And you've got to sometimes let it run for a good 20, 30 seconds or jump to your loudest part of a track to get accurate data.
+So it's saying minimum zero, max 0.61.
+So I'm just going to press stop.
+So I'm going to get this output and I'm going to grab a map range up.
+It allows me to map a value from one range to another.
+So I know it was 0 and 0.61.
+And now I want to map it to 0 and 1.
+This is just easy to work with later on.
+Numbers that are just going between 0 and 1 are just easier to work with.
+So I'm going to grab this now.
+And I'm going to disconnect this one.
+And I'm going to get the output of map range.
+And I'm now going to plug this into graph.
+And I'm now going to plug it into scale.
+Press play.
+As you can see, the rectangle is now bigger.
+It's pretty much almost getting close to 1.
+And it is pretty impossible to get this stuff exact with audio.
+It's like audio analysis.
+So it's never going to be an exact science.
+But now it's closer to what we want.
+So that's good.
+But it's still really jittery and noisy.
+So we need to smooth out the data.
+So we've got a really good op for that.
+And you might have guessed it's called smooth.
+It smooths out jumps in values.
+So I'm going to add this op.
+This op needs a trigger.
+So I'm going to pull this down here.
+And I'm actually just going to reconnect this.
+So it's just a little bit tidier with the patching.
+So now I'm just going to disconnect everything again.
+Because I want you guys to just see what's happening here.
+So I'm getting this map range.
+Which is going from 0 to 0.61.
+It's been remapped to 0 to 1.
+I'm going to grab that value.
+And I'm going to plug it into the value smooth.
+I'm now going to get the smoothed output.
+I'm going to plug it into graphs.
+And now I'm going to plug it into scale.
+Now watch what happens.
+It's already looking a bit better.
+So if I put this on 1.
+It's very fast and it's very jittery.
+If I put it on say 8.
+As you can see it's starting to smooth out.
+If I'm going to put it on 16.
+It smooths out even more.
+And the best part is now that we're using the graph up here on the right side.
+We can see kind of what's happening.
+But as you can see we've lost what we call the transient information.
+This is when it's like when you hit a drum.
+There's a very loud peak of the sound at the beginning.
+And it tails off at the end.
+So we've kind of lost that information right now.
+It's kind of like here in this middle.
+So what I'm going to do is I'm going to go here and I'm going to click separate the increment and decrement factor.
+And I'll explain what this means.
+So the increment factor is when a number is increasing.
+This is how much smoothing is applied.
+And with the decrement factor when a number is decreasing how much smoothing is applied.
+So right now I'm just going to put them both on 1.
+And I'm going to press play.
+And as you can see we've got all this transient information here now.
+So what happens if I put this on 8?
+So as you can see it's popping up but it's going back in a very smooth fashion.
+If I put this now on 32, you can see that we're keeping the transient information down.
+But we've still got this kind of thing going down.
+So I'm going to now put this on 16, put this now on 4.
+And I'm using the smooth up and these two values now to smooth out the response to these jumps in data.
+So I'm going to put it on 32 and 1.
+It's a little bit too slow.
+Maybe 8, a little bit jittery still.
+16, that's kind of feeling a little bit better now.
+So I'm like, okay, this is great.
+So basically to recap, we check with the graph up what's the minimum maximum coming out of average volume.
+Because that can change from track to track.
+We remap the range from the old minimum max to 0 and 1.
+That's a new value.
+And then we smooth it.
+Okay, so let's go one step further now.
+Let's grab these.
+Do Ctrl-C, Ctrl-V and copy it over here.
+I'm just going to grab the same value.
+I'm going to grab it there.
+I'm going to chain the trigger from smooth.
+And this I'm now going to plug in to rotate Z.
+Okay.
+So we're not going to see much because we're only rotating it one degree.
+So I'm going to put the new min on minus 45 and the new max on 45.
+And the best part is now I can tweak this smooth here to have separate control.
+So it's not a very flashy example.
+It's not very visually impressive to look at.
+But this is the basics of how we can get the average volume coming out of the audio analyzer
+and how we can remap it to do meaningful things.
+So you've got to play around with these settings.
+You've kind of got to see what works for you, basically.
+And tweaking things to reactive audio is always a tricky thing.
+And that's kind of normal.
+But, like, don't worry about it.
+It's a very, it's not an exact science.
+It's just something you've got to tweak for a long time to normally get it to be the way that you want.
+So in the next tutorial video, I'm going to show you how to split this audio up into three separate bands.
+Which is base, mid, high.
+And then how we can apply similar techniques.
+And we can get much more accurate data out of the ops that we're going to use.
+Thanks for watching.
+I hope this video has been educational and informative.
+If you've got any questions or comments, please feel free to leave them under the video below.
+Or to post them on the forums.
+Thanks for watching.
+And have a good one.
+Bye.

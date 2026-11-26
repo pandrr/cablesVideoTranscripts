@@ -1,0 +1,146 @@
+https://www.youtube.com/watch?v=mewkEsf3JTE
+Hi there, and welcome to another video of Made with Cables. My name is Mark, my handle on the
+forums is Andrew, and today I'll be continuing with our ongoing series of data visualization
+inside of Cables. So I'd like you to pause the video and just click on the link underneath. That
+will take you to this webpage here from NASA, where there's some nice educational homework for
+students that I found. So this webpage explains the data and shows that the global mean sea level
+has been measured from 1880 to 2013, and that's kind of represented here. So today I'm going to
+show you how to create something like this inside of Cables. So I want you to scroll down and I want
+you to click CSV files so you can download this. I've already downloaded it. So once you go to the
+downloaded data and you extract it, it will look like this. So you've got like a full CSV file and
+you've got it split up into 20 individual CSV files. So this is the beginning 1880 and this goes all the
+way to 2013. So something I want to show you is if you like click on the first one and you click and
+drag it to Chrome and let go, it will show you a preview of the information of the data, which is
+really handy. So the first entry is time and the second one is GMSL, global mean sea level in millimeters.
+So here's the year with some decimal numbers behind it and here's the level. A really handy thing.
+So I want you to create a new Cables patch and I want you to just pause the video and make what you see here.
+Great. Let's continue. So first of all, we need to just create a basic graph. So there's one or two
+videos that have covered stuff with arrays. So I'm going to create an array up and I'm going to put that
+here. I'm going to put it on normalized and I'm going to put it on a hundred values. I'm going to click
+inspect and this now goes from zero all the way up to 0.99. Great. So now I'm going to pull this out.
+I'm going to make an array pack free up. Okay. This up needs a trigger. So I'm going to pull that from
+over here. So X is going to be this part. Y is the height where we'll map our data and Z we're not
+interested in right now. So I'm going to plug the output of this into simple supply, which is going to
+draw a line on the screen, as you can see. So I'm now going to connect an array subtract up. I'm going
+to subtract 0.5. And as you can see, the sun is the line. I'm now going to grab an array multiply up
+and I can use this now to make the line wider. I'm going to put it on the free. So I'm now going to
+I'm going to just plug this into Y. And as you can see, we get this. So this array is filled with values
+from zero to one. So this is just like a pure linear graph. Let me make one more and I'm going to make
+its length the same like this. So this outputs the length of the array and this makes it that length.
+I'm going to put a number zero and this is the Z component. Okay, so we're going to map our data
+into this part Y. So first of all, let me just show you how to simulate random data. So I'm just going to
+grab the random numbers array up and this is just going to give me a bunch of random numbers. Now,
+if I'm going to plug it in, it's not going to work. I'm showing this again just so you can get into the
+habit of it. This red dot pops up. Arrays do not have the same length. So I'm going to get the length
+of the array from here and I'm going to plug that into here. Flow out. So now I'm getting random values
+between zero and one. So I'm going to put it on minimum minus 0.5, max 0.5. This is just a great way
+to get something on the screen which resembles some data. Quick, painless and easy. Okay, let's go over
+here. So now let's really dig into what it is we want to do. So if you followed the previous tutorial
+video, we have to get the data into cables. That's really easy. So I'm not going to work with the full
+data set which is all 20 of these put together because I just want to show you one or two other
+tricks today. So I'm going to grab data set number one. I'm going to click and drag it into the cables
+browser and it'll say here drop files to upload. I let go. It uploads a file, the CSV and it
+creates a converted JSON file. That's the thing I'm interested in. But I want to do this with the
+other two as well. So I'm going to go here. I'm going to grab number two. And I'm just doing it
+slowly so you guys can see what's happening here. And I'm going to go to three.
+There we go. So that's how I've imported three separate CSV files. Okay, so now I need to press
+escape and get the CSV array up. Pass CSV files as an array. I'm going to press F11 to go to full screen.
+So this now needs a CSV file. So I'm going to go ahead to file. I've just clicked it up.
+And I'm going to grab this one CSV dot JSON, the converted one. Click. The array now fills up with
+values. And if I use the inspect icon, I can see everything here. So what I want to do now is I want to
+get everything from GMSL millimeters. So let me just get rid of this. I'm going to pull out the array
+output and I'm going to type in get value from array of objects. Okay, now it expects a key. So go back
+to this array and I click and drag. Hopefully you can see that. Do control C to copy. And I now paste this
+into the key. Now look, if there's a spelling error or there's a mistake, the array will have a length of
+zero. If it's correct, the array will fill up. And now I only get the GMSL values. So this is great.
+But I'm not going to see this if I plug it in. Why? The arrays do not have the same length. This has a
+length of 78. This has a length of 100. So what can we do about this? Well, we pull out the array from here
+and we grab the array length up and this tells us how long an array is. So I'm now just going to grab
+this and I'm going to plug it into here with this array length. Now we don't have the error anymore,
+but now we don't see anything on the screen. Why is that? Well, if we inspect the contents here,
+these are really big numbers minus 181 minus 134. So that line is just 25 screens below us. It's really just
+very far out of view right now. Now we could multiply it. I want to just show you the bad way to do this.
+By a really small number. And I mean like really, really small.
+And as you can see, that's the data, but it's not easy to manage. Okay. So now if we look at the
+contents, the numbers between minus one and one. So there's a far better way to do this. So let's get
+rid of array multiply. So first of all, I'm going to grab a map range array up map values and an array
+from one range into another. So here I can give an old min and an old max and then a new min and a new
+max. So I want to map the values from minus 0.5 to 0.5. But how do I find out what the minimum and the
+maximum is? Well, that's nice and easy. We pull out from here and we grab the info array up. Get the min, max and
+average values from an array. So I click add. And this up now tells me the minimum value is this. Maximum
+value is this. So I get the min and I plug it into old min. I get the max and I plug it into old max.
+There we go. Now this is great because we could get an array of any kind of numerical data now from
+zero to a million from minus 300 to 400. And this would always remap it to minus 0.5 and 0.5. I could
+do minus one and one to make it bigger. I'm just going to keep it like this so it's more visible. So this is
+great. This went pretty quick, pretty painlessly. If I inspect this array, we just looked at all the data
+from 1880 to 1886. We have those two other arrays. So how can I join them together with this one?
+Well, that's actually really, really simple. So what I'm going to do is I'm going to copy this. I'm going to
+paste it here. I'm going to paste it here. So I want to merge this array with this one. So first of all,
+let me just load everything. So this is 01, 02 and 03 before I forget. So this has file 01. This also
+still has it. So I click here and I now go to the 02.csv.json file. I go here and click this and I go to
+the 03.csv.json file. So what I want to do now is I'm just going to disconnect this just so you can get
+into the habit of how this works. I want to merge this array with this one. And once they're merged
+together, I want to merge them again with this. So we just drag this out and we type in array merge.
+It's really simple. Array two is placed behind array one. As you can see here, 0, 1, 2, 3 is one array,
+4, 5, 6 is the other one. When you merge them, this is what you get. Really simple.
+So I'm going to grab this. I'm going to plug this in here. And now my new array is 156 values. Okay.
+So now I'm just going to copy and paste this again. I'll move it over here.
+And now I'm going to get this one and plug it in there. And now we've merged all three
+arrays together. We can see that we've got 234 values. So this is our new array. So we need to
+plug this into array length because the length of the array has changed. And we now need to plug it
+into info array so we can get the new min and new max. And then we plug that again into the map range array.
+Let's just move it over here. Move this all up a little bit. So it's hopefully clearer and easier
+to see. There we go. Two straight lines. There we go. So now we've got 234
+array values mapped out here. And as we can see, the sea level dropped down here, but now it's
+slowly but steadily increasing. You don't have to do this. You could just pull in that full data file
+and just work with this. But I just wanted to show you how you could work with multiple arrays.
+This array here could be 78 long. This one could be 32. This one could be 46. And it's just a really
+quick and easy way to stitch this information together. Okay. So let's now say that I just want
+to look at a piece of this data. So now I'm seeing 234 values, but say I only want to see 12. So I'm
+going to pull this out. I'm going to grab the array chunk objects. You pull out a chunk of an array,
+basically. So this is going to be my final array. So I'm going to grab those and plug them in here.
+And I'm going to get those merged arrays. I'm going to plug them in. Everything's going to disappear.
+Because this array has a length of one. So let's start pumping that chunk size up. And as we can see,
+we're grabbing data out of the array. So I'm just going to put it on 36.
+And now if we use begin index, we are scrolling through this one big array here, but we're only
+looking at 36 values at once. Now, what you're going to see is you're going to see it fluctuate
+with it going up and down because the min and max values are changing because they're only looking at
+what's in the chunk. Okay. But this is just a great way to just take a look at a piece of an array.
+Imagine you've got 2000 years and you only want to look at 12 years. Array chunk is just a great way
+to put in chunk size 12 and then look at that data. So I'm going to put this on say zero and let's put
+this on 128. So this is a great way to just grab a piece of data. Now, let's imagine that I'm going to
+have this move and change. Let's just put on 16. It's a little bit blocky, right? Like it jumps.
+So how can we smooth that out? We've got a really good up for that. So I'm going to go here.
+I'm going to type in smooth array. Smooth array needs a trigger. So I'm going to pull this from over
+there. And what this does is it smooths out jumps in values. So if I now click on array chunk and I move
+through the array, as you can see, it looks smoother now. Things kind of like they're not popping and
+snapping. So I could put this on a higher number now, like 32. I could go to array chunk and I can
+move this. And as you can see, we can get this really nice stylish look. And the visor just to play
+around with this op, you could give it different values for increasing and decreasing values. And then
+you get like really nice responsive snappy animated values out of it. We can make the chunk size
+bigger here. So you just got to play around with this and just get something out of that that you like.
+So we can now go here to the clear color. I could change this to something a little bit more white and
+red and go to the basic material. And I'm just going to make this black for now. So another thing we could
+do is we could put points on each point of the data here. And that's really easy. So we're just going to
+grab the point material up. And then we're going to grab the point cloud from array up. And we're just
+going to plug this array in. Watch this. And now we get all these points. I'm going to put random size
+on zero. I'm going to turn on scale by distance. And now I'm going to turn the points up. I'm also going to
+make the points black. And now I'm going to make them bigger. And as you can see, we've now got
+points here. If I would go to chunk and put this on, say, 128, we're going to get a lot more of them.
+And we'll just put it back on 64. So the great part is now we can just move with chunk through this data
+set. And the points and the splines, they just move around and it looks really stylish. Just play around
+the settings here to get it the way that you like. And let's not forget you're in 3D space here. So if
+you want to give a little bit of that meaning to people, I can go underneath the orbit controls.
+I'm going to grab a grid. And now I'm going to turn the spacing down to say 0.2. I'm going to put
+number on 30. And a cool little trick here is I'm going to click this. I'm going to create a transform.
+And I'm going to copy this grid. I'm going to make something that looks a little bit 3D.
+I'm going to plug this in there. And now if I'm correct, I'm going to rotate
+on the x-axis by 90 degrees. And now if I use the mouse and click drag with orbit controls,
+you can see we have this data now mapped in 3D. So there's a whole world of possibilities with what
+we can do with mapping it and animating it and moving it. So that's the end of this tutorial on how to
+go further with data visualization inside of cables. I'd advise you to take a look around the internet,
+find different data sets, learn how to extract meaningful data from them and turn them into
+something that you like that's pretty. This is a pretty basic look, but you've got to learn to walk
+before you can run. So I hope this video has been educational and informative. If you've got any
+questions or comments, please feel free to leave them under the video below or to post them on the forums.
+Thanks for watching and have a good one. Bye!

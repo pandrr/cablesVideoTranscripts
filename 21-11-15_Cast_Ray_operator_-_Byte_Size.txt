@@ -1,0 +1,92 @@
+https://www.youtube.com/watch?v=dF1fP_7fh4Q
+hello this is Alex from cables.gl I'd like to show you castray and how you can
+use it for example to make something like a 3d menu or some sort of 3d
+navigation and interaction with your 3d scene and let's take a look at this
+example that I've already pre-built and we have an orange and a blue cube with
+Lambert materials and transforms for each cube and also a point light to make
+the scene a little bit brighter and a camera to just zoom out the view a bit
+because these cubes are at width length height unit 1 so alright so how do I
+interact with the scene how do I get information into cables to use to then
+make them bigger for example so we need to use this operator called castray and
+we'll search for it and place it down on our patch field and take a look at this
+relatively big operator but what you'll notice is the inputs the input ports there's
+actually only four of them but the outputs or the information that we can get out of
+this operator there's you know quite a lot of fields and we'll use the basic ones to
+do what I need which is mouse over the cubes and make them bigger okay so how do we set
+it up castray if you look above and where its title is you'll see that it's actually
+called ops physics castray and what it needs is the physics world so it's another operator that we'll just place down in our scene called world
+okay so we have this world operator and we're not really going to get into all the parameters for it because we actually don't need them right so we just need the world or the castray to work and what needs to be done is
+we place the world I think it's like pretty much anywhere in in the in the scene usually works as long as all the objects that you want to interact with in kind of the physics world are below it and castray is one of those things so we need to place it below our world and now everything should be good but the thing is our cubes they're not physics cubes so we need to add
+another kind of cage like a physics cage for these cubes below it as well so
+so let's look for physics cube okay here's one and you'll see immediately uh that we have this outline around
+our blue cube and one thing i want to mention is the reason that they line up so well is because both the cube
+and the physics cube have the same dimensions so that is something you need to consider when you're making a menu for
+example with um rectangles or uh you know something smaller or not uniform and not at the size of one
+right uh with the defaults here uh then you need to make sure that your um shape for example this blue um cube
+i'm changing the width of it right now it has to match with the cage because then you know the user will get
+what they expect which is mousing over your uh different size shape and you know getting the interaction that
+they they uh seek so we'll copy it over copy over the physics cube under this orange cube and now we have
+our world pretty much set up and
+what do we do next so castray has inputs that are very important for us to kind of shoot this laser out of our camera
+at a specific direction to then see did we intersect with a 3d mesh or not with one of these physics cubes or not so
+how do we set it up what i want to do is use a mouse over on our on my canvas here to tell castray that yeah
+i'm over the orange cube okay so we will need a mouse operator let's place it down and we'll use the
+x out port and the y out port for the position as you see um if i look over the mouse operator and i move
+around my canvas we have this x y coordinates right so here i'm at uh around zero zero and here i'm at the
+maximum of my canvas size so if i click on my preview window i'll see my size 640 by 360 so it's 640 width and 360 height
+and uh you'll see that the mouse you know conforms to those to those dimensions however castray it
+wants normalized coordinates so we will need to click on normalize in the mouse operator and then we're ready to
+plug them in
+okay so let's click on castray and look over at all of these output parameters
+right now everything is false pretty much zero zero everywhere because our mouse is not over the canvas
+and if we start placing it over we'll immediately get some
+interaction so hopefully at this point you're like oh okay i know how to use this and how to make the
+orange cube a button but if you want follow along we'll continue with this so
+if you see over here there's this has hit um
+output and when i mouse over my orange or blue
+cube you'll see that the has hit goes from false to true
+nice okay that's cool um but this also makes me think that it doesn't really the castrate doesn't really
+care at this point you know which of these cubes that i've hit the orange one or the blue one it just
+says yeah okay you hit a physics object somewhere in your world um that's cool but how do we set that up
+and what we need to do is for these physics cube objects which i'll select here we have to set a name
+so this one is our blue one i think yeah that's our blue one so i just disconnected it to to check
+um which cube it was so it's the blue one so we'll call it blue over in this uh physics cube parameter
+here for name okay and then when we go back to our castrate and select it and we'll scroll down to
+name we'll have nothing here on the orange one and then when we go over the blue one it's like oh yeah
+it's the blue one because you named it great so we can use this to do a kind of if then statement to
+change the size of this cube so what i'm gonna do is use this output port for the name
+and i'm gonna find a string operator called string equals
+okay and then we have to set up the name which would be blue right that's our blue cube that we
+need to check for so right now it's false uh we're over the orange cube it's also false and now it's true
+so now we have this boolean that says you know true you hit the blue cube amazing
+okay so we'll use this boolean to do a boolean animation which is bool anim operator very simple
+operator very cool it just needs a true false statement to go from whatever number we set in the parameter
+field so if i hook this up it's now uh ready to animate and we'll do this value well you know what
+i'm gonna do i'm actually gonna use this value that will change when i mouse over the blue cube see in
+this uh output for the boolean it animates once i mouse over the blue cube what i'm gonna do actually is
+pump this into a variable so var set number okay and now we'll create a new variable called um blue
+scale okay so now we're setting this um variable called blue scale and what i'm gonna do is hook up
+this blue scale variable to my blue shape and also my kind of physics um cage so blue scale we'll select it
+here and then in physics cube we'll also assign the same variable to the size of the cage
+okay and then we'll go to boolean and for false i'll say um use the number one and then for true when
+we're mouse when our cursor is over the blue uh cube we'll do like a 1.5 okay so let's see if this works
+so over the orange one nothing and over the blue one okay it gets it's bigger so we did it and um yeah that's
+pretty much it so uh i'm just gonna play around with this and maybe add like a different
+easing and show you one really cool thing with castray
+all right so pretty pretty static thing the cubes right and what i'm gonna do is add an orbit camera i'm
+gonna add it um maybe here um orbits controls so now when i orbit we get we're really getting that 3d
+menu feel right but the cool thing is
+um if i mouse over the blue one
+the orange one is hidden behind the blue uh cube so you know we we can do kind of
+um stacking of our 3d meshes and and the cast rail will understand that one thing is in front of the
+other so as it shoots this laser out of the camera view it will know that okay yeah the orange cube is
+behind the blue one so um we don't need to click on that one we're dealing with the blue one right so i think
+it creates kind of interesting um ways of creating cool menus or something like that right the the user gets
+what they expected so i think that's pretty much it and maybe we'll just take a look at the the mass of
+parameters here and um i recommend you check out the documentation for this um operator and of course the example file
+what the type of things you'll be able to do is for example uh get the location of the mesh that you've
+moused over or or you know uh interacted with um where the laser intersected it will know oh okay
+okay the the shape is in this particular spot in your scene or for example you'll know did you hit the
+front of the cube or the back of the cube um you can also do some interesting ways of uh getting a specific
+position on the shape with the um cast rate so then for example you could maybe draw on the cube or something like that so i
+so i guess that's about it and hopefully you try out castrate it's super awesome thank you bye

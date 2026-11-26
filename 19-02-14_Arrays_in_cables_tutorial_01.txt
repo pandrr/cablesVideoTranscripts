@@ -1,0 +1,116 @@
+https://www.youtube.com/watch?v=FRFfvVgWFcs
+Hi there and welcome to another video of "Made with Cables".
+My name is Mark, my handle on the forums is Andro, and today I'll be giving you an introduction
+to the basic array ops inside of cables.
+So I'd like you to pause the video and just make what you see here.
+Please make sure that with the grid op that your spacing is set to 0.2.
+Okay, so we're all familiar with using numbers inside of cables.
+So what's an array of numbers?
+An array of numbers is basically a list of numbers.
+So how do we make one?
+Well, there's many methods, but let's start with the simplest one.
+I'm going to make a continuous number array op.
+This is a really simple op.
+I'm going to put the amount of values on 10.
+And now I'm going to press this inspect button here to see the array contents.
+And here we can see the start of the array and the end of the array.
+And these are its contents: 0, 1, 2, 3, and so on.
+It's got a length of 10 because 0 also counts as a value.
+So if I go here and I put this on 20 and inspect it, we have an array with a length of 20.
+And the numbers go from 0 to 19.
+So what I want to do right now is I want to visualize like a sine wave with an array
+because it's a nice way to get to grips with how these ops inside of cables work.
+So first of all, I'm going to go down here and I'm going to make an array pack free.
+Why?
+The point cloud from array op expects three numbers for the X, Y, Z component for each point.
+So I'm going to give this a trigger first of all.
+And this one array is now going to go into the Y component and the Z component.
+So this is X, Y, Z.
+I'm now going to plug this in here.
+And we have one point on the screen.
+So let's click point material, make it a bit bigger.
+But we know that we have 20 values inside of this array or just even 10, but we only see one point.
+Why is this?
+Because this is zero and one is off the screen.
+So what I want to do is I want to normalize the values inside this array.
+I never want them to go below zero or above one.
+It's really easy to do this.
+So I'm going to go here and I'm going to grab a value up.
+I'm going to rename this array length.
+Because with this, we decide the length of the array.
+So I'm going to put this in 20.
+As you can see, this guy now has a length of 20.
+I'm going to go here and I'm going to create an array divide up.
+Divide all values in an array by one number.
+So if you get the contents of an array and you divide it by its length, which is this,
+watch what happens.
+We now have values between zero and one.
+So let's just disconnect this and redrag these with the right mouse button over here.
+And let's connect this.
+And let's just make the point size a little bit smaller again.
+And as you can see, we've now got these points on the screen.
+So what I want to do now is I want the start to be here.
+And I want the end to be there.
+So I'm going to go here.
+And this is why we're normalizing, right?
+Between zero and one.
+So we understand what's happening.
+So I'm going to grab the transform up.
+I'm going to put it on position X minus one.
+I'm going to put the scale on two.
+I'm now going to go to the Y component that's in the middle.
+And I'm going to grab the array sin up.
+I'm going to put the amplitude down so you can see what's happening here.
+Let's just say 0.5.
+Let's put the frequency on two.
+Now, as you can see, it's gone off the screen.
+Why is this?
+Well, if we look at the Z component, which is here.
+And we do array multiply.
+Let's just make it a bit of space here.
+So X, Y, Z.
+And I pull this down.
+What's happening here?
+Well, basically, this continuous number array has values from 0 to 19.
+We normalize it so the array contents are between 0 and 1.
+So this is the X axis, horizontally.
+The Y axis is the vertical one.
+And the Z axis is the one going away from the camera.
+So because this was up here, as you can see, the points are kind of going off into the distance.
+So I'm going to put it on zero because I want to map them to the grid.
+So I'm now going to put the frequency on four.
+And I'm going to increase the amount of points in there to, say, 100.
+And this looks like we now have a sine wave.
+So if I now use phase, as you can see, we're going to move this along.
+But it doesn't really match up now, does it?
+Well, there's a little bit of trigonometry in there, but let's keep it really simple now.
+If we go to frequency and pull it out and grab the pi or P up, it returns this number pi.
+I'm going to add it.
+And, wow, voila, we now have one half of an exact cycle.
+If I go in between and add a multiply up and we multiply it by two, just type that in, we now get one perfect waveform.
+And if you watch what now happens, if I put this on 20 or 50 or 200, it always stays in its exact range.
+And that's because we're normalizing the array here.
+We're dividing the values inside that array by its length.
+So we can now go here and we can grab a seal up.
+This turns a floating point number into an integer, which is like a whole number.
+And we're going to grab a value.
+And zero gives us this.
+One gives us this.
+Two, three, four.
+And the reason we have the seal up on there is because if I now drag this, it's going to just jump.
+One, two whole numbers.
+So let's put this on, say, eight.
+There's a lot of gaps in between.
+So now we can increase the length of the array.
+Let's put it on a thousand.
+So this is how we can visualize what's happening inside of an array by using the point material and the point cloud from ArrayOp.
+So I would recommend that you just play around with these ops just to get the hang of what arrays are and how you can use them inside the cables.
+Don't worry if you're not following it all right now.
+After doing this a couple of times, it's going to make a lot of sense.
+Just don't forget to click this inspect icon here, which is going to show you the contents of the array.
+I'd advise you to keep the values small when you do this.
+So like if we click here, we can see what's happening.
+So this was a basic introduction to some of the array ops inside the cables.
+I hope this video has been educational and informative.
+If you have any questions or comments, please feel free to leave them under the video below or to post them on the forum.
+Thanks for your time and thanks for watching. Bye.

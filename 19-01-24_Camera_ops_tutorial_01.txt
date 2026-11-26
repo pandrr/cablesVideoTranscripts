@@ -1,0 +1,158 @@
+https://www.youtube.com/watch?v=vIeAMFGA96E
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the forums is Andro
+and today I'll be giving you an introduction to the different camera ops that we have inside of cables.
+What the difference is between them and why you might use one in a particular scenario.
+So, first of all, let's just give a little basic explanation.
+When you make a cables patch and you use main loop, by default you get a camera which is inserted into the scene.
+We can't change it right now, but here we see what the camera sees.
+So, everything we're going to be showing right now is basically going to be changing the view of the camera.
+That's the most important thing to remember.
+I'm not going to go too in-depth with all of these ops, this is why we have the documentation and the examples.
+It's more of an introduction video, so I'll just try and touch upon a few key concepts,
+but I want to keep it short so people can just get the information they need.
+So, first of all, let's grab the orbit controls up.
+I'm going to pull this in here.
+And this is familiar to a lot of users.
+If I use the mouse wheel, I can zoom in and out.
+If I click and hold with the left mouse button, I can rotate the scene.
+If I hold the right mouse button in, I can move my viewpoint in the scene.
+There's a couple of parameters down here that you can play with, like speed.
+So, when I click and drag, it's a lot faster right now.
+Smoothness I can turn down and it becomes way more snappy and responsive.
+So, just read the documentation, play around with these parameters.
+It's a great way just to look at your 3D scene nice and quickly.
+You can also use it to allow a user to interact with your cable's patch with the view.
+So, let's just shake this loose.
+Now, as you can see, the camera view went back to this.
+This is because orbit controls has been removed and the camera defaults to its default position.
+So, imagine you'd want the camera to be further back when the patch loads.
+Well, this is where we have transform view.
+Transform view does literally what it says.
+It transforms the viewpoint.
+So, if I go to position Z and scroll back, you can see that I'm moving back in the scene.
+I can use X and Y to change my X and Y position.
+I can also rotate a scene like this.
+So, imagine I'd want my camera to be like this when the patch loads.
+I just set it like this.
+I'm going to press Ctrl+S to save the patch.
+I'm going to press F5 to reload.
+And, as you can see, we now have a starting viewpoint for the camera.
+So, this is a great thing we can do.
+I'm going to shake this loose.
+I'm now going to go to camera.
+Camera has a huge amount of options.
+We have projection mode, perspective, orthogonal.
+I'm just going to move back for a minute.
+So, I'm going to use IZ.
+So, this is the X, Y, Z position of the camera.
+And, right now, it's looking at the center parameters.
+So, there's 0, 0, 0.
+So, if I move this to the left right now, we get this.
+If I move it to the right, we get that.
+So, this is just basically you can decide where your camera is in space.
+And, at what point it's looking at.
+There's also a lot of other options here, like pan, roll.
+So, you can use this to get some really cool cinematic camera effects.
+I'd ask you to just look at the documentation page for a full in-depth explanation.
+And, one last important thing is field of view.
+This we can use to get a very different effect on how a scene looks.
+And, it's more apparent with a lot of 3D geometry.
+And, last but not least, we have frustum near and far.
+Now, to explain this to beginners, anything below this number won't get rendered.
+And, anything past this number won't get rendered.
+So, anything between these two values.
+And, this is the distance from the camera, from the viewport.
+So, if I put this on like 10, everything disappears, right?
+Because, those objects are more than 10 away.
+So, if I increase frustum far, you can see it's kind of clipping in.
+And, normally you won't have to play around with this.
+I'm not going too in-depth into it.
+I just wanted to give you an introduction to it.
+So, just read the documentation with this.
+It's a great op.
+So, let's get rid of this for a moment.
+Back to the default view.
+Now, let's get a look at camera.
+So, if I grab look at camera.
+And, I use iZ.
+This is like our camera.
+And, we now move back.
+So, in the traditional film, the cameraman might follow an object.
+Like a car or a person.
+And, let's say we want to do the same thing now inside of cables.
+I want to follow this cube.
+This is why we've had the guy flying around the whole time.
+So, what we need for this is the coordinates op.
+Now, basically, it's going to grab the position of any object that comes after it.
+So, I'm going to plug this in here.
+And, now I'm going to get the x, y, z coordinates of this cube.
+Right?
+So, I'm going to grab x.
+I'm going to plug it in to look at camera.
+And, I'm going to put it on center x.
+And, as you can now see, we're following the cube.
+I'm going to grab this.
+I'm going to put it on center y.
+And, I'm going to grab this.
+I'm going to put it on center z.
+You could achieve the same thing with camera.
+Look at camera is just a more simplified version.
+Like, for example, it doesn't have roll and tilt.
+So, if you just want to have a simple look at camera, this is the opt to use.
+If you want to have way more options, camera is the opt to use.
+So, as you can see, this camera is now following the cube.
+But, we can move where the camera is in relation to it, right?
+So, we could go up.
+We could go left.
+We could go right.
+So, this is pretty self-explanatory.
+One other little trick I want to go into here.
+And, it's not going to be perfect.
+It's just to try and get the point across.
+You know, I'm going to make the objects move a little bit quickly now, as you can see.
+So, it's flying left and right on the x-axis.
+And, let's make it move up pretty fast on the y-axis as well.
+So, this is like really just perfect, right?
+It's always in the middle of the screen.
+So, let's pull this over here.
+And, now, let's click on the x parameter.
+And, let's just grab the average interpolation op, right?
+It needs a trigger.
+So, I'm going to put this here.
+And, I'm going to put the number on, say, 16.
+And, as you can now see, the cube isn't always exactly in the middle.
+It's like got this weighted slide to it.
+If I put it on 32, the camera kind of trails after the object.
+So, we could put this on x, y, and z.
+It was just a little thing that I wanted to show you.
+You could also get one of these positions, x, y, or z.
+Get a little bit of pearling noise or something like that.
+Add that to the value of average interpolation.
+And, you could get a kind of camera shake.
+I'm not going to go into that now.
+I think that's just something that's a cool exercise for you to try yourself.
+And, the last thing I want to go into is this.
+Let me just plug this back in.
+So, these ops can be used together.
+Right?
+So, what happens if I get transform view.
+And, let's just say I put the rotation back to zero.
+And, I grab orbit controls.
+So, if I plug orbit controls in after transform view.
+And, I click and drag with this.
+I'm now able to determine how far away it is at the beginning.
+But, I can just still rotate it as normally.
+And, I could put this really far back.
+But, it's going to have a different effect if we change the order here.
+So, if I get orbit controls, shake it loose, and move it here.
+You can now see we get this different effect.
+Right?
+And, I'm not going to go into the math or the theory behind it.
+I just want to make it clear that you can use these two in conjunction.
+So, this has been an introduction to the different camera ops inside of cables.
+I hope this video has been educational and informative.
+If you have any questions or comments, please feel free to leave them under the video below.
+Or, to post them on the forums.
+Thanks for watching.
+Have a good one.
+Bye.

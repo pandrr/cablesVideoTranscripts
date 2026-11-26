@@ -1,0 +1,665 @@
+https://www.youtube.com/watch?v=1oXJroDteqg
+yeah hello everyone today it's us again my name is pandor on cables and this guy's steam or steam
+or stefan what what's your name on cables steam steam okay right yeah um yeah and um so
+steam prepared or made like a little carnival costume with led stripes and we thought it's a
+nice project to show on the stream because it's it's not really a lot of soldering it's it's the
+electronics super simple and um um but all in all it's quite a complicated project because like you
+have this website with cables then you have this hardware then you need to somehow get information
+from the patch to that hardware and so um it doesn't seem so complicated but the it is quite
+some components that you have to combine so we thought it's a good um thing to show on the stream
+how stefan did it and um yeah if you have any questions anytime ask us anything
+we will provide the links to all the components to the open source software stefan used and
+um if you have any questions then ask us um yeah i think that's that's it right stefan so
+yeah i give it to you i hand it to you and yeah uh yeah well um thanks for the introduction um the
+whole project started uh during carnival which is a season in cologne where everybody dresses up and i
+wanted to do something with electronics and the whole idea was to um basically create parts of my costume that
+are blinking and can be controlled by people basically in the pub um and i found some nice um software
+around there and later on i sat down and um made this um be controllable with cables um the product of the
+whole thing is basically this like a hat that uh has like 300 um leds around it and can be controlled by
+by say an app um um via your mobile phone or um as we will um soon see it can also be controlled in cables
+um you will see this um here um basically make it big the image sure oh sorry um well basically what we have
+here is like a really simple cables patch that has a rotating cube with changing colors and as
+you can see the um the hat i hope you see this um can you make that that bigger maybe yeah
+that will make us bigger but i guess that's fine that will work
+something like this maybe i thought you had a different window okay yeah that's fine and there's
+no cable connected to the to the hat now right well you have a um a cable connected um that is a usb um
+cable that gives it power but uh the general like the whole setup would be to use like a power bank
+um this like a 30 000 micro um uh ampere power bank goes for i don't know 30 40 euros was the most
+expensive part of this whole costume um and this lasts this thing for like 10 or 12 hours or something
+like this so um this is wireless and um the micro computer that i bought also comes with like um wi-fi
+chip and everything so if you have like power somewhere that will work without cables without
+these cables and then you had the battery on your head or where did you have it in my pocket basically
+and like loads of uh replacement batteries but those were actually never needed so um yeah that that
+worked really well um under the hat is like a bit heavy um for these things they're actually way a bit
+um if you have this on your head all the time it's um quite annoying i'd say so again as you can see
+like we have this cables patch that i built and the um the hat basically synchronizes um with the color of
+the cube that we have um and we can also um then um um well basically control single leds um of these by
+using an api that this software um gave me what i did for my costume was um basically uh look around
+the internet and see um what there is for controlling leds and i came across this cool page i think pando
+um may also be um you're sharing the link in the chat then um this one guy that um built a lamp basically
+um and i got a few um few ideas um off of him um mainly like okay using esp uh 8266 uh which also is
+called a node mcu and this is basically like something like an arduino but already with wi-fi and all this
+kind of stuff yes right this whole thing is like this big looks like this uh i also have a picture
+of that um we'll show it later on really tiny thing um it's like i actually ordered too many of them on
+amazon because i thought okay 30 euros that's a decent price that was 10 of them so um these are like
+really cheap and really available lots of open source firmware stuff for special purposes um on the internet
+and what i also got from there is this uh ws 2812b which um is uh um basically a standard of um lots of
+stuff um for led for example these um led strip is like one with 300 uh leds and we later um will be
+working on with um that one which is um 60 leds but you also get like panels of them also like really cheap um i
+got um in the end um my costume was like um uh laced with leds on uh on arms and legs and the hat um with
+like i don't know it was around seven or 800 leds and all uh all in all i paid like i don't know 40 euros for
+all of these leds so um esp uh 8266 is um the micro computer that we are using uh and these uh ws
+a12b are um different kinds of different standard of led strips um um yeah there's also links to um to
+amazon links i've actually went from there and um picked everything um and this guy has a like a really nice
+to get working with this w led which will uh is the software that we'll be using that actually
+is made by um a guy that is really enthusiastic for this christmas lights that you have in the usa
+um so he built this software uh to have like his whole house illuminated by leds and um control this
+is um it's a binary it's a firmware that you flash and we will do this um in a bit um that you flash on the machine
+opens a wireless hotspot you change the wireless hotspot and um it already gives you um access via
+an uh um an access point uh an app uh and you have like loads of effects already in there so that was
+basically where i was going um on carnival and then came the idea on like okay this uh thing has an api
+maybe we can do something with that in cables um so that's the basic setup it's going to be a bit of
+um flashing and stuff um but i really want to um spare you all the boring parts on soldiering and stuff
+like that as you see in the picture and also um you can see here um and also on the website that's like
+three points where you have to solder so it's like really easy there's no um no resistors in there or
+or anything um so that is like super easy uh i think basically everyone uh should be able to do this
+and once you got this this is how you can so uh maybe i'm too uh too early but so this is how you
+connect the led strip and the power is all over usb right or yes that's all then yeah that uh that's
+absolutely all it also like really depends because this is then electronics but um uh it really depends um
+how much your power bank outputs um and then you have um basically a limited um limited amount of leds
+that you can power with that one connection that actually led me to um having two power banks to um power
+800 leds i think one power bank should be like usb standard should be able to power something like
+four to five hundred leds or something like this wow
+um that's uh that's yeah that's quite a lot i think yeah yeah i also was like super impressed um
+and they actually say something like ah it's better go for 100 um but these power banks usually um
+output a lot more than usb standard allows you to do so you actually have to try out we will see
+um how we can work with that uh in in that one software um as well
+so what we then have to do is um if you want to um really start over we um we pick this um thing
+that i already um soldered and gave it yeah didn't we yeah okay it's the one in the picture that um that's
+there um are you want to link to the node mcu thing uh no no i i just i think like we already screwed up
+our order but whatever it doesn't matter correct me no no i thought we we were going into the patch
+um right yeah we can do this now okay so um to uh right now show you how the whole setup works so we
+have um we have um this hat with like um 300 leds that's one strip um inside of the hat we have this
+microcontroller microcomputer thing that is connected via usb just to get power right now
+um the microcontroller is connected to my wireless network and um then i'm using um this cables patch to
+send requests to the house you still have the overlay on with the photo oh sorry yeah thank you
+um so i'm using this patch to basically do nothing else than send simple http request to my hat this uh
+is a funny sentence but uh that is what we actually be doing and uh to make this work with cables on the
+internet and as tom said in the introduction um it's a bit tricky because you basically have to
+completely circumvent um all the security that the browser gives you like um you must not do
+cross origin request and you must not do http request in um in an https session and stuff like that
+so we just came up with um a general thing that might also be interesting in other use cases whenever
+you have problems with web security um we made an often mentioned thing that is called da player
+which basically gives you the um the ability to run um cables patches in an uh in a different
+app in a standalone app that basically is just a browser and you won't have all the um all the
+security restrictions in there so this is also if you want to run cabits patches as an executable like
+offline or give an executable somebody then you can use the player to just run it outside of a browser
+without a browser and um and just just run it without needing any chrome or going to a url or something
+like this um so this is a handy tool that we use for this and um as you can see and uh also um how the
+player works maybe a short x course in that direction so this is actually that one patch i uh imported that
+and i can now work with that for example i can just like completely disable this one i save in cables i go
+back to the player i um reload in the player and well the cube is gone this is what we're gonna be
+doing um um all the time just using um the player to basically circumvent um
+yeah web security stuff yeah so maybe maybe we show the dev tools to show what what is happening
+in the browser so maybe it's a bit clearer so so stefan's the hardware stefan is trying to access is
+in his local wi-fi um so it has only a local ip address it's not in the internet it's not a device
+that's on the internet you could do this way also like if you have like an internet ip address or
+uh address for this device then you could access this directly but right now it's only in this local
+thing and the browser forbids actually to access local stuff from the cables gl domain this is just
+something that's there usually this is for your security but in this case it's really annoying so what
+you see there is it cannot access this uh address there where's the address actually but you can see
+here it's like 192 168 10 15 it's a local address so it's trying to access this address but the browser's
+just blocking it um so what we do is we we just create the patch and then we test it in in electron in the
+exit because there's no security check you can just access everything with this access so just keep this
+in mind and maybe we show the website of the player or something quickly yeah sure
+uh that should be a decent google search um yeah um this is one of the ecosystem softwares that we
+build and um actually you just go um to releases um and then download the latest release that exists for um
+for mac os for linux and for windows and then you can start it from there we'll um welcome you and say
+okay plus ctrl n i think to import a patch um description is also in the readme here and um then
+you import your patch and you can go from there and um as we will do work um on and off with that and uh
+uh complete uh but everything you have in the player is also portable you can put it on a usb stick you can
+take it to a museum to um a club um where you don't have internet and then work um with that
+yeah cool so closing this for this one can also be closed i guess um
+so again if we um if we see here if we go to flow mode um we see what we are actually doing um we're
+like the easiest thing is we're constructing a url that goes to the api of this software um and then we're
+triggering that ajax request um every now and then to not have a like a 50 frames per second http request
+to this poor thing um we come back to this um to the setup later on but right now i want to um show
+you how to um basically once you bought and soldered um this thing um how to go um into working with um that
+one uh software w led um so i'm doing this i think um okay this is gonna be really funny but um okay what we
+have is this um pre-soldered um thing um and um this is all really well described um on this web page
+basically this goes for um osx um for mac os um i'm on linux so things are a bit different um but in general
+i just um downloaded um from um sorry from here um took the corresponding one uh uh explanation also um says
+so and um yeah i just downloaded this and then we go to my terminal and uh change into the projects
+and um this now should be able to um flash this to the first device that i have connected via usp
+um and this completely deletes the software on uh on that device and um now reflashes um the whole new
+firmware firmware onto this thing takes a bit um but afterwards sorry so this thing is like a computer
+that can basically just run one program that is installed right so there's only one thing on there
+yes um i'm actually using um these kind of micro computers for different things in my
+in my home automation setups for example from watering my plants and then uh you can um get a um a really
+common firmware for it and uh use uh i think lua to um actually run scripts on that um okay on your own
+so you can basically pick a basic firmware and then work from this uh from there so we're done flashing
+uh and this um now means uh that i think you won't be able to see this um because it's on my first
+screen um now i can um join the wireless network that this one uh thing just created
+i hope this doesn't up this whole stream thing but i tested this yesterday
+so we're connecting to the uh new wireless network that um this thing created which um
+not connected to right now wait a second
+so why i thought this connects to your home wi-fi we're almost there okay i'm connected to um the
+default where basically the default setup thing and this has the nice appear address of four three two
+one um and now we've been greeted with um this setup i'm in this hotspot right now
+so now i'm connecting to wi-fi now i say okay my network is called beat and my network password is
+something like so this is now you're telling this device connect to my home wi-fi yes right okay um
+and this is all i have to do and um it also so nice to create this um access point whenever it is not
+able to connect to the one access point so you're basically really fail safe with it uh this so i cannot
+click on click on save and connect and this um so now disconnect it closes um it's on wireless uh thing
+and then hopefully um connects to
+my that looks good actually and now you can um look into your router or something like this but i'm pretty
+sure that it gave itself got um this should be the new ip address of this thing so this now is an ip
+address of my local network and i'm connected to um to this whole thing and um as you can see it um has
+like shit loads of stuff um um where it um gives effects and stuff like that but we don't have anything
+connected to it right now that could do these effects so we bought these that's a 60 um 60 led strip
+so does the software know what is connected or something or no uh well it well it basically just powers
+these gpi all things right and this connector um that is sold to us as a standard connector for leds and once
+you connect it um you're there with your default color scheme what we also can see is that um it's
+somewhere somewhere ends here so it doesn't really um color all of the leds right um this is because um
+we have to set the number of leds that we're um actually having on our strip um so if we set this
+to 60 um we will see that now we're all done and um everything is fine and dandy um and we also see
+that we're um are already in this app are able to like change colors and um go from there so if
+everything you want just like um make your house uh suitable for christmas in the usa i think that's
+where you go because they have like shit loads of effects um that you can use and um that was then the
+whole joke of my uh my costume and carnival people running around doing this on their mobile phones and
+deciding which um which effects are on my hat basically
+so that's the whole uh whole setup and uh we now have this thing running in my network
+putting this up again um
+we have this uh thing running in my whole network that's uh the ip address of it and um we copy this
+and that was my whole setup for um for carnival basically so no cables in there but then i found
+this page which maybe pandor can also post um hey this thing has a really simple http request api
+and um actually to make it um more interesting for more hardcore users um it says here that it also
+does output dmx if you need this and um it also does mqtt um which i actually tried to do which also
+works super nice but i really didn't want to do um today because it needs an mqtt broker and that
+will be just another part of um of a software stack but this seems to be really really powerful um especially
+for doing the effects that we just saw this is a bit really really really basic but we see where we get
+with that uh with that
+so if we now go back to our patch and um see what we were doing with that one we see okay this is um
+a different ip address that we had that is because that's the ip address of my head also funny sentence
+and um we now have a different ip address which is um 45 145 and so if we save this here and then we
+have to do this one thing and um work with the player then we can see that now this strip is um reacting to
+the colors of the patch already yes okay okay um so this is like the basic setup of um of all of it and um
+since we're doing it in the player we could like do i don't know basically anything that um that cables
+allows us to do with colors and then send them over here so let's look into um this a bit more
+because um because um this is basically the um the main idea of the whole thing is to construct
+a url that um corresponds to this request api and this says okay you can do rgb and um it's called
+you can do rgb and brightness is the um the name for alpha so you can do rgba values and a lot of stuff more
+and we later on might be interested in doing something like um where is it
+um segments where we can say okay this is we have like three segments uh where the first led is one and
+the second is 10 or something like that to make for six segments for the software itself this is like
+basically a line of leds this is zero one so whenever we do um something with it we just
+basically have to address every led by its number
+so if we look into this again we're still doing um constructing our ul that corresponds to um the api and
+then we um set the alpha to 128 and the effect to zero and then we set rgb values depending on the color of the cube
+right here and this then um again we're limiting a bit um to i think once every two second and then um
+send this over to um yeah basically where it belongs and this changes the color
+are people still following me tom are you still following yeah yeah sorry
+why are you using ajax request string and we need a new version with a new string type right
+yeah um but why first of all um i it occurred to me yesterday there were that the ajax request
+op um a parses um the request as json it will work there's no problem here but it will um always
+continuously give arrows because the re uh the response for the request isn't json and um ajax requests
+thing which are also like really weirdly named uh actually um does nothing but a get request and i don't
+care about what uh what comes out of it yeah so um for people that are not like web programmers
+ajax request is just a really confusing name for basically cables opens a
+ascii file on a server basically or you can just open any url with it and um that returns a string
+or a json object and then you can read stuff from it back so normally you do this because you want some
+information from the server actually um but in this case the the server doesn't really give us any
+information we just want to tell the server make the color blue or something um usually it's the other
+way around usually you want something from the server and he sends back like a list of users or database
+results or whatever but in this case we're just telling change the color and this and this url that
+stefan builds there this is basically what what we showed the api documentation this tells you like the
+parameter r is for the color red or something like this and then he builds this this url together yeah
+yeah absolutely yeah if there are any questions if we are too fast or like if it's not common knowledge
+because we are those web guys then please ask us um and then we go more into detail
+i'll just give it like 10 seconds yeah and can you show the whole url like the final can you click
+the inspect button sure um i mean it would be this right um where do we get this like you clicked the
+concat multi so uh or there and yeah um yeah yeah this would be the the complete url that we're building
+maybe also for people not um super web developers or um known to http this basically says like okay
+please send there's a machine listening at this ip address the 190 uh 192 168 10 145 and um it has
+it listens to requests on um in this style and as we can see here we're setting like these are parameters
+that are separated by this ampersand um and right now we're setting red to 255 and uh green to 121 and
+blue to zero and um if we change this then we change the colors we can do this actually what does a mean or fx i
+i guess it's effect zero is just display one color or something yes um right um if we go here again um
+i could pick like this has effects and all these effects um have like base colors that basically um
+change how the effects look and um fx zero means solid color
+and the a is um the um alpha value actually so the brightness
+then the strip gets transparent yes
+okay it's the brightness understand yeah
+um so what we could do now to maybe um have a like a really simple thing is like um
+basically get rid of all of this cube stuff and uh what we could do is um do a sidebar
+um and give the sidebar um a color picker
+and um there we go with the rgb rgb and now we only need these a lot of string conversions
+oh no this is a number number number to string um i'm sorry
+um
+what
+um so this then that's a good idea
+and it goes here and it goes here on red and copying this
+um and now we just disconnect these variables that came from the cube and put in
+these numbers into the appropriate parts which are three five and seven
+so that should give us um a new string we don't yeah but you need to convert it to bytes
+ah i have to multiply right yeah and probably round or something
+uh later yeah later uh multiplier yeah
+so in cables usually we i can just map ranges
+just multiply it by 255 yeah uh maybe explain why we're doing this yeah uh yeah in cables we most of the
+time work with values between zero and one and many other platforms work with values from zero to 255
+so we need to convert this to
+that the the range of the values is from zero to 255
+and actually why we are not using this is because
+uh this like if you have colors between zero and 255 you're always in in in for all
+future times you are bound to like an eight bit
+color value so between zero and one there can be like
+uh infinite uh amount of numbers so um it's the more future proof way to store color values i would say
+so this is why in cables it's it's it's it's differently stored basically
+um yeah so we should be fine here now we uh double check this um we have what looks like
+some values for rgb that seems to be okay um well we will see now if we go to flow mode
+um the string is um still being triggered eventually um no it's not why isn't it um
+doesn't really matter we don't need this yeah it's not changing um so if you change the color it should
+change then it's okay i wanted to do exactly this uh namely uh
+uh we we can like we don't have to do this actually right yeah right that's one of the
+weird patches where we don't have a main loop
+so uh we give this a clear color
+and then put the rgb things in there right
+oh yeah okay cool
+it happens more often than we thought it wasn't it on your last stream also that you had like no
+uh no main loop for the hml ops right yeah um so we now have this right um and we can pick um
+any color right here um
+and then we get displayed the color that in itself is not really um super interesting but um
+if i'm correct this then triggers um the request and this request as we uh remember goes to this
+microcontroller microcomputer thing um so why doesn't it change right now right because we still have
+that networking shit going on with the browser security which is why we have to go to the player
+and um reload the patch patch in the player and now maybe hopefully um we can change color of this whole thing
+in here and that works so um
+nice
+so now we can basically do anything we want whatever gives us anything that we can um
+put into a number we can use
+any ideas
+so yesterday when testing this so yesterday when testing this i made like a running light that was
+a bit more work because we have to work with segments and stuff
+um we could also put this to music for example if we take a soundcloud file and then somehow get the
+um i don't know the audio analyzer to give us brightness then we could change the alpha value
+would that actually work
+yeah should there's an average volume thing that you could use
+i'm more interested in whether or not the um the audio player works with the stream then let's see
+um any suggestion for suncloud
+uh no i'm totally not prepared
+um i don't know know anyone
+use ronnie as always
+what's his name ronnie please
+do you have this on cloud link by the way
+i don't know
+what about dip switch
+when it uses
+yeah
+uh greetings to this which i hope this is fine
+fine for you
+so we put in the sun cloud url that seems to work nice and now we need an um a play button right
+and we need an audio player
+yeah just look the example for the soundcloud up it should be copy pasteable
+yeah i did this yesterday so um i think i still have it in my head
+no i don't
+um so looking at the example patch that was like something like this
+that's a good way to actually try out whether the music is on stream
+it seems to be right i don't know yeah yeah it is that's also really nice
+what okay um so we get soundcloud we need the string new to all we put it into audio player we put it into audio output okay great there we are
+so there we are
+i have to put this back up again so that you guys can hear tom handle
+okay
+this then goes in here and that goes in here right
+fine
+and that
+i'm setting the volume to something really low 0.2
+okay okay now i'm not hearing anything
+oh right
+is it this is it renewed no that's it
+oh okay okay but um is this okay 0.5
+so now you have to tell me how to get like a decent value out of it to put into alpha or something like this
+yeah is it playing now i cannot hear you know i have i don't hear the music
+in our conversation you know so i don't know actually but yeah you can use the audio analyzer
+yeah yeah and this gives you uh the average volume right yeah and this is not changing
+also i need to be triggered yeah
+and this seems to be between zero and one yeah i just have the volume at a really low 0.025 something it
+doesn't matter
+okay so i i know i'm probably right yeah you can set the volume in the output then it doesn't matter
+you know yeah 0.025 and then that goes to one
+and now this should give us values between yeah that looks a lot better um and then we have to check
+the api and this one's for the ones the master brightness goes from all two to you have to make it a bit louder
+sure
+um right here
+so then let's try this
+yeah that's okay yeah that's okay um it's really hectic music so um probably
+yeah that's right any suggestions really welcome
+no just try it out let's see how it works so we
+map range this
+map range this from one two
+zero and two five five right yeah does this have like okay this
+let's try putting this in here first
+uh that doesn't do anything for the yeah okay that doesn't make it
+probably not um
+so then we get a number out that is something like this
+okay okay now we run into the same problem again um
+that we need a um trigger limiter um okay right to explain um if i now put this one
+this needs a number to string um if i put it up there
+um it would trigger this request basically every frame um and that is too much too many requests for um
+yeah for the browser and also like for um for this machine to handle
+so we're using this number to string that goes up here into i hope this one
+if this ends with
+now we have to change this
+um this looks better and then look at the result
+that looks okay um and now i have to play again how do i reset
+um need to reset the play i can also loop it but um
+resetting the play button on that doesn't do anything that doesn't work yes it was
+why wouldn't it
+um because it's just
+setting this to true always right but
+this is a reset trigger so it's basically just resetting the play button so i can hit play again to
+for the for the audio player
+so right now we have like what we saw too many requests like
+shit loads of requests um so we have to limit this somehow um and we do this by
+getting a um trigger limiter
+but to show the the the the trap is it playing now or what no no we have to export it to the
+player um first you want me to do this right now i i mean if you limit it yeah i don't know um
+i think this will break actually well let's try this yeah but how much do you want to limit it
+i mean if you want to visualize the music you have to
+trigger the ur all the time so you have a nice animation right yeah okay then let's uh check this
+yeah you're absolutely right
+so we're now playing this
+this doesn't really change maybe the alpha is a stupid value
+it's the um
+it's super hard for me to follow because i don't hear so is this playing music the um
+yes
+i actually have to mute this because right now
+both of them yeah this is um this is playing music okay and this is now supposedly changing the
+brightness um but i guess um let's try the limiting
+um
+i'd limit um what i do is like a trigger
+limiter and then uh limit this to something like i don't know 200 maybe even 200 milliseconds
+and then get a trigger string
+and then put this in here and this goes here which then in flow mode
+yeah we see that we have like a a lot less requests
+yeah but then you have five per seconds that's not really an animation but
+it changes something but i really don't think
+um wait a second i'm sorry maybe that wasn't the best idea to start with like sound visualization but
+can you change the uh alpha the a value by hand is it does it make any difference
+so you are you are setting no no uh right now i'm setting um the green value i'm trying this again
+maybe maybe that's more visible
+why why why i'm sorry
+but just but just now it should be dark right when it's zero yes it yeah
+are you sure the parameter is a
+yeah i'm pretty sure um so let's try this simply um as explained before it's just like
+a normal http request so you can do this in um in your browser so if we put this to full 55 and send this
+then um that happens and then to test it if we do this to 10 maybe
+well this changes but um i guess the ranges are like it doesn't really change too much
+so let's try something else so we put this to 255
+and then we connected this number to um b
+where's the player
+hmm
+oh i have to reload
+yeah you're you're right it's not really an animation i'm just changing the blue value and i guess it's not even
+really visible on stream but it kind of changes
+blue value
+yeah okay
+um
+but what what rate can it handle like 20 like can you
+i don't know let's try
+20
+20.
+a 20 is nearly 60 fps then maybe 50 or something
+we need something more visible
+yeah this seems to kind of work
+um
+at least from the request
+wouldn't like
+i don't see anything yeah that's yeah the problem is like um
+how do we get something more visible out of it like actual real color change
+do we do we like we take this map range and then multiply it multiply by different random values basically
+just put the output to the multiply of the color on top
+sorry the output of the map range
+yeah just connected to the multiplier below
+to the rgb multiply on top
+these
+yeah
+for all of them
+just try one
+but then the
+oh yeah right okay i can with it
+is it playing now
+why don't we see anything
+uh this might be not playing right now
+i'll put this on low
+but we should see the the green color flashing right
+see the the green color flashing right
+the background color
+this one
+i know
+no
+this goes in here
+i think it's not using
+uh okay
+okay yeah sorry yeah no totally
+yeah i don't know
+yeah okay this like really not that um visible on stream i'm really sorry so
+maybe ditch the audio um idea
+someone suggested maybe a white moving dot
+white moving dot yeah sure um okay let's
+so can you address so you said you can address like one pixel of it
+or something
+yes um that would basically mean
+wait a second
+um yeah that would basically mean that we um
+i have to do some dirty work with another concat multi
+to get more parameters into this url
+um but if we uh look at the api we can address um
+segments um so called and um
+basically this is segment start and and segment stop
+um so what is a segment you define the length of a segment somehow
+yes okay um and this basically means if we um want
+um segment stop was
+um
+s2 so wait a second let's do this slowly so what are you looking there so okay so a segment is something like from pixel 10 to pixel 20 i guess right right
+um yeah and uh and uh an individual led would be something like from zero to or from one to two
+then we'd have like the first led in this strip which would be exactly this one okay
+okay and um then we can set the color then these colors um yeah would then be set for the segment
+so if we do something like now i have this this is all fine because we set the global color and that works
+um but this is basically the background color then oh yeah okay and um then we address the first um
+thing with this basically um that would be the first led and if this still works with the color picker
+um as we're going um as we're going step by step um that should then be something blueish right um
+rgp yeah it looks okay um so if we then um update this in the player
+that shirts address only the first
+uh it what
+so what you're setting don't you have to set like two colors no
+no the other colors would be black then wait a second let me quickly read open this i'm sorry
+ah
+something's not right with the url
+this has to be s2 i'm sorry
+so yeah as you can see here right now we're just um
+we're just we don't have a background color as you um suggested we're just setting that one
+led to that color right yeah so if we now um get um for example
+maybe yeah that's a good idea
+um sign this one no
+venom yeah the second sorry it's super delayed yeah yeah sure
+um then we do this and then we do this and then we get a number out and that we need to
+have an integer we need to map range this
+so right now this is from minus one to one and we want like what how many pixels do we have 60 or what
+yeah okay okay so we go from minus one to one from one to 60 right and we want an integer can we put this here no no no
+uh so we make this is uh so we make this is uh so we make this an integer and uh floor
+oh okay oh this also works now interesting okay
+no no no uh so okay we floor this and then we get integers out of it um this now means we have um
+this animation
+and now we need two numbers basically since we um always need like the start and the end of the
+segment um we take um this one again number two string
+um this thing goes into the start um that was let me check
+um that would be two and the other one would be four
+so this goes into part two and then we take um the same number and um add
+uh sum of course um this is then basically the um the width of the segment then yeah nice the second
+yeah that that like the difference between that is the width of the and the segment right number
+two string and then that goes in there um four i said let's look at the url again um
+so this is always like off by one this looks fine so that might actually do something let's see
+okay yeah what we can see is it's being a bit slow i guess so this yeah that's the trigger limiter
+right yeah that's um exactly it let's try the limits of the trimmer trigger limiter and put this
+okay this is not 50 anyhow is it let's oh this is slow
+can i change the speed slower
+yeah this looks better though somehow
+so now we have like this thing okay cool rotating it's not white but it's like a moving thing
+and it really actually looks like a sign and it slows down and speeds up
+so can you hold it higher yeah sure it's not visible
+yeah cool and now if you change the number two of the sum then you you change the width of the
+the pixel right yeah that would mean yeah absolutely um so if i go here and change this sum to
+two two save this reload the player to save this reload the player then that would be two pixels right
+yeah cool um yeah and so this way if we do
+and this already goes back and forth right
+yeah okay uh okay uh the sign enemy of course um yeah if you use the modulo then you can
+basically have like uh like it's entering in the beginning when it's out of the end but yeah yeah that's
+that's cool it's great so that way we could start um creating all of the effects that these guys have um i would actually suggest if we do something really serious with that not using the http
+um api um api because that seemingly is slow if we use something like mqtt or websockets or dmx or whatever
+um that would work a lot better yeah i i want to create an image with an image compose and
+send like all the pixel values over but yeah it's a bandwidth problem um but yeah maybe it can be done with mqtt
+yeah if it's that cheap i will also order it just for fun and and play around with it and maybe we
+can maybe we can optimize it yeah i said like the node mcu things i have like eight of them lying around
+oh okay so if you um if i'm ever allowed to go to berlin again i will just bring some yeah or send me one
+i think we have led strips in in the studio all right okay oh yeah yeah yeah but yeah um
+um yeah so you were suggesting doing um would that work with that setup you were suggesting yesterday
+that we use a um texture to color array but that is like really nasty with the http request yeah um yeah so i wish
+this i really wish this i really wish this software had on web sockets because then we could send way
+faster data way faster or like
+actually for like 60 leds look you can
+yeah i'm they also really looked into um this they actually apart from this http request api they have
+uh json api which i also didn't want to do today but this way you can send well basically all of the
+leds at once like the whole state but sorry where what um yeah on the web page and i think you're
+uh delayed by the twitch stream uh they have a json api for uh w led um which then you can basically send an
+an array of um all the segments you have like basically every led at once that would um massively limit
+the amount of requests but also um i tried this yesterday and it's a lot of really really weird
+um data mangling um to get to that um that point basically yeah yeah we um so there's this new pixel
+device do you know this and but goof and me we so this is like an led matrix thing um and we managed to
+uh to feed this with the texture but then you have to be connected directly to the device like your computer
+so there's always a trade-off um
+with every solution um so but i think this is awesome because you can just put it
+on the internet and and tell people like connect to my wi-fi and and change the colors which is
+yeah like don't have you don't need the physical cable connection to any device or something like you
+can just put it somewhere and people accesses which is really a wonderful thing and um yeah
+yeah i also think like it has a lot of drawbacks like i don't really like mangling around with like
+strings and urls but this is like super easy super convenient i mean we just we didn't do anything in
+like what is it now one and a half hour um but like downloading the software flashing it onto it
+and then we were ready to go and this is like super nice yeah you can put it on your christmas tree
+absolutely make it an open christmas tree
+yeah and what what kind of effects do they have like blinking and
+okay wait a second so then i have to i think i will just shut this down um so i just shut the player
+down and i'm going back to this one right um and well basically there you can um select from
+i don't know basically all the effects um
+is there an knight rider effect we actually did actually the right knight rider with them yeah
+absolutely um i'm actually wondering whether or not we just confused this poor thing with um
+the segments i am maybe that's it like we created segments oh
+okay okay let me just restart this one if you try turning it off and on again
+okay now we have all the leds back again obviously apparently
+um this should also be back okay uh well the effects stay up i mean
+yeah just click some yeah just click some i don't know so this we basically kind of did right now
+um then i have like funky like this
+this really nice actually
+and can you then modify like
+okay okay okay okay i have to try this much yeah you can absolutely do it i mean you can create
+segments and then give different segments different effects so you can okay and um yeah that was my
+question like can you like say like i want this blink effect but in blue and only in the first
+segment or something like this right yeah yeah that would be something like um this let's take circus and
+this is what we have with the primary colors so you pick a different color palette um
+and you have like 400 leds connected to one of the to one controller basically
+yeah ah also because we're talking about this awesome software right now
+um i had two of those and um you can synchronize them like if you press on sync here it looks for
+different kind of different kind of controls in uh the same wireless network and then synchronizes effects
+um with them and yeah these are 60 of them i had four so that's 240 plus the 300 on the hat plus a few more on my belt
+uh that was like yeah there's something like 800 uh leds with just chain chain chain them basically like
+one connected to the end of the previous yeah these like these actually start with a connector and they
+end with a connector and then you just change them and uh chain them and then i they are no longer
+one 260 but one to 120 okay which actually is kind of annoying um because it makes it really
+hard to do something text wise or something really representing something because you have
+to know your metrics and then really do some weird calculation on where to yeah where to do stuff if
+you want a text scroller for example yeah okay but yeah
+so is anyone still following us on stream because i yeah yeah so um
+sievelk uh is happy with the result i think he wanted the white pixel um it wasn't really white i'm sorry it was more of a blueish thing
+um yeah um any questions um any comments um from the viewers
+any ideas any other hardware that you like to be connected or something i think this could be a regular thing
+yeah it turned out to be made more trying things out with steam and panda but i also like it i mean
+it's like just connecting this was exactly i was when i bought it i thought like oh man soldering and
+like flashing and firmware and all this open source shit and i actually had it running in half an hour and
+was like massively impressed by the result yeah i mean yeah we we can't show
+our old studio lamp from tim right um we don't have a photo but we have in in our studio here in berlin we
+have a lamp from our company with our company name on it and there's a led strip behind it and um if
+someone registered registers on cables gl then it blinks actually um and we can can also control it from
+cables gl but it's a completely different technology but you can you can connect this to to other
+applications um and control something with it it's all rebuilt it actually um was one of my uh my next
+projects uh will be to recreate this lamp for the office in cologne and um i will i will absolutely use
+this because it's super easy to do yeah so zivilex says now get 192 stripes and make a zx spectrum emulator
+yeah give me like 30 seconds tom you have to um i have to talk a bit wait a second
+what is what is happening
+yeah from mimi i can imagine a costume you wearing a led costume
+the thing that um there's these right so this one there's these so they are basically panels and then
+um different um lines that was my belt on carnival um but these also this is what i meant if you want
+to do a text scroller on them it would be really hard because these are zero and then i don't know 255
+up there and then you have to really calculate where to put pixels of your font and then move them but
+um these are also like super cheap and this is the same connector on the radio i mean um you were
+asking about uh how to connect like how to work with them and then you can
+connect this and this might be broken also but in general you'd connect this here and then you go to
+uh your config file you say okay right now i have like i don't know more like 200 uh leds and save
+it ah yeah and then um there you go and have the same effect on uh on the 200 more leds yeah this is
+okay yeah but then you just have to write one chunky tupler now up that maps the pixels and then
+yeah i i want to order this now i didn't know that you have a matrix like this there it's really cool
+yeah but then and and this is also like a few euros or yeah i can look it up but this was i i don't know
+below below 10 euros or something okay that's crazy
+so that expect from my gas has a bit more pixels but if you stack these really really well then you
+can have a zx spectrum display for like 500 euros only
+yeah really got um got into this led thing and i was surprised how cheap available and also with this
+completely um ready-made open source firmware for these machines through how super easy it is to
+even do with something with like actually no coding at all yeah i think when we built the lamp stuff was
+way more expensive and also needed more power i'm pretty sure i i don't know why how this changed yeah the
+lamp i i mean i sat there and tried to repair it and you were having like a power supply and that was like
+really big like a really lots of power and this is like usb i mean i think we have like 200
+no i don't know but it's not it's not more than 255 leds or something it's
+i think it's not that much but yeah yeah we have to redo it because it burned
+yeah um but yeah fire hazard is okay i carried this around in like
+yeah with five volts nothing happened yeah yeah okay um
+i think there are no other questions so can can you the w led can you also do text with it or no
+oh okay they don't have this um this conversation uh conversion um which is sad but i kind of i mean
+this software they don't really know how your stuff is arranged right so yeah yeah
+yeah where did you order it uh did you order it from aliexpress or something or uh no most of the led
+stuff i ordered from amazon actually okay they then i guess i mean some of the packets were labeled as
+sent from shenzhen but yeah
+okay okay i think there are no other questions yeah um i just wanted to say that all of this stuff is
+like really available on on amazon and really um um also the tutorials i mean they don't go into cables
+and um maybe doing text with chunky tuplana and doing that expectant displays but it seems as if this um
+christmas lights community in the united states is more nerdy than you'd actually picture yeah i mean
+the the really cool thing about this that you just enter url in your browser and then you change the
+light i mean this is super handy for debugging and for like trying things out um
+what happens and um yeah this is really accessible uh i guess yeah absolutely
+did we post all the links to everything yeah but we also will do this under the youtube video
+we're making one says awesome stuff we'll do this with my students next september that's a good idea
+yeah and you should also invite us again to your students
+great
+yeah i will not say this out loud what he just wrote just tell me afterward
+or sync with another iot api heartbeat also yeah i mean that's also cool if you for example show the
+temperature as a color or something like this yeah absolutely and then you can like tint your bathroom
+light uh in red if it's a hot day or something like this um you're giving me ideas
+okay okay um yeah thank you all for watching so people thank us so okay i cannot read so i have to translate
+okay um yeah i think there are no more questions um yeah i will order this and i will also play around
+with this and um yeah let's see maybe there will be another stream about this um with more advanced stuff
+i don't know yeah absolutely when working with this uh yesterday again i got like a plenty more ideas
+well could be better and maybe even also giving them a web socket api would be a good um weekend project i guess
+yeah yeah i would like how many how what is this esp machine like how much ram does it have or like
+how how what is it how many megahertz does it have
+where is it where is it where is it something like this isn't german's 80 megahertz i think
+and 30 kilobytes of ram really
+okay
+it's awesome that it's awesome that they can already like i don't i don't know if this
+if you can run a web socket server in this um yeah i mean the web server is already quite
+impressive right yeah but then again i don't know i mean i don't know too much about protocols but
+they have like dmx output wouldn't that be a lot heavier than shuffling some web back and forth
+i don't know it's it's so old it's pretty low level i guess um but yeah um but yeah interesting cool
+interesting thing yeah okay
+yeah i think there are no other questions and i think that's it then right okay then uh let's call it a
+day um thanks for watching um i hope it was a bit uh interesting and gave you some new ideas on
+not only this uh awesome software that i found in leds in general but also how to do stuff um with
+cables um with external stuff and um then um yeah work with that control it and if you have like problems
+and want to do it locally use the player um and stuff like that yeah was a bit of a round trip but i
+i hope it was like informational okay thank you all bye bye goodbye

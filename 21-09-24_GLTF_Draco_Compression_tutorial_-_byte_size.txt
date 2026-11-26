@@ -1,0 +1,56 @@
+https://www.youtube.com/watch?v=Vo3Hs8-p7_I
+hello this is Alex from cables.gl I'd like to show you a new feature in the
+latest update of cables that will allow you to use draco compressed GLTF files
+which means saving space and faster downloads for your users which is
+awesome so right now I have this simple scene set up with a couple of spotlights
+and orbit controls and a pong material and this lovely statue by one of our
+users antimatter and I'll link his sketchfab in the description below and if
+we look at this IBEX model here and actually open the file menu and look at
+the model information we'll see that it's 157 7 kilobytes which is really great
+already it's very optimized however I want to show you how to make it even
+smaller so we'll remove the model for now and go to blender and here we have our
+model which is already tiny you will see that it's missing some details but that's
+what the normal map is for and let's export this in a special way so we'll go to
+export gltf 2.0 and then we will look we'll check the include tab which is our
+selected objects as usual transform is fine geometry I've removed vertex colors
+because we don't need them we don't need tangents in this instance and then I have compression checked and usually
+it's unchecked but if you check it you'll be able to export draco compressed gltf files glb files and
+and if we look at the tab we'll see that it has some settings here compression
+level quantized position and all sorts of numbers that you know if we mouse over
+they'll explain what they do they're mostly the level of compression for those specific
+parts of the 3d model and I want to say this if you're going to be using models for example to
+sequence vertex animation or fade between different states of your model I definitely recommend maybe
+being quite careful with this compression level because draco does change the vertex numbers of your model
+sometimes I think if you read up on it it's a open source google library and I will also link that in the
+description if you read up on it I think there might be some discussion about how to really get fine
+control over the how how much you compress your model and how much information is retained for you to be able
+to do things like morphing between meshes and uh just my advice is if you're going to be morphing
+between meshes set the compression level to zero and that doesn't mean it's going to completely not compress
+your model and it's going to be just as heavy as a regular regular gltf file it's still going to be a lot
+smaller but it won't be as tiny as i'm going to show you with this compression level at the default six
+so long story short we're going to use defaults here because we have a static mesh we don't really
+um need to get in depth with uh you know making sure the vertex numbers are retained so anyway let's compress it
+um i've already named it ibase compressed and uh we'll export this and then go back to our project
+and i'll open explorer here and drag over my compressed file and actually wait let's look 32 kilobytes
+that's tiny so i'll show you some other ones i've converted which i've done a lot of um for example i had some
+mega meshes which were 100 kilobytes and that was down to 8.5 that's ridiculous right there's this uh
+very complicated uh nice looking um fight scene uh that was a 3d model which let's see if we can open
+actually with a preview yeah like okay it's all white but it's a really nice 3d print um that was 80 and now
+it's 10 and then i thought okay that's a bit ridiculous anyway for the web although if you're
+doing standalone projects with cables or maybe you you want to make like a um a kiosk demo or something
+like that or it's a you know offline project i think it's still a good idea to compress your models to to
+increase the speed of how fast your project works and and loads up different scenes but then i kind of
+thought okay we're doing web stuff so is it actually gonna compress tiny models already and for example
+i have these like low um poly head expressions here and it's 183 but it went down to 54 kilobytes so
+i still think it's totally worth it and uh yeah so our ibex is um 34 wait hold on details it's 32 kilobytes and
+and and uh we'll put it into cables and now we have our compressed ibex 32 31 kilobytes and then this one is 157.
+all right so how do we use this now let's drag it in and we get a warning immediately
+what is this warning gltf draco compression lib library not found add draco op to your patch
+oh that's nice let's do that draco here it is draco compression library all right let's add this to our
+project and if you look at it you'll see that it doesn't have any inputs it's just a library for your
+project for this specific use case which is gltf draco compression so if you're going to be using
+compressed meshes definitely remember or uh the the error will remind you to add this library to your
+project and it's a pretty small library i remember it was like 200 300 kilobytes i think like something like
+that um and it will allow you to to use the these compressed gltfs you'll see the error is gone now and
+if we connect this to our scene this is our 50 kilobyte statue of an ibex i think that's really cool i think
+definitely explore this uh compress everything make things faster load quicker make everyone happy thank you

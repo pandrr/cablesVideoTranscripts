@@ -1,0 +1,52 @@
+https://www.youtube.com/watch?v=cc5Vlmvlq6A
+Hi there, and welcome to another video on the ByteSize channel.
+Today I'll be giving you an introduction to the pixel displacement app.
+I'd like you to pause the video and just make what you see here.
+Great, let's get started.
+So I'm going to move this rectangle over here and I'm going to put the scale on 1.5.
+I'm going to move this one to the right with 0.75 scale 1.5.
+So this rectangle on the left is my preview window, like my displacement texture.
+And this is going to be the result of the pixel displacement effect.
+So here's waveform gradient.
+I can use this to create a lot of really simple different patterns.
+So I'm just going to put it on sign for now, frequency 4.
+So let's go underneath checkerboard and add the pixel displacement app.
+Pixel displacement 3 is our current version, which works the best.
+I'm going to get this texture out and plug it in here.
+Now if I turn up amount X or Y, we start to see this work.
+So let's take a look at what's going on.
+Checkerboard is on 10.
+I'm going to put gradient on frequency 5 so it matches up.
+Great.
+So the brightness of a pixel here displaces the pixels over there.
+That's the easiest way to explain it.
+Let me put this on 0.03.
+So if I now go to waveform gradient and I move it, you can see what's happening here.
+So if I would rotate the image, you can already get an idea what's happening, right?
+So let's put it on 0.25.
+So pixel displacement works on the X and the Y axis.
+So I'm going to put them just both on 0.03.
+So this is just the basic heart of the effect.
+The brighter a pixel is, the more that pixel gets displaced.
+So let's visualize this in a different way.
+Rotate to 0.
+Frequency to 1.
+Let's copy this.
+And we're going to rotate it by 0.25 so it's horizontal.
+And then we're going to put the blend mode on multiply to just generate a basic circle.
+And you can now see that this circle is displacing it over there.
+So I could now put this on frequency 2.
+This one on frequency 2.
+And you see we've got four circles.
+Let's just crank it up a bit so we can see what's happening over there.
+So the sky's the limit here.
+I could just stack all of these waveform gradients like this.
+And I could now put it on, say, frequency 8.
+And I could just say add.
+And I could turn the amount down.
+And as you can see, we can start to create some really interesting combinations here
+which we can use with the pixel displacement op.
+I hope this video has been educational, informative.
+If you have any questions or comments, please feel free to leave them under the video below or on the forums.
+Thanks for your time.
+Bye.

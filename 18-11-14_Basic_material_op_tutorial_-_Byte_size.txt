@@ -1,0 +1,28 @@
+https://www.youtube.com/watch?v=F-CUdHq40Pc
+Hi there and welcome to the Bytesize channel. Today I'll be giving you an introduction to the
+basic material op. First of all I'd like you to pause the video and just make what you see here.
+Okay great let's go. So if we click in between the cube and the transform and we type in basic
+material we get the basic material op. Now if we click here in this little colored section we can
+pick different color values for the shape. Just try that out, find something that you like. I'm going
+to go for this kind of like cold blue. Okay you can also use basic material to add a texture to a mesh.
+So I'm now going to make a texture op. I'm going to grab my favorite picture which is of course the beach.
+And as you can see this has now been added to all the sides of the cube. If I now click the basic
+material op I can use repeat. I'll put this on two and this on two. As you can see we now get the
+texture twice. Put this back. We can also scroll on x and y to put a texture where we'd like it to be.
+Okay we also have the texture opacity which is very handy. So I'm now going to just do something a little
+bit out of the box. I'm going to make an image compose op and I'm going to add to a new version
+of the stripes op. I'm just going to type in stripes. I'm going to get stripes 2. Now if I make this
+window a little bit bigger and I click here you can see if I click active texture ops this is what's
+being made right now by this. So if I click on the stripes 2 op I can like change the width of the stripes.
+I can rotate it. So I'm going to use this to change the alpha opacity of the basic material in the cube.
+Sounds complicated. It's really simple. So image compose gives a texture out. We're going to plug
+this into texture opacity and look at what happens here. All of a sudden the opacity has changed.
+So if I now go to stripes 2 and let's make a timer 2. Let's just animate this a bit because I like
+animating things. And let's now plug this into offset. Turn the timer down. It's a little bit fast.
+As you can see we're now animating the alpha value of the texture. So it looks a little bit weird right
+now. So we're just going to put a little op here in between called cull face culling. And as you can
+see it now looks correct. So this is just one of the really simple tricks that you can do with basic
+material. The most important thing to remember is it doesn't take into account any lighting. It's always
+just going to show everything exactly as it's given. I hope that this tutorial has been handy to you. If you
+have any questions or comments please feel free to leave them in the comment section below or to
+leave something on the forums. Thank you. Bye.

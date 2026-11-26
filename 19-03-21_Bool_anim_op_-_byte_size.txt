@@ -1,0 +1,29 @@
+https://www.youtube.com/watch?v=BzYl9lujqmg
+Hi there and welcome to another video on the Bytesize channel. Today I'll be giving you an
+introduction to the bool anim op. I'd like you to pause the video and just make what you see here.
+Great, let's get started. So first of all I'm gonna make a toggle bool op. This will allow me
+to send out a true or false value which alternates when I press this button. You can see that here.
+Great, now let's pull this out and get bool anim op. So this is gonna allow me to animate between two
+values based upon a boolean. So it needs a trigger. I'm gonna grab this and if we click it we can take
+a look and here we have the easing mode, the duration. I'm gonna set this to one and we have
+the value if it's false and the value if it's true. So let's just show this in the simplest way. We're
+gonna grab this and we're gonna plug it into the width. I'm gonna go to toggle bool and I'll press
+this. As you can see, it now alternates between these two values depending on if it's true or false.
+If I now go to the easing mode and I put it on exponential in out, we get a different kind of
+behavior. Great, so we can stack these guys together. I'm gonna grab another one. I'm gonna plug this here.
+I'm gonna plug the bool into the bool input and this one, the value, I'm now gonna plug into height and
+let's put this on the duration of two. I'm gonna click this and if I now trigger it,
+as you can see you get a very different kind of animation result. So I could create another one,
+let's just grab the trigger from here and I'm gonna grab the bool and I'm gonna put that down and I
+could now animate it from zero to say 180 and I'm gonna plug that into the transform rotate z.
+Now if I do this, as you can see we come up with this really cool simple motion graphic and we can
+go a lot further than this. So for example we could now use one of these values to change the RGB of this
+material. So if we get the value here which is always between zero and one and I plug this into red,
+green and blue and I now trigger we get this kind of fade in and fade out. So another thing you can do
+with bool anima is you can say I only want it to do something depending on if it's true or only false
+or both. So I'm gonna put this on only true and now watch what happens. So we now get this rotation on
+true but no rotation on false. So you can combine these ops to create a huge amount of very subtle
+differences and to add a lot of motion and life to your animations inside of your cables patches.
+Okay that was an introduction to the bool anima op. I hope this video has been educational and
+informative. If you have any questions or comments please feel free to leave them under the video
+below or to post them on the forums. Thanks for watching. Bye!

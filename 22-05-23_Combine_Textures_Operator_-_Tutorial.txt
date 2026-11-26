@@ -1,0 +1,187 @@
+https://www.youtube.com/watch?v=hD9CYli2fFg
+Hello, this is Alex from cables.gl.
+I'd like to show you Combine Textures Operator.
+And you might have missed it, but it's actually really useful
+and you can use it for creative stuff.
+Like I would say in this example,
+it's used in a very interesting kind of graphical design way
+without getting into Image Compose texture stacking
+and all that stuff that we're kind of used to.
+It's just on the fly, put in some textures,
+do some magical stuff inside it,
+and then it gets assigned to a basic material
+and then to the rectangle.
+And then if I put down Orbit,
+I can see that my rectangle has some stuff removed from it.
+So it's actually got like a logo with a transparency
+and it doesn't look like a rectangle anymore.
+Anyway, what am I talking about?
+So Combine Textures Operator.
+We can take a look at this example
+and then I will show you what I feel like is fantastic use case for it,
+for actually two use cases for it,
+for our PBR materials in cables that you use ARM or AORM RGB texture files
+to control the ambient occlusion and the reflection metalness.
+And then also another trick for if you're into 3D modeling and you're working with DirectX normal maps and OpenGL maps,
+I think you might know what I'm going to get into.
+We do a special little trick with the Combine Textures Operator.
+And we don't have to go into Photoshop and do any of that stuff.
+We just do it live in cables.
+Okay, so let's quickly run through the parameters and then we'll get into those funky use cases.
+All right, so first we see the filter modes, which we're used to.
+We can also find them in the texture operators and that just controls how our texture is filtered once we do some manipulation here.
+Then we have the wrap mode, so we can also clamp it, mirror it.
+You might need to, you might not.
+You can just leave these at default usually.
+And then the interesting stuff happens.
+This is all the ports that we see exposed here.
+They have parameters per color channel.
+So the first one is called R for red, then green, blue, and then the alpha channel.
+And in the case of this example, the alpha channel is this logo.
+And if I might impress you with the vis texture, you can resize it.
+Have you seen this?
+That's pretty cool.
+So we have this black and white texture that is telling our Combine Textures Operator that, hey, the alpha, use that texture for it and assign it to this new generated texture.
+So if we look at the vis texture that's coming out of this Combine Textures Operator, then we see the alpha was applied here.
+And if we remove, you see it's the whole entire rectangle is covered by our Beach Textures Texture.
+So, okay, then what can we do?
+What are these options here?
+The first thing says R Source.
+So for the red channel R, we can select the source of the incoming texture.
+So in this Beach Texture, we want to use the red channel of this texture and then assign it to the red channel of our output texture.
+In this case, you know, you can do whatever you want with this red channel and assign it to a different one.
+So, and then we can flip it also.
+That's the next option.
+Our value is source or inverted.
+So if we invert, we see what happens here.
+So if we look at the green, we see that it's inverted.
+All right, let's put it back to source.
+All right.
+And then the blue channel is reassigned to the red channel.
+So we kind of have two red channels in this texture manipulation.
+So if we set the blue to blue and instead of the noise, we use our original Beach Texture,
+then our texture looks exactly the same because we're not actually doing anything special.
+We're assigning the red to red, green to green, blue to blue.
+And I believe you might be able to look this up.
+I think it's kind of a common thing.
+And that's actually a transition into what I want to show you with what we can use this awesome operator to do for our normal maps.
+I think it's called swizzling, right?
+When you reassign a channel to something else.
+Also, I think you'll commonly find it on the web.
+People want to flip the Y channel of a normal, right?
+So that's the green up and down direction, the Y direction.
+They need to flip it.
+Why do they need to do that?
+Well, because in some cases when you're working with 3D models, depending on the engine or maybe the software package you use to bake out the normals from your high poly source material,
+they will use the green channel inverted or not inverted, depends on how you look at it.
+But once you know the standards that you need to work with, so for example, by the way, I'm getting this stuff from this vase, this brass model, and also the background.
+I'm getting this from this amazing website called Polyhaven.
+I love it so much.
+It's really high quality stuff that you can use to learn and get into some like Zen moments because the stuff is so high quality and you can really like learn things like this.
+Are my normals the right way up?
+How is my HDR lighting my scene?
+Anyway, all right.
+So what was I talking about?
+I was talking about that there are some cases where the normal map won't be the right way around.
+And when I'm downloading this stuff from Polyhaven, it usually comes with a normal GL texture.
+So they do use the naming conventions for whatever you need at GL.
+And then the other one is DirectX.
+And you'll find that for some of their textures.
+It will be like included in the zip file, you know, maybe, I don't know, maybe Unity or Unreal use DirectX.
+I'm not sure.
+I might be wrong.
+Correct me, please.
+So it comes with both.
+And right now I have everything set up the correct way, right?
+I have my, also my ARM, this texture, I have my ARM map assigned.
+And that's the combination of the AO, R, and M map to control the ambient occlusion, reflectiveness, and metalness of my object.
+That also comes from Polyhaven, usually already as a combined texture, which is really handy, right?
+But a lot of times when I'm doing stuff with models from Sketchfab or maybe I'm baking things out, I am not getting this combined ARM map.
+I have stuff separately, so I prepared some things where we're finally going to get into, hold on, you're not seeing this, this texture.
+Never mind.
+Okay, so I did it again.
+All right, so I'm going to simulate what happens, right?
+Let's say you are working with a 3D artist and you say, can I have the AO and the reflectivity map and the metalness map?
+And they say, okay, here are all the maps separately.
+And you're like, great, but that's kind of annoying.
+I need to combine those into something that our PBR material likes to use.
+And you can use this for other engines, for example.
+It doesn't have to be just for cables.
+I think it's a super handy thing.
+You can build a tool to help you with this stuff.
+So let's delete this RGB AORM texture and let's delete this.
+No, let's leave this for now.
+So let's pretend our normal map is correct.
+So what we get sent is, for example, our AO map, our metalness map, and our roughness map, right?
+Bunch of different textures.
+Cool.
+How do we plug this into our single port AORM texture input?
+Well, that's where finally combined textures comes into play.
+So combined textures.
+And, you know, I want to cover this in another video.
+I'm kind of all over the place, but yeah, I'll get into it.
+So we plug in the red channel is our ambient occlusion map, right?
+So if we put down a vis texture.
+We have this map that our supposed artist sent to us.
+And then I have this vis texture on the bottom to see what is happening here.
+And then we have a metalness map that goes into the blue.
+And it's a very shiny object, so there isn't much happening.
+It's pretty much a white texture, right?
+So if we put in here, yeah.
+In the case of this vase, it's just super shiny.
+And then the green, and now we have combined our black and white maps into one single texture that I think a lot of software is starting to use for all of their metalness and combined stuff maps.
+Instead of having, like, a bunch of different textures, you just have one, and then you use the different channels for whatever.
+Okay, so now a tiny tangent is what I want to cover in an upcoming video as well.
+Like, look, I have a bunch of maps, and I need this one texture.
+And I'm using combined textures to generate this stuff.
+I wouldn't do this, like, in a project, right?
+So if you're working for a client and you are doing something that's, like, a helping or kind of, like, a task, like a chore you have to do in your project is,
+ah, I need to combine all those textures into a single texture, and then my PBR can neatly use this combined texture map for what I need.
+Just download this texture, right?
+Download texture.
+Save it out.
+Like, don't do this in your project all the time.
+You got it done.
+Combine it, save it, import it, remove those other textures so we don't need them anymore,
+and go back to, like, very optimal amount of operations for your project.
+Anyway, that's, I don't know, is that a preview for the next tutorial or something?
+Maybe.
+Okay, so we have this combined texture, and then let's now simulate this incorrect normal for our engine issue, right?
+So I have this direct X normal, and it goes into here, and I'm looking at this, I'm looking at this, and something feels off about it.
+It's sometimes hard to catch, and maybe this, I'm sorry if this isn't the greatest example,
+but it is very, like, evident in some models where your normals are incorrect.
+The light is shining from above, but then it seems like, is this divot in the vase coming out or in?
+No, let's quickly compare this, and then I'll just get into the manipulation.
+So let's maybe zoom in a bit more.
+Hopefully it's not totally gross looking.
+So we plug in this one, and yeah, not the greatest example, but it looks more correct than the DX one.
+Because it is, because we're using cables.gl or webgl for our engine,
+and they need the green channel for the normals in a specific direction that is the opposite of what the DX normals have.
+So this is what we want, right?
+But let's pretend we only have this DX normal.
+So what do we do?
+We get our combined textures operator,
+plug in our normal map to all of the needed ports.
+So the red, green, and blue is coming out of the same texture.
+And if we look at our Viz texture,
+it should still look like our normal map, right?
+So if I do like this,
+and then maybe make it a bit bigger.
+We've got these two identical textures.
+Now to fix our normal map,
+and I can actually plug it into this vase already.
+To fix this green channel, we need to flip it.
+So all we need to do is click invert.
+And you see that now this is the standard that we need for our webgl engine on cables.
+So that's a use case I really wanted to show you.
+So definitely flip your normals.
+Make sure you check out combined textures.
+I think it's super useful.
+And yeah, once you do it, save out a texture and reuse it in your project.
+Maybe you don't have to constantly do a combined texture operation.
+But anyway, hope you like this.
+Join us on our Discord.
+Come by.
+We've got some awesome stuff planned.
+And yeah, see you on Wednesdays.
+Bye.

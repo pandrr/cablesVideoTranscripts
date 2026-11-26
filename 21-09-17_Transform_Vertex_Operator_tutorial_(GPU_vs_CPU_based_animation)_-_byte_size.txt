@@ -1,0 +1,45 @@
+https://www.youtube.com/watch?v=SaKWF6RnsyI
+hello this is Alex from cables.gl let's take a look at transform vertex this
+operator is very interesting it it's deceptively simple I think but it's
+also very fun to use and will allow you to do pretty cool things without melting
+your computer which is awesome so I have it selected here and we can read what
+it what the basic description is and that says transform vertices of a mesh
+via vertex shader okay that sounds good but let me just show you what that
+means it has some options here for moving the object scaling it on different
+axes and rotating it and then there's also a transform normals button we'll
+explore later and let's take a look at this basic example I've set up here which
+is a mainly a mesh instancer that's being populated by cubes and an array is giving the positions for the cubes
+and also have some random arrays with a array 3 multiply here on the side that I'm going to use to show you
+why transform vertex is so cool also I really hope you can see this um well yeah
+now you should definitely be able to see it the performance op is telling me the frame rates and cpu and gpu usage
+all right so we have this green cube sphere let's hook up these random rotations to the rotations input on the mesh instancer
+now when we use this array 3 multiply and I'm holding shift now to move these numbers quickly we're rotating every single instance of these cubes
+cubes okay that's nice and if we look over at the cpu it's not so bad yeah it's it's being used but
+it's it's all right it's gonna run pretty fine on on many devices let me um move this down a little bit and add a timer
+so we don't have to use our mouse anymore okay and I'll put it up to like 150 so that's that's all right
+I'm gonna connect the number of values to this point sphere random op so we can control the amount of cubes from one place actually
+all right so we're using 100 right now let's see what happens when I give it 1000
+okay the cpu usage has gone up to two milliseconds now all right that's not great
+but what about uh 10 000 all right that's that's getting real bad now and around 11 on my machine
+means it's going to be horrible on a mobile device but what about more all right now we're getting
+into the point where this machine is struggling heavily okay so we're using a hundred thousand
+instances and we're rotating it via the array setup here okay let's disconnect this and
+delete this and forget it but let's try our transform vertex operator we'll place it below the phong material
+that's important because the phong is a shader that gives us the kind of material we want and then the
+transform vertex is going to modify the 3d shape itself all right so what were we doing we were doing rotations
+on the y and i will put a timer here and i'll give it a hundred and you'll see that all right there's maybe
+too many let's let's decrease it a little bit but if you look at the cpu usage it's actually still the same as it was
+but we're modifying the 3d shapes which is pretty wild i think right so i hope this really shows you that
+like the the craziness you can get into with this um operator here and uh maybe inspire you to explore more um
+shader based uh mesh manipulation so to say um all right well i think you can already um go and explore this
+on your own but if you're still here with me let's look at this transform normals uh toggle right now it looks like
+all the meshes are rotating and uh yeah it's kind of hard to tell what's happening what this purple color
+is coming from my fresnel setting which probably shouldn't it shouldn't be working like this because
+we're rotating the mesh without kind of rotating the information uh for our um camera and kind of scene to
+also rotate how the material will look once you know if you rotate a cube with a shine on it it will
+look normal um but if you don't rotate this material with the geometry then it's going to look really weird but
+it actually looks kind of cool and i think you should uh definitely play around with this
+toggle to see if you can get interesting um artistic results with it so if we turn this on then we're kind of
+getting the standard expected result because we have a a default light pointed at this mess of cubes
+and as they rotate they reflect the light in a somewhat realistic manner all right so
+Keep this toggle off and have fun. Bye.

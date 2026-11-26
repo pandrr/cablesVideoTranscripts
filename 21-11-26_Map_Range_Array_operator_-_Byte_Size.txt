@@ -1,0 +1,81 @@
+https://www.youtube.com/watch?v=SKYXdzHYwdI
+hello this is Alex from cables.gl I'd like to show you an operator called map
+range array and if the name is familiar to you that's true because there is an
+operator called map range which we have a tutorial on and I'll link it below and
+that one works with a single value but map range array works with all the
+values in your array and you can use it to do some really cool stuff and I got
+an example here where I am using map range array to change the rotation of the
+meshes that are in this mesh instancer and what I'm gonna do is go over to a
+simpler example and then we'll come back to this stuff and I'll show you how to
+use it for things like this okay so in this simple setup I have a main loop with
+a transform to align my text mesh and the text mesh is displaying a value I'm
+taking out of this array from numbers and what it's doing is creating an array and
+I'm gonna show you what happens when I change this value
+at index zero and we're going you know we're getting we're getting the readout
+that we're inputting into this array from numbers and array get number is getting
+this number from index zero so nothing special here but I've placed map range
+array here and if we look over at the parameters we'll see that it has an old
+minimum and an old maximum and that is the range of your input value so for example
+right here I'm gonna go from zero to one okay and then here we have the new minimum
+and new maximum and what it's gonna do is it's going to take something like the
+old minimum zero and then change it to negative one while the old maximum one
+will be new maximum of one so very simple and you see something changed already and
+we'll go to zero I'll just type it in all right so now we have negative one when
+we're putting in the value zero into this array and this is pretty cool because you
+can use it for stuff like this where I am taking the rotations and assigning them a
+value of zero to one with this array one X here so you see my value for the
+rotation on the X axis is going to be zero to one and then with the map range array I
+have the old minimum and old maximum set to zero and one and the new minimum and new
+maximum is zero to 180 so it's going to take those numbers and then rotate or change those values to
+something like a rotation angle which is 180 which is what mesh instances are likes so if we go back
+here and put in 1 then it doesn't really look like anything is happening right so that's as if we're just
+putting in our array with 0 to 1 into the rotations and it doesn't look very interesting at all
+but if we put in put in this map range array and we change this 0 to 1 to something to like 0 to
+0 to 360 then we're now getting very cool very light on the CPU and even GPU shapes and you can
+animate this stuff of course so if I go into different ranges you'll see that it's animating live which is
+also pretty interesting and another trick I want to show you is for example I'll go back to this first
+example where I had my initial design was 0 to 360 and I was thinking okay but what would it look like
+if I'm going into extremes right I'll do this rotation twice or three times and what you can do is just type
+in like a math function so I'm going to type in asterisk into this new maximum and then put in the number
+let's say six and then you'll see immediately that there is an equals 2160 so you can use the
+parameter input fields with little math operations so it's pretty handy for stuff like rotating things or
+adjusting values with increments or maybe like yeah just dividing or multiplying things so yeah and then
+now I'm getting instead of 0 to 1 I'm getting to 0 to 2160 so it's rotating
+um on the let's see what axis is this on the z-axis we're rotating
+six times so you get this really funky um kind of mathematical shape and what can we do let's let's just um
+make one of these mesh instance thingies um from scratch so i'm gonna delete this one i'm gonna leave
+the map range and i'm gonna delete these two uh what do we need we need the mesh instancer
+so mesh instancer and i'm gonna give it a mesh like a cube
+and then plug this into the main loop as well and i'm going to use a circle points
+because this was one of the first things i wanted to do with um mesh instancing and i wasn't really
+sure how to do it until i found this map range array so we're gonna do circle points point circle okay
+and then we'll make these a lot smaller so 0 to 1 0 to 1 0.1 all right and we'll remove the rendering of
+this cube from the center okay so what i want to do for example is have long um cube-like shapes
+around the center uh of the circle and kind of like shooting outward okay so i guess maybe we'll do
+fight maybe and you see what happens is since there's no rotation applied to the mesh instancer
+it's just putting these elongated cubes around the circle but they're all kind of pointing one direction
+okay um i'll give it a material as well let's just do a basic and go with something like red
+okay so how do i make all these shapes points from the center outward
+let's create a new array i'm gonna go for array
+and what do i need in the array the array needs to be um the same length or has has it would have to
+have the same amount of um 3d rotation points as the number of points in our circle so we have 40 points
+so we have 40 elongated cubes and i'm gonna need to plug in this 40 points into the array length
+okay so now we have an array of 40 and i'm gonna set it to 0 to 1 all right so now we have for example
+the x rotation but mesh instancer needs either euler or quaternion rotations right so euler is uh xyz so we're
+going to go with that one and what i'm going to do here is change this um array to an array of three um
+rotation points so i'm going to use this one called one array one
+two x a really handy operator actually should do another tutorial on it so now i'm going to select
+the format which is abc so it's going to be an array three that we need for this mesh instance uh rotations
+and i'm going to set them all to zero and i'm going to plug it into the rotations and array one x is taking
+this array of 40 and changing changing it to um an array three with the length of 40 and we're getting 120
+um rotation values for for each of these 40 cubes all right so what do we do now let's see
+what rotation we need what rotation we need i think it's z right so i'm going to use this as the input and
+these i'll leave at um zero for abc so x and y rotation will be zero and then the z rotation will be
+whatever i'm inputting and right now inputting zero to one and this is where map range finally comes into play
+we're going to pop it in here and i'm going to leave this old minimum to zero old maximum to one
+and then change the new minimum to zero and then 360 and i might have
+gotten the the size here wrong but there we go so now we see that the cubes are all pointing from
+the inside outward so they're all rotating nicely and if i change the number of segments to maybe like
+six it doesn't really matter and they're still rotating correctly because this wonderful map range
+array is doing its magic so i'll publish these um other patches for you and link them in the video so you
+can explore what's going on but uh yeah i hope uh this is very useful and uh see you soon bye

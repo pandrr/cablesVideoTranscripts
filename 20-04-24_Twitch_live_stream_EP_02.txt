@@ -1,0 +1,826 @@
+https://www.youtube.com/watch?v=PRjTSMtEzzc
+hi everybody welcome to the twitch stream for tonight we're going to be trying something
+different uh i'm andro um that's panda if i'm pointing the right way and door right now yeah
+over there okay find the right way um and on monday we released the latest update to cables gl
+it was a really big one um huge amount of enhancements fixes features quite a lot of
+new ops as well so tonight we're going to try something new and we're going to try and go
+through the the highlights of the the latest update we're going to try and show you the things that we
+think are the coolest how to find the results of the changelog and the things that have come out of the
+update and we're just going to actually try to talk a little bit about this like we do at work
+because you know sometimes one of us makes something new and then we show it to the other one and we have
+a discussion about it and it's been such a hectic uh period with the update there's a lot of new stuff
+in there that i've actually still got discovered that panda um made so um the first thing i'd like to
+start with is that at the end of the twitch stream not right now i'll be announcing the um the upcoming
+cables jam and the cables jam is basically we give a theme people have till a certain deadline to um
+create a cables patch and we judge what the best patches are and they basically get cable swag which
+will be things like um t-shirts and other such goodies which is all very exclusive and awesome and legendary
+uh like really like the only problem is getting this stuff out right now uh with everything that's been
+going gone uh but we're working on it in case anybody there in the room goes where's my t-shirt
+so at the end of the twitch stream i'll be announcing that and tomorrow i'll be releasing a proper blog
+post and everything on the social media with the rest of the theme and like what the result uh what the
+the rules of that will be um so um basically we're gonna run through um some of the stuff from the
+changelog so first of all i'm gonna ask panda if you can just open the changelog page yeah so people
+can see where it is so you can always find it um when you hover in the menu and go to changelog basically
+or you find it in the footer but you can go here and then we see the changelog and the changelog for
+us is like so all the developers on kbiz.gl they are collecting like all the stuff they do um
+when they just update ops write new ops fix some bugs and stuff like this we just collect this and
+we just when we do the update we compile this big list and you can always find it here so so when you
+scroll down all the way you see like there's the updates from a year ago so we just we just want
+to keep that list there so so everything is visible basically and um yeah so this is our latest update
+and i think it's the longest list yet i think it is um i think it's an awesome update i mean it's not so
+flashy as someone said on on twitter which i found funny but um for me it's really important update
+because we fixed a lot of little annoying bugs and problems and and ui stuff uh and and quite some cool
+enhancements to existing ops and and all this kind of stuff so um it may not be super flashy
+um but um i think it's a huge update for stability performance and like user interface in general
+definitely i think a thing that's important to highlight is um you know if we only keep on adding
+new stuff but we don't fix things and optimize them at one point you know any program you're working on
+will become unusable so you know you might not notice um the speed enhancements uh for example optimizations
+immediately but you know when you're starting to work on bigger patches or to do more complicated stuff
+we hope that the results of that will be clear um so we kind of break it down into a couple of
+categories here we have the new ops if you would click on one of the highlighted ops right now it would
+take you to the op obviously as tom's demonstrating here so this is a really cool one that we're going to
+be uh tom's going to be giving this demonstration with later um and then we have um things which
+happen with the editor um user interface because there's a huge amount of ways that you can interact
+with cables and they're all kind of nice and not tucked away but you know you've got to you've got
+to figure them out um enhancements and fixes um sometimes ops need to get a new version uh for
+reasons that i don't want to go into on stream um yeah website sometimes gets uh some updates like
+now we've added the twitch stream um into the main part of the the landing page um we've updated the github
+and stuff for coding with cables for people that are using cables um with their own web pages there's
+some enhancements of the cable cli so we're trying now to just like stretch of this in a really
+understandable fashion and as you can see we've got some thumbnails down there at the bottom and
+they're pretty much like the newer ops we don't want to show you all the stuff that's got like a new
+version because that happens a lot and then it would become just like really very noisy so this is our way
+to give you um a summary of the the update that we've gone through and one thing i want to point
+out is you know um in the last year we went through a really big renaming um process with ops to make
+them easier to find that's very important if you can't find what it is that you know you've got in
+your head then you're not going to be able to um use it so if you ever follow a tutorial or something
+like that and you go hey i can't find this op anymore you just basically want to go to this page do
+control f type in the name of the old op and then you're going to find it and it will tell you it's
+been renamed to this but we barely do any renaming right now but of course some of the tutorials we did
+they were created before the renaming process took place so yeah as panda said this is where we've got
+everything from the update and if you want to just find out what we've been up to you can just go here
+maybe tom can just show you that if you're on any pretty much any page from cables and you scroll down to
+the bottom uh to the footer um because i always forget to click on it in the main bar basically
+in the main menu i always scroll to the bottom um yeah here it is yeah yeah um yeah and um yeah um
+so if you so what we missed to say is that uh we just show you some stuff uh if you have any questions
+about this what we are currently showing then just just drop them in the in the chat after
+after this whole part we will probably do like a question and answer session i guess so if you have
+any other questions you you can ask them we try to answer them uh if it's like uh if it's possible in
+the right amount of time or if we can answer this on the spot so um let's just try to do this um we are
+also figuring this whole twitch thing out um it's like our second stream so um so if you have anything
+that could be better if some if you have some ideas um then then just tell us um yeah okay um yeah
+should we just go through through our list yeah sure so what do you want to start with tom yeah let's start
+with the with the text mesh i would say okay um yeah so um i'm totally prepared to do this so so this
+this is a new font rendering system uh for cables which is um pretty cool so
+font rendering uh if if you know about real time graphics it's always
+it's always hard and there are like one million ways to do this and um all of those ways have like
+pro and cons mostly cons i would say most of the time so so there's no real good system that works for
+all cases um so we already have a few few ops for this like text mesh and we have this line font
+we have the test texture who writes a texture to the to creates a texture with text in there
+and now we have this new one which is called text mesh msdf so what does msdf mean so
+um i go to our documentation page and i just click this link here and this is um this is the github page
+from a guy who created this this generator this converter for msdf so msdf means multi-channel
+sign distance field generator so what does it mean this creates like this funny image here
+um and this is super pixelated and stuff but if you run it through this sign distance field algorithm
+then you get this really sharp clear edges um character printed out so that's the cool thing
+about this usually with textures when you make when you scale up the text really big then you have like
+those usual texture artifacts like bad filtering like the edges are pixelated or totally blurry um like
+like he's showing here like those guys here um so and this crazy algorithm which is super small and
+and easy in the end um solves that for us so we can have so we have a texture that we can import into cables
+and then we can use this texture to print the text on the screen and um so so this um
+this guy this is super interesting this page there's also a paper um which started it is it's developed
+by valve and all this kind of stuff super interesting i just um want to show you read this is it's really
+interesting so so now we can do this in cables and um basically um in cables you now have
+we can use this textures that this tool generates and they look like this they look
+in its own way super awesome basically um and this texture contains like all the characters we we want
+to use um or we can use um when we when we print this um so um the texture looks like this and um the
+algorithm use this texture and and make it look like like normal text so there's even this option which
+doesn't make any sense but it's quite interesting to see um i can
+where did i hide it here so i can switch this and then you can see
+the part of the part of the texture that is displayed there um
+yeah so we can we can use those those textures to print text on the screen and the cool thing is now
+that we can um scale this up and make this really big and you see it's still it's still super sharp uh
+and no blurring or no pixelation or anything is happening which is which is pretty cool
+um yeah
+and um mark do you have any comments or or remark yeah so i mean i think it'd be really interesting
+for people to know uh because i mean i really like the technical explanation but why did we why did you
+feel the need to develop this over our traditional uh font renderers like text mesh yeah um the problems
+that this one solves because if you kind of covered it in brief but i think yeah okay let's just do this
+um when i create the text mesh here and um and um i just um use a lot of characters
+and then i
+scale it up even more to make it visible on the screen i guess on the stream i guess
+okay too much
+you gotta come down with it yeah yeah so there you see the artifacts that this produces blurry on
+the edges and um also this method um which is quite okay for for most of the stuff but the the
+font kerning is also not great so what's funk kerning panda yeah so the the distance between the
+characters um right okay so this is like a science itself basically right okay and
+um the msdf font has like a database like how the kerning is between the characters this is not
+not yet fully implemented but it will be and it's already working quite quite good is the text mesh
+msdf op um slower or faster than our other uh font ops or is it pretty much the same it's probably a bit
+slower but it's really not um it's not really it's it's it's the same i would say it's just a really
+simple simple shader so i think it's not it's not um it's not really slower so i'm looking at the
+op here because by the way everybody i didn't get a chance to use this yet like i said it's been
+pretty hectic so i'm working on it a little bit so we've got the um array inputs uh that i see yeah
+thunder so that's can you tell me more about that yeah i would like to show the um something else
+first um so so um and then we go to the areas okay um so so i talked about those textures but there
+are no textures connected to this op so we have another op where we define uh a font because it
+contains like two files the texture and the data thing and then in the text mesh msdf i can select
+this font via the drop down here um so um this is super handy because you often use the font like 20 times
+in your patch yeah um so you don't have to connect the texture all the time so you it's like a variable
+or think of it like the css stuff um that's really cool so you define it once and then you can reuse it
+at at many uh places again and then you can easily uh change change the font type so for people that um
+want to get started with this op and they would like to use a custom font i mean the fonts that i see
+there are like a mix between the font file and the texture how would people create their own texture
+yeah very very good question um let me go here um let me find a font file so
+so this for example so i i have a true type font here
+and i just upload this uh true type font to two cables um and um let me quickly clone this project
+sure um because this is the this is the example patch actually um so then we have uh we have no files
+and we see exactly the file so we have this true type font file here right and i can now go down here and
+um you have this sdf font a button and when i click this there will be some parameters later
+um so then it will generate um this texture for you that's awesome um which can take some time
+yeah done and now you see um we have this texture file here and this is the newer version like this
+contains all the european special characters and stuff oh wow okay um so and then you have those two files
+and now i can um go here and change this um to this and uh did i do it yeah
+let me quickly let me quickly uh no all fine i'm just nervous so now i defined it and um now it's called
+gotham medium so now i have to change here
+yeah this is a bug i just discovered so now i can change it here to gotham medium and there you see
+the new the new font basically right okay ah great um yeah yeah that's brilliant that it's built in like that
+yeah yeah so you don't need to download this tool it's just um it's just in there basically
+okay i'm just i'm just gonna make a quick note i think uh the docs uh need a an explanation how to
+create um your own texture for this my font yeah right totally we're also making notes while we're
+doing this everybody just so you know you're seeing it live in here first
+okay so earlier you asked about the the array inputs yeah sure and this is
+this is now this is really cool i i think it's it's really cool feature because like many people ask us
+like can we do like typographic animations or uh animating uh text which is which is which was super
+hard before but now we have those array inputs and we have one array output and the array output
+basically um gives me an array of positions right so every character
+every character's position is in here in this area so you could just like you could use that array like
+with mesh instance or another um uh no actually actually you put it in again um into the op so um
+i can just do something with it and then i feed it in back here so okay so now i have the multiply and
+then i can just multiply this ah right okay or i can say um um
+i can create uh i mean i'm already imagining nine million things because i love the race this is like
+really cool yeah so you could use like an array unpack now and you could like offset it with random
+y and everything yeah wow that's really that's really great that's amazing yeah so okay what i
+wanted to show is um so we have the um interpolate arrays um where you can animate between two arrays
+basically yeah so i i just take the array of this um text here and i create a random numbers array three
+so which gives me also an array with just random numbers in there yeah and um so i want this
+to be the same amount like the amount of characters i have so now it's um
+um it's got the same length yeah so now i can put this back in here to the positions this is great
+and then i can i can morph between them like this easily yeah yeah i'm gonna i'm gonna i'm gonna do a
+i'm gonna make a tutorial or two about this this is gonna be awesome oh you could just create a bool
+and um and um um and switch between yeah those two between the states you could put easing on this now
+and then it would also um yeah yeah like this
+ah yeah i'm gonna i'm gonna be making some tutorials uh tomorrow
+um yeah and you can you can just plug in any text and and do this kind of stuff with it and you can
+also um three
+uh okay we've got rotation position and scale for each letter basically exactly basically it's
+it's like the mesh instance up internally perfect so you can also rotate it and um wow that is really
+sharp that's great i do stuff with it yeah i'm sold that's awesome that's brilliant
+um
+yeah so
+so we are we are also figuring out what you can do with this off like it would probably change
+um because we just figure out how to do stuff so um it's it's still work in progress but i think it's
+really um yeah it's getting there basically yeah great solid beginning i mean i'd find it really
+difficult now to go back to text mesh because uh probably yeah you can't animate every character and
+that it's just um it's just using uh just the basic character whoa okay yeah there we go people look at
+this uh uh essentially two new demos coming out of this maybe you should have saved this for a demo ponder
+instead of bringing it out on the update yeah we always wanted to do a typo demo yeah
+oh yeah that was just a quick test um but yeah we're still figuring it out and i think it also could go
+great with interactive uh positioning of the characters and yeah um yeah i think there are one million possibilities
+yeah i mean you could do stuff like get the position array do shuffle array free and then use array
+interplay and you could just make all of the letters shuffle their position and then form a word
+there's like a huge yeah there's a huge amount of possibilities yeah yeah or just um yeah this is
+amazing um yeah this yeah you can also scale it as you see this is like the bad the bad stuff you
+shouldn't do uh scale it differently on each axis but yeah um extrusion yeah uh i think that's uh yeah
+extrusion that's that's uh that's the next thing yeah yeah just use a repeat up on the axis and put
+them really close to each other that would work for now yeah 3d text um then you should you should
+come on extrusion now thunder yeah yeah i read it yeah that's then like yeah maybe one day but um this
+is this wouldn't work pixelated and also with extrusion um we were thinking like what maybe the the next
+way to write text is with meshes with 3d meshes but it's just um you really need a high polygon amount to
+do this this kind of zooming stuff um yeah it's really crazy and this is one texture which is like
+512 by 512 is completely fine um which is way smaller um and and yeah i mean yeah because normally
+like the thing that you showed me before with the lauren epsom cloud exploding and you turned it
+like pretty far away from the camera with stuff like text mesh you know it'd be like this kind of
+map effect where stuff would become really blurry yeah right when it's not facing the camera straight and
+this stuff just stays like pixel sharp it's crazy it's awesome i love it yeah um yeah know what i know
+what i'm doing tomorrow morning with arrays oh yeah okay uh is there anything else um tom can you just
+click the up for a moment um because i'm just curious if there's any parameters there that we missed
+uh oh yeah the the shadow maybe this is also um something that comes for free with assigned distance
+stuff yeah um so we can like this is just testing it out right now but um you could do stuff like
+outlines easily with the uh stf algorithm uh where is it i'm up up up up up there's a chat box down the
+search step down um so stop yeah um wow so this looks crappy but we will work on this um this this can
+work um this can work really well um there needs to be like a multiplier option and stuff like this will
+change so we can also add uh outlines and stuff like this but yeah this is like the first version
+and um yeah this is already possible to add something later on that you can change the direction of the
+shadow like at the bottom letters and stuff like that totally yeah this is just me testing this shader
+this looks great and like you say this is pretty much a free because it's part of the texture right
+yeah yeah i mean it's it's sampling this algorithm again but um yeah it's it's not that heavy for for
+little things um you can do this you know yeah then there are the the other options like texture color
+and mask um yeah yeah oh legendary i love it
+uh doc retro is asking panda have you thought about super sampling basically looking at the font four
+times of a slight sub pixel shift um yeah i think um i'm not sure but i think that doesn't help much
+with the msdf but i'm not sure i i can test it but i i really never um had a problem with the with
+precision so that was always it's always fine but um it's a good idea to to try this out doc d
+i think got correct right um there was another question can you switch the font out of variable
+fonts list with an algo and is it as fast as switching images yes it is totally um like
+uh okay oh that'd mean like if you you could like plug in an integer and then change the font that's
+being used right yeah um actually i'm i just hit the the index the index thing because then you
+uh you could do it easily um yeah i will write this down and um i uh we will implement it then
+you can define like all your fonts like you can maybe there's even another possibility but yeah you
+can right now you could define them like this like 20 fonts and then you can cycle through them that
+would be no problem yeah but good idea features really cool vj stuff for a demo even you know that
+instead of having to use multiple groups of this op that you could just change this with an integer
+that would make life a lot easier yeah totally um actually you can yeah maybe maybe we
+create another op where you can put in the texture and and maybe also there's um there are interesting
+ways to glitch this uh somehow and and and uh modify this texture um in a creative way um
+so yeah for a client project we we made some tests with this technology
+with um with svg files so then you can load like really vector graphics without uh with a binary
+texture which is also quite cool and interesting
+well you don't have to be great with typography this uh this op will take care of it for you
+yeah and clicks you will figure it out i think yeah sure otherwise just pop on the forums we'll help out
+um yeah i think that's that's the mstf font um unless anyone's got any more questions before we move on
+the pyrus it's better than comic sans i guess
+all right i don't think there's any more questions about the uh the mstf um op
+don't forget if you want to find all this back and you forgot about it just go to the change log
+yeah do you want to show comic sans tom i think we should like do that on a different stream i don't
+have windows i don't have it mark sorry it's only it's only from windows users so then i'm gonna do a
+stream scene with just uh comic sans everywhere yeah um maybe you can make the editor show all of
+the op names in comic sans as well just for the full theme yeah you can do that oh boy
+okay so that was the msdf uh text match msdf op um what's one of the next ones that we've got the
+the floor grid yeah it's on that was a new one that also came by um
+so do you want to explain this one um like you can also do it if you want yeah sure so um you know a
+lot of people that use something like cables they they work in 3d programs like uh maya or blender or
+something else like that you can work on a model and we're all kind of like used to this um this 3d
+view right where you have like a grid um and you have like your colors of your direction shown with like
+red green blue um kind of like a gizmo so we started encountering a lot where we can import a
+3d model you know is it pointing the right way and of course we know that because we use the program
+but for everybody else maybe that's not so um obviously simple so um panda came up with the floor
+grid uh op which is just basically a great way to simulate what you've got in other 3d environments
+you can correct each unit there is a unit of one yeah exactly yeah it's it's just uh it's just a handy op
+when you are positioning stuff um then you can you can measure the distances of stuff and and it's just
+it's just sandy um yeah actually yeah i mean have this as a prototype where it was um an option that
+you could turn on or off in the viewport first yeah that was that was one idea but um it's it's not
+possible that easily basically um right but but maybe in the future we we will do it but um
+yeah right now it isn't um so right now it's just showing this grid and you can measure stuff and
+and that's it maybe there will be other features uh in the future i don't know like so until now i mean
+who am i am i telling this but until now we are we always used we have this grid op
+yeah and then a transform i i do it at least uh with a transform yeah we do this a lot right so
+um so we just thought like okay we need something um better to measure measure stuff
+or distances uh just visually just for debugging reasons and and this is why we created the floor grid
+so yeah it's it's yeah um simple but really handy up yeah um i think i think it's really good for is
+like giving you a reference with space because you know things are just floating against an empty
+background it can be kind of difficult to um judge the distance between things or where they are in
+relation to each other yeah yeah it's really handy op i just remembered something that's not on our list
+but i think i should show this now because it just fits to this sure um
+i hope um
+let me just try this
+yeah so so what we just said is like we we wanted to have this in the user interface um
+but um but not yet basically so um and we want to make the user interface easier for people to work
+at you you mentioned like classic programs i do it a different way um and like every program is doing
+this in another way but just like cables is like a programming it's more like a programming environment um so
+so we cannot make this cube pickable right now because it could also be just a post-process 3d scene
+and we could not pick anymore or something like this so we we have some problems so we want to keep
+cables open to be really like so everything would be possible but on the other hand we want to make it
+easier for people to just pick the cube or something so so we have this new mode basically so you can click this
+button here now
+and you can select show all transforms and then you see this little button popping up i will make it clearer
+i would just add a sphere
+and transform this away so now you see when i click this those circles appear so now
+i can click those circles and then i'm going to the transform
+in in the patch view so it's super easy like imagine if you have like a huge patch
+it's just super easy to find your stuff so you have a lot of objects there and you just turn this on
+and then you can switch back and forth between them basically
+so panda just a little question because that went a little bit fast i was looking at something else where did you click to enable
+um the option so um this canvas menu here yeah um got some new options that we can talk about later
+after that so this has this toggle helper button now yeah so i can click this and i can turn on um
+and off multiple things so so for example if you have a random cluster
+with the cubes
+like this so when i click the random cluster you see this um i don't know if you see it on the stream you see
+this um box here yeah so you see where like the the range of the random cluster basically so this kind
+of stuff we want to do more and want to do it better so so it's easier to see what you're actually doing
+and um yeah you can also turn this on like all the time so it's always there basically
+yeah so just for everybody normal the term we use is like helper meshes
+um i think right yeah which is yeah we we use that word but i guess it's not a good word but yeah
+we'll just call them helpers so helpers are just there to help you like like panda just said you know
+random cluster it has like a maximum bounding box around it and uh sometimes when you're working in
+3d you know as you can see you can really lose track of stuff so we think these are a great addition
+to helping people uh figure out what's going on inside of their uh scene
+yeah that's really great stuff yeah this is really helpful if you have a big a big patch
+and maybe you think a lot of people don't know tom uh sorry panda i'm gonna say panda
+tom is fine dude tom can just grab hold of um the gizmo there now and actually move
+uh the the shape around in 3d space without having to move the transform is something i think a lot of
+people don't know so this is really handy now imagine you'd have like five objects there and
+you'd want to move them around and you have these options enabled you see show all transforms you can
+just click a circle move it in relation to each other and that's way more intuitive and faster than
+clicking on the transform up moving the number now you can just grab the relevant axis and
+move stuff around i think it's a great addition yeah yeah and people actually ask on the forum to
+disable this so you can now um disable all this this stuff and then it's it's just gone so um so this
+new menu um lets you do this this kind of stuff great stuff and also maybe we just uh show those two new
+buttons here now yeah sure i think aspects would be a good one to start with yeah so um so what we
+a lot of times like you you create something that's that's not responsive like websites or something you
+just you just want to preview it in an in a screen ratio like 16 to 9 and you can now just
+um just click this menu and then you you see it in the in the other aspect ratio which was also like
+we wanted to do this for years right um so now we finally have it uh tom would there be maybe a silly
+question would there be any point in people being able to input their own custom aspects ratio though
+maybe we could do so if you uh i i don't know i just don't want to make the user interface too complicated
+what you can always do is you can um we have this op so if you want to if you want to create a website
+with a fixed aspect ratio this this menu doesn't help you really because this is just for the editor
+so we have this op which is called force canvas size and um and here you can set an um aspect ratio
+so here you also have a selection of aspect ratios and you can just calculate your own aspect ratio and
+input it here right um and then uh it forces the canvas to be exactly this size which is so now i can just
+resize this and it always stays uh this um this aspect ratio which is quite handy
+i mean this is handy i think i mean correct me if i'm wrong tom this is handy for like when you want
+to look at things would be like maybe on a mobile phone yeah if you want to preview yeah totally you
+this for example uh 9 to 16 is like a common phone aspect ratio nowadays yeah yeah so um so i'm just
+gonna hit the brakes for a moment because i see one or two things here in the chat uh the first one is uh
+are you guys looking to other programs for inspiration um yeah i guess so um
+yeah sure but in this case not really um i mean i saw the the menu of cinema 4d that has those check boxes
+but yeah okay and um somebody's asking here um could i get a lock aspect ratio checkbox i think with that
+maybe they mean that if you're going to move the screen that it keeps the aspects ratio yeah for this
+i would use the force canvas size thing actually i mean maybe yeah maybe uh maybe we we will put it in
+here too but when you export it then it will be it maybe will be different so i don't know um yeah but
+we all always do this iterative so if we like if we start doing this right um i don't
+like i have like one million ideas that could be done with it but we just want to start simple and then
+see how how it how it how it goes and um and on how the people react and um and and and then make it
+better and see see what's what's the most important stuff yeah yeah okay great um does anybody else have
+any other questions about this before me and tom move on
+and please by the way don't forget if you pop over to the forums and you know you use some of these new
+features and you think we're missing something or there could be something else added please come over
+there and put it in the forums uh we try and read all of this as much as possible and to answer
+everything as quickly as possible and we read everything that everybody puts there just so you
+know um um yeah sorry go on so the other button is this resolution thing oh yeah right um which is
+like it was clickable the whole time but i think nobody figured this out um it's it was just tucked away
+so when you click this you can just enter any resolution any two numbers um and then you can
+set the resolution but yeah this is also the same it's not um it's not locked um
+yeah when i was just watching you do that right now i thought it'd be great to be able to click on
+size type in two numbers and then a number provider and another number so that you could type in the
+resolution and the aspects ratio in one go yeah this is because you're a max msp user right no i'm a
+a cable user you were but yeah yeah yeah yeah we could do we could do this yeah um yeah um so i'm just
+looking at some notes and stuff uh tom because we're kind of busy with the editor user interface right
+now um there's also this thing that you implemented with the j and k keys for search yeah yeah so so this is
+also like a super little thing but um for me this is quite handy because
+like we have um those patches with 20 sub patches client projects big projects and i'm switching between
+multiple ops back and forth and then different sub patches so um usually i do this
+um random cluster and then i click there and then i go there like this is this is how i navigate so you
+can also do bookmarks when you click here so can you just tell people how you opened that up with search
+sorry so when you press command f or ctrl f you open the search menu and there i can search for random
+cluster for example um and when i click it it goes to my random cluster ops cube so for example i have
+two cubes in the scene so i can switch between them and this is basically one way to navigate between ops
+that you use another way that you use another way would be so i have this sphere that i i have to change
+a lot like often i go back to the sphere and change it so i can use this little icon here and create a bookmark
+so now when i click um in the background so no op is selected you have this um you see the sphere here so
+i also want to create a bookmark for the cube so now you see the cube here and now i can click this
+and i can go back and forth through my bookmarks and this is another way how to like go back to ops that
+you use before um right which is super handy but so i was still missing something because i don't know
+like i don't want to bookmark the orbit controls because i'm just doing something with it today but
+maybe i'm changing often so so you can now press the j and the k key and you can go back and forth
+through the latest ops that you used right um and and go through them so when i click main loop
+and floor grid i can now press j and k and can cycle between them think of it like an alt tab
+mode for ops yeah because i think i think for the people that might be looking at this now and they see
+this smaller patch um i think what someone's just trying to explain you know sometimes you might be
+working on a really big patch right like we're talking a couple of screens in size and something
+you're changing for example on the top left part might be affecting something in the bottom right
+part that tom just said these two things are interacting with each other so you click on one
+you edit it you click on the other one you edit it and now instead of having to scroll or to bookmark
+it you could press j and k and just jump back and forth between those two ops that's kind of like
+another uh use for this i think if i'm getting that right tom yeah that's that's the the the use yeah
+right okay and so this list that we internally save you can also access it here so you can press
+recently used and then you have a list of the ops that you clicked like the last uh 70 or last 100
+ops or something so when i click floor grid or main loop you see the the list is automatically
+rearranging itself so this is like the database like which which ops you clicked and you can you can access
+this also in the find menu um and click recently used oh that's really cool it's quite handy to
+navigate if you have big patches and i want to return to to a place uh again yeah yeah i mean i've got to
+stress to everybody you should really try and get the hang of using those bookmarks because i only started
+using them a while ago but they're a real lifesaver when you've got like six parts of your patch that
+you're going to be working constantly back and forth between why would you scroll out and then look for
+it and visually with your eyes you can just bookmark it like tom said you just click not on an op but
+somewhere in the patch your bookmarks appear on the right hand side you click it and then you go there
+and this also works with sub patches as well so that's a really handy system for navigating your way
+around the larger patch yeah also um you can if you click here click the title of the thing um
+you can um basically edit this title which is now a bit um
+not used so much anymore because we have the comments that you can
+put here um but the title editing is super handy because um you see this in the bookmark list here
+yeah so um that also helps with navigating definitely
+yeah okay so that was the buttons toggle transforms covered jk um yeah i think uh i think the next one
+just for a little bit of light entertainment that'd be really good is uh maybe uh the the youtube player
+okay okay so now we we screw the order totally i i screwed it up just just if i wanted to
+i'm just i'm feeling good yeah okay youtube player so um so this is also um
+often asked in projects that we have uh that we should put a youtube video uh over over the patch or something
+um so there's an op now for this youtube player and it has this um awesome the best video ever produced
+on the internet i don't know why i cannot click it funny
+okay something is up okay something is up i don't know
+okay probably uh got copyrighted and taken down or you can stream it from your current location
+just imagine never gonna give you up people
+why is this i think i know why i think it's uh no um okay but
+it's it's worthless in this so i i will fix this um but it's the the better way to show it is with the
+other op we wanted to show with the modal overlay um because this um makes it possible that you can
+click a button for example and then open a modal window with a youtube video in there and
+that works i think it's some html stuff um and then you can close it again um
+that video needs to be rick astley like that's just a long video song sorry okay let's
+let's change it to the default one yes please um okay not not like this obviously
+let me reload um so
+so yeah the the youtube player so we plugged it into this modal overlay so um we have this overlay
+created over our background so in the background we still have our gl stuff um
+like this like a 3d scene and then you can open this and close this basically so this is also
+super handy for um if you want to show like a little description of your site or
+or some little text you can um create um a text layer basically or like a button which opens some
+information and you can you can just put in any html that you want in there basically you could
+put the whole uh html website in there and then open this and close it again so super handy
+little thing that you can do a crazy amount of stuff with it okay
+um let me just
+i love the way that we've got 16 people waiting for rick astley right now
+how not to rick roll okay let me youtube
+player
+this is the correct uh one don't forget everybody you're learning incredibly valuable cables gl skills
+right now how to get rick in the youtube player there we go i mean isn't that one of the most
+beautiful things you have ever seen rick astley running in cables gl i mean i don't know if you can
+top this anymore tom i think this is like one of the crowning achievements yeah everything that will ever be achieved
+so why don't we hear anything now by the way um that's probably my my system or something i don't
+know right okay i mean i'm not gonna push for that i was just curious um i i was hearing it yeah that's
+strange that should work but yeah that's the streaming system probably no worries it all works right now
+let's not change it oh everybody else heard oh okay yeah it's not going over our um uh conferencing thing
+probably no i've got myself muted here i hear myself back a few seconds later on the twitch stream okay
+all right i'm great everybody everybody heard rick then i can sleep well uh tonight and that's okay
+so all right hold it back back to the established order so um tom we've got the one of the new
+ops is the lotty texture player yeah um so because just in case anybody else there is saying okay
+what's lotty uh i was asking tom this a little while ago so it's also going to be a crash course for
+me so uh please ask any questions if you don't understand um yeah so lotty is a library developed
+by airbnb actually and they uh this is a vector animation library basically and so motion designer can
+create animations in in after effects and um you can use those animations on the web or in ios or android
+apps in a native way and you can also load them in cables and um it's basically like a video format i
+would say but for vectors and um it's just a handy thing to have like if you have little user interface
+animations um you can you can import them and you can use them in cables now and we use it for user
+interface stuff mainly um yeah so would that be something like um there's a little animation there
+like showing somebody they could swipe up on a phone or something like that yeah do i have it here
+um so yeah this for example um we use this in a project to like like as a call to action to scroll a
+website right um so little animations like this if if the the motion designer cannot use cables which
+which he or she should totally learn um so he can do it in in after effects and then uh import it in
+cables or in a website and use it there so it's a handy little thing to display little animations because
+the video is quite crappy for this vector format stuff so there's this um this format
+so i've got a little question tom um just randomly popped up in my head so um i mean i don't know how
+a lottie is made right um i mean but when i was just looking at the thing that you just have there with
+this circle you know going up leaving the trail and popping open i was thinking like oh i could totally
+make that in cables yeah i mean would it be possible to export something like this sequence of images from
+cables convert that into a lottie and then put it back would there like be actually any benefit no no you
+cannot do that okay this is this is like an animated svg file basically right you cannot it's an svg file
+yeah it's not but it's like an svg file right okay um there is no real animated vector format out there
+except like 3d file formats but um so they created this for 2d animations and you can go to this website
+lottifiles.com and there you see like what people create with it um right um there are some examples there
+yeah basically only of those examples there would just work with the lotty player
+yeah inside the cables yeah let me change this back
+um yeah so it's a really helpful thing for some projects one of a quick question that's um if you
+can just if you would go back to browse for the lottie um if you click lottie texture player and then file
+uh what yeah if you go to the cables patch with lots of examples so if you click the lottie texture
+player up when you click this so i see the json files of lottie's um how how do people is it
+automatically a json file that would come down from the format like yeah yeah you install uh i don't
+know how to create it actually you install a plug-in to after effects and then it gives you this file
+this is a json file uh all right and then you can just upload it to cables and use it yeah right okay um
+yeah all right um does anybody have any uh questions about the lotty texture player
+yeah body moving is like the old name um of this or like i think the plugin is called body moving and
+the the player is called lottie why i don't know why this is super confusing um but i think lottie is
+now like the established name for them it's it's a bit strange okay um yeah i think what would be
+really good to show right now tom that you could even probably this part just a little thing for
+everybody but i i found this a really useful uh thing is we've now got so normally we've got variable
+ops where you can um create a variable which is like a number or an object or a string and now
+we've got this with textures yeah we can do it here last set texture and far get texture and i think we
+can just easily quickly show that in this patch so the reason sorry go on tom uh no just talk so
+basically uh to the people that are still new to cables uh a variable is just a great way to be able
+to access data multiple times in a patch about them to draw like say you've got a number and you want
+to use that number in 10 places you don't want to draw a cable out 10 times to 10 different ops you
+could just put this into a variable op and then get it basically anywhere in your patch so we use textures all
+of the time instead of cables so tom made the um set texture and get texture and as you can see right
+there he's got the sets um texture up which is basically he creates a variable name and then with
+the get texture up he picks that um texture name and then there you go um now don't need to be you
+you don't need to create cables between everything yeah so yeah if you like this is also for big patches
+it's just handy to write this thing in one place and use it at multiple places then you can use those
+variables and um actually the the reason why we created this um var set texture you could also use
+var set object but then you don't have this nice preview which is super handy so we created this um
+this variable for textures too um yeah i was just thinking i mean i don't know if that's a good idea
+but it'd be kind of powerful if you could change the um the variable texture on the op from the outside
+you know if you'd have like a bank of textures and you'd have an integer which could be plugged in
+there like we've been doing lately with the mode stuff you know yeah but i want those i want those ops
+super clean i mean you could put it in an array and then you switch uh array texture switcher i think
+that would be a better way um yeah sure because like you don't know like the order of those
+variables in this list is quite undefined i would say so right um it would be better in an area then you
+you know the the order of things basically yeah okay and by the way everybody this is
+kind of how it goes work ideas pop up and then we discuss them and uh yeah some of them stick and
+some of them don't so uh yeah you're just getting an insight into how that goes for us um okay it was
+a little one but i think it's a really handy thing and i think we basically now got all of our data types
+covered in cables with getters and setters with variables which is really cool that's something we've
+been working a long time towards so um next up and the performance up it's on okay performance it's always
+a thing for a lot of people like hey my patch is slowing down why is this yeah you built a big patch
+how do you figure out how do you figure out what it is exactly so um yeah we have this performance up for
+quite a while but now we have uh uh i'd go back to the uh thing oh yeah uh oh we can see it it's okay
+yeah i can now i can make it bigger even oh yeah um so i can make this bigger
+oh you i can now you can now scale it like this wow and then you see every millisecond that went wrong
+um no so now um this is this looks super strange probably because i have obs running because normally
+so because i'm streaming i want to say because normally it's it's really different
+uh it doesn't have those spikes there i think that's probably the video streaming yeah um but yeah
+now it's it's so the new version shows you a few more information so first of all we have those new
+colors which are easier readable and those yellow stuff here that you see is like the um
+the work amount that the graphics card does so right now it looks the the graphics card is doing more
+than the cpu which is which is a bit misleading right now because this is normally this example is only
+for cpu so so this is quite high and um um and when so so this example shows a bit like this
+example here i can switch them with my mouse key so you see i'm switching between those examples so when
+i go to this it shows you this random class they use a lot of cpu
+um power actually and you see uh you see this this is growing is that the kind of purple with the main
+loop is that the cpu exactly yeah yeah right okay um yeah so this is the cpu part so everything
+is measured that is connected from the main loop and is executed in javascript that's the purple part so
+you can see this this random cluster um is quite slow um this is why we use instancing for this kind
+of stuff usually but it's a good example to show so so when i just draw 10 cubes you see it's just
+dropped and when i use when i draw a thousand cubes then you see the cpu stuff is just going up there and
+when i draw 10 000 then you see even my fps is dropping to 13 fps so so this way you can find out okay random
+cluster is quite cpu intensive because i'm seeing those numbers so the next example is the mesh instancer which is
+um as you see there's no cpu there it's just super small the cpu part but the gpu gpu part is more okay
+something something happened but um yeah so the mesh instance is not even faster on the cpu also faster
+on the gpu because we don't have so many uh draw cards so we don't draw each cube on its own but we just draw
+um thousands of cubes on the on the graphics card um at the same time um yeah so you see
+it's faster on the cpu and also faster on the gpu so always use mesh instancer if you have more than
+20 objects or something um 20 objects or something um yeah then we have this on frame this is a new color
+here this is also um cpu based stuff this is basically all the cpu based stuff that is not connected to
+the main loop which is something that we couldn't measure before and maybe it's also quite advanced for
+this for this for this talk now but you have to be careful what you're doing um outside of the main loop
+basically um so so this is just calculating an an array of um of numbers basically it's not showing
+anything but it shows you okay this is happening here and i'm i'm disabling this when i switch to this
+example for example right so when i don't do this so this this here disables um this function
+uh sorry
+there we are so now you see this is active all the time right um and when i disconnect it so it
+stays active right so but i'm not i'm not using it for example in this frame sure so you see it's still
+it's still taking a lot of time to calculate so i added this up to just control
+what we are doing here so yeah this is performance optimizing stuff just like the culprit is like
+be aware what you're doing and just turn it off when you're not using it like when you're not seeing
+it or when you're not needed basically yeah i think this is a really great addition because like you just
+said when you when you've got like four parts of your patch and you think that all of them are only going
+on at certain times when you want them to this is the kind of thing that will help you figure out like
+oh i've still got something running um there that i missed yeah it's it's a great way to find out what
+what you are doing and um another great thing is the profiler but i will not go into this
+yeah and we have also an op for profiling gl draw calls actually and um yeah this is always like this
+is the hardest part to find out why is something slow sure um and with with the new gpu uh display and
+the the um on frame cpu display you can find out easier but um yeah yeah all right oh really cool really great
+yeah i love the way that this part of the patch is completely not messing up with the encoder
+is it yeah it was this one probably right yeah this one um yeah okay uh somebody's asking about triple
+buffering
+it's a nice word yeah it sounds really cool i'm not too sure what it means though um
+i also don't know what he means like with lotty probably um i don't know if this can do it um
+could be worth a try just just go to the forum like uh head is up there you know if it's uh cool
+and we'll read it down and we can check it out sorry zillo i missed that one
+uh yes a common design pattern to speed up shader work on a gpu
+um yeah i mean you could you could do triple buffering with multiple render to textures um
+it would probably be possible i think it's a concept if you if you look at it that way it's a concept that we don't
+um
+built into the the core of cables um you could do this with ops
+or we could write new ops that do this for you but this is like more advanced stuff that we don't want
+to put in main loop or something something like this for example i don't think we should go to into
+detail with this right now okay sure um okay so let me see
+oh yeah one of the last uh new ops that we had um is uh hexagon noise
+um so uh noise especially in textures is always a really cool um thing to have
+so a while ago i made this little guy um
+uh basically what you're looking at now is like um i think four layers of um noise if tom
+disconnects everything except the top one then you can just see it in this most basic
+okay can you just disconnect the bottom of free time i did so
+so this is actually it's designed to work just like a lot of our other ops like pixel noise so
+as you can see we're looping the noise values here so they don't jump you can put it on rgb
+uh tom's got some sidebar elements that you can interact with like rgb mode animated we can
+also flip the orientation of it um i just think it's a really nice um uh nice op to have basically
+because pixels are cool they're square but it's also good to have some other forms um that you can
+use and uh i just felt it was something that was missing so this is something that came out of a
+i think a friday uh afternoon uh coding session uh basically and then hopefully we'll see that get
+used in um in some new um stuff but i thought it was a pretty cool addition to the noise texture
+family right there yeah and this is basically mixing like three different scales yeah of it right
+yeah and you have a huge amount of combinations just like a normal texture ops where if you're
+using multiply multiply in for add subtract there's a huge amount of things you could do
+uh with this basically so yeah this is one of the other new ops uh that we uh came up with
+um so another quick thing i think tom can just show that quickly is um we um simo uh now um got the
+new lambert material to work with mesh instancer which is a really cool new um feature yeah so we updated the
+example file yeah so it doesn't use um doesn't use matcap anymore the default camera angle is not good
+ah okay we'll change that later um yeah
+so this was a bug that we had for a long time um that the light was not working correctly with a lot of
+um instanced meshes yep um yeah and now now it looks great yeah
+we basically just want to make sure that uh all the materials work with the lighting system
+uh that's been built and uh mesh instancing so it's just the same across all materials
+but uh this is really great and the simo delivered the excellent work with us
+the undefined country boy yeah undefined country boy yeah i keep on forgetting
+it's just it's just a name that's hard to say out loud into the mic without bursting
+so um yeah so basically there's more options now with uh lights and materials and meshing which is
+really uh great yeah um so um another thing that i'm looking at here is tom uh is there was some stuff with
+uh html like uh css assets any exporting of files um oh yeah okay um yeah so another thing that we do that we did is
+um and also for html stuff um and um maybe i would just i would just show uh how you create a div element
+and you can give it a class
+and i can create um css so there you see we have we created the div which is basically an html element
+html element um where you could can put text in and we're not seeing it now because we're in front
+with the video feeds on is there anything there on the screen yeah yeah oh you're right can you just
+make the window a bit smaller then i think that'll be clear just the canvas you got you don't have to
+to change the video um now there we go yeah that's that's the tip so i was zooming in into me i guess
+right yeah
+okay so this is uh this is our development so this is an html element if you
+if you are a developer then you probably know
+unlike me obviously uh then you know you can you can inspect this and you see um
+you see here um this is our our div html element and you can look at it so it's really above
+it's outside of the webgl stuff it's just overlaying the the webgl stuff
+there and um you can also write css for it so i can um just um style this so i can just write css stuff
+like this and i can just save it and it will just be updated for this class um
+so
+um yeah so this is this is quite handy and we should also do a tutorial
+about this um at one point i'm working on it yeah yeah maybe we also do it together um
+uh oh yeah so um so what what's possible now is so the problem always is that you can you can
+reference files in a css file image files for example or svg files stuff like this or fonts
+and this was always a problem with kbit so we cannot there's no easy way there was no easy way to
+reference files that you uploaded so now you can basically um let me go to my
+files and now you can just upload an image like a like you would upload a texture or something
+and you can references in the in css ah so you can you can set this image now as a background image for
+example um and you can so there is this
+variable asset path now here so this gets replaced by cables so you it will insert the correct url
+for this file okay so now i can say asset path slash cat jpeg um and now it's using the cat as a
+background image i just have to um do this yeah then you see then you see the cat and you see the the html
+background there and um and now you can you can when you export your patch cables doesn't really know that
+you use this file in the css stuff because it's not really referenced like in a texture
+when you export a patch you now you can select now includes assets all and then this image will also get
+exported we will probably change this to all
+maybe i don't know um but yeah so so files that are not referenced directly in in file input
+parts you have to select include assets all and then you can uh you can do this kind of stuff before
+that and you still can do that you could uh you could um say like uh reference this file from your own
+server um right like this um but this is just a handy way to to have those assets all together in cables
+and when you export it like this or over the command line then um yeah it's just a just a handy way
+to do this kind of stuff yeah i think this is really useful especially for the people that are working on
+much bigger projects with a lot of different assets you know to be honest i don't think it's
+something you want to have to keep yourself too busy with it's really nice if this is just taken care of
+for you that's a really great feature
+yeah any questions about that or in maybe html in general i mean in cables in general
+are we going to general questions now so no i was just i was just asking because the chat kind of
+stopped okay yeah um but yeah um so first question is does anybody have any questions about this thing
+here that tom was just showing uh with the css
+boring html stuff are we trying to keep it as short as possible
+okay i'm always accounting for that uh delay with uh with twitch i don't think there's anything okay
+um all right they're still discussing the lotty uh plugins all right so um
+simone marin asks how can i attach to other libraries of fr example toggle and animation and cable with
+scroll magic do you understand that tom i'm not pulling it out of that question i don't even know
+what scroll magic is um me neither simone could you clarify a little bit more four okay
+scroll magic javascript library
+i think the question is how can you reference a library inside the cables um yeah currently this is
+not possible um
+if you if you tell us um it doesn't say what it does but yeah if you tell us hey guys i want
+to develop with cables and i have this awesome library then we will probably put it in
+um but you cannot upload your own libraries right now to cables um we kind of um
+have to moderate this uh currently so um so you can you can tell us and then we can we can help you
+and and put put it in there but yeah feel free to talk to us about this and we will probably do it
+one thing i just want to say here simone is i'm just looking at scroll magic now i'm realizing what it
+does the the scroll um wheel um just want to point that out that in cables we've also got um ops which
+enable you to um get the scroll data from a mouse and uh what i'm looking at the animation there's nothing
+there that you couldn't do with what we've already got inside of cables basically especially with the
+new text mesh msdf stuff that's yeah um exactly um so i don't know maybe i would just show mouse wheel
+also got a update in this uh got a new version in this update um so probably this is what you're looking
+for um you can use this um to to play animations so now i'm just scroll uh use the scroll wheel of my
+mouse and i can scroll down um this animation here you could also use this to trigger um
+so can you just show the output of the mouse up just so simone can just see a little bit what's
+happening there um so the this output is quite boring this is basically this number um so i connected a
+delta sum which just sums those numbers up and you get like this here is my output basically my final
+number so when i scroll this grows and yeah you can use this number as a time input for 3d animation
+and then you can scroll through a 3d animation basically and then you can you could create this
+like those long scrolling pages uh in cables by yourself yeah simone if you if you check out a
+youtube channel we've got a i'm thinking about it right now the thing that i just saw at the scroll
+magic if you would check out our map range op tutorial it's a way to get like a long number range and kind
+of split it into sections that you can do different things with the numbers with um so basically i think
+i think you're looking at mouse field delta sum and map range and then you could just use it to just
+control anything in cable so do what you basically saw there with scroll magic sure if you've got more
+precise questions just please head on over to the forums and just put them there we're pretty quick with
+uh replying stuff thanks for the question um i see here from i don't even know how i'm going to
+pronounce that we are machin bund so i have a question regarding this scroll demo did i say something
+really bad no no it's fine it's uh yeah yeah uh we're making bund we're making bones we make colors um
+yeah i saw it christian i will i will answer it probably tomorrow or the day after but i'm i i don't
+know i've i didn't uh experience this yet but i will look into this um probably tomorrow or the day
+after um yeah you want me to say it again we are machin bund okay the best you're gonna get of me
+um okay does anybody else have any other questions this is your chance right now
+um to ask anything cables related anything you want to know if you didn't if you didn't make
+notes and questions up front well you're just gonna have to bring them to the next uh switch stream
+this is way better to get a real-time answer than to post them on the forums
+has anybody already tried to build a site only with cables tom yeah actually we do this a lot um so
+you can go to our still outdated page but we will update this very soon you see um um
+those examples and they are also websites so um i don't know let's let's open this again
+so this is
+nice
+someone didn't pay the bill i guess
+okay awesome
+um
+okay let me show another page
+yeah i hope somebody chrome sees the
+poets from the demos no it's the the domain
+uh okay yeah the certificate is outdated or something um right yeah somebody didn't pay the bill then
+yeah um
+so this is uh uh this for example this is a whole website experience this is completely done in cables
+you can
+i would just mute this
+um yeah so this is a like it's not really a webpage but it's like an experience that you can go through
+this is completely done in cables um there are a lot of examples here that you can look at um that are
+are complete sites done with cables and we will update this um
+we will update this even more um oh there was a nice example today
+uh okay can you look in can you look at the general in in discord yeah sure one minute
+yeah and uh is that uh from farm
+barium yeah does the plus six create uh so this is a website uh the cabits user did um
+on its own and i i really like it
+it's a bit slow from europe i think
+yeah he said that it's only being hosted in korea i think so it's a bit slow
+so he did this background um for this website i don't think he did the whole website but this
+background animation
+in cables and um yeah it's super really cool stuff yeah really cool side um i need to explore it more
+but yeah i really like this animation it's uh it's really cool and i think it
+it changes the shape uh after time yeah
+yeah so we we will soon update this page and then there are way more examples um
+on here um what you can do what people did with cables actually yeah yeah yeah because azillo asked
+um he says actually still looking for a way on how to call a cables patch via a link without
+the cables gl dev environment to just present after a login is done and i think steam answered with
+you can just put the export the cables patch and embed it on your own server if i'm correct
+um what is the question yeah i think azillo thinks that um
+you can only um access a cables patch via um the cables um environment and i think you didn't
+understand that you can export it and then embed it inside of your own page yeah um
+let's let's just show it so azillo you can um from cables
+that's a bit unclear to me as well uh the screensaver thing i i remember yeah um um i think um you could
+um you could just use an eye like a web view and display cables patches in this um
+and just open this url i mean when you go here
+and click here open a new window then you have
+really like a full screen view of the thing
+um without um without the whole border and without the title and this you could this url
+you could just use um to display this kind of stuff so actually you just replace the p
+in here with a view and then you see it um
+full size i think that was the question yeah
+do you also get this if you say open a new window or something yeah that's the same link yeah yeah okay
+yeah i i hear you mean yeah you can also uh no here you open this one and then you can click
+here open in your window and then you have it here yeah okay
+right
+uh we're gonna have to wrap up the stream soon tom laguba is
+no i'm kidding there's a video to it you can watch it back later
+all right um good questions from everybody um anybody else got any questions
+maybe you do the the announcement and we see maybe someone uh has some more questions after that okay
+sure fine yeah so um the next cables jam um so the next cables jam um we're really excited to announce
+so let me just grab my notes for a moment
+did i somehow wipe them out when i was cleaning up i might off anyway so we've got um we've got a new
+cables jam and uh you're hearing it first on switch and we're going to be announcing the actual
+competition tomorrow on the web page and the um social standard social media channels so last time
+we got a couple of really cool entries in and we were really amazed by uh the results was a lot of
+creativity in there and it was just really great to see what people came up with so we're going to
+hold a new one and the deadline will be correct me from wrong on this tom on the 4th of may 12 o'clock
+um standard central european time so that'll give everybody about a week and a half um to make a patch
+so the the theme of the patch is uh free colors like free colors so the only rule for the um the cables
+jam is that you have to use free color values so that'll mean that you make like three color
+values with rgb or uh with hex code or whatever and you can only use those three values in the patch
+basically for your color information and who knows what else uh other information i don't know we'd like
+to be really surprised by what people um come up with so tomorrow that's going to be announced i'm gonna
+put the um the blog post out with the tag that you've got to give your cables patch for it to be eligible to
+take part in the competition and um basically we can't wait to see everything that everybody will come
+up with and now because it's a week and a half and we're all basically in lockdown um i'm also looking
+forward to being able to uh create something though last time i checked we can't partake in the cables jam
+and win right tom we know no damn it okay that's such a shame so yeah so that's uh that's the can
+create a fake user and then you can take take part in it don't tell them they'll find out so
+so that's going to be um that's going to be the new uh cables jam uh that's going to be uh coming out
+and it's something we want to try and do uh each month for a while and see how that goes because we
+really love seeing what people come up with and who doesn't want a cables gl shirt and other
+the various swag uh like really i mean come on like uh it's going to be very exclusive
+um so that's the announcement of the cables jam i think we've covered pretty much everything now with
+the highlights and we want like the plan is that so the deadline is like one day before our next stream
+right oh yeah right and um so we we try to um we want to show them on the twitch stream and um i
+just spontaneously thinking like maybe we can also like with the system that we have now with the video
+chat we could also invite people if they want and say something about the patch but let's just like
+that's just an idea that just came up but maybe we could do this but uh yeah let's just think about this
+so we we we just want to figure out this twitch stuff and um and show all the the entries uh in the next
+uh twitch stream basically yeah so one last thing that i was wondering about i asked it in the the so
+the last twitch stream um that we did on a tuesday night that was uh kind of like i don't know copycat
+inspired uh session like here's some basic image let's do something with this
+um so you know we're brainstorming a little bit like what the possible things are that we can do
+with um the stream because we're still trying everything out so we did that and now we're
+like doing this for the update which will not happen too often because we don't bring an update
+out um every week or every month uh a lot of the time so uh i said in the last twitch dream i thought
+it'd be a really cool idea to build some vj software from the ground up which is something i'm really excited to
+do we're also thinking it'd be great to do like a pre-selection of two or three possible copycats
+and then just for the people that don't know us from youtuber copycats where we get like an existing
+image or video and we do our best to copy that and recreate it in cables if anybody has any other ideas
+right now with what they think would be really cool to see in the twitch stream we'd love to hear it
+so uh rack your brain and if you've got something um please type it in and if you think any of those
+other options is a really cool one that you're interested in the following uh we'd love to hear
+that as well because we're just figuring this out as we go along
+yeah totally um and if you have any questions we we can we can we still have some time we can yeah
+sure we can answer stuff like whatever comes up um we can do this thanks susan thanks
+i think for the next stream i'm gonna like print out some emoji um papers so i can like hold them in
+front of the camera instead of typing them in i think that'll be way better
+what's this this is ronnie by the way yeah i know this it's german
+we're machen buns great show thanks i just said that again just for you
+okay um yeah if there are no other questions then uh we can we can wrap it up and um
+we need more questions next time we need uh we need some more stuff
+um yeah maybe also um i i did not prepare this but um we will go like watch this demo that i did with
+this guy uncle x in the in the chat um we we made uh we made like a real-time animation in cables um
+and it's it's a huge thing but um maybe we can break it down and show some little parts of it
+um some of the effects um that we could do um yeah if you um
+yes it works again yeah yes it definitely works and um yeah we could do this or like if you guys
+have any animated gifs from tumblr or whatever or from instagram and think like oh this could be possible
+this could be possible in cables or how how could this be possible in cables then just
+ask us uh just put it in the forum there's a channel for copycat um
+uh
+ideas and please just drop them there and then we will we will grab them and probably in the next streams
+we will try to rebuild this kind of stuff yeah um if you have any other ideas just let us know yeah
+we've no guarantee that we'll achieve it but we're sure we'll all have a good time while we're trying to
+all right so the math up works again uh uncle x can sleep uh securely tonight knowing this is good
+um okay i don't think there's going to be any more questions uh tom yeah i think so too
+it's kind of it so yeah all right uh well i'd like to say personally thanks to everybody that came in
+uh followed us uh with uh starting up our twitch stream and figuring out how this all works uh thanks
+for the feedback uh thanks to the questions and uh most of all thanks for uh following us and what we
+do uh we really appreciate it and uh it's really great to see what people are making with cables i love
+it yeah thank you all for coming and yeah see you next time i guess yeah bye good night everyone bye
+bye

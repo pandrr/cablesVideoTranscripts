@@ -1,0 +1,1289 @@
+https://www.youtube.com/watch?v=kmxgK8SXRx8
+so we're trying we're trying to make this stream thing a bit more open to
+integrate more people into it maybe connect better to the community like by
+getting people in here hopefully there are people that are not as shy as I
+would be and just join us and so you can you can go to discord and just join the
+cables cast channel it's a open channel there and then you can just talk to us
+so the idea is that later you guys ask us questions otherwise we will just talk
+about current development and answer some forums forum questions and stuff like
+this and so yeah we want to try this I think we will do this every second week
+and let's see how this works probably no one will join but yeah there's still hope
+we already have Daria here hi Daria hi she's also now part of the team and some
+social media so far and she and her boyfriend will talk about their demo later
+so they made the demo with cables which is super nice we will watch it and you're
+a really good influencer for cables yeah so then just some other stuff I want to
+show one quick thing I just like to throw in between Tom yeah for everybody watching on
+switch if you're not on the discord channel and that doesn't mean you can't ask
+anything in the switch channel and it would be cool if you could join discord because
+that makes life a lot easier but if you're a little bit nervous or anything like that
+you can always ask yeah it's which it's all good totally totally we're dying for questions
+but I added the discord link below um under this stream um so mark you um uh prepared some questions
+for we are also often in our stream and they made this amazing website um I think we showed it but
+whatever we should see it again it's really awesome I've listed it more than a few times it's it's a
+project for a client uh from weermachenbund and um uh we pre so mark prepared a little interview
+and um they answered um the questions in our blog so you can read a bit about the progress how this was
+created um in our blog here yeah I absolutely love I absolutely love this webpage maybe you can just go
+back to it for a minute I don't know if you closed that it's like it's really amazing to me when we're
+working on cables and then you see something like this come out of it it's really a thing of beauty and
+it's really amazing to me to see all the different way that all these things like um 3d meshes and materials and
+the state and animation can all come together like I was just blown away when I saw it yeah it was pretty
+like damn wow yeah totally it's uh basically the like the most complex thing that was done outside of
+um our studio I would say yeah yeah definitely and it's so smooth yeah it's just with a mouse wheel
+yeah yeah yeah so you can read a bit about the background and the development here um and yeah we plan to do this on
+more projects uh when people do stuff and release it and and put it out in the wild and we want to uh talk about this
+um maybe we also do a twitch stream with him at one point um yeah then uh we can talk a bit about the
+release yeah so um yeah we are planning a release this week um hopefully on thursday it will be a huge
+um um there will be shadows for example which we are really stoked about a lot of different uh shadow
+algorithms and uh technologies um which is really awesome and um then we have a new spline system
+um which looks way better than the old one which was super basic and yeah now you can adjust the width of
+the splines and all this kind of stuff and also colorize it better and um it's really handy for a lot of
+things um um then we have a lot of new gltf stuff so for example it's way easier to create interactive scenes from
+gltf 3d scenes so we can click objects in the scene and uh yeah make it uh make it more interactive
+also cameras and gltf textures and all this kind of stuff so we have to talk a lot like next stream i guess
+about it yeah i think we're gonna just have to cover all of the new stuff just in one episode because
+it's just so much that you can do with it it's pretty crazy yeah yeah we have some new tutorial uh
+stuff coming out yeah
+um
+yeah and uh uh shit loads of bug fixes and and everything um and do i forget something i don't know it's a few
+pages long again basically the change lock which is always a good thing yeah yeah and one little
+simple thing but uh we think it's really cool um so there's been uh we've developed a new um
+documentation uh system so it's going to be just more uh modern and look like it fits more than the
+cables uh system and that's been getting a rework and a lot of the questions that we get we've put there now in like a general and
+technical faq um and we've just gone through that over clean sweep to make sure it's all uh up to date
+again with some stuff because um yeah documentation is always kind of difficult to keep up to date
+uh sometimes yeah totally and so this is also why we um made it um um open source now so on the
+documentation people can help us um updating them basically so it's all in here you see we are still
+working on on it for the release so um people can just go in here and edit those markdown files and
+submit them if they want um there's also a new faq which is uh which is cool which will be um more active
+in the future and um cover a lot of questions that we always hear so um should be easier to find those
+yeah um yeah so shall we watch a demo always a good idea
+let's watch a demo just make sure we disappear from the corner
+should we start or should we just wait for keby yeah where is keby i think you've seen a few times right
+quite a few actually i think um yeah i've seen it less than him i actually only saw it the way it was
+on the big screen so i myself was pretty surprised that it actually looked like a demo this is something
+you never expect yes and since i worked worked with a time with my tiny macbook screen i didn't really
+seen how it looks just like how it kind of looks right so everything i put in there was basically my
+instinct and gut feeling and just let's see if it works out um yeah and seeing it on a big screen
+yeah that's something different yeah being animated properly
+and on a fast machine yeah yeah and and really awesome feedback uh on pui but yeah let's just watch it
+i would just start it so let's just enjoy it
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+i'm
+i think on the stream now or was it i think i had a feeling there was like a little
+um jump or two the speed and synchronization and the bass seemed to drop out a bit
+in the end i thought maybe that was in the mix i don't know okay hard to say you can always
+watch it on in real time on your computer yeah exactly yeah run like smoothly if it's not a phone
+basically basically yeah it's a really good phone
+yeah so
+so
+so
+so daria you did this like with like you were only two persons who did this
+can you tell us
+it was just me and my boyfriend and it basically started
+yeah um probably like two weeks before the party i had this idea because i had
+a few scenes lying around that somehow started to make sense when i put them screenshots of them
+next to each other and i document um i work with sketch so i had a document where i just um sometimes
+put screenshots of my cable sketches to see if i have a general theme developing with what i work
+in okay um yes and i noticed there was one so i kind of playfully asked for some music maybe
+to sing it to and um then i got this trick and i thought okay i really have to step up my game
+because this is really nice music so i went back and um basically at this point we had maybe seven days
+to go until the deadline so i went back and started really carefully remaking and putting together stuff
+that worked um and searching for something that kind of connected it beside the color theme
+the color theme was kind of actually slightly different at that point um yeah and uh i'm kind
+of a one-trick pony when i when i find something that works kind of well i start abusing it until i
+really i'm really i'm tired of it and i'm really a fan of the edge detect up so that was aren't we all
+yes we are and even better when you slap some chromatic operation on it but um edge detect and some
+basic i don't know i treated the post processing like my photoshop file i just
+put some colors on it and uh watched what it could become and that was my my first element i decided to
+continue uh through the entire demo and then there is this simple trick actually with the triangle scenes
+where i see like the exploding planets and um the the tunnel with um yeah the the orange sphere that
+explodes uh into triangles this is the very much um underused and underappreciated explode divided mashup
+which i randomly discovered and put on a poly head and suddenly it was kind of neat so um this was my second
+and uh yes um basically it's not that much of black magic involved there because i myself have only been
+making stuff uh for a year actually it's been one year exactly two days ago since my first cableversary
+um so much longer i thought you were much longer yeah with us already yeah and that's my timeline
+basically was that last year in july um shortly after you went online in public uh i got myself an account
+and since there wasn't much to do at work and the computer i had at work was more powerful
+than machine at home i spent many many days just uh trying out stuff and because there were no
+expectations i'm not a coder i never did anything um cool in my life i was excited by everything like
+by every little cube i managed to spin around was like whoa damn cool that's almost demo scene and um
+of course there was a stream of course there was a stream of always like it would be so cool to make
+a demo someday maybe in a few years oh god but definitely not soon because i'm such a noob
+but then i um i also watched basically every single tutorial android did also because it was kind of
+relaxing to just follow along and basically bob ross uh the entire thing along with andrew thank you
+yeah because there was there was so much when you when you open uh a patch which for example uses tons of
+arrays it doesn't really make sense um mathematically until you do it in an in an order for me because i'm
+not also i'm also very not good at math so following andrew along i started to see okay what happens when
+we uh take the points and multiply them okay gets bigger and so on this is this is when when but you
+kind of can't get overwhelmed by all these big pictures the patches but uh chunk down it suddenly
+started making sense and yeah you need to develop a feeling for it right so so yeah and then and when you
+like like not be shy just try it out and then like you have a feeling what happens if i use this math
+off and this method without really getting the math behind it i think you can just use it in a creative
+way yeah yeah yeah exactly and there's this thing that you can't really break cables i mean you can
+absolutely totally break but if you save something you can also with the bug fixes you basically can't anymore
+but um i just uh started randomly looking at the op list and taking something one new op each day and
+slapping things together and sometimes it looked cooler than the level of difficulty that it was for
+me so things started to happen and uh yeah there we go with the demo but it also probably wouldn't have
+happened if uh some of my boyfriend wouldn't have made the um big patching like the the framework the demo is
+put together with because it's kind of very neatly organized and um yeah it just works so putting together
+the scenes scenes scenes wasn't that hard for me and it also wasn't my job my job was also to just make
+things but yeah it's basically a collection of uh pretty cheap tricks like the scene that the screenshot is
+uh made from is a um surface scatterer with some spheres inside is there even like a modeled machine
+there or is this all cable no no no that's that's also something hey guys sorry to interrupt for a minute
+um kb uh wants to join the channel tom but he says the channel is maxed out really already
+but he can also just join me on the couch okay i'll wait i'll wait i'll wait i'll show you on the couch
+it's very analog maybe he's got good lighting somewhere else okay i i change it to seven people
+lighting is also better here all right oh couch it is
+but that's strange yeah okay so i'm almost finished talking about the cheapery of the tricks um
+like cheap tricks yeah cheap tricks and uh there's the cheap trick expert basically who helped put this
+together hey hey hey
+yeah so so uh so did you like do it with the uh time sequence like um in the in the twitch stream tutorial
+uh or how did you organize the scenes so so so basically what i did was i just um i fumbled
+around with the timeline a bit then i decided that basically having a timeline is okay but the animation
+features didn't resonate with me that much so i just used the timeline time i just used the timeline time
+that's coming from music and uh i basically did a bit of math to um to to basically sync that to the bpm of the music
+um don't you have the the patch link so you can just open the patch and maybe it would be easier to
+visualize yeah um yeah i can do yeah uh so when i when we did the the um mfx demos um so uncle x also
+wanted to synchronize to bpm and yeah i think we need like a ui element for time and then you can switch between
+frames and seconds and bpm or beats or something like this basically what i did was one one multiply
+one division and then i basically converted seconds into bars right and then i had a bit of logic that
+basically did a trigger every measure and the trigger every bar and the trigger every 16th note and um but
+most of all i just used the variable with like which bar is it and use that for use that for animation yeah
+okay yeah yeah absolutely that like um i think the best feature you guys have built is to introduce the
+variable stuff so you can it's so easy to just shift around and change and pull a variable from everything
+without actually pulling the cables and the rest is it's it's a real real real uh it's a lot of simple map range
+operators that basically say hey okay from bar it's uh it's not bar it's a intact it's from measure 20 to measure 40
+just just do this value from three to five and put a smooth step in right so this is basically how
+a lot of how how the animation was done um then i did a did a custom version of the uh trigger if between
+then op yeah that had a bit of that that could that could be where you could basically also uh define
+a fade in and fade out range and uh so i could say okay that part with like that effect runs from bar 40
+to bar 48 and has a fade in of like one bar or one measure and the fade out of one measure right and so
+this is the high level um organization that i had and then yeah then i just basically took a lot of a lot
+of this variable and uh put some math behind it and then put it to values i mean this is the good thing
+about being um being experienced with all the demo scene stuff i do have a lot of weird math tricks
+in my brain how to convert musical position into animation all right um okay here the link is coming
+okay okay yeah i mean map range is like my brain just life
+yeah but then also then also i did the um sorry then also i did the the um the fft area trick that andro
+showed uh in in one of the streams uh there where basically got all the hi-hats and the high
+percussion yeah i couldn't i couldn't get you really get the beat by that by if you go to music sync a bit to
+right yeah yeah so there's this music nicely organized pitch by the way and straight lines i'm so happy with that
+yeah basically basically i took the timeline time converted it into measures and beats and uh
+so so you you patched it you didn't write an off for this basically yeah i i did that but but then uh
+so this is basically so i had triggers on every bar on every beat on every eighth on every 16th note then left to
+that you see the fft stuff that i could get the hi-hats and symbols um
+and uh and then if you go down in the in the in the main patch basically there's a big section to the
+lower left of the main thing scenes of that of that patch there there those are those are all the part
+of the scenes and there i had my custom if between them for every scene which basically determines which
+scene runs from when to when and how does it take to fade in and fade out
+yeah it's kind of kind of cool it's such a clean patch love it yeah i love clean patches
+just for everything really helps yeah yeah also um we also kind of planned to
+basically if someone wants to see the patch there's there's no secrets there and i learned everything from
+stealing from stealing from other people basically being inspired by other patches so uh i'm absolutely
+all for sharing what we've done with the community because that's how i got anything done yeah okay so
+so you want to make it public or we could we could perhaps clean it up a bit more but then make it public
+yeah yeah um one one trick i actually had for um for for getting out of the stress of releasing at a demo
+party if you go to top level again um there's a debug section
+and uh i really really used the um ui mode op quite a lot because there's all that thing all that thing
+like the sidebar and debug features and i basically connected everything to the ui mode op so that i
+knew as soon as i export yeah every all that stuff is off right yeah that's great and this really works
+because of course we submitted at the last second and if i had to change up the patch to make it export
+ready that wouldn't have worked so that was really good yeah that was my panic moment where i uh shortly
+before walking away from my demo and leaving it to the uh to the destiny i saw a little exactly this
+thing and i was okay we absolutely are going to forget that this exists yeah but i made sure right at the
+beginning that we can forget that it exists yeah yeah we also do this uh yeah it's cool and and this
+is like and then you watch that the timing at the the numbers and then you use them for something
+basically yeah and and um and the the animation is basically a mixture of the timeline based animation
+of normal animation ops and the fft stuff but the important stuff was that i was able to scrub in the
+timeline and just go to a certain time and look also if you press shift d yeah shift d when on the screen
+yes you get uh the the measure account right so we just see in the view it's basically the stuff
+it's it's the stuff you did in the stream i copied i copied that out only that it's a toggle not it hold
+that really helped me making um because i i did the initial animations like roughly that really helped
+me uh realize that i'm absolutely not working with the numbers i supposed to be working with
+which in my normal life probably would have cost me a day and some tears but then i just knew
+so that's the cue sheet of the music in which measure happens what right yeah
+these are a few textures that we generate at the beginning yeah exactly so um yeah at first i had a
+i kind of try to eyeball the post processing on every sub patch which was a horrible idea um but like at the end i
+just had this patch where everything i already used post processing wise i had these global like this
+variables for where's the post processing so so we come we come to the one problem that we had
+that i had in the end optimization wise uh so the post processing is in the scenes every scene has
+okay it's own processing but which also means it still works but it eats gpu mem without end um because
+all because all the um image compose ops and all the render to texture ops they just create a texture
+and then keep it even if it doesn't run anymore yeah it's the one problem it took way too much gpu mem at
+the end especially at high resolutions so it's one thing and it wasn't it wasn't easy to fix there it it's
+of course we could have basically redone the um redone the post processing but it was too late
+yeah it still works yeah we made we made demos with like um so many image composers in in full resolution
+but um and never yeah i mean i mean so i mean what are we talking about this thing runs on on a few years old
+laptop right so i'm yeah but as soon as you increase the resolution it's bad i think i think with i think
+we're in the gigabytes of vram and if we run it at full hd and i tried to do a 4k capture and
+absolutely no chance on my normal graphics card okay
+yeah but doing the patch in a different way especially like yeah like doing one post processing
+for all the scenes and not each scene has its own post processing that basically would have fixed it
+yeah memories there for wasting it i think
+there is there is like basically i had you i hadn't used any like 3d
+complicated meshes stuff i also haven't used repeat op because i learned from android that
+mesh instancer is the only way to put everything on on screen so there was some computing power to spare
+for that yeah i mean i'm a big fan of the mesh instance but there are some things especially the
+smaller ones that you know the repeat op is actually really really good um it's just it's just when
+people throw like 70 repetitions at it with something really complex and then they go oh why is it not
+working so good anymore it's always difficult to explain to people the cpu gpu yeah i mean the only
+yeah yeah the problem is that you like it should be easier to pre-calculate stuff on like bake meshes
+or or stuff like this or like calculate it to arrays and then with a repeat and then use it with with
+other rendering technologies but yeah we're getting there yeah yeah for sure
+yeah great um this is really lovely yeah there's like tons of uh cheap tricks because if you look at
+the scenes it's it's not it's not that much like yeah i mean the scene you're you you're just uh
+focused on with the where is it pyramid i think that's the one that's a area on a rectangle with some
+pyramids yeah and you just scroll through the area and uh yeah yeah i'm just curious because how did you
+get that like this bright highlight like on the side is that with just a point light or something
+and then it's it's that's a question for me yeah this is um all in the post processing it's a depth
+texture ah which is my yes and uh there's also light but is this uh this is a depth um depth
+texture and my boss is also always outside yes exactly and yes there you go absolutely there it is
+right here edge edge detection this is also how you get like these uh tiny lines yeah um
+tiny lines in uh i kind of discovered it by accident i mean i when you don't know anything
+about how graphics work just tweak it you kind of you kind of do dumb until something looks cool
+and you aren't afraid of nothing basically you're you you don't know rules so you don't break any
+and i'm like okay this looks cool should it work like this i don't know probably okay so um it also
+has this consistency so i just kept it in yeah it looks fabulous uh yeah i remember the while ago
+something i was working on when you do this kind of trick if you invert uh the edge detection you can
+kind of give stuff this like black outline like the borderlands game as well yeah edge detection is awesome
+yeah and if you if you use depth you can also have so many layers of different styles depending where stuff
+is so just go wild with that yeah
+oh okay
+yeah that's that's like my one of my cheap tricks
+yeah it's great super cool it's also kind of a show off for the cool phone material because uh
+we didn't have like as it's kind of kind of new ish
+and it took me a while to figure out how all the stats work and how to put lights in and control the lights
+what it does how like how to play with it this was kind of my case study on the two i so many things i
+only learned while making the demo then going back we're making everything
+but this is how you do it especially when you're like uh two minutes before deadline this is where
+all the ah moments come in
+working under pressure things while extremely stressed you get very creative yeah for sure
+that's also kind of good
+um i mean like you know you can just sometimes spend like a whole week tweaking this stuff if you've got the
+time right but you know when you don't have a lot of time it'll just force you to make decisions and
+yeah if you've got a strong base it'll just turn out fine like in this case it's awesome
+i mean the scene um with the triangle sphere via frame and the sphere in it and the point material
+floor i had to come up with one hour before deadline and i needed two scenes so it's one scene
+and i thought okay what's the easiest thing i can make what's like comfort zone ish for me and it's
+wire frames and uh fears and point material was something i remembered okay uh i don't have to
+come up with some airy stuff uh just just make something that's like already there because you
+guys coded it like you coded it for the people i am the people i'm absolutely going to abuse this so
+this is the scene is there two times and uh basically for the first like i i did say
+it's the first time in the pink cyan color theme then i went and inverted the blending modes basically
+so i had a dark look and suddenly it also makes it made sense from my dramatic dramaturgical
+perspective because it's it fits the yeah the idea of uh aphelion which actually is the point for
+further away on the um orbit from the sun okay yeah nice
+yeah great yeah it's not it's not that small as it looks uh when you when you open it um it's quite
+big actually yeah yeah we used some ops yeah great yeah really great and it can be like
+how long didn't you do any music for demo long yeah six years or something i don't know okay
+i think the last one was the uh last one for demo oh no it was like three or four years ago i did uh
+for my toy cause she did a 64k intro for online oh okay she asked me
+with gaga synthesizer and yeah but you should do it more often
+but yeah it was absolutely fun okay cool yeah it's stressful but fun
+sorry about that yeah i basically forgot that he kind of released some demos in the past so when
+he said we got this i didn't really believe that we got this
+road rage basically go out of the way i have to do everything by myself
+that was basically always my plan b
+yeah great thanks thanks for sharing all of this and um yeah you're welcome thanks for making something
+this cool to work with i mean this is everything i never dare to dream about
+yeah you're welcome yeah i mean i would really love it if you share this patch that would be so
+awesome uh for a lot of people because my demos never look as clean as this so i'm always
+too shy to share them but this looks really neatly organized but yeah oh yeah that would be great
+okay cool um yeah
+thank you thank you very much okay cool do you have any other questions or something so i don't know
+how we will continue um um with other people or any questions or stuff like this
+what does chat say maybe maybe ask pandem everything you always wanted to know about cables now's the chance
+don't waste it
+yeah stefan said we are making bund was in cables cast but i didn't get it so i didn't see him either
+if anyone if anyone wants to join and ask some questions um about the demo or anything in cables just
+don't be shy and just join otherwise we will look at the the forum and and go and even if
+and even if we're looking at the forum you can also jump in and interrupt us because we can just like
+carry on uh yeah i should open the chat so there was some activity in the chat we can also um
+um just show how to develop um shaders in cables which was a question last time
+we just got a question on switch from demo episode so it's all javascript
+it's all javascript it's all javascript yeah exactly um so uh so the the stuff on the cpu is all in
+javas written in javascript but the actual work like the graphic rendering work is done on the gpu so that's
+glsl shader language um and you can write both of this in the ui in cables
+which is cool if you know javascript yep yeah yeah but you can basically look at every operator's code
+and just hey okay let's copy paste that and change it a bit if an op doesn't do exactly what you want
+it to do so um yeah nice yeah that's a bit it's a bit of a like open source idea that you can just clone
+it and and make it better and um this is also how we do it so um yeah i would just i would just talk
+talk about this stuff right so you can you can always look at the source code of an op and then change it
+and this this is in the ops are written in javascript and there's an ide in inside of cables where you can
+you can write your own ops and when you save this the ops are recreated but um oops
+i'm not used to i'm not used to windows um so you can also just write shaders um
+so we have some
+awesome live shader coders in here like alkama alkama do you want to join us maybe
+so let's let's just try it um you can just write you can just use an op which is called custom shader
+and um with this op you can you can write your own shader like in shader toy basically so
+you can write a pixel shader and also better shader
+just here so now this is not javascript this is shader language glsl shader language code and you can just go
+go in here and um um change the color of this by changing the values in here and um
+we can use this shader for any kind of mesh you can also load your own mesh and then put the shader on your mesh
+you can also um you can also um say like i wanna wanna animate uh in this shader so you can
+have uniforms for example i will just create uniform float time so then you see this op just got a new input
+here here and um i can connect a timer to it so now um i could use this time for the red channel
+um so so now you see my red channel is animated let's make it a bit more clear
+so you can use you can use stuff that's already there in cables and just connect it to your own shader
+um yeah which is quite handy so um you can also so we saw this post processing uh they did um maybe you
+are missing something from the post processing so um i don't know let's use uh fbm let's create generate a
+texture here um and make this a good size and now we create a uniform
+sampler 2d it's called text so now you see we have an input here for texture so i can connect my image
+compose my generated texture to it and um can say
+yeah and if i'm correct and we we've also now got a more up-to-date thing on the docs right with
+um the variables initializers for um
+the shader stuff um yeah but i have a long list of stuff i still want to to add there but yeah um
+yeah totally so now now we sample our texture and um you can so maybe you
+want to write your own uh post processing so um you can use like said the art channel of this texture
+uh with our with our timing stuff so then you get this and there's also you can you can also right now
+it's bound to this rectangle right so it's it's on a mesh but you can also say um oops
+you can also say stuff like shader to texture yeah and um connect it here and now we get a texture out of this
+um so with this texture you can do other post processing stuff
+um so there's there's a lot of possibilities
+um
+mm-hmm
+you can also you can also use this kind of stuff for
+writing a particle system so you you calculate your particle system in your
+fragment shader basically and use this texture for positioning stuff so this is a bit more the
+advanced stuff but i just wanna um just want to share it let me search for a patch
+i just want to say that i'm going to jump out of the video thing and maybe i will then join in who i'm now
+trying to uh basically force okay thank you guys thank you guys for joining us and showing us all the stuff
+okay yeah cool bye bye bye
+um
+um one second so so we've got spots in the cables cast everybody so if you want to join don't be shy just
+jump in yeah there are two slots uh open there and if you don't want to show your camera that's fine but
+we just need a voice that would also be awesome um so this is a a bit more advanced um example so we
+have a custom shader and this creates a texture with um with coordinates and they are used in a vertex
+position as a vertex positions basically with this ops uh vertex position from texture so you can you can
+write your this is a public example you can find it if you search for a vertex position particles example
+so um yeah you can do a lot of stuff with it uh so i just got a quick question from uh we're
+making bums i got a very short answer though uh stupid question because i never tried can i just use shader
+toy code in cables right away or are there limits didn't you make a tutorial uh actually no that's in the
+planner
+uh yeah so basically um what's possible in shader toy is also possible in cables it's just the variables
+not different right mark yeah i mean correct me if i'm wrong with what i'm going to say
+now tom you know it's like shader toy is just basically a fragment shader running on two triangles
+which is a rectangle right and they just expose um a couple of variables like uh eye time for us that's
+what tom just showed you a minute ago with like uh creating a uniform input with um and calling it timer
+and you put the time in and you've got that and they've got like a couple of um they've just already got
+like textures built in yeah i think i think with shader toy you can't load your own shaders which
+is also kind of cool uh your own texture sorry because then you're limited to use those few things
+there uh but basically if i'm correct like with cables you just get a full screen rectangle up uh you
+grab the custom shader up um you output that to the full screen rectangle and if you just do a couple of
+tweaks with the you know say you want to pull out something from shader toy to cables you just got to make sure
+that some of the variables match up like is the sampler 2d formatting the same and stuff like that
+and then they should just work right tom yeah yeah yeah in theory yes but they have some i think
+like their resolution is in pixels or something like this um yeah there are there are some things that
+that are totally different but yeah we should we should make a tutorial um or a template that you can use um
+and and um copy over shaders did we have a visitor um no that was kb just leaving okay
+um yeah but um i would say everything that you can do in in shader toy is possible here and also one
+thing i never got in shader toy like you cannot preview your buffer textures which is strange you got
+to do a lot of typing and then send it to main but no you can't do that i mean i remember doing some stuff
+when i was experimenting with this where i reported like three or four um shader toy patches over to
+cables and then i was using like buffers basically um so i should actually dive somewhere into that
+stuff it was almost a year ago clean up and maybe just release it um with just like some really simple
+stuff and do a tutorial actually but just keep it really really simple just find a good patch which has
+only a couple of the basic things that covers it for everybody yeah i mean yeah exactly so
+basically it's this eye resolution they call it um and the text code is called ub i think and maybe also
+the uv is not from zero to one i'm i'm not sure um yeah it's from zero to one in shader toy okay yeah
+um yeah so they've got eye resolution and with us i think you just make two inputs on custom shader and get
+the main uh width and height out of main loop and plug that in and then if you change your canvas
+size then the custom shader will also get the pixel size that's updated as well um yeah you create a
+timing uniform in uh and sampler 2d is your texture lookup and if you make another custom shader
+op and do shader to texture that's how you can create this kind of buffer stuff if i'm correct
+so it's actually it's not that different you've just gotta you just gotta make a few ops uh basically
+yeah i mean the reason i think it's all like that in shader toy is because you don't have
+much of a ui it's just a text editor so that's it and you just pick only a very few things in the ui
+like like a texture or something yeah i'll add that to the to-do list on on gethub yeah
+yeah we we called it uni because um so we have this we have also in and out and um so cables so in and
+out was this in webgl2 and in webgl1 it was burying or yeah yeah so so we we define that we use in and out
+like as the it's a defined thing uh this guy i can also show and so all the shaders like if you have
+webgl2 it they will be uh they compile on webgl1 or 2 like if you don't use like special uh webgl features
+but um if you use webgl2 features you can but if you don't like it runs on both webgl1 or 2 so it also
+runs on your iphone right and also um yeah when you when you write um when you write shaders or shader ops
+um we have we have an operator called shader info so you can always you can always look at the
+final shader code so you can plug in the shader info at one at some point here and save show fragment then
+you see you see you see you see it's actually just the define in in and uni uniform so this is compiled
+with glsl3 and then you see the whole the whole shader code which is not much here um but
+so let me show some more advanced stuff so
+here so let me put the basic material and then shader info so now so you can always look at the source code
+of the basic material and of the shader code that's no problem but you can also see
+the finished code here so this is what is generated um
+by the um cables shader pre-processor i would say yeah um so you see you see there's a lot of defines um
+for the basic material so most of the code is not even executed because they are all disabled right now
+so you can see this you can also see the the vertex shader of everything and one special thing about
+cables is um you can basically extend existing shaders tom it's hard i don't think we've seen that on the
+streaming app right now what you just pulled down if you're gonna do anything there uh because we're
+overlaying with the video i don't know yeah we're also super big yeah i'll just in case there's something
+down there people need to see um perfect so so this is just a basic material so it's just one color basically
+um but i can let me use a cube um so there's this concept of shader modifiers in cable so i can now
+use they are called shader effects so there's a list of stuff that extends your your shader so there's for
+example color area so and now you see i can move this thing around and it will colorize yeah my mesh let me
+make it a bit more visible um so this one
+so you can set a color and then it colorizes um your mesh where you where you put it so around this corner
+for example and um so this is still rendered only once this mesh and this is the magic is in here
+you can now see our chain our shader has been changed so now we have you see here there's a mod in
+their color area yeah so and here is all the work done to just colorize this differently
+and um what's with your dogs mark yeah so coppers tour it was actually pretty quiet uh all things
+considering uh for this time of the day and i can just in here i can just stack this so for example
+i can just add some pixel noise uh to it so um
+i can just give me a moment this is just some uh
+perlin noise that's that's added on top now so um you can also you can just remove it again um
+and you can use this and you can you can use this for make your without using a texture you can make your
+mesh like a little pixelated when you do it like this for example
+why is it needs a blend mode actually yeah mesh pixel nice yeah okay
+um yeah so that's that's the shader system and it actually got got quite a few updates internally with
+the new release um where it's even more flexible um than now but um yeah for this for this we don't
+have an op yet so there's no custom shader effect op for this you really have to um
+clone this up and and change the shader code in here um basically so you have to write javascript
+and this but it's it's not that much it's not so much javascript i would say no
+um yeah
+all those hidden gems yeah it's really hard to communicate this
+um but yeah we will try yeah we need this we need this um
+um shade custom shader mod so you can just try it and change this material so by the way this was
+a question on the forum so we answered the first forum question i guess
+yeah exactly we're welcome um i've been using cables now for almost two years and i'm still finding new
+ops and uses and combinations and little things under the head i think it's impossible to learn all this
+stuff a lot of the time it's just like you uh uh steam said to me the other day you know you you find
+out what your problem is you find out what your problem is and then you work on the solution
+if you try and remember if you try and learn everything from cables uh i think that would
+already take more time than you'd be busy making something especially with this kind of stuff
+um yeah anything else about the shaders i'm just thinking
+um okay okay okay
+mark do you have any any idea or any any remarks no i mean um just for the people that have seen this
+kind of stuff for the first time um we do have quite a detailed tutorial which is about six eight minutes long
+on uh youtube on uh how to do the basic stuff that um thunder just said put the custom shader up
+um so if you just want to do that in your own time and you think i couldn't keep track of this just
+head over to youtube we got like one video specifically made uh for this kind of stuff
+that'll uh get you started um basically yeah i think you know what it is tom i just i just think like
+you could do 10 streams about this kind of stuff basically we're just picking like one little
+specialization and then just that would be alone be like an hour hour and a half of like really dense
+information for people i think it's just really good right now that people are exposed to this like
+hey you know this is possible basically yeah yeah
+yeah we should do this
+uh we just asked a question uh what about web gpu
+how will this impact cables um yeah um a lot i would say okay so um just at silicon five what's web gpu
+so um so webgl is actually like
+in the web it seems like it's crazy modern and fast and the future but actually like the technology that
+we're using here is like 10 years old or something so it's like which uh two point i i actually don't know
+about it it's it's the old uh it's it's the old open gl the old desktop gl so on the desktop
+like uh games that are programmed now they have a lot more possibilities to do so we are kind of restricted
+and um there is no so for web gl they said okay for the browser we will not use like normal open gl we will
+use open gl es which is like the mobile version of open gl so they said let's just use this standard and
+then go with this and now the problem is that this standard was never renewed so um from gl es 3 which
+is basically web g2 which is super confusing this naming but uh yeah so there is no more modern mobile
+graphics library standards so then there was a big fight and everyone said like yeah okay let's just use
+vulcan or and apple said let's use metal or whatever it's called so and then the browser companies like
+chrome mozilla and apple they sat on a table and they decided okay web gpu this is the new modern next thing
+right um so this is this has much more possibilities so one thing is um you can write shaders that are not
+only setting pixels and vertices but they can just calculate stuff and and do this in a much better way
+than we are doing stuff right now so so we don't have to calculate particles and save the positions in in
+colors but you have like dynamic buffers you can exchange between shaders and stuff like this so
+it's way more easy to do way more complex stuff and um yeah so this is in alpha or beta now i think you can
+use it on on apple devices already and maybe also on on chrome nightly on windows or something
+so um so it's slowly getting there and it looks really neat and yeah we have to change a lot in the
+core for this um but i hope that we can basically just re-compile or like automatically reuse our shaders
+that we have now and then write more modern ones on top of that so i hope i think we are we are set up good
+to to to that cables can be compatible but probably there will be some when you create a new patch
+you select like webgl or webgpu in the future but right i don't know when we come to do this
+yeah i think we'd have more bugs to fix now
+yeah then we have like two platforms
+let's get this one down first
+yeah but i'm totally stoked about webgpu oh yeah for sure
+no i don't think um i don't think i've got at least anything more to ask or bring up about uh shader
+stuff tom so i'm just going to say to the people on twitch if we'll give you like 30 seconds
+oh hold it all right this is great we're getting questions that's great we're machenbunds what's the
+state of the new ui do you want to show it
+um yeah why not right yeah i mean let's get the hype factor hype train rolling
+so we're machenbunds seems to have some insider information yeah how did you get that what's going
+on what don't i what don't i know about so
+so so so what it means like we are working on a new ui because uh is it already there so we are
+working on new ui because what you see here um is kind of slow so if you have a patch
+without sub patches and and 400 ops or something then it it really gets slow and annoying and um
+yeah it's not great so just put your stuff in sub patches then it's okayish but still it's
+it's it's it's it's too slow this is svg um so this web vector based technology
+and that's not really scalable for what we are doing so um so we are developing our a new ui so it
+will look the same in the end um more or less but um it will be much faster and uh smooth so
+um so i can show this
+so when i reload the patch now i switch to the new um user interface i saw the new patch field so you see
+it's it's it's not looking that different but you see it's way smoother that's just so uh so smooth
+look i added a new ah okay that's really juicy and so yeah this is very fast and smooth so this is all
+being drawn basically on the gpu right so yeah yeah this is all um imagine imagine like this is like um
+all this is drawn with like three machine sensors just imagine like everything you see on the screen
+is drawn with a machine sensor and uh you see that there's no slowdown like it's running in 60 fps all the
+time if you do this with the old um editor with the cpu and just be really slow right now yeah and stuttering
+we can try so if i switch back uh we can try so if i switch back so you see this already so now you see
+this is just like one yeah look at that two fps yeah this is this is really slow and
+it's strange that like nowadays this is just basically we're just drawing rectangles and some
+some text i don't know how and this the strange thing is the mouse responsiveness is really fast over stuff
+so this is so this is okay yeah um just the scrolling is slow um but yeah um so
+so this will be really this will be great but there's still a lot of stuff to do with this so
+so basically we have to uh like i rewrote the whole patch field ui um from scratch um and there's i mean
+the basic stuff works you can disconnect and connect it looks a bit wrong colors you cannot shake for
+example and it has a lot of small bugs but um yeah and look at this
+um yeah i love this with the circle but so now it's like basically where you click with that circle
+that's where the op is right ah that's amazing that's really sweet
+yeah so not not drag in and stuff yeah so tom my question is is it going to be possible for me to
+be able to get that entire thing as a texture and apply like my own crt monitor cyberpunk style vhs
+glitch over it while i'm patching theoretically yes but uh not right now but uh yeah it would be possible
+like because this is just webgl basically yeah um ah this is so fast and smooth it's really nice to
+look at it's also yeah it's also an idea like to maybe render it in the same renderer as your output
+but yeah there are a lot of um ideas floating around right yeah we have to see there you see those those
+kind of bugs yeah that's not a bug that's that's a that's a feature i think when i go in and back
+then then it's it's actually right i think this is a sub patch you just made right huh yeah
+yeah um but yeah there's a lot of stuff like this it's not updating but uh yeah
+uh from uh from me let's put cables inside the cable so you can cable while you cable exactly yeah
+um but you're getting there and then yeah and the next step then is to to do this in vr
+that's the next step got my oculus just waiting right here
+yeah so this will probably still take a few months until we can we can show it yeah
+i think this is a really amazing and uh it's gonna it's gonna make working on bigger patches
+especially just uh a thing of the past yeah also um the flow mode will be for free it will not be
+slow down anything at all yeah which is so you can have it on all the time it's not not doing anything
+to your performance basically
+yeah you see here that everything is drawn in two milliseconds uh right now so yeah that's crazy fast
+or if we make cables in vr we can combine it with physical exercise
+okay but then you can't use sub patches you know you have to just draw long cables everywhere and reach
+out and pull it along you need a big house yeah
+yep
+yeah so that's gonna be coming out at some point in the future yeah yeah
+tom do you think once it's stable once if you deem it stable enough are you gonna add that just
+like we saw in the menu where users can see it's an experimental feature and then like turn it on to
+try it out yeah totally i don't think we will make the switch from one day to another i think it will
+be a longer phase okay um and yeah it will like probably like there will be some missing things for
+a longer time but yeah um just yeah i think it needs some more fine tuning and tweaking and then we can
+and roll it out for beta test or alpha test but yeah probably it will still be a few months because it's
+it's really hard to to make time to work on this right because they are always like um
+features that that needed by clients or or other bug fixes or stuff like this so yeah
+yeah so we are yeah so we are working on it okay um
+i was thinking um maybe if there are any other questions up there
+um other than that we can we can show this new ray marching thing uh ray casting yeah right
+just saying
+yeah i think i think i think it's going to be a great thing because um
+if i can just say a little bit about the the general thing you know so like to everybody we
+kind of get it a lot of the time on the forums where um people basically they want to be able to
+interact with um things on the screen and that could be like a cube or a circle or maybe uh like text
+mesh which is like text in 3d like on a rectangle for example um and in the past i think we had like
+the color picker right tom uh yeah but um if i'm correct that was that's a bit tricky to get using and
+uh to using sometimes uh the results weren't so consistent so tom has got a really cool amazing
+thing to show which makes all this a thing of the past isn't that right tom yeah so we we have basically we
+have it uh already um but it was really a pain to use um so so this guy he wants to so basically you just
+want to have a 3d element that you can click that's that's the basic um the basic question and the basic
+problem basically so um so um we we have this physics engine in cables which is ken js so um
+it's this physic engine and you can also use this for checking like if your mouse is over a 3d object
+basically basically yeah so so this is rendered with 3ds but this physics library is like
+engine independent so we could also integrate it into cable so um we already did some examples with like
+actual physics but we would just use this for um checking if anything is uh under your mouse for now
+um so
+uh let's uh let's so i maybe i would just show it without
+maybe maybe just show it with like a cube in the sphere is that possible um yeah it's on just two
+really simple meshes yeah um
+so so what we have to do is like we have to add so it's called like a word so
+in a world there's physics stuff so this is basically how every physics engine works like
+you create a word and then you put stuff in there and then you can interact with them or you can
+simulate the physics or uh cast a ray from your mouse to see what's under your mouse we will see this
+later so um so we have an op um that's called world so you see it's in the physics namespace and it's called
+world um
+uh minimum size of the kbsgl exported project is around 50k or 80k something like below 100k for sure
+so so we create this world uh object here and um now we can um
+um but we can make it smaller outcome if you want what do you mean
+i was wondering if you if he finds this small or big um but yeah so so we can add a cube to this
+um for now so
+and um
+like usually like this is attached to a mesh or something in cabins it isn't so you have to create
+like a real cube and put it at this position um so you can easily do tricks like the the physics cube is
+a bit bigger than the um than the real cube um but yeah that's not important for now so
+um so we have this this outline here and this outline means there is a physics object there
+um so now we can
+so now you can create you can simulate physics and stuff but we are we now want to
+check if something under your mouse and i already said it like it's it's the method is like you cast
+the ray from your mouse into infinity basically and then you see like it collides with objects so one
+thing a physic engine does is checking what is colliding with something so in gta you drive your car
+against the wall and then the wall is not moving uh or you drive it uh against the lamp and then the the
+lamp is is crashing or something so the physics engine is checking like what are you hitting right now
+yeah um so but you can also check if a ray from your mouse is hitting something so that's what we want
+to do so we have this operator called cast ray um and this will just do this um it will cast
+the array from uh screen coordinate uh and see what's below it so to do this first of all we want
+to have our physics cube easily identifiable so we can give it a name like um
+best cube what is it called in portal companion cube let's call it companion cube
+so um and now the cast ray has this this string output um name so this is basically what's what's under
+what's under the coordinate that we gave it so we gave it the coordinate zero zero so um it's exactly in
+the center of the screen and it's just hitting the cube so if i change this to two two you see there's no
+no result basically it doesn't have a hit so we can just plug in our mouse up here and then it's not
+only the center of the screen and you have to do this um and now it's not only the center of the screen but
+it's not only the center of the screen it's not only the center of the screen but you have to do this
+and now it's not only the center of the screen but it's not only the center of the screen but you can
+see if you can see it's not only the center of the screen but you can see it's showing the name
+the name of the cube so i can just add more cubes like this and i can just use normal transformation
+to move it to the center of the screen and you can see it there's no rotation because
+um
+actually they are really simple oh mark's gone
+uh they're really simple axis aligned cubes so they are always like this so it's not pixel perfect if
+you rotate your cubes or anything um so let's call this test cube so now you see
+whenever this it's called best cube and when i cover this it's called companion cube
+um so you can create a whole 3d world and put stuff in there so so this was kind of working before but we
+put in some new stuff so for example we have
+we have this physics body array so you can
+you can create a lot of cubes with one thing so this is basically like the machine sensor but for
+creating physics cubes and you see um
+so you see they actually automatically get names like they're like
+named from random zero to random 99 or something um so
+yeah you can create easily a lot of pickable stuff with this um
+and let's see what mark says like if this any if anyone wants to join me just don't be shy just come in
+like like i really want to see at least one person coming in here today so please give me that favor please
+um so so you can position this by hand if you want um but you can also do this with the gl
+gltf so i with my awesome blender skills i create this complex scene
+um with the few cubes in here with the few cubes in here and um i just want to make them clickable
+uh in my patch so i can
+i can export this um
+this glb file so this 3d scene
+to my drive and um
+and upload it to cables so i will just drag it here so this is the glb file i just created
+um um and i will i will create a gltf scene so let me just remove all of this for now
+um
+and load this scene so now you see this is our loaded 3d scene
+let's make it a bit 3d ish uh can you hear me now tom yeah hi sorry about that uh internet just
+dropped out in the whole place uh for a few minutes so uh we just restart some stuff and i'm back again
+that was really quick um okay um okay so so i just loaded my
+awesome blender scene wow you've been practicing yeah and i know can do four cubes and i just i really
+need something to to drink so i i'll be back in 10 seconds okay yeah sure i'm gonna get one as well
+uh
+okay
+okay
+all right
+all right
+there was some
+dark but yeah so so we loaded the gltf scene and um
+by default this is not clickable or anything because the gtf
+scene op doesn't do anything with physics so um so i brought a new op which is called
+uh gltf physics bodies
+so this op you can use and just um connect to the gtf scene
+and um by default it just takes all like you see it's already working
+and by default by default it just uses every every mesh you have in there but you can say
+so i just want to um use cube one or two or three or four so this is like
+ah if you say cube if you say cube then it will use oops sorry
+well hold it tom could you could you get the string output from the cast ray and then feed that into the
+the physics up so it highlights the one that you're over
+uh
+so if you get the string output from cast ray now and you plug that into the gltf physics
+no no no that wouldn't work no no no okay because like but it's not really highlighting this is
+the the orange lines are just debugging so usually you would you would turn this off sure
+um but but but it's a good question uh yeah let's try i i know where you're what what you are after
+let's let's try this um let's try this when this is when this is clear so yeah so i could just say like
+um i have a group of things i want to have clickable like windows or i don't know chairs or tables or
+something then you can create different groups and name them differently and um yeah you can make it a
+bit bigger than the actual mesh yeah and um yeah and create your groups and make them interactive
+so mark what you what you just said
+like we can can't we but i'm just thinking if you get the string output from cast ray
+and plug that into the physics bodies yeah that this wouldn't work because you just
+you need to have everything clickable so that it hovers right so that okay just be that one but what
+you what you probably like i i like this so new and really never tested that much okay but so we can
+create a gltf node with the with the cube with the name by the name and then it creates this mesh here
+right yeah right yeah so what if we connect this name here yeah this works so um
+it's just that
+oh yeah
+interesting
+interesting
+yeah it's it's it's it's probably not not so easy but i mean i'm asking a pretty random question now
+but like if you look at this correctly though tom like let's say you've got those four cubes right you
+know this really allows people to create like playful interactive scenes so you could say um if cube 001 has
+been clicked do a bool anim so it moves to the left and the cool part is now you can move to its new
+position with the mouse and click on it again i think this will open like a huge amount of new um yeah
+interactivity options with like the mouse or a touch screen and uh the machine yeah and also like when we look at
+castrate has a lot of outputs so this is uh mostly coordinates so you even know like the the normal
+that you are hovering over right so so you could put could you put a shape where the ray is intersecting
+like with the side of the cube okay exactly so so this way um
+let's make it really small yeah so now you see
+is it because it's interacting with the text that's there
+uh no okay i'm i'm not sure what hap what's happening but um
+we could
+why don't we have the
+yeah we need the position of
+um
+the mesh actually to output it
+yeah i guess this is this is missing wow
+is it being triggered now though the if true done
+yeah okay
+guys i'm sure i've seen this work in another patch
+um
+i think i think i think i let me reload
+i think let me reload
+why
+why
+uh yeah something's off
+it just work before that what did i change
+i think i think this is uh this is all fine
+yeah okay there's there's some bugs there but um yeah so
+we will make it possible that you can make like a hover effect when you hover over this cube that you
+can put another cube around it or you actually get the the position of this um
+of where the mouse hit the the cube in 3d yeah and this should totally work i don't know what what i changed
+now it's okay look now it's okay okay okay so yeah this is this is still a problem
+when we rescale the scene i think then the physics stuff is not rescaled with it
+ah right it's not updating okay yeah that that would explain what we just saw then okay yeah
+yeah yeah so now you should be able to plug the position in and it should work now then right
+yeah let's see yeah okay
+now it looks like it's been yeah okay so now you see yeah where the mouse is hitting and you get 3d
+coordinates yeah so what happened before yeah yeah no so it's okay cool so what happened before is like
+there's still a feature missing so we can resize our 3d scene and even though it looks
+uh no the orange boxes look fine but something is still off so when i turn off this rescale then
+it actually is uh pixel perfect and then you get exactly the hit position
+yeah sure you're doing a future industry
+uh which one uh which one is that gltf scene rescale okay yeah the physics bodies needs to update yeah yeah
+yeah cool so hold it is it the gltf physics bodies up or the gltf scene up the body's up okay
+yeah it needs to remember if the if the scaling has changed um but yeah
+this is really great for interactive stuff because it will just be so easy
+to create those interactive scenes without
+stuff like interactive rectangle which is also cool but um yeah it will be
+it will be much easier to create interactive stuff and um yeah yeah i'm really excited about this because
+it's it's just it's really amazing that you can just like get the the id of something in 3d space
+you know then you then you can just say is this equal to the id now do what i want it to do uh basically
+i mean uh i mean the sky's the limit with this kind of stuff you can you can just also say i want to
+trigger an entire part of an animation sequence inside of the gltf up and somebody clicks on this part of it
+i mean uh yeah or make a camera movement or yeah yeah stuff like this for sure
+it's basically just triggering a state of the 3d scene and i think this is a really amazing thing
+because you know it's like um like html elements like divs for example they allow you to do this in
+2d and that's really awesome but you know 3d that's always been kind of tricky and i think once the system's
+refined it's just going to make so much stuff so much easier yeah it's like if you make uh five text
+meshes in 3d you know you've got your text in 3d you know when you were trying to do that before
+with like the interactive rectangle that wouldn't exactly match up because it's a 2d element but this
+works pretty much pixel perfect so a lot of problems are really solved by this yeah so actually now
+let me get this out it works what i wanted to do so i will just draw another cube over my old cube so
+i have some sort of this is also there's something off but now i have like a hover effect yeah 3d meshes
+and um yeah you can also imagine like fading those in yeah fading in and out if it's like hitting or not
+yeah totally that's really cool really really cool
+i think this i think this just takes so many um i think this is just actually going to take a lot of
+time for people to get used to because it's such a game changer just being able to just interact with
+a 3d scene you know a lot of the things that we're used to doing i think with cables patches is like um
+touch control on a phone or a mouse wheel or orbit controls and things like that but you know this
+is just a real game changer it's just you can now interact with an element in 3d space which sounds really
+simple but it's not um i'm really excited about this so i just imagine right now if i'm looking at
+this with these cubes that i'd use a preset up of a camera um with the positions and you click you know
+one of these cubes and you interpolate from one preset to another um and things like this there's just so
+many possibilities yeah yeah and also we have now this right you have like we can read gtf cameras
+this is also coming in the update i've still not used this at all yeah it has to be made about this yeah
+yeah so i'm the the i mean there's still some problems but we're getting there and i'm i'm really looking
+forward uh using this stuff so everyone is is quiet yeah i think that's because they're listening
+um so yeah this is basically he wants to i'm struggling to add a click event to an element
+basically i would like to count how many times an object was clicked
+um are there were already some answers hey keep it visuals he's really cool he's answering um
+questions of other people quite a lot and this is what we want man that the community answers the
+community because that's just exponential growth right there you know that's just gonna that's just
+hopefully gonna keep on working we really think it's great when people can help each other uh because
+we want to help everybody as much as we can on the forums but we just sometimes got those busy days
+where it creeps by and we can't put as much time into it as we'd like yeah i mean actually uh one of the
+whole ideas of tonight for tom was like hey let's uh go through these um foreign posts and answer them on
+the stream and then just before the stream we took a look and then i think tom said yeah a lot of them
+have already been answered which is kind of good yeah i thought it i thought the situation was worse
+yeah i was like oh god we're two weeks behind but it was really not that bad yeah
+um yeah so we could we could try to if there's nothing else
+um i want to try something so so i want to count like the clicks on each cube basically so
+um i just did string equals with the output and uh if it equal to the trigger change true and then
+just triggered
+no i want to counter for each cube basically okay you're gonna do it in the less ops than andrew method
+i don't know what i i just i just want to try this so
+uh okay let's let's see what happens um
+probably i will i will fail miserably
+oh no it's working nice nice yo
+so um so we can use this
+number two string
+let's just create
+a nice string
+so let's say the name
+and then the number and then x so okay
+why is the string not updating
+hmm
+oh wait oh i'm this
+i'm connecting this is the text mesh so this is the text that is printed
+sorry
+so now we see this is
+fourteen and fifteen and fifty times clicked yeah
+it's not should update
+let me clean up a bit
+um so why is this not updating
+when i click when i click
+probably
+probably
+ah christ
+sorry i built an infinite loop right there
+um so now we are just counting how many time we are hovering so we need to
+actually do it on a click yeah so um number on trigger
+that's what we are going to do
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+we have to do it on the next one
+yeah okay now i can click
+and i can count okay this is still a
+bit messy i have to check this in
+when i can concentrate better but
+yeah so this way you can can count
+your clicks
+um yeah
+yeah please ronnie tell us the
+weather
+how's the weather in hamburg
+today we only have visitors from
+hamburg
+he just wanted to join and ask
+questions so he doesn't read the
+weather forecast
+ronnie be the first
+okay come on man put it down
+you're an early adapter ronnie
+you're the earliest adapter please
+come in
+by the way like this is like
+we're making bund
+davia kb and ronnie they're all from
+hamburg
+like we need to
+grow our target audience not only to
+hamburg
+hey that's ronnie ronnie's showing the
+cables cast huh
+good morning
+hey ronnie
+so how are you
+very good i'd like to turn on the
+camera to turn you really off
+if he's got like a green screen
+background with the web i'm gonna lose it
+good evening uh ladies and gentlemen
+coming up with the weather forecast
+yeah uh for those who don't know me i have
+no cables question to ask
+i'm very sorry at least
+why not
+yeah please when do you implement
+a some kind of latency compensation into the fft output so it can be used to sync
+music and visuals that's not so hard ronnie you just have to use the delayed value
+all right i think he means negative
+yeah and then you just gotta break the laws of time and space
+no you probably have to delay the audio and then everything that isn't using the fft is going to be
+fucked up probably but ronnie we do this with media right that we have a negative offset
+but yeah how are you yeah weather in hamburg is very nice i'm looking outside in a halfway
+hazy
+halfway blue sky a little bit of sun is shining and that's it nice
+ronnie bringing the sunshine to the cables cast
+ronnie it's so good to hear your voice yeah you got a nice mic though man
+i heard i'm very good at reading wikipedia articles
+so this is your new youtube channel where you read wikipedia
+i actually considered that as a podcast for falling asleep
+yeah you're laughing wait until you hear me reading stuff that gets wound up in your anal for no particular reason
+there's actually wikipedia article for that which isn't suitable for falling asleep okay i suppose
+what the heck am i talking here are you doing good
+yeah we're fine yeah we're fine yeah we're fine um we're okay so so ronnie when was the last time you made a cables patch just putting that one out there
+i'm just curious two years ago i actually i i've been watching um your stream so and
+every now and then i'm like i could do something and i want to make a demo and then
+i feel not capable of doing it and right now i have daya
+to prove it's easy oh yeah she's just making everybody else that says they're gonna make a demo
+look bad basically yeah i also like very much what how she was like oh i started this like a year ago and
+then yeah i have a clue and then so yeah um i feel inclined to to open it very soon again when i find the time
+yeah i think i think it's just time that's the problem one quick thing i would like to um
+ask right now ronnie while i've got you personally in cables cast room so i said it um on the last
+stream uh i'll just keep this one quick so with the vj software that i keep on working on uh every week or
+two or three um so i've been doing everything with midi from disabled to live set but i also want to
+build a version of it which just works with audio analysis uh basically so like like a dj mix for
+example like people that would be stood in a club and they're following a dj so i was wondering if you'd
+either have something already lying around or if this uh if there's just something that you've got that
+i could maybe use as like a long mix to analyze and um then build visuals that like in a live stream
+of course of course uh i guess the question is do you want to be banned because it's licensed music
+i don't know can we get like a banhammer for that kind of thing i mean seriously um of course i have
+mixes and i guess i also have one that is using or even a few ones which are using
+uh net audio i i sent you something cool also i think like there's a mix coming up
+which is no riots at evoke right yeah i still wait for music i guess it's still in the making
+august 11th right when is the deadline yeah it's on tuesday before tuesday yeah sure interesting i hope
+no i i think that will be fun and i'm a little bit afraid
+yeah no seriously because
+it's hard to play music i've never heard before unless i have chosen to play it for
+kind of kind of loving it and i have no idea what people are going to send in
+and how that's going to feel when i'm going to play it i already see myself making like 10 takes or so
+yeah i guess so interesting but yeah we probably like could use this uh then which is like
+not uh gamer protected or anything yeah for yeah for your thing but i i'm not i'm not sure we have to ask our
+lawyer but uh yeah i can send you something right in a few minutes i just need to find that
+which is uh game off and everything free yeah yeah i'm really glad you're actually saying this running
+because i uh i didn't even think about it with the copyright stuff you know shows you how often i do
+streams to mixes on streams you are risking to be banned right right well i'm glad uh i'm glad i got a
+heads up uh with that one because i mean it's not like i want to get banned or anything you know no no no
+no at least well i had a few mixes on my twitch channel as well and then the entire situation came up like
+last month and and the streamers were like whoa no they can't do that and then the first
+copyright bans and strikes came in wow okay yeah i i think the ria or whatever is it they went haywire
+and they want money from amazon who owns twitch and amazon is like yourself and right yeah yeah
+yeah and we just get got a strike uh because we played the rick astley
+in one tutorial yeah because it's the default video for our youtube op and then i got a mail from youtube
+like whatever yeah if that happens on youtube that's fine don't let it happen on twitch too often i guess
+good but i think youtube can if if you get a do you get a takedown or just a notice no no it was just a
+notice that we cannot monetize it which we don't do anyhow so yeah and it doesn't matter i mean but it was just so funny
+so in that case rick says thank you yeah so yeah yeah go make a banger for ronnie yes please says uh mimi
+so does anyone else want to join
+please they are they are very shy but we will just continue doing this until
+yeah someone joins that we don't know oh look oh dino dino oh yeah let me make some space for dino i wish
+you know good evening and see you again soon right thank you bye
+thanks thanks for the forecast though ronnie i think that should become a regular thing
+did i even do that okay bye bye bye thanks
+hey dino
+dino's microphone is muted i think dino is still interesting yeah
+okay dino yeah if you can hear us your microphone's still muted
+i do that no no no i don't think so no
+uh maybe it's just uh i've sometimes got it where i've got to unplug and click my microphone back in one
+or two times yeah i have to restart discord quite often yeah i'll just send a message maybe he doesn't know
+okay okay okay so there we go hey dino
+yeah i just have to figure out that it's better to use uh headphones while uh watching twitch and being
+uh uh the discourse um and then it's triggered and then you can just so you really have questions right
+yeah brilliant then you can just uh get the objects through okay you can send me a patch in in discord maybe
+you can send me a picture or how do you want to do it
+i first
+so how's the weather in cologne
+sorry i'm getting giggly off this weather thing
+we cannot hear you anymore
+so now i should be there yeah yeah yeah yeah it's um having too many setups so weather in cologne is okay um
+it was a nice sense uh yeah i uh like what you did there i'm uh except for the for the new stuff and cables
+yeah there's a lot it's the the release is huge and yeah but we as you can see we are just figuring out
+the how do you say this mark odds and ends or something like this yeah the odds and ends of it all yeah
+when when when are you when are you when are you going to uh to release them yeah we hope on thursday
+on thursday yeah so if i want to start a demo for no vogue when should i start yesterday
+can i can't can i can i uh but is it so much awesome awesome stuff that i should wait for today
+yeah i mean if yeah you can be the first one to make um maybe you can be the first one who makes the
+demo with shadows but i think there's someone else working on one right now but i don't know who gets placed first
+i know that i know that i know that i know that i neck you for shadows for like half a year
+yeah longer i guess so every now and then i'm like wow the shadows are shit just uh
+just my real ones yeah so uh seymour seymour on cave it's uh he he wrote the new shadow system and um yeah i'm re i really love it
+um and yeah i'm i'm playing like for two weeks with it like intensively and we are just um polishing it so
+it's it's really compatible um
+uh like so so you know do you actually have a question or not no i'm not really a question okay
+but so so your question is about shadow so maybe so maybe uh seymour is maybe seymour can join us
+so this card i don't know if he's there actually it's a click no he's not he's offline
+oh okay he was on the switch before for a little while if we talk about shadows can you have multiple
+multiple light sources yeah yes yes that's great and multiple shadows cast by those light sources
+which is really cool yeah i mean should should i i can just show something yeah i mean we're showing
+stuff that hasn't been released yet i think that's awesome and people just sit behind the browser and
+refresh waiting for the release right okay let's let's do this so um
+so everything starts with the cube i guess and some orbit controls
+and so there's also a new
+font material which is even longer now like look at this thing you need it um
+yeah we we need some new ui systems so we can just hide the advanced stuff or like the stuff you don't
+enable it shouldn't be visible um but yeah so i will create another um cube which is our um floor for now
+so um so like this um let's move this down so um and now um okay um yeah so we need a light source so um for
+example we could use um so we have multiple light sources i mean the the usual light sources um
+that we can use so the the naming is still not final so it will not be short shadow point light cga will
+just be point light but this is just how we develop it um okay so so i added this point light as you can see
+like this is just the normal stuff as we know it um but now you can you can say cast shadow so um
+this this will also show uh like a little helper warning or or hint uh what you have to do now when
+you when you enable it because we actually need something like a shadow effect i showed before for
+the shadows like this um right now called shadow shadow module modifier which is also which will also change
+so so when i add this you see we have we have a shadow already yeah so um so when i when i move the
+the sphere you can see the shadow shadow is shadow is moving and um
+um so there are different algorithms like pcf or poison sampling and um i think simo will uh will also join us
+in a stream and show all of this or make a video tutorial or something but um um but yeah so you can also set a color for the shadow which is
+which is which is super handy for doing for playing some nice tricks um
+um
+okay
+and let's
+and let's
+let's let's animate the cube
+yeah
+yeah
+because if i'm correct tom uh
+uh simo's already been doing quite a few things like with complex 3d meshes you know with parts cut out and stuff like that
+and uh the shadows look really good and tight and it's just really sweet a lot of control i barely had
+any time to play with it i was kind of bummed because i really loved the idea of the shadows
+um yeah you can like you can make them soft shadows as well right tom where you can like
+make it a bit more blurry and things like that if i'm correct
+i don't look yeah just light um yeah totally um oops samples performance
+um i broke something i think let me reload and yeah this is also um
+heavily in development i would say uh yeah there you see you you there are some multiple
+um samples so you get like this fuzzy border yeah um and
+yeah i don't like it's with shadows it's always super tricky to to get this right so we have a lot of
+um parameters here so for a bias so you can just like tweak it because with shadows you always want
+to be like in this magic area where it works really good and outside of that it works really bad and um
+it's it's a it's a bit it's a bit tricky but um i think we found this middle ground where it's
+like we just put in those ops and then it worked right so um um yeah we are we are getting there i think
+so yeah and now i can just add another point light too then it works exactly yeah so point light is is
+super expensive because this is rendering a shadow cube map basically so uh you see it's rendering all
+this stuff quite often so but we have so we have others so we have the spotlight uh for example and um
+uh yeah and uh directional light but to work we have to enable cast shadows so we see we have two
+two shadows now yeah okay nice super sweet yeah yeah and if you have this then you need to
+adjust those uh shadow map settings so this is always what i said you have to fiddle around a bit and um
+um and there's even more stuff um but yeah so um so yeah um wait a second
+i lost it yeah well i was heavily under development it's quite a while right now yeah and towards this
+workable state right now it's good it's good enough yeah i just wanted to overlap them so um yeah there you
+you can see they are overlapping and you can um set um you can set um the strength
+yeah you can set it here so you can you can even pearl light um say
+how strong the shadow is i i'm i mean i mean it's not really realistic or anything but it's just for
+tweaking stuff um i think it's just it's just super handy that's cool that helps a lot i had some
+stuff in mind which uh which i wanted to do with multiple light sources or at least one light source for
+multiple objects
+okay okay okay because that wasn't possible before and the day the all shadow had only like one angle
+and everything in that uh worked like that
+um so now you can also you can also you can also use the mesh instance in theory
+am i doing something wrong
+do we need a material for it yeah we have the phone
+another phone okay
+reload problem
+okay well that's
+yeah you have to tweak it but it's uh i know what you want
+yeah i really think it's super cool seeing this kind of stuff it's like look at that that's just so
+badass sorry that's really good like look at this yeah this is amazing stuff and it's running really fast
+for uh what it's doing i think i think we're gonna see like a whole new level of uh demos
+yeah yeah yeah maybe now
+release it already
+yeah i will wait for that uh maybe i do something else for uh
+only an evoke the point depends always on the musician
+but yeah thanks for showing
+for mimi
+yeah um yeah i also really love this um shadow stuff but yeah yeah yeah
+yeah i want to play with this and make some some 3d scenes in blender and use it
+with dynamic uh lights and stuff
+it has six for surely
+yeah you're welcome and do you have any other questions dino
+when is the next demo coming out
+two and a half weeks oh okay if everything is working i'm i'm still waiting for my session
+uh no i i really don't know um but uh i had to go
+work-wise to spain next week which is canceled but because because of things um
+um so i have two or three weekends which is quite nice okay
+yeah you like it's it's great what you can get out of this like by just tweaking some numbers
+yeah yeah it's crazy crazy good
+so how big is our
+oh yeah you see now it's a bit softer so this is this pc
+um
+and i just wanted to like where is i am you can so in the lights you set up like the size
+of the shadow map so this was all 512 so if i turn it up 2024
+and it's a bit then it's even sharper but yeah on the outside maybe we need
+yeah i also don't know like which numbers to tweak for it it's it's a learning process i guess i mean
+it's the same in any 3d program yeah yeah sure i think what you said before tom like especially with
+this this kind of offer the new phone material you just need some new thing with the ui where you've
+got like a simple set of parameters exposed so people people can become comfortable with that and then get
+good with it and understand it and then add the the more advanced stuff from there yeah
+i mean it's like i remember the first time i used unity you know there was just this like shadows
+thing and i just ticked it on and it worked and they didn't look amazing but you know i just had
+shadows and that was enough for me to start with and then a few days later i started googling how do i
+make it look better you know and that that was like the next stage is this the shadow map that we're
+looking at the uh yeah this is a death map right um i think yeah yeah i think this is also a debug output
+still right um but it's like what he's doing here is actually like what we want to do like that this
+preview also works for depth textures so he's he's just converting this by his own but i want like the
+previous system to know like ah this is a depth texture or this is a cube right it's a cube map
+and then um it actually shows the shows the cube map right there like unfolded or something
+because that's that's super handy yeah for sure yeah so the point light is is crazy expensive because
+it's rendering to a cube map so it's rendering uh everything below like six times so
+we have a full like around the point light uh we have full rendering in in every direction so this is why
+you can just put it like in the center of this and then you have this those shadows like like actually
+if you put a a candle or something in the center of of this and then you get a corrupt shadow in all
+directions so the spotlight is only like a flashlight but yeah this this looks awesome guys looks amazing
+so so and this is just really in the center and yeah
+so uh tom because i've not really followed much with the development of the shadows would this would
+this work on mobile with lower settings or would you say ah that's a pretty heavy feature
+so i don't so i don't think the the shadow point light is a good idea to try on mobile but i think the
+the spotlight or the spotlight is the spotlight or the direction light is no problem so
+so zemo he developed this on his i think 2012 macbook pro um and it is also tested on
+webgl1 so this works on an iphone i don't know about the speed but i think it's it's okay
+well if you have one shadow on a mobile phone or something you can do this um with webgl1
+and i with newer phones it should be faster but this works on webgl1 and on desktop at least and
+i'm pretty sure it will later also work on mobile maybe later maybe it works already
+we haven't tested this yet so yeah um but yeah so um
+if you if you if you like test around and don't use like five point lights then it should be fine
+if you if you just use spotlights um for it then it then it should be super fast for demos
+like you can use point lights or something if you have if you have no restrictions about the the power
+you need right then you can do it and yeah you can also always use um point lights and not draw a
+shadow and um then it's still still as fast as it was before right but yeah this i i really love this i like this
+why is it blue no yeah great question dino thanks for showing i'm uh i'm looking forward
+do shadows do shadows work with the splines i don't think so i have to test this but i don't think so
+actually are the new splines an actual mesh time i've not looked yeah but but they are really uh
+special special special special special special meshes i would say okay
+i would just leave you two alone
+fun i will just leave you alone and uh
+no just stay stay hidden again okay you know thanks for joining
+yeah thanks for joining man man see you soon yeah see you bye bye
+but yeah the the splines will like later at one point they will work with this because
+like we we have some plans with the new spline system so there's this 2d version
+of splines which which is more like for graphic design-ish stuff and
+there will be some 3d splines which actually are in 3d space um
+but those we don't have yet but they would work with the shadows uh too maybe the others also i
+haven't i don't haven't tried it yet but uh yeah
+okay um yeah guys any more questions
+just get in there it's pretty quiet but we've had a consistent amount of people watching along so far
+are we gonna be going for almost three hours now son look at that time flies by two and a half hours yeah
+yeah i mean we can i could like i could go on but um we need some questions yeah for sure it's a community uh
+participation thing um yeah the big releases on thursday if everything
+everything works out tomorrow
+um we really want to have it out because um it's just a huge list of stuff and um
+uh yeah we we will try on thursday i think like we have some minor bugs and need some more testing and
+there will be a lot of hot fixes for the shadows and for the splines and stuff but
+i i want to have this out on on thursday
+and then we will do a big
+multiple streams probably and some
+and some tutorial videos
+yeah oh yeah for sure
+more tutorials to come
+yeah no it shouldn't break any patches um it will like most of the stuff is in new
+the new versions of the ops so the whole form and light stuff they are new versions of those ops because we don't want to
+uh break something so all the new functionality is in new versions basically and um yeah
+and you can also you can actually test this if you go to dev.kavisgl and log in there then you
+can test your patches if they still work and if they don't then you you can tell us that we will fix it
+we will fix it but uh yeah this is one thing we are doing right now like testing all the old stuff but
+i don't see any there are no big problems with this because everything is in a new version
+yeah and mark did you already see this um so
+so i switched like uh admin switch so i have all old ops here right so you see
+old basic material basically ah okay shows the previous versions that's great
+yeah so but yeah this is just for testing reasons so
+so now i have my my old basic material version here and then you see here is a new is a new button
+upgrade right oh is it gonna do it so when i click this then it says like for like we need we need a
+better warning message maybe you can you can come up with something this is great not just danger zone
+danger danger so and then it like this just this up just knows there's a basic material version 3 so
+this we also have to put in here so it just creates the basic material version 3 and then it compares all
+the the parts right so in this case so there needs to be some summary like everything is fine so in this
+case for every part of basic material version 2 it found the part of basic material version 3 so i just have
+to click click really upgrade this also needs better text i don't think it should be really upgraded it
+should be something like do you want to make this up true level you know like like in rick and marty
+remember the true level part because this would be good i'll let people make their own comments
+so now we have basic material version 3 that's brilliant i completely missed that one with everything
+going yeah this yeah this just was created yesterday because we we have some patches where we have to
+upgrade like 50 ops uh to use it with a new phone material and this way you can easily upgrade and uh
+yeah so we also like we we have to update all our old example patches with this
+um but yeah with this it will be easy i guess so tom quick question um so if you click upgrade does it
+only do it on that one op or does it do it on all the currencies of that up inside of the patch
+no no only this one because i think i don't know if that's technically feasible i can imagine with
+some stuff where people just go like ah you know i know i've got 10 or 12 of these floating around
+in the patch maybe it'd be cool to have that option upgrade this off or upgrade all yeah i mean
+maybe at one point let's just test this and then then see where it goes so for example this is like
+basic material version one so when i upgrade this you see uh pre-multiplied alpha so this this part is
+gone in the newer versions right basically so if you are using this then you you are in some kind
+of danger because maybe it's not working with the new version so maybe you don't upgrade them yeah right
+so so the idea is that if you have like i don't want something like upgrade all ops and then um
+you don't see like this should be a careful thing like you should test this like if it really did what
+you want or if there's a new problem because some some features missing like in this example there's a
+feature missing because this pre-multiplied alpha option is now in the blend mode up so um so yeah so i just
+want this i think it's fine if we if we have one upgrade button and then we go from there but maybe
+we'll make a shortcut yeah sure i don't know yet um but yeah let's see how this works and then we can we
+can go from there i mean so let's try this with phone materials phone material so this is a really old
+version so you see i mean it's great because like most of the time you only change the color and this
+this can be transferred yeah even so um so then you're fine and um
+those things are not in the new version so when you are making upgrade that big then you have to
+tweak like it will look different then you have to tweak um your settings so it's not it's not fail safe
+final final version four
+yeah okay but yeah let's keep some secrets for after the release i would say
+hey um yeah
+okay
+so mark when's the next jam happening by the way oh that's a really good question uh tom i mean
+we were talking about some of the possible themes i think the other week um
+i don't do you think it's a good idea to do it before a vote or before no vote or like probably
+afterwards yeah maybe we maybe we announce it next week or something yeah i think next week's a good uh
+good idea yeah yeah let's just think about the theme and then announce it next week and then um
+yeah because i really loved it and i think many people loved it we we need to do it more regularly
+yeah i was also thinking like after we do the next one um that might be really nice where we uh you
+know we've come up with quite a few themes and then we asked the community to vote on which one they
+think um might be a cool one to do and a less yeah i mean i think that's also interesting to see
+um what can come out of that so yeah yeah no so cables jam yeah let's announce that next week
+um i'll also be finally this week um getting back to making some new um tutorial videos because that's
+been a while since the whole um covered lockdown because we kind of moved into uh live stream mode
+and it's just been really busy with a lot of uh projects and stuff like that but just for everybody
+out there this week i'll be hopefully getting the ball rolling again with uh managing to get at least one
+out um a week which would be cool because there's been so much new stuff going on and it's just been
+really difficult to keep up with all the new stuff that happens uh basically um so yeah that's that ball
+is going to get rolling again i've just got to get back into tutorial mode it's been a while in live
+stream mode for a while like now yeah cool
+so you can you can also come to the office uh because we have now really nice uh setup here that
+just works so um if you if you feel like it you can do it here basically yeah i'll uh i'll think about
+it it's the what is it it's the having to like get used to a new setup again thing makes me go ah
+because it took me a while to get this one all uh yeah yeah sure i mean you have a working one so
+i'm really enjoying this setup here yeah yeah okay yeah cool um
+so hold it first day announce the cables jam next week tutorial videos are going to be up and rolling
+again um yeah a lot of new stuff for everybody to look forward to basically yeah yeah so really
+exciting times and uh now now now with each stream you might even get a weather forecast from uh ronnie
+so you know we're moving up in the streaming world
+okay yeah thank you everyone thank you uh for mimi for joining us and keby and ronnie and dino
+so we had like two people joining so hopefully next time we get like
+a person we don't know yet uh join us and ask us questions yeah and um yeah we will just try to
+continue this this open open mic thing however you want yeah i really enjoyed it i think it's really
+cool that people can just pop in and uh get out basically uh it's really cool i'll lift it okay
+great great all right okay then see you next time everyone have a good night everybody thanks for joining us bye bye
+we'll see you next time
+bye
+you
+bye
+bye
+bye
+bye
+bye
+you
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+bye
+Thank you.

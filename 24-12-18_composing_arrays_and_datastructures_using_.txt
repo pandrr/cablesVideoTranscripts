@@ -1,0 +1,293 @@
+https://www.youtube.com/watch?v=l2YZuo6d2lM
+- Hello, and welcome to another tutorial.
+My name is Tom and my nickname on cables
+and on Discord is Pandor.
+And I want to talk about the comp array ops
+or about the data compose operator.
+So compose array is one of them,
+comp object is another one.
+And those operators we can use to create data structures
+or to create composed data structures.
+So let's do this.
+I will create the comp array operator.
+So this operator outputs an array.
+Let's just visualize this using the this array table.
+So we can always see the content of this,
+this array that we are producing.
+And I will connect this operator to the main loop.
+So it's running all the time.
+So the comp array, so it outputs an array,
+which is empty right now.
+And we can connect other operators down here.
+So for example, when I search for comp array,
+you see this, there's a lot of operators here.
+So for example, there is a comp array push number.
+So I added this, so I added this and now when I change the number value here,
+we see we have this number in this array.
+And when I add another one of those,
+you'll see we have two numbers in this array right now.
+So I can add way more numbers and we will see them there.
+So how does it work?
+So the comp array, maybe you saw the comp image,
+the image compose operators.
+They work the same way, right?
+So the comp, so the main loop starts here and it triggers the comp array.
+So the comp array creates, basically creates a new empty array.
+And then it will trigger those operators below it.
+And those operators below it can fill up this array with numbers.
+And in the end, when everything is finished down here,
+the comp, we will return to the comp array up and it will output those numbers here.
+So, sorry, when I add a third one,
+we have three values and then the, the array is outputted.
+So we, to make it more clear, I will add a sequence.
+So after the comp array output of that array,
+we can use a point cloud from array operator, for example,
+and connect it to the positions array.
+And then we should see a point.
+We don't see it because our values are really big.
+So let's set those values to zero and then we see it.
+So we see one point.
+Let's add a point material to make this look a bit nicer.
+So there we have our point.
+So instead of those three comp array push number,
+I will create one comp array push numbers because it's just a more compact
+and nicer to look at and also to understand it.
+So I would change this to three numbers.
+So we have X, Y, Z coordinates going in here.
+So if I change the X, we see the point is moving on the X axis and so on.
+And so to have another point on the screen, I will add another comp array push array.
+So if I change this, those values, you'll see, we changed the coordinate of the second point.
+So that's already handy, but we can also automate this.
+So we have a repeat operator and repeat everything that's below the repeat operator.
+You can see the stripes on this here are more dense than the stripes on this cable.
+So if I add more numbers, you'll see those stripes gets even more dense.
+And so we see that this is executed way more often than this is executed.
+So now we can see in our vis array table, our array has already a length of 66 numbers.
+So this is because we repeat this 11 times, 11 times three times three is 66 numbers.
+So let's remove this one comp array push number.
+So I pressed X to release it from the trigger.
+So like this, and then we see we have this, those numbers, let's change them to something like this.
+So we see we have those numbers 11 times because we trigger this 11 times.
+So we have 0, 0, 0, 1, 11 times.
+So it's always the same number.
+So I can, for example, add this operator in front of this.
+And then you see now we have those numbers once, and then we have 11 times those numbers from this operator.
+So you have a really flexible way to add numbers to the array.
+And you could also add a sequence op and let's do this.
+And add this operator here.
+And then the vis array table, you see like the last three numbers, those are the numbers coming from this operator.
+So you have your full control.
+You can also put them here.
+And then they will be in the beginning and in the end.
+And so, and you can, you can do this.
+Like you can add more complexity to your numbers however you want.
+You can use multiple repeats, you can add something in between or whatever.
+So you can really create complex data arrays with this.
+Okay.
+So let's, let's make something beautiful out of this.
+So we were repeating always the same numbers.
+So we want to change them all the time.
+So we can connect the repeat output.
+This is the index.
+So in the first one, this is zero and the second one, this is one.
+And the third one is three and so on.
+So now we can already see this.
+So the first X coordinate is zero and the second X coordinate is one.
+The third is two and so on.
+It's always incrementing.
+So I can adjust this if I add a multiply 0.1.
+So you can type this like a star or asterisk or multiply 0.1 and press enter and it will create
+just this for you.
+And now we see our 11 dots are next to each other.
+And if I adjust this with my mouse wheel, you can see those points moving around.
+So to make this a bit more nicer, let's use the sign operator.
+So I apply a sign to this number.
+And then you see like the distance already changed.
+So if I change the multiply again, you see something funny is happening there.
+To get a bit more sense out of this, I will use the same number and use the cosine operator
+and connect this to our Y coordinate.
+So, and then you see, we suddenly have a circle because this is how you calculate a circle basically.
+So I can change the multiply and fill up the circle and control the distance
+to each point from each point and just control this.
+And if I want to add more numbers, I can just change the number of repeats in our circle here.
+So I can just crank this up and the circle gets, gets more dense.
+So let me add an orbit control operator so we can move our camera because we would now also want to
+change the values in the Z axis of this.
+So I can add this repeat or let me, yeah, let's add this repeat to the Z coordinate.
+And then you see
+now the circle is totally big and
+we can compress this by using another multiplier and adjust.
+So when I adjust those numbers, you see, we can just stretch this out.
+And yeah, this is really, really fun to play with.
+Like you should really play with the, with the options here.
+So for example, when I click the sign operator and change the frequency,
+you see, like you have really interesting shapes coming out.
+So we, we are already in the generative department and generating nice point clouds.
+So, uh, you can also add a simple spline
+and draw a, um, spline between those points by connecting this just to the area.
+And then, then you have like this, this spline here and yeah, you can have,
+you can really have fun with it.
+Ah, let's also animate this maybe.
+So we can just add, um, to this, to this index we get from the repeat.
+We can just add some, um, a timer so that we get an animation.
+And now you see the dots are animated.
+Like they are flowing over our little spline here and looks really smooth.
+And yeah, so that's, that's really cool.
+And you can, so what we are doing now, so what, because this is an animation,
+it has to update all the time, right?
+So, um, we trigger the comp array, just every frame and get a new value
+out of our point cloud from error.
+But if you have like a really big array, this can get expensive, right?
+So you can control whenever you want to trigger this look, for example, with the trigger once.
+So if I had to trigger once before the comp array, you will see it will just freeze.
+So we have like a frozen pre calculated state of our array.
+And when I want to update this, I can reset the trigger once.
+And then the comp array will execute once and you have a new state in your array.
+And, um, you see the updated calculation here.
+So pretty cool.
+So this is how you can generate point clouds with the comp array operator,
+but you can do way more with this operator.
+So let's try a different example.
+For example, I would just delete everything and create a new, uh, let's make a new comp array.
+And maybe I want to, um, every time I click a button, I want to add something to the array, right?
+So right now, um, when I, uh, let's visualize this again.
+So right now we only have this one entry, right?
+And if we want a second one, I have to copy paste this operator.
+But we just don't know what the length of the array that we want, right?
+We just want to like basically have a buffer.
+Like we can just push numbers to it and, uh, make the list grow and grow.
+So you can do this using the comp array operator, um, because it now has this clear button.
+So this is a new feature that will be in the next release.
+So when you watch this video, this will be already on normal cables,
+but right now it's only on the development version of cables.
+Um, because it was a really often requested feature by our users that they want to use
+this, those operators as a buffer, which makes total sense.
+So we added this clear button.
+So when I uncheck this clear button, you will see the area will grow all the time.
+It will just get huge.
+Um, so when I click the reset button, you will see the length will start from zero.
+So in this case, we don't want to execute this all the time.
+We only want to execute this when we press the mouse button.
+So now let's reset this again.
+When I click the mouse button on the canvas, you will see we will add new points to, uh, to the comp array.
+So, and now you can, you can basically control stuff like, um, I want to add the, um,
+mouse coordinates every time I, uh, create, uh, like click a button here.
+So let me just change the aspect because I don't want to make this too complicated to one by one
+and add a point cloud.
+From array.
+And again, use our area, but let's first fix it.
+So I want to again, create comp array push numbers.
+And I want to have three numbers because I want X, Y, Z, and I will just connect the
+X to the output to the X output of the mouse and Y to the Y output of the mouse.
+And so those mouse coordinates are in the range from minus one to one right now.
+So let's click reset again.
+So we have an empty array and connect this area to the point cloud from array
+and add a point material again.
+So now when I click the canvas, you will see one new point every time I click it.
+So there they are.
+So now when I click the mouse often, you will see more points, uh, on the screen.
+And yeah, basically we can, we can draw again a spline from this, but you could also use, uh, let
+add the reset to the right mouse button.
+So now when I click the rise mode, right mouse button, everything is gone.
+So for example, we have this subdivide array three operator.
+So now when I click, um, multiple times, you will see, we will add more points to it.
+So if I change the number of sub diffs, you can see, I can really make a smooth curves
+out of those points and basically have a little drawing, drawing tool.
+And right click to reset it.
+And then I can create, uh, draw nice splines.
+Um, yeah, so this is also a really nice tool, uh, to basically dynamically create arrays of points,
+but you can also use, use other stuff.
+So for example, uh, we can, let's create another array.
+Um, you can even add strings to this array, for example.
+So we could use the operator comp array, push string to it, and I can enter something.
+And again, we see, uh, this string here.
+So, um, I can also not clear this again, uh, and not connect this here and create a mouse up.
+Like this.
+And reset it.
+And when I click the mouse, you will see a new string here.
+So I could also, uh, we have an operator that gives us random words array.
+So this operator contains, uh, just random words here.
+And we can just get an array get string and get, uh, one of those words and push them here.
+So now when I click this, it will always add birthday to our, uh, to our array.
+So for example, you could, you could use this trigger to, um, with trigger counter, for example.
+So every time I click the mouse, it will now add another word to our list.
+So it will add the seventh word to our list.
+So the next one will be milk.
+So there's milk and yeah, you can use this also, for example, with a trigger
+random number and activate integer here.
+So because we don't want floating point numbers like this, we want like full numbers like this.
+And we want this in the range of zero to 90, because I know like the, this
+array has the length of 96.
+So let's set the length of 96.
+So every time now I click the mouse, you see there's a full integer, full number there.
+And when I connect this to our array get string and now I click it, you will see every time I click,
+there will be one random word.
+And because they are random, it can happen that like you get two times the same word.
+And there's a really nice checkbox here.
+No consecutive duplicates.
+If you check this, this will not happen.
+Then you will not have duplicates in your, in your array.
+Okay.
+Really, really nice use case.
+So just one more thing I want to show.
+And I want to show there is also not only comp array, but there's also comp string and also comp object.
+And comp object is really handy.
+If you, for example, talk with an API, like a rest API, and you have to send objects to them.
+And we have, we have the operator pass object, which helps you create an object and send this anywhere.
+But with comp object, you can again dynamically create objects.
+So we can, let's, let's make another example.
+For example, like with the mouse operator and, and I can use comp object, push
+string,
+set string.
+So I can
+key value,
+for example.
+So when I add this, you see, we added a key to this object.
+And so we can do exactly what we did before.
+So we can, we could add a, um, string
+from our random words array.
+I shouldn't have deleted this, but yeah.
+So at a trigger counter.
+And increase this number every time we click.
+So now when I click, you see, we have the key changes at value every time.
+Right.
+And even if we not clear the object, it will always change this one key.
+Right.
+Maybe we want to add more key value pairs.
+So we can, we can do this.
+For example, we can change the key every time.
+So there's a neat trick.
+So you cannot connect the string to a number.
+Right.
+But if you drag this here, then it will show you this little helper.
+And it will show you a number to string.
+So now it will convert this number to a string.
+And we want to concatenate this.
+Like this.
+And then we can call it key.
+And then we get the string key 21, for example.
+So now when I press the mouse again, you will see, we will add more keys to our object.
+And we, we can repeat this how often we ever want.
+So in this way you can construct complex objects.
+And we can, we can even use a comp object set array, for example.
+And then my array.
+And I don't know, random numbers array we have.
+So now when I click, you see, we added this array to this, this object.
+And you can, you can send this object to a rest API, or you can download it as a file or whatever you
+want with it.
+So there's, there's a lot of possibilities that you can, you can do that.
+And this, this object is basically a JSON file.
+So you can, you can, what is it called?
+Save JSON file, for example.
+And when I click this, I will have a, I will have a JSON file here.
+So it looks like this.
+So there are all my values and my whole array.
+Yeah.
+And this is basically the comp array compose, the data compose operator, we call them.
+So there's also compile string, and this helps you to create strings.
+So you can append strings to strings in a dynamic way and, and in a triggered controllable way.
+Yeah.
+So if you have any questions about this, come to the discord or to the forum and post them there.
+And yeah, I hope this helps and let us know what you want to create with it.
+Thank you very much.
+Bye-bye.

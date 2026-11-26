@@ -1,0 +1,111 @@
+https://www.youtube.com/watch?v=QNLw21hSweg
+Hi there and welcome to another video of Made with Cables. My name is Mark. My handle on the
+forums is Andro and today I'll be giving you an introduction to the new GLTF ops inside of cables.
+So GLTF is a kind of 3D file format which we've now got support for and today I'd like to give you
+a brief introduction on how to get started with the GLTF scene op, how to import a GLB file,
+how to look at certain parts of the mesh and assign a material to certain parts of the mesh and last
+but not least how to get a simple low-poly model from the internet, put it into Blender, convert it
+into a GLB file format which is something that cables can read and use and then display that
+on the screen. So without further ado let's get started. So I have domain loop, orbit controls,
+transform and a Lambert material. So I'm just going to pull this trigger out I'm going to type in GLTF and
+now we get the GLTF scene op. This allows us to load GLTF 3D files. Now something I want to make
+clear for this tutorial is that a GLB file is a GLTF op but it's the binary version of it. So if you
+hear me say it can load the GLTF file and you see me clicking for example this with GLB it's just a
+different file format of the same file. So we click this and I now need to pull in a GLB file.
+So I'm going to grab this one which is called Spunza. It's a famous model which is used for a lot of testing.
+I'm going to pull that in. As we can see the icon here is pulsating to show me that the model is being uploaded.
+We'll just give that a moment. There it is. So I'm going to click here and press escape. Now I'm going to click
+the GLTF scene op and now I'm going to go here to browse. I'm going to click this. Now something appeared on the screen. Now if I rotate here we can see that there's a 3D file there.
+So something I want to make clear is that with the GLTF scene op we have an option that's on by default called auto scale. So this is always going to do its best to figure out what the bounding box of the model and the mesh meshes is to make sure that something appears on the screen. But it's not foolproof. So if I turn this off now as you can see we're inside of the model. If I click it on again we're further away. So if you don't see a model on the screen it could be too big or too small.
+So you need to just disable this and then go to transform and play around with the scale. So for now I'm just going to disable auto scale and I'm going to click through the model and click transform. I'm going to move this up a little bit.
+So now here we are. That's how quick and easy it goes with importing a GLB file. So now I want to show you this. I'm going to click the op here. I'm going to click the button show structure. So here we have a new UI menu which has been built exclusively
+for this up. So here we have a list of the materials that are associated with the mesh and the parts of the mesh. And if we go down here we have the nodes which are also the parts of the mesh. They could also be empties or null objects as I believe they're called in other programs.
+So the first thing I want to show you is we can go here and we can for example click this eye icon and as you can see it makes parts of the mesh disappear.
+So the thing I want to make clear here is I'm going to click here and press escape. If we save and reload with F5 the state of that is stored with the op. This is a really important thing to remember.
+This is not like some temporary preview thing. As you can see those parts of the mesh are now not visible. So I'm going to click show structure again and scroll down.
+So later on in another video we'll be covering making nodes which is kind of like the children the child parts of the mesh. So it's just important to remember that what you do here this stays with the op.
+So now I want to show you how we can assign a material to separate parts of the mesh. So let's get this one here. So this is mesh 13 and it has this material right here associated with it. M13 fabric C.
+So I'm going to scroll up here and I'm going to look for that one. Here it is. So now I'm just going to click assign. Now I'm going to jump into cables. It automatically makes this op here called GLTF set material.
+The material needs a material op associated with it. So I'm going to click and drag out. I'm just going to grab a lambert material. It needs a trigger.
+And now I'm going to change this color. And I just forgot. I didn't make it visible. There we go. So as you can now see this material is now changing the color.
+That mesh here. So just to give it a rundown. Here's the material name. Let's click the op. Let's pop open the menu. And as we can see this part of the mesh here now has this material associated with it.
+So just to do this one more time. To make it nice and clear. I'm going to click show stretcher. Hop open the menu. And let's look for this one. The arch. So it's M4 arch. So I'm going to scroll up. Here it is. M4 arch. I click assign.
+Cables automatically makes the set node material op. I'm going to copy the lambert material. I'm going to connect shader. I'm going to give this a trigger. And as you can see, I can now change the color of this part of the mesh.
+So it doesn't have to be a lambert material. It could be a basic material with textures or a phone material. I'm just trying to show you in the simplest form. So that's the basics of how to use the GLTF scene op inside of cables.
+How to assign the material. And how to make sure that certain parts of the mesh are visible or are not visible. So I'm going to get rid of this. And I'm going to save and just reload for a moment. So I'm going to go here now. And there's this really nice model that I found on Sketchfab for this tutorial. I'll put a link underneath in credits under the video. And then a patch. So I'm going to use ArrayMarch. Thanks for making this available ArrayMarch.
+It's great that people make their models and their creative assets available to the public. So what I'm going to do now is I'm going to click download 3D model. So I'm just going to download the GLTF file format. Now I already downloaded it just to save a bit of time with this tutorial. So what I'm going to do now is I'm going to go to Blender. And Blender is free for everybody to use. I'm going to press the A key until everything's selected. I'm going to press X. I'm going to delete everything. So now we have an empty scene.
+I'm going to click File, import GLTF. I'm now going to go here to low poly trees. And as you can see, we have here the GLTF file. So I'm going to click it, zoom out a bit with the mouse wheel.
+And here we see the GLTF file. So I'm going to double click A until everything's selected like you can see here. I'm going to go to File, Export, GLB, GLTF.
+And then what I'm going to do is I'm going to go here. I'm going to pick GLB, dot GLB. Sorry if it's a little bit small. So I'm just going to click that. And here we can pick what we'd like to include, if we'd like materials and so on to be included.
+Make sure your materials are included. Otherwise you'll have a problem assigning a material to an individual part of a mesh. And the default settings here, they're just fine.
+So we're on GLB. And now I'm just going to go to the Downloads folder. And I'm just going to call it poly trees export GLB.
+And I'm going to say Export. So we've now exported this file.
+And I'm now going to go to my browser here to Downloads. And as we can see, I've now got this GLB file right here that I just exported from Blender.
+So I converted a GLTF file into the GLB, the binary file format of GLTF.
+So now I'm going to go here and I just need to pull it into cables.
+So it's right here. I'm going to click and drag, let go.
+As you can see, it appears there.
+And I'm now going to click this.
+And I'm going to click Browse.
+Polytrees export.
+I don't see anything.
+So I'm going to turn it out of scale on.
+Don't see anything.
+Now these are the problems you might hit.
+My position Y. I changed that.
+There we go.
+So now the model appears on the screen.
+So I'm going to click GLTF scene.
+I'm going to turn it out of scale on.
+I'm not happy with that.
+So I click Transform.
+And now I'm just going to pull the scale down.
+There we go.
+So now I have the file on the screen.
+It goes pretty quick.
+So now I want to just give them all a separate color.
+So I'm going to click Show Structure.
+And there's only four materials here.
+So I'm just going to click this one, this one, this one, and this one.
+Press Escape.
+So they've flown around a little bit.
+I'm just going to click and drag these and move them over there.
+So now what I'm going to do is I'm just going to make a copy of the Lambert material.
+I'm going to pull it over here.
+I'm going to plug this in.
+I'm just going to copy paste it.
+And as you can see, I'm just plugging it in.
+One more.
+And now I'm just going to give them all a trigger.
+So now I can click this one and I could change the color.
+I can go, okay, so this is the tree bark.
+I'm going to make it a little bit brown.
+I'm going to click this one.
+Which one's this?
+That's the trees.
+So I'm going to make that a little bit more green.
+Let's zoom out a little touch.
+Get a bit more light there.
+I'm going to click this one.
+I'm going to say, which one is this?
+Ah, that's the ground.
+Okay.
+I'm going to make that a slightly darker green.
+I'm going to get this one.
+I'm going to take a look at this.
+This one currently isn't assigned.
+So I'm going to look at this.
+Material 003.
+I'm going to click show stretcher.
+And as we can see, ah, okay.
+So I go here now and I change this color.
+It's the bottom part there underneath.
+So as you can see, that was really quick and easy.
+Getting this file from the internet, throwing it into Blender and exporting it as a GLB file.
+Now don't get me wrong.
+Converting 3D files from one format to another can have a whole bunch of pitfalls attached to it.
+And I did find a simple model today to just try and show how simple it can be if your model is good and well prepared.
+So this was the first video in this ongoing tutorial series with how to use the GLTF ops inside the cables.
+If you've got any questions or comments, please feel free to leave them under the video below or to post them on the forums.
+Thanks for watching and have a good one.
+Bye.

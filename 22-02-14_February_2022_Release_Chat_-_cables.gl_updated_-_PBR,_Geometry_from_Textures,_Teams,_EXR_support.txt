@@ -1,0 +1,382 @@
+https://www.youtube.com/watch?v=3tZQtsEiicw
+hello this Alex from cables.gl and today I'm joined by pander from undev who is
+responsible for a lot of the things you see in cables and of course there's a
+other members that aren't joining us today but we're gonna cover the new
+release of cables and this thing is pretty huge if you haven't seen the blog
+I advise you definitely go check it out we're gonna try to cover everything in
+it we might come back to it and just make sure we're covering everything but
+we got some stuff set up and take it away Tom yeah hi Alex yeah so if you have
+any questions about this join us in our meetup like the next meetup we will talk
+about all this in detail I guess and then there will be a lot more tutorials
+about every group of ops and features that we cover so the next weeks will all
+be on YouTube will all be about those new features and functions and operators and
+everything yeah for sure yeah we're not gonna go into too deep today we're just
+gonna look at the overview of the giant amount of new things you will find in
+cables right now yeah so the first thing is obviously this shiny camera why is it shiny
+it's shiny because it's using our new material and i will just open this example patch
+it's using a new material that's called pbr material which stands for physical based rendering
+and this is actually like the biggest user contribution so a contribution from outside
+the ops are written by uh c flap uh majestic c flap and um yeah he wrote those uh over a few
+months and we tested them and we we tested them together and everything came together and now
+we are releasing them so you can use them now so yeah and this thing will just act like a normal
+material right so if i'm doing an interactive project or i'm doing some generative art i can
+still use this yeah totally this is like the fun material or it's a bit more like the madcap
+material because it's also image based lightning so you have some images that are like the input
+for the light setup and the reflections and cube maps blah blah we get into detail um all of that later
+but uh or in extra videos but yeah it works like a normal material and um yeah so this camera yeah in
+this patch you actually set up a sidebar about what you're saying the the different maps that are
+responsible for it yeah exactly so material yeah i see um so those are i i just want to show like this
+camera model you can find the link here uh to the guy who made it and it's um really awesome 3d scan i guess
+and he prepared also the textures for the 3d model so so this is what what we're seeing now it's like
+all the maps and every layer is active but you can use this those little this little drop down selection
+box here and look at the different maps that are used to display this this camera and um and you just
+just reminded me like the the sidebar the element is also new like we haven't had a multi-select before
+yeah exactly nice yeah yeah and the so those they are all textures so like normal textures if you can
+you you know this uh how those textures look like um but so i can paint those somewhere else or
+generate them even in cables exactly like plug them in yeah exactly you can create them generatively or
+like load them from somewhere um but also um i want to show that like the pbr material like the main
+settings are roughness and metalness so you can for each material you can control the roughness so this
+is how much it like reflects reflects on the raw stuff and the metalness is uh yeah how how much it looks like
+metal or something and and you can control this with textures or you can just set up those parameters
+so those are just two parameters uh in the in the pbr material um right actually it's not that complex
+no it's actually pretty interesting like it's it's a bit different how we usually do uh material
+settings for example in font material but here we have colors that are setting the values for these things
+and of course these colors can be in hdr or kind of more high precision uh color values or even not hdr
+which is kind of cool yeah but i was i was gonna try to segue into like but where are you getting this
+light like where is this environment exactly so coming from i'm just switching to this patch um which which
+i will publish um so actually the light is this is why it's kind of like the the matcap material the light
+is coming from a cube map so this background image here this is also our lighting so you see from from
+this side you see the reflection so when i look back you see there's the the bright point and from the
+back it's dark because the this hall this hangar there it's dark so it's it's really the reflection of
+this uh the skybox basically and and um this is also in uh stored in hdr so you need a lot more like it
+has a lot more precision like for example madcap so um you see the bright parts there uh they are really
+bright and um i can actually uh in another example like we can tone it down so we can uh darken it and
+there's still a lot of information left there so you need an hdr map um like this one in the background
+and then um you can actually upload dot hdr files to cables now and they get converted to um rgbe.png
+files so this is also the browser cannot load those hdr files um so we need a way to make it possible to
+load higher precision files and it's just a pain but this is like the easiest workflow to do in the
+browser so you upload an hdr file and then it gets converted to this rgbe.png which you actually see
+here it looks weird but uh it looks a bit transparent right it seems to be using the the alpha for most of
+the information well some of the information exactly that's that's what it's doing so it looks weird but you
+actually can see the hanger but yeah you don't need to uh actually i can just in the skybox there's now
+this this toggle rgbe format so if i turn turn it off then you see uh this is how the image actually
+looks like so let's see um yeah so you can use this with the skybox and uh for the ppr lighting there's
+this our ppr environment light for now there will be more probably but uh for now it's this one and
+there you plug in the the cube map and then what we see here is actually like the the spheres is a
+simple example so we use the repeat 2d off and um i can just um change the number of spheres and you see
+it's it's adjusting the settings of the ppr material for roughness and metalness so if
+i remove this you see it's all the same so i'm just um setting the material uh for each one of those
+right uh spheres in the so you see like this is totally chrome and this is like uh i don't know like
+cloth materials so those are the two extremes on this side and yeah um so this shows how this
+actually works and yeah so we don't have any diffuse textures or albedo textures in this case but you can
+just also just colorize it like you would colorize the fung material or uh yeah nice yeah this already
+likes makes me want to do some generative art with some metalness and reflectivity in my geometry that's
+flying around yeah yeah i guess that will be a tutorial right yeah yeah for sure
+um yeah so show me more about the the hdri because i saw in the skybox which got an update that you had
+um kind of tone mapping capability and i think you have another patch uh where you're gonna show more of
+that yeah we uh so yeah you're right like in the skybox we have no exposure
+and gamma so you see like if this is the default value uh it's just white uh out here for example and
+when when i tone down the exposure like you can see some information like here in the windows
+um gets a bit more visible yeah but you're right like this there you see trees outside
+um so you can adjust like for a really kind of photorealistic look both of your material
+um properties and then maybe the skybox if you want to use one uh to match it exactly but by default it all
+looks pretty good because yeah the default is what both of them are setting or using yeah yeah there will
+be probably more workflow for better tone mapping and all this kind of stuff but um yeah for now nice it's
+like this yeah um exactly and i think this is the pbr material right or did we forget something
+i guess that's it uh we'll see i think that's about it for a a quick overview but uh i wanted to get into the
+this hdris but um actually let's you know this whole update made everything so dark why like there's a dark
+mode now like this uh uh yeah so we so we would just go through this block i guess so the next topic
+in here is like the dark mode and this is actually because so the last in the last update we already
+updated the block to the dark mode and now the whole cables website is uh got dark so you can you can
+actually go to your user icon up here and then you have this switch and you can switch from bright the
+old one to the new dark mode and um yeah we thought it's better if everything is uh in dark mode and not
+the website is super bright and uh keeps you up the whole night i guess so yeah we just switched everything
+to dark mode and yeah there are a lot of small edition like everything is a bit cleaner and more
+structured um there are also more of those badges here and everything is a bit more evenly spaced and uh
+cleaned up quite a bit and yeah yeah nice i think it's a lot nicer when it's um matches the look of the
+editor as well it's a lot easier on the eyes yeah yeah that too and yeah i'm those uh forms are much nicer now
+also when you go to a patch um this bottom here is cleaned up and yeah everything is a bit nicer and
+yeah we can't we will continue to work on this but i think it's more yeah coherent now like everything
+it works better together with the with the editor and yeah a lot of people ask us why it's why the website is so bright
+yeah um exactly so that's that's the new dark mode right so that's that's the thing that's probably the
+most obvious change you'll see but uh then then i guess we want to go into the other huge uh addition
+to cables which is working with textures to give data to your point clouds and mesh instances and yeah
+create really wild looking textures that are actually uh interesting pieces of data yeah yeah exactly so
+this is why you asked um so this is also like this new world of we can now load high precision data
+textures into cables opens a lot of possibilities like for once this hdr rendering or this pbr material
+rendering um but also we can we can put data into the texture so usually like you have eight bit per
+color channel so this means like 255 variations of red blue and green and this is and your image on the
+screen and yeah for many for just showing images this is this may be fine but if you want to store
+data in there or coordinates or like um hdr maps like then it's not enough so you want something that
+stores floating points or like 32 bit per color channel in in a texture and um this whole workflow
+gives you a lot of possibilities and in this case for example um we are using we're just crossfading two
+images with two images with data in it so in this one image there's it's just the sphere and this is the
+like the result and this is like the image that just controls this and actually what we are doing here we
+have two we have one image compose and two draw images and we just crossfading those between two geometries
+right so you you're actually getting geometry from exactly gltf scenes and then you're using a new
+operator to convert it to a texture and then you're using image compose in hdr mode and then now you're
+just fading these uh data textures together but then they're being re re-evaluated as geometry or as
+point clouds on the screen so exactly yeah it's really wild so this has all been possible with
+arrays um but areas have one downside that arrays are basically on the cpu so in your in your cpu ram
+and they all have they always have to be uploaded to the gpu to the vertex shader so
+so this can do something with it and if you have thousands of of points and re-upload them all the
+time it's quite slow so now we have um two new ops point cloud from texture and this is just the same
+as the old point cloud from error but now you can put in a texture um for the position and probably we
+will we will we will um make it bigger and like you can put in uh the size of the point or whatever like
+you like the like the old one basically and it just works the same way uh except that you now put in a
+texture um and then you can have like 30 000 points animated without any problem um and animate them
+and um yeah so yeah so in this example we are just producing those geometries uh in our patch right we
+use geometry texture but you can now also load them as uh what we just saw the rgbe textures but you can
+also load exr textures now um so this is an example with an exr texture so in the background you see
+how much information there is like usually this would be just white but you can tone it down then
+you see clouds and then you see the sun is actually quite small uh yes yeah pretty interesting how like
+uh we i to the point where i almost got confused that um exr textures uh for skyboxes and backgrounds and
+and uh material properties we're because of that uh work that was put in we're now also being like
+using them for point clouds because we are are now supporting uh a lot more data in a texture so
+so we can not only do visual things but yeah see we're doing point clouds and these uh really complex
+looking geometry textures yeah so this this banana doesn't come from a gltf or is a generative one
+it's um loaded as an exr file so we have this new op exr texture and this gives you something like this
+like data encoded in this like data encoded in this texture and this is actually uh those are all the
+points from from the banana and um yeah and the background image is also loaded with this exr texture
+op and yeah there are there's a lot of stuff coming like you can bake complex animations in textures and you
+just don't need to like if you have like point cloud uh point level animations like 3d meshes that are
+morphing all the time like you can do this as a texture and then you don't need to re-upload this
+all the time to the gpu and you can fake fluid simulations with it and yeah this is the next updates
+will will do stuff like this it's it's pretty wide what you can do and uh like game engines like
+unreal or unity do this all the time but in the browser it wasn't so easy or it isn't so easy because
+of like those exr textures are quite huge but with this rgbe format you can make it a lot smaller but
+yeah we will go like it's a huge topic and it will like take months to like add up all the ops uh that we
+plan to do and it's a huge uh big new topic um so there will be a lot of uh yeah we're definitely
+opening doors for more uh features and uh definitely comment on our discord or uh the github discussions
+forum and yeah review and uh say what you think about this stuff because uh it's a whole new world i think
+yeah totally and also it makes yeah we would show that you can just animate those texts or just apply
+some noise and then the banana get noisy and stuff like we would show tutorials and it's such a different
+way for for visual people it's much easier to grasp what's happening than to work with errors that are
+non-visual and then yeah fully agree yeah that's it's so awesome to see the like in the the geometry
+fading uh from sphere to the face you can see the uh texture change like in front of your eyes so it's
+it's really quick to understand like okay this is turning green so it's going up and yep yeah totally so
+we can see this in this example actually like so here we are using mesh and sensor from texture so
+before we use the point cloud from texture but this is basically the same so you can like we have now
+real spheres in our scene here and um uh this example actually creates this just random coordinates with
+this image compose and you see alex put some noise in here and then you put some rgb mass so when i
+so rgb mass i think it's from the last update right so you can yeah make like you can
+simple math calculation on pixels so i can just um multiply the r differently and then you see like the
+image gets more red or less red when i go down and then you see like it's going on the x-axis is moving
+apart and when i do this on all axis then the area gets bigger and this is what i mean like you can just
+visually you have an idea what's happening um right yeah to me this is just uh random arrays that we are
+familiar with uh with array multiply up but now it's in the image compose which is wild because you can
+put in a blur you can put in a wobble or you can spin them around and see what happens it's really really
+easy to experiment without um getting into like danger territory if you're messing something up with
+uh your giant arrays and your cpu is melting yeah so this is really really fun yeah this is for example
+just a hundred thousand uh spheres right and we are not like it's not sprites is that it's 3d sphere so
+it's it's just so small like we are like there's nothing happening there it's just and we're recording
+this stream with the same computer so yeah and also streaming and yeah it's um yeah it's yeah it's huge
+like you can like if you're like i can let's just try one million like you see it's it gets slow but uh
+yeah it's possible with big machines so there's a lot of potential with everything like uh it will be
+it will be great like there's so much stuff coming for this
+um yeah i think it's it's a great point also to or a great update or release to enter kind of the world
+of arrays and and doing some sort of uh huge particle simulations or animations but now with
+this technology because it will allow you to work and understand how it is um a lot faster than maybe
+starting with arrays from my personal opinion yeah it's a great study tool it's also many people
+coming from touch designer they're used to this workflow and um it it gets uh it gets much easier also with
+the new vis texture that also can now be resized it wasn't yo yeah yeah so that helps
+uh i don't want to say um yeah i think
+well let let's i guess look at the editor some more because i know the editor got
+also a bunch of uh additions uh we have i think this is also first still in this territory right
+ah yes this one um sorry so this also produces a texture it looks like a normal texture but
+it just produces a texture uh produces coordinates for all the points in this texture so this is my
+texture that i create and this will just create a coordinate texture
+with a point for each pixel in there so you can just put anything in this um a render to texture and it will
+so for example this um
+oh wait this is a random render to texture so um i can put a sphere in here or something and then so
+um in this example you have a 3d scene that is turned into a texture with render to texture and then
+you're using that texture to generate a point cloud yeah exactly so it's this is yeah this is handy for
+like for example if you want to do text mesh and you can write something and um then you get this as
+uh this is uh this is actually a point cloud from texture and this would never be possible with uh
+the arrays because it would just be too slow if you have a higher resolution um yeah i remember i
+remember this op the texture to point yeah something of coordinates and arrays which was handy but
+it was never possible to do this amount of resolution in your texture really quickly yeah this is awesome
+yeah so this is also also belongs to this group of new data texture operators um
+which are just i must have overlooked it but yeah now now i can't wait to to play with this
+um yeah but i think that's this topic yeah well what what we can show even in this patch already is this
+new uh info bar in the editor yeah on the bottom here yeah so we see shortcuts that are uh relevant to the
+selection you've made so for example if you select an op it'll tell you what to do or if you mouse over
+cable it will give you some shortcuts so it's um super handy even if you're already a veteran like it will give you
+some more shortcuts and and uh quick workflows that you might have um not seen since last update so we put
+them in this uh help bow bar in the box yeah so we are we were a bit inspired of blender with this thing
+but yeah i mean we we love like when you open cables and it looks so it looks quite minimalistic but
+it's just like we just realized that even some power users they don't know some really handy shortcuts so
+we just want to get them out there that they are used and uh tried out and just in your face but um yeah i
+think it's i think it's really helpful because otherwise you can also go here and look at keyboard
+shortcuts and you see them also but it's just easier like this and yeah so for example it also shows you
+when you go here that you can change the data faster and slower when you press shift and all this those
+little helpers they're in there but yeah and if you don't like it you can just minimize it by the little
+arrow down here in the in the corner and then it will just disappear so um nice yeah and you you said that
+you're inspired by uh blender and i i i want to i want to try another segue here and that's probably
+because we've been spending a lot of time in blender because we're continuously improving and adding more
+features to our gltf scenes wow that yeah crazy yeah it's it's a good segue yeah so yeah we've done a lot
+of improvements to gltfc yeah um so now it's just super nice so come back use it again tell us what you
+think um it's it's so much more robust now in in this example like we have like double rigs uh controlling
+each other and it just works when you upload into uh cables and it's just awesome look at that that's
+massive yeah yeah also i think it's easier to con like to export your file from blender for example you
+don't need to bake everything every frame like we fixed all the problems with interpolation like internal
+stuff and uh the file size should go down even more and um yeah it should be much more robust as you said
+totally
+yeah it's kind of it's pretty it's pretty interesting how we're spending a lot of time in blender adding
+an info bar improving uh all that stuff but it's all kind of melded together from what we're doing yeah
+totally yeah and and another cool thing is uh it's it's also related to pbr materials but
+we can auto assign materials that are embedded in the gltf scene so you don't have to assign every
+single node a different material by hand you just uh click a button and uh you'll get what you see in
+your 3d application yeah it's a huge time save i think but yeah when you see this theme like it's just
+as one uh pbr material and then it just draws the scene and you can like the objects are in the
+in the correct color so we are using now the material properties from the gltf scene and assign what is
+available we just assign automatically to the materials so you can see the colors here they
+come from the gtf scene for pbr material metalness and roughness is also uh automatically assigned um
+but it also works for basic material or something if i just put a new basic material in front of it
+then you see it's all uh automatically like the colors are automatically assigned actually it looks
+better with basic material i think but um yeah i think that but maybe the original intention of the
+artist yeah i guess it should look too niche um but yeah um so that's a huge time safer because you
+don't need actually to create every recreate every material if you have simple simple stuff like this or
+even if you have like the pbr setup already done in blender then it should just work um otherwise you can
+still do the manual assignment stuff so yeah i think it would be a time a big time saver if uh you're
+working with a 3d artist or you're a 3d artist yourself you know and you're super happy with doing
+things inside of your 3d application and you just wanted to look uh as close as possible just after
+uploading and and uh assigning a material and just click a button and where where is this button actually
+i think it's in the uh yeah it's a toggle it's a toggle yeah yeah um down here use material properties so
+it's deactivated by default so all your old patches not just suddenly have strange materials so you have
+to activate it probably you will change that in the next version but for now you just activate it and
+then you see let's see with the pbr material again when i disable it um then you see this just all the
+same and here you see the pbr stuff is over britain when i activate it it's not so shiny anymore then yeah
+that's super nice
+so
+can't really think of a segue here but we're we've also took some uh time to work in the 2d
+um yeah this is also area of cables yeah this is also a huge time safer like a convenience thing and
+actually also solve some performance problems um so we can now um as you can see here in the vis texture
+we can now just snapshot the current state of the image compose into a new texture so it's basically like
+wait at this moment and give me a copy and then we can do something with this copy and as you can see
+here so this is our final image and those are the steps right so first of all we add a gradient then we
+grab this snapshot it looks like this then we add a circle then we grab this snapshot so the whole
+texture looks like this and it's really good for debugging what you're doing in your image compose branch
+what's happening for understanding and visualizing and it's also great because sometimes you just want
+to do something to do something with this state i don't know for example for some pixel displacement
+in another image compose branch and yeah super super helpful for this kind of stuff
+yeah i think it has a lot of potential for
+saving saving time for your compositions or maybe reusing the same texture for something else or
+or especially if you're doing like uh a normal map so for example you like the way a noise looks and you
+want to make it into a normal with something like a two normal operator and then plug that into your
+material but then use the same um black and white texture for maybe the roughness map or uh you know the
+shininess of something so really really handy so also a huge space safer i think like when you have those
+complex post processing or generative uh image compose branches then you have like 10 like you're composing
+10 textures it's huge like now you can do this like multiple textures in one thread or branch basically um yeah i think yeah
+especially if you want to keep your different states or i guess the different uh looks
+or parts of your texture composition looking kind of the same you just have to use the the top
+the image compose operator to set the the resolution or something like that so all of your different
+snapshots or copies of this texture will be the same so you don't have to set up multiple image composes
+and keep the settings similar or something like that i think it's really nice to yeah just set and forget
+all the major settings of your composition it's also yeah it's also animated and like it's just like
+usual image compose but you can still animate them as you can see they're all changing at the same time
+and yeah it's even it's actually performance wise it's smarter to use one of those than to have multiple
+image composers so yeah it's a it's a great thing yeah i remember asking you you know is there actually
+like a delay or a performance like for example i'm taking a snapshot in the middle of my image compose and
+a bit later i'm taking another snapshot like is there any uh delay and there isn't which is pretty awesome i think
+yeah that's really handy yeah um yeah then we have another 2d or a few other 2d enhancements basically
+we are working on the noise ops again so i mean we have a lot of noise ops and
+they like we found a few things that they lack so we are starting with this update we're starting
+like updating all the noise ops and they get a few new um additions i think it was actually like at a
+meetup or or on the forum someone suggested and uh yeah the harmonics for example they would i think it was
+andre yeah like one of our users was like hey you know this would be great to have and there it is
+yeah so you can you can change the harmonics basically and this gives you more detail
+uh in the noise so you can make those cloud like uh structures in with the pearly noise op and this all ex
+also exists for um uh cellular cellular noise and then you get more structure like smaller scale structure
+in in in the noise um which can give you like a different look basically um then also we made some
+adjustments so if you thought this is a rectangular texture so if it's not like the same width and
+height um or something like this then you see it's just stretch right the texture gets stretched so
+uh that's a bit annoying so there's now a toggle aspect and then it just fixes that so your texture
+is not stretcher is not stretcher anymore and you can have like white noise textures i mean before we
+usually made them square and then duplicated them multiple times or something like this or like just use
+uh one part of the image but that's way more handy and like like those convenience uh fixes basically
+um yeah then there's uh this whole new group here offset map and like actually let's use our
+snapshot image let's use this snapshot and plug it in the offset and then you see like now we see
+uh this triangle thing in the noise like so now the noise is differently offset where the
+um triangle image has different uh color values so i can go to this um offset here and just change it so
+so when i change it to zero you don't see anything because there is no offset then so i can slowly
+slowly change it and then you slowly becomes visible so it's it's basically what you change with z for
+example but um uh just controlled by those pixels per pixel basically so when you change this it's for
+all pixel at the same time um but if you change it here then it's just it's multiplied with this value
+so if it's one then it's multiplied the offset is exactly 2.15 and if it's bigger or lower then it's
+different then yeah you can have different offsets per color channel and all this stuff and yeah you can
+play around with this so if you have gradients or yeah like you can you can put an offset like you can
+create a noise and use that as an offset for another noise and then you get crazy like it's an endless
+possibilities and i love that you're you're doing this with the new uh image compose snapshot like
+i i would be thinking okay i need to have another image compose for this but now it's you can actually do
+uh inter image compose uh maps for for other offsets really interesting yeah i mean like you need to get
+into that thinking but uh yeah it's uh it's it's a great shortcut so now i'm using the cellular noise
+as an offset map for my pollen noise um i think i have to click this yeah and um
+so you can imagine like with all the different noises that we have um it gets pretty wild so you can
+you can do crazy new noises or like right now so it's not really visible that it's a cellular noise but
+you see there's some i don't know like round structures in there and now if you you can
+animate the the cellular noise and like you can just combine everything together and it just gets
+you can make noises that are not like obviously ah that's a pulling noise or something like you can just
+combine them and make new creations out of it and it gives you a it's also a bit like the pixel
+displacement but like in in 3d right in the 3d noise space um yeah it gives you endless possibilities so
+we will we will do this for all the noises like with the next update probably so we are a bit we
+are waiting a bit like we just want to try this and see if there are major things that are still lacking and
+we will collect them so if you have input just let us know and then we will put it in also into the other
+noises but um yeah this is this is the way to go i guess and um yeah also i forgot also we have this
+new mask in here so this should also i've been there for a long time you can um plug in another texture
+as a mask um which we have also in in lots of other ops um it's also very very handy thing
+nice yeah um so yeah there will be more probably and um yeah we're looking forward to this so
+yes yeah that's wild it makes me want to collaborate with other people on my experiments i i wish i could
+yeah you can now alex oh really yeah i guess i guess um that's my last attempt at a segue so we have
+rolled out a really cool feature that was used internally for projects and now you can have access
+to it too which is teams and it's actually really simple to do you go to this section from your uh
+uh user bar and then just create a team and then invite people into your team and then you can assign
+patches to the team and then work inside this team with other team members you can
+yeah so i go here let me just do it and go to the collaboration uh this was also reworked all this
+user uh user uh information looks much better now so now we have teams here so i can just go here and say
+under uh no cables and add this team so now let me remove this again so now the this patch is in team
+cables so when i go here and reload this page now this patch is also in in the team cables patch and you can
+right invite people here you can so they will also see the the patch as well on on if they're part of
+the team exactly you can just click here teams and then go to uh the cables team and then you you see
+all the patches in this team we use this for projects so we have a team for each client basically
+or even multiple teams and you can just go here and um so for example i also invited uh alex but he not
+yet accepted the invitation so yeah you can you can invite people here and then you can also assign all
+the people to the patches with this with this button here in settings and then everyone from the team can
+edit it so this is this is like the beginning also of something new like the um yeah the focus on like
+collaborating and working together like we are preparing a big update where you can work together
+in patches actually but that's for later but this is like the beginning and soon there will be other
+stuff like you can write ops for this team and everybody in this team can maybe collaborate using
+those ops in different patches and so you can just structure your stuff better and it's right now it's quite
+simple but it's the beginning it will be a big thing in in uh later um so yeah nice i'm looking forward to
+doing some jams with uh people and doing it in teams now yeah or we can work on something some secret
+project before we publish it yeah it's also super handy that like my patches i have thousands of patches and
+it's so hard to keep an overview or something right so you just have all the like we always build like
+20 prototypes for a client or something like we just put them all in that team and then you can go here
+and then you can uh go into the patch again and then you have an overview uh of all the patches of your
+project or of your client and yeah yeah it's true you can you can just use it for organizing
+patches into groups also yeah we have those namespaces which are kind of to use so i guess
+in the future it will be like this and probably my patches when you click it you can also order
+by teams or stuff like this like this will be a huge help to organize your stuff and your team members and
+your patches and your patches and later your ops and yeah um we will continue to to build this yeah yeah
+so there's still more in this no there's still more there's a new uh flow mode there is a new
+visualization of of uh the way your um patch is passing data between different ports which is great
+yeah should i show it quickly yeah let's show let's show it because it's actually yeah every
+time i look at the blog posters like oh that's actually like a pretty big feature yeah but yeah
+this is great so here you are clicking the mouse i saw yeah so before the update like we have this
+flow mode uh you remember when i move the mouse then you see this cable gets active and data is flowing but
+now you already see the parts highlighting so when i move my mouse you see the first two parts are
+highlighted or when i click them you see um three yellow uh parts uh my mouse button so now i i just
+click on my mouse button so it's much easier to understand what's happening so um or what what is
+this being triggered or active or something um and to get into this mode you just uh press f which is the
+the flow mode uh shortcut and then you can toggle through the different yeah yeah before that we only
+had two now you can um activate highlights so then it's just highlighting and then we have a third one that
+shows you the data uh how much data and how fast it is flowing basically yeah so so press f and that's
+also down here in the in the info area now yeah then then of course there's tons of uh fixes and
+improvements but i guess we're gonna wrap it up and and and just uh check out the change log and of course
+the blog yeah check out the blog and you can down here i guess it's it's also linked here click on
+change log and then you see actually everything that happened it's um it's this list it's quite big and
+yeah we will go into detail in the following weeks and yeah definitely if you if you see something in the
+change log that was like why didn't they cover it in this video definitely comment and let us know and
+come to the meantime yeah or come to the meetup yeah every week on wednesday exactly
+okay all right well let's let's wrap it up um uh there's a lot more to cover in other videos so
+we'll see you soon yeah bye thanks bye

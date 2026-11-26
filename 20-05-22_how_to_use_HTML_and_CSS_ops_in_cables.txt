@@ -1,0 +1,877 @@
+https://www.youtube.com/watch?v=nPEQnYy9ciw
+yeah so welcome everyone so we finally do something that we wanted to do for a long time
+um talk about html operators in cables and how they work and which are the most important ones
+and what you can do with it and give like a overview of what is there and how we use them
+basically and build some small examples i don't know if we if we planned too much or not but yeah
+we'll just try to um to do this and and see what comes out of it so um my name is pandua and this is
+steam um we are the founders of undev studio the company behind cables basically and we're both
+developers and developing cables gl right yeah hi guys um as tom just said um we've been waiting a long
+time to do this because it's um um just as audio and midi and stuff like that is another real big part
+of cables that you can do stuff with and um it's like a completely different word from um from the
+3d stuff but really goes well together with all the um interactions and animations uh that we have um as
+you will see and uh gives a really powerful tool to integrate um cables into websites and then work with
+styles and um all the stuff that you know from normal web front-end development
+yeah um so if there are any questions um please uh ask them just ask them um we please only ask
+questions about what's related to html and and the web stuff um we don't want to really to talk about
+webgl or 3d or sound or anything we just concentrate on the html stuff so maybe it's a bit boring for many
+people but this is really something that's uh really um really helpful if you develop uh like uh client
+projects for example or you want to make a 2d user interface on top uh of your webgl patch or something
+like this um okay then i would just start right so um let's start a new patch and um so the main the main
+operator that we will talk about operator that we will talk about today is basically the the div element
+operator so i can um create the operator div element and um then you see up here
+it says hello div so this is this is our div element this is our hml element basically so
+um so when i click the op you see the the options here so you see i can just type in text in here
+and it appears um on top of my on top of my canvas and this is very different from what we
+usually do in cables because we don't have a main loop in this patch which is uh which feels a bit
+weird in cable so let me just create one um and then you see like it's getting black and then it's
+it's over the main loop so um this is really the the hml stuff is really not connected to the webgl stuff
+it's just on top of it basically it's it's on top of it so you can also see when you are familiar with the
+developer tools you can use inspect and then you can see the structure of your element and there you see
+we have this div element here and somewhere else there's the the canvas but this is not important
+just wanted to show you like this is this goes into the dom and this is a real html element and nothing
+nothing nothing else um so let's have a look at the operator um so we already saw the the text field here
+we have an id field um this is not so important right now you can give the element an id which is
+like a unique identifier in the in the document and then we have the class field with this we can
+attach um css class to the development which we will see later um then we have a style
+input port and a button an editor button so when i click this it opens um just a text editor and i can
+add it css style in here um yeah so i can close this and let's have a look what what else we have we have
+a toggle for interactivity so we can we can click it basically um the development we have a toggle for
+visible which can hide the development and show it um and we have convert line breaks that's not so
+important for us right now so what i want to do first is i want to um change the appearance of
+my development here so i open the the style editor here and i can do things like um
+i can just do like every css parameter that's out there this will be attached to the element so i can
+say something like uh font size 20 pixels or 120 pixels and i can just press command s in here or press the
+save button and then it will automatically um update in the renderer like this so you see directly what
+you are what you're doing here and please ignore those errors we we will fix them very soon um they are not
+um they are just wrong so ignore them um yeah so i can edit this styles and you see the result right here
+uh directly um yeah so i can also say border
+and
+i don't know make it a bit round and set the background color
+and as you see this is just the normal html css stuff
+so
+so i can i can make like a nice button so
+um let's make it a bit smaller
+so and when you see this like if you build this kind of stuff in in webgl it's like it would be a lot
+of ops to to do something like this so um html is really handy for this kind of stuff for text rendering
+and and for styling text and and yeah css is a really handy tool to to do something like this really
+quick uh without a lot of operators and and stuff so um so it's really handy to do stuff like this also
+text rendering it's always it's always super crisp uh when you do it in html because like the browsers
+that's their thing to to show text and they are super optimized for this so
+so we had this in the last release of cables with the msdf fonts to get like the crisp look of it
+um if you don't really need a 3d space um with fonts then sometimes it's better to do it in css isn't it
+uh yeah i i would say if you only have 2d text and 2d stuff that's not
+really connected to the world i would do it this way also you like maybe google uh index
+your text in the search engine when you do it this way yeah uh i'm not so sure about that but i think so
+um but yeah and and it's also like if someone uses a a screen reader for example um it's much better to
+do it this way because people can can use this or they use a translating tool or whatever like
+it's just better to do it this way um if it's not if it if it's not like
+an in your artistic way uh if you want it like in 3d space or something you can't do it really with
+this but uh other than that you should use this because it's just the standard technology on the web
+um yeah so um so we have this little button here and we want to make this button clickable basically
+so um we saw this little checkbox here interactive so when i enable this um first of all nothing really
+changes but um in cables we use the flow mode to debug stuff like this
+so when i now click on the um on my button you see activity there in the flow mode so when this is
+disabled uh nothing happens then it's uh it's not interactive and this is also handy uh in in a lot
+of projects where you want to disable stuff like this um so so for example i can go and say um
+uh i want to toggle something with this button um so i create toggle bool and down here you see the
+result and when i click it you see it changes from true to false and and i can now use this value in my
+webgl
+rendering past rendering path basically so maybe i want to switch between two colors so i create an if
+true then
+um
+statement here and then when i click now you see
+i can switch between those two background colors
+and this does not look does not feel like a button because i have this text cursor here so i just want
+to fix this um and say cursor pointer and now you see when i hover i have this um
+this usual uh clickable cursor icon you know from your browser
+um yeah so this way i can um i can control a value and and use this value in my webgl path
+and make a decision with this um i can also um for example link to another website with this so um
+we don't really have a link element on a anchor element um we currently only have the diff element
+but i can connect this to an op which is called hyperlink
+and um so this op um can open a window to another website so i can say
+open cablesgl in a new blank tab so when i click this now you see it opens a new tab here
+on cablesgl so um this is super handy if you want to link to another website or or something like this
+there's another port on the div element that says hover can you show what that does
+oh right uh totally forgot about that oh yeah so we have another output
+which which means says hover and this becomes true when the mouse is over the element
+so when i would connect this to it and now i hover then you see when i when i'm hovering
+the background is differently because this this value here becomes true when i'm hovering
+which is also super handy because often you want to
+highlight something when you have a div element or a text or a button or something
+and then you can use it like this yeah and this is also turned off when you turn off interactive
+then this is also not active anymore
+um yeah yeah thanks stefan anything else i forgot already
+um yeah guys if you have any questions just let us know in the chat um and then we will answer them
+otherwise we will just go through all the operators and um yeah okay um
+so another thing that we want to show is
+another html element and by the way um as you can see here hopefully
+um all the um all the html stuff is in the um namespace ops dot html so you can just enter
+html basically in the search field and then you see all the operators that
+that are helpful with html stuff um there's a question on the chat
+that um mario absolutely um asks um whether or not you can have two stylings two different stylings in
+one div element two fonts yeah um um not really you have to um build a hierarchy of div elements uh like
+you have you have to use multiple different elements and then they can have multiple fonts we will show
+later how you build like a parent and a child relationship with div elements where you put
+multiple different elements in a big one and there you could use uh multiple stylings
+um yeah but the question about fonts is interesting yeah exactly that's our next thing like we want to
+you change the font in here so how do we do that we go into the styling again and to the style sheet
+again and we say uh font family uh i don't know mono space and then you see the font changes uh
+to a mono spaced font which is like a programmer font basically i can change it to arial or times new roman
+and um you see it's it's directly changing so those font families they are the um default font families
+that come with your browser so on every operating system those three fonts at least look mostly the same
+but you can also um um upload your own fonts um let me see so for this i can um
+yeah i totally did not prepare this um but we already have some fonts there so i can go
+i'm on my hard drive right now and i can just um take a file a ttf file for example and upload it here
+and then it should appear in this list
+did i do it wrong
+did you maybe upload the same file again now this could be yeah probably
+i would just delete this this was from our testing session so i take the ttf file and upload it here yeah
+you're right so and then we uploaded a new uh font file so um i think we can even know okay so we uploaded
+this to cables and now we can create an operator called font file
+which loads a font so i can now select a file like the new file we uploaded
+and this font is called um
+book in this case um so i you can set the the font family here so you have you can type anything you
+want but it should somehow be related to that font so i give it the family book and now
+i can uh go here and then i can here uh use that font family again so and then you see
+it's a totally different font um which we defined by loading this uh font file here
+so you can you can throw any uh web font at cables and you can use them with this font file op
+which font formats are supporters can we do web fonts and ctf and otf and yeah w o f f
+or what files or whatever you say ttf and yeah it's it's a bit uh depends on your browser that you want to
+support so i think w o f f files are the safest actually um so i would stick stick to them
+i want to upload another font wait yeah
+so now i uploaded the bodoni font here
+so i can create another font file
+and you can create as many you can load as many fonts as you like
+and give it the family name
+and
+that didn't work
+wir machen bundes asking how to make sure the font file is loaded in time it's something
+sometimes it doesn't work it says uh yeah this is uh this is one reason why we um
+implemented um the msdf stuff because you actually can't know when the font is loaded because html is
+so i'm super asynchrone about this and there is some newer api where you can ask is the font loaded but
+there is no real way to be able to um to know the font is loaded so we use this here but i think it's not
+this is not compatible with all the browsers right now i guess like safari doesn't support it i'm not sure right now
+yeah
+i actually
+i think those are the same fonts um just with different names
+can this be
+what yeah i'm still debugging my font problem
+okay
+i'm not sure what i'm doing wrong
+maybe the the file is funny somehow
+i
+yeah sometimes that i yeah is it
+i don't know sometimes i had it that i had to put the font family name in quotes for some reason
+yeah but it worked with the other one right okay i'm not sure so let's try
+another font let's try
+this helvetica oh yeah this works directly that works okay
+yeah i think you you need this if you have spaces but yeah i'm also not sure it's it's um yeah okay so
+so somehow the font file was wrong i guess so now i can switch between
+those two
+loaded fonts nice
+okay
+let's just
+give it the right name okay um
+um
+um
+yeah um okay
+if there are no further questions then uh you will continue stefan right
+yeah right um let's see how this works um so should i create a new patch for you
+no no i will i will work with this okay um
+so wait a second
+yeah so we are trying this for the first time so stefan is also controlling my pc now over
+another program to remote control my pc when our tests were really successful with this
+okay let's see how this works and the scrolling is uh not working like i'm scrolling up and down and
+not in and out
+this works okay great um
+so uh what pander said before is um we have the ability to give these different elements an id and a
+class um maybe if you come from from a web development background and do some front-end
+development you know these already um these are um pretty convenient to um group different styles
+so say we have um not only this different element but we have another one
+oh great this also doesn't work what um control c doesn't work
+um uh so we have another different element and uh that's uh that's now up there right um but we
+want this to um to look the same as this one basically um so then we would have the um the
+possibility to just go there and copy everything um out of that but what we usually do in in css is
+work with um with classes so we give um the two diffs that we have all the diffs that we want to look
+the same a class and then group together the the css in that way um for this we have the css up um that
+basically gives you a text editor um that you then can paste your css in i'm now copying all of this from
+here um i'm actually stealing all of this should i uh yes pretty good okay uh and then copy it over to
+the css why doesn't this work for security reasons i don't know i don't know okay so now we have this
+and probably because this is a mac and you have linux you need to maybe use the windows key yeah i'll try
+to um wait a second what is when you press windows a
+okay no idea let's do this that way so um this now removes all the styles from um from the element
+that we had before and this is not valid css at this point um because we need to group this to an
+element and then we um have to give this element um a class name in css we usually write something like
+this um so we have a button um and this one um then we'll put everything that we um had before in this
+group um of a button um and then um now to save this and go back and um if i now give this um
+different element a class button then it should like um it did before absolutely does and um now i can my new
+new diff give my new diff element also um a clouded button and then it would look um exactly the same
+now you we already um see the problem with um maybe having like group styling like um styling classes
+and buttons because some of the um stuff maybe positioning um might be individual um things that we
+um that we have to work on individual elements so um most of the stuff here in here oh sorry um most of
+the stuff in here um should be okay for all of the buttons the positioning should be okay um fonts should
+be okay background color it's all fine um but these two now um are over late and we want to position them
+them individually maybe below each other or next to each other we'll see um for this we can um either um
+as we saw before like um edit this um text right here the css or we use a an op that we can then control
+maybe from the outside um which we call css property um we add this and we will see this later and we didn't have
+this before um this development outputs the dom element on this port and this css property um
+and we will see this later um also with building hierarchies of this elements and um
+user documents say um you work with this structure all the time so we put this development into this css
+property and then we have the other um the possibility to um to style individual css properties
+um basically the same that we do um right here in the text editor um so this would be position absolute
+um we go in here and um place this since we uh positioned absolutely we can give this uh top and
+then we can give this a value of 100 and um this has 100 pixels um so we now positioned this element
+individually with all the same styles still buttons still um this doesn't have the interactivity because
+i didn't copy it uh but we can also um yeah let's keep it this way um so we still have the functionality
+we have the shared styles um and these elements the styles of the elements are um are a lot cleaner actually
+um this way um this way and with using the css property um we have the nice um possibility that we get the um
+the value of the um of the property um which is a number um as an output as an input up so um just for
+a really simple um stuff we can do um can get a number of out here uh enter doesn't work either on that one
+right um and then somehow we get this later um control this oh this also doesn't work it's really
+should i do yeah yeah maybe connect the sign and them or something yeah yeah that will work
+really now okay i cannot believe it will work with this now
+uh so as we um saw we have like uh two um well basically three different um possibilities to um
+um put style too thank you um to put style on the element we now work with um the global css in
+classes um by giving classes to our elements um we can do the um individual styling of the element in
+in the editor on the element um itself and now we have the css property which gives us um the nice
+visibility of um what panda just did controlling the value of the property from the outside world say we
+put a um an animation um on top of it to further go from there um we can um work with these classes right
+um so um these classes can be you can have multiple classes but we can also give um more you can have
+multiple classes oh you can yeah you absolutely can have multiple classes right um um but we can also
+then work with states so if we for example go here and say um in css we would say something like um button
+um active and that then has a border
+of two pixel solid red um so this in css syntax means um any element that has the class of button and has
+the class of active um so none of our elements um does have this right now um but we have an op that
+we will use now um that will basically give us um maybe first short directly ah yeah sure um so if we um
+now give this development uh the class active um then we will have the the red border around this and if
+it doesn't have the class active it doesn't have the red border um to basically have some control over
+which classes these um have we created the toggle class up um i just search for it and i can add it
+and this also um as we saw before um gets an html element and then it gets a boolean
+so if i want i can put this element in here and as we know this is interactive um we still have this
+right um and now i can um put the hover element for example um onto the toggle class and that would then
+um should then uh oh right the target class also needs the class name obviously um so we're toggling
+the active clouds um and then right now it really should give us a red border when hovering over it and
+no red border when not hovering what actually happens right here is i hope this is visible here um oh no
+it's not um what actually happens is additionally to this button class this will also get an active
+class right now so um we have a lot of state possibilities um here and um with the class and the css up um we can
+do lots of stuff for example moving uh removing um rounded borders like i'm doing a slight displacement
+of the button so that it looks as if it would uh would be pushed in or something like this um and
+yeah right um that is that any questions on that
+tom you got any questions um apart from the mess that i made um um so the the text in the css op right um
+this one yeah so this this is like a css file right yeah absolutely um we're we're doing normal css here so
+you can use uh whatever css your browser supports um uh we're not doing tom correct me if i'm wrong but i
+think it's right that we're not doing any um scss or sass compiling if um anything any one of you guys
+knows of this so use like normal proper css um this would be nested um stuff in um scss basically um but yeah
+that's a normal css file uh so you could even copy and paste stuff from wherever um you develop your
+front end for example and um then we can also like maybe we do like a hover state in css directly just to
+show it that this is possible ah right so maybe opacity or something i don't know sure um we can do something
+like so css also has this states like we toggle the activity and we put it on the hover um and
+since the css people said okay this happens really often um all the elements um have like what's it
+called i think it's called pseudo states pseudo states um that basically are addressed like um this
+um um and um also um maybe interesting but maybe also known um all the css stuff adds up right so if
+you're um if they don't interfere with uh with each other um then it gets all the styles that it gets
+from all the um information it has so by this uh by doing this we say okay um in using css if you hover
+over this button then we can say um set the opacity of the whole thing to 0.6 maybe um
+and then that would give give every button the opacity and also this one where um
+yeah every button that is being hovered over now gets an opacity of um 0.6 there's a lot of more of
+these pseudo states like visitors and visited and active and inactive and stuff like that
+but i guess hover is the most common one that um is being used
+um
+just what i need i wasn't aware that you can do all of this from within cables mega yes
+one more yeah maybe we can yeah okay there's like uh one last thing uh that goes a bit um deeper into
+um css and it's also a bit new um in the css standard is um css variables that can be used
+um so for example you can do um set css variable um and for now we just use a string
+um and now we just um in css assign uh to a var name that is called my a value of 4.6 right um and then we
+have we can go into the css and replace this opacity um and that works in any css in cables um we can do
+yeah and now we have the same effect but also the um the same thing um since we're setting a string
+here we can uh now then um again control it from the outside um and that with the 0.6 works um
+yeah with the number two string but i can now put this on 0.2 um and have this like really
+really um lots of opacity going on there yeah we don't have a set css variable number right
+i think because most of the time you have to append like pixel or percent or
+em to the end so this is why we have strings only yeah well i mean you can work around with like
+that number two string obviously um and then go from there and then um to um
+whatever um so that sign and which would be in a proper range to go from oh no it goes up to 200.
+yeah right whatever you can do a number to string and then um basically tweak this number on 0.21 um and then go from there and then
+you have control over this number and put it um on whatever you want yeah and pando as
+explicitly asked me to show the um documentation the example of um this one
+um because it also shows uh a thing that i actually no it's not the one uh it's the the color one uh css
+i am right that's a um nice um set css variable color one um that basically takes um takes all the work of
+doing um colors in css be it hacks or rgb values um always the syntax is a bit um weird um but we're also
+um only looking at the example and this also shows a nice thing about cables well uh the editor as you
+see um since we're working in html space and css and diffs and everything uh we now have the ability to
+style basically all of cables right um yeah yeah so this this is like uh a bit goofy uh and it doesn't
+seem like a good thing to do but imagine when you work with a developer outside of cables and they say
+like or they give you like a variable name and they say okay you can control the opacity of the menu from
+your webgl part and then you don't need a javascript api or something you just work with this css
+variable to show like make stuff visible from their html that they do and you only do the 3d part you
+just want to control those values and um yeah then it's super handy to to be able uh to do this kind of
+stuff yeah so this is also maybe a topic because um yamaha bunda asked um well basically said uh just
+what i need and i wasn't aware that you can do all of this um from within cables yes um you can do this um
+and you can also maybe that's a topic for another talk do it like the other way around like basically
+get stuff out of cables into um into the outside world and um then work from there um so sometimes
+it really depends on your project and your use case um which of these um approaches makes more sense or
+doing it in cables doing outside of cables and controlling it from inside of cables it really
+depends yeah i wouldn't do like really complex stuff in here but for a little navigation or for some
+buttons or something like this it's it's totally fine
+any other questions
+it's quiet then i hand back to you tom right okay
+um yeah so i will um
+i will make a new patch and maybe we should publish this clean this up and then publish it after the
+after the talk i will create a new one
+and um i just want to you you saw the toggle class and the property ops and i want to show
+some more really handy helper
+ops for html stuff so let me just
+make it make it visible a bit more
+i cannot type
+okay so
+uh one op is really handy we wrote it because we use it a lot
+and it's called
+it's called background image
+and loads a background image and use css styling
+so with this we can we can use um graphics
+image image files
+in our html elements so
+usually we do this with textures but you can also
+say this div element has a background image for example
+i quickly need to find the file i want to show you
+are we not using the beach
+we could we could use the beach
+actually
+uh no i i want to i want to show svg because it's just uh such a good
+use case for this
+and i'm looking at the beach
+okay let's let's use the beach
+so when i click background image
+you see you can select a an image file so i can
+um
+click
+our beach
+image but i didn't connect them so sorry about that so i connect this
+and then you see
+the
+div element gets the beach as a background image
+and this is a really tricky one always in html make make an image fit
+to a div element so the div element has a totally different aspect ratio
+than our image so
+usually in cables it would be stretched but in this case we just see like a portion from the image
+and we have a few options here
+where we can say
+so these are this is in the end this is just a css setting but we we made this up to
+to make it easier and make it quicker and also it's much easier to
+just try out some values
+from a drop down than to remember all those things because i don't remember what the difference
+between cover and containers and i also don't want
+to remember this all the time because i don't use it so often but yeah it's just handy you can you can
+control this with the with the drop downs and yeah you can say if if the image should repeat
+let me make the font
+a different color so it's more visible
+and
+yeah you can you can you can set it to different values you can also position this
+so the image starts there not in the center
+and um yeah with this you can you can create like a website hero with a background image or something
+like this or like a photo gallery basically you could do this without any webgl you can do it with only
+css stuff but actually what we do most of the time
+is um we load svg icons there um as little buttons and and i want to show this so
+uh now i remember um so
+we have okay so i found it so now
+i have i found my file cables svg file so i can just upload this like a normal file and you see
+um it's appearing here and already previewing so i can select this file
+as a background and um so imagine we want a button with this icon on the left side
+so we can just do this um with those two ops and just change the styling so um the background image
+should not repeat so now you see it's only once there and
+um when we select uh auto or contain in this case it will always be the full height
+of our um hml element we can also say uh oh no okay let's let's use contain
+and um we can now say padding to the left is 40 pixel or let's say 150 pixel
+and then we basically create a button um which has the image on the left
+so um i can make this a bit nicer
+and this way we load we load buttons into cables like that are svg and this is also super handy
+because if you resize your browser like this then you see it's still full resolution so this is just
+rendering normally uh in in in the best resolution there is and this is super handy when you have
+like high resolution displays like mobile phones and stuff and this will always be crisp so maybe
+your webgl rendering is a bit slow and you have some performance issues you can render the webgl
+stuff in a different resolution than those html stuff in a different resolution than those html things
+they will always be crisp and this is what you want like the text should always be crisp and not
+downsized if you have like a a blurred image or something this can be the resolution can be much
+lower but this stuff you always want to to have crisp so we use this a lot for buttons basically
+and then you could still add all the interactivity that we had in the patch before like attaching a
+hyperlink through that div element for example yeah totally um there's no this this doesn't interfere
+with the with the um with the interactivity or anything yeah it's also possible to like um we did
+before i did we do this um like you can pull multiple stuff to different like you could put css property on
+there um yeah yeah yeah that would also um yeah this this works a bit different than the normal data flow
+in kbps because this is basically object oriented so this operator is modifying this element that comes
+out from here so it's it's a bit of a different workflow um but this is really the easiest way to um
+um that we could uh build uh to use in cables basically yeah become a lot clearer i think uh once we do um
+more different elements that are maybe um next to each other or something like this so if you have a
+hierarchy then it actually looks like the document yeah um yeah so this background image also has an
+active button so you can enable or disable it we also had projects where we just changed the file name of
+of this icon to to another one while at runtime which is also um quite quite helpful
+hey country boy okay um so this is this helper so um i want to show another one which we basically use
+like in every project really um so let me let me do a new patch this is just confusing
+so so um yeah so what we saw before we change the opacity uh stefan changed the opacity and um so you
+could build you could use a bool anim to fade in and out stuff but we do this so often we build
+an extra helper class for hml elements um that can fade in and out the elements so we already have
+this visible checkbox to make stuff visible or invisible but we also have this element fade in
+in and out operator operator so in this one has a checkbox and you can click it and then it fades in and out
+and you can give it a duration um so it's it's really fast now and you can give it an opacity
+uh okay uh okay uh let's ignore this for now um so and the cool thing about this is um this actually uses
+internally uses css animation so it's not um it's not updating the dom all the time or something it's
+it's really using css animations which is like they are basically the fastest way to fade in and out um
+hml elements because the browsers are really use that this is animated um so to fade in and out stuff
+you should always use this use this thing um yeah and it's super handy and if you want to hide or show
+something in hml on a website you basically never want this to be gone directly you most of the time
+you just want to fade it in and out i know i know i know we're making bund would ask this question
+sadly sadly no element work with arrays feed an area of strings and create a list of div
+texts which can control it independently yeah sadly sadly right now this is not possible um
+but so there's a point on our list which is uh which internally creates instances of ops and um but yeah
+we are not there yet but uh this is on this is on our list but for small navigations with like i don't
+know three to ten elements it's okay to patch it by hand but yeah um we also want we want to create
+div elements with arrays but um currently that's not possible but then let's do a small um navigation
+don't we yeah yeah okay um
+yeah let me check my my notes here um yeah um so when we talk about multiple um elements
+um
+basically we want to create a hierarchy like where's like this one container
+element um we so let's think about we want to create a navigation um basically
+let's say like on cables jail we have those points
+those navigation points next to each other and let's ignore this menu that's popping up but let's just
+think about those uh navigation points up here so we want to create something like this
+with our div elements so um let's make this a bit more visible
+um so let's let's say this is a navigation item from our menu right
+so um what stefan showed us is the um the property op
+um or let's say we can we can position this by just entering a css position like left
+50 pixels so now i can i can just position uh those elements but you never know like
+how wide how how is the width of this element and then you would have to calculate to put them next
+to each other which is really not the css way so in css you would create one container and then you would
+put the other different elements in this container and then they would be automatically next to each other
+is this understandable steam yeah i think so okay so positioning it's a um it's also always a weird thing
+in csf with like absolute positioning relative positioning and stuff like that but yeah yeah
+so we don't want to position every div element individually we just want that they float together
+and they just stick together basically but maybe the whole container thing we want to
+set the position so okay let's try this so we call this element this is our container so the the red
+the red border is our container element and we want put to put other div elements in into this element
+so we have an op that's called element childs set childs of an html element so this looks like our
+like our sequence or something but this is this is not an execution order this is like
+this is the parent input port and those are child input ports as you can see here but they are in order
+right they are in order yeah totally so um so i would this way i define like this is our parent element this is
+like our higher level element that contain all that contains all the childs so when i create another div element
+and connect it um as a child then you see something is happening there so what's this is a bit strange
+because our default style says position absolute which you don't want in this case as as i said you
+don't want to position the div element absolutely you just want to put them in there so i will just delete
+this uh position absolute thing just to make sure like position absolute basically in this case means
+in reference to the window yeah position absolute means yeah in reference like you can just say a
+pixel coordinate and then the div element will move there yeah um i will also show this later because now
+we can actually position the um the parent element and it all the child elements are are going with it so
+now i want to uh add multiple div elements um in this container element so i will just copy paste them
+um let's let's let's just stick to three and you see the red box is growing it's expanding because um
+this is like default behavior in html like the outer element is growing so actually let's use the inspector
+and see what we are doing here
+so i don't know if this is readable at all but i will just show it really quickly so
+when you hover elements here you see you see which one which one you are hovering there so
+this one is our big container element and you see there are one two three little div elements in there
+and those are our three navigation items i would call them so they are they are in this one
+if i close this they are all gone because they are in in this element yeah it's a container isn't it yeah
+i like the word container for this because yeah um yeah
+so um we already gave this the class container now let's do this in a proper way i will remove this
+and make a css up again
+and edit css code for
+our container
+a short question yeah um so if i export my patch would i would it then be possible to use external css
+on my website to style these elements are they yeah totally yeah it doesn't really matter uh where
+the css comes from um because they are just normal html elements yeah
+um so and now i want to style my uh
+navigation items so
+actually let's call this navigation that makes more sense to me or let's call it nav
+like this
+and let's those three uh we give the class nav item
+so nothing changed because we don't have a class in here yet so uh nav one
+so now i will create this nav item css class
+and um let's say they also get a border just so we see what we are doing um let's let's make this
+border blue nice coda colors here
+adding so now we have those three elements in there
+so if you have a vertical navigation this is already uh quite usable right so um
+i could also
+let's let me make it a bit nicer we do something like
+a nice background color i hope this is even visible on the stream but nobody is complaining so
+make it a bit bigger um oops
+and now it i want some spacing in there so i can use the margin
+css property to uh to to make a little space out of them and so
+i want that it really feels like a navigation so
+let's give it a little
+hover state um so i use this
+sudo element sudo element enough item hover and say background
+color is
+something like this so now when i hover you see
+already feels like a navigation
+let's give it a nice cursor um yeah so
+i want this
+not to be vertical i want this to be horizontal so
+they they should be next to each other so
+the reason why they they are below each other is because
+the div elements are by default block elements and i really don't want to go into detail what's the
+difference between the block element and inline element but this is actually the the easiest way to switch
+um
+yeah what how do you say this like the floating behavior of of hml elements
+so i say display inline
+um yeah great
+okay i forgot something
+do you have do you have any idea stephan
+um
+um
+no looks okay doesn't it okay maybe we just
+do it this way yeah okay
+um
+we're making bundes asking would this work as well
+media only screen and max would well basically he's asking whether or not media queries work in
+yeah totally um
+just imagine this is just like your normal css file that you load um from a file
+um
+there everything works in there all the all the media queries and and stuff so
+what he's asking is
+usually you create websites
+and websites can be opened on like a mobile phone or also on a really wide wide screen display so
+nowadays you want to build responsive websites right
+that react to the device you are watching it like maybe you want to hide
+different elements and you want to show a lot like the image should be bigger
+or like two columns on the desktop so you can use those css rules in cables too
+it's a bit confusing because they work only on the whole document and not on this element so
+in theory this would be phone resolution but you would still see the desktop resolution so
+you go
+basically you open this page here
+and then you can try out how does it look on a phone or something or you go here and scan this on your
+phone and then you can see then you can try it out on your phone
+but yeah you there are some hacks um to simulate it but um you you really have to test this on on the device itself
+um yeah can you try the display in line again i really want to see what
+no i don't want this okay i don't know why it's not uh it's not working um
+i have no idea um okay what your float left is it's also fine yeah um
+yeah so now we have um three navigation elements
+um so undefined country boys asking is there a way to generate html ops from a simple html file
+or is that too unpredictable i um do you mean like um something of a templating engine or some import that
+then generates the div elements i don't quite understand but both of which don't um currently work in um in cables
+um yeah you could you could just uh put html in here right um so you can uh write this for example
+um you can create you can create html as a string and then use it there so
+if you don't see like the later part is now bold so you can you can even create new div elements in
+here so there's you can load a file with html and then put it like use it as a string
+uh that will work that will work really well for i don't know textual overlays or stuff like that um
+but then you basically lose all the control over the developments and whatever yeah usually we don't do
+this like usually we have like a few div elements that we fill with text
+um yeah or we use for different stuff um so okay so what i want to show is like we now have this
+nice navigation bar so and we have all of this in the container and this is not only visually handy
+but you can also say okay the the container i want on the bottom so i just say bottom zero so it will be
+positioned on the bottom of of your window or of the canvas in in cables so you can also say
+right zero and then it goes to the right and right bottom zero
+then it goes down there so this is super handy because yeah we can just move the whole group and
+not each item individually and as you already saw but probably is like uh you can just enter text here
+and it just grows in size because that's just normal html behavior basically i don't even know what's
+yeah so yeah so um this is another thing but i will not go into detail but um you could you could um
+set like a maximum size for those elements and all this kind of stuff um and control like the breaking
+um of the text in there
+um yeah so um so um so we have this and this navigation here so let's let's do something with
+it so maybe we want to control something in webgl with our navigation bar um
+so maybe we want to let's just build something easy here
+we want to show like a different um
+like a different mesh when you hover over um those those ops so
+uh uh that totally didn't work
+ah so i have to make them interactive
+so now i can change the the shape by just hovering
+and let's create a triangle
+so now i can switch between those shapes basically by hovering we can also make this
+change by by clicking um but but this is just faster for now
+and this way you have like a really powerful tool to give the user like the and
+the user of your patch um some presets or whatever to choose from
+uh what do you mean um yeah just as you did with this sphere and the um cube now basically the user um of your patch has the ability to
+well basically select the animation what we often do with the um with the sidebar but a bit more
+um in style of the whole thing yeah yeah um yeah and um so another way would be
+now we we can create a diff element
+that let's let's let's let me make it visible again
+um
+a different element that shows a lot of text so we have this awesome op
+lorem ipsum and this shows a lot of text as you see um
+okay maybe let's not
+put so much text in it maybe there's just content um
+one um
+and we have this uh
+fade in element fade in out
+and um so maybe we do when we click the first element
+um
+i'm not sure where i'm going with this but yeah let's try
+so
+we create a toggle bool
+no we make a set number on trigger
+i think i think this is too complicated actually
+what do you want to uh yeah i basically want to switch between uh between multiple
+multiple ops maybe we just say we only have like two navigation elements
+and um we have a toggle bool
+oh no
+trigger boolean
+so now um
+when we click this um
+this different element is showing up and when i click this it's fading out right
+so when i now create another one so this is
+second
+cont
+second content
+diff
+so i just want to see the opposite so i want
+i use the not operator to
+invert this selection basically and set this to visible
+so now when i click this then you see this is a nice crossfade let me make it slower
+now you see it's just fading between both
+diff elements um
+which is a nice way and you can you can just create you can basically just create content
+elements and switch out the the content in there and fade them in a in a smooth way
+and um yeah you can you can build your little content management system and cave it's basically
+yeah
+it's
+totally the best way to do this no but uh for for like little little content stuff this is really it's
+really quite handy and actually i just want to show what i wanted to show before with the lorem ipsum
+so this is this looks quite horrible but we can we can say
+we can say we want this uh only this size and then
+overflow auto
+and now it gives us a scroll bar and we can
+we can scroll the text so you could make a little information section on your website and you can
+make it scrollable and you have like a little content element in there and also this is the text
+right we were i'm coming from screen readers yeah um but also yeah you can mark it um yeah and copy
+paste it yeah you can mark it and everything you can also by the way we also have an iframe element
+totally forgot about that so i can create an element which contains another website
+basically which is also quite handy
+um yeah
+that's our little navigation looks great
+okay okay let me check my notes um
+we were talking about more helpers basically um uh we also were talking about before on overlays and
+stuff like that um we have this modal helper you want to show us quickly yeah that would go fine with
+one of these clicks on nav elements i guess yeah um where's this in my notes but yeah um yeah so let's
+let's let's add uh the the third one again and um
+so i mean this is handy but maybe you just don't want like it's just annoying to have this over the
+the webgl background so in many cases we have modal
+dialogue so what's a modal dialogue so for example this is a modal dialogue right
+right this up select just you can only do the up select right now everything in the background is
+great out and when i click in the background i go back i just close my modal dialogue we use this all
+the time in cabits basically um so for example is that like an often used pattern on websites to basically
+grab the attention of the user and block everything out yeah it's just a normal ui pattern uh like this is also a
+a modal dialogue basically so um so you use it like website uses all the time so um we can we can build
+this with the development that is has opacity and then we put another development on top and all the
+stuff but so we use this a lot so we created an operator for this already because we use this we have this so
+so often it's not that old is it yeah no but i i wanted to write it for a long time so i think we will use it a lot
+um so we have modal overlay so and this works this works like this so um i will create a new op a new div element with a lot of text
+and i will just put this in our model overlay op so with this model overlay i can say show and close
+and um and this will gray out the screen in the background and it also shows a little close icon
+and it also has this functionality show and close here so um i want to
+style this so it looks a bit better
+um i would just um i would just do this quick and dirty whatever so so now we have this
+this model overlay which which we can open and now we can connect this to our third div element
+and say we connect this to show so when i click this um this dialogue basically opens and you see this
+is great out so when i click anywhere it will just close this so this is super handy for like little
+about texts uh or something like this but you could also put in like complex html in here with that you
+scroll so you can put a whole website in here but you should do that but you could um yeah and you
+already have this this little close button and um you can close it um um
+yeah this is this is also a super handy um operator um to do this kind of about text or something
+um also we just recently used this for um yeah here's another example with two buttons um where you open a
+text and you can scroll it and here you can open a youtube player here
+which is another um html operator where you can directly embed a youtube video in your patch
+and when i click this it automatically stops the youtube video which is also
+quite handy um because often like you you maybe you have this fancy webgl thing going but the client just
+wants to show it's the video of their show or something on youtube or something and then
+you can you can use this and overlay this over uh over your webgl background basically
+yeah
+exactly any questions what's the andro is going by andro
+so usually you see andro here on tuesday but uh we thought uh we would show our faces too
+um yeah so so now all the time we've been talking about like 2d space and html and stuff like that and
+um um now we're controlling um cubes and spheres um that we show is it anyhow possible to combine these somehow
+yeah a little bit at least um so i mean they exist in different worlds right so
+but in the end we have a 2d screen where our 3d stuff is showing so we can
+basically use the two coordinate 2d coordinates of 3d stuff and show html elements on this
+so let's do this um
+so we'll just first create a little
+webgl example
+a cube
+and give it a material and give it um camera
+and give it a brighter color
+um so um so i can now rotate this this cube um so um hml elements
+that we saw are always in 2d space so how how so or what we often do is like we have like a 3d model
+and then you want to see more information about like a specific part of your 3d model
+say you have i don't know like a shoe and you click on the on the sole or on the i don't know um the the
+front or something and then you then there's a like a little like a little button that you can click
+and you see more information about it um which is easy in 2d but in 3d it's not that easy but um
+we have like a little helper operator for this
+so let me create like a little uh we call this hotspots from now on so like a little hotspot hml
+uh which is like just
+um
+a round button basically
+so there we go so we have a white hml element let's give this lower opacity so we can look through
+this and i want
+want like a little
+let's do it like this
+so
+okay okay let's ignore that it's not round um you can you can find out how to do this later um so we we
+have this um little question mark let's call it circle um and we we want to attach this to the cube
+actually so can you do the rotation with the orbit controls right now so we see that it actually doesn't
+rotate yeah um it doesn't follow the cube yeah and um we have an operator which connects like both worlds
+that's called transform element and this one is connected to our main loop as we are used to
+by the normal webgl operators but this can also this also takes an element as an input so we can connect
+this div element um to the transform element basically and um now this is actually in 3d space but it's actually
+at zero zero zero so it's it's it's always connected to the center of the cube as you see when i
+when i pan around so um i actually want this to attach this to a corner of the cube
+so i know the cube is one unit with height and length so i will just translate this to 0.5 0.5
+0.5 and now you see it's attached to this edge there
+i can center this when i click those then it's exactly center to this edge
+yeah you still see that it's in 2d as the that item itself is
+sorry really rotating right um yeah the icon is not rotating it's always facing to the camera yeah
+so uh like billboarding um and you also see like it's not hidden like it it's always visible it's not
+overlapped by the cube or something
+um yeah but this is um this is quite helpful and we can now also make this interactive
+and show some information about this special side of the cube
+this corner of the cube and we can create overlays or like the modal thing and show
+more information about this this edge this specific edge um yeah so let me just do another one
+um
+so now i
+transform it to this edge so
+um you can imagine like showing like a complicated um
+3d model like a car or something and you can click on the tires or on the on the
+or you hover this and then it shows you like it gets transparent or something like this is a it's a
+cool way to modify your 3d
+object or show information about it
+yeah um yeah
+and also i mean we can create a toggle bool again um that
+would hide all of them
+um with another button or with another menu so we can we can switch around this and and make like
+use our navigation menu to show or hide those um those hot spots of the 3d model
+yeah any questions about this
+hmm
+not as far as i can see would it be possible to hide these uh the things that are behind picture
+um
+yeah probably but i don't have an easy solution right now um
+um you yeah there are ways but um
+yeah i don't know right now because none of these does have a z position right i mean the easiest
+way would be we calculate the absolute position with the rotation in there and if this is like
+smaller than zero basically or when it's far
+away then we fade it out or something like this
+um
+actually i know yeah you could um you could do it uh in some way but um yeah it's always
+it's always tricky uh you could also like if you don't have orbit controls like the easiest solution
+would be you just have a transform and then you see like if this is
+if the rotation is like like this then you want to hide this yeah you there's a lot of tricks or a lot
+of ways to do this actually or you maybe you want to test if the object is even drawn on the screen and
+then decide if it's shown or not but yeah
+and these again goes go both directions right so now we kind of use the cube to position the 2d elements but
+the elements but we can also um again use the hover and the click to maybe control the cube right
+yeah totally so if i hover over element the cube gets bigger or whatever yeah good one
+um
+so
+let's create a scale and a bool anim
+so we just asked very handy did this exist when you visited kiel yeah yeah we visited kiel in february
+i think that is existed back then yeah yeah we we showed it but i think you were late that day
+um so what did i do oh yeah uh yeah that's not a good idea
+so
+i need to make this interactive
+and not linear so now when i hover this then the cube grows yeah right it's a bit problematic because
+like this it just loses the focus because it just goes out of
+yeah you can follow it like you can make a little game yeah and this way you can control
+um
+parameters of the cube basically or we just
+uh do this like make it let it grow
+when you hover this
+that's cool
+um
+yeah so another thing like we have this really cool op that is called transform element 3d css 3d
+which does that using the css 3d technology to rotate the diff element even
+so it's also not overlapping but it has the same rotation as the elements uh in your in your scene
+but this is really this is really experimental technology so it doesn't really work well on on
+firefox um it's not really battle tested um but it's just it's it's really interesting and yeah we're
+really proud of this op uh i mean it's cool it's like a super easy way to do like
+a build board that is a build board that doesn't have text on it can you still mark this text
+yeah yeah um
+you can
+if you remove this
+and this
+actually also i didn't save so yeah then you can do this so just like really cool yeah it's really cool
+but like the browsers like in safari it's it's stuttering and in firefox the resolution is really
+bad because they render it at a really low resolution in chrome it's it's quite cool but yeah
+i would not use this in uh in a real world project right now maybe there are some fixes but um well but
+but also really interesting uh trick to do but most of the time you don't want to
+um bend text or like show text from the side like most of the time you really want to
+show this in a in a straight uh way
+um yeah
+i think um i think we're coming to an end right yeah i think so too i got like all of my notes and
+your notes are through um anything you want to show in the end like maybe what would happen if
+we just search for html in the um in the off select and maybe find something maybe we missed something
+like the iphone thing okay let's go to this page which is also super handy and look at the html stuff
+or do our visit like viewers have any question or or any anything they want to know i have cursor is
+also handy um you can change you can change your cursor on the fly so you see here it has a different
+cursor in each row and also this doesn't have any cursor which is also handy sometimes
+you can also upload your own cursor
+yeah i think that's
+uh this um this um this um this is also quite interesting um info url so
+it's quite boring here on cables but uh when you
+publish your like when you export your patch and and build your own website or something you can
+you can see like which host it has or which url it has and you can even
+um get um get the the path and you can show something different on on different paths so maybe
+there's a page called blue and then um you wanna show like the blue background and um not so much
+about um html but um what we often do is um what show or hide the sidebar based on the url so that um
+you have the sidebar in the editor but once you export the patch and give it to the client or um
+put it on a website then you don't have the sidebar anymore and you don't have to think about
+it when like um feedbacking back and forth basically yeah so you can pass this and and
+decide like this is more website related than hml basically yeah um probably it's in the wrong namespace
+um yeah you can also um yeah it says text area there's a text area hml element what would i ever do with that
+uh i mean and no text area but what for uh this is this this was for evoke basically
+oh yeah so you can create an input um big input element basically with this op okay um yeah
+um yeah there was also window info i wanna
+all right this is the size okay um yeah i would say i would say we have the the important ones yeah i
+think so too
+yeah
+so should we then wait for a a bit for a few more questions yeah does anyone has uh yeah any questions
+about this or anything hml related
+yeah one question is this so it should
+i'd like to stop ir safari to bounce on scroll there seems to be a different way there seem to be
+different ways yeah what's your recommendation uh good question i'm i i don't know out of my head but
+um we are right now preparing an faq section in our doc docs and this should go there um
+we have something similar in there already with like the click gray out on ios and that uses the super
+specific css thing
+what do you mean
+um in the faq we are already have something like on ios if you tap then you get like a gray overlay and
+that is being disabled by a super specific css class but um says there's different ways um
+uh i guess he already would have found a css rule to do this yeah i i think it's i think you have to
+limit the size of the document or of the body or something i i don't know out of my head
+um so in the mouse wheel op we have this prevent scroll which actually prevents scrolling but i am
+not sure if this is also helping with this bounce problem on ios safari really um i don't know out of
+my head but this needs to go to the faq section because i think i am googling this every time i do
+something for ios um yeah
+yeah um i'm not so sure because i so um he says he asks if this could be like a default option but
+i don't really want to
+intervene with the outside html too much with cable so we just want to do like this is not a website
+creator or something it should be easy to use what you create with cables in a different environment and
+i don't want to change that environment or try to change it because many websites will not like this
+and so we we are not doing this often but i could imagine that we create that we create an extra op for
+this that fixes this style sheet that would be an option or probably there is just the css
+setting which i don't know height overflow or something like this and then you could just uh put it into
+the into the css code here um and then and then it would work um but i don't know out of my head no sorry
+anything else
+yeah so if you if you if you if you mean like i just want to export and forget about everything and
+it's just a css rule then you can just put it in here and then you can change the body style of the
+whole of the whole page you can just if you write in a body for uh i'm getting tired i think um you can just
+change cables with this right if you if i uh say diff border one pixel
+red then you see uh oh i thought
+solid yeah
+so that cables looks like this so you can just change those rules too so you can just
+mess with the with the whole site around around to be it in cables or a bit outside of cables
+of the website so there's there's no sandboxing in css basically it's just changing everything around you
+um yeah
+yeah i think i think that's it uh for now um
+um
+if you want so
+i think we want to do this more often right stefan like yeah more like that worked really well i think
+there was a good overview about like the basic examples and what you can do with it um
+in in in cables or uh examples of html and css and stuff like that of course it took a bit of
+knowledge of um both like html web development css um but yeah i can also picture doing this a bit more
+often yeah and and we also really love questions from our viewers so we are thinking about doing something
+like this over data uh loading data or loading text or um getting getting stuff into cables stuff that's
+a bit more technical and not not only visual stuff um we want to do this more and um
+or maybe also coding with cables like coding operators or something if you guys have ideas or wishes
+um then tell us in the forum or on twitter or something and um and we we think about this and
+and do more technical stuff um basically um yeah
+what else is there to say and
+i think that's it i think we're all good that wraps it up quite nicely actually um so maybe let's call it a day
+yeah thank everyone for for being here yeah thank you guys and uh yeah we will so we are we're really
+happy with the with the tuesday so we will do it every tuesday not not just us also uh probably andrew
+is doing it next week again um but if you guys have more wishes or more ideas we will do more we will
+just do more because this is just this is just super easy to do and um yeah yeah
+okay great guys um yeah thanks for being here um and see you next week yeah see you guys bye bye
+Thank you.

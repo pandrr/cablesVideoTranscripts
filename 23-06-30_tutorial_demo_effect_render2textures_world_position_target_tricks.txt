@@ -1,0 +1,93 @@
+https://www.youtube.com/watch?v=B9GyRzov5Bg
+hello and welcome to another kbitz tutorial today we don't want to do something more visual
+and more practical and there was a request under a youtube video on the kopsache by holan it's a
+little demo graphical demo and it's mostly based on one effect and youtube user asked
+does this use custom shader code or standard operators and i want to show how this is built
+with the current standard operator so this is the effect we are talking about basically
+pretty cool stuff and you see it doesn't have that many operators and now with the new operators
+from the last update it can be even done with less operators
+um so yeah let's try to rebuild this um so let me close those tabs and let me create
+uh a new patch
+and then we start from zero a new main loop and then first of all let's um
+load this phase mesh so this is called head glb in the in the standard library uh from cables
+so there we have it um let's put some material on to it there you see it and um
+so this is our mesh basically and this is just rendered with the pbr material so you see
+it has a soft shading but we want something different from this we want the coordinates of
+each pixel so for this we will use render to textures
+operator again like in the last tutorial and um we set up rendering to two textures and the second
+one we will render position world so let's have a look at this
+um you see it looks weird in the second slot and in the first slot it's the the smooth shaded pbr material
+so what are we seeing here so what we see here is each pixel the rgb colors of each pixel are the xyz colors
+um xyz position in the world because i selected position word and and we can now use those positions
+to draw for example spheres or cubes into a new scene basically so
+but this is a really high resolution right now so let's just uh turn it down for example 128 by 128
+we will create a sequence and a mesh instance of from texture so we use this texture this data of this
+texture in uh with the mesh instance um by just connecting this texture to the position texture here
+and then we need to create a geometry for this to use so we will just use the sphere geometry
+and there you see it already so if we turn uh resize this texture quite small um
+you see we have a uh the the the mesh now consists is rendered with little spheres um so i can
+you see when i scale the sphere the whole the whole thing scales so let me create maybe a lower resolution
+64 by 64 for now and let's just use this resolution so there you see we have 64 spheres by 64 spheres
+okay okay so basically this is the main trick so the the interesting thing now is let's also use another material here
+so we can see that this is really spheres
+now we can use an orbit control and then we can rotate around the sphere so we see
+it's really weird and glitched because we don't see it from the side because this this view here is not
+influenced by the orbit controls this view is always from the front so we always have only the positions
+from the front basically like a connect if you use the connect before it's you have this point cloud
+because the texture is 2d uh it will always be 2d but that's that's the effect that we are after this
+is the effect that the demo uses so we can add a transform to the to the original rendering of the
+head and just play with this and then you see you get some really cool cool effects also it's also
+interesting to change the resolution that it's uh high res on in one axis and pretty low res on the other
+axis and then you get interesting effects like this
+um but let's keep it 64 by 64 and let's just add a sign the timer
+and
+yeah let's just have a little rotation animation
+um like this so there's some movement um
+yeah so um this is basically the main effect and if you if you rotate this you can see it from
+different angles but there's also interesting stuff if you put the orbit controls into the source and this
+is what we saw before uh it gets really weird and you you don't know what's happening but it's basically
+just we're changing the position of this thing but the the camera of of the of this rendering and the other
+camera is static so you get some really really cool effects um so the demo is basically just exploring this
+one thing with different meshes and and different uh scenes and different transformations so let's move
+the camera or let's move the object or uh yeah there's a there's a lot of stuff that you can do to get
+different different uh effects out of this um what's also pretty cool is you can for example uh not use a sphere but a cube and um
+then resize the cube so um it's pretty small you can also calculate this if you want but let's just do it
+by uh looking at it and let me put the orbit controls back here so i have a bit more control
+and then you see you basically have like a voxelized
+rendering of the of the face so you can create like minecraft words or or something like this um
+so yeah you can also add a light to to light this but you can also use this texture um as a color
+information so because this is already shaded so we can connect this texture to the color texture and
+then you see the cubes are like colorized uh with the shading from the sauce so if you add another point
+light here then you can re-light it or like multiply this light again with another thing and and that's pretty
+also pretty uh powerful so um
+you can also do different stuff so you can also add another target and set this target to normal
+so this will let's have a look at it again
+the third one so this outputs the normal of the mesh into this color buffer so we can use this as a color just to look at it
+um and there you see um see the normals of the mesh uh in the as a color which is also pretty powerful
+you can remap those colors with texture effects and and do some uh really quick colorization out of it
+but you can also use this texture uh as a rotation texture so this controls the rotation of each cube
+and um so this looks really chaotic but also pretty cool but you can switch the rotation
+for the mesh instance from euler to normal and then you see the cubes are
+rotated in parallel to the mesh so let's turn off the animation for a second
+um and we can make the cube a bit bigger
+and then you see the cube is following basically the shape the curvature of the of the face
+which is also pretty cool so here you can see it um
+yeah this this is also pretty powerful and can do really cool stuff with it so um you can also scale it
+by the normal or something doesn't really make sense but you can get really interesting effects out of this so
+um pretty pretty pretty cool stuff and you can always also just modify those textures
+that you're using to drive the machine sensor so we can
+we can add a image compose in between so let's create an image compose don't forget to set this to 32 bits
+and uh use this as a position texture for example so i will just
+wrote this through this image compose so nothing changed now but i can add something on top for example
+um layer noise
+um
+so so now i'm adding it 100 so it doesn't really make sense so let's switch
+let's turn down the amount to zero and then you see the face again so if you switch this to blend mode add
+then this value from the noise is added on top of the face so
+you see we are changing the face now and you can uh change it to rgba mode and then you get also pretty
+pretty cool effects from this um and yeah so you can animate this for example with the timer again
+add it to scroll z for example and then you see you have a wobbling a wobbling face so you can adjust this
+uh those values and then you have a nice smooth wobbling animation on top of it for example and
+you can do this with everything here so you could uh use this as scaling for the cubes or like animate
+the rotation so it's constantly rotating or whatever stuff so um yeah there's a lot of possibilities and
+it's all super easy now with the new render to textures operator so yeah have fun and play with it bye bye

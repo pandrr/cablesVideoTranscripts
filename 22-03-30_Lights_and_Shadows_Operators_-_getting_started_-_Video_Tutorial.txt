@@ -1,0 +1,280 @@
+https://www.youtube.com/watch?v=knGnukutZeM
+hello this is Alex from cables.gl I'd like to show you how to set up lights
+and also add shadows inside your projects in cables.gl so the complicated
+thing is of course shadows and if you've already looked at the operator
+there's so many so many parameters that are a little bit daunting once you get
+into it there is different algorithms there's different settings for the
+algorithms there's also settings for the shadows inside the lights and in this
+tutorial I'm just gonna show you the simplest way to get started and then of
+course you can experiment with all the different types because I think if we
+cover them all it might be a bit too long but even with just the directional
+light you can get your scenes looking so much better with adjusted angles and
+adding some shadows so okay I got some projects to show you and then we're gonna
+jump in and set it up from scratch so in this quite simple scene we have a texture
+projection with some textures that look like caustics and sorta but the shadow I
+so I think gives you this extra feeling of like maybe we're underwater or there's sunlight
+coming from somewhere so I think adding this sort of stuff to your scenes will just make
+them more believable or maybe more creatively like get a message across something like that
+so in this another simple scene without the shadow
+it just looks so boring to me so once you add it you're kind of like okay there's a light somewhere
+and there's this thing is kind of 3D it's popping out of the cube and it's moving around and there's a shadow to kind of guide our imagination so to speak
+so to speak and in this scene is a 3D model which I think we'll return to because it was a kind of a discovery slash tip that I want to show you
+how to make shadows on quite complicated for example sculptures or characters look really nice and yeah let's return to that a little bit later
+so also you can do like pretty crazy creative effects with lights and cables so you know for you who know me you know I love color area but in this example I tried to see what kind of stuff can I do with a spotlight or
+actually it's a point light on let me zoom out here on a simple plane that has a phone material on there and with a bunch of weird settings you can actually paint with light and then you add some kind of feedback effects and then they smudge around and you add some hue and you get this really funky effect so I think lights are not just for lighting your scenes and adding
+shadows and shadows and shadows and shadows and shadows and shadows and shadows and shadows and shadows and shadows and things like that I think you can really experiment and get interesting colors and also yeah you know I'll show you later so and one more thing I wanted to show is of course we have the new PBR material it's fantastic but if you know the way PBR works it uses texture to kind of simulate the lights and the surface physics of the material
+but the shadow but the shadow just helps it kind of become more physical so you know it might not be the most correct thing but in this approximation and of course you can push and pull these colors and make them brighter and lighter and maybe add more than one shadow
+so um to then get a more realistic kind of physical object in your scene so um just want to make sure you know that it doesn't really matter if it's a phone material lambert material even a basic material but you can add a shadow to our new PBR materials
+alrighty so I have this scene right already has a shadow but we'll take it
+out and we'll start from scratch so you see that I have this thing called the
+shadow operator and now the shadow disappears and then I have a directional
+light and you see this blue line right it's a kind of a guide and if you don't
+have it on your screen maybe you've toggled it off it's actually a helper
+and if you click let me click on the editor first and then when you click
+on your render window you get this little menu on the bottom and you can go
+over to this toggle helper and then show selected op helper so when I select some
+op that does have a helper for example like this direction light I see this line
+that kind of gives me an approximation or if the exact location position of the
+light so when I move it around you'll see this line move around as well pretty
+nice little helper lets you set up your lights a little bit easier so pay
+attention to this thing maybe comment below how it goes for you but I like using
+it and it helps me understand that okay yeah it's coming around from this
+direction and it's going through the center and etc so we'll delete the
+direction light again and if you see this on your screen for example when you
+create a project you know that yeah when I had a phone material it's already lit and
+yeah okay that's it but that's just the default point light that's kind of
+placed at our camera view or like at our center kind of location of where the camera is right
+so you can kind of imagine the light is a little bit behind the camera as we're
+looking at it and that's the default light and to override that default light you can
+put down your own light so we have a point light
+then we have a directional light
+and then there's also I think called a spotlight yeah the spotlight one of the
+most complicated ones but it has really nice controls for you to get that you
+know spotlight as if you're in a theater or something like on stage you get this
+control over the cone width and size and and all that stuff but we're just gonna do
+directional light for now and maybe I'll show you some of the other lights but
+directional light is super easy to get into and it has less parameters than the
+other ones and the shadow parameters for it are really nice and simple to use so I
+really like using it or at least like to start to introduce this concept of adding
+shadows to your projects with the directional light so so let's put it down and
+where do we put this direction lights kind of important you see I have the scene
+with my objects right here my rectangle which is my floor if I hide it you see it
+disappears so I got this big rectangle as my floor kind of and then I have the
+sphere cone and cube and the cube has a timer so it's rotating in place and they
+are all under this Phong material so although they're on a sequence here
+they're still under the Phong material so the Phong material is coming to every
+single one of those 3d geometries and giving it that material where do we put
+the directional light I highly recommend you always kind of keep it separated maybe
+visually so you remember like okay my whole scene is getting this light don't
+bury it somewhere in there I always used to do this and it just becomes a bit more
+complicated for you to organize your scene so what you do want to do though is put it
+below your camera so try to think of kind of in your head the the setup of of your
+scene in cables so I have a camera view and then the directional light or the point
+light will go into that camera view right so it goes under all these things so when I
+rotate everything stays together and I'm pretty sure you can of course experiment
+with putting this directional light above your camera but then it gets funky and
+when you start to apply the different settings for it with shadows connected it
+gets really weird so you should try to put your directional lights under your
+camera or at least under your orbit light because you know you're changing this location all the
+time of your camera so you don't really want to affect the shadow as well but I don't know
+maybe it's just my personal thing and something I should consider to talk about with the rest of the team anyway so we have this directional light right and we let's make this parameter panel
+a little bit more visible we have quite a few settings right we have cast light so if I turn it off there is no more light and we don't see our default point light because we're overriding the default point light with this new light that we have in the scene
+and then we have the intensity where we can control the brightness and for example the font material does interact with the brightness of your light so you can kind of see it starts to blow out sometimes but yeah just get it to a nice
+overriding the default point light with this new light that we have in the scene then we have the
+intensity where we can control the brightness and for example the font material does interact with
+the brightness of your light so you can kind of see it starts to blow out sometimes
+but yeah just get it to a nice setting you want or maybe blow it out for creative use
+then of course we have the direction so that would be um from where does the light go because
+it always intersects with the center and i think that's also like why it's kind of easier to set up
+because you're just kind of like okay i'm gonna point this thing at the center but i'm gonna tell
+from where is it coming right so you can think of it maybe as like a sunlight or something like that
+cone light and point light are a little bit different you can control like the location
+where that light falls or where it is but with directional you just control the direction then
+we have the color uh we can set it to a different color so that would be the color of the lamp for
+example in the light right and then the specular uh some materials have a specular on it right so if we
+bump up maybe the shininess to some extreme uh make it fun and then when we go back to our directional light
+and change the specular color we should see a difference so when it's too bright yeah it's too bright because
+we're mixing color of the lights together right so it's a little bit different than mixing paint together
+so you gotta remember to decrease your brightness because at one or at 100 brightness you're not going
+to be able to see the colors right you can kind of imagine it maybe in real life as well if you boost up the
+brightness of your lamp too much you might not even tell what the specular is anymore but anyway so keep that
+in mind so um if you're doing kind of a low darkness uh specular you might have to turn down the overall
+color of your light which in the light sense also means the brightness of this light so
+hopefully that was not confusing um so we can play around with a specular color
+usually it's somewhere around white or i mean it depends on on on what kind of material you're
+trying to make right maybe some paint will have a different specular because of some kind of subsurface
+stuff going on or the chemistry of the material the specular might be different so keep in mind you can
+change the specular on i think every single light um you can keep it all up white and see what happens
+then we have this whole section for cast shadow this is very important because um do we have anything
+else to cover no so that's the last section and the one i wanted to show you cast shadow by itself it's not
+not going to cast anything so there's no default shadow setting so we need to use that shadow op that
+i showed you before so if we type in shadow in our search we can place it down and then we see this warning
+there are lights in the patch but none that cast shadows so that is exactly where you find this toggle
+inside your lights and you can have more than one light in your scene as well but you might not necessarily
+want to necessarily want to cast a shadow from all of them because remember it's cpu intensive
+so remember that you can control which light cast the shadow which doesn't
+but definitely try casting all the shadows and and see how it performs i think it's not that bad so when
+we turn on the shadows we get this effect and you might think wow i am pretty much done with shadows
+because that looks pretty terrible no fear we're gonna go through these settings to kind of tighten
+this up and i'm gonna get it um hopefully like make it a little bit clearer how how to control
+this whole setup all right so the first thing i usually start with is go back to the shadow op that is
+affecting all of my uh geometry here um and choose pcf as my algorithm because it kind of smooths out the shadows um
+and allows you to also control the number of samples so if we go to one sample it pretty much looks like
+this default one like super light cheap shadow that you might want to use somewhere um so we'll leave it at
+four and then you'll really you'll see that um even if default on pcf if we switch from default to pcf we
+still have this weird kind of empty space where we shouldn't have an empty space so how do we get rid of
+this and this is all in this light setting so uh what this allows us to do is maybe like stack shadows as well
+we can maybe uh get really creative with what part of the scene will be covered with the shadow but the
+default on the directional light doesn't really look great on this particular scene right i have this hole
+how do i get rid of it what i like to do is usually go to bias zero and then see how it looks and it looks
+pretty good so i'm going to leave it at zero but in some other cases you might need to bump it up slightly and
+you can really uh like just type in numbers here and i recommend going up like really slightly like
+maybe zero one okay that's too much then i'll put another zero in there that's pretty good if i put
+another zero it's a little bit better and if i put zero it's it's like perfect for this scene and that's
+something you have to remember is like this really matters per object or per geometry that you're putting
+this uh shadow effect on um then we already have a pretty decent scene but you see it's a bit blurry and
+like super low res why is that and to control this i like to use this output port and i'm pretty sure every
+single light also has it let me just double check this so spotlight yeah this uh has a shadow map output and
+then uh point light light yeah so there is this texture cube map um cube map texture output that
+you can use to guide you how to set up your shadow like optimally for your scene uh and then we can just
+put down this trusty vis texture and when i see that my shadow is not only a pixelated in my scene
+but it's also visibly tiny in my uh output from this um light texture output i know that i have to go to my
+directional light and then scroll down to the uh lr bottom top controls so this left right bottom top
+control will allow me to scale um the object's shadow in my texture which is also controlled by the map size
+so the resolution for the map size is kind of the the quality of the texture but also the the
+size of my shadow in my texture is how pixelated or how maybe even smoothed out it looks in my scene
+so i think you might even get into um as you get more handy with this stuff you might want to actually
+increase uh some of this pixelation to kind of allow you to get sort of blurry shadows but um for the most part i liked oh yeah and and see
+and and see when i go way to uh when i zoom in this left right bottom top control and i cover my entire
+texture with my shadow map you start to get artifacts so this also happens when your shapes might be like
+really big uh and even the default um of the shadow will will cause some sort of artifacts like that so you
+just need to remember that oh yeah that's my uh kind of texture being uh covered by the the shadow that
+is generated by my geometry so return to this setting and adjust it and highly recommend using this vis texture
+to kind of frame this um scene for you to easily uh avoid artifacts so super handy
+so i want really crisp shadows so i'm going to try to fit this shadow map as perfectly as i can into my texture
+and i'm already getting somewhere
+pretty good it's it's nice so another thing you can do with the shadow is to
+kind of control the the brightness or I mean the darkness of it so we have this
+control here in the shadow strength and this might make sense maybe if you have
+multiple lights in the scene right so you have some light spill and the shadow
+wouldn't be black so you can adjust it here or you can go per shadow or per
+shadow up and adjust that in the color as well and that's kind of handy you can
+actually paint it you can you can get like in different color shadows if you
+need to make your scene a particular way so yeah I think you're starting to
+understand like okay yeah there's quite a lot of controls and I kind of need to
+already have in mind what kind of shadow I need to create here with the with this
+tool reference highly recommended keep keep studying the shadows work because
+yeah in in this setup or in this implementation where we're kind of like
+we have a lot of flexibility but also we need to be able to create our shadows the
+way we want from what we think they should look like all right so we have this shadow and
+another thing I want to show you is when I adjust my light direction for example with
+this directional light off you see that the vis texture is showing how the shadow map
+changes right because the direction of the light changes and the way the the shadow is
+painted is changing as well so for example when we get our sun closer to the horizon for example we get longer
+shadows and then you might start to get these weird artifacts right what is happening here when you see
+this an artifact like this you need to know that the shadow needs to have a wider or like a longer
+draw distance and this is controlled in the light settings and the shadow settings here
+and this is what this near and far controls are for so if we start to see that okay I'm getting into
+like extreme
+angles of my shadows and I'm getting stuff like this and and what's happening here that doesn't make any sense
+um you know first of all hold on first of all we need to make sure all the objects in our scene are casting the correct shadow right so right now I have this shadow op that is then
+is considered by all these operators below so all these geometries are using the setting
+in this shadow op and for example for the floor I don't want it to
+I don't want it to cast the shadow because once you click on the shadow op you see that it has a toggle for cast shadow
+and receive shadow
+so the first thing you kind of need to think about is like are all the objects in my scene
+you're supposed to be casting shadows and for stuff like floor I usually don't want it to cast any shadow
+so I add its own shadow op for my floors so I'll put it down here and just click on it and then toggle off cast shadow
+so now my floor is not casting any shadows not doesn't matter from where the light is pointing
+it's not casting any shadows but it's receiving the shadows from all these other ops that are still getting this
+shadow right and of course you can put an individual op per object but I kind of like
+to do this funky stack of okay everyone's getting the shadow but then this particular one is going to have a specific setting so I'm going to give it its own shadow operator
+alright so a little bit of a tangent but we still have this issue right so when we adjust our angle we still have this weird like creeping shadow that is starting to cover our whole scene
+and whenever I see an artifact like this I know that the setting for near and far are not exactly correct for my scene
+so if I go to far and then adjust it and then give it more distance draw distance then you see that it disappears and now I can control my
+light direction a little bit easier and not worry about this thing coming back and and you see it's back again and maybe I need to give it some more
+there it is and then if I adjust it again
+yeah so you kind of have to play around with it and you can think okay like maybe I just increase it to something mad like a thousand
+can I a thousand right so now when I change my direction pretty good but with certain scenes it's not recommended because it also starts to kind of affect the
+uh quality of your shadow but um that's already advanced stuff I don't know it's uh
+definitely if you get into to to uh into a jam where just putting this near on zero on far on one thousand
+let me know what happened uh and show me the the artifacts because um I
+rarely get them but when I do they actually allow me to do some interesting things like
+adjust the spread of the shadow or the strength of it and so anyway weird tangent but yeah
+sometimes it's just fine to put this far uh number to like something extreme like a hundred or something like
+that um then we have some more controls in the light for polygon offset and
+you basically have to visually see what happens with your shadow when you use this usually I just leave it at zero because I don't need to
+it's it's mainly for like adjusting um the look of your final scene because maybe something's popping out
+and you don't want it there so you can use this polygon offset to tell the shadow not to draw something
+uh at a particular place or something like that but usually you're fine with just zero
+um normal offset is also kind of a weird funky thing
+um for adjusting for specific shapes but
+you can also leave it at zero and blur amount is
+um best used with a different shadow type
+uh for example like vsm or
+yeah I think vsm is the best one for for blur but it also works with
+pcf and poisson um but
+I don't think I'm gonna cover it in this tutorial but definitely play around with
+uh vsm and blur and see how it works
+um otherwise this tutorial is gonna be super long
+and maybe I'll make a part two or something
+all right so
+um
+what else can we do
+all right uh let's go back to something more complicated like
+uh shape like this right so let's say I have a sculpture and I want to have really nice shadows in it right
+I have pretty much the same setup I i have uh uh GLTF scene with a phong material and then
+um just a single directional light and I think this isn't doing anything so I'll remove it
+color area I'm not sure what it's doing here nothing um blend mode none it's a trick uh I'll cover some time later or at a meetup come to the meetup ask me about the blend mode um trick
+all right so we have this
+all right so we have this
+guy and he has a shadow and it looks pretty good right why does it look good
+look good right why does it look good because when I used to do this stuff
+and I had my directional light it would look more like
+this so you notice like in in this scene we didn't
+do this uh we didn't have any problems really everything looks fine the the cube looks like it's
+getting a cube or making a cube shadow the sphere is making a sphere shadow but when you get into super
+complicated meshes like uh this one and you just throw down a shadow and a light I'm sure you might
+have gotten into this but I'm so happy to to share with you the the trick for the for getting it to look
+right so look when we're changing the location of the light you get these weird artifacts and it's
+the the the material looks fine but then the shadow looks all over the place and what's happening is
+the shadow is looking at the entire geometry and it's using the entire uh surface of it to create
+this cube map shadow and what it needs to do is not to look at for example the back
+um faces um faces of your geometry and only look at the faces that are facing the light and that way your
+shadow that is getting generated is going to be exactly what you would expect in in real world there
+might be times where you do need the the back face of a geometry um to be made with the shadow but in in
+cases like this where you have like a closed watertight sculpture for example you don't really need this
+back face of a material to be seen by the shadow so the best way to do it i think the quickest way is to use this
+face calling operator and just throw it down somewhere in your scene above
+your geometry to then call away uh the back faces of your geometry so now when we're changing the
+shadow or the direction of the of the um light it looks a lot better and let me just see if
+putting it somewhere else is even better
+that's pretty much the same maybe i oh i have this other point light yeah yeah that's another thing so
+once we have one light and this face calling trick or actually it's not really a trick it's kind of what
+you're supposed to be doing i just didn't know but now you know um then when we control our direction of the
+light the shadows look really nice and uh things like sculptures and and more complicated geometry will
+have quite uh decent shadows and uh everyone will love you what i was doing here is quite quite interesting
+and i wonder if i should just show it to you with uh the shadow off yeah let's just turn the shadow off
+um completely
+so what can you do with two lights quite a lot actually you can of course simulate more than one
+light in your instance but then for example we have this point light and i'm adding kind of a key
+light in the back of them right so it looks pretty nice um and that's another reason why i didn't have it
+cast a shadow because it's a key light right it doesn't in in photography or something like that
+you don't really need a shadow from a key light usually anyway so
+that's usually like the the traditional way of doing it right you add some kind of extra bounce light
+or a key light or something like that but what you can do with cables is actually go into negative values
+of a light and then paint over um another lights location okay this looks a bit wild but you can get
+into interesting territory where you can remove light from another light yeah that makes sense so just because
+you can try it just go into negative values and and see what you can do you can even like fake shadows if
+if you if you want to do like really um performative projects or something like that you can just have
+this uh point light with negative intensity and then just like uh draw in shadows um but yeah
+a little bit time consuming but might be worth it definitely try it um what else should we look at uh
+lights just by themselves oh yes of course what about mesh instancing yeah they work with shadows too and uh
+it's pretty cool because you can uh add quite a lot to your scene with with a nice shadow and
+here i also use the face calling um way of making sure i don't get any weird artifacts in my shadows
+and i have my vis texture showing me the shadows so i can uh frame it correctly and other than that
+it's just a mesh instancer with a shadow under a phone material and we can control
+the location and the cool thing is um the shadow will hit other instances right so there you you can get
+into nice um effects where uh you get this like cloud of meshes and geometry that then cast shadows uh onto
+each other and it looks really nice um yeah so definitely try it out i want to see some projects from you
+that use shadows and custom lights and all that stuff and uh yeah thank you and uh enjoy see you at the meetup bye

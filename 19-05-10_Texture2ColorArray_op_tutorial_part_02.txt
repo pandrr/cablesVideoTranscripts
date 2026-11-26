@@ -1,0 +1,150 @@
+https://www.youtube.com/watch?v=x8DUMCxv5fQ
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the forums is
+Andro and today I'll be doing the second part of an ongoing tutorial series about the texture to
+color array up. So if you click underneath the YouTube video you'll come to this link here as
+you can see this is like the public file that I made which added a little bit of interactivity so
+people could see what was happening. So if you just click open an editor opens up and you need
+to save this as a new patch right now so you go to patch save as and I'm just going to call it tut2
+for now hit OK. So we now have this patch and this is going to be our framework today for the rest of
+this tutorial video so I'm going to focus on two to three main points. The first one is I want to swap
+out this rectangle for a sphere and then I just want to be very playful and show a lot of different
+texture effects and generators that we can use inside the cables to make some really cool stuff
+happen. So first of all we're going to get rid of the sidebar and this is going to make everything
+disappear. So we go here why the width and height the amount of pixels and columns and rows has now
+gone to zero. So let's just get this put it on 100, get this put it on 100 and then we get this back.
+So the scale here has been changed by the texture so if we look here that is this part with the mesh
+instancer. So I'm just going to disconnect this for now and on the mesh instancer I can use the scale
+parameter to just change the scale of all the cubes. I'm going to put it on one. So first of all I want to swap all of these cubes out for spheres. So we're here right now.
+So go to trigger once and I grab the sphere 2 op and now with the right mouse button click and drag
+and repatch the output from geometry. We're going to get rid of the cube op and we don't see anything.
+Why? Well if you click in the patch press F and see flow mode we've got to push through the new geometry
+into the mesh instancer. So as you can see there's no flow here. So click on trigger once reset and now we have
+a bunch of spheres. Awesome. Click in the patch press F and then we turn a flow mode. So now what we want
+to do is we want to replace this rectangle with a sphere. So if we look at this we're generating the
+vertices here right. So with the rectangle we do this. So I'm going to pull this out from trigger once and
+I'm going to grab again a sphere 2. Now sphere 2 is similar to rectangle as in rectangle has an amount
+of columns and rows. This determines the amount of vertices. Sphere 2 has stacks and slices. It's pretty
+much the same thing. So we're going to go here for columns slash stacks. We're going to go here for rows
+or slices. I'm just going to delete the rectangle. We're going to pull out the sphere 2 geometry output
+and plug it into geometry points. As you might have guessed we've got to push it through by clicking trigger
+once reset. Now as you can see that's a very small sphere. So we click on sphere 2 and put the radius
+and say 20. Once again we don't see anything because we've got to trigger it. There we go. You know what
+we could make this a little bit bigger. Re-trigger. There we go. Great so we can see a little bit of
+displacement happening here according to the texture. So this part might be going a little bit fast. Don't
+worry about it. Once it's set up you're good to go. So this is where we get the texture to color array
+up and we unpack the texture like in the previous video and red, green, blue, alpha comes out here.
+So let me just disconnect this for now and zoom in a touch. Let's get rid of smooth step and the multiply.
+I'm just going to delete this comment. So I'm going to make a really simple chain. I'm going to add an array
+subtract and I'm going to grab this, move it over there, copy it with control c, paste, paste. So that's x
+and then this is going to be y and this is going to be z. Let's make this nice and tidy.
+Okay so now what we need to do is we need to get this and in the previous video we were only adding a
+black and white texture to the y component up and down. Now we want to affect x, y and z those points.
+So it's really easy. We're going to pull this down. I'm going to zoom in a touch and we're going to add
+an array math up. Let's move that over here. This is x, this is y and let's add that there. Array math and
+this one's going to be z. Let's just get rid of all these words for now. So x, y, z. Okay so I just need
+to disconnect this one just to start from scratch. So array math doesn't work unless it has two arrays
+coming in that are the same size. So I grab the x component and I add it to the x component from this.
+Do the same with y. I patch it into array 2. Do the same with z and then we get the sphere back.
+So if you multiply a positive number it can't become negative. Vice versa if you multiply a negative number
+it becomes more negative. So we want things to go left and right, up and down and forwards and backwards.
+So we need to subtract 0.5 because the texture to color array is outputting values between 0 and 1
+depending on each pixel. So I need to subtract 0.5. So I pull out and I grab this value up and I'm just
+going to quickly patch that into these by just pulling to the middle and letting go. We're just going to call
+this subtract 0.5. So now I'm going to go to the multiply option because that's like the strength of
+what's coming out from here. So now I'm also going to grab a value and I'm going to call this multiply.
+And we're now going to put this into here and this into there. Okay. So, so far so good. This is the
+basic patchwork. I know it might be a lot to wrap your head around but basically we just swapped out the
+rectangle for a sphere here. With the mesh instance we did the same. We swapped the cube for a sphere and now
+we've given ourselves control over the separate XYZ components. Okay, so now for the good stuff.
+Here we've got this FBM noise and it doesn't seem to be doing a lot, right? But if we grab our multiply
+and we turn it up, we'll see it has a heavier effect. But there's something wrong. It's all going in one
+direction. We're subtracting 1 not 0.5. There we go. Now let's use multiply. So basically what's happening here is we've got a grayscale
+texture. It's black and white. So the red, green, blue components are pretty much all the same. They're
+getting the same data. So we need to change that by using an RGB texture. And what that means is that the
+red, green and blue components of the texture are different from each other. So let's lower this
+multiply a little bit. Get it to something like this. And let's make the size of the spheres a little bit
+smaller. Okay, there we go. It looks more like it. So FBM noise only generates a black and white texture. So
+let's get rid of FBM noise. And I'll try and explain this as simple as I can. Let's go and grab pixel
+noise 2 effect. And let's put the amount of X and Y on 2 by 2. And let's grab this timer and we're going to
+plug it into Z. And Z is like a way to animate things. So as you can see, they're all moving the
+same way. X, Y, and Z are getting the same values. So if we go to pixel noise 2, that's a really cool
+option. RGB. Watch this. And let's turn down that timer. So it's really fast. As you can see,
+things are now going left, right, up, down, forwards, and backwards. We could increase the multiply,
+so it's a little bit more obvious. Things are jumping around a bit. Well, pixel noise 2 has an
+upgrade. If you click loop, they only go forwards and backwards and not jump around so much. Now,
+this is kind of cool. I'm going to lower the speed a little bit. So this is hopefully now starting to
+make a bit of sense. What you're looking at here is the red, green, blue values. And that's changing the
+X, Y, Z positions. Left, right, up, down, forwards, backwards. So now let's go over here and put this,
+for example, on 64 and this on 1. And wow, look at that. That's pretty cool. We've got a completely
+different effect just off changing the texture that we've got here. We could also put this on 1 and this
+on 64 and we turn it around the other way. So that's pixel noise 2. So hopefully you're understanding
+a little bit right now what's happening with the RGB part. Just in case you aren't,
+let's go to the next one. Let's grab the good old noise texture, white noise. Everything explodes.
+So as you can see, it's all kind of like moving off in one direction, X, Y, and Z. So if we put it on
+RGB, now we're like giving different instructions for X, Y, and Z. Turn off animated. So if I turn down the
+amount, it's kind of like you see the opacity here and the values coming through, but we can also change the
+effect with multiply. So if we put this on zero, we just got the original output from geometry points.
+If we turn this up, as you can see, we get this. They're going off in all directions. But if we put
+noise not on RGB, but black and white, watch what happens. See? So that's that problem with X, Y, and Z,
+with a grayscale texture. They're just going to go all off in the same similar direction. If I put subtract
+now on zero and increase multiply, as you can see, they all just go off like this. So that's why we
+subtract by 0.5. So we've got values from minus 0.5 to 0.5. And then we multiply. And this is why we then need
+RGB. So let's get rid of the noise up. So like I said, this is just like an experiment today to just
+show some really cool stuff. It's more of a playful episode. So I'm going to grab the waveform up,
+generate four different waveform textures. So I'm going to grab this. I'm going to turn down multiply.
+And I'm going to click here. And I'm going to turn down the amplitude. So it becomes like this. The line
+width. And I'm going to leave it like that. And now I'm going to put the timer two into offset X.
+And as you can see, this is now changing what we see done. So what happens if I get another one of these
+and I put that here and I copy the timer and I plug this into offset X and I put this on a
+different time. And then I put this second one on multiply. Watch what happens here. See this?
+So we get this really nice effect. I can change the amplitude a bit to get a different effect.
+And as you can see, what we've got going on here is this really nice pattern. I know it's not RGB,
+but I just wanted to show it. As you can see, that's reflected here. We could even just
+increase the frequency and we get these really interesting modulations taking place with the
+sphere. So that's waveform. Let's get rid of that guy. What have we got next? RGB. So let's go for layer
+noise. As you can see, multi-layer Perlin noise variation. Let's grab that bad boy. So grab layer
+noise and we turn on the RGB alpha mode. And as you can see, we now have this. We're going to grab the
+timer and we're going to plug this into scroll Z, which is like pixel noise. And as you can see,
+if I now turn up multiply, we've got this 3D motion taking place. And that's pretty fast,
+I'll admit. So let's just turn it down a little bit more. There we go. So you can play around with
+the parameters of layer noise. I'm going to put it on layers 2, scale 16, and we get this kind of noise
+thing here. Put it on 2, and we get something smoother. You can put it on tileable, which is
+kind of like a mirror. And then as you can see that there. So I'm just trying to make you aware
+of some of the cool texture effects that we can use in this fashion. So play around with that. There's
+plenty of settings there. Go wild. So let's go to one of my favorites now. This is old school, as old
+schools it gets. And we go to plasma, and we get this plasma effect. Now, as you can see, it's black and
+white. So I'm going to go down here and I'm going to turn off the grayscale mode. And now I'm going to plug
+timer 2 into time. And look at that. Let's lower this. Multiply a little bit. There we go. So like I did with the
+Twitter teaser. Here's the mesh instance of section. If we now just like crank that scale up,
+we get this really interesting effect. And if we want it to billow out more, we just multiply more,
+basically. And let's crank up that timer a bit. And then, yeah, look at this. We get this really cool
+movement, modulation, and shapes. And this is just a good old plasma effect. Gotta love this guy.
+Put it on 10 by 10. We could put it on one by 10. You can get so much stuff out of this bad boy. It's
+really, really cool. Look at that. So I'm going to get rid of this. And I'm now going to put the size
+back to one because I don't want this tutorial to take too long. Now I'm going to pull this down. And
+I'm going to grab, for example, the triangle noise up and they're still pretty big. So let's just turn
+this down again with the scale. There we go. Cool. So going back over here, the triangle noise and we can
+get the timer and we can plug that into add. And as you can see, this is like changing what's happening
+over there. So this is an RGB alpha, but I thought it was a really good, cool one to show because I
+think it gives some interesting stuff. We put it on two to get like a very different look than the pixel
+noise effect. So we could also go here now and grab the rotate texture. We could plug timer two into
+rotate and if we just slow it down a little bit and we need to turn off crop and then we get this like
+mirrored texture. So you can see we can even create this kind of like fake 3d motion by just rotating a 2d
+texture. So that was triangle noise. And one last little combo to just round this off. So let's go to
+whirling noise. That's what you see here. I'm going to add that and now what I'm going to do is I'm going
+to put the scale on say four and I'm going to put range a down so we get this like nice smooth fade out.
+I'm going to turn the multiply down a little bit and then what I'm going to do is I'm going to put timer
+two into z. So as you can see they're now like pulsating in and out. So if I now grab noise up
+and I turn off animated and I put it on RGB and then I say multiply and as you can see we have this
+noise now with the dots and they're coming in and out and we could also get the timer two and we could
+plug it into say x. As you can see these things are now moving around and we're using the noise to kind
+of like make it like not perfect circles but noisy circles. So we could like do this now to crank it
+up a little bit to get a different effect. We can decrease the amount of noise by using the mount or we
+can increase it. So I know this might have been a lot to take in. This was the second tutorial with the
+texture to color array up and I'd like to give a big shout out to the person whose name I forgot
+on the YouTube channel that said they loved seeing me play around in the last few minutes of the last
+tutorial and that just got me thinking like hey let's just do the second video like that. A bit of
+technical stuff at the beginning and then let's just play around that last half of the video and
+just show people a lot of the different things that you can do. So that's the end of this tutorial video.
+I hope it's been educational and informative. If you've got any questions or comments please feel free to leave them
+under the video below or to post them on the forum. Thanks for watching and have a good one. Bye!

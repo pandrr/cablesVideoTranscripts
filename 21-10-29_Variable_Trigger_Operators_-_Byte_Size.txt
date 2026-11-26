@@ -1,0 +1,314 @@
+https://www.youtube.com/watch?v=30v_GQc6ajA
+hello this is Alex from cables.gl let's take a look at trigger variable
+operators and these operators are very handy for when you're interacting with
+your patch or you want to have specific situations that trigger a variable to
+change and this variable can be one of four things actually because there are
+four operators that share part of this name and function pretty much the same
+so if we open up the search and we type in var trigger we'll see that there's one
+for arrays numbers strings and objects and objects can be 3d meshes or textures or
+even something a bit complicated for me which is API requests from somewhere else
+so you can trigger an ajax request and get an object
+back and then parse it out and then for example with this var trigger object you'd be able to
+switch these objects that you received from somewhere else and then parse them down into some variables
+but anyway well we're gonna look at a much simpler usage of var trigger object but it is super cool anyway
+what I'm gonna do is show you some pre-prepared patches but we're gonna start with var trigger number and I'm just going to create a new patch and hopefully cover some
+easy ways of setting up the whole like variable and variable and variable receiver
+okay so let's put down our var trigger number and you will see that it has an error right away and that's okay because the error just says no variable selected so
+okay so let's put down our var trigger number and you will see that it has an error right away and that's okay because the error just says no variable selected so we need to create a new variable or if we already have a
+a bunch in our scene we can just select it from this drop down drop down drop down drop down
+but you can see we don't see we don't have any so I have to create a new one and what I'm gonna do is
+you can just select it from this drop down drop down but you can see we don't have any so I have to create a new one and
+we can just select it from this drop down drop down but you can see we don't have any so I have to create a new one and
+we can just select it from this drop down drop down but you can see we don't have any so I have to create a new one and
+and what I'm gonna do is populate this number variable with values that then I will draw on the canvas with text mesh so
+I'll put down a main loop and hold down shift enter or hold down shift and press enter to just place it on the canvas
+and keep my window open and then I will put down a text mesh
+and maybe
+I
+since text mesh uses a string right because text and its words and it needs a string
+input and we have a number in this case we'll just use a
+number to string
+um operator to switch it so we can we can use this text mesh to display our
+number value okay
+anyway that out of the way
+what do we do now so
+I have this variable with an error and I need to create a new variable so I'll create a new variable called trigger
+number
+number
+okay so the error goes away
+now
+how do we get it into this number to string operator for example
+because we can of course change it manually but we have a value that we want to send to it
+from our operator
+from our operator
+okay so what you can do is use an operator called
+get
+variable
+number
+there it is var get number
+so it's a it it will receive any new variable change
+in this operator and then output it so it also has an error and it says unknown variable
+well it has a drop down in the parameter field here and we need to select our
+um
+new variable that we just created for this var
+uh trigger operator okay so
+we hook it up and then select our trigger number
+and now
+when I change this
+nothing happens
+why well because this operator
+requires you to trigger it
+right it's in the name so
+bam there we go
+now it is updated and if I change it again
+nothing happens I have to trigger it again so
+that's that's fine but it seems
+a little bit strange like why would you need to
+do that but what if you have
+for example
+some sort of user interaction like
+use mouse buttons right
+so we have uh
+left click that will set this one
+and I'm just gonna copy paste
+this over and uh
+secret I actually bound this to
+my mouse um one of my
+my billion buttons on my mouse so I
+can just
+single click and
+quickly copy stuff
+okay you don't care all right so
+let's uh
+change this number to
+like two and it's also not
+changing it right but both of these
+are set to the same variable so
+what's gonna happen is
+when I click left or right it will
+change between these two numbers
+so pretty cool
+um you
+obviously save some space and a bunch
+of like um
+you know having to wire up
+some some other craziness
+but you can use um
+some sort of
+interactions or for example like
+uh other trigger ops to
+change between different different
+variables for the same value
+um I think that's
+pretty like pretty much the
+gist of how all the other
+operators will work you know
+for let's look at
+string so
+what I have here is a main loop
+and a text mesh again and
+this time I have a string
+variable get or
+var get string
+right
+so it is set to
+this variable I created called
+triggered string variable
+and um I have
+the same setup as
+before where I have a mouse
+button left and right to
+trigger these different strings
+and for fun I use string editor
+in this one so if we
+look here and type in
+um awesome
+and save it
+you know now it's not awesome
+so I'm just gonna oops
+I'm just gonna change the
+comment here
+to awesome
+right so this is my variable
+it's no longer okay
+and you will see over here on the canvas
+oh now I've interacted with the canvas
+so it kind of updated it
+but what what's gonna happen
+is
+um
+when I click left and right
+it will switch between cool and awesome
+I'm just gonna make this longer and and check
+one thing
+is if I
+edit this
+to
+cool
+and save it
+and click the canvas
+hmm
+then
+oh
+you know why this is happening
+is because I'm left clicking on the canvas
+okay nice one
+maybe I should get another coffee
+alright so
+um
+that's pretty simple
+and then we will go to
+um
+an object
+var
+trigger object
+so
+um
+it sets
+the variable
+with a new object
+that it gets
+so what I have here
+is a main loop
+and
+I use a sequence here
+to kind of easily break out
+another cable
+to
+um
+trigger my
+two geometries
+once
+because I don't need to use them
+I just need this geometry
+so I just need to initiate this
+operator
+operator and get this
+object into
+my
+trigger
+variable
+objects
+operators
+so
+what's gonna happen
+is when I click
+left mouse button
+I'll get a
+sphere
+and then when I use the right mouse button
+I'll get a cube
+so let's try that out
+right
+left
+right
+left
+so
+and
+and this is being sent to
+this
+var get
+object
+um
+and it
+receives
+just like the other two I showed you before
+um
+a variable that is
+set over here
+and
+um
+once it's
+triggered
+it gets the new object
+all right
+so
+another thing I want to show you
+is
+over here
+I've set up
+um
+textures that are also using this
+object
+var trigger object
+um
+operator
+um
+because see the
+the color is the same
+so they're they're all objects
+so
+you can use them
+but obviously if you try to assign a texture
+as a geometry
+you might get some errors
+but
+um
+avoid that
+all right
+so
+uh
+these ones don't have anything bound to the triggers
+but
+the operator
+um
+this trigger operator
+very trigger variable operator has a button here
+so you can
+kind of manually test out your
+uh
+different variable
+uh
+different
+um
+objects being sent to the same variable
+simply by using the parameter panel over here
+okay
+so
+right now I have this matcap being
+uh
+sent to
+the
+object
+and
+uh
+if we go over to our matcap material
+you'll see that I'm not using a var get
+object here
+I'm using
+a built-in
+uh
+variable assignment in the parameter panel
+and
+you might miss this sometimes but there is these three dots next to every single parameter
+uh
+in a
+operators
+um
+panel
+so for example here there's some
+um
+here there's some
+so
+you can assign variables without having to use this um var get object operator or var get number and stuff like that
+um
+um
+you can directly assign it inside the operator
+so
+what I've done here is I click let's erase it actually
+so
+we have this brand new matcap material and I want to send these different matcaps to it
+so
+if I go over here and I click on these three dots here and I say assign variable I'll get this matcap texture being controlled by a variable and all I have to do is make sure to select something because you know once you set this up it's going to be on an unselected variable so it's unknown and we need to select the correct one so
+my matcaps
+my matcaps are being sent to a variable called tree
+if I go over here and I go over here and I click on these three dots here and I say assign variable I'll get this matcap texture being controlled by a variable and all I have to do is make sure to select something because you know once you set this up it's going to be on an unselected variable so it's unknown and we need to select the correct one so my matcaps are being sent to a variable called tree
+matcaps are being sent to a variable called trigger object texture I select it now the port is darkened and this will let you know that yeah you selected a variable for that parameter so what's going to happen is when I click on this trigger object operator we'll get a new matcap
+easy easy and of course you can yeah assign it to some other trigger all right so lastly I want to show you a var trigger array and what I have here is a main loop with a orbit camera see I can orbit my point cloud here then I have a camera to kind of give myself some more control over the fov
+the field of the field of view then I have a point material and then I have a point cloud and then I have this animaray setup and if you haven't seen the tutorial for that definitely check it out because this really makes it shine I think when you when you feed different arrays with interaction to it I think so what I have with my var sets on trigger
+and the var trigger or var trigger arrays here is the same as before I have two mouse buttons bound to these different arrays that are going to be sent and I wanted to show you this I have my arrays for my point cloud and for example the sphere set up in a parse array object
+and if I edit it you're just gonna see this huge line of different values for my geometry array or my sorry point cloud array okay so how did I get those mmm I'll probably show you in another tutorial but this way I don't have to kind of do what I did here where I'm populating the object or something like that or or
+converting the geometry to an array I already have them somewhere I got them from somewhere and then I saved them into the parse array so when I save my patch I'm going to have these point clouds ready to go saved in my patch okay so look at this if I right click I have an animated array in the point cloud and I can switch between the
+these geometries with these geometries with these geometries with a click which is pretty cool yeah that's pretty much it so this was
+was um trigger var arrays var trigger objects and trigger var strings and trigger var numbers hope you liked it bye
+and trigger bar numbers and trigger bar numbers hope you liked it bye

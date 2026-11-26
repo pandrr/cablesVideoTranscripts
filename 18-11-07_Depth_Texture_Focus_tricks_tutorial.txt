@@ -1,0 +1,52 @@
+https://www.youtube.com/watch?v=QXxgX2kS0TE
+Hi there. Welcome to another video of Made with Cables. My name's Mark, my handle on the forums
+is Andro, and today I'll be showing you some things you can do with depth textures inside
+of cables. Okay, let's get started. First going to make a main loop and I'm going to connect this
+to a sequence op. I'm now going to make a transform. This I'm going to connect to a
+matcap material new and I'm going to make a random cluster op because I want to have a lot of shapes
+on the screen. I'm going to make a sphere mesh and now we're going to add a texture op to the
+matcap input. So I go to texture, click file browse, go to the library, and we're going to go down to the
+matcap section. And I'm looking for a particular one today, this one. Okay. Now if you've seen the
+previous tutorial with basic post effects, some of this will be familiar to you. So I want to render
+this to a texture. So I make a render to texture op. I'm going to make a full screen rectangle.
+And just to test everything's working, I'll plug the texture output from render to texture into the full
+screen rectangle. A little bit jaggy. Click render to texture. Turn MSAA on full. Okay. So what I want to
+do is I want to show you today how we can use the depth texture focus op, one of my new favorite ops.
+So we need to make a image composite layer. So I'm going to get the image compose op
+and then I'm going to get the depth texture focus op. Now if we look here and render to texture, we see we have the
+texture out and the texture depth out. So I'm going to disconnect this. I'm going to get the texture
+depth and I'm going to put it out here into depth texture focus and the output of image compose to
+full screen rectangle. Now I don't see anything right now. So let's play around. Here we go. So this is the
+center like where we're focusing. And this is the width. So if I put the width really narrow,
+like really small, you see that I can now kind of like scroll through. What's that?
+Now I want to just have like more forms. So I'm going to put it on like 400.
+And then we're going to move this up again. Whoops. I think I've got a shape in front of
+the camera. Yes, I do. Okay, there we go. And let's increase the size, just get a little bit more space.
+So if you didn't see what was happening there, one of the spheres was in front of the camera, which was
+blocking it. Now, as you can see, I can get this really cool effect by just doing this. So new favorite
+of mine. So what I want to do is want to animate this. So I'm going to look at this. I'm just going
+to remember like the minimum values. This is like 0.04 to 0.266. So I'm going to make a sign anim up.
+And then I'm going to put it into a map range.
+So this will output a number from minus one to one. And this will remap the range. So put old minimum on
+minus one, and new minimum on 0.04. This one's 0.26. Sign anim needs to be executed. So I grab a trigger.
+And I'm going to plug this into center. And as you can now see, we get this really nice basic animation
+effect. I want it to go a little bit further away. So I'll put that in 0.3, a bit too far, 0.28.
+Awesome. So as you can see, you can get a really nice effect with this.
+I could go in here now and do some more post-processing like the good old blur.
+So now I want to composite this back into the original image. This was already covered in a previous tutorial.
+But I need to make another image. And now I'm going to get the original output and plug this in here.
+And I'm going to disconnect this one and get this one back there. So now I have the original.
+And I'll make another draw image. And with this, I'm now going to put in the depth texture focus.
+As you can see, it's overridden the original layer because we're using normal. I'm now going to put it on add.
+And as you can see, we now have this glowing effect, which looks pretty cool if I might say so.
+Now we want to animate it a little bit. So let's actually use the transform here.
+I'm going to just get a timer to just keep some counting.
+I'm going to add this to rotation X. I'm going to add it to rotation Y.
+And I'm going to put the speed up to 5. So we get some motion.
+Now you could go a lot further with this and enhance it in any way that you see fit.
+For example, I could make only the outline of the spheres glow by putting an edge detection.
+And then we can turn the blur off. And as you can see, we now get this nice white outline around the
+spheres. So this was just one of the many ways that you can use the depth texture focus up to
+start to enhance your existing pipelines. So this was a quick one, but it was just something that I
+wanted to share with you guys. I hope you've enjoyed this tutorial. If you've got any questions,
+please feel free to post it in the forums or to place it underneath the video below. Thanks for your time. Happy patching!

@@ -1,0 +1,29 @@
+https://www.youtube.com/watch?v=ASp7LEqZUIE
+Hi there and welcome to the ByteSize channel. Today I'll be giving you an
+introduction to the random numbers up. I'd like you to pause the video and just
+build what you see there on the screen. Okay great let's get started. Let's go
+over here press escape and make a random numbers up. We're now going to use this
+to generate random numbers to change the position of our cube and the scale. So
+now I'm going to make a timer 2. I'm going to plug this into a modulo because I
+want to loop the number. I'm going to put a modulo on 4. This now means I get a
+counter going from 0 to 3.99. I now only want integer numbers not flows so I put
+in a floor in between and as you can see I only get whole numbers. This I'm now
+going to plug into the index. I have now three outputs which free run different
+random numbers X Y and Z. I'm going to plug them into transform position X position Y
+position Z. With random numbers you can define the minimum and the maximum number
+that's generated. So now I'm going to put it on minus 0.5 and 0.5. As you can see
+here it's generating different random outputs the whole time. I can now use this
+again to change the scale with the scale XYZ object. So I'm going to grab this. I'm
+going to put it over here. Whoa. Jumped around for a moment. I'm going to grab the timer, plug it
+in. And now these I'm going to plug into scale X, scale Y and scale Z. Now I want the range to be between 0 and 0.5.
+Now I want the range to be between 0.2 and 3. Now let's maybe use an orbit control so we can see a little
+bit better what's going on. Now I can drag the viewport a little bit. And as you can see we've now got a
+randomly generated shape with the scale and with the position. I could make the position jump around more
+by saying minus 1 and 1. Now what's happening is index is using seed. So the seed is like the
+random values you get back. So I've actually got semi-random numbers now. They're going to keep repeating the
+the whole time. But if I'm going to get timer 2 and plug it into seed, what's
+now going to happen is our seed is going to be changing the whole time, which means we'll
+never get the same result. And then we've got true randomness. So let's summarize it.
+Random numbers can be used to generate values which are between a minimum and a maximum. And the index in the seed can be used to control whether it's truly random or not.
+Okay, I hope this tutorial has been helpful to you. If you have any questions, please feel free to leave them in the comments below or to post them on the forums.
+Thanks for your time. Bye!

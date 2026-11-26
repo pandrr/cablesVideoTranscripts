@@ -1,0 +1,159 @@
+https://www.youtube.com/watch?v=glY1s9PCb00
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the farms is
+Andrew and today I'll be showing you how to use MIDI CC data from Ableton Live to control and
+animate a post-processing chain inside of cables. This is the third part of an ongoing tutorial
+series and I'd just like to give a quick shout out to everybody for all the positivity and all
+the feedback that we got. It's been really good and overwhelming so anytime you've got something good
+or bad to say including criticism please put it there under the video or put it on the forums.
+So let's get started. So I'm going to go over here to the midi in device. I'm going to go to the CC
+output. I'm going to pull this here and then I'm going to make a midi CC up. It reads a CC value from
+a controller. I'm just going to move it over here. As you can see we're a bit tight on space today and I
+want to just make it all as visible as possible. So what I want to do is I want to use like this
+Voronoise effect to displace pixels on the screen. That's the easiest way to say it. So I'm going to
+disconnect this texture, go over here and I'm going to make an image compose. Let's go there. I'm going to
+make a Voronoise that's here the texture effect and I'm now going to plug that output into the full screen
+rectangle so we get a preview here. So if I go to Voronoise and I just use the movement as you can see
+I'm moving things around and time does this. Okay you know time is actually the better thing to animate.
+So I'm going to just leave movement on say 0.3. I'm going to put the number on 5 and this allows me to change
+the amount of cells that are on the screen. So I'm just going to put on 5 for now. Okay so if I do
+this with time I get some really cool simple effects right. So I want to animate that with live. So I'm
+going to go over here and I'm going to right click and I'm going to say insert midi track. You can do
+ctrl shift t. You can also go to the create menu. I find it important to label my stuff so it's clear
+what's going on. So I right click rename and I say Voroi time and actually let's put in the cc number cc 14.
+I'm going to double click here and make a new clip. I'm going to click the envelope button twice so I get
+to the envelope view. Now I'm going to click here and then I'm going to go to cc 14. That's what I'm
+going to draw into. I click once here to make a breakpoint that little dot there and I click again
+here and I'm going to drag it up and now I'm going to press play. So I click back on the midi cc up.
+We've not mapped the cc index yet so if I put it on 14 scroll down. One last thing we have to send the
+midi out so here midi out I set to loop midi port on mac ic virtual midi driver and here we can see
+that the envelope on the right hand side is coming into cables nice quick and easy. We could normalize
+it between the zero and one range and we can also put it on minus one to one. So I'm going to put it
+on zero to one. So now I'm just going to plug this straight into Voronize and I'm going to plug it into time.
+And as you can see this envelope here now is animating this there. So I actually want to just swap this
+around a little bit. I want to do it like this. I just want to show you how quick and easy this is.
+So I'm going to click here and I'm going to press ctrl and the up arrow key. This doubles
+the length of the loop. So as you can see envelope nothing. So now I want to make a new breakpoint and I'm just
+going to move it up to say here. All right. So we've just created our own first simple animation from
+Ableton to cables. It's really that simple and that easy. So I'm just going to label this and I'm going to call
+it one. Now something you're going to see me do more often in this tutorial is I'm going to click on the clip and
+press ctrl D. You can right click to duplicate and then I'm going to rename this to ctrl R, call it two.
+And this is the thing you're going to see me do. So if I press ctrl 2 and ctrl 1 I change the grid
+resolution as you can see. And if I press B I can swap between the pencil. So now I want to do
+this just to show you what's happening. I'm going to press play and watch what happens.
+So now I'm going to press stop and I'm going to press play.
+As you can see it's kind of like we've made it animate on the downbeat of the kick and the snap.
+So I could press ctrl 1 now, ctrl 1 again and I could do some really little simple effects like this.
+As you can see it just swaps there at the end a little bit. I'm not saying it's very pretty,
+but it's just to show it. So now I'm going to do this.
+Okay, so I can swap now between this clip or this one. Okay. And that's the very basic of everything
+we're going to do today with more channels. We can just recreate more and more envelopes and more clips.
+I could grab this here now, ctrl C, ctrl V. I could press play.
+ctrl 2 if you, ctrl 1 if you, sorry, ctrl 2 a few times, ctrl 1 let's get it like this.
+And I could now just draw out something like this. We get a mix between these jumps and these ramps.
+So this is just to try and show you how quickly and easy it is to get creative the moment you get going.
+So we've animated the Voronize, that's great. The next thing I want to do is I want to animate the amount of
+cells there. So if I put this on say 70, sorry, 70, I get a lot of cells. If I put it on 5, I get a few.
+Put it on 30. So let's do 5, 30, and 60. Okay. So I'm going to go here and I'm just going to press stop.
+So first of all, I'm going to make a new MIDI up. So the ctrl C, ctrl V. And I just want to use the next
+MIDI CC. Connect the MIDI event through. And now I'm going to put this on 15. And I'm going to put the
+normalize to none. I actually want values between 0 and 127. I go here and I right click and insert a
+MIDI track. And I'm going to rename this Voron cells cc15. So I'm going to go here, turn the envelope on and off.
+So I get this, I'm going to pick cc15. Press B, click here, ctrl 2, 2, 2, 2, B. So I can just do this one big line.
+So I'm going to pull this down to say near five. And I'm going to rename this five. I'm going to duplicate
+this with ctrl D. And now I'm going to move this up to say 30. And I'm going to rename it 30. You want to
+rename stuff everyone because this can get tricky to remember later on. And this one I'm now going to
+move up to say 80. Rename 80. So this time I remember to set the MIDI output to loop MIDI port.
+So let's see what happens here. So I've got MIDI CC up. So in cc15 I get the value out and I'm going to
+plug that into none, which is the number of cells. If I now press play with five, I get this. If I click
+here and press play, I get 30. If I go here and press this, I get 80. One quick thing, I'm going to put
+the global quanta size on one bar. So it takes a little bit longer to swap over, as you can see that. It's a lot
+easier to keep things in time then. So as you can see, I've already started making these basic
+combinations. So I can get envelope one and get 80 of them. Press play. And then I'm mixing those two
+together. I could click on five and this envelope and do this. And then I get this kind of thing
+happening. So as you can see, like Ableton Live is an incredibly powerful live tool. It's just made to make
+live content and jamming just way easier. It's just my favorite sequencer, basically.
+So let's get back on track, getting a little bit off track there. So this is like really cool. This is
+a basic chain. So now I want to display stuff, right? So I'm going to go over here. I'll just press stop.
+So I need another chain. So I'm going to get this and move it, tidy it up a bit, and just pull out here.
+And I'm going to grab an image compose. And first of all, I want to recreate the original
+look with the cube. So for this, I need to draw an image. If you're not following image compose and
+draw an image because you're just drawing cables, go to the bite size playlist that we have, and it'll
+make it all clear. So I'm going to disconnect the Voronoise, okay? I'm just going to grab the original
+texture with the cube, plug it into the draw image, and the output here goes to full screen rectangle. If I now
+press play, we've got the patch from the previous tutorial video. So now what I want to do is, I
+want to use this black and white texture to displace the pixels. So I'm going to go here, and I'm now going
+to grab pixel displacement op, okay? And I'm now going to plug this into that. I'm going to press play,
+nothing will happen here. I'll show you why. So pixel displacement, let's move this out of touch,
+has an amount X and an amount Y. So look, I'm getting this texture here, and I'm plugging it into
+there, okay? Let's just get a slope, so we've got some animation. So that's coming in here, right?
+This black and white texture. And if it's wide, the more wide it is, the more it gets displaced.
+So I'm going to turn this up to say 0.1 on the X axis and distance 0.1. And look what's happening.
+We're using this texture here to displace the pixels on the screen. Really cool effect. So we could now put it
+on 80 cells. And as you can see, it gets really, really busy. This is just like, you can go wild from
+here. If you followed it so far and you're following this, you're already there. It's just a question of
+time of experiment and finding the things that you like to do. So I'm going to put this on save 30 cells.
+Okay. And let me just press stop here. So what do I want to do? I want to animate.
+I want to animate the, sorry, one moment. Yeah. So I just actually, I think this is okay. What I
+want to do is I just want to animate the amount of this, like when it's on or off. That's a thing you'll
+want to do a lot if you're VJing or something like that. Sometimes you want an effect off and on.
+So let's like just build that right now. So I'm going to go here and I'm going to make a midi track
+and I'm going to call it FX amount CC 16. I'm going to make a clip. So first of all,
+let's make it where this goes off. Okay. So I'm going to grab a midi CC up,
+move it over here, grab the event, plug it in, get the value out and I'm going to plug it into amount.
+As you can see, it's now gone. So we're going to put normalize to zero to one because amount doesn't go
+higher than that. And I go here now, click the envelope twice, press B to get rid of the pencil.
+Sorry, need B again. I'm going to get a really high resolution and watch what's going to happen now.
+Oh, that was pitch bend. My bad. Let's make a clip again. I need to go to CC 16. Okay.
+Control two. And here we go. I'm doing this now. Control two one more time. So if I press play on this,
+set the midi output to loop midi part. Put this to 16. Okay.
+So as you can see, when I've moved this all the way up, the effect is on. I'm going to pull it down.
+It's off. So let's just like make this a lighter color and call this FX off. Let's do control D and
+duplicate it and now pull this up, press play on it and rename it FX on. That's like the two basic things
+here. So I could just move these up here now and I can select all of these parts here and do control E
+and remove the stop buttons. So now I can say FX off, FX on. Okay. So let's get it a little bit more
+interesting. Control C, control V. So I'm going to press control one.
+So I get this resolution back, see, and I'm going to just make it turn on and off. So if I do this now,
+as you can see, it's kind of turning on and off in time with the beat. So now I'm just going to duplicate
+this. I'm not going to bother renaming it. I'll go here, press B. And now what I'm going to do is I'm
+going to click away this and click away this and I get this weird blending pattern. I'm not a big fan
+of that actually. So let's put it back. So I'm going to do B here, pull it up like this and we get this kind
+of like weird faded effect. Okay. So let's just put it on for now. So now I'm going to go here and I'm
+going to create a blur up and this is like crazy much, right? So we're going to get this output from
+zero to one and I'm going to plug that also into amounts. And the thing is, everything becomes blurry,
+but I don't want that. I only want it to become blurry if there's Voronoi. So we have a mask input
+and the easiest way to say this is if it's white, it blurs and if it's black, it's not. So watch what
+happens if I plug this in. Let's just, let's just leave this on for now. So I'm going to put it on on,
+so it's on the whole time. And now not everything in the image is blurred. It depends on the Voronoi.
+So now I'm going to go over here and I think, you know what, I'm just going to tweak this a little bit
+more. So I'm going to get an edge detection. Okay. As you can see, you've already got a really
+different effect now. I'm going to turn the amount down. And as you can see, it's kind of like adding
+this white outline to things, right? And it's just making it look a little bit more stylized. Like I
+like the way this is going. So let's put it on like 0.3. Yeah, this just looks and feels a little bit
+better. So I'm actually just going to grab FX on and I'm going to put it here and I'm just going to copy it
+two or three times. So there's a little really cool thing here in Ableton Live called follow actions.
+And I'm not going to go into it too much because that's a separate tutorial. It's more Ableton related.
+But if I now go here to a clip and I click L for launch mode, we have here a follow action,
+right? So I'm just going to do everything on random now. I'm going to click all these with shift select,
+and I'm going to say other. And if I press stop now, watch what happens. I'm going to press play here
+and it's going to pick a different clip to play. Okay.
+Great. So this we can apply over here. So I'm just going to select them all and I'm going to say follow
+action to any. And we're right near the end of the tutorial. I just want to squeeze this one in so
+you know. So I'm going to click here on the scene and I'm going to trigger all of these together and
+watch what happens now. As you can see, it's going to all pick a different clip.
+So now I'm going to make this a bit bigger because we're right at the end of the tutorial.
+Now this is really, this is like a really basic example. The part I've been working on myself,
+I really sat here and I tweaked and worked out all of these envelopes. Like I really made a lot of
+different ones with timings and staggered step jumps. But this is already more than enough to show you how
+how to get started with using MIDI CC data from Ableton to drive things inside of cables. We've
+got a huge amount of post effects and texture generators. The sky's the limit. You can go
+absolutely crazy with this. You could also map your own MIDI controller, like a launch pad or push to
+Ableton Live. So you can do manual control and you can also put it like what it's doing now, this sort of
+like semi random generative output. So I've probably been talking far too long with this tutorial, but I've
+really just wanted to make everything really clear to everybody out there. So I'd like to say a big
+thank you for watching. In the next tutorial, I'm really going to go way more in depth into this and just
+show like more techniques to control and to tame this data. I'm also going to try and get like some kind of
+camera set up so you guys can see what I'm doing with my hand. And it's just going to be showing you more
+how you could actually use Ableton to drive a program like cables to do some VJing for example. So I'd like
+to say thank you for watching. I hope it's been a good one. If you've got any questions or comments,
+please feel free to leave them under the video below or to post them on the forums. Thanks for watching
+and have a good one. Bye!

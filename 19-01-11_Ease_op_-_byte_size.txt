@@ -1,0 +1,29 @@
+https://www.youtube.com/watch?v=PEVSinWoOSc
+Hi there and welcome to another video on the Bitesize channel. Today I'll be giving you an
+introduction to the ease up. I'd like you to pause the video and just make what you see here. Great,
+let's get started. First of all I'm just going to copy this here which is just a material transform
+and a cube. I'm going to connect that over here and now going to move this to the left. I'm going
+to move this one to the right. I'm going to change the scale of both of them to 0.5.
+And this one I'm just going to give a different color with the color picker. Great, so let's just
+set up something so we can visualize what's going to happen with the easing up. So right now I'm just
+setting up a timer. I'm going to put this into a modulo so it can loop it. I'll put the number in
+one on ping pong and as you can see we now get this kind of number here. I'm now going to subtract
+0.5. This will now give us a number from minus 0.5 to 0.5. So first of all I'm going to connect this
+here. I'm going to put it on position y. As you can see we now have this loop. Let's just slow it down a
+bit and put it on 0.5. And we're now going to use the red cube to visualize what the ease up is going
+to do. So I'm just going to get the ease up here. Map a value to an easing curve. So now let's get this
+and plug it in there. And as you can see we've got a difference. This is because with ease we have to
+give it a minimum and maximum. We know it's minus 0.5 to 0.5. Great. So now we've got these two things
+mapped up. So this is the modulo which is looping and this is what we're going to use to visualize
+what the ease up is doing. Now I'm going to click here and now we can pick all of the different modes.
+So let's just start with smooth step. Now as you can see it eases into the minimum and maximum number.
+Pick smoother step. So this is just a great way to visualize it. It's a pretty simple up but it's a
+really handy one. So let's put some cubic in and now we get a kind of bouncing behavior. This is cubic in
+so it's happening on the minimum part. Cubic out will now happen there. And as you can see this is a way
+to create like a bouncing ball motion. There's a huge amount of patterns here that you can use. I'm
+just going to show a few of them. This is a short bite-sized video believe it or not. Send in out. So
+this up is an amazing way to just get different responses to like linear motion and linear numbers.
+So if I go here and I grab like bounce out as you can see we get this kind of like bouncing ball
+behavior. So this was the ease up. You can use it on anything. Just don't forget to map that minimum
+and maximum. I hope this video has been educational and informative. If you have any questions or
+comments please feel free to leave them under the video below or on the forum. Thanks for your time. Bye!

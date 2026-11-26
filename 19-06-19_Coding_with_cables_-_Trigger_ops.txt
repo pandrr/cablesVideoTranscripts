@@ -1,0 +1,58 @@
+https://www.youtube.com/watch?v=vJ47_rYdezU
+Hi there and welcome to the first video of coding with cables. My name is Mark, my handle on the
+forums is Andro and today I'm going to be showing you how to get started with creating and coding
+your own ops inside of cables. Don't worry if you've not coded before, these videos are going
+to be pretty easy to get into and they'll all be broken down into much smaller pieces. So today I'm
+going to be starting with the trigger ports and functions. So without further ado, let's get
+started. How do we create an op? Well, I click somewhere in the patch. I press escape. I'm going
+to type in a name for my op and I'm going to call it my trigger op. This button here says create ops.user.andro.mytriggerop.
+I'm going to click that and this editor pops up. I'm going to press escape and I'm going to press escape
+again and then I'm going to type in the name of my op, my trigger op. And as you can see,
+it now appears here. So there's no ports, there's nothing. We have to define all of this ourselves.
+So I'm going to click the op and I'm going to press the E key for edit. I'm just going to select all this
+and get rid of it. So what I want to do is I want to create a trigger input and a trigger output and
+I want the trigger output to go off when a trigger comes in. So we need to make a port. So first of all,
+I'm going to make a constant and I'm going to call it in trig and now I'm going to assign a port to this.
+So I'm going to say op dot in trigger. Now all ports need to have a name. So I'm going to call this
+trigger in. If I now press control s to save, as you can see, we now get this port with the name
+trigger in. So now I need to make an output port. So I'm going to go here. I'm going to call this one
+out trig and I'm going to say op dot out trigger and I'm going to call this trigger out. I'm going to
+press control s to save. Okay, so let's pull this out and let's plug in a main loop.
+Press F. So we have this coming in. I'm going to pull this out. I'm going to grab a sequence op.
+As you can see, we don't have any flow mode. So we need to tell the op that when the trigger comes
+in, we want you to send a trigger out. So this is way easier than it seems. So I'm going to go over
+here and I'm going to make a function. I'm going to call it update. You could call this anything you want.
+And then I'm going to go over here and I'm going to say out trig
+there dot trigger. It's a function. This means send the trigger out of this port out trig. Now we need
+it to happen when the trigger comes in. So we go in trig and we put a listener on there and we say
+on triggered equals update. So now I'm going to press control s and save. And as you can see,
+the trigger coming in now causes a trigger to go out. Let's just recap this really briefly and simply.
+So this is our input port and our output port of the type trigger. So here we say in trig on
+triggered. So when it gets a trigger, call the update function and the update function says
+out trig dot trigger, send the trigger out. Okay, so let's try something a little bit more advanced.
+Let's say we want to make a counter based upon the amount of triggers. So I'm going to say,
+give me a variable, call a counter and equal zero. This means that whenever the op is going to be created,
+the counter will be set to zero and go here. And now I'm going to say counter plus equals one.
+Now, how do we see this? Well, we could make a port, but sometimes when you're working with code,
+you just want to debug. So you press control shift I and you get the developer tools here. So now I'm
+going to go here and I'm going to type in console dot log. I'm going to give a string so I know what's
+going on. I'm going to say counter is plus counter. And watch what happens over here when I save it.
+All of a sudden you get this. So, hey, this works. Just wanted to show you the debug console control shift
+on and get rid of this. And now I'm going to get rid of that. So I'm going to make a new output port.
+I'm going to call it const out count. And I'm going to say is equal to op dot out number.
+So this one I'm going to call current count. Okay. And then I just need to set this output port to
+counter. Really simple. You might be already seeing where this is going. So I say out count dot set.
+And then I just pass and counter variable. And as you can see, this output port now is showing how
+many times the trigger has gone off. So say we'd want to reset this last thing we're going to do in
+this tutorial. Well, I'm going to go over here and I'm going to just tidy this up a bit. And I'm going to
+say const in trig button equals op dot in trigger button. Now this is going to give me a button and
+the port that I can use. I'll show you why. So I'm going to go ahead and I'm going to type in reset
+counter. I'm going to press control S. Now I get this button here that says reset counter. So when I
+press this, I want counter to reinitialize back to zero. So I'm just going to go here. I'm going to show you a
+different way of doing this. So I'm going to say in trig button dot on triggered equals function.
+And then I'm just going to say counter equals zero. I'm going to press control S.
+So when I now press this reset counter, if you watch here, this resets the button.
+Okay. This was a basic introduction to how to get started with creating your own Ops inside the
+cables. I hope this video has been educational and informative. If you have any questions or comments,
+please feel free to leave them under the video below or to post them on the forums.
+Thanks for watching and have a good one. Bye.

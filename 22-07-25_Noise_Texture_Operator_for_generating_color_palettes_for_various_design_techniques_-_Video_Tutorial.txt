@@ -1,0 +1,438 @@
+https://www.youtube.com/watch?v=Ds4fPcxyBvM
+Hello this is Alex from cables.gl I am going to talk about noise texture today and it seems like a very utilitarian pretty boring operator right but I think there's so much to it that is completely missed and I was asked to make a tutorial about color and maybe do some colorful stuff and why not noise texture because noise texture is super powered now.
+It used to be alright but now we have so many more controls to take it into 32-bit texture world to control point clouds which I think we will cover in another tutorial again specifically with noise texture and what we can do easily with it now but in this tutorial I just want to look at the colors that we can quickly generate and use in our projects to spice them up.
+Get some weird glitchy effects get cool color palettes that we might want to you know randomly generate and then use in various ways and I want to cover them all and of course I have a bunch of examples to show you and
+And we're going to start with basically just using the noise texture by itself and I'll go through all the parameters and then I'm going to go through all these examples and tell you what exactly am I doing here and I'm just going to preview all the examples for you right now.
+So here we're just doing the plasma thing and we're giving the plasma our own colors because the plasma of course does have a RGB mode but we're recoloring this black and white plasma in a specific way using noise texture operator and a bunch of cool interesting tricks that I think you'll find useful and I hope you use in your projects.
+And then there's this one which uses very very tiny and you might see this a lot in all the examples where I'm using actually quite small textures to get you know like a manageable color palette there.
+I'm not using like 256 color palettes to generate these images for for example for backgrounds or some pattern making or something like that and in this example I'm just using that small texture and then repeating it and then warping it a little bit with pixel displacement and you kind of get pretty cool things and we'll talk about why this is cool now because before we weren't able to do a specific thing.
+But it's going to be the seed of the noise and that's where we're going to be the seed of the noise and that's where we're going to talk about that part of the operator.
+Okay what else here kind of an interesting effect where I'm using the chroma key material which we haven't seen for a while and I'm using a very weird thin noise texture to then wrap around this kind of copy of the spray can.
+And then we have some sort of an effect I think I was going for something else here with the texture projection we can take a look at how that looks but I ended up with this kind of cool effect where we're spinning colors around.
+So yeah what else this one is pretty traditional use of the color map operator but we're using the noise texture to manipulate those color palettes that we're going to remap from the original image.
+And the original image is a wonderful Terrinosaurus Rex that I found on Sketchfab of course all the models that you'll see in these little bits little projects I'll link below support the artists.
+These things are incredible this one fantastic use of textures and the low poly mesh I was pretty amazed at how compact this thing is with a lot of really cool animations actually.
+All right back to what we're going to do we're going to do quite a traditional way of recoloring the final image into something funky and play around with it that way.
+In this example I'm doing something really weird and I hope C flap is going to watch this tutorial and say what are you doing because I love using PBR environment with completely incorrect textures for lighting the environment because we can do that.
+So you see the noise textures going into the PBR environment light and then it's set up to use a kind of a non-RGBE texture and then we can easily control the brightness and everything and get pretty cool little textures that we can use as environment maps with the PBR material.
+So we'll take a look at that it's a bit of a weird use case but I think pretty cool anyway.
+Just a way to recolor your scene without actually getting into stuff like color remapping and manipulating the actual textures of the model we can manipulate the environment.
+And then in this one I think I'll show you how to again color map the texture that is being projected or applied to the material pretty simple example also kind of a cool
+Cool painterly rock that will have some fun with with a noise texture okay so let's start with the basics
+What is this noise texture operator?
+So let's find it it's called noise texture and you see that it doesn't have any trigger inputs it's just
+by itself and it has a bunch of inputs for
+All these settings here and all these parameters and it outputs a texture as we can see in this object
+Port output port
+By the way you might have noticed since the last update I don't think I talked about it yet but we can mouse over the different ports and we get a lot more descriptive
+information about what we get what we need to put in and what we get out so it's pretty cool actually so an object you know
+You know we have a lot of objects object output ports input ports and cables but here we also have a description like what type of object is it so it's a texture object
+so you know that you know that you can do maybe like a vis texture and then you will see
+What this operator is generating so
+This is what we're getting by default
+A black and white noise texture
+Pretty useful in some instances, but
+What I'm gonna do is find a specific thing with color textures for use in those examples. We just looked at right, so
+How am I achieving that stuff? Well, let's look at the parameters
+The width is of course the width of the texture the height again. That's why
+256 256 256 we have a 256
+Equals square
+Texture nothing special there then we have the filter mode, which is pretty cool actually
+For our use cases or the use cases. I'll show you with my examples
+Pretty interesting things you can do with the filter you can smooth out your colors smooth out your
+values I'm pretty cool
+Or nearest which is pretty much no filtering you see it's like completely pixel
+sharp sharp pixels might also be useful for
+something you're doing so
+Again, this stuff is pretty much in every texture
+Operator and cables always look out for this filter mode. It's also in the image compose
+quite an important thing to keep track of
+you'll see in image compose and
+the other texture
+Operators for example, I'll pull one out of the library
+This wonderful beach here. This is the texture op. You'll see that it also has a mip map mode
+And mip map mode is actually quite great when you're using stuff in 3d
+but
+We can achieve that also with the image compose so we can plug this texture into image compose and then
+Get our mip map effects onto this texture. So no worries, right and let me actually connect this to
+Our canvas here. So this black screen is our canvas and then I'll put down a full screen operator
+Full screen rectangle and then connect our noise texture and now we have our
+Texture mapped onto our canvas
+all righty, so
+What else can we do?
+We have the wrap mode again. Also, we see this a lot in image compose
+wrap
+lets you scroll the image or maybe
+Tile it on other 3d objects and stuff like that and then the wrapping mode will
+Clip or a clamp to the edge and
+Stop the texture from repeating or we can have a mirror repeat
+Pretty useful stuff. Okay, now we're getting into the actual
+Parameters that are super important for this operator. We have the color mode by default. It's off if we turn it on we get a
+wonderful
+random color
+Texture here and
+Then we have the pixel format and we're gonna work with 8-bit today and
+In another tutorial that I want to do we're gonna use
+the full potential of this 32-bit
+range
+So we can get colors that are in wild values that then we will use for point clouds or something like that or positions of our
+3d models in 3d space but
+More on more on that later right then we have a seed which is an amazing feature and that is now in this texture and I'll
+Try to explain what it is so a noise seed you might see in other software
+You know if you're familiar with this. This is exactly what this
+seed
+Parameter does in cables with the noise texture
+You might see it in some other operators and
+basically
+when the seed is zero then
+Anytime I change any settings on
+On this operator or I load up the project for example
+I will get a different
+Set of colors or values because it's not just colors. It's also the black and white mode
+They will be randomized right and for us to see this really easily
+Let me just do the height at 1 and then width maybe 5 so right now we have 5 random colors right and the seed is 0 so
+Let me flip on color and then I'll turn off color
+And then I'll flip on color and you see the colors changed because every time we do anything here
+It will always randomize the seed of the texture and before we weren't able to control this so it was always random and it was
+It was still an interesting operator, but you wouldn't really be able to control it. But now
+You can give any sort of number into the seed and you will get some super random
+combination of colors, but then when I
+Save and for example reload the project
+We're gonna get the same exact colors back so that's actually really great
+To do the stuff. I'm gonna show you a little bit later and
+Okay, then moving on we have the actual kind of value range that we're allowing
+The colors to be in right so for example, I really don't want to see any green anywhere
+I can set it to 0 and now I'm working only with red and blue
+values but maybe I want it just a little bit and then I decide no, I don't want
+the green values at all so I can shut them off also with the toggle or each color channel here see so now
+for example, you might need only blues for something right so
+we can
+randomize on the colors for blue
+In our texture so that's how you can toggle the different
+channels for the texture but also change the the minimum and maximum values that will be chosen
+In each of these seeds or as you randomize it
+with the zero value
+alright, so
+Pretty handy. Alright, so let's now get into the use cases and I'm going to continue using
+This simple setup first to kind of show you the way I create
+Color palettes, right? So right now I have the width at 50 and height at 1 and why is it this way?
+The height at 1 is basically all the information we need in our texture to be able to draw one single pixel
+From the bottom up or whatever and then populate it with a number of colors that we want
+So for example, I want eight colors, right?
+So now I have eight stripes and
+And actually the texture is super tiny, but it's getting stretched onto our canvas and
+We get this wonderful big
+picture of our noise and all the different operators I'll show you they basically only care about
+If you're picking colors to just care about the width, right? That's
+You'll also notice this with a gradient texture operator that it's actually generating like a super small one pixel high
+Wide I don't know how many is a 256 by default wide
+Gradient with all those colors in there and then you can
+Manipulate the the operator and then move around what color is being
+Used or whatever so when you're going to be using
+The noise texture up for colors or something like that keep in mind that you don't actually need to draw it into like a
+A large texture doesn't need to be eight by eight or anything. Just leave it at one so
+okay, and then I am going to
+actually
+Put it into an image compose because I want to show you the the different things you can do with image compose to
+To change this color palette
+Not by changing the colors, but by changing the positioning and then flipping it and things like that
+So I'm going to put down an image compose
+and I can stick the
+Noise texture directly into here and maybe manipulate it with different operators that way
+But I'm going to just use it the classic way with draw image because the draw image
+Has a lot of powerful tools inside it, right? So
+I'll connect it here and then connect my
+image compose out into the full screen palette
+Sorry full screen rectangle and let's look at this draw image
+You'll see all the way at the bottom of the parameter field. You'll see that
+The parameter panel you'll see that there is a bunch of transform
+Functions that we can use so
+Let's turn this section on you'll see a bunch of it goes
+active now and then we can manipulate the the scale of our color palette salt to say obviously on why
+Values doesn't matter because we have a one pixel texture
+So we don't need to worry about that. We can try to rotate it. I don't know
+Maybe it's a neat way to create like a background or something like you can do
+Positive values for the scale so you get like a repeating pattern of the noise
+I think I kind of did this here, right? I have a draw image
+and then another image composed with a pixel displacement and I'm basically just
+Putting two image composes
+Against each other with different noise textures and then I'm getting this funky effect
+of
+diagonal lines or zigzagging lines and then when I click the mouse and the right mouse button I get different settings and different patterns from just those two tiny textures
+so
+Draw image super cool. I think even already you can get like cool wallpapers going or maybe textures for for your 3d walls in your
+in your
+first person 3d
+3d room that you're building in cables, right?
+so
+um
+Actually, you know in that, uh, june updates
+tutorial
+um, or or overview video there was this, uh, um
+Room that we built and then I think it has a noise texture projection just like going across half of the the room
+And I'm pretty sure it was done the same way
+Um with a draw image
+um
+And uh texture projection right maybe I don't know but you could you can imagine putting this on the wall, right?
+Um, okay, so back to what we can do with this draw image
+um, sometimes when you're doing things like this traditional
+uh, uh color mapping technique where you're taking a final image, right?
+This render to texture image of this
+uh, dinosaur
+We are
+Remapping things with this noise texture
+And we might get a combination that's pretty interesting, but
+We need to flip the texture for example, right?
+So, um
+That's why draw image is super handy because it has these flip
+um buttons and we can move really quickly our
+values on this texture into kind of the correct or sort of the
+the the spot that we want it to be right?
+So for example, um
+What i'm trying to say here is the
+This image of this tyrannosaurus
+It has dark and light values
+And the way they're set up makes us believe okay that the sun is like above here or something
+Then he has a shadow and there's parts of him that are uh, or her are uh
+darker and
+If we remap these colors to the complete like flipped negative
+Values or something like that, right?
+The shadow is now white and uh, where
+He um, his skin should be shiny. It's now black
+It might look a bit weird. It might look cool, but
+To have this really quick
+Flip to get your random
+Texture into the right space is actually pretty handy, so I recommend
+Playing around with with draw image to manipulate you
+Manipulate your color palettes or gradients that you're using with remaps
+Or yeah other operators that take gradients
+To just quickly take your image and then
+Flip it and then see okay, it looks a little bit better
+Maybe
+Some some look really good some look really bad with these settings, but the extra flip allows us to
+To get into the right mood that we want for
+Our final look right, so
+Let's look at the other stuff we can do we can have this
+Position parameter to also push and pull our
+Color palette in the right place so again in this
+Example we can really see what happens when we use the position
+To find the the nice combination of colors that we like
+So actually let me see how how many colors I have. I have nine colors in here
+And I think I scaled it so much that i'm actually only getting like a couple colors and let me see if I can do a vis texture on this
+um
+So
+You can kind of start to see that everything in this vis texture is getting mapped onto this turinosaurus, right?
+We have this white part around here somewhere the background is gray
+There's some yellow and there's green um, and
+like
+It's there. So if we change the size of our gradient
+here
+then
+We get like a two-tone
+version of this
+Final image and then we can use the position to
+Manipulate a bit better. So for example here, it's uh, maybe flip flip to be better or something like that. Yeah
+So you get a better better image in the end. It doesn't it's not like a super glitched out weird
+um
+Darks are white and and all that stuff. So
+um
+Yeah, yeah, I again want you to be using this draw image with with the gradients
+It's really cool to manipulate the the position the scaling of it to to quickly get into
+um
+interesting
+um combinations of colors
+Okay, well, what else can we do? We can also have
+um
+Other ops, you know, maybe draw image is
+not what you need, but you can maybe put in a scroll text scroll texture
+Um, I think it's quite similar actually than than the draw image transforms. We have the
+Position which I think scroll is pretty much the same, but see you can do it
+Do it on the entire texture. So maybe that's also quite handy to pick a cool
+combination of colors for something
+um, okay, let's
+I think we're pretty much like getting
+What i'm what i'm putting down here right with the with using the noise texture is kind of a color palette generator
+Um, so let's look at some of these examples and and see what we can do in
+In our projects that might benefit from a little bit of experimentation with these colors
+um, okay, so
+We have this really cool rock
+hand-painted texture really nice
+I set up pbr material with some directional lights
+and
+um
+kind of an interesting use of full screen rectangle, right?
+I this is maybe like a hidden little
+um
+a trick to some people who are sticking around
+I think we completely forget that full screen rectangle can be
+Not only at the end of the image compose sequence. It's not only just for
+Showing your post-processed final render so to say
+uh, like in in in this example, right?
+We've got a full screen rectangle and then everything is getting drawn to it through
+Uh render to texture our 3d scene into the image compose post-process effect into the full screen
+We can use it as just any other 3d
+um
+Object that then gets stuff put in front of it, right?
+Pretty cool. You can get really interesting things like, uh, um
+It's almost like image compose in 3d space basically you can stack these
+multiple things on top of each other and draw different
+Things with alphas on top of each other. So it's kind of cool. So
+yeah, a little bit of a tangent
+But a little bit of a cool trick that I hope you you try out where you are not just
+using a clear color for the background
+But you can also put in gradients or here. I have a plasma that's kind of I don't know
+Maybe it's the sky. I'm not sure
+In the background and then i'm drawing my 3d scene on top of this
+And then I think this directional light is blue. So it's kind of giving a little bit of a
+Interesting effect as if the sky is in the back and giving a little bit of a shine onto this
+Rock so it all kind of fits together, but
+I think this rock is
+In need of some noise texture
+Manipulation with the color map here, right? So what I have here is this
+Painted rock material that is
+here quite nice, but i'm putting it into the image compose
+And then putting it back into the pbr material and noise texture is sitting here with a width of 3 height of 1
+Going to the color map and we have it set to linear and now I guess we should look at
+What this linear and nearest can do for us and in the color map
+Use case
+So let's turn on color and then turn on nearest and you see how like this sharp sharp texture is now getting color mapped
+Really harshly on top of our values. It's it's getting like almost thresholded into place
+By the color map because our noise texture is uh, really
+Not blurred or anything like that and when we turn on linear mode
+uh, the texture is now blended a bit and then the color map
+has some values in between
+um, these
+um, they're actually really hard to see i'm amazed that the vis texture isn't showing it, but
+um, you get like a really
+Fine gradient between the different colors as they switch from green to
+dark purple and then to blue so that's why
+um pay attention to this filter mode and in your gradients
+Or in this noise texture that's generated because you can get like really harsh effects
+So for example, if I put maybe more colors like 16 colors I get like a really weird
+um
+Effect here, uh
+But if I turn on linear then it gets all smoothed out and maybe the colors become less sharp
+um, but you get kind of a better way of blending and color mapping this stuff we can also
+not just keep it this way we can get into
+uh, our image compose and draw image way of doing things because the image compose has
+nearest linear and mipmap modes also and this like repeat and of course we can
+do all the draw image magic to then
+push and pull our colors into place here so let me just do it just so
+um
+everyone who's watching and is still into it gets it like
+really imprinted in in their mind that uh don't forget to try out image compose so image compose draw image
+um
+and then we will place
+this into the draw image and then the image compose back into our color map so
+what's happening now
+is actually we can compare what happens inside this
+image compose i'll put down this vis texture and you see this
+that's actually the the texture after it's being manipulated um with the
+filter modes inside image compose so if i turn on nearest and then here i'll turn on nearest as well
+you see that then we it's clear to us that we have the super harsh
+bands of color that are getting mapped to this rock uh texture that uh then looks
+well actually we can do some more vis texturing here
+this is our original and then this is our manipulated uh texture here
+so it's it's it's really really um thresholdy looking kind of effect uh we can also smooth this out by maybe
+um
+doing something like this uh going into manual mode for image compose let me make this smaller so
+it's clear what i'm doing in the parameter panel
+going into manual mode and maybe doing something like 1024 1024 and going into
+mitmap mode and seeing if that had any effect on the harshness of our lines let me do
+uh 128 by 128 and then uh maybe let's zoom in somewhere here
+um i believe it's getting smoothed out slowly but it's kind of hard to see because our
+rock is a bit small let's make it huge
+so linear nearest and you see that we're not getting like super smooth uh
+values like we get when we have a tiny texture
+this is a bit tiny this is a bit too tiny but like uh what do we have here
+um eight by one right so eight by one and if we go into linear mode again we're getting the smoothed out
+version of it um but if we go into a much higher width that then this texture gets put into image
+compose and gets kind of like resized into this larger texture then we're getting some of that
+sharpness back into our uh gradients so i hope it's clear sorry it took a little bit of a
+a setup here but basically we're taking that texture and we're making it
+into a bigger texture but uh um it's trying to keep all the the harshness of those lines and we're getting
+not completely smoothed outlines but some nice kind of sharp effects um so try this out it's it's a
+pretty cool way of smoothing out um your textures or gradients in a kind of weird way of uh manipulating
+using filter and and linear filter and stuff like that anyway kind of a interesting trick um but yeah then
+then we can of course do all this cool stuff with uh um the remaps and and position of of our colors that
+might fit our um final image better all righty so that's that's kind of like a basic cool thing you
+can do by just remapping the texture of a 3d model and and getting some kind of cool um color palette
+going um all right so then i wanted to show you this this rear is kind of weird uh uh use case with pbr
+environment light where i am using a noise texture instead of uh something common like the the way of
+doing rgbe um i think we talked about in previous tutorials uh for the pbr material um or trying to
+maybe maybe manipulate one of these uh equilateral hdris into um uh something like a pbr environment that
+you know makes sense i guess i'm trying to say uh what we're doing here is we're just taking any sort
+of colors and you can do this with any image compose um composition um that you want you can give it any
+texture right you can even uh take that beach image uh and just pump it into the pbr environment and then
+toggle um that uh option that you're not using rgbe um textures in in this pbr environment light this
+toggle right here um environment map does not contain rgbe data and you just flip that on and if you
+you can i think uh use 32-bit here doesn't make sense because i have three colors basically that's
+being used for this pbr environment light but if you're maybe drawing something in an image compose
+that maybe looks like a weird equal uh equirectangular texture uh then maybe using 32-bit is actually quite
+nice with um pbr environment light but we're not doing that we're doing something super weird where we're
+taking three colors in this tiny texture excuse me and then using it as a environment light for this cool
+little uh pool toy and it looks actually quite nice i think if i do so say myself but um
+of course you you get like very flat reflections right and and you kind of miss the the coolness
+uh of of having like realistic reflections on on objects because if you will see me doing the roughness
+all the way down and and uh metalness all the way up we're almost getting into
+kind of cartoon shader stuff so that's kind of an interesting way of of getting that effect right so
+um we're just generating a really weird environment um environment map for the pbr material and then
+remapping all the different reflections to those colors so we get this kind of cartoony effect um but with uh
+uh smoother smoother um effects we we also kind of get an unrealistic effect but uh it looks kind of
+interesting it's a nice soft and a cartoony uh feel to it and of course we can go to the different seeds and maybe
+pick an interesting uh combination of colors for our composition and yeah it's kind of hard to to pick
+stuff because sometimes you're like no there's gonna be a better better composition um of colors that i
+can use and of course we can increase the amount of colors to something wild um and then you know just what
+we did we do all that funky uh image composed stuff maybe even distort this image in a weird way to get
+interesting uh reflections because right now it's just lines right so uh and also don't forget that you
+can adjust the parallax correction which is kind of weird right because we're i'm not even sure what we're
+correcting here but we're changing the way uh it reacts to to this environment map and right now it's hard to
+see but uh if we go to like one one one one one one we see how this parallax correction is changing our look
+on our model so another um cool thing that you can do with the pbr environment light and this really funky
+environment reflection environment with the gradient texture of course we can rotate to maybe get a better
+shading or like a better look that matches our composition but yeah it's kind of a weird uh use
+case but i think try it out because it's so cool to just throw in uh interesting random uh colors and and
+use them for um adjusting the look of your scene really cool love it um okay this i guess we already kind of
+looked at it right there isn't much to this it's just a really nice model with uh you know everything
+applied the way it should be applied um this guy has some awesome animations check them out uh and then
+we're doing this very typical color remap of the final image so i think we already covered this a lot so
+i'm just gonna move on um and okay yeah this this is kind of a interesting result i was at first thinking of
+maybe doing something with this um spray can um on on the can itself i think it was this texture projection
+with with an animated texture projection with a noise texture and texture projection i think we have a
+tutorial on this and uh yeah it's pretty fun to do uh weird effects with gradients um with it let me just
+animate this actually i can do you know this like you can go to a parameter that you like and drag directly
+to the parameter so you don't have to go through here and go what was it rotate z you move this around
+or you visually see i was moving this one around that's the one i want to animate just drop it on rotate z
+and it auto connects um it's such a cool new feature i always forget to use it actually
+please use it it's it saves a lot of time um yeah so here we can add a bunch of colors
+by just increasing the width maybe even make a big noise mess on top of it some kind of cosmic
+weird holographic effect uh with this texture projection and then the texture projection kind
+of like the draw image has a bunch of different um ways of manipulating and mapping your stuff uh
+definitely check out that uh tutorial but i think it's kind of cool to to just project a bunch of random
+colors um it almost reminds me of that old uh you remember the old instagram filters where we would just
+throw gradients on top of everything this is kind of the same thing um all right so what did i end up
+actually doing i got this chroma key material which will remove a chosen color from the incoming texture
+or from a material that is already on um a model i don't know if we have a tutorial on this we should
+have one because i don't want to talk about it this store will be like five hours long that is uh interesting
+underused uh operator as well um but yeah so we have this weird um long and thin texture of noise
+that we're then wrapping all the way around this uh can and if we disable the can you see we got this
+uh kind of see-through interesting um mapped texture of this noise going around and around because we are
+animating these cool uh parameters here the texture offsets so if we turn them off um it's not animated
+and we just get this but of course it depends on like how well your 3d model is uv'd because this operator is for use with 3d objects and and you better
+and and you better have uh good uvs um to to have it function correctly and i didn't really know what we
+have so i just threw in this texture and from some angles it looks pretty good um we got this linearly
+filtered um set of colors because if we go into uh width of one then of course they're all connected there isn't
+any uh repetition um width wise so there there is no uh animation really seen as it's rotating but of course
+uh for it to scroll up and down we we get this cool effect but um with something like two you get an
+interesting kind of spread between two colors with this linear effect and if we turn off into uh if we turn
+on the nearest mode then the filtering is kind of off and we just get this uh wonderful sharp lines um but
+yeah kind of uh interesting use case as well um might be closer to what we will be doing with uh the noise
+textures for um sort of particle effects or uh point clouds and all the 3d stuff and we kind of covered this
+already in the point cloud from textures tutorial but um we didn't have our uh noise texture operator uh in
+in the in the shape and form that it is now so we could do like really quick uh awesome point clouds with
+this uh noise texture now so i think we'll have another tutorial about that stuff i hope you enjoyed this
+kind of a weird long uh tutorial i don't know if you want more of this kind of jammy uh approaches um
+to tutorials let me know please um or you want like really short ones i'm not really sure what's best
+because you know everyone's different right all right guys thanks a lot um hit me up on discord uh comment below
+come to our meetups fantastic stuff lately a lot of cool things being shown and talked about um we also
+have uh yeah some cool stuff planned in the future so um come by bye

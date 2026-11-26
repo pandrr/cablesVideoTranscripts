@@ -1,0 +1,57 @@
+https://www.youtube.com/watch?v=cUU0fNw3rEg
+Hi there, and welcome to another video on the Bytesize channel.
+Today, I'll be giving you an introduction to the color area op.
+I'd like you to pause the video and just make what you see here.
+Great, let's get started.
+First of all, we're going to put the radius of the sphere on 0.25.
+And now in between, we're going to add the color area op, this one here.
+Colorize all meshes around this XYZ coordinate.
+So I'm going to zoom out of the mouse wheel and I'm going to put the color picker here on just a really heavy red.
+And we're not seeing much because it's using a sphere to colorize the meshes, but it's really small.
+So I'm going to increase the size now.
+And as you can see, we're now getting a sphere which is colorizing everything.
+So I'm going to turn the mount up just to exaggerate the effect there.
+Let's put the size up to 4.
+So let's just run through some of the parameters.
+We can move this point in space X, Y, and Z.
+So this is a really cool way to just like color and area.
+You can play around some of the settings here, like invert.
+As you can see, these are now colored.
+This part is not.
+Fall off.
+If I turn it all the way up and I turn the size down, you can now see this sphere here,
+which we can then kind of like move around.
+Hopefully that will help you visualize what's happening there.
+So I'm just going to turn fall off down.
+So the nice part with color areas, you can stack them.
+So I'm just going to grab a second one here.
+And I'm going to put this one on a lovely green.
+And I'm just going to move it off to the side a little bit.
+And as you can see, we've now got this nice blend, this gradient between the two colors.
+So you just got to play around with this, find the settings that you like.
+So just to help you visualize some of the other modes here, I'm going to do this.
+I'm going to go here.
+I'm going to make a cube and I'm going to put it on 10 by 10 by 0.1.
+Let's just rotate a bit here so we can see what's happening.
+So now we can see the influence of the color area up on the cube.
+So I can now click color area and I can once again, move it as before.
+So now let's just turn the fall off up so you can just kind of see what's happening here.
+And if I now change the size, you can kind of visualize what's happening easier.
+So let's go to color area and then just check out one or two of the other modes.
+So we can put it on the X axis like this.
+And now you see that the size does this.
+Fall off works like that.
+So you can play around with these settings.
+And the great part of this is it just stretches on and on.
+So you can just move things around like this.
+So it's not only a sphere influence that you have.
+You can also just do it with other modes.
+And these could just be combined in endless ways.
+We can also do this, for example, on the Y axis as well.
+We can now move it up or down.
+And as you can see, this is a really powerful op.
+It's very simple, but when used in conjunction with other copies of it,
+you can make amazing color effects inside of your patches.
+I hope this video has been informative, educational.
+If you have any questions or comments, please feel free to leave them under the video below.
+Thanks for your time. Bye.

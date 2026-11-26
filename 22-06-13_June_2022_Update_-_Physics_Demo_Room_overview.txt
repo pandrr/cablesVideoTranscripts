@@ -1,0 +1,136 @@
+https://www.youtube.com/watch?v=qbGyBBt_XGg
+hello this is alex from cables.gl and here we are june 2022 cables.gl update it is giant and
+there's a lot of under the hood things little optimizations the website is faster all the good
+stuff but then there's just giant features that are kind of like in their own universes right we
+got this augmented reality stuff we got some physics things rework of the entire image composed
+the texture composing stuff and all the operators with that so it's i think we're going to talk about
+it for quite a while but in this video i just want to talk about this kind of new way of making
+patches even or like a new style or a whole new world i guess is the physics update we're rewriting
+slowly but uh surely making this physics a lot better inside uh cables and introducing with this
+release we're uh doing things like colliding between the camera and the character that you're controlling
+inside the world or the virtual world we have very precise ray casting um that allows you to make 3d
+navigation and things like that so in this video we're just going to look at this room that's also the
+kind of hero image for this blog post and then one of the first or actually the first section in
+the blog post where we talk about what we've done and uh what it all is about and then there's this room
+patch so we're going to look at this room patch but before i'm going to do that is um i want to point your
+attention to
+this little section when you're on the cables.gl website when you go to create we have these
+templates right and now we have a new template which is for this um bare bones room with some cool stuff in
+it already but it's um it's not as advanced as uh well i mean it's not really that advanced but it's not
+as populated or uh it didn't have an art curator go through the space and put in a bunch of little
+interactive and and uh graphical visual things in there um so okay so this is the room and this
+is the template and i'm just going to look at the template really quick with you and then we're going
+to move on and look at some other stuff so you'll find this template you can clone it and you're going
+to get exactly this so um what do you get you get this greeting screen which is a div element so you can
+do all the css styling put in um fonts and things like that color it um and then we can hide it right
+that's pretty cool so um in in this way we're showing that you can mix this 3d world with css pop-ups and
+and developments and stuff like that and uh hopefully this section of the patch will
+um introduce that to you and you'll see that it's triggered once so once we press ok it's hidden
+you know you might want to do some kind of cool minimization uh uh interface we can we can get
+into that and in some other stuff in in other tutorials but then also you see this keyboard kind
+a awsd um layout at the bottom here and this is in the room uh the populated demo room patch that we're
+going to look at um this you see isn't here it only shows up when the device or the room is being accessed
+by a mobile device but in the template we just have it here so for example if you want to um copy the way
+the demo project with all the stuff um the way it does it just look for this mobile control section here
+and then you'll see that a browser info operator is being used to hide or unhide these mobile controls
+so obviously um you might have users without a physical keyboard so you need to take care and put in some
+kind of uh cool navigation for touch devices all right let's move on so what do we do we can walk around we can run
+with shift we can look at this lovely geometry and how was this made by the way so what this is is a gltf
+of a cables hall right and this was designed and modeled inside blender and it's quite light uh and
+then we put it into cables and then we assigned some of the geometry to be the collision geometry right
+so if you've used cables for a number of years you remember that there were some physics in there
+there were some physics in there before but we could never do proper um kind of virtual space navigation
+you couldn't really like remake doom in cables now i think you are pretty close to being able to do that
+so you cannot walk through see like i can't fall off the ledge um because there's a wall there and uh yeah so i'm trying to like um brush up against all the walls and i'm not falling through because there's a collision now
+which is fantastic i think uh and uh and what we can do is to use this um debug viewer in the in the in the
+in the bigger kind of demo of this thing um and i will show you that in a bit because i in the
+and we don't have it in the template but there is another operator called mo debug debug renderer and
+uh you use that to kind of debug your wireframes and the collision objects and where they are and and
+when are they colliding and things like that it's very handy um but obviously you don't need it in in an
+actual project published project unless you know maybe as like a pre-production stage you need to
+show that to your client or maybe your team that you're um having some meshes collide or something like
+that but it's not in the template but if you want to check out how it works just um see how it is in this
+demo project all right let's just move on to this big uh colorful room and what do we have here we have some
+patches that
+are just placed inside the space and they work so for example this golden rotating uh sculpture
+is simply a patch so if you're used to cables um the way of patching and spacing things out inside the 3d world
+this is like really interesting now i'm walking around this room
+and i place this sculpture just how i usually place things inside cables you know i use a transform
+and then put it in the correct space and now since we have rooms that are having collision and things
+like that it's um actually like really cool to to work with the parameters and the editor and then
+to to uh correctly place all your stuff inside of your space which is really fun to work with actually
+so for example if someone says okay that's really nice but can we put something over there now and then
+you go okay let me walk over there and then let's adjust this painting thing um yeah anyway well maybe
+it's just me personally all right so we can put in 3d objects and um there's a lot of a lot of new cool
+pbr the physically based rendering material improvements that allow you to um definitely check this this section
+is like also one of my favorites somewhere in the blog here all the way in the bottom maybe maybe here
+yeah there yeah there man we got we got height maps now and all this other stuff um we'll cover that later but
+um it's it looks really cool when you put it into space and you're uh walking around and the reflections are
+acting in a cool way and like in a believable way um and this wasn't possible before and now we have this parallax offset
+and uh yeah i can't wait to show you guys uh that in detail okay so here i have a little sound sculpture
+and then here i have a little interactive thing um let's look at the sound sculpture so this thing right
+here will demonstrate how you um are able to use ray casting to pick uh specific shapes
+or 3d objects in your space and we put it into this 3d room so for example when i move my mouse here
+i'm not really picking anything but when i look at this little sculpture here
+my mouse is now my mouse is now active and i can uh interact with all these different rectangles that
+produce the sound i think it's really cool and the the occlusion i guess of these 3d geometry shapes
+works a lot better than it used to and it's just amazing now that you can um look at different angles
+and and the geometry is being picked correctly see i'm like trying these kind of extreme scenarios here
+where i'm trying to trip this thing up and it's and it's still working perfectly okay so then we have um
+another interesting thing which is kind of it's in two places there's that one and then there's one here
+and let's actually walk all the way over here and uh check out this um glowing rectangle and what is it well
+it's kind of a sensor that there is a there's an invisible hitbox or like we call them ghost objects
+that trigger some action when we cross over into our our little character um model that we're controlling
+with this first person view walks into this ghost object it triggers this elevator right so um and
+once i'm not in that area then the elevator goes down and it's pretty cool that you can
+move yourself with other physical objects it's really also really fun to for example make like a
+platformer as you are walking around uh i'm sure if you've gotten really into unity or unreal or maybe
+godot or or other cool engines out there it's really funky when you're walking around and building your
+level at the same time so now um you can mix up your cables workflows with with like similar things as
+those games engines anyway so we have the similar thing here which um will make this sidebar up here so if we
+walk into this area we have a sidebar and now we can interact with this little art piece and in this um
+area we can enter different letters
+and they will be extruded so the fonts are now being able to uh be turned into geometry and extrude it
+it's really cool as well um we'll definitely cover that because i'm pretty excited about this thing here so
+i find this font viewer um patch inside of our main main project here and then you can see how it's made
+um i think it's also in the in the library by itself because uh it was kind of a really spur of the moment
+feature that got introduced um really cool uh open open type uh i think uh library fantastic stuff
+so and then it's being manipulated of course um and then here actually also if we walk closer to the
+statue we got this yellow light appearing the the color of this sphere changes and that's also a one of
+these ghost object trigger objects that um you're able to use for oops different um things in your projects
+really cool all right so then we have these funky buttons that are um placed in in some
+some areas of this room here wait maybe we should go full screen all right so uh you can create again see
+it's uh a ray casting object here that uh shows a little css uh div um that says randomize and then
+when we click it it randomizes this texture projection that's just being blasted all over the level so you
+can you can do some cool interaction and see i can't pick it because it's behind this level which or the
+behind the wall which is really nice um you can create simple buttons or or do these ghost objects where
+you just walk up so for example maybe i don't want to be able to or i'm making like a game or something and i don't
+want to be able to click it from across the screen or play these chimes from super far away so i would mix
+these ghost objects to then kind of do a simple if then or you know uh true uh boolean kind of thing
+then okay he's kind of close enough now he's able to push this button and then uh interact with it so um yeah what else
+over here is quite interesting we have your patches on these little gallery slabs here and when you click
+them you open up the patch so there's some interactivity um for this user gallery stuff here and you can check
+out how that's made um with a cool little api call to the cable's website to get the screenshots and then
+actually get the links and open them and we can also randomize them with this button over here um over
+here is is uh another little doodad that doesn't really it's just a graphical thing to show you that you can uh just
+place things in space um yeah that's pretty much it oh yes of course with the right mouse button we can
+you know i'll show you that later look at this this is one of the pbr features it's wild right like the
+the the the camera angle will change the way this texture looks and you get this um funky feeling
+that it's it has a height and a depth so um it's quite an extreme example but uh if you're doing like
+bricks and stone walls for example you know you want to make a really cool looking level photo realistic
+um you know textures all over the place you definitely should try out this new parallax mapping um
+stuff for the texture with a height map um we'll look into that in another tutorial
+um let's press the right mouse button yes you can shoot there is um a physics emitter
+so we're emitting we're limiting these balls so i think there's maybe like 10 or something at this time
+but um it's actually quite cpu performative and it's not it's not so bad uh and you can do some
+really cool simulations and and uh get into that um definitely try it show us what you're making so we can
+improve it and and maybe add more features um but uh yeah it's it's quite cool that you can
+also then use these uh physics objects to um create interaction or kind of little games or something like
+that and then test if um a collision happened between one of these um emitted um objects um with some other
+objects so for example if i maybe shoot these chimes instead of using my mouse i could i could make
+sounds come out so uh yeah i think we're getting into some really really crazy territory with interactive and
+kind of game engine uh teasing already with this update so anyway that's all i wanted to show you this
+time around um play around with this room tell us what you think um see you in discord let's chat see you on
+the discussions on our github page also post um questions or requests for tutorials or um you know your
+features or maybe you want an operator that you ported over or created from from scratch um included in the
+next update definitely do that but uh see you soon uh with more of this june 2022 um feature update overviews bye

@@ -1,0 +1,105 @@
+https://www.youtube.com/watch?v=xsoM3uFWsT4
+Welcome to another tutorial. My name is Tom on KBITS and Discord. My name is Pandur and
+today I want to talk about socket clusters. This allows you to create patches that communicate
+over the internet. As you can see, I have three browser windows open and when I move
+my mouse in one, my position is transferred to the other browsers as well. This transfers
+all the data that I sent to the other browsers. And this is the patch we will build today.
+So it looks like this. So it's not that complicated but there are some interesting things in there.
+Okay, let me make this bigger and then we will start. So like this. So we will create a new
+patch. And first of all, so we are talking about socket clusters. So this is a library, an open source
+library, which is amazing. You can download it for free. You can, you need a server to run this.
+So you don't need only the patches on the clients, but also a server. So you have to start up a server.
+This can happen in many ways. So for one like cables gives you the possibility to use its own socket cluster
+server. So we will do that because this is the most easiest way. If you deploy your patch to a website,
+you need your own socket cluster server or you use ours if you have a patron level that allows this. So then you can use our service, socket cluster service on your website.
+There is also another way now. The standalone version brings a socket cluster server up.
+So you can start a socket cluster server without any of the console based server, start up, all this kind of stuff.
+If you are not familiar with this, you can also use the standalone to start a socket cluster server. So this is also like the easiest way if you have no internet. If you have like a local network where you have an installer.
+Or something you can just start up the standalone version and start a socket cluster server. So this is also like the easiest way if you have no internet.
+If you have like a local network where you have an installation or something, you can just start up the standalone version and start socket cluster from there.
+Okay, so socket cluster, what does it do? So this is a server that receives data from the clients and it will transfer all this data to all clients that are in there.
+So basically, imagine a chat room where like three people are and everybody enters their location in the chat and then this location is transferred to every other client in this network.
+How this works like a chat room. And yeah, let's go there. Let's do it. So I created a new patch. I will create a socket cluster op and this socket cluster op is in an extension.
+So let's load this extension. So if you enter socket cluster, you can load the extension and then you have all those operators here. So we will use socket cluster client. This is the main op that we have to use.
+And let's do it. And let's do it. And let's have a look at the documentation. So there's some documentation here.
+There is not so many public examples because it's not so clear how it works. This is why we're doing the tutorial now.
+But this is maintained by team socket cluster. So this is basically us. But all the development happens in this team.
+So you can you can see here which which operators are in there and see who who made it and see the examples for each of them.
+Okay, so we have a socket cluster client. So the whole what I said about the chat room. So this is how this works, right? You have a channel, which is there is no everybody can use any channel on KVG. So this is really just for development. Don't try this with like private data or something. So we will just do a channel. We will just call it tutorial.
+So anybody who knows this channel name can go in there and read all the data. So be careful with this. Make sure that you know what you're doing basically.
+The socket. So if you have a standalone running you want to disable SSL and change the port number.
+That's the stuff you set up in the in the socket cluster server operator then on your standalone. So we don't need to change all of this stuff. And everything else is fine basically. So we don't need to change all of this stuff.
+But everything else is fine basically. So we now see here that this op is already connected. So if this is like a wrong URL you will see disconnected like you will see an error message there.
+Okay. So now we have our client. So now we have our client. We have our channel set up. Let's send some data basically.
+So this has an output. So this has an output with a socket and this is basically the connection or the socket connection and we will use this to communicate to the socket cluster server.
+Okay. So take the socket and we will create a socket cluster send object and just create it. So this is now connected to the socket.
+And this wants a data object to send. So we will just create an empty object like this. And then we can fill in some data in this object.
+So the socket cluster send object operator also has a topic. So you can have a channel and in this channel can be multiple topics. So if you just want to have like different rooms where people can chat, this would be not the channel, but this would be the topic. So you can change a topic and have multiple rooms basically. So, but we will, we will keep it, we will keep it like on main.
+Okay, so now we have a empty object and I want to send out the mouse coordinates as we saw in the example, like it was sending the mouse coordinates. So I will create the mouse operator.
+I will switch it to pixel display. So we get, so when I hover here, you see like the real X and Y coordinates in full pixels. This easiest way to have like the same scale,
+even if you have a different size. Like if I have a smaller size, then I will only move in this area. And if I pick a size, maybe it's out of the screen for some clients, but like this is easiest way to see now.
+So let's set this using object set number operator. So I use this shortcut, which I really like. So I entered OSN and then it would show me object set number, which is, which is really helpful.
+So we want to set that this number is called the X coordinate. So I will call it X and I will connect it to the X here.
+And then I will create a object set number Y. And then I will connect this to Y. And I will also create an object sent number called C. So this is for clicking.
+So I will connect this button is down, basically. So now when I move my mouse, you will see that the object changes all the time. And, but when I visualize the sent object, it's not being sent, right?
+It's only sent when I click send here. So we have to send this data automatically. We want to send this automatically. So I will, so I will do this other shortcut.
+So I will just move the, take the X output and just hover it to the yellow port. So this is an incompatible port, right? But when I release the mouse, like you will see some suggestions. So there's a number trigger on change numbers.
+So this operator, you don't have to remember the name. You can just do this shortcut and then it will trigger when this number changes. And I will connect the Y and the button down to this number.
+And now when I move my number, you see it's sending, it's sending the data all the time. So if this is too much, like this can be easily too much to send over the data.
+So you can limit this, like you can use the trigger limiter op, for example, and set this. So if I set this to 300, you see it's not sending that often. We will set it to 30. So it's like maximum 30 times per second. It will send the object.
+Okay. So now we are basically sending the data to the socket cluster. And that's all we want, we need to do. So until we see something and we take some time, because like, this is basically our sending part of the client. And now we will put in the receiving part of the client.
+Okay. So let's go. So there is a really handy operator or like there is an operator socket client.
+Oh, sorry. Socket client. Socket cluster, I mean, receive object, for example. So let's, let's try this.
+So this one, I will also connect to socket. And let's visualize this data. So now, now I will not see anything right, right now, it will not show something. But for debugging, it's really handy.
+For some projects, it's handy to see your own data. So often, you just don't want to receive the data that you sent back, but sometimes you want this. So you can click here, receive own data. And when I click this, and I move my mouse, you will see the x coordinate is received.
+So this is already received over the network. And the string output gives me a, shows me a client ID. So this is my client ID. So this ID doesn't change until I reload the page.
+So this is the socket cluster receive object. And we could work with this, but it's hard to manage this data for many clients. So this is like the simple version, but there's a more advanced version, which takes like, we have to do less work for managing all the client data.
+So there is an operator called socket cluster topic info, it's called. And this does a lot of work for us, which is, which is really handy. So first of all, this listens to this topic, it's the same topic that we had before, and it retains one message.
+So this is basically what we want. And I will set the timeout a bit higher because that's really handy for our case. So and it will also receive our own data. So now let's, let's have a look what's happening here.
+So we have this output with the client ID. So this is our client IDs. You saw like when I was active, like it from this point on, it knows our client ID. And there is a object with messages. So this object, oops, sorry.
+This object, this object contains data to see this data better. This deactivate the experimental string if I saw. So now I can see I have this object and I have a timestamp. So when did this happen?
+I have the client ID, this is the same ID that is in this table. This will be important later. So now when I hover, you see this data is changing. And now when I, I will open a second browser.
+And I will open this patch again, here. And make it a bit smaller. So now when I move my mouse here, you see there's a second client now. There's a second client ID. And there's a second payload, payload with coordinates. So when I move my mouse here, it's a different numbers than when I move it here.
+So this is basically, so this is basically, so this op takes all this storing of data from different clients for us. So I can just open this in a new tab.
+And then I have a third client number. And this one has a third payload with information about this, about this operator. So great. So this is basically all the data we need, right?
+So now we just have to do something with the data. So let's do this. So I will just remove this.
+We'll keep this op. I will create a main loop. I will create a pixel projection op. So this is that we work in pixel space. So each transform that we do, we will do in pixels.
+So then I want to draw a circle. And so we don't see the circle at all, right? So this is strange.
+But this is because the circle is less than one pixel big. So when I change this to 20, we will start to see the circle.
+And when I move this, you see, I have to move it like really high values because this is now in pixels. So because we are sending mouse coordinates in pixels.
+So this is the most handy way to do for us now. Okay. So yeah, let's go there. So we want to draw a circle basically for every client that we have, right?
+So this array gives us all our clients. So right now this array has a length of three. So we will just use this array. And this array contains strings like those IDs.
+And so we will use the array iterator strings. So I just typed in AIS and I get array iterator strings. So that's really handy. Oops.
+And I press enter and not delete. And then I will have it. And so I will connect this to active clients.
+Now, those circles are drawn three times. So we can visualize this by connecting the index to posx.
+And add a number to it and multiply it by 20. So we see we have three circles now. So that's really handy. So let's, to make it easier to differentiate the circles, we can also use this client ID as a random number.
+So for this we can say string, random, random number from string. And then every time we get a random number from the string. So I can use this random number to generate more random numbers and use them for colorizing the circles. So I can connect this here.
+And here and now every circle has a different color. So I can change the seed. This is basically the seed.
+I can change the seed like this and then I can have different colors. So let's pick some that are more easy to differentiate. So like this for example.
+Okay, so each circle has a different number. So one client actually just timed out. This is an interesting topic also.
+So, okay, I will, so now we see like when I go here, when I create a new client, then we see there's a new color coming in and here's a new color coming in. So I can just do this many times and it works fine.
+And at one point they will fade out after 20 seconds. They will die basically and not be displayed anymore.
+So this is all this topic info operator handles this stuff for us. So that's awesome. So, okay, let's now position the circles. How do we do that? So we have this messages object.
+And this object. And this object, let's, let's have a look at it again. So this object is built like this. The client ID contains an object with time timestamp and payload. And we want to come to the payload. So let's do this step by step.
+So first of all, this object, we want the last message from this client ID. So we would use, and so it's a bit complicated, but trust me, it's worth it. So for a chat, basically, you want to retain like the last 10 messages of a client, for example, and not only the last one.
+But for our example, we only want the last position of the cursor. So this is why there's only one payload in each, but it's still an array. So if we change this number here to 10, then we have the last 10 messages from each client.
+Okay, so let's get the client data by using messages and then use object object get array, because it's an array of messages. So we and the key for this area is the client ID. So we can use this client ID. So in each iteration, I will use this client ID.
+And it will output the payload, so the message data. So let's clean up a little bit. And now let's have a look at this. So now we see we have this one object with the timestamp and the payload and the number in there.
+So the easiest way to get through complicated objects like this is you click the op and go to the result. And then you have this little cock wheel here. So when I click this, I will see this overview. And those are buttons that I can get. And I can just go to the X line and the value. You see, this is what I want. And I can click number. And then it will output that number to me.
+So now I get the X coordinate of this one circle. So let's connect this. So we will remove this again. We will connect the X axis, the X transform to this output. And then when I move my mouse, you see, I'm moving my circle already.
+So we will do the same thing for Y. So I will just copy paste this and change this last bit of this path to Y. And then we get a Y number and connect this to transform Y.
+And now I can move my circle freely around. So I open this window. I can move this circle around. I move this window. I can move this one and so on. So we don't need to reload them actually.
+Like usually you should, would need to reload them because we made the changes only there. But the visualization here works already fine because those patches are already sending. So when I reload this, then I need to save this first.
+So when I reload this, you see it's working here and they, like this client doesn't have all the information about all the other circles, but slowly when I, when I change this tab, for example, then you see, we have the yellow, the yellow circle in here.
+And because like the colors are random, right? But you see in each window, they are the same. And this is because the random number from string gives like, this is like a seed, like this string always will give me this random value.
+And then this random numbers will give me those three random values. And then they all stay the same all the time. So this is why you can tell, yeah, I'm the yellow cursor, but you will always be the yellow cursor,
+even though we're not transferring this color over the network, but still because it's a random seed and it's a reproducible random number, it will always have the same color in each window.
+And yeah, this is really handy for this case. Great. Okay. One last thing I want to do is to also show, visualize the clicked state. So we call, we created a,
+parameter called C. So this is when I click this, when I click my mouse and we can connect this to, to the transform scale.
+Like this. So now only when I click, I see my, my circle, but I can map range this and say, okay, when I'm not clicking, the size is 0.5.
+And when I click, it's a bit bigger. So this also works here now. So let me save this patch. And now I can see my cursor and I can click and it will transfer the size.
+And yeah, so one more thing. So we can now also set the trigger limiter to 300 again. And then we will see the, the traffic is really low, but like the delay is really huge. So the circle will be only transferred a few times. So 30, I guess it's a really good number.
+I guess it's a really good number. You could also, if you have a more advanced setup, interpolate between like the, those coordinates.
+Um, because it gets a bit laggy if you go, uh, less, but one thing that helps with the lagginess also not show your own, uh, circle, just draw the circle from the mouse coordinates and not receive your own, uh, circle over the internet.
+And, uh, yeah, you could do some stuff to smooth those values, uh, on the client so that they are 60 FPS and maybe you send them way lower. Um, there's a lot of possibilities that you can do with this.
+Um, and, um, yeah, so that is soccer class. They're really, really helpful and easy to master library. So, um, try it out. Let us know what you want to do with it. Um, yeah. See you. Bye. Bye.

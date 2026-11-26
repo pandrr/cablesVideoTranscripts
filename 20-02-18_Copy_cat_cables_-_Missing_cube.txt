@@ -1,0 +1,108 @@
+https://www.youtube.com/watch?v=r8xdNOYlTEw
+Hi there, and welcome to another video of Copycat with Cables. My name is Mark, my handle on the
+forums is Andrew, and today I'll be doing another copycat inspired by the generative artist
+Yun Kiyoshi. So I saw this little piece go by a while ago on Twitter, and I got really inspired
+to try and recreate something similar inside of Cables. So this piece is called Missing Cube,
+and I really loved the look and feel of it. And like most things, it can seem really simple
+to do, but sometimes it's a little bit more complicated than it seems. So without further
+ado, let's get started. I'm going to jump into a Cables patch, I'm going to press F11 to go
+into full screen. So first of all, I need a main loop op. I'm now going to pull this out,
+I'm going to create a sequence op, I'm going to grab this outlet here, and first of all,
+I'm going to set up a basic spinning cube. So I'm going to create the transform view op,
+pull this down. I'm going to make an orbit controls op, so I can control the scene with
+the mouse. And then I'm going to go here. I want to change the background color to be white,
+like in the video. So I make the clear color op, and click the color picker, make it white. As
+you can see, I can change the color down. Now I'm going to make a basic material op, so I can apply
+a material to a cube. There we go. So if I click on the transform view op, and I turn it with rotate
+y, we can recreate this spinning look. So I'm going to make a timer op, this is going to give me a number
+which will constantly increase. I'm going to plug this into rotate y. I'll put the speed on 10. And now we have a rotating cube.
+Nice and quick. So I'm going to do a similar effect, but I'm going to do it with textures. Because we're not using code,
+we're using cables. So I'm going to go over here, and I'm going to create an image composer.
+As you can see here, now I have a texture preview. We're not generating anything yet though. So I need some noise. So I'm going to grab the Perlin noise op.
+That's this one, as you can see, ops.gl.texturefx.noise. It's the yellow color for texture effects. So I'm going to add it.
+And I'm now going to get this. I'm going to turn off use viewport size. And I'm going to make it a little bit big, bigger than it maybe needs to be.
+But I also want you just to be able to see this during the tutorial there. So now I'm going to click the Perlin noise.
+I'm going to put the scale on, say, 4. And now I want to animate it. So I'm going to grab a timer.
+And I'm now going to plug this into set. If we now click this, as you can see, we now have this animated noise right there.
+So, so far so good. So what do we do now? Well, I'm going to show you one or two problems that I hit when I was doing this.
+So we can use this as a mask. We can use this to discard pixels, basically.
+So I'm going to grab this texture out. I'm going to plug it into texture opacity. Now look at what happens to the cube.
+So this is really important, what I'm going to do now. So the alpha mask source is the luminance. That's like the brightness of each pixel.
+It's black and white value. But we need to click these two options here.
+Opacity text cards transparent. And let's discard the transparent pixels. You're not going to see much of a difference now, but you just need to make sure they're wrong.
+So we need harder values. Like we saw in the original video, it wasn't this smooth noise look.
+So I'm now going to go here and I'm going to grab the Op Luma key. It removes the darkest or brightest parts of an image and then click add.
+And as you can see, we now get this on the screen. So I'm just going to slow down the timer to pull in noise. I think it's going really fast right now.
+So, so far so good. But now what I'm going to do is I'm going to invert it. As you can see, it's now flipped around and I'm going to put it on black and white.
+And as you can see, this removes the shading, which enables this transparency. I just want a pixel to be visible or not visible, one or zero, black or white.
+Fresh hold, I can increase this or decrease this. And as you can see, you get more pixels on the screen. I'm just going to put it on 0.5 for now.
+So now I want to get that kind of pixelated look. And that's really easy. We're going to grab the Pixelate Op.
+This allows us to pixelate an image. So I'm going to add that and I'm now going to put the width and the height, which is on a really high number, on say 20 by 20.
+And now we're getting something pretty similar to what we saw before, but we're just still missing a few details.
+So this is sometimes a little bit difficult for people to understand texture settings.
+There's quite a lot of them and they're all relevant in different situations.
+I'd advise you to read up in the documentation and check the example files.
+For now, I want you to look at the fact that there's these light grey pixels there.
+Now, the reason for this is pretty difficult to explain technically, so I'll just show you how to fix it.
+So we're going to put this on clamp to edge. And as you can see, they're now gone.
+It's just got to do with how the texture pixels are being interpolated with each other.
+And we don't want that. They were kind of like being repeated, which means there's a chance that they blend
+over each other. So I'm going to put it on clamp to edge. And now we've only got black or white pixels,
+which is great. So as you can see, we've got on the pixelate effect, the amount on X and the amount on Y.
+So we could put it on 10 and 10 and we get bigger blocks. As you can see, we can make that number higher.
+So I'm going to create a number op and I'm going to plug this into width and height,
+because I want to change it at the same time. I'm going to put it on 20.
+And now we're back to where we were before. So now I actually need another image compose channel.
+Let's try and make this all fit on one screen today. So I'm going to go here. I need this kind of like
+black and white grid effects now. So I'm going to make an image compose. I'm going to put that here.
+And now I'm going to grab the grid texture op. Now I'm going to show you how to do this quickly,
+and then I'm going to show you a different way to do it. So once again, I'm going to turn off
+use viewport size, and I'm going to use the same as this one. So 1,024 by 1,024.
+We could make it smaller. I just want it to be, sorry, 1,024. I just want it to be visible what I'm
+doing. So I'm now going to get the color of this for the color picker, and I'm going to put it on white.
+Great. But I want it the other way around, right? I want like black outlines and white,
+the center of the parts to be white. So I'm just going to grab the humble invert op, and that inverts it.
+Great. So far, so good. So if I now get this, I can plug this into the texture diffuse input,
+but it looks a little bit off. Now, the reason for this is because we've got a different amount of
+cells. This is why I made this here. So I can now plug this into the cells X and the cells
+Y, and then all of a sudden they match up. So we have really thin lines here, and it's
+quite small with the screen. So we're going to get some aliasing. It's like this kind of flickering
+that you see there. If we make things a little bit bigger by bringing it closer, we can reduce that.
+Now, there's a couple of things that we can do here. You're just going to have to play around with
+this and see what works for you, because it's more of a style thing. So we're not doing a render to texture,
+which means we've got pretty sharp lines, which can kind of be a problem because we can get jaggies,
+as you can see. So what we can do is we could put this, for example, on MipMap. And I want you to
+pay attention to what's happening here. So things kind of like get more blurred with an angle and they're
+kind of perpendicular to the camera. MipMap is expensive, but don't worry about it if your system's
+not running slow. But as you can see and let me just pause the video here. So let me just wait until
+it's like a little bit turned around so we can see one of the sides. Great. Let's turn off this timer as
+well. So I just want to show you this. So if we put this on nearest, we get this. If we put it on linear,
+it becomes a little bit smoother. And if we put it on MipMap, we can get this kind of blurring,
+but it can look smoother when it's turning. So you've just got to kind of ask yourself what kind
+of look it is you're willing to go for and what the trade off is. So I just wanted to show that.
+So we're already pretty much there. We've already got this basic look. So I'm going to put it on linear.
+I just want it to be a little bit sharp. So we're going to get some flickering, but don't worry about it.
+So this was how quick and easy it was to recreate this look. So I wanted to show you one or two more
+little cool tricks that we could do here. So I'm going to go here and I'm going to create a pixel
+noise up. And as you can see, this creates like a pixelated noise and we're going to add it. And I
+need to make sure that the cells match up. So I go here and I put number X, number Y, and I'm going to put
+this on loop and RGB. And now I'm going to put the mode on darken. And as you can see, all of a sudden we've
+got this different kind of look here where we've colored the lines around each square. And now we put it on
+light and we've added a color. So look at how quick and easy it is just to get different looks out of this. We can go to the
+pearl and noise now. We can put the scale on 10 and we get a much more noisy look. We can put it on one
+and we get these bigger clumps of noise that are moving around. So the patch really lends itself to
+being very playful. So that was just pretty much it. I'm going to shake this loose. And another thing
+I want to show you here is it's a little trick because we're kind of done, but I like to show more
+than one way to do something. This is a pretty big texture size. It doesn't need to be though. So I'm
+going to put this on, say, 64 by 64. And I'm actually doing this in the wrong way. Let me just disconnect
+this. And let me put this back on, say, 1024 by 1024. So we have this grid here. So now what I can do is
+this. I can put the cells in one on one. And as you can see, you get this one big black square, right? So if I now
+go to the basic material, it's a cool trick a lot of people don't know about. You can repeat
+the diffuse texture coming in. So if I now put this on 20 and this on 20, we get a really similar look,
+but we're, oh sorry, the last thing. So we can put this on 64 by 64. And as you can see, we get almost
+pretty much exactly the same look, but we're rendering far less now on the GPU. So that was just a little
+trick that I just wanted to show you that a lot of people don't know that you can do with the basic
+material up. So that was the end of this copycat with cables. It was a short one,
+but hopefully you've learned a lot of cool new things from this video. I hope it's been educational
+and informative. If you've got any questions or comments, please feel free to leave them under the
+video below or to post them on the forums. Thanks for watching and have a good one. Bye.

@@ -1,0 +1,84 @@
+https://www.youtube.com/watch?v=P6esDOFHM6w
+Hi there, and welcome to another video of Made with Cables. My name is Mark, my handle on the
+forums is Andrew, and today I'll be giving you a tutorial on how to make your own particle system
+inside of cables like this one that you can see here on the window in front of me. This is a lot
+easier than it seems, so without further ado, let's get started. So first of all, I'm just going to
+get that off the screen, give myself a bit of space. Okay, so first of all, I'd like you to pause
+the video and just make what you see here, and please don't forget to put the scale up on 0.5.
+Now, just in case you missed it, we just released a bite-sized video about the point material up and
+the point cloud from Array. It's three minutes. I check it out before you do this one. It might help
+you a lot with following this tutorial. So let's get started. Point cloud from Array expects an
+array. So I'm going to grab the random array 3x up. I'm going to pull that up here, and I'm going to put
+the number of values on 1,000. So it's generating values between minus 1 and 1. I'm going to click
+point material, and I'm going to put the scale by distance on, so if we go further away or closer,
+it changes the size of the points. Okay, so I want to just like recreate that particle effect. So the
+first thing I need to do is I need to add animation and movement to the particles or the points, as we
+could call them. So first of all, I'm going to use the Array Unpack 3 up, and this is going to split
+the x, y, z array from this into three separate arrays. I'm then going to use the Array Pack 3 up. So
+let's just grab this and plug it in here. This expects a trigger, and we're back to where we were
+before. So this is the x component, y component, z component. So first of all, let's add an array multiply.
+And let's just put that up here. So I want to change the scale of x, and I can just do that by doing this. So I'm
+just going to put it on 10. Now I want to be able to move those points through space. So I'm going to use
+Array Sum, and this will add one number to all values in the array. So if I move this up here, and I move this
+number, as you can see, we can move everything from left to right. So I want them to move from left to
+right, but I don't want to lose them. So let's grab a time or two. As you can see, they're going to move
+and they're going to go off the screen. So I just want you to see this. Right, so they're moving off the
+screen. So let's grab now the array modulo. If you're not familiar with it, it's just an easy way to loop a
+number. You can Google it. If I increase this number now, as you can see, the loop size there becomes
+bigger. But I've got this cutoff in the middle that I don't want. So let's grab an array subtract up.
+As you can see, I can now move it from left to right. So this is really simple to fix. So we're going to go
+here. I'm going to grab the value up. And this gets plugged into the modulo. And I'm going to put
+this on, say, 10. I'm now going to grab this value and plug it into a array subtract. And in between,
+I'm going to put a divide up. And I'm just going to divide this by two. And as you can now see,
+we can change the size. And it always stays centered. So let's put this back on 10. Great,
+we've got this kind of looping effect. We're getting closer to where we want to be. So I'm
+just going to increase the point size for a minute so it's easier to see. Change that color a little
+bit. Okay, great. So what do we want to do now? Well, all of these balls are moving at the same
+speed. So that's something we need to change. So I'm going to go down here. And I'm going to just do
+a nice little trick. So first of all, I'm going to get the array length. Don't forget a lot of arrays
+when you're doing this stuff have to match with their length. So if I click this, I've got an array
+with a length of 3000. But what I want to do now is I want to grab a divide up. And I want to divide
+by three, just going to type that in. And now I'm going to make a continuous number array. So this array
+now has a length of 1000 because here it's 3000. We divide it by three. So we get 1000 values and
+outputs the numbers zero, one, two, three, four, five. So I'm now going to grab this. I'm going to grab an
+array multiply up. And I want to make these numbers really small. So they're going to work with the
+array sin up. So now I'm going to go here. I'm going to grab the array sin up. And I'm going to put the
+frequency on say 100 and amplification 0.5. And last but not least before the modulo, I now need to do an
+array math up. So I grab go here. And I say array math performs a math operation on two arrays. I'm
+going to grab this. And as you can see, everything stopped. Why array math says I'm not going to work
+until you give me two arrays with the same length. Now don't forget, we're only working on the x component
+here. Okay, so if we click this, you can see it's got 1000 values. And that's the same as this one. So I'm
+going to grab this and I'm going to plug it in now. And there's not a whole lot going on. But we need to
+click array math and we need to put it on multiply. And as you can now see, we're getting a different
+speed with each ball. If we move the phase, as you can see, we can move them around. So the last thing
+I want to do now is some of them are almost moving. So I'm going to grab the array sum up. And this I can
+kind of like use to increase and decrease the overall speed, right like this. So I'm just going to put that
+on one for now. And this is looking a lot more like what we had at the start of the video. So this is all
+for the x component basically. So I'm just going to move this stuff up, get it a bit tidy. I'm going to
+move that there. And I'm just going to color all this red. Why? I just need that visual clarity with
+what's what. So this was like pretty simple. And we're already getting pretty close to what we wanted
+to do before. So the one thing I really want to emphasize is the array sin op or the sign operation
+doesn't work good on whole numbers like 12345. I mean, if I multiply this by one, or 0.01 or 0.01,
+we get a completely different effect. It's just a very sensitive relationship between these numbers.
+Just try it out the different values and just see what you like. So I want to reuse this value here.
+So I'm going to go over here, I'm going to make an array sin op. And then I'm going to
+plug this because I just want to show you this for a moment. I'm going to plug it into the y component.
+And if I now go here, and I move the phase, as you can see, we get this kind of pattern. But that's
+not very organic. It looks very, you know, it's got a big pattern going through that. We want to break
+that up. So first of all, let's grab a timer to op. And let's put the value on 0.25 to slow it down.
+Now we're getting closer to what we want. But now I'm going to go here, and I'm going to grab an array
+math op from a math operation on two arrays. And what I'm going to do is I'm going to select multiply. And
+now I'm going to get the original y component and plug it in here. And this is looking far more how I'd like
+it to be. So now I can use the amplitude control here to make them go more up and down. And as you
+can see, we've already got a really similar effect to what we had at the start of the video. So I'm
+just going to give this this color code for y just so I know it's different than the rest. And I can just
+repeat this for the z component. So I'm going to go over here, I'm going to grab this very small
+multiplied array, and I'm going to plug it in there. I'm going to grab the z component, and I'm going to
+plug it in here. It's exactly the same operation. I'm going to disconnect this. I'm going to put this
+here. And now I'm going to put this on, say, five. And all of a sudden, you can see that the particles
+are now going to fly away and towards the camera. So we can now change the speed of the XYZ animation
+by just going to these timers, basically. This is why I created three of them. You can get a lot
+of different behaviors out of it by playing around like this. So this was a basic introduction into how
+to make your own particle system inside of cables. I hope this video has been educational and informative.
+If you have any questions or comments, please feel free to leave them under the video below
+or to post them on the forums. Thanks for watching. Have a good one. Bye.

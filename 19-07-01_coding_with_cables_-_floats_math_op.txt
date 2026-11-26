@@ -1,0 +1,94 @@
+https://www.youtube.com/watch?v=cHD0H_xNi1Q
+Hi there, and welcome to another video of coding with cables.
+My name is Mark, my handle on the forums is Andro, and today I'm going to be showing you
+how we can create our own basic mathematical op inside of cables.
+So the op is primarily going to focus on using numbers, but we're also going to look at drop-down
+boxes and how to assign variables and just do a couple of really simple, cool things.
+So without further ado, let's get started.
+I click in the patch, I press escape, I'm going to call this op, my math op, and we're going
+to click this button, create ops.user.andro.mymathop, editor pops up, we press escape, we press escape
+again, and now type in my math op and press enter.
+This op appears, nothing's happening yet.
+I click the op and I press E. So first of all, I want to add a floating
+in point port.
+So I say const, and I'm going to say num in 0 equals op dot in float.
+And I'm going to call this port number 0.
+I'm going to assign a default value of 0, I'm going to press control S. So now we've got a
+port here.
+Just to show you, if I click this now, I'd say 2 and control S. And just to show it, I'm going
+to make my math op, and if I create it, when the op is created, this is then set to 2.
+So let's press E, put this back in 0, I just wanted to show that.
+So now I need to make an output port.
+So I'm going to say const, and then I'm going to call this one num out equals op dot out.
+And then it's called, not out float, but out number, because it could be an integer or a
+float.
+And I'm going to call this one result.
+So basically, I first of all want to have it that when I move this number here, it goes
+out there.
+So let's do this.
+I'm going to say num in 1 0 dot on change equals function.
+And then I'm going to say here, num out dot set.
+Then I'm going to get num in 0 dot get control S. And now when I change this, the number there
+changes to reflect this as well.
+So let's now say I want to just add two numbers together.
+Well, I'm going to copy this line here, I'm going to paste it there, I'm going to call it
+num in 1, number 0, and I now want to create two variables which get the values from these
+parts.
+So I'm just going to go here.
+I'm going to say var n 0 equals num in 0 dot get save, I'm going to copy this line of code.
+I'm going to call it n 1.
+So n 0 is number 0, n 1 is number 1.
+So now I'm going to say, let's just add these two together, n 0 plus n 1, control S.
+So as you can see, they're being added together.
+The problem is when we change this one, nothing's happening.
+So what we do is here, we just copy this code, and we need to say if num in 0 or num in 1
+changes, run this function.
+Whoops, there's control F there.
+Sorry.
+So let's just go back, so here you see num in 0 on change equals num in 1 on change
+equals function, control S. And now if I move the second or the first one, it gets calculated.
+I want to make like a drop down menu.
+So I'm going to say const and I'm going to say math select equals op dot in drop down.
+So the drop down.
+So the drop down first of all needs a port name.
+So I'm going to call it math mode.
+I'm going to call it math mode.
+So give me plus, comma, and give me subtraction, comma, and I need to default value.
+So I'm going to call it as a port name.
+So I'm going to make a new var.
+I'm going to call it var mode equals math select dot get.
+So it's going to get that string.
+Now we're going to do this.
+plus plus do this, add number zero to number one.
+I'm going to do control S just to check this is working.
+So this works.
+We can see it down there.
+That's great.
+And now I'm going to say else if mode equals subtraction.
+You might see where I'm going with this.
+Let's grab this line of code here.
+Control C.
+I'm going to put it there and I'm going to say subtract.
+So let's put this in 10.
+Let's put this in 5.
+So when it adds together we get 15.
+And if we now click this, look, nothing happens.
+That's because we're not looking for an on change with math select.
+So we're just going to get the math selector and say math select on change equals function.
+As you can see it now reflects the change of these numbers.
+So this is really easy to expand upon now.
+So let's just finish what we started.
+So I'm going to go here.
+I'm going to say give me multiplication mode and then give me division mode.
+I'm going to get this code here and copy it.
+Control C.
+Control V.
+Control V.
+So now I'm going to say mode is equal to multiply and multiply the two numbers together.
+Of course division and divide the two numbers.
+I'm going to press control S and as you can see I've now got plus, minus, multiply and divide.
+Okay, that was the basic introduction to making a simple mathematical op inside the cables.
+I hope this video has been educational and informative.
+If you've got any questions or comments, please feel free to leave them under the video below
+or to post them on the forums.
+Thanks for watching and have a good one.

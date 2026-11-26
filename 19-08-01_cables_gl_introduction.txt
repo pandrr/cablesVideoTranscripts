@@ -1,0 +1,97 @@
+https://www.youtube.com/watch?v=EPFNHYah9F4
+Hi there and welcome to the first video of an introduction to cables. My name is Mark,
+my handle on the forums is Andrew and today I'll be giving you a brief overview and explanation
+of the cables GL web page. Where things are, where you can find them and why you would look
+for them. So we've just released cables into public data and we've had an overwhelming response
+and a huge amount of new users so we decided it was time to update the introductory video.
+So if you've registered and you log in, you should come to this page here.
+So I'm just going to go over it in short and then go a little bit more in depth to some parts
+that are really of interest to newcomers. So if I look here, this is like a featured patch.
+I could right click this now and say open link in new tab. Now cables is really unique.
+Every single published patch is available and it will just load instantly in your browser.
+Now this patch is interactive. I can click and drag with the left mouse button.
+I can use the mouse wheel to zoom in and out. And as you can see, I can just like play around
+of it instantly and get an idea of what's happening. So here I can see the user Ponder.
+I can like right click it. Ponder is a creator of cables. He's got a lot of amazing stuff.
+And I'm not going to go down too much, but he's got a load of patches here that he's like made public
+and some of them that aren't. And you could now look at his patches if you liked his visual style
+and then find some of them. And then you can do this. You can click open in editor.
+Now the cool part of cables is when somebody has published a patch, you can click open in editor
+and you can see how they created it and what ops that they used. And this is an amazing way to pick up
+this new visual programming language, which allows you to create pretty things on the screen
+without having to be able to code. So I'm going to press F11 to go into full screen.
+So if you click here in the renderer, we can interact to the patch, but these icons here pop up.
+So I'm going to grab this here and now I can change the viewport size really fast.
+Now we see here that this patch isn't my own, so I can clone it and that would allow me to then,
+it will give me a prompt and say, okay, what would you want to call this patch?
+And you could just copy the whole patch, save it under your username and then work on from there.
+So if I click and drag with the right mouse button, I can navigate around the page.
+If I use the mouse wheel, I can zoom in and out and it will zoom to where the mouse is, as you can see.
+So if you click and up, parameters appear here.
+So I'm going to click this up, transform, and I'm going to just click and drag with the left mouse button.
+And as you can see, I'm now interacting with a patch.
+So this is a great way just to open somebody else's patch that really inspired you
+and just to pull it apart and try and understand how it was working.
+So I'm going to press F11 and I'm going to close this off.
+So when you start out with cables, you're going to want to have some examples, right?
+So if we go over here to learn and we click the basic example patches.
+If you go over here, we've got lots of really cool examples.
+So if we go to this one, for example, in, out, anim, and it says click me.
+So I click it and it shows me this animation.
+So I think, wow, I want to do that with something of my own.
+So you can just click open patch and it will open it in the editor mode.
+And then you're going to get an example of how this works.
+So here we see the op in, out, anim.
+Now let's say I want a little bit more information about this, like what it's doing and how it works.
+Now I can click view documentation.
+And this will open the documentation, which will give more of an explanation of what the op does.
+Animates a trigger from one to zero to one.
+So you can do this with every single op.
+So I could go to view to transform or something like text mesh.
+And here I can say view example.
+And it will give me an example of the op in action, like here.
+I can say view documentation and it will show the documentation for the op.
+So this is the great thing about cables.
+You look at an op, you're curious about it, click it, look at the documentation and the example.
+Really, really nice and easy.
+So I'm going to close this off.
+So you should go through these and check them out.
+There's a lot of really cool stuff here, which you can just learn so much from.
+So I'm going to close this off.
+So ops are those little blocks that you see on the screen.
+And they allow you to generate data or textures or numbers or arrays or just data in general.
+And you can then plug them into each other and manipulate that data.
+So at one point you're going to want to look at the op reference list.
+So I'm going to open this.
+And don't worry, it looks massive at the beginning because it is.
+These are all of our ops.
+It's like over a thousand.
+It's huge and it grows and we're working on them all of the time.
+But sometimes you've got a clear idea of something you want to do.
+So for example, I wanted to do something with math.
+So if I click math here, I'm now only going to see the math ops.
+So if I scroll down, it just shows me only the math ops.
+So say I want to work with a Boolean.
+I can click that and it's only going to show me Boolean ops.
+And we came up with a really cool new feature a while ago called collections.
+So collections are like an abstraction of things which might be a mix between certain ops.
+So for example, if I click random, everything we've found so far which does something random.
+If it's a random array, if it's a random number, if it's Perlin noises or texture, they're all like gathered here.
+So I'm just going to go back.
+So now I'm going to click cables and go back to the main page.
+So this is the basic way that you can navigate around the cables page.
+There's a lot of resources here, but we've made it really nice and simple and easy.
+It talks for us.
+Sorry, it speaks for itself forum, learn, explore.
+So you can go to anything here, click it.
+Great patch here from Begoof that he brought out a little while ago.
+Absolutely love this one.
+And you want to know how this works.
+Like I just showed you, you just open this up in the editor and you just go for it.
+And this is how you're going to pick up cables and learn it.
+So that's the end of this first introductory video.
+I hope this video has been educational and informative.
+The next video will show you how to get started with creating your own patch, adding some basic ops,
+getting used to the UI and the editor and just getting started with making your own cables patches.
+Thanks for watching and have a good one.
+Bye.

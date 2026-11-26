@@ -1,0 +1,36 @@
+https://www.youtube.com/watch?v=AE4_XIpmS3Y
+Hi there and welcome to another video on the Bytesize channel. I'd like you to just
+pause the video and open the link underneath. Great, so today I'll just be
+showing you a couple of cool tips and tricks that you can achieve while using
+cables. So first off, CTRL and the P key will open the console. So there's a huge
+amount of options here which are available which you can just check out
+in your own time but I just want to introduce you to a few of the important
+ones. So if I type in render I can change the renderer size. So now I can just type
+in 1280 by 720 and I change the canvas size. You can also click here, you can click
+size to achieve the same goal. So if I press CTRL+P and I type in scale then I have
+the option to scale the renderer. So if I now put this in 0.5 what happens is we
+keep the aspect ratio and we have the resolution but it's smaller. Really handy
+if you've got to work in a fixed size. So press CTRL+P, scale renderer, put it back to 1.
+So another cool thing we can do here is we have the sidebar and a lot of people don't
+know you can customize it. So you click here and you can add and remove icons. So I could
+say for example I want to have the icon to just upload a file. So I'm going to just
+click and drag this here, close this off and now I can click this and cables will ask me
+what file that I want to upload. This is great. So you can just customize it how
+you'd like it to work for you. So another great thing with cables is we have drag and
+drop functionality. So I'm going to go here and I'm going to grab this awesome
+picture of a monorail cap and I'm going to pull it in. It gets added to the project files.
+I'm going to go back into full screen and cables has automatically created an op for the texture.
+So let's just behold the awesomeness of monorail cap. There we go. Works out of the box. So you
+can do this drag and drop with sound files, with textures, with videos and 3D models. Goodbye monorail
+cap. Thank you. So we're going to go back here. Another cool thing that we can do is if you click on an
+op, you always have like the parameters here, but something a lot of people don't know is you can
+click the parameter name and now you can type in the name of an op and the op will automatically
+get the name of the parameters connected to. So now this is called width and it's just ready to be used
+straight away. Another handy tip, if you're like losing track of your patch, if you press C, you'll zoom
+to the middle of your patch. Just a really simple feature, but it's very handy inside of a bigger patch.
+Another one that we have is text preview. So if I click this I symbol here, as you can see,
+we now see the entire pipeline. So if I click this, it flashes and takes me here. If I click this,
+it flashes and takes me there. So when you've got a lot of image compose channels, this is a really
+handy way to debug and just to find where the effects are inside of your patches. Okay, that was it for
+the tips and tricks for today. I hope this video has been educational and informative. If you have any
+questions or comments, please feel free to leave them under the video below. Thanks for your time. Bye.

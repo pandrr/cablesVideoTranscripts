@@ -1,0 +1,176 @@
+https://www.youtube.com/watch?v=koLSrHFyIUY
+Hey everybody, welcome to another video of Made with Cables.
+My name is Mark, my handle on the forums is Andro, and today I'll be showing you how to create this cool harmonic wave with the ArrayOps and the Mesh Instancer op inside of Cables.
+So, without further ado, let's get started.
+So, I'm going to go over here, and I'm going to just zoom in a touch.
+Now, what I'd like you to do is just pause the video and make what you see here.
+Great.
+So, let's get started.
+I'm going to go to clear color, and I'm just going to put it on something a little bit brighter.
+Okay, there we go.
+So, let's go over here, and we're going to make the Mesh Instancer op.
+We're then going to get a cube mesh.
+We're going to connect a trigger once, because the Mesh Instancer only needs this geometry output once, and we're going to plug this in here.
+Now, the cube, I'm going to give these sizes 0.02, 0.02, 0.5.
+So, here we have one cube.
+So, first of all, we need to create a line of cubes along the X axis.
+So, let's make this happen.
+It's pretty simple.
+So, I'm going to go over here, and I'm going to grab the Continuous Number Array op.
+This will give me a bunch of numbers starting from 0 and counting up.
+I'm going to pull out a value op, so I can define the length of the array.
+And here, I'm going to do Array Divide.
+If you follow previous tutorials, you'll see what I'm doing here.
+I'm normalizing the values inside of the array by dividing them by the array length.
+So, the values here all go from 0 to 1.
+So, let's go down here, and we're going to grab an ArrayPack3 op, because we just want to use this to make an X, Y, Z component.
+So, I'm going to do this, this, so X, Y, and Z.
+I'm going to plug this into there.
+We're going to get the array out, and we're going to plug it into positions.
+And, as you can see, it flies off like this.
+So, first of all, I'm going to just grab an ArrayMultiply, and I'm going to put this on the Y component.
+And it becomes a little bit cluttered.
+Don't worry about it.
+I'm going to grab another one, and I'll put it here.
+So, let's just make it nice and clear with what's happening.
+One more.
+So, I've got a MultiplyArrayUp on X, Y, and Z.
+I'm going to color code these.
+Red is X.
+Green is Y.
+Z is blue.
+So, let's pull this down to 0.
+And let's pull this one down to 0.
+And, as you can now see, we have these cubes going from 0 to 1.
+So, we want to move it to the center.
+It's pretty easy.
+So, before that, we're going to add an ArraySubtract.
+So, we're going to put this on 0.5.
+And, as you can now see, this is centered.
+So, this is outputting numbers from 0 to 1.
+We minus 0.5 from all the values in the array.
+And, now what we're going to do is we're going to scale it.
+So, we're going to multiply this by, say, 3.
+Voila.
+So, this is coming pretty close to what we wanted before.
+So, let's get rid of this.
+And, now I'm going to add the array sin op.
+Perform a sine or cosine function on all the contents of an array.
+So, we want to have a good waveform here.
+It's pretty simple.
+So, we're going to grab the P op, or pi.
+And, then I'm going to multiply this by 2.
+Automatically happens.
+And, I'm going to plug it into frequency.
+And, as you can see, we now get this nice waveform.
+It's too high for me.
+So, I'm going to put the amplitude on 0.5.
+Great.
+So, now we want this to just animate.
+So, I'm going to go here, and I'm going to grab a timer 2 up.
+And, as you can see, we now have an animated sine wave along the Y axis.
+So, let's just slow this down a touch.
+Put it on 0.3.
+Great.
+So, this is the positional data.
+This went really, really quick, just under a few minutes.
+And, once you get familiar with this set of operations, it'll just go quicker each time.
+So, now we want to create the rotational data that we saw.
+So, we're going to just reuse this array data here, because that's computationally cheaper.
+So, I'm going to go over here, and I'm going to grab an array pack 3 up,
+because we want to create rotational data, right?
+So, we need an XYZ.
+So, I'm going to go here, and I'm going to plug this into rotations, and it needs a trigger.
+So, I'm going to plug this here.
+So, I'm going to go here.
+I'm going to create an array sin op.
+Great.
+I'm now going to pull this out to the Y component, and I'm also going to add an array sin op.
+I'm going to pull this one out to the Z component, and I'm also going to add an array sin op.
+So, let's just color these guys, so it's close going on.
+Red for X, green for Y, blue for Z.
+So, let's look at what we're going to do here.
+So, we're going to use this P multiply again.
+So, I'm just going to copy this out.
+And what I'm now going to do is, I'm going to create a multiply op for each individual XYZ component.
+So, first of all, we're going to plug P into all of them, and then we're going to get the output, and we're going to plug it into the frequency.
+Let's just zoom in a touch, so it's easier to see.
+Great.
+I'm going to put these on one, one, and this guy I'm going to leave on two.
+So, we're not seeing a lot right now.
+That's because we're only rotating one degree, minus one to one.
+So, let's crank this up, and as you can see, we now start to get this rotation.
+So, let's put it on 180.
+And let's go to the Y component, and let's also put this on 180.
+And let's put this guy on 90.
+You're going to have to play around with these values.
+This is just something I found that I really enjoyed.
+So, as you can see, we're getting something which is pretty close to something emergent right now.
+It's kind of like generative, but it's not animated.
+So, what can we do about that?
+Well, like we did over here, we used a timer to modulate the phase.
+We're going to do this again.
+So, I'm going to pull this out, and I'm going to grab the timer 2 up.
+That's a little bit fast, so I'm going to put this on 0.25.
+And I'm now going to plug this into the phase for all of these.
+And as you can see, we're getting really close to something now.
+So, this is already pretty cool.
+We could go over here, and we can change the fundamentals of P.
+And as you can see, we're going to get lots of different patterns.
+And by changing the amplitude value to, say, something like 90, and putting this on 3, we can end up with a lot of different combinations.
+So, you're going to have to play around with that by yourself.
+I'm going to put this on 180.
+So, so far, so good.
+But how can we make this a little bit more complex now?
+Well, you want to use two timers to create a difference with things, right?
+So, don't worry.
+This isn't as cluttered as it seems.
+Let's go up here.
+So, this one, the X component is fine.
+I'm going to just move this over here.
+And I now want to modulate the Y and the Z component in a different way.
+So, I'm going to go here.
+I'm going to add a sum.
+And what I want to do now is I want to add this timer to that timer.
+But they've got to be on different numbers.
+So, this is on 0.25.
+Let's put this on, say, 0.8.
+Okay.
+So, I'm now going to put this here.
+And as you can see, we now get this really complex pattern happening.
+Y, the phase of X is different than the phase of Y.
+So, I want this actually to go in reverse.
+So, I'm going to add a multiplier up here.
+And if we multiply it by a negative number, we make it in reverse.
+So, I'm going to put this in 0.33.
+And now, we get this kind of, like, modulation pattern pushing against the other one.
+Which I just pretty liked.
+And I thought it was a lot cooler.
+So, we can just replicate this kind of thing here again with the Z component.
+So, I'll click here.
+Click this.
+Grab sum.
+And now, what I'm going to do is I'm just going to add timer 1 and timer 2.
+And, as you can see, we now get this pattern emerging.
+So, X is using one timer for its phase.
+This one is using timer 1 and timer 2 added together.
+But, timer 2 is just flipped around.
+And this one, the Z component, is just using timer 1 and timer 2 just added together.
+So, let's just zoom out a little bit.
+Move this over there.
+So, as you can see, it wasn't so difficult to do this.
+It's pretty simple.
+You've just got to start from the ground up.
+We could go here now and we could put this on 30 values.
+And, as you can see, because we've normalized it, it's always going to fit within the range that we've defined.
+We could also put this on 200.
+And, we can use the orbit controls now to take a look at the waveform.
+So, this was a basic introduction into how to create a harmonic wave with the array ops and the mesh instancer op inside the cables.
+Feel free to play around with all of these different parameters.
+Hopefully, things will become clearer after a little while.
+Just keep practicing.
+And, at one point, using these ops will become second nature.
+If you have any questions or any comments, please feel free to leave them under the video below or to post them on the forum.
+Thanks for your time and thanks for watching.
+Have a good one.
+Bye.

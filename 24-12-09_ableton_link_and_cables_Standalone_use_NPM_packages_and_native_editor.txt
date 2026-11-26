@@ -1,0 +1,201 @@
+https://www.youtube.com/watch?v=G8SkK484oto
+- Hello and welcome to another tutorial.
+My name is Tom on Discord and on cables.
+My name is Pandwa.
+And today I want to talk about the standalone version
+and programming using NPM package manager,
+programming with an external editor
+and connect like writing a knob
+that connects to this mobile phone app.
+So first off, what is all this?
+So this Ableton Note is a little mobile phone app
+that you can use to sketch out music,
+which is pretty nice and easy to use.
+And it uses a protocol also from Ableton called Ableton Link.
+So you can link up or connect multiple devices together
+and make music together.
+And everybody is synchronized to the same BPM,
+to the same beats.
+So pretty cool stuff, but this is just,
+I just want to show this because in the browser,
+this is not easily doable,
+but in the electron version of case, the standalone,
+it's, we can do this using NPMs.
+So what are NPMs?
+NPMs are packages that extend your JavaScript library.
+So you have a library of packages
+that give you more functionality.
+So, and you, you can find them on npmjs.com.
+So for example, this is a package called Ableton Link.
+And this gives you the functionality of Ableton Link
+available in JavaScript.
+So, so we need to install this
+and then we can write an operator
+that uses this functionality.
+And then we can write an operator that connects to our phone
+in a very, really convenient way
+and tells us the BPM and the beats
+from, from the app, from the Ableton Note app.
+So this is what we want to do.
+Okay.
+So first of all,
+I will start our standalone version of KBITs.
+So let's start by creating a new operator.
+So let's call it Ableton Link.
+So let's start by creating a new operator.
+So let's start by creating a new operator.
+So let's call it Ableton Link.
+So let's call it Ableton Link.
+And we will just keep all of this, like Ops Local,
+this is the new namespace.
+And we will just all keep this and create this operator.
+There it is.
+So now we, as you know, probably from the web version,
+we can just start and edit whatever stuff out here,
+like this, for example, and then the operator changes, right?
+So one of the most requested features in the,
+for the standalone is actually to use your own editor,
+like the editor you want to use.
+So that you can do with the standalone.
+So you see this little folder icon here.
+This is not available in the web version.
+If I click this,
+it will open the finder,
+your file manager with the directory of this operator.
+So I can just edit this operator.
+Another neat thing is if you press command and this item,
+it will copy the path to the clipboard.
+So, um, I can just go here and, um, open this file in a editor in my terminal, for example.
+So now I can, I can go here and add some code.
+And when I save this, you will see, it will just update the operator here.
+So you can, you can just switch here between editors and, and change the code like this.
+And, um, it will just, it will just upload, uh, will just update the editor.
+So everything I do here will just be automatically watched and reloaded in the editor.
+So, so that's, that's pretty neat.
+Um, but yeah, um, let's write this Everton link operator.
+So, um, for this, we need the NPM, uh, package installed so that we get this, uh, Everton link package,
+and then we can require this library in our operator.
+And this is a bit different than we see here, but we will go through this.
+So it's really easy, um, so we have this operator now and we need to link the library to it.
+So you can go to, uh, you can press this button manage up and then you get an overview of, over the operator, um,
+and see attachments and libraries and all of this stuff.
+And now there's this new, uh, section here called dependency.
+So we will also clean this up.
+Um, this will be over, like, will be updated in, in the next versions of cables.
+And it will be really convenient because we put a lot of work into this to make this all work.
+And there's more easier ways to include libraries in your operators in the future.
+And it's, it's really, uh, this will be really great.
+So, okay, for now, um, you can select, uh, NPM here.
+So this is where we're working on.
+Like there will be more things, but we can add an NPM.
+So we have to, um, copy this.
+So usually you would do NPM install Ableton link.
+If you would program this, uh, like the usual way, but in cables for this operator, we will,
+uh, install it like this.
+So we put the name in here NPM and then click add, and then it will take some time.
+And then it will add the library to the operator.
+So now it's done.
+So now you see in dependencies, Ableton link NPM, et cetera.
+So if there's an error, the error console pops up.
+We will talk about this later, but for now this worked fine.
+Um, so now we can use this library.
+So, um, so they provide this, uh, sweet little example here so that we want to copy and paste.
+So let's start with this, with this line.
+So let's put this into our operator.
+So I would just copy paste this and this, if I save this, this would produce an error because this require we have to work around, uh, the whole node system to make this work in operator.
+So usually like your whole, your whole JavaScript projects has NPMs, but in case we want those NPMs to work with each op.
+So it's a little bit different and it's quite complicated under the hood, but, uh, so the solution is you have to type op dot require Ableton link.
+That's it.
+So let's save this and then no error pops up.
+That's great.
+So we can, we can use this.
+So let's create this object, a new Ableton link object, and then it's as easy as that.
+Start update, um, is a callback that is executed every time there's an update basically.
+So, uh, let's put this in and we don't see anything, but, um, you see here, there's a console log.
+So we can open the, the dev tools of our electron and we see, we see some values here, but that's,
+that's really inconvenient.
+We want the operator to output this stuff, right?
+So we can, so I already called this phase.
+Um, so let's call it result phase, uh, like this.
+And then we can, we get those three parameters from the library beat phase and BPM.
+So I would just use the phase for now.
+So we can just output this, um, to the result.
+And now you see there's some, some action going on.
+And we can easily, uh, visualize this with a clear color operator, for example.
+So just connect this here and then, uh, we see some flickering, flickering color.
+And, um, right now I'm not playing any music with my phone, but I will just start this.
+And I hope you can hear this.
+So this is basically a metronome that that's giving this signal and every four beats,
+it will flicker, but we can, uh, improve that.
+So what it's, let's visualize this.
+So it's putting out a number between zero and four.
+So we, it gives us like, which, uh, four quarters, I don't know how to say this beat we are right now.
+So to make this a bit more reactive, we can use fract.
+So we always get like the number behind the comma, uh, from, from that thing.
+And then you see that it's really on sync.
+And now I can on, in this app, I can change the tempo, for example.
+So this is 107, 170 BPM.
+Or make it really slow.
+So this is a 35 BPM.
+Yeah.
+Pretty cool little app.
+So you can also make music with it.
+But I'm not that advanced, but you can make a user to make music.
+Let's turn this a little bit down and then synchronize it, uh, to your PC or do whatever you want with it.
+You can also read that back in, in Ableton and connect, uh, musical programs.
+So, yeah.
+So this is, uh, nice example, how to, uh, use MPMs in your operator.
+And that worked pretty good.
+So this is, if you download the electron version of KBITS, it's a bit different because, um,
+this is what I'm using is the, um, self-compiled version.
+The, what I showed in the last tutorial or one of the last tutorials.
+And I want to show how it is in the downloaded version because, um, because this, uh, NPM module
+uses native stuff.
+So it has to compile native code basically in the background to work.
+And to use this with the downloaded version of KBITS, you need to have those development
+tools installed.
+So, so this is why it's a bit different.
+So I just want to show this, um, how this would work there because you get a little
+error message and then you have to do it yourself.
+Um, but most stuff is the same.
+So, okay, let's just, um, try our, um, so I downloaded the latest version of KBITS here.
+Um,
+and I will just go to this, uh, uh, okay, let's, let's see.
+Um, so when I execute this, it's already working fine because we already compiled and installed the
+Averton link stuff, right?
+So what I now want to do is I want to create another app just to show this, um, how it's going here.
+So let's just call, uh, create a new app and call this a link to and, um, do the same stuff that we
+did before we go to manage app and we install Averton link NPM dependency.
+And so we see, now we see an error message that what I meant before.
+So if you use NPMs that don't need native code, which is hard to know, it's really like, it's not
+so easy.
+This whole NPM universe, it's a bit complicated if you're not into programming.
+Um, so this tells us there's a natively compiled thing in there and we cannot compile this from
+the standalone.
+We, we just cannot do this, right?
+So we have to run this command in the op directory.
+So, so I created, um, this, um, this op a link too, and I changed into this directory and I will
+copy paste what I got here.
+This NPM prefix installed Averton link.
+So you do this NPM install Averton link basically, but with this little prefix.
+So it's only installed in this, for this operator in this op directory.
+So, um, let's do this.
+So now if you do this for the first time, it will take a bit longer.
+Um, but now it will, uh, compile this native part and add the packages to this directory.
+You can also see this, that now there's that wasn't there before.
+There's now a node modules directory and you can go in there and see which, which modules are now
+being used.
+Um, but that's not, that's not really interesting to us now, but now I can basically copy the old code
+and, uh, uh, edit our new op and paste it in here and you see it's working the same way.
+So this is, this is the difference.
+If you downloaded cables and try to do this, or if you compile it yourself, then it's a bit easier.
+But, um, yeah, it should be fine.
+But usually you also have to do the NPM install.
+So yeah, I hope that was understandable and, um, please let us know what you do with it.
+Because there's a lot of native or a lot of nice NPMs out there that can be used for awesome stuff.
+That's not easily possible in the web.
+And we think KBITS can be just, uh, yeah, the, the functionality can be extended, uh, quite much with NPMs.
+So let us know what you try to use, what you want to use, if you have any problems, um, yeah.
+And have fun with it.
+Okay.
+See you.

@@ -1,0 +1,1053 @@
+https://www.youtube.com/watch?v=omIK1YOtb70
+all right so um tonight i'm a little bit clueless as to what i'll be doing um i've got i've got some
+sources of inspiration and i played around a little bit today because um yeah i feel a little
+bit rusty with copycat and that kind of stuff lately so um first up i'm probably going to do
+another one or two things from inconvergent uh later as well um inconvergent is a digital artist
+he's been a massive inspiration to me uh for many years now um he's made some really amazing
+stuff you should really check him out on twitter and especially his his web page he's got beautiful
+stuff there it's really really good um and like i said it's just been a constant source of inspiration
+to me you should just go and check it out he's got so many different pieces and he also releases a lot
+of his software on um github and there's just so much stuff here that um i'm not even sure where
+you can um start he's been doing things for a long time this is the latest experiments or so i'm doing
+lately with like this um focus effect but he's got such a strong visual style and it's very generative
+and algorithmic and nature and uh i'm i'm always really happy when i see things he comes up with
+he's he's a real true original digital artist to me so uh big up to inconvergent for uh always making
+such good stuff um so i'm actually going to start with a really simple one um tonight i think um so you
+know sometimes we say uh fake it till you make it like make something um look like something else so i'm
+going to try and get this one done and who knows um maybe i'll just do a variation or two like these um
+pictures here so um without further ado let's get started so i'm going to go to cables and i'm going to
+create a new patch so if we're looking at this one it's um four cubes so i think that's going to be a job for
+mesh instance okay all right so we're going to get a main loop and let's go into i want to just test this
+for a minute is it i've forgotten what the shortcut was oh we'll just do it like this okay so i'm going
+to go to main loop um and let's start with the basics so it's a kind of white background so we're gonna
+i'm going to grab a sequence first because most of the time you want a different order on things
+and then i'm going to grab a clear color and this is going to change the background color of the screen
+so i'm just going to put it up i'm going to make it pure white lower it down a little bit um and now i
+want to have a um machine stencil so i'm going to grab a machine stencil and it's going to need a cube
+obviously so i'm going to grab the cube as the geometry i'm going to put that in here
+and now we need to give it a positional array so i'm going to grab points cube
+that's right here and it's two by two by two
+now the reason we don't see anything is because all the cubes are so big that they're just like absolutely
+filling up the screen so um let's put this on 0.2 0.2 and 0.2 okay so we've got the cubes there and
+they're pretty far apart so now we're going to get the multiplier and the multiplier is basically the
+space between each cell like each point so we're going to pull that down now what you see there is
+this cube still in the middle um so the mesh instances drawing alongside the original um geometry that's
+going into it so if you've got the submissions and you go i don't want that one just click the
+geometry and look for something that's probably called render mesh we click that and we turn it off
+great so um i'm gonna grab actually because it looks like this kind of reflective stuff but um
+doesn't need to as you can see my cap here the example picture then click add
+i'm just going to save for a minute and we're going to need a texture so we're going to grab texture
+to feed in this matcap we're going to go to file we've got a really nice selection of um
+matcaps here in cables and we've got like different ones which all have really different qualities
+i just want one where we can see the sides with the difference between them this will do for now
+so if you look at the original picture it kind of looks orthogonal to me with the um the projection
+so let's get this let's pull this down and actually let's just do it here right at the top
+and i'm gonna do a fucking okay so now it looks like this and now i'm going to get a
+transform few and i'm gonna rotate this say 45 and
+45 okay cool that's pretty close already uh we're gonna go into the transform view and we're gonna
+scale it up uh for looking this picture though it's not exactly 45 degrees
+so let's let's tilt it back a bit it's something like this right um and let's make this a bit more of a box
+shape i've got some really weird perspective stuff going on there
+this is a weird illusion do i have to change this with transform the view before it's so fucking all
+hmm not too sure what's going on here this looks like some weird optical illusion uh one more
+that isn't usual i don't get it
+i just has to do with i'm not sure what that is that's really strange if you can just hide it so we
+don't see it anymore okay that's really really weird um because we're not rendering the original cube i'm not
+too sure what's happening there maybe i just need to save and reload just give me a moment
+let's take a peek i'm really not too sure what that is
+so let's just ghost cube right there in the middle and i'm not sure where that's coming from
+that's very um confusing it's because of the skip now i'm very confused right now
+where is that guy coming from this this ghost cube
+let's just try something different see if i get to see if it's a problem with the material don't know
+no there must be something really simple that i'm missing right now for this to be appearing now why is
+this background whoops okay my bad i do not know why that was on it was probably because i saved and
+reloaded without it being there all right my bad it can happen uh 22.5 and let's put this on 45. okay
+hey stv popsy team hey there um all right
+and i'm still getting this incredibly strange optical illusion ah it's because of the colors
+being exactly the same oh would you believe that okay now i get it i feel like an idiot right now
+okay so um let's see if we can get a different material that um gets around this problem
+actually let's just change the angle wow okay all right let's make it a bit bigger oh there we go
+now now it's now it's different i can i can live with that all right wow that was that was incredibly
+strange i just want to tweet this a bit more yeah this this is better because i was just getting completely
+confused because they had exactly the same color because it's orthogonal and the the direction with
+the matcap material makes it look like that all right so um that's that's like the basic cubes right
+so now we need to get this like that for field um look so to use that for field we need to
+um render this to a texture so first of all let's grab a full screen rectangle
+so we can see uh what we're rendering all right and i'm just going to put it on msa
+four four because i don't know if you see it but without um msa we've got a few jaggies there
+if we put it on two becomes better for eight is really uh overkill for this so i'm just gonna leave
+it on four that's fine because we're also busy with performance so now i need to get the um the depth
+texture so let's go over here let's grab an image compose hey stv uh thanks do we know each other or is
+this like you're like i've been hearing about this guy doing streams and i'm finally going to catch an
+episode popsy team it doesn't really ring a bell if it's demo uh demo scene or something like that
+forgive me if i should know you but i don't it wouldn't be the first time i had that with anybody
+um so let's grab the depth texture focus so we need to get the depth texture here let's take a look
+what's going on here so let's pull that far plane down because it's like stretched all the way out to
+100 units right and if we pull this down oh there we go so now we're getting like the depth texture
+right okay so this is always going to be a bit tricky but i'm going to hold in shift move the mouse
+wheel down and then using like much smaller numbers there all right um so we've got the depth texture
+and then what we want to do is we want to blur the image based upon that so we're just going to get
+the basic blur setup so ladies and gentlemen uh on discord all right i see a lot of people go by on
+discord but uh thanks for joining i hope you can enjoy the stream tonight if you've got any questions
+please feel free to pop them in there in the chat um sometimes i might not see it for a minute or two
+because i'm a little bit focused on what i'm doing but uh i'll get there eventually so let's just first
+of all set up like this blur based upon the depth texture focus okay so full screen blurs are
+expensive um so until zero as well i've got this cool hint full screen blurs are slow try reduce
+reducing the resolution to halfway quarter but because we're doing this in the final image um i'm not
+going to worry about that right now so what we do is we get we get this depth texture and you just
+have to imagine like black is a value of zero and white is a value of one so that's going to be for
+each pixel on the fragment shader so the brighter the pixel the more blur that's going to occur so what
+i'm going to do is now i'm going to plug this in to there and we're not seeing anything because i've
+got to do this and we've got to get the original image which is here all right boom so just to recap we
+get the original coming out here we put it in the drawer image here we get the depth texture and then
+we use the depth texture focus up it's like the camera focus i'm going to use that for a blur now
+this is just way too much let's put it on one let's just play around with this for a minute so if we
+move the center as you can see we get this kind of like um effect but i want it to be narrower right so
+do it like this and as you can see we can now get a little bit more of a subtle effect i can invert it
+and then what we get is let me try this and this is always like really a bit of
+tweaking there we go so if i look at the original picture like the the front is sharp um and the back is
+blurry ah stb says just to let you know i'm teaching um children to use cables to free my spare time
+trying to make the new generation well that is awesome uh now i remember uh you uh you popping up
+and bringing this up we thought that was absolutely amazing uh kids are really quick at picking up cables
+much faster uh than most people think uh so if you've got any questions or you need any help with that i
+don't know preparing stuff for the class um give a shout and you know if you've got some stuff that
+you want to teach them when you want any advice on how to approach that also just please give a shout
+we're more than happy to help so here we've got like this um basic depth texture focus but this is
+really a lot and it's like how do we do that i mean we can only go so far with um tweaking this to
+kind of work like we can get that center and so the center is like the focal point right so when i'm
+going to move that like here and as you can see there's a lot of a lot of combinations of stuff that we
+can um do here basically but what i need to do is um so i'm going to get the depth texture focus and i'm going to add
+a clamp texture
+i'm going to put it on rematch smooth
+okay so this is giving me something more more exaggerated let's get this
+okay this is really tricky
+ah this is this is going to be hard to get right so let me just get rid of this for a minute i want to
+just i think i want to move that far plane um up a touch i think it's just too close and then do
+yeah you see so let's turn the file plane up um
+let's actually make everything worse let's put it back into it
+let's try doing this all right yeah i think i need to
+yes i need to inverter
+yes actually i want the center to be as close as
+possible
+let's put this on free now now this is this is really tricky stuff to
+it's weak right
+let's try putting this in now
+you know what actually let's get this
+so that's some noise
+turn that off
+so we can add noise to the image
+all right
+turns out there's something going on with the neighbors
+okay
+so
+not not exactly happy with this yet
+to be honest
+all right
+it's got to be a better way to
+get this the way that i want
+i don't know what it is
+it's really hard to get this right maybe i've just got to blur it
+more let's get that look i'm going for
+i'm going to turn off fast
+which makes it obviously slower
+i think you know what it is
+so look if you ever get a bit mixed up with cables check the example
+i think we've got to blur the actual depth texture to
+get what i want
+so take a look here yeah here we've got the yeah image compose depth texture
+focus and blur
+and that's used as a blur so let's try that so i'm going to go here
+i'm going to add a blur right there we go okay so um let's actually save a bit of gpu
+let's put this on like 512 by 256
+let's get that blur we can
+you can leave this one on fast it doesn't really matter yeah so this is
+this is looking more like what i'd like um
+there we go and if i just bring
+touch of that center up there we go look at that
+i mean i'm not saying it's not the same but it's pretty close
+so let's get this and we can turn it a bit more like
+that and it's a lot similar now i'm not going to try and nail the the color um right now
+that's not on my list of stuff to do but as you can see even if we just put the blur in one we get
+this like nice edge place base blur down we can push this really far and it actually doesn't look bad
+um but yeah as i say with cables you know go real time and go home so i say let's just try and animate
+this um for a minute so um let's go here actually there's a lot of ways to do this but i'm just gonna
+hack some together so i'm gonna get a timer um and i'll put that here and what i do want to do now
+is you want to create like a kind of um trigger or a bang um as people are familiar with that term
+each time a threshold is crossed
+quick question from kdklv what is the difference between render to texture and image compose
+okay stb says basically image compose renders to draw image ops render to texture renders a whole scene
+and a texture from that rank you pretty much got it there so um image compose works with 2d textures
+right but you know it needs a texture to be fed into it so you could use depth texture focus for
+example which provides a texture or draw image if you press f for flow mode you can see that image
+compose goes down reads this reads this this all gets processed and that end result
+comes back up here you've got to imagine like a texture is like an empty canvas right and when
+you're going down like this you're getting all the information to paint into that canvas
+now image compose for example can't do that with 3d scenes but render to texture does so if you notice
+if i click on an op which shows a texture preview and you'll see the preview here it's a really cool new
+feature that we've got so here you can see without the blur and if you click this now you can see it with
+the blur okay so um basically render texture catches a 3d scene and turns that into a 2d texture because
+you know 3d scene is rendered um on the graphics card but you can't apply 2d texture effects to it
+you know it looks 2d 2 on the screen but it's been calculated in 3d so render the texture literally
+means render your 3d scene to a texture so i hope that answers the question and the other thing is you
+get the basic texture and you also get the the depth of each object per pixel right so we've got two
+outputs here texture and texture depth so you know if we plug um the normal texture into depth texture focus
+it wouldn't work because this requires a depth texture and it might look funny because it's red
+that's just normal not to go into it now so let's just animate this for a minute so i'm going to say
+timer and i want that to loop so grab a good old monty low i'm going to put it on one i'm going to slow
+this down to say 0.5 and what i want to do now is want to get like um a trigger each time it crosses like
+0.9 so i'm going to grab an up called threshold and what happens is every time the limit is crossed
+it will send out one trigger and it won't send out a new trigger until the value has dropped below the
+threshold and gone above it again so just to test that let's just pull this out grab a sequence up
+and we're going to press f for flow mode i'm going to put threshold on say 0.9 and as you can see every
+time it goes past 0.9 it sends out a trigger so that's great so f flow mode is your friend when
+you're debugging this stuff so now what i want to do is i want to get a trigger counter i just basically
+want to count uh every single time a trigger goes off so if we go here now this number's going to go one
+two three four okay so i want this to spin on the y-axis so i'm going to put this in zero so i'm going to get
+this trigger counter and i'm going to multiply it by um 90. okay i'm going to plug that in just to show
+what's going to happen so i'm going to put it on rotate y and you're not going to see any difference
+because it's flipping exactly 90 degrees so um you know why would you see anything put on 45 you'll see
+where we're going like this right but this is like really jarring and we want like a smooth transition
+so what we do is i'm actually going to put this on 90 and i'm going to subtract 45 because i want to get
+that view that i had before so now it's actually flipping you just don't see it so to do that we
+need to like kind of create a transition right there's so many ways to do this but i'm just going
+to grab a quick one because we're on a live stream so smooth um smooth out jumps and values you need to
+trigger so i'm going to grab this one and i'm going to pop it in there and now i'm going to put this in
+let's say 16. now a little bit too fast so because it's all based with the time and much below and i'll
+just put this in 0.3 and now we get this so that actually went pretty good
+yeah that was that was pretty good so that's like a quick copycat of this one and if you look really
+closer you can see there's a lot of like grain right and if we really want to get that um let's
+just take a quick peek we've already got quite a lot of it there what we can do is we can go to the
+noise texture and we can add more amount right so you know this is a crazy amount and if we put it on
+the nearest to get this really pixelated stuff linear and nitmaps not going to do anything
+so you know if i want this to look better um i could crank up that um texture size obviously because
+then it's going to be less blocky but from my experience you you just don't really need to do
+this i'm actually just going to put it on whoops 512 by 512 okay just save reload
+okay so as you can see it's a crazy amount because it's on the amount is on one and you know so
+basically what we're doing there is we're getting this blur and we're adding noise to it now it's on
+10 which is like a crazy number you know if we put it on one so this is the blur on the depth texture
+right so if we put on two three four five ten i just i don't know this this looks pretty close to
+me and i like it i'm not aiming for perfection noise for the for the grit we could also make it rgb
+which you know if you do um this i mean you're not going to see any actual color right because um
+this is just affecting the depth texture so you know we could even go to town and just say hey
+let's grab this noise so that's like the noise on um on the actual um depth texture i mean there's so
+many things you can do with texture that's actually processing so let's put it on rgb we could lower
+this now and we could do this to add a little touch of color i wouldn't do normal i'd actually do something
+like um subtract and we could subtract that um from the image and we could add the touch and i really
+doubt that you've seen these details on the stream um but i'm just exaggerating it now i'm just cranking
+it up so that you can um see it basically that you shouldn't really notice um noises there so let's
+just turn it down a touch can animate it as well and you get this like old school quake game effect
+where when you notice it drives you crazy uh but if you don't notice it it's um it's okay so i'm just
+going to turn it off because i know that police havoc's havoc with streams so all in all pretty
+simple uh patch um for the same kind of look um and you know in theory this this is probably going to
+break everything because the depth texture focus has been tweaked perfectly to this but let me just save
+let's go here let's put this for example on 10 by 10 by 10. as you can see we've got a lot of
+clicking now because of the um orthogonal so from correct we can just go here and we're just going
+to scale um everything whoops down
+and as you can see we've already also get this like crazy kind of look and i could try and move
+it all into uh focus uh for this kind of thing and this is actually like a really interesting thing right
+i mean if we look at this what's happening is um it's blurring more and more um the further it goes
+from the center right so you know if we think about that we don't need to literally use the depth texture
+focus we could we could we could pretty much use anything i mean it's just a gradient right
+so you know what what happens if we go here and this could look horrible improvisation um session um
+so let's grab wave form
+this one i have no idea if this is gonna work uh well you can already see here what's happening
+right you know this is this is an interesting um thing that we can do i'm gonna make the picture a bit
+smaller uh and i think this this is like uh um what was it called again
+wow wow this is complete blackout on my part tonight that's okay section effects let's just look real quick
+i know what i'm looking for but my brain's had a blackout right now um
+how hard can this be
+this isn't this isn't it isn't this is not it it can't be
+this is this is this is a texture effects i'm looking for um i think i am
+what would have been the first time i was wrong
+now it is when you just have one of those moments where you know exactly what you're looking for but
+you cannot remember this name that is this moment right now
+this is trick um
+i've completely forgotten
+i mean it could be this one and i'm just really not remembering it
+right it could really be it how did this work again
+almost
+right
+frequency one okay so yeah look there we go so let's do this
+so this is really handy op i can use this power factor right as you can see we can already get like
+really interesting effects um and i could just say you know i want to invert this right
+so basically the pixels white it allows me to um focus in there more so i could use the power factor
+now and um lower this because we're inverting it and as you can see we could really create
+very specific like um um depth depth of field effects right but when we plug this into here
+the polar coordinates generate this kind of shape so let me just disable one get rid of invert for now
+and i'm gonna click this so i can see what i'm doing i'm gonna turn this up so as you can see i can just
+really um i can use this to like create this kind of blur effect and we can we can basically we could use brightness now for example to
+um lower this or i'm not sure how it'll work slow that down
+yeah so you know we can use this to just create these like custom shapes right and this one now
+won't be affected by um depth because it's not using that right um
+but as you can see we can really tweak these and get really um interesting effects basically so yeah that was
+just something i wanted to show uh it just popped up so let's put this here and let's put this back on
+how it was before let's put the scale back on one there we go all right so um
+yeah stb i'm not going to start with lights right now because um my cat material doesn't use lights that
+needs the phone material um and lights is a very uh different thing you know so right now i'm just
+going to try and keep it here because um you're right it's like this purplish reflection um kind of in
+between that i could probably fake it with the matcat but that's going to be going a little bit too far
+for the amount of time with this one i think so i'm going to save this as in conversion copycat for cubes
+great all right um let's do another one you patch empty so um
+so this kind of style um i've seen one or two things in shader tie which do this in real time is
+pretty sick but they're also still like um using like a feedback buffer because
+to to render this amount of points lines in real time is really really difficult it's not all this
+kind of like um smear like effect it's like if you don't if you don't clear the background and you
+move pixels and you draw them over and they've got like a lower alpha you can get this kind of effect i
+mean this this to me is just a stunning uh piece from in conversion and i don't know if you can see but
+like all these little faded parts it's like you can only get that by lowering the alpha of something
+and having it continuously going like um over the same point it's kind of like getting a bit of pastel
+or pencil and like moving that over um you know so if you do that with like something that you see here
+and you weren't clearing it you know it would smear over each other the whole time it's it's it's a thing
+that a lot of people do with um processing and well just basically anything with graphics i mean i love
+the style um but it takes time to build an image um because that that look you know you just you can't
+get that level of detail just in real time at least not easily um but this is something i'd like to
+experiment with um tonight actually um so i'm gonna use this image as an inspiration
+um i truly doubt i'm gonna pull this one off um in the stream but that's not the aim and that's okay
+um so i'm gonna make a new project i'm gonna call it in conversion um awesome spiral sorry if that's the
+wrong name in conversion um just winging it as i go um so you know basically it's um
+you know like i said the the whole idea this whole technique is um
+not clearing the background and just drawing over it again okay so let's just close this one off
+i don't need this let's move this here all right so let's just break it down so we're going to start
+with the background clear color so i need to create a a a bunch of points that are going to move
+over the screen and they're going to have to move in these organic lines uh i could use sign but i'm
+probably going to use something like perlin because why try to reinvent the wheel um
+so i'm just going to start with the background and then i'm going to get a bunch of points and
+then what i'm going to do is i'm going to make them rotate let's do that whoops do we even have the
+where was that few change lock is there ha there's something new every day all right so i'm going to
+grab main loop um then i'm going to grab a sequence so what i'm going to do is i'm going to
+i'm going to use point cloud um so first of all i need a point material right
+hold it one minute
+i've just got it
+sorry flex was turning on i just noticed everything wasn't as bright as before um okay there we go
+all right so i'm going to grab a point cloud from array up and just to check this is working let's just
+grab a random numbers array free boom there we go great so let's look at the colors that kind of blue green
+background so let's go up here i'm going to throw in a clear color and i'm not trying to match it exactly
+right now i'm just getting something similar way darker
+and those are white pretty much let's just keep it simple make it white um scale by distance
+and as you can see we've now got lots of points on the screen great so that works so
+what i want to do is make a horizontal line of points and i'm going to build this myself it's really not
+so difficult so let's put this on i don't know 20. so i'm gonna make a line just going from left to
+right but like from some center point um so i'm gonna need to create like xyz points so i know that
+i already need an array pack three um i'm gonna put this in zero to one and it's gonna go from left to
+right um i'm gonna create a new array up uh y and z i really don't care about so i'm going to put the
+number on zero now arrays always have to be the same length so get the array length out and i put it
+here uh and this one's just actually going to go into uh y and z if you're holding right uh alt and
+right click you can copy drag an inlet okay let's grab that and put that here grab this and put it there
+okay so now we've made some points um
+i don't want them in the center because there's a hole so let's use um array sum
+it's just to offset right there we go so i can use this now to offset so zero is dash let's say
+zero point two five i don't know because we call this later okay so far so good so the basic trick
+trick that i want to do is this
+i could do with a normal transform i just want to keep it in array world right now so i'm going to put
+this here and there we go see so this is what i want to do just want to have this thing do that okay
+so let's pull this down so now i want these um things like so think about it i want them just to move
+left and right because the up and down and everything else that's going to be taken care
+of by the transform array when it rotates right so let's pull out i want to add noise to the x position
+basically so let's pull this out and grab an array pull in pull an array okay so we've got an array
+perlin let's make a bit more space um
+yeah let's just add them together to see what comes out so i'm going to do array math array because i
+want to just add the pearling noise to that original um x coordinates i'm going to grab that and i'm going
+to put this here now let's move time
+there we go now if we look at perlin array and we look at the um output it normally outputs like
+between minus one and one but it's perlin so it rarely reaches minus one one but this is like too much
+um so we're just going to grab array multiply i'm going to lower it to i don't know 0.1 let's just see
+how this is going to work so now i want to animate it so i'm going to grab time and y i'm going to grab a timer
+way too fast let's put on 0.25
+now i don't think they're moving enough
+let's put down 0.25 okay
+so let's use this timer normally when you want to do i mean in converging there's a lot of um
+sorry what's that stb sounds like a mix with taurus and the sci-fi copycat video do you mean the sci-fi tunnel
+because that was real time as it gets there is uh no um the canvas gets cleared i know it's not going
+to be like that at all i mean uh good luck getting this pulled off real time um if you can do it please
+give me a shout i would love to see how this can be done in cables um that level of detail at least
+so when we've got like a timer i always try and use it to um
+keep everything in sync because you know you want you you know if it's generative like you've got pure
+random and you've got like uh i don't know you can put in a seed and get the same result which is the
+way i like to do it because then you can claim to be some digital artist that knows what they're doing
+um so let's let's multiply um this number right here and say i don't know
+now we can just do it like this as you can see it's now moving all right great um
+i'm going to grab an op called key press learn triggers when a certain key is pressed or released
+right so i'm going to click learn and i'm going to press the w key um learn w hello
+it's not working
+i am missing something ah it is it is that it's just on press release all right so press w okay so let
+me just check this is working sequence flow mode okay it's on canvas only so if i pressed i'm pressing the w key now but i'm pressing it when i'm here and if it's on canvas only
+it only happens when you're here and if you click here with the mouse then it doesn't so i'm just
+going to turn that off for now because i'm going to press that wall okay so um this is just so i can
+reset state right so i'm gonna do it on key release and for press w now as you can see i can put it back
+and because that's going into the timing why from the pearling noise um we're gonna we're gonna constantly
+um get the same result which is great because like if we want to make the result different i could just
+add a number here right so um
+if we want to get like the the it's not clearing thing it needs to be in in a texture right and this
+isn't a texture right now you know it's um being calculated in 3d you know let me just make these
+points a bit bigger because it's a stream and i sometimes forget that might not be so visible so i
+hope you guys can see this okay all right so first of all we're gonna do a render to texture and then
+everything's gonna vanish because um in the background what you see normally it's like a full
+screen rectangle we just put that there because we just want you to see something if you add something
+to a scene so if i click this i see um the scene right so let's move this up here um
+let's go over here and add a full screen rectangle and let's get that texture and plug it in
+all right so um if you go to render the texture you've got the clear option here and i always get
+mixed up with this stuff right so basically what's happening is the clear color is um
+clearing the background each frame there we go all right so if you've got a clear color there what's
+happening is you know every every frame um this is being drawn on top of what's there right
+um that's it in a nutshell so we take that out we get this effect but you know how do we then
+how do we you know if we reset now we get this but we don't we don't want it to keep drawing over
+like that we want to we want to be able to like clear the whole canvas right so um i'm gonna make a
+trigger send because i just don't like lots of one cables most of the time i'm gonna create a new
+trigger and i'm gonna call it reset because i might need to use this in more places so what i'm gonna do
+now is um actually i'm gonna pull this out i'm gonna grab an if true dan okay
+uh i only need to add this like one frame at the beginning so we're gonna add this
+here and we're gonna get this from the key press learn this boolean
+there we go so press w i'm just gonna explain what's happening here press w and you can see it
+like right there what happens is because this is the first thing that's being um here i could put a
+sequence in between just to be sure but i press w and the clear color is just there for one frame right
+but because um because we're not clearing the background it only has to be there for one frame
+and that is now our background right but i don't know why it's popping back like that i probably really
+need to be sure of the order so let's add a sequence i'm not sure if this is going to fix it right now
+let's say hey i definitely want this to happen first and then i want the rest to happen later
+wow what is that
+let's put msa am
+i'm not too sure what that is
+i would really expect this to be clearing itself right now
+that's really strange
+ah do i just have to do this
+it still isn't solving it
+when i doubt save and reload
+so it this is good to look at so um
+when we load this is never evaluating to true right so maybe we need to do um trigger once
+it could be completely wrong
+could be completely wrong
+yep i don't completely wrong just let's use the trigger
+that's never gonna hit it probably there it is okay
+am i really being that silly
+i think i'm gonna solve this problem in a bit i don't want to get too sidetracked with the technical
+stuff right now oh there we go so now we've got the clear color which is just what i wanted
+on load basically okay so as you can see we've got this like really big thing going on there and let's just
+scale you know we could scale it down the traditional way or we can just use the um
+and we're not doing that okay array multiply so we're just gonna make it smaller on the x-axis right
+let's actually make this a bit bigger as you can see when i move the image um you know that the canvas
+gets cleared obviously wow that's really bugging me with this uh thing being there
+i'm not sure what it is i'm missing for that anyway fix that some other day
+so to get that effect let's just first of all crank the time up um that's way too much let's put it here
+so you know this has this like really granular like effects and you know to do that during the
+stream would take a long time uh because we'd have to like just watch the thing um render but
+if we want to get that kind of look what we do is we go down and we do this with the alpha let's reset
+so let's just give this a minute
+now if we do this too fast we're going to skip pixels and it's not going to um draw over each
+other right and now now we're just getting the basics in place okay so let's take a look what's
+going to happen now that's something i don't like you see that like hard scene there so what can we do
+about that well we know that the um time in y is what's affecting this so um
+like this needs a rethink okay i'm doing this wrong way around all right let's just do this for a minute
+okay so this timer i'm going to put on like 10 yeah so it's going to go way faster now
+and that pearl and stuff's going to be really quick so i'm going to put this on a multiply i'm going to do
+this on um low number all right so i want it to yeah so let's grab a montreal okay so when this rotates
+360 degrees as you can see you know we're going to have a full circle right so let's put montreal on
+360 360. okay let's do this first and i'm going to put this multiplier just on one i'm going to grab this
+i'm going to plug it in there let's do this
+so basically what we're doing is um when this module loops the time in value going into the pearling array is
+going to be the same and that should mean that those lines match up at the scene
+i don't know why that bothers me so much but it's just something i want to solve right now
+so let's just see if that's going to work so if all goes well
+this is going to is this going to loop and when it gets there it's going to just like match up and we
+won't have this big scene boom all right but now we have a problem um it's just going to render
+exactly the same thing so as you can see you know it's um it's getting brighter because it's going over
+exactly the same pixels and it's just adding more value to them so you know you solve one problem and
+you get another one because this original piece uh from the conversion there's like so many things
+um changing care i mean this could have taken i don't know i don't know what technique used to make
+it it could have taken an hour where it's just been drawing it again and again and again on all these
+different passes like it went from here and then it reset and went there and went through a different
+noise um seed which is probably why we've got that line there because here you can see there's almost no
+movement um basically and as we get near the end it becomes heavier so maybe we can try something like
+that so now we've got this rule because generative art is all about rules you create some rules and
+you create more rules but you build upon the basics so how about we come with this rule now we want
+it at the beginning when we um press w at the beginning we want it to not be noisy and later on we want
+it to be noisy so let's look at this array multiply i'm doing 0.25 0.2 is actually enough and i'm just
+going to turn this up a touch because i'm not sure how visible this is for you guys on the stream
+because it's just about getting it right okay so we're going to use the mighty map range op
+which i absolutely love so we know that one of our rules is it's always going to give a number between
+zero to 360. so we're going to say alt min is zero alt max is 360. now let's say that the new min is um
+zero and then 0.2 and what i'm going to do now is i'm going to feed this into the array multiply
+and i'm going to press w so when it starts there we go um there's almost no um noise being added because
+we're multiplying by zero and that's just getting added to the x position right and as it goes around
+more and more then it should get noisier and noisier the closer it gets to the end
+it's a little bit of a slower stream um tonight because you know this technique is just basically done by
+drawing things in this way which is something i've experimented with with cables in the past but never
+done a lot with and there you go all right that's that's pretty cool you know that's like one look
+but we can do better
+let's say i'd want it to not be noisy become noisy and then not become noisy and be seamless right you
+know because i'm not i'm not trying to do um this exactly right now this is an inspiration to try stuff
+and let's just make this guy um bigger
+this could fit more on the screen
+let's try it like this i think a little bit more still
+and he's pretty much got it in square so let's just do it like this okay
+all right um so um the thing that comes to mind is this um let's get pass array
+this allows us to turn a string into an array make sure you've got numbers on
+so what i want to do now is it's like visualizing a line or a waveform right it's multiplying the noise
+so i want zero nice at the beginning most of the nicer less noise there uh the same so i want to have
+this like you could think it's almost the same but i don't want to use a sign because that's very limiting
+um i really want to be able to change this later on dynamically so let's get it simple first zero
+comma zero point two comma zero control s save so now i'm going to put the array i'm going to grab um
+interpolate numbers array interpolate between all values of an array like this this is seriously i
+think one of the most coolest underrated um ops that's out there like i've used this thing so often
+to achieve amazing things so basically let's unplug this so we've got this map range right and we're
+going to keep this rule zero to 360. um and we have the new min and the new max
+so what we want to do is no matter what the length of this array is we want to be able to
+interplay between all the values when this number is going from zero to 360. so
+we get the length of the array and we plug that into
+new max because our 0.2 value or whatever value we want to use that is now inside here okay all right
+so now we need to um interplay between it so if we look here this is exactly what we're going to do
+this is now going to go between all the values of the array so once again oldman zero old max um 360
+that's our time loop even zero new max is the length of the array that we're dynamically creating so this
+is our interpolation value so now if i look here and i press w we start at zero there we go i think
+let me just check let's just plug it in and find out there we go so i'm gonna press w so there should be
+no noise at the beginning and it's going to go up and basically when it's going to come back
+so it's going to be the noisiest at 180 degrees because that's exactly 0.2
+right and when it comes back here and then it should go back to exactly the same value which is multiplied by
+zero great okay what if i want that to be different on each iteration because this is just looping over
+each other now i may as well just turn the the alpha up and i'll get the same result
+excuse me
+so we need to say
+so if i grab a floor
+um that returns lowest number i'm going to say equals result is true if so i just i just want to test
+this now let's just put it on um zero and wait for it to count around um trigger changed
+true
+so when this gets to zero i should get a trigger
+just want to check
+i hope i did i completely missed that i think i did
+all right i'm going to just trust that i did so what i'm going to do now is um i get a trigger
+whenever it's on zero right which is good because when it starts each time i also want it to be
+different okay so the pull in the rate this this time here um is something we could use but it's
+got a seed number right and if i change this as you can see we get i'm just wiggling it now with the mouse
+we get these nice patterns so that's like that's what we're going for so we need a seed between um zero
+and one so when we say trigger change true we're going to say trigger random number okay between zero
+and one awesome so what i'm going to do is now i'm going to connect that to the seed and then press w
+a little bit on the slower side tonight with the stream because obviously we have to wait for this to
+update i could crank the speed up a little bit so now we've already got a different seed than um last
+time so basically what i'm hoping for as you can see we've got a wildly different pattern um what i'm
+hoping for is that when it's gonna hit the scene which is like zero slash 360 that the lines aren't
+going to overlap that's that's what i'm hoping for um finish crossed
+oh yeah there we go nice okay now this is great because basically we're now closer to um the original
+look um that in convergent has in that piece um now the thing is the the alpha blending is like still
+way too high basically um
+and you know this is like i'm not seeing anything there so this was the whole idea let's get back to
+that on creating this right so let's now you have to think we're interpolating right so we're going between
+zero zero zero point two and then zero so the zero to zero is this part here and zero point two is that
+so we we can change this as much as we'd like right now right so i could put this in 0.1
+and then zero and then we could put it on 0.2 and then zero and i'm going to save and now i'm going to press w
+and we're going to get a different pattern now because this um map range is it's getting the value
+of 0 to 360 which is a complete rotation and it's mapping it to the length of the array right now there
+you go you can see it so zero zero point one zero zero point two zero so now we get two parts which
+become really rich um yeah they become noisy and two parts um that don't it's basically three but these this
+is the scene right actually you don't need this one i think let me just try it again
+so zero zero point one zero zero point two and you should just loop around to zero let me just check
+could be uh just one zero too many though
+and the thing is this is great because we're we're kind of like writing a timeline
+for stuff that we want to have happen and this little part here we can use that with everything
+right we could use it to change the color and we can use that there we go so look zero a value zero a
+value so you've got zero a value zero a value zero actually i was wrong so we do need that zero that's
+to make it a loop basically all right press w again all right so this is interesting we can we can use this
+um for other stuff right so um like i said to get this look i'd have to leave it on for a really long
+time and you'd need the timer to go like this basically like
+so put it on two it's going super slow probably even slower than this and i just want to make this
+clear and let's put this like there and put it on w um
+so normally you'd have it like this
+and then you you draw this like two three hundred times like you shouldn't even actually see them right
+now it should be that little um and that is the only way that you'd um get this kind of look but i'm not
+doing that on the stream tonight because i don't want you guys to die of boredom from um watching
+what's happening basically so let's crank this up again back to 10. you know what somebody must have
+made a spinal tap joke so let's just do 11. all right and still a bit too faded we're just exploring the
+rules here right like how can we how can we get this to do what we'd like so um so how about we use
+something like this to change the
+color just something really simple so so we've got this this little system here right so we're going to
+grab that we're going to put it over here we're going to grab the same number i'm going to put that
+into value so let's say that i'd want to change the i'm just picking one number now the red value so
+the red value is between zero and one right so i'm going to go ahead to pass array i'm going to say edit
+and i'm going to say when these waves are happening i want it to become one and when not happening i want
+it to become zero right so just go in here and the parts so i know that these um i know when these
+waves are happening because i'm creating um this this thing myself so this is where the waves are
+in the other parts array and this is like probably not going to look very good but i'm just trying out
+rules right so i'm going to put this into point material red and i'm going to press w
+and what's going to happen is the color should change
+more when it's noisy and change less
+actually let's just crank this up so you can just see this in one go
+all right w let's just ignore those little dots i'm not sure what i've got to do right now to get
+rid of them
+so look at that when when there's pretty much no noise we've got no red in there and when it becomes
+noisy we add the red and in this case because we've got rgb fully open we get this
+kind of cool
+that worked okay um now yeah of course we could that's not the look like in the picture but if we
+lower this now and we do this we're gonna go from black
+to red
+yeah okay so this is really cool this is what i mean we've just like you know we've just got this rule
+now that the number between zero to 360 we're mapping the range and we're looking at values um based upon
+that right now the thing is we're only moving stuff on the x axis okay and we've got this um
+we've got this array multiply here and that's working pretty cool as you can see now this this
+nice little trick that we built there that every single time um that it um does a loop we get a
+different iteration right we're picking a different seed with the pearl and this alone i could
+i could get this now um put the alpha really low put the timer really low and then just like
+hit it put it on full screen and then just like leave it like for an hour and come back
+and this is the cool part with cables you can just click in the screen now and you can click this button
+and boom you download an image now i'm not going to go to that image right now because
+um i don't want to show everybody my hard drive um but that's how quick and easy it is to get an image
+right so let's just go back to where we were before
+let's put this here let's put this there and you know the sky's the limit with this right you know um
+we could use mesh instancer instead of um should we just try it let's just try it right why not so
+i'm gonna put an if true then in between
+so um let's grab this i'm just gonna just gonna put this over here
+and i mean i don't have to get rid of what i've got here right now i'm gonna grab a circle
+um circle mesh draws a circle great and let's just go to the mesh instance if you're going to press w
+and i'm not going to see much right now because we don't have a positional array so i'm going to
+lower the radius and look i'm changing this but i'm not seeing anything because i've got clear disabled
+right so let's put um whoops let's put clear on just so i can see what i'm doing right so let's put
+this on 0.01 right and this needs a color so let's give it basic material okay and let's put that on
+white for now okay this is just a quick experiment so the positional array we've already got right so
+we go here and we grab this and plug that into positions and as you can see we now have this going on
+let's just turn clear back off and we're still rendering the original circle so i'm going to click off draw
+and why is it now not moving f if true then
+that is unusual
+ah okay so look the the trigger is coming from there so that's my bad so um i'm just going to be really
+lazier and just plug this one in and this one
+press w all right so those circles obviously way too big so put them in 0.01 press w
+they are still crazy massive
+one w all right so look there we go that's that's that's pretty cool so far and then we could put the
+alpha down to 0.5 0.2 and we get this so now we've got something uh which is pretty much looking
+the same with the mesh instance but the beauty of it is now we can change the size of every single
+circle which is something we could not do with the point material so let's try not get too carried away
+here so um and this is also rendering like way too fast let's just put it on like seven for now
+okay so let's make the circles a little bit bigger so what i'm going to do is there's going to be a scale
+array so i'm just going to get um an array
+um the array length let's look at this so um this is on 60 so we need to get
+the number of points which is 20. i'm going to put that in here and let's zoom in
+because i want to i want to repack this right so i'm going to do a rate pack
+free okay let's put this in here so um it's a circle so i want the scale to be the same on
+everything basically we need an xyz array for this so now i'm going to get this i'm going to plug
+that into scale array and we won't really see a difference now we've got to turn this up to one
+and that number one will give us what this size is so one with the scale array is this that so the
+beauty of this is now we can go here and we can make the circles bigger which is pretty cool the cool
+part is we can um change this randomly right so let's just think about this for a minute
+let's just clean this up
+okay so we got that rule zero to 360 right so we can go here now we can just grab this section again
+put it over here i know it's becoming a little bit uh messy but no worries where the magic happens
+i'm going to hold in alt right click and i'm going to drop that in value so let's say i want the scale
+to go from one to say three so it's going to become bigger as it hits these noisy parts right so i go to
+pass away these are my rules so i'm going to put this on two and then i'm going to put this on three and i've
+got no idea how this is going to look and we're going to put this into array number
+that's just the value that's applied to everything in the array let's press w
+that's so they're really small that's my bad so we're going to pass array um these should be a value of
+one one and one let's save
+okay so when i'm really small and thin unless they're going to get more noisy they should become
+bigger but that really really isn't enough so let's just make it really over the top insane
+let's do it even more because they're pretty tiny um
+whoops save press w
+okay so that's pretty cool let's lower the alpha right so we get
+more of this faded look and let's see how it's going to look now when we do it
+because they're going to go over each other right
+and this is still way too much but i mean when it's going to go for another pass
+now it's just i mean we could even do something like
+um yeah i just don't want you guys to get bored of watching stuff so i just don't want it to take too
+long so let's put it here i just wanted to do two passes okay i'll tell you now this is a perfect
+opportunity for me to grab a quick drink so i'm going to be back literally in one minute and i'm
+going to lower it even more because i still think that's a bit too much so i'm going to press save
+ww okay i'll be back in one month
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+hey
+so
+hey everybody
+thanks for waiting
+okay
+so for alpha way too high
+hey
+this is generative stuff
+um
+you don't get it right the first time
+but that's okay
+so i'm gonna i'm gonna crank the alpha back up again so we can see what's happening
+so
+i really like this because this is like really interesting
+um yeah rule set basically in place that we can play around with
+um
+as we've seen we can change the color we could change the the alpha value
+um basically uh there's like so much stuff we could do
+um
+i mean
+and the thing is that's the really cool part of this trick of the parse train interplate
+numbers array
+uh this stuff doesn't have to be the same
+uh right so i mean what happens if i put this on one
+you know
+let's do this
+it's gonna go bonkers basically
+um
+and i thought it was getting like way too big before
+so let's put this in ten and let's put this on five
+save
+press w
+okay
+so this is really nice you know this this parse array allows us to create like a
+dynamic set of rules and
+they can all be different lengths right this one this one and this one and you can even go
+further and create
+other little tricks like for example
+uh imagine we just want something to happen
+four times inside of the loop right so this is a modulo of 360 right so if we get this output
+output
+and we say
+and we say
+multiply by
+0.25
+um
+it's never going to go higher than 90 if i'm correct
+if i remember my basic math
+right
+right
+right
+great
+so
+um
+let's try it
+so we're going to unplug this and we're gonna
+actually no no sorry that's silly so we have a modulo of 0 to 360 and then we do a modulo of um 90 my bad because we wanted to happen four times right so the map range we say old max is 0 to 90 and we're now going to plug this into that
+value and let's reset and let's reset and then basically we're saying um go through this array which is changing the size like four times in one complete cycle right
+and this becomes really interesting then because like you know you're going to say you're going to say old max is zero to 90 and we're now going to plug this into value and let's reset and then basically we're saying um go through this array which is changing the size like four times in one complete cycle right
+and this becomes really interesting then because like you know if this array has like a length of um seven and this array has a length of eight you know these two things are never going to truly um overlap with each other and that's like a really simple rule which is you know going to create some really interesting
+stuff stuff uh that's like way too much uh that's like way too much uh that's it but hey it's interesting we're trying stuff out like yeah one was just that's not pretty let's put it on 0.25 nice and subtle but look we're getting some really interesting stuff here and now i have to press w to um reset it
+basically because i don't think it really cause a jump here but no worries so as you can see we're getting like really interesting results out of this so i'm trying to think of something else now which is like
+let's simplify this for a minute okay let's go to the perlin multiplier i think just got way too busy there
+so let's put it on 0.05 0.10 0.05 0.05 0.2 0.1 0.2 0.05 so this is like the multiply for the perlin right
+so i just i always now want some perlin to be added
+that's it really
+still feels just like way too much
+yeah okay let's let's cut down these rules for a minute
+so let's get rid of the one that i was doing with the color let's just leave as is
+just want to get something a bit prettier now because that's what we're going for
+so the 0.2 is a lot
+so let's just start again
+yeah and the size here um yeah this yeah this five and ten that's just too much let's just put it on three and two really subtle
+all right all right just want to get it back to the basics trying everything out okay this looks better
+okay
+so i'm just trying to think what i can do now here
+to to add more rules to this right um without it all becoming absolutely crazy and chaotic basically
+um that passphrase from red dot me da not all values in numerical so i messed up there we go
+did the 0.0.05 save okay there is gone okay so basically doing the last values that it kept
+okay okay so the interesting part is because it's becoming smaller it looks like the alpha's gone
+down but it's not so um do you guys have any suggestions for something that i could throw
+um in there as a rule based upon um what we've been working on so far
+because it's been a little bit quiet in the chat but still lots of people watching so thanks for sticking
+around it's always uh better than uh patching along um so yeah does anybody have any ideas with something
+that they'd like to um see happen there
+okay a little bit quiet somewhere no worries
+okay a little bit quiet somewhere no worries so um there's so many things we could do right like
+you know we have this this trigger um yeah let's let's do this so we want to start keeping track of
+like how many times it loops right
+i shouldn't do what i'm gonna do now but it's just the wow factor i just want to try it so i'm gonna
+do um image compose i'm gonna grab a draw image i just want to see if this works um then i'm gonna grab
+a luma key let's hope it works in these really thin lines
+i'm gonna add that there um
+okay so let's click this so you see the brighter parts of the image there
+so i can like grab just parts of the image right like this and i'm gonna
+blur let's say two i'm gonna put the screen size and say five twelve by five twelve because full
+screen blows are expensive let's move all this out of the way of the main patch this is like the
+we're in the past i just want to add like a little uh glow um
+uh hey bud atw came in a few ago and thought wow he's patching the weirdest lichtenberg ever
+i do not even know what a lichtenberg is got a wikipedia link
+this optic would work well with fft and sync to 360 degrees per four bars it would if we weren't
+drawing it over the canvas um and i've already got like an idea or two of like how we could do this
+um with pushing values into a buffer which would not give the the kind of like smeared pastel um like
+work um there's so many things we can do but i'm just keeping it simple for now actually let's do
+like another piece tonight but um this is going really cool actually i'm just having fun playing around
+of it because i love making generative art like stuff um and i also like making really real-time
+stuff but i mean i think it's really interesting to do this with um cables so hold it let's grab the
+original image let's put that there let's just get back to that right so this is going to be the original
+image and what we want to do now is we want to get this and we want to add it on top it's like a good old
+school bloom can add so much just a simple image so let's get this let's plug it in there we get that
+right um and then we're just going to say add maybe screen to understand select about that's like without
+the bloom that's worth and you know we have to kind of like tweak the lima key here like where do we
+look at that that's that's already adding um so much uh to the picture actually i'm really pleasantly
+um surprised i mean wow look look at this look at this without with without with that's that's pretty cool
+nice put it on ah there we go two three you know that's too much one is the sweet spot um yeah i like
+that um we could now add a touch of noise to the blur like we did uh before let's turn that off do this
+crank it up a little bit put it on subtract actually so that'd be like this i just it's just adding like
+grit right i don't want to add it to the whole image just to the blur just to add these
+imperfections i could add it there later so this is already coming out pretty interesting um
+a quick answer from bud a to the view listen bird figures the patterns left over from high voltage
+impacts like people who get struck by lightning they often have their maps like this wow i learned
+something new today okay i don't know if i want to google this but i've got to do it for a moment now um
+lichtenberg figures oh boy what what ah i remember seeing this when there's like this high voltage is
+pushed through wood you get this really really crazy stuff going on oh boy yeah okay all right i get it
+great we could also do something like this i suppose where instead of doing a circle um we make it go up
+from the center and then branch out all right let's do that in a minute um which we could just probably
+use this template um to do that if i'm correct yeah i've got an idea um for that i think all right save
+w okay so i'm not too sure i'm going to go with this right now um as always it's a it's a live stream so
+basically i don't always have a clue what it is that i'm going to do or end up doing i do prefer to
+look with the mesh instance because it provides more um options basically it allows me to do my stuff but
+this this this this this multiply down on the polling right ah put 0.5 that explains why it looks horrible
+okay because i'm also trying to tweak something to look cool here as well
+okay so i'm just thinking
+how could we speed this up without having to wait for it um yeah that was a risky click of the day during
+a live stream um so i'm just thinking how can how can we hurry this up well um
+how about we cheat
+right let's grab transform array
+um let's grab the other array let's flip it 180 degrees let's get the same array
+let's put that in there let's do we're going to get the timer alt right click drag
+so one should be turning this way everyone should be turned that way
+actually why are we even flipping it on the x-axis we can just make them both start from the same point
+so we go here and we just multiply this timer by minus one which flips the number
+and then we're going to do array match match two arrays array two is placed behind array one
+okay because this is just positional stuff so we're just going to merge them together
+uh this is this is feeling proper cheeky let's put this in there everything should stop
+let's put this one in here and let's press w and i've got the feeling completely wrong with what's
+happening right now give me a minute
+i would expect to see
+okay let me just try this out quick
+well let me just plug this one and here's positions
+right hold it that is going so that is going the other way and
+this one should be going the other way right so i do already merge
+ah okay so obviously what's happening right now is this i'm merging two arrays together and i'm
+changing the array length which is completely and utterly messing up this one right so the scale
+array needs to have the same size as the positional array the arrays need to be the same length so i
+just need to get this array length out and pop that into this which is the length of that array and let's get rid of that one
+um and now we're going to put this into the positions press w profit all right
+so now we're rendering it as a mirror which is also kind of cool
+all right
+and if we now go to the x-axis and we'd rotate it 180 degrees and then start it
+wrong axis then
+there we go
+so this is also interesting even though it's the same now
+problems they're the same that's actually not what i want
+so let's do so something you've got to keep an eye on is like
+um calculating things you don't need to
+but i'm actually not going to worry about it with this one right now and this is also kind of cool
+but this is not what i want so um let's go before the transform array and let's say
+shuffle array free shuffles randomizes the order of an array of triplets
+because this is an array this is an xyz array let's press w this should now not be the same
+am i completely in early ranker wouldn't be the first time that's looking really the same
+that looks exactly the same what is happening
+is it working
+this is exactly the same what's happening
+i must really be messing something up here i'm not seeing any errors
+oh yeah okay that's kind of cool
+now we've offset them
+why is this not shuffling like i'd expect it to
+i mean this is also a really cool thing as well you know also has a certain aesthetic look to it
+um you know the fun part about this is you know even though it's the same and it's mirrored because
+it's offset it's not gonna overlap or is it no it's not which is kind of cool but still not shuffling the way that i'd like
+like
+hmm what gives this is actually nice the patterns that come out
+hmm i would just expect this to be doing what i want right now but it's not
+so this is constantly changing this should also be
+constantly changing and the reason we're using the shuffle array free is because we're only changing the
+the the the x component
+i'm really confused
+though why this is doing the same thing that is not what i expect
+and this should not make a difference in the slightest
+i don't want to spend too long on it though i'm getting stuck i'm not too sure what it is
+let me just pause the timer right so everything just freezes i just just need to look at this so
+let's put uh what's the first number 0.55 0.59
+0.25 they're different
+it's probably something really simple that i am missing but uh so be it i mean i'm not gonna
+put too much time into this now okay let's put that timer back on okay as you can see the the trick
+is and this is actually really fun um we could just do this two or three or four times
+and just merge them into each other and then just create this bigger array you know so that we
+don't have to wait so long um for the screen to fill up um basically um i mean i'm just
+really curious this is probably gonna look horrible but i'm just really curious so we're
+okay so we're gonna rotate two axis right
+all right let me just check this out like
+um
+yeah yeah mark no don't don't don't don't break the pattern okay save w all right you know what i
+think i'm just gonna do one last thing which was change the color a little bit um the red amount
+um so i'm gonna put this is for the color i know this is for scale so i was using this one for color right
+so let's go over here um let's put in zero one five
+i'm just putting in random numbers here
+because the whole idea is again um
+that they're gonna loop and i want these color changes to actually happen
+more often so i want it to happen twice in the rotation so i'm going to put it on a modulo of 180
+so it's going to happen twice in one cycle i'm going to put this in on the
+value old max is 180 and then we're going to get that interpolated value from the array and we're going
+to put that into the red and press save i'm going to reload
+actually i don't think these values are enough or it's just taking a while to get there now if i'm
+not act the alpha is just really low which is why we then don't see it right which makes perfect sense
+w
+so yeah obviously if we'd have the alpha lower now and we'd let it do
+um more cycles around around then we'd see this smoother um overdrawn look basically
+you know what i'm just i'm just gonna let this do um two or three cycles
+and actually this one with the scale
+okay almost done i just want to watch this for a bit now
+um it's been quite a bit of time going into it let's put this on 0.25
+and let's just see what we got for two or three minutes one moment
+getting chilly
+and now because we've offset this like with a second array
+we have to wait for it to loop like two times before it becomes kind of seamless
+but this is really um interesting
+so like for example this y is always going to be on the same um position
+right and you know we could do these things like um whenever we've hit a full cycle which is this one
+one here right when it equals zero we could then like add an offset
+we could shuffle the array as well there's a lot of options with this
+all right you know what
+i'm gonna i'm gonna i'm gonna just save this i'm gonna say um save as
+okay and the last little idea before i'm gonna wrap stuff up in a little bit
+so i'm just going to get rid of this array
+merge i want to just keep things a little bit simple right now
+so this needs to have the same length as the amount of points
+right there w okay so let's say i don't want this to rotate and these are moving like this
+let's get rid of the offset this should all now appear in the middle
+okay so every time i press w it resets so now i'm going to go here
+i'm just going to put this on zero
+0.01 comma 0.25 comma 0.5 comma 1. i'm going to save that oh there we go
+so you get this warning pop-up if there's a passing error there basically
+so if i press w so the thing is um i need to rotate this like say
+actually i don't want this to all get my stuff in my head let's put the rotation for a minute on zero
+because this thing i'm going to do is not with rotate um and let's just swap
+i need to do with x and y give me a minute i'm thinking out loud
+so these are all moving on the same spot but you just don't see it should just add up now with the
+the pearling
+i'm missing something all right there we go did i put i put in two zeros that's silly
+all right reset and they start moving straight away great um so what i want to do is
+i want to create some kind of tree right so that means we need to put these guys down so you say here
+um this is an offset probably okay so we've got array zero to one um so we need to um do array
+subtract um 0.5 because we want it in the center and let's grab this pill and array finger and plug that
+in there make a bit more space save reload should be centered now okay great so i wanted to create
+this thing where over time um they're just basically um moving up and they're going out more and more
+that should actually not be so difficult so we have this timer um now i need to see like so that's minus
+0.5 and let's say it's going to go to um 0.6 okay so we're going to get um this module and i can't be
+bothered changing the zero to 360 because everything is like being put into that so let's just keep that
+let's be nice and lazy and put it on a um map range so we say zero to 360 it's going to become
+minus 0.5 to 0.6 and we're now going to plug that into the translate y and press w
+now they're all moving up so far so good as you can see this is a
+a system which can now be used for an awful lot of things so um the cool part is here this array
+multiplies like the amount of perlin which is like really off the scale right now um
+ah okay um 0.0 and then 0.1 0.05 comma 0.2 comma zero well let's just try this out press w
+so the thing is i want them to like branch out from the middle right so uh what we're going to do is we're
+going to get this which is just the x position because this is like the multiplier for the perlin
+um we're just going to throw an array um multiply here that's all we need to do we want it to be in
+the middle at the beginning so um let's just grab another map range i'm just trying stuff out here
+zero to 360 right that's uh that's our range uh it could all be different later i want to just have
+to go from zero to one which is like the multiplication strength right here and i plug that in there and
+press w it should all be in the center at the beginning and they should slowly go out more and more as we go up
+right obviously not a tree and i'm not going for a tree right now um so we could apply
+let's move that so it goes up straighter at the beginning actually let's just do this trick that
+we've got here so we can create our own custom uh whoops control i'm gonna grab that i'm gonna put it in
+here and say zero 360 is going to become and let's do this parcel right now i'm going to say zero zero points
+zero zero zero one comma zero point zero two comma one comma zero point three you know the more values
+you put them in the longer i'm gonna kind of make it take save and let's now plug that into this this
+multiply that we were had before for everything press w so there shouldn't be a whole lot happening at the
+beginning and that's the one is to start lower so say minus zero point six five
+start again okay
+you can crank the timer up a bit uh there we go
+not what i expected all right so uh tree either is kind of boring actually so let's just do this um 0.001
+comma um yeah one and then comma 0.01 comma 0.01 so we're just creating our own kind of like wave
+there just gonna turn the timer up um so we can see what's happening
+uh i just kind of like wanting to diverge um when it's near the middle there we go do its funky stuff
+and then come back so um this should just like start again actually when it hits the top
+and come back up from the beginning i just want to check and then it should just draw some more stuff in
+the middle of the middle of a different um seed i hope yeah okay great so uh i don't think it looks at all
+good so you know we can put this on a higher value like zero point and two and then start it again
+as you can see we get this now the interesting thing is the value coming out is between zero and one
+um but as you can see we can now use this to um draw these um shapes that we want there basically they
+they don't have to be on zero you know we could do 0.05 add that to the end and then we could put this
+on let's do this on 0.5 this is 0.5 i'll show you what we're going for in a moment
+now the interesting thing here is we're only doing it on x you know we're in 3d space right so we could
+also um be rotating this um if i'm correct on the y axis
+and then it should spiral there we go
+yeah that's what i was going for
+so the thing is the purlin is a little bit much there but that's the beauty of this system now
+you know um we can tweak that right so we can go here now um and this is the overall multiplier
+but this is like the the purlin multiplier so that's the one i need to tweak now this this zero
+this 0.2 um that's the biggie so
+i don't i didn't say this would look amazing but um it's got a lot of potential there because i mean
+this rotate thing is actually kind of cool if we let's just say we do this just um 0.2 and then 0.5
+and 0.2 so we're going to let the purlin do a lot more and the thing is let's just disconnect this one
+for a minute put it on one
+so what's happening now it's doing this on the x-axis but it's also rotating around right now you get all
+these dots because we're going too fast which means we're skipping uh pixels which means we don't get
+that look um like in convergence got in that art stuff which is basically way more iterations and
+loops over each other but this is already really interesting um because um you know if we're going
+to do this rotate part here so let's do a multiply of two which means we're going to rotate 720 degrees
+per cycle let's restart it
+so this is a way to you can just go wild with this and i'm not saying it looks amazing but
+the fact that i've just got this rule-based system in place now where i can just like tweak things and
+um keep working on it um i think that's like really really kind of cool um like if i'm looking at this
+right now um i could do that little trick i did before right so if i'm gonna um subtract one
+from this and move it over there i'm gonna get this transform array and i'm gonna get this and put the
+awesome to rotation y i'm gonna flip it by multiplying it by minus one
+i'm gonna do a ring merge i just want to put one um array after the other this needs a trigger i'm gonna
+put that one there and as we remember from before the scale needs the correct length which is this one
+right here so we're now gonna um disconnect this positional array we're gonna put this one in
+there and and let's do this on both
+here we go
+so the thing is i think we're kind of getting this look because perspective right
+things are low to the camera and they move up so i have no idea if this is gonna look good
+now i'm curious what happens if we put off um there we squash this into ah okay wait wait wait so we're not
+moving that second one but translate y there we go
+so we have a fog and all you know we we lose and the the size difference based upon distance so i actually
+think no let's get rid of that
+there we go so now they're both going up which is what i was going for before
+so let's do it like this
+now this is going really fast of course i just want to put it on slow and just look at this for a minute
+this get more of that look we're going for and the sky's the limit with this we can we can tweak this
+let's do really crazy stuff i mean there's so many things uh we could do um in so many so many ways this
+can be explored like i said it's a classic technique right that you are just um
+creating creating a couple of rules and letting things just recursively draw and so not recursively just
+draw over themselves um again and again and again so yeah um
+yeah there's a lot of ideas with this
+i'm not happy with this one though but i mean um i can't win them all i suppose let's just clean this up
+for a minute because i'm not going back to the thing that i had before so you know what
+let's just get rid of this let's get this
+tidy up for a minute
+okay yeah um i think i'm going to leave it at this for now i've got a lot of ideas of stuff that
+i could do but um they don't always work out especially with this approach where you've got to
+kind of wait to see it um draw i suppose you know there's nothing wrong with cranking that um
+speed up so you can see um where it's going in the meantime um so i'm actually i'm actually just
+thinking tomorrow um i'll tweak the first patch that i saved and i'm just going to leave it for a
+good uh 10 15 minutes and see if i can get like this um at least some of that look that in convergence got
+on um that piece that i was originally um inspired by because i think that just takes time and like
+really tweaking alpha the right way to get a similar kind of work so i'm just going to do my version of
+that um i'm going to grab my big monitor over here and uh just get like a really nice hd uh render and
+then i'm just gonna put that on and hope that after 10 15 minutes um that it looks um kind of cool
+this is a really nice technique and as you can see you know um it's all just dependent on this um
+this like um triggering things is this what i had to do let me just reload i just want it to be
+correct when i load
+there we go great so um there's a lot of things you can do this there's so many little mathematical
+patterns that you can create but i'm really happy with this thing with the parse array
+interpolate numbers right it just allows you to create like a set of mathematical instructions based
+upon time and you can synchronize them or desynchronize them um it's up to you um before i wrap up the
+stream tonight um does anybody have any questions and i'd like to say thank you to everybody that um
+stick around and has been following and participating as always um it's really appreciated
+okay um so i'll be tidying up one or two of the patches um and then i'm gonna go um publish them
+tomorrow at some time uh i'll take a day or two for the video recording to get published on youtube in
+case you want to watch this back and uh follow it and then try something again um all right so thanks for
+the reply so yeah i'm gonna call that a wrap um for tonight so uh once again thanks to everybody for
+having joined tonight uh it's really appreciated i'm not too sure what we'll be doing next week um
+as always we'll keep you posted just follow us on the social media with twitter or on facebook
+on instagram twitter is the best one um to get these kind of announcements that's the immediate
+communication channel hey thank you to us thank you uh bot atw um well i love doing this kind of stuff
+and i love sharing these uh experiments with other people and this is something i'd like to try again in
+the future with more uh time and uh experience so uh i'm gonna wish everybody a really good night
+um have a great time uh creating stuff with cables got any questions please come over to the forum even
+better yet discord if it's a bug post it on the forum if it's a general knowledge question post it
+um in discord like somebody today asked if we have always osc support just types in that bump there you go
+so you know for that kind of stuff throw in discord bugs throw it in forums and we'll get back to you
+as soon as we can um so have a good one i'll see you next time bye

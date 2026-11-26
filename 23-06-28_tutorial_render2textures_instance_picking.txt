@@ -1,0 +1,119 @@
+https://www.youtube.com/watch?v=WQM37Jr_NHI
+hello and welcome to another cabins tutorial today it's again about interactivity and i want to work
+on this example and show you how this works so in this example we want to pick between
+thousands of spheres so rendering thousands of spheres and and testing which one the mouse is
+hovering over and we are using this with the completely different technique than the
+intersections op for example we will use the new render to textures operator and
+we are doing this basically completely on the gpu so you can work with thousands of of meshes here
+okay um let's start from zero i will just create a little mesh instance
+with a random numbers array
+with a hundred coordinates and i want to draw spheres so let's size them
+let's not draw this one and create a nice material for it
+so um there we have them so as i as i was saying i want to show how to do this with the render to
+textures operator so this is a new version since the last update um and this one makes the whole process
+much easier so this one renders into multiple textures at the same time so um it's basically still the same
+content but you can you can show different attributes of this content so let's just look
+how this works so first of all the first texture is just our normal um color texture with our pbr material
+and um when you click the render to textures up you see there is an input called slots and when i change
+this number you see there's more drop downs getting activated so this is the number of textures we are
+rendering to so for each texture i can change the method or like the output what it's showing there so
+there's a lot of options here so there's a lot of options here and there will be more i guess
+so you can choose the material id or the object id or like a position of in the world um
+to see this we need to create another
+this texture op and
+this is how this looks like so this is
+the position in the world so each pixel the rgb values of each pixel are the xyz uh coordinates of
+this pixel in the in the world so there's other stuff like position local so this is like a relative
+position in this sphere um there is a position object so this is the whole spheres colored in xyz
+values of the whole sphere which is also handy sometimes and there's more stuff like texture
+coordinates or just some uh black or white color or something like this um this can be used for
+different rendering techniques like deferred rendering for example so there's also um
+a normals output so it shows you all the normals um of your meshes and but what we are interesting for
+interactivity is the material id object id instance id so in the red channel we have the material id in
+the green channel we have the object id and in the blue channel we have the instance id
+of that mesh that we are seeing there so right now we have 100 spheres on the screen
+actually let me bring them on the screen let's create a sequence and a full screen rectangle
+and render the color output there so there we have them
+so now what's in this texture right so we have 100 spheres and the instance id gives you really the
+id of this instance so it's really from 0 to 100
+are the values so we cannot render this because on the screen we always only see like values from 0 to 1
+so this is why this is animated in a funny way because it just tries to show you
+that those values are out of this 0 to 1 range but we have a interesting or we have a new way in the new
+vis texture operator to to debug those values to bring them on the screen for and just analyzing them so
+this option here show color you can enable and then you see rgba up here and you see this little cross
+here so this crosshair can be moved around and it shows you the rgb values of this pixel underneath so
+this is not only for data textures can also be used for color grading or whatever if you are whenever
+you want to read back values from your textures um so let's go back to the rendered texture so what
+are we seeing here rgba 90 1 39 means this this sphere or this pixel underneath has the material id 90
+the object 81 and the instance id 39 so this is the 39th sphere or coordinate in this array basically
+so that's that's pretty cool so we have this information already there now how can we work with
+this um we can use an operator that's called texture color pick um this we want to connect to the second
+texture here and connect a mouse operator to it so we can just hover with our mouse and read back
+the values directly um this has to be switched to pixel so now when we have our mouse we see the rgb values
+right here so let's click the blue one because the instance id is the one that we are mostly interested
+in and and choose extend title so now we don't have to click the operator you can just see here what's the id
+underneath my my mouse so that's that's pretty cool so we can have a decision okay on the 10th sphere
+i want to show something on the screen for example or um make some decision
+in most cases we want actually to highlight the object and and this is something that we want to do now
+uh we want to scale up the sphere that we are hovering over um so we need to use this value and
+modify our mesh instance uh to do this so the mesh sensor has an input that's called scale array
+and some array three so it expects three numbers for each instance so this is x y z so you can scale them
+on the x on the y and on the z axis but in our case we always want to scale them in the same way because
+the sphere should not be like not round anymore um so let's just create a new array and um
+this should have the same size as the random numbers array so we want 100 spheres so this way we have 100
+values in here
+and then we want to modify this so this array let's let's have a look at it so let's visualize this
+with a table so this array always has uh zeros this is full of zeros this array so we want to change this
+array um to have a one at the index of the currently hovered sphere so we create an operator it's called set
+array set number and um you see there's a one now here so if i change the index you see the one is
+is going down up and down and um so this one we basically want uh at our index of the hovering sphere
+so we go here so we go here and we we use the blue channel so this is our index and connect this to index
+here so now um it's too many values now let's make it smaller let's just make 10 values you see when i
+hover the the one is just moving uh to another position there so this is correct right so let's just
+connect this to scale array so we get a warning now scale array has wrong length so this is because
+this array has 300 items in or has the length of 300 and this one has the length of 100
+so one way to change this um is the array swizzle up um so i'm working with uh just this array because
+it's just easier for me because i just want zero zero zero or one one one for each sphere right so i
+scale them to zero or two one basically so that's that's the idea and then i want to make basically
+three copies of this array so we have zero zero zero and one one one so we can use this array swizzle up
+for this so this works uh like this so you said the array stride this is the array that's incoming so right now
+we only have one value for each sphere basically and we want the result stride to be three because we
+want the xyz scale for each sphere we will visualize this in a moment um so let me just connect this and
+then we play a bit with the numbers so so now i connected this and we only see one operator um because
+this is because the default value was zero so actually we want to set it to one by default and
+with the set number to two to scale it up so now i can i can hover and you see we are scaling up the
+the right sphere here um so yeah that's that's pretty much uh the example that we saw before right so
+okay let's let's analyze this a bit so this um this swizzle what is it doing so it co it copies basically
+the incoming array is only that has the stride of one so that means there's always xxxxx in the in the
+array so we take the x of this array and we create an array that has a stride of three and we put we always
+put uh x in this slot so if i change it to this for example you get another funny effect um so and then
+you don't have round spheres anymore so um you you basically want it to do this way um
+probably we should do another tutorial on array swizzle um
+but yeah it's super handy for like changing the format of your of your array sometimes you want
+like uh an area with only uh a stride of one or sometimes you want xyz coordinates and sometimes you
+want a color with alpha channel and then you need four uh a stride of four so this uh really helps you to
+convert um arrays into a different format um but yeah so now we are highlighting this sphere
+uh we are scaling up the sphere that we are hovering right now so that's pretty cool and uh works
+pretty good but you see sometimes it's flickering there and this is because we are out of the meshes and
+we are in the background and then it still has the index zero but we are not over a sphere right now but
+uh our little array creator here doesn't know this so so how do we do this so as i said the the red channel
+contains a material id and the blue channel contains an object id so you can basically go anywhere in the
+patch and say get material id use this op get material id um and it will um give you an id so let's extend this
+so this id is the id 90 so this pbr material with the machine sensor is the material id 90 and this is
+what we see here in the red channel so if we hover you see there is a 90 in the red channel so
+basically we only want to do this when it's really the right material so we could also have multiple
+mesh instances and you want to differentiate them and but the instances itself they have
+ids always starting from zero so you can use this material id to differentiate it so
+basically what we want to do is uh we want to see if red equals this material id
+and basically if it does we use it if true then so we would just want to trigger this because uh
+that's super handy as i as i would show so there's an operator called set number on trigger
+so we will only set our blue index into the array
+um sorry in this array when we are hovering over material now you see when i go out of them
+there's no flickering anymore but the last one stays active so and this is why this triggering method is
+super handy because we can we could for example create another set number on trigger and do this
+if it's not matching this material and set it to minus one for example
+and uh set this number to minus one when we are out of an object and then you see when we are not hovering
+anything they just go back to the normal size and yeah you can create different behaviors with those with this
+triggering or animate them or or whatever um but yeah so this is what i wanted to show if you have any
+questions any anything that's unclear just just write them in the comments and let us know and i will publish
+the example and yeah thank you for listening bye bye

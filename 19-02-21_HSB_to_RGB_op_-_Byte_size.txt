@@ -1,0 +1,25 @@
+https://www.youtube.com/watch?v=9fYk6I9-U1Y
+Hi there and welcome to another video on the Bytesize channel. Today I'll be giving you an
+introduction to the HSB to RGB op. I'd just like you to pause the video and make what you see here.
+Great let's get started. So here we have a basic material new on this rectangle and if we want to
+change the color we can change the red green and blue components and we can also use this color
+picker right here. So there's another way of doing color inside of our graphics and cables and that's
+with the HSB to RGB op. Converts the color from HSB to RGB. Okay so you can google this but I just
+want to give you an introduction to it for now. So here we have three outlets red which I'm going to
+plug into red green to green blue to blue. Okay so let's go over here to hue and if I now turn this
+as you can see we cycle through these colors. We also have the saturation which like makes the color a
+little bit less intense a little bit more pastel like and then we also have the brightness right here.
+So using these three controls here we can get really pleasing colors very quickly and very easily.
+So let's just put this back for a minute and I just want to show you a little trick that we can do
+to explore this. So I'm going to go here and I'm going to add a random cluster and I'm just going to zoom
+out with my mouse wheel. Now everything's red. Now as we know random cluster gives a random number out
+for each instance here which is between zero and one. So if we plug this into hue as you can see we now
+get a completely different color for most of the shapes. And we can now go here and we can change the
+saturation and see the effects on everything brightness up and down. And we could now get
+this and plug it into brightness. And as you can see we can start to get a lot of different looks
+outside of just tweaking these three parameters here. So I can go in here, change only saturation and
+brightness. And as you can see I can just assign everything a color but then just get different shades
+of it. So this was an introduction to the HSB to RGB op. It's a really simple op but incredibly powerful
+and used in the right circumstances. I hope this video has been educational and informative. If you
+have any questions or comments please feel free to leave them under the video below or to post them
+on the forums. Thanks for your time. Bye!

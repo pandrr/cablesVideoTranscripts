@@ -1,0 +1,162 @@
+https://www.youtube.com/watch?v=_L9kf6VWgGg
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
+farms is Andrew and today I'll be showing you how to extract data out of CSV files with the
+ops inside of cables. So what is a CSV file? CSV stands for comma separated values. So imagine you
+would just have a text file with a bunch of words and a bunch of numbers and other values and you'd
+put a comma in between them. That comma would separate those values basically. So if you want
+to know more about that you can just read up about it on Wikipedia. I'll fold the rest of this tutorial
+and it'll make sense in no time. So first of all to extract data we need some data. So I went to this
+web page data.gov and as we can see we've got over 23,000 data sets here. So now I'm going to click on
+popular baby names because we want to keep it a little bit joyful today. As we can see here
+popular baby names by sex and ethnic group data were collected through civil birth registration.
+Now I'm just interested in the data. So here we see comma separated value files. So I'm going to click
+download. As you can see this other data file formats here, XML, JSON, RDF, but we're just going to keep it
+simple with CSVs. So I'm going to click download and as you can see I've already downloaded it there. So I've
+just got it to my desktop but you just download that to your computer. So I want to show you in Google
+spreadsheet how this works because maybe you'd find a data set which is in a different format than CSV
+but you want to convert it to CSV. So I'm going to click file import and I'm going to click on upload.
+Now I'm going to say select a file from my device and here I'm going to pick the CSV file
+popular baby names and I'm going to click open.
+Now I want to replace the current spreadsheet. I know that the separator type is a comma. Maybe
+somebody used a different symbol. Do I want to convert text to numbers, data and formulas? No.
+Import data. So let's just give it a minute.
+Well, so you don't see the commas now but the commas were used to separate these values from
+each other. So as you can see we've got these columns here. Year of birth, gender, ethnicity,
+child's first name, count and rank. And there's a huge amount of information here. And it looks like
+it's been sorted but it actually hasn't. As we can see a lot of stuff there is kind of mixed up but
+the beginning 2011 is all together. So it can take a while to go through data and analyze it and get
+what you want out of it. But this is going to be our data set for today. But let's say that you had a
+different file format and you wanted to export this as a CSV file to using cables. You just go to file,
+download, comma separated values and it would now convert whatever spreadsheet you had into a CSV
+file that cables could understand. I'm just going to click cancel though. So let me get rid of this.
+So I downloaded the CSV file to my computer. So I'm going to press F11 and go to full screen.
+I'm now going to type in CSV and we want the CSV array up here. Pass CSV files as an array. So I'm
+going to click add. Okay, so we need to get the CSV file in there. So press F11. I go to my file browser
+and here I have the popular baby names CSV file. I'm going to click and drag that here and I upload it
+into cables. So here's the original CSV file and here's the converted JSON file. This is the one that
+we're interested in. So I'll press escape and we now go to the file browser here and we click this icon and
+we click the JSON file. As we can see, it's now been successfully loaded. So F11 to full screen.
+Now I'm going to use the inspect icon here. Be warned, if you've got a data set with maybe 100,000 or 200,000
+or more points inside of the array, more data, if your computer doesn't have enough memory, you could crash
+the browser. So this is 19,419. So we're going to click inspect. Cables will just need a moment or two.
+And here we go. Now we see the data in a different format than we did in the Google spreadsheet.
+So here we see the symbol for an array because it's an array of CSV data. So it's been converted
+into a JSON file, which is why we have these objects here. And as you can see, we've now got year of birth,
+gender, ethnicity, child's first name, count and rank. And we have a comma here, which separates the values,
+hence the term CSV, comma separated values. So I'm going to close this. And let's just say now that I
+want to get all of one kind of piece of data out of there. So once again, if I click inspect,
+let's say that I want to see all the child's first name entries only, I'm going to select this,
+do Ctrl C. We've got a really handy opt for this. So I'm going to type in get values from an array of
+objects, and I'm going to click add. So now it needs a key. So these were keys. So this is a key,
+child's first name. And if I now click the inspect, I can, I don't get all of the CSV data. Now all I get
+is everything that is linked to child's first name, as you can see here, that's all there together.
+So I could now go back to this, I could click inspect. And I could say ethnicity. And I could
+paste that in here, and click inspect. And as you can see, if I go down and down, we start getting a
+mix of different data types. Great. Okay, so that's basically how we get everything from that index. But
+I'm just going to disconnect this for a moment by shaking. So what I want to do now is a lot of the
+time, you're going to want to sort data inside of an array, basically. So we've got a really good
+opt for that. So I'm going to type in sort array. And it's this one that we're interested in. Sort an
+array of objects by key. So don't forget, those are objects inside of an array there. So I'm going to
+click add. So this is a really smart op. It will know if you're working with a string,
+which is like a bunch of characters and text or a number. So now let's say if I go back to this,
+let's say now that I want to sort everything by rank, because as you can see here, the ranks are not
+sorted at 75, 67, 77, 66, 21. So let's say I want to sort everything inside of there by rank. So I'm just
+going to double click this, Ctrl C, because it is case sensitive. And I'm now going to type in here,
+rank. And I say sort ascending, I'm going to click inspect.
+Give it a moment. And now as we can see, everything has rank one. So everything is now sorted according
+to the values inside of rank. So this is a really great way to sort the data in a way that's meaningful
+to you. You could have a bunch of numbers and you could say, I want to see it from
+lowest to highest or highest to lowest. So we've just sorted this array of objects now. So now we
+want to just kind of like visualize it. Okay, so I'm going to go over here. I'm going to plug this in
+now. And now I'm going to grab the year of birth. I want to just show a couple of things here with text
+on the screen. So I'm going to say, okay, let's grab year of birth, Ctrl C. I'm going to put that here.
+Oh, little mistake there, year of birth. And as you can see, this popped up to show me I've got it.
+I'm going to zoom out a little touch. And I'm just going to copy paste this one a few times. There's
+four pieces of data that I want to get. So let me move this over here. And this just gets connected to
+all of them now, because that's the array with everything in it that's been sorted.
+So the next thing I want to grab is the child's first name. So click this.
+So now I'm going to copy paste. Oh, child's first name.
+I'm going to put that here. And now I want to get the rank. It's one word. And I'm going to type in
+count. And as you can see, array here is on zero because it says, oh, there's nothing there. It's not
+going to fill up with data until it matches. So now I have the year of birth, child's first name, rank,
+and the count. So let's say I want to get something out of this array. Well, we've got text and numbers.
+And there was a reason for this. So here I'm going to pull this down. I'm going to type in array get
+number. It turns a value from an array. So as we can see here, index zero is 2011. If I type in
+2000, it's 2016. So what it's doing is it's going through this array. And this is index zero, index one,
+index two, index three, index four, and so on up until the end of the array. So I have this number
+there. That's great. But I want to convert it and show it as some texture. So I just want to check that
+my data is correct. So I'm going to make a main loop. Let's zoom in a touch. I'm going to grab a
+transform up. And now I'm going to grab a text mesh up. So if we want to show text with the text mesh,
+we need to give it the data type string. This is a number. And as you can see, this has a different
+color. It's not going to work. So what I'm going to do now is I'm going to pull this out. I'm going to
+type in number to string. As we can see, this number now has these quotation marks, which shows that it's
+a string. Now just to test it's working, I'll plug it into here, the text. There we go. And if I would
+now jump around, as you can see, we're looking up data from different places. But I want to put multiple
+strings together. So let's get this. And now let's create the concap object. This joins two strings
+together. So here, I'm now going to type in year of birth. And as you can see, I put a space at the
+end there. And this number to string goes in. And as you can now see, we have the year of the birth and
+number. So we're almost there. Don't worry, this is just a little bit of string stuff. It doesn't get
+much more complicated than this. And now I'm going to grab the concap multi, join multiple strings
+together because I want to show more than this. So now I'm going to put this in here. And everything's
+a bit big. So click on transform. And I'm just going to reduce the scale to say 0.3. So we can now
+repeat what we just did here for the rest. Seems like a lot of work, but it's actually nice and simple.
+So this returns a string already, but we need, sorry, it returns an array. So we need to get the
+string from it. So now we do array get string. So it's not a number. I'm going to pull this down.
+I'm going to make another concap. And if I remember correctly, this was child's first name. So the first
+part of the string here is going to be child's first name. And now I want to get this string here where we
+have the name. I'm just going to plug it into the second one. I'm going to put this here.
+And now you see everything that comes along the line. So we just go to concap multi and we click
+new lines. There we go. Can you see where we're going with this? Nice and easy. So here we have
+also a string. So we can just do the same thing again. We copy, paste, we're getting that array,
+we're passing it into an array, get a string. And we now know that this is the rank. So I'm going to
+type in rank. And visualizing data, it is a little bit of work, but it's worth it in the end. There we go,
+rank. And this one was count, and this was a number. So we're just going to use this part again here.
+We're going to copy, paste that. We're going to put that down. And this was, let me just check, count.
+Okay, so let's put this on count. Great. And we're going to put this here. As you can see,
+we've now got the very first entry from here. So let's just check this. So 2014, Isabella 140. So if we
+go here and we click this. Okay, sorry, this is going to be incorrect because we sorted it. We're looking
+at the first index. So let's just do this. I'm going to pull this out. I'm going to grab the number up.
+And what this is, is the index that we're looking up. So by plugging this into all of these,
+we're now going to look everything up at the same time. So if we go here to zero,
+there we go. Year of birth, 2011. Let's check this.
+We're looking at index 1000, not index zero. So here we go. Year of birth,
+2011, Isabella, count 331, rank one. So that was my mistake. This was still on 1000, not on zero.
+So I can now scroll through different values inside of the array. So if I want to see what's at 1001,
+1002, 1003, 1004, and they're all sorted by rank. So this is just a really quick, easy way to access
+this data. And doing something meaningful with data, that's something different. There's a lot of
+research methods and web pages and organizations which translate data into something visually.
+And this, of course, is a really simple thing that we did now, because you've got to start simple before
+you can go complicated. This is just showing you how to access data inside of a CSV file and how to
+represent it as a string. So there's a lot of things you could do from here. You could extract the rank and
+the count. You could sort it. You could put it to a mesh instance with different size shapes. You could put
+it on a spline. You could make an over glorified pie chart. Thank you, Stefan, for that one. There's a lot
+of ways that we can do something with this data. So that's pretty much wrapping up this part of the
+tutorial. But I'm just going to press F11 and I'm just going to show you one or two things that could be
+done with this kind of stuff. So we gave a workshop at Katowice, I hope I say that correctly, where there were 81
+measuring stations in the city, which measured how much air pollution was in different regions.
+So here we have, if you click the CSV array, this is from station 100 and it measured the data over 28 days.
+So here we have the station ID, the time, which is actually the day. So this is like the first day,
+second day and so on. Minimum value, max value, these all have to do with the amount of pollution in the
+air. And we even have latitude and longitude, which we can cover in another tutorial, like where we are
+in the world. So this was all the data for 28 days. So we got that data and we mapped it here to a simple
+spline with points. So this is day zero. This is day 28. And this might not look so meaningful, but what
+happens if you start analyzing this data, say over a year, maybe you'll see spikes in the summer or spikes in
+the winter. Maybe you can correlate that with some other kind of data. So this example file will also
+be available with this tutorial. As you can see, we've got a lot of comments here, a lot of instructions
+of how this was created. It's a great way to just learn how to get CSV data and map it out numerically to
+a very simple kind of graph. It's going to press F11. And here we visualized the data in two different ways. So first of all, we've got an SVG file, which is a bunch of
+points. And we used those points to draw this outline here from Katowice. And then we got that data from all
+from all of the measuring stations. And we got the latitude and longitude, which is the position
+on the globe, on that city, on that map of where each station was. And then basically, the higher each
+sphere was, the higher the pollution. And the lower it was, the better. So basically, if a sphere was on
+the floor, there was no pollution. If it was even this high, that was pretty bad. So as you can see, when
+this data was measured, Katowice had quite a lot of problems. And now because we've visualized the data,
+if we'd like to turn the map to the correct angle, we could see that there's a real hot spot over here
+and over there. And those would probably be areas with industrial zones or actually where people were
+still using coal to do their heating. So this is another patch, which is really nicely and clearly
+documented, which will help you to get latitude and longitude data and map it. So that's the end of
+this first tutorial. I hope it's been educational and informative and that you now know a little bit more
+about how to get your hands dirty with data sets on the internet, because using them in cables really
+isn't that hard once you know how to get them in. So if you've got any questions or comments,
+please feel free to leave them under the video below or to post them on the forums. Thanks for
+watching. Have a good one. Bye.

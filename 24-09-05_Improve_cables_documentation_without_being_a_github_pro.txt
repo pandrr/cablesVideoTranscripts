@@ -1,0 +1,46 @@
+https://www.youtube.com/watch?v=V4Wc5JwZWaU
+hello and welcome to another cables tutorial this time it's a bit different because we want to show
+you how you can contribute to cables without being a programmer or without being a github
+profi at all but still can help us with cables it's a question that we get often that something
+is off in the documentation or there's a typo in the documentation or something like this and
+people want to help so this is now easier than ever because as you hopefully know cabbage is now
+completely open source and on github and that makes us much easier to contribute and other people see
+that you contribute to the project so fully fully open source workflow so so you saw this
+nice operator and you found like a typo in the in the summary here so this says numbers it should
+say numbers numbers and so we want to fix this and this is how it works so as you can see here there's
+a little section github with a little source link so we will open that link and we are on github and
+we see the source code for this operator and we see there's a little js file a javascript file so this is
+basically the source code from this operator then we see a json file which is like meta description for
+this uh for this operator so the summary is in here then we see an md file which is a markdown file which
+is like the the longer description in this case not that long but this description here and then we see a
+a screenshot png so what we want we want to edit the json because the summary is in that json file
+um so we open it and we see this is a json file don't feel intimidated about the curly brace and all
+this kind of stuff we can just ignore this and we see there's a point summary and there is the text
+that we want to change so um how do we do that so there's this little edit icon here which says fork the
+repository and edit the file so the workflow for this is basically to create a pull request in the end and
+for this we have to clone the repository and then edit the file and then propose the change to us the
+cables team so this sounds really complicated but it's really just a few clicks so i click this edit button
+and it will say you need to fork this yeah let's just fork this um you only need to do this once if you make
+many if you want to make more changes then you only have to fork it once and then you can work with this
+one but it's really not so important um so now we search for the summary now this is a text editor so i can
+make our change here we can just edit the file so we change it animate between two numbers so
+to save this we have to click the green button here so there's no other green button commit changes so
+we are committing this to git and we can enter a commit message so you can say something like update
+the file or fix typo or something like this it's not that important and then we can click propose changes
+and then github does all the work and then you see okay this is the change that we did we removed
+this and we added this so it github thinks we replace the whole world so that's great so
+this is basically just uh for you to see what you are doing and now you can you can create the pull
+request so you can click the green button create pull request and then it's basically the same
+the same title again and you finally click create pull request and now it will do some background checks
+whatever this source code is compatible or it does merge and now it's our turn now we will get
+a notification from github that you submitted a change and we get the same view and we see
+which file you changed and what the changes and then we can accept the change and push it back
+into the repository and then automatically when we do this it's basically like two minutes later it's on
+dev.cablesgl the change and then you can see it there so this is really integrated in our usual
+cables development workflow so yeah um please help us feel free to help us and um and try it out and
+we will be really happy and also if you're a programmer it's the same way right so don't
+be afraid to make a mistake or something because we can always uh say no we don't want this change or we
+can discuss it or we can leave leave some remarks or whatever there can be that can be a discussion can be
+created and um for us this is really really helpful uh to get help for fixing uh those those documentations
+and stuff like this okay thank you very much bye bye
+you

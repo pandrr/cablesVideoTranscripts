@@ -1,0 +1,34 @@
+https://www.youtube.com/watch?v=Ww04Cw9wArM
+Hi there, and welcome to another video on the ByteSize channel.
+Today, I'll be giving you an introduction to the draw image op.
+I'd like you to pause the video and just make what you see here.
+Great, let's get started.
+So, first of all, I'm kind of stuck here inside this shape.
+So I'm going to go to random cluster and I'm going to put the size in 20 just to space them out.
+So, Orbit Controls is only on this random cluster and cube part, so the rectangle over here isn't being affected.
+This is so we can visualize what's going on.
+Let's click Clear Color and just put this a bit brighter so we can see that this is obviously a rectangle.
+So, draw image is what you use to either just display a 2D texture or to capture a texture.
+And basically, you're going to use it most of the time to overlay one layer with another.
+And you can just do this as much as you like.
+So, let's go here, add a draw image, and let's put in a texture of my favorite picture in Cables, which is, of course, the beach.
+So I'm going to put that there.
+And if I click Draw Image New, I can use Amount to change the opacity.
+We have different blend modes here, which is something you should just check with Photoshop blend modes.
+So I'm just going to put it on normal for now because that's something I don't want to cover.
+So, how do I put these cubes over the top of that beach picture?
+Well, if I click Draw Image New, we have this option here, Remove Alpha Source.
+If I click this now, you can see that I'm overlaying the cubes on top of the beach, right?
+So, I could go into a big explanation of the alpha data and how it's being handled, but unfortunately, I can't cover all of that in this three-minute video.
+It's a subject all to itself.
+So, hopefully, I'm just going to put enough of a patch together that you guys can figure out how to get around with this.
+So, I'm going to put a texture here into the opacity, the image alpha, and I'm going to browse for a file.
+So, I'm going to go all the way down here, and I'm going to go to Wipe, which is what you see there.
+Now, this would normally change the opacity of the cube layer, which is this one, but it's not working yet because we need to put the alpha source to luminance, which is the brightness.
+And all of a sudden, we can see that the brightness here is changing the opacity of the cubes.
+This is one of the best ways I could come up with to kind of visualize it so you could understand what's going on.
+So, this was the basic explanation of how to stack two draw image ops on top of each other.
+And this was the best thing I could come up with to kind of let you visualize the alpha data and what's going on.
+I hope this video has been informative.
+If you have any questions or comments, please feel free to leave them under the video below or on forums.
+Thanks for your time. Bye.

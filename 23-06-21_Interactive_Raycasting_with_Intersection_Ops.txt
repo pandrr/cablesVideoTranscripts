@@ -1,0 +1,118 @@
+https://www.youtube.com/watch?v=lNbfCp0T55c
+- Hello and welcome to another KBIT tutorial.
+Today I want to talk about the new set of ops
+that are called intersections.
+Those ops make it really easy to pick an object,
+pick a 3D object or test for collisions of objects.
+This is the example, so I can move my mouse
+and then you can read which object
+the mouse is hovering right now.
+And basically we will build this now.
+So here's my new empty patch
+and I will create a op that is called intersection world.
+So I will search for intersection and then, or intersect.
+And then you will see those three ops.
+Those are the main ops that we will work with.
+So I will add the intersect world operator.
+And so this means everything from here
+on afterwards downwards is part of a world.
+So in to a world I can add body.
+So I can add the intersect body operator here.
+And then you will see, we have a sphere on the screen now.
+So you can change the shape here
+and there will probably be more shapes coming up soon.
+So I can give it a name.
+So let's just call it a sphere
+and I can change the radius and so on.
+And so now our world contains a sphere.
+Now maybe we want the mouse to hover the sphere
+and then see that, that it's picking the sphere.
+So I can add intersect raycast operator.
+So raycast means like from the mouse cursor align is,
+a ray is cast into infinity basically.
+And then we will look and then we will test
+if the ray collides with the sphere.
+So I add this, this operator now, now I need some coordinates.
+So I will add a mouse operator and just connect the X and Y coordinates to this, to this operator.
+So now what you see, when I move the mouse, there's already some activity happening.
+So for debugging reasons, it's really, really cool thing that we added in the last releases.
+You can click the three dots menu here and select extend title.
+So this way, when I, I have a, I have a, the sphere, you see the, the output hit body name
+will become the name that I'm, I'm picking.
+And now I will also see it in the, in the patch.
+I don't have to click the operator.
+I can just see what's happening there.
+And this is a really, really handy thing for, for debugging or for visualizing values.
+So now we see our sphere.
+So we are seeing a sphere.
+We are not rendering a sphere really.
+We are seeing the sphere because the intersect world has this render toggle on.
+Otherwise those bodies are really transparent.
+So you really want to add, for example, a sphere here, and then it's rendered, it's, it's rendered
+this way with all the materials and whatever.
+But this is only for debugging reasons you, you can enable it, but, but it's really handy.
+So I will keep it, keep it toggled on.
+So let's add another body now.
+So I will create, uh, another body again, and this time I will switch it to a box and I will
+just call it cube.
+And, um, um, um, um, um, now to move, uh, body around, we just use the normal transform
+or trend, translation ops.
+Um, so I can add a transform and I can move it around.
+Um, so now when I hover here, you see hit body name cube or sphere.
+So this, this still just works and takes the new, uh, body also in consideration.
+Um, so, um, so, um, this is how the rate casting works, but it's basically, so, um, I can just
+add more bodies and then, and then I will see, I can, I can cast the ray and see what's colliding.
+So for interactive stuff, this is pretty great, but the intersection operators can do more.
+So as you see the intersect word, um, it has an output part with the total number of bodies
+and it also has an array output with collisions.
+So let's just visualize this, um, right now there's a collision happening because the cube
+is intersecting with the sphere.
+So when I use this transform and move it away, you see the collision goes away.
+So this is a really simple way to check if like objects, uh, overlapping, or maybe you
+have a interactive character that runs through something and then you want to check if it's
+hitting this object or it's in, in a specific area or, or whatever.
+So, um, this is an easy way to find out if, if bodies are colliding or intersecting.
+So that's pretty cool, um, but you can also have, it's a bit cumbersome to go through those objects
+and look which body it is and, and, and so on.
+So, um, we have an op that's called filter, um, intersections, uh, where I can give a name,
+uh, give two names and then we can filter out if those two objects are colliding.
+So for this, we need some more objects.
+So, um, as you see the, in the intersect body operator also takes a, an error, has an error
+input.
+So to this, I can connect a array, for example, a random numbers array and we want a XYZ coordinates.
+So we choose, uh, ABC and there's a lot of, uh, spheres.
+So let's just reduce them to three, maybe.
+And just for convenience, let's add an orbit controls.
+So I can look around a bit.
+Um, so as you can see here, we already have way more collisions now because the spheres also
+intersect with each other.
+So, uh, we see those two spheres, uh, colliding right now.
+Uh, sorry.
+Um, let's just remove this sphere, the full rendered one, and maybe add a better, uh, visualization
+of this.
+So we will just use the PBR material and then, um, add a machine sensor and use the geometry
+for, from the sphere that we ran out before in this machine sensor.
+And this random number error, we can use for positions for the machine sensor.
+So this way, um, we just have the, the sphere measures exactly at the positions of the, of
+the array.
+And there you can see they are, they are intersecting right now, but I don't actually care about this.
+I just want to know if the cube is intersecting with the sphere, for example.
+So, um, for this, I can use the, uh, filter intersections operator.
+So here I can say sphere and cube, and this will is, this works like an email filter or something, right?
+You can, you can, uh, input a string and then say the, the name has to start with sphere and the name of the other
+body has to start with cube.
+And if we have a hit, then it will output, uh, this into an array.
+And it tells you, yeah, we have a hit here in the colliding output.
+So let's look at this area.
+Um, so the cube has now two intersections basically.
+And we see like those are those two spheres here.
+So when I move the cube around, you see it's going away.
+And then at one point we even have three intersections.
+So I can easily check if the cube is intersecting and just for comparison, when I, this way, I see all
+collisions, um, that we have this sphere to sphere collision.
+So I could also filter for this so we can add multiple filters, uh, to filter those collisions.
+Um, yeah, so this is the first tutorial about the intersection ops.
+If you have any questions or anything, any remarks or would like to see anything else,
+uh, interactive examples or something, let us know and, uh, we will try to do them.
+Thank you very much.
+See you.

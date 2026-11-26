@@ -1,0 +1,283 @@
+https://www.youtube.com/watch?v=68iSILnuLnA
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
+forums is Andrew and today I'll be giving you the second part of an ongoing tutorial series
+in how to build audio reactive patches inside of cables. Today we're going to be focusing on
+learning how to use the bi-quad filter op. This will allow us to isolate certain parts of the
+audio spectrum like bass, mid or high and this will make it easier for us to get things like a
+kick or a snare or a hi-hat to trigger certain events inside of cables. So at the beginning of
+this tutorial I'm going to go a little bit into some basic explanation of audio frequencies and
+what filters are but I'll try and keep it as really as abstract and as simple as possible and I'm just
+going to assume you don't know anything about audio basically. If you do don't worry it's going to be
+short and you can just jump right into the rest of the tutorial. So I'd like you to pause the video
+and just make what you see here. Great let's get started. So first of all we just want to be able
+to play an audio file. So I'm going to click here, press escape and I'm going to type in audio buffer.
+Holds an audio file or a sample. I'm going to drag this out. I grab the audio buffer player op. This
+allows me to play back that file and I'm going to click and drag this out and I'm going to grab the
+output op and this allows you to send the signal to your speakers. I'm going to put the volume in 0.25
+because I'm doing the tutorial today. One is the default value. So now we need to load an audio file.
+So I click on audio buffer, click on file for a new file manager. I scroll down here and I'm going to grab
+Anthony Naples, this track here. I'm going to close this. I'm now going to press escape and create a play
+button. I'm going to grab the clicked false output and I'm going to plug it into start stop like you
+see there. If I now press play, we get music. If I click the play button up and click reset, it stops.
+Okay. So what we're going to do now is we're going to create a biquad filter op basically. So I'm going
+to click and drag this out. I'm going to make a biquad filter, different kinds of audio effects and
+filters. I'm going to press enter. Let's move this over here. So if I click the op, we have the type of
+filter. So we have all pass, low pass, high pass, band pass, but I'm going to be using these three
+today. So I'm going to jump to a different tab so I can give a little bit more of an explanation of
+what's going to happen. So sound and frequency is split up into a range going from left to right.
+So sub bass, bass, like low frequencies that you feel with your body, they're around here.
+Then we have upper bass, mid range, upper mid range and high end. So this is where a snare is or like a
+human voice. This is where like a hi-hat sound is or like white noise. So today we're going to learn
+how to isolate a part of the bass to get the kick. We're going to learn how to isolate part of the
+mid range to get a snare. And we're going to learn how to isolate the high end to be able to just grab
+the data from a hi-hat. So let's go back. So I'm going to go over here. I'm going to pull this out
+and I'm going to create a basic material op and then I'm going to make a transform op and then I'm
+going to apply that material to a rectangle. I'm just going to pull this down and we're going to
+make a new op, the FFT area average. I'll make another tutorial about this in the future, but
+we're just going to use this to analyze what's happening with the audio data. So we get the
+texture output from here and we plug it in there. Let's just move this over there. Okay. So we need to
+analyze the result of this filter. So I'm going to pull this out and I'm going to grab the audio
+analyzer op, which was covered in the previous tutorial. I'm now going to pull this out and
+I'm going to grab another trigger extender to just try and keep the patch a bit nice and tidy.
+And I'm going to pull this over there. Okay. So I'm going to press play and we're hearing the output
+now from the buffer player, but we want to hear the output from the quad filter. So you disconnect this
+by clicking with the right mouse button. We now grab this. So we're still hearing everything. So we now
+need to put it on low pass. Let's put this now on a hundred. And as you can hear, we're now only hearing the sub.
+So now let's grab this array out and plug it into the FFT area average op. And we don't see anything
+yet because it needs a trigger. And now you can see the sub base, which is basically a hundred hertz.
+So let's just take a quick look. So we're looking around this part right now. So for now, I'm going to put this
+on 300. We're opening up the filter and you might think, how is this working? Well, if we go here, this is a low pass filter.
+It allows low sounds to pass through. So by increasing the frequency number to the right, we're moving this to the right in the frequency range.
+High pass is the same. It allows high sounds to pass through. Starts on the right and we roll that to the left.
+I'll get back to the band pass in a moment. So let's just open this up for a minute. So you can just hear the difference.
+500, 1,500, 3,500, 10,000, 20,000, which is pretty much almost everything. So I just want you to just hear what was happening.
+So we're going to put it on 100. So we've got just a sub base right now. So let's click the audio analyzer and let's just check the kicks.
+So let's scroll down a bit. We're interested in this part that you see at the bottom there, min 0.01, max 0.05.
+So I'm going to pull this out and I'm going to grab a new up, the threshold up. This will send out a trigger if the threshold is crossed,
+but it won't send out another trigger until the value drops below the threshold and raises above it again.
+This stops you just getting like a million triggers if the sound is above the threshold. So I'm going to put it on 0.045.
+And now I'm going to grab the bang up. So the bang up, if I click it and put the duration on one, as you can see,
+when I click bang, it goes from one to zero like this. So we want to get that kick to trigger this.
+So now if we pull this out and press F, watch what happens. It's only going off the kick.
+So I had to learn to like tweak these numbers a little bit to get it to respond the way that I wanted.
+But the basic idea here is by using the bi-quad filter and isolating the bass,
+we're not got the snare or the hi-hat or any of the sounds coming in.
+And it makes us easier for it to grab this peak out from the kick.
+So as you can see, we now get this pattern with the kick. Okay.
+So now I'm going to put the duration on 0.5.
+I'm now going to copy this part here, control C, click here, control V.
+I'm going to move it up.
+And you know what?
+Let's just move the FFT section to the left.
+Oh, wrong one.
+Sorry.
+I need to click transform.
+There we go.
+So I'm going to move that to minus one.
+And I'm just going to make all these smaller because I need to be able to fit a few of these rectangles on the screen.
+This one as well.
+And great.
+Okay.
+And now let's just actually just move it over there.
+And we're going to move this one there.
+Minus 0.25.
+Great.
+So now this bang, we're just going to get it and we're going to plug it into scale.
+And watch what happens.
+Great.
+So you don't even need this part here.
+It's just so you guys can see what's happening.
+So it's really quick, simple and easy to just use the bi-quad filter to isolate a part of the audio and then to be able to use it.
+So the bang, let's just go through this one time.
+We isolate the base.
+We analyze it.
+We're grabbing the average volume out.
+We pass that into threshold.
+When the value crosses the threshold and it goes above it and below it again, and above it is sending a trigger each time.
+You can press F for flow mode for that.
+And each time that trigger comes out, we use bang.
+And that's going from one to zero over 0.5 seconds.
+So we could put this in 0.2 and it'd be a lot faster.
+So the best part is we can now reuse this part.
+I'm just going to zoom out of touch.
+I'm just going to press stop.
+So now I want to use a band pass to grab the snare.
+So let's just disconnect this.
+Let's get this FFT area average part.
+Let's disconnect that as well.
+So we're going to just copy this part here.
+Control C, click here, control V.
+So we're going to get the audio from the audio buffer player.
+We plug that into the bi-quad filter.
+I'm going to pass this trigger through from here just to keep it nice and tidy.
+We can move it all down a bit.
+And we're now going to listen to this filter.
+So we get that audio output and we plug it into here.
+Okay.
+So now I'm going to put this on band pass.
+And I want you just to listen to this for a minute.
+Oh, and let's connect the area array out into the FFT area average.
+Okay.
+I'm going to press play.
+Okay.
+So now I'm going to get the bi-quad filter.
+It's on band pass.
+I'm going to put it on 2000.
+And you can hear this like really thin, tinny sound.
+So if I put it on 500.
+So this isn't a low pass filter.
+It's a band pass.
+This we're sliding left and right.
+So now we want to move this over here to like grab the snare.
+So I'm going to put this on 2000.
+And now what I'm going to do is I'm going to change to Q.
+So I'll show you the Q.
+This is like a low Q.
+And this is a high Q.
+When you push the Q up, it becomes more narrow and higher.
+So let's just take a look at that.
+So this is a band pass.
+Okay.
+So Q on a hundred gives us really like low, like really narrow amount of frequencies.
+We're just grabbing it around there.
+We turn the Q to 10.
+We grab a lot more sound.
+We put it on one.
+We grab a lot here.
+So it's not exactly one to a hundred with our up, but that's okay.
+So I'm going to put the Q on three.
+And you can hear that little resonant peak.
+Five.
+So we're isolating more and more frequencies.
+So I'm going to put it on three.
+So now I just want to again know what the min maximum is, right?
+So I'm just going to click audio analyzer, scroll down.
+I'm just going to hold my mouse here and it's going to tell me.
+So the minimum is zero, max is 0.21.
+Okay.
+So I do believe I've got to move this over here.
+Yes.
+I was forgetting to do that.
+Let's give it a different color.
+So this is going to be the snare.
+Okay.
+Great.
+So I'm now going to put the threshold on 0.12.
+And as you can see, once in a while, it's getting a trigger from the kick.
+Maybe the high heart.
+I've not tweaked this to perfection.
+That would take a lot longer than I have today.
+Actually, let's just try it.
+So we're going to get the biquad filter.
+I'm going to put this on.
+Yeah.
+Okay.
+So now we've turned the queue up and now we're only getting it on the snares.
+Okay.
+Now this works.
+This works.
+So we just boosted this resonance peak up.
+So this is great.
+So that's all we have to do to get the snare going.
+So I'm just going to press reset.
+And now we're going to move the output over here.
+I'm going to disconnect this.
+And as you can see, we can reuse this now.
+Control C.
+Control V.
+I'm going to pass the trigger through over here.
+I'm going to grab the audio from the audio buffer player.
+And let's move this over here to the middle.
+So it's a bit more obvious what's happening.
+We can move these over just to bring everything a little bit closer.
+So now I want to grab the hi-hat.
+Okay.
+So first of all, let's put this hi-hat filter into there.
+Now let's get the audio analyzer array output and plug it into here.
+Just so we can visualize what's going on.
+Okay.
+And now we're going to use a high pass filter.
+We want everything in real high frequency range.
+It's around here.
+So I'm going to click the biquad filter.
+I'm going to put it on high pass.
+And now I'm going to put the frequency say on 15,000 hertz.
+Because like a hi-hat is just like noise.
+I'm going to put the Q on one.
+Let's take a listen.
+So we now need to move that rectangle over again.
+Let's say 1.25.
+Let's change that color.
+So with the bang it's really jittery.
+So I'm just going to get rid of that.
+So we've got the threshold.
+And now what I'm going to do is I'm going to pull this out.
+And I'm going to grab the toggle up.
+And the one thing I forgot to do obviously was to look at the min maximum.
+So let's take a look at that.
+So 0, 0.31.
+Okay.
+So let's put the threshold here and say 0.125.
+I'm going to press F.
+And this looks about right.
+So we've got the toggle bool op.
+So this alternates between true and false on each trigger.
+As you can see there.
+So we're now going to grab this.
+I'm going to plug it into the mighty bool anim op.
+I'm just going to disconnect this.
+Plug that in there.
+Plug this in there.
+So we've got a bit of a tidier patch.
+Okay.
+And now with the bool anim, I'm just going to say, I want it on linear.
+I want the duration to sort of one.
+And then I'm going to plug it in.
+So I'm going to plug it in.
+And then I'm going to plug it in.
+So I'm going to plug it in.
+So I'm going to plug it in.
+So I'm going to plug it in.
+So I'm going to plug it in.
+So I'm going to plug it in.
+So I'm going to plug it in.
+So I'm going to plug it in.
+Plug this in there so we've got a bit of a tidier patch.
+Okay.
+And now with the bool anim, I'm just going to say, I want it on linear.
+I want the duration to sort of one.
+If it's false, I want it on 0.5.
+And if it's true, I want it on one.
+And if we look at the output now, let's just scroll down here.
+We've got something a bit like the hi-hat that we're seeing.
+So I'm just going to pull the value out.
+And I'm going to plug it into scale again.
+And I still think it's taking a bit long.
+So let's put the duration on the 0.05.
+So we've now got the kick, snare and hi-hat.
+We want to listen to everything.
+Okay.
+So I'm going to disconnect this.
+I'm now going to plug that in here.
+So right now, the FFT is only listening to the high part.
+We could grab another audio analyzer and listen to everything.
+And then plug it in here.
+But we don't need to.
+So to recap, we've got the kick.
+We've got the snare.
+And we've got the hi-hat.
+And we used the bi-quad filter to isolate the kick part with the low pass at 100 hertz.
+We wanted to grab the snare.
+We wanted to grab the snare.
+So it went to 2,000.
+We really boosted that cue to get like a really high resonant peak just to isolate the snap of the snare.
+And here we used the high pass filter set to 15,000 hertz just to grab the hi-hat.
+So this was the basics on how to use the bi-quad filter to extract parts of the frequency, the audio frequency range from any track.
+This could be used with a live band with their kick snare microphones.
+You could use it to try and track a DJ.
+You'd have to build a couple of controls into there so that you could just tweak it on the go as you're listening to stuff live.
+But hopefully this tutorial and all these ups that you've seen will give you enough tools to get more and more into building your own audio reactive patches.
+I'd like to say thanks for watching.
+If you've got any questions or comments, please feel free to post them under the video below or to post them on the forums.
+Thanks for watching and have a good one.
+Bye.

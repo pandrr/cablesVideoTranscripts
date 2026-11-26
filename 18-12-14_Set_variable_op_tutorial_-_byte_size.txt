@@ -1,0 +1,25 @@
+https://www.youtube.com/watch?v=9__s5ukidmk
+Hi there and welcome to another video on the Bytesize channel. Today I'll be giving you an
+introduction to the variable set variable ops. I'd like you to pause the video and just make
+what you see here. Great. So some of us that have used cables for a while end up in that situation
+where you have a huge amount of patch cords going all over the place and sometimes you just want to
+tidy things up or you want to impose a certain amount of order into your patch. So we can do
+that with these two really good ops set variable and variable. So I'm going to press escape. I'm
+going to type in set variable and this op is now here. So I need to make a variable. So I click here
+and I say create new one and I'm going to call this position X and into this I'm going to plug a value
+and I'm also going to call this position X. Naming doesn't matter it's just so I can see what's
+happening. So if I now move this number. Great. So I want this to control this over here. So
+traditionally you could just pull this in and plug in position X and this would work. But let's just
+say I've got a really huge patch of hundreds of objects and that's a long way to go. So if I now make
+a variable op this will read a variable value. So if I just click it and go here I now see position X.
+So now I'm going to click and drag this out. I'm going to plug it into position X and as you can now
+see we have this happening. If I press F flow mode you can now see when I move this that we get activity
+here and there. So there's no limit to the amount of these that you can create. So I could now go over
+here and I could say copy paste. I could say create a new one and I could say position Y.
+I could then copy this and I say please read variable position Y. And as you can see I'm now able to do this all the way from over there.
+So one last little thing is this is really handy when you're working with multiple levels of patches. Let's just say that I'd select all this and I'd say create sub patch.
+It now all goes inside of this patch here. If I double click we can go inside of it and you can see the variables are there. If I click back. So this is still going to send into there. Watch.
+So this is a great way to tidy up your patch and import some logic into it. I hope this video has been educational and showed you some cool new tricks that you can do with cables.
+If you have any questions or comments please feel free to leave them in the videos below. Thanks for your time. Bye bye.
+So if you have any questions or comments please feel free to leave them in the videos below. Thanks for your time. Bye bye.
+Bye bye.

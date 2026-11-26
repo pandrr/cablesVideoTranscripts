@@ -1,0 +1,83 @@
+https://www.youtube.com/watch?v=I_eD5nml_5A
+hello this is Alex from cables.gl I'd like to show you GLTF scene improvements
+from the last update there have been tons of awesome new features that you can
+read about in our blog here and in this section called GLTF skin and bones you'll
+see some new operators that have been updated and added and we'll try to go
+through them and then I just want to show off this guy again because I am so
+psyched that now you can export unbaked animations out of blender or whatever
+piece of software even mix mo or something like that and then just import
+it into cables and play around with it and get some cool information from this
+3d scene and then use it in your other operators and effects and things like
+that so this model I took from Yara I'm gonna link it below in the description
+amazing amazing artist love this little dude and what I'm gonna do is show you
+what it looks like in blender and you see that it's a really complicated looking
+animation curve here and it's obviously all rigged up and there's a skeleton
+underneath this 3d model and it's yeah really really nice and there is another
+example where I've seen some like I've never seen this before actually they are using deformers and like little handle
+bars and stuff to drive the skeleton inside blender and that's also a really cool way to animate your
+your characters and then just get all these curves that you can then export
+into cables and what we're gonna do is look at this guy again and the scene is
+really really simple it's just some post-processing over here to kind of add
+a little glow around them and then we have materials and what I'm doing is I'm
+taking this GLTF scene here I'm gonna make it a bit more visible for you and
+I'm just taking out the different models or the different meshes out of the scene
+and then putting the materials for them so for example here's my rock and here's
+my body and teeth for the little dragon and what the first thing I'm gonna talk
+about is this thing called GLTF skin right what is the skin the skin is
+basically the mesh but the operator in cables also allows you to do something
+funky and so what we're gonna do is instead of using this common way of
+applying materials to a mesh in your GLTF scene which we're breaking out a node
+from our hierarchy I'm gonna note that it's called body right I'm gonna
+disconnect it and then I'm gonna add the skin and here for the in the parameters
+you'll see that the node name has to be specified so I'm gonna put in body and
+and there is our guy he's back and not the greatest example I admit but the coolest
+thing about this operator for me is that we can unhook the animation time from the
+rest of the scene so you see here this animation is bring being driven by a timer
+here and that is animating the entire scene but if we start to use separate skin
+operators we can actually control the animation you know separately so you can
+get kind of creative and and maybe have different models that you will animate at
+different speeds or something like that and you can kind of add some randomness or
+maybe special effects to your scene but anyway we can switch it back so that's
+the first thing I wanted to show another thing we can do with GLTF scene is we can
+connect this thing called the GLTF hierarchy so we're sort of familiar with
+hierarchy because we have this button here show structure right and then we have
+all this well in this model is pretty huge but we have all of our nodes and models
+and you know meshes of our scene that we can break out into our project but this GLTF
+hierarchy is going to go through all those nodes and kind of give us information of the
+location of those things and what's what's the use of that well first of all we can do
+like a cool little visualization of our little skeleton underneath the skin but one
+cool thing we can do is in this example you see I have in this example it's actually a
+mixamo animation that we've exported and and you have this zombie dude walking and
+we're also using this GLTF hierarchy operator to then use a little setup I have here to
+populate an array and then I will grab one of those 3d points and then I'm gonna apply a little pulsing
+point on top of it and in this example I'm also using that same information to drive my camera focus
+and by focus I don't mean like the blurriness or whatever but the actual like point of the camera where it's focusing
+our attention so what I have here is right now it's randomly on his hand and if I change
+my field of view you'll see that the camera is now following his hand and I got some smooth
+array here as well so it's it's not too rigid and the camera is a bit swaying in place so what I can do is click on this button and select another random point so now we're focusing on
+focusing on the other hand so this is actually kind of a silly example but I hope it points out that
+you can have a scene created and blender for example and then you don't really have to worry about that the camera
+so if you can see the camera exports and all that stuff you can just put in like even an empty
+uh node somewhere so for example if I add
+um an empty
+somewhere right I'm gonna enable the view for it so right now we have this yellow thing right here
+and now if I um hit G and then like move it around on the empty not on my light
+I can move out move out this uh empty somewhere else right and then I can use this position for example
+with this gltf hierarchy to then point my camera at it so we can create a scene in blender and then position really
+quickly some meshes or uh little empties um to then use for navigation or to kind of focus our camera in our scene
+so I hope that made sense so yeah I think that's pretty cool and then what else do we have we have
+gltf node transform and this one is um kind of related to this gltf hierarchy however uh with gltf hierarchy
+we're just we have to put in the um kind of the hierarchy name so for example if I look at my scene here
+then I will see that my main root node is called armature dot zero zero zero one right so
+if I put that into here I'm gonna get all the points that are kind of children
+um of this root node what I can use gltf node transform for gltf node transform
+this one right uh I can actually use the name of it so I don't need to um get them all and then right
+here I'm using like an array to chunk out this uh single point out of out of my uh hierarchy I can
+actually look up for example I'll connect it here into this port called next and then for example you can
+use your 3d software or even this show structure to pick a point for example this dude zero zero one right
+um I can copy paste that into my node name and now it found this node and now I'm getting an array of all the
+like data of this um node in space so we don't necessarily have to do math and and like chunking of arrays we can
+actually just focus on a specific name and then get an array out of um positions out of it and then use that for
+our project um what else I think that's pretty much it I really want to show you actions
+you can you can hear in my voice that I'm like really excited about it
+um but I need to prepare a little bit more for it so anyway catch you soon bye

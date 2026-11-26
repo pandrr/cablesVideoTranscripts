@@ -1,0 +1,58 @@
+https://www.youtube.com/watch?v=5VmIC1xA4EU
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
+farms is Andro and today I'll be giving you a tutorial with the map range op inside of cables.
+So without further ado let's get started. The map range op allows you to remap one range of numbers
+into another one. Now what does that mean? Well it's easier to explain if I'm just going to show
+it to you. So first of all I'm going to make this a little bit easier to visualize. So I'm going to grab
+a basic material and make the color white and I want to make a grid on the background. So pull this
+out and I grab a grid number 10 spacing 0.5. I'm now going to grab a matte cap material and I'm going
+to add two cubes. So I'm going to grab a transform so I can move the cube and then I'm going to add
+the cube. And now I'm going to put the size on 0.5, 0.5 and 0.5. And I'm now going to copy this
+and paste it. Control C, Control V. And let's share the material. Zoom out of touch. So this cube I'm
+going to move up. Now this cube I'm going to use to show the original value coming in and the bottom
+cube I'm going to use to show the map range effect. So I can now move this cube like this. So I'm going
+to create a kind of loop. I'm going to make a timer and now I'm going to create a modulo up
+and I'm going to put this on 1. And as you can now see we get a value going from 0 to 1. It's a little
+bit fast so I'm going to put it on 0.5. And now I'm just going to plug this into position x here.
+And now I'm also going to plug it into position x here. So we can see they're going together. So right
+now I'm just going to add the map range up here. Map a value from one range to another.
+So I add that. And as you can see something's already happened. So we look at the old minimum
+and the old maximum value. We know that's between 0 and 1. And I'm just going to put the new min
+and the new max also on 0 to 1. So it's just like the way it was before. So this will allow me to remap
+this range of numbers here. Minimum, maximum, the old one into a new one. So I can now put this
+on minus 1. And as you can see they loop together but now we've remapped the number range. It's really
+nice and simple. I could put it on minus 1 to 0. And then we get something like this. I could put
+on minus 0.5 to 0.5. So this is quite self-explanatory. Another thing that isn't very obvious but really
+handy is you can use the map range up to just flip the value. So now I can say 1 to minus 1. And now we've
+got it going in reverse. So far so good. So a really cool trick with the map range up here is that we can
+ignore values outside of the old min and the old max basically. So now I could say old min 0, old max 0.5.
+And don't forget we're looping from 0 to 1. Now what happens is we're ignoring everything after 0.5
+basically. So this is a really great way to just animate something in between a certain range with a
+number. So I could also put this on 0.5 and 0.75. And as you can see it's now only going to map this
+number range to this when it's in between there. This is a really really handy trick. So I'm going to
+show this in a way that might make a little bit more sense. Sorry. So 0 to 1. We're going to put it
+on minus 1 to 1. So we're back here. So what I'm going to do now is I'm going to copy the map range up
+two times. Now let me just show you what's going to happen here. I'm going to plug this in there.
+And we say old min, old max 0 to 1. And I want to rotate the cube 90 degrees on the x-axis.
+So I'm going to plug this in here. And as you can see it now does this. But I only want it to happen
+for the first half here. So I'm now going to say old min 0, old max 0.5. And as you can see I've now
+defined the range in when that animation change should occur. And the best part is I can plug this
+in here now. And I can say okay now I want this one to start at 0.5 and end at 1. And I also want
+to do 0 to 90. And this one I'm now just going to plug in to rotate y. And as you can see we're now
+using this map range to go from 0 to 0.5 to rotate 90 degrees on x. So we've defined this range between
+0 and 1. And now we go here and we say 0.5 to 1. And now we're rotating the y-axis. Now just to
+show you another little thing that we can do here. For example the map range is also really good when
+you use it with the ease up. So if I go to ease and I say okay new min is minus 1 max. So it's minus 1
+to 1. So I go ease minimum is minus 1 max is 1. So we can pick an easing mode now. So now I can pick
+something like smoother step. And watch what happens. We get this nice easing mode which is now
+applied. I can go here. I can put it on quince in and out. So when you combine the ease up with the map
+range up you can start to create some really controlled animation styles. So I'm going to grab the ease up.
+Minimum was 0. Maximum was 90. And now I'm going to put this on cubic in out.
+And as you can see we can now create our own easing method for each part of the animation.
+And I just wanted to show this because these two ops get used together a lot. So now I could pick a
+different one smoother step and then I get a different kind of reaction. So map range is
+your friend when you want to remap one existing number range into another. And it's also really handy to
+grab a part of a range that's incoming and to only do something when a number is between that range.
+I hope this video has been educational and informative. If you've got any questions or comments
+please feel free to leave them under the video below or to post them on the forums.
+Thanks for watching and have a good one. Bye!

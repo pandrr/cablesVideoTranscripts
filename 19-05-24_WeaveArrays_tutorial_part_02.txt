@@ -1,0 +1,122 @@
+https://www.youtube.com/watch?v=AF3CMq_PzaQ
+Hi there, welcome to another video of Made With Cables. My name is Mark, my handle on the forums is
+Andrew and today I'll be showing you with the second tutorial how we're going to go further
+with the weave array up. So I just like you to follow what I'm doing and after a minute or two
+I'll give a brief explanation of where we're going to go with this. So just make a main loop. Now
+we're going to add a clear color up and I'm just going to turn this up a little bit and now we're
+going to add a depth test up and you need to disable depth testing. More on this later. I'm going to pull
+this down and now I'm going to make a basic material new up and just zoom out a little touch and now I'm
+going to create a spline mesh. Okay, so basically what we're going to do today is we're going to get
+two geometries, two spheres and we're going to output their vertices as points and we're going to use them
+with the weave array up to make some really interesting things happen on the screen. So let's get started.
+So I'm going to go over here and first of all, I'm just going to create a trigger extender to keep
+my tap patch a little bit tidy. And now I'm going to go over here and I'm going to grab the sphere two up.
+There we go. Sorry, sphere. Just had a major update so everything's got a bit of a different name.
+So I'm interested now in the amount of stacks and slices. So I go to stacks, pull it out and create value.
+And this I'm also going to plug into slices. Now I'm going to get this output and I'm going to plug it
+into geometry pointers. Get the vertices of a geometry as an array x, y, z. There we go.
+So I only need this to be triggered once. So I'm going to go here. I'm going to plug this in and get
+the sphere in the screen. And now I'm going to grab a trigger once, which means we output the geometry
+only once, which is more efficient. So let's just pull this down for a minute. Now, let's say that I
+change this value here to say 48. We don't see the changes reflected. So we've got a really handy op for
+this and it's called trigger on change. So it triggers every time the input value is changed. So I'm
+going to grab this and now whenever I change the value here, this will get updated. You can see
+it happening there. This is just a really handy way to not have to press reset the whole time you
+change something. So let's just move this up here, tidy it up a little bit. There we go. Great. So now
+what I'm going to do is I'm going to get this vertices output and I'm going to plug this into an array 3x
+transform, which allows me to translate scale and rotate an X, Y, Z array. So I'm going to grab this.
+I'm going to plug that in. And now I'm going to plug this into the spine mesh. And as you can see,
+we've got this on the screen right now. So first of all, I'm going to turn the alpha down.
+So you can see something that's happening. So these are the stacks and slices. And I'm
+going to go to the spine mesh and I'm going to turn off line strip. So we now get this.
+So let me just put this on a black color. Makes it a little bit easier to see. Okay. So,
+you know what, let's just lower this to say 16. All right, there we go. So I'm going to go to the
+spline mesh and I'm going to put the thickness on a really small number like 0.007. There we go.
+So I was a little bit confused with what we're seeing there. So now we can go to the stacks. Let's put it on 48.
+Okay. This is more like it. Make the screen a bit bigger because they're pretty thin. Okay. So we've
+now just got the vertus array from the sphere. We've outputted it to geometry points and we put it
+into a transform. Let's just pull this up here. Now, what I can do is I can use this again. So I'm just
+going to go over here, control C, control V. I'm now going to plug this into stacks, this into slices.
+I'm going to get this trigger and plug it in there. Now I'm going to get this trigger and I'm going to
+plug it in there. And then just like in the previous tutorial, we're now going to use the weave array
+stop. Okay. So we're going to get array one, plug it there and array two. And now we're going to
+put the chunk size on three and we're going to plug that into the spline mesh. Now so far,
+no noticeable difference. So what I'm going to do now is I'm going to put the translate on one
+and I might just need to update this. There we go. Okay. And you might be thinking, wow,
+what's happening here? So basically what's happening is we got all the vertices from the sphere here as
+points in space and we did the same here, but these ones we've now moved.
+So if I now move this forward and backwards, as you can see, we're moving this sphere
+towards the camera, which gives this like really cool kind of effect. So I think the sphere is a
+little bit too big right now. So I'm going to grab the, I'm going to get radius and pull it out and
+grab a value and I'm also going to plug that in here and I'm also going to plug this into the trigger and
+change. So now I can change the size. As you can see, there we go. Great. So I can now get this array
+3x transform and I can move it to the left, to the right. I can move it up and down. As you can see,
+we can get some really interesting patterns. We go over here to the spline mesh and make the, um, the lines a little bit thicker. I'm just going to keep it up and down.
+I'm just going to keep it like, um, sorry, like this for now. Let's put it like this. This is better.
+So I'm going to put this just on zero, zero, and I'm going to put Z on one. Okay. So actually 0.75.
+So here's an interesting thing. Now, um, I can now rotate that second sphere. And as you can see,
+that's that second sphere, literally moving through space. We're drawing lines from one sphere to another.
+But when you do translation, uh, you move through space, you scale and you rotate. But the thing is, which one happens
+first, right? So basically I want to be able to rotate this, but not have it, um, move through space like this. I want it to rotate on the spot.
+And if you're not understand what I'm saying, no problem. You'll get it in a moment. So I'm just going to go here and I'm going to
+grab another array three X transform. I'm going to add that in between. I'm going to grab this trigger and
+connect it. So I'm going to use this one to, um, rotate.
+And this one I'm going to use to translate, which means just move it, um, free space. So let's just grab, um, a timer two.
+And now let's put this into rotation X and let's plug it into rotation Z. Let's turn that speed up.
+And wow, as you can now see, I'm rotating the second sphere, but it's not moving off. It's a center point,
+it's pivot point. So this allows us to create some really, really interesting stuff here. So this is just
+to like get the point across with what we can do there. So I'm just going to like turn this off and
+click reset. So we go back to the default. So I'm just going to make a really simple trick here to, um,
+animate this. So I'm going to grab the frequency, um, off triggers every X milliseconds. So I'm going to grab this.
+Um, it needs a trigger in, so I'm going to give this and I'm going to put it on 12,000.
+Okay. And now I'm going to grab a toggle bool. So it toggles Boolean value by triggering.
+So every time it gets a trigger, it alternates between false, true, false, true that you can see
+down here. So now I'm going to, um, grab a bool and an op animate between two values based upon a
+boolean value. I'm going to get the bool. I'm going to plug it into bool. This guy expects a trigger.
+So I'm just grabbed this one from here. So now what I'm going to do is I'm going to replace
+the value here into rotation X and rotation Z. And now we're only rotating one degree.
+So I need to put the value on true 360, value false zero. And the duration I'm now going to put to,
+say, 11 seconds. So you're going to have to just give it a minute and I want to put it on smooth step.
+So in a moment, this is going to, um, trigger. There we go. So now it's going to take 11 seconds
+to animate 360 degrees. We've got a smooth step on, so it's going to ease in and out. Sphere should
+stay there for a second and then it should come back again. Okay, great. So let's just get rid of this
+timer. So, um, this is a very simple setup, but it allows you to go really wild and really crazy because
+this is just with a sphere. So we can go to the amount of stacks here. We could put it on eight.
+We could make the lines thicker and we get a very different result coming out of it.
+We could put it on 64 and then we get more lines on the screen by changing the spline mesh thickness,
+the color of the material, the alpha opacity. We can go for a huge amount of different looks.
+So let's just put it there for now and I'm going to put this back to 48. So it's really important.
+I want you to get that, that here we've rotated it on its spot and then we translated it here and
+you get a very different effect if you first translate and then rotate. And the reason I've
+just split these up into two options so I know for sure, um, what's happening, what the order of
+execution is. So you could also swap out these spheres for rectangles. So now we're going to go a
+little bit far with the tutorial video, but no worries. So I'm just going to grab this stuff here,
+I'm going to copy it down, tidy this up and I'm just going to copy this, paste it there and paste it
+there. I'm now going to get rid of this first and I'm going to grab a rectangle. Okay. I'm also going to give it this trigger.
+I'm going to copy this rectangle and put it over here, grab this trigger. So I'm just doing what I did
+with the sphere and the stacks is now going to go into columns and rows, which is exactly the same as
+stacks and slices with the sphere. It gives us a definable, uh, amount of X, Y, Z points, like the amount of points
+you've got in the 3d field. So now I get the geometry out, plug it in here, geometry out and I plug it in
+there. And now we're going to go to one of our good friends, click here in between and I'm going to
+grab the array interpolate up. So I'm going to plug that in, I'm going to copy it, paste it and drag it here.
+Oh yeah. Okay. Sorry. It needs this to go into array one, this to go. Sorry. My bad. Got confused there.
+So we have two arrays that go in here. So to recap, we've got the sphere array. It goes in here. We've
+got the rectangle array. It goes in array two and we just do the same here. So now it expects a trigger.
+So we grab this, we grab this. And now what we do is we reconnect this here. So why are we doing this?
+Well, let's look at this, um, percentage amount. It's like the interplay amount. Now it's getting a
+little bit busy. I'm going to pull it out. I'm going to grab the value and this is like the interpolation
+amount. I'm going to plug it in there. And now if I put this on one, we have two rectangles, which gives
+this really cool, awesome shape. And I can now interplay between the rectangle and the spheres
+because they've got the same amount of points. So if I put it in 0.5, we have a mix between a rectangle
+and a sphere, which can just lead to really interesting stuff. So let's put this on one. And just so you can
+follow for that last part what's happening here, let's just grab an orbit controls because this can
+really reveal what's happening here. So let's turn the camera. As you can see, this is one rectangle,
+and this is the second one. When we go ahead to translate, we can move this forwards or backwards
+in space. You can also move it up and down, and this allows us to create a huge amount of different
+looks. So I'll put this in one, this in zero, and I'm just going to put the interpolation in zero.
+So you can see that sphere, zoom back a bit. So this was the second tutorial with the weave arrays up,
+and the main focus was using geometry and geometry points to be able to weave these
+arrays together to make really interesting things happen with the spline mesh. So I hope this video
+has been educational and informative. If you've got any questions, comments,
+please feel free to leave them under the video below or to post them on the forums.
+Thanks for watching, and have a good one. Bye!

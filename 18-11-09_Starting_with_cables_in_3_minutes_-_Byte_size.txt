@@ -1,0 +1,31 @@
+https://www.youtube.com/watch?v=21XUKdkk3Dc
+Hi there and welcome to Bite Size Tutorials. Right now I'm going to give you a brief introduction
+on how to get started with navigating through our webpage and getting started with cables.
+So you're here at the main page. If you click the explore tab, this will show you all of the public
+patches that we have. You can click here to see the patches that you've created and you can click
+here to see featured patches. If you go to examples, this is a great way to get started with learning
+basic concepts inside of cables from the basics to animation and to meshes. If you click on one of
+these on the left hand side, it'll open up a patch which is most of the time interactive and will show
+you how to use the op. If you want to go more in depth, click open patch. A new browser window is
+opened and you can see the ops that we used to make the patch itself. If you go to learn and click
+documentation, this speaks for itself. We've got some really good stuff here which will show you
+how to get started with cables. Click over there, follow the tutorial and you're good to go or you
+can follow these videos. If you go to learn op reference, you could look for example for an
+animation op. If you click anim, then it's going to show you all of the different animation ops here.
+You can click it once again and then go to an interactive example like this here. Once again,
+click open example in editor to be able to go. We have video tutorials as well which we'll link to
+this channel and other videos that we have forums self-explanatory. So we have a minute and a half
+left. Let's make something very basic with cables. So if you go to create, you can say create empty new
+project. New project gets made. I normally save as at the beginning. So I'm just going to call this my new project.
+Patch is now saved. Press escape to create a new op.
+Type in main loop, press enter. And now I'm going to type in transform, press enter.
+Now I'm going to type in basic material, press enter. And then I'm going to type in cube.
+And I now have a cube on the screen. If I click transform, I have position, I have rotation,
+and I already have something on the screen. If I click here, I can get this click and redrag.
+If you grab hold of an op and shake it, you can disconnect it. If you click here in between,
+you can create a new op and put it in between. So I'm going to get the matte cap material new.
+And now I have some form of shading. Orbit controls is also a very handy op,
+which allows you to click here with the mouse and drag around. So in under three minutes,
+you can get started with cables. Don't forget to click save.
+Don't forget to follow the rest of the tutorials on the bite size channel to get a fast introduction
+into how to go with cables. Thanks for your time. Bye.

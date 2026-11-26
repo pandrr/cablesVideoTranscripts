@@ -1,0 +1,95 @@
+https://www.youtube.com/watch?v=hUdHnFtBTNU
+Hello everybody my name is Pandor and with me is Steem. Hi Steem. Hey there. And today we want to
+show you a little tutorial about how to use the URL in your browser to control the theme like what
+it is showing. Yeah you might know this from other websites but what we're using is the location hash
+so everything that's behind this little hashtag thingy in your URL bar and as you can see if Pandor
+now changes the number of the scene from zero to one or back. It will change from our sphere to our
+cube and if we did this a few times we can also use the browser back and forth buttons and navigate
+as if we were on a real web page and also we can set this from inside like change the URL parameters
+from inside patches by using for example as we do the sidebar. What we see right now is the example
+patch you can find it in the documentation of the location hash operator but we will try to build
+this from scratch so you can follow it a bit better so we have an empty project installed from scratch
+by creating two scenes. Yeah another cool thing is that this looks like you visit a new page but
+actually it's not reloading the page it's just staying there because like if you change something
+behind this hash like it the browser will not reload the whole page it will just change the content because
+everything after that hash is just handled on the client side just for your information.
+Okay let's build it so I will rebuild that scene basically so I want to render a sphere there it is and I will use the if true
+operator to control if the sphere is on the screen so right now it's turned off and when I turn this little checkbox on then we will see a sphere.
+So I can just copy and paste this and do the same, okay let's rebuild it if true and then I will put a cube and now I can render the cube like this it's not visible because it's behind the sphere so if I turn off the sphere now we are rendering the cube and now we see the cube.
+So basically what we want to do is just control those both operators so imagine like you have like a main menu and there's like the about page and your I don't know like photo gallery or something so you can switch between those those areas on your website basically.
+Yeah before we go into the location hash and URL thingy I think we should build a simple sidebar to control these two ops right?
+No.
+Okay.
+I mean what do you mean?
+Yeah just a sidebar with like two buttons that turn this on and off.
+No the button there's no state from a button let's just do it with the op itself.
+Okay.
+So we use the location hash op right?
+this one location hash root so this the root is basically
+the structure of the the hash navigation so everything that's behind this thing here
+is called the root in this op so we can say something like scene
+and then the next part is basically what we want to work with so let's use scene slash colon name
+the name will then basically be a variable name for whatever is in there so if we put scene sphere
+as we do right now our name will then be sphere as you can see in the output of the operating object.
+Yeah so you see like first of all you see if it's matching so if if I write I don't know
+not scene but test scene then it will say matching false because
+the start of this root is just not valid for this so it has to be seen so that it's valid so you can also
+have multiple of those roots but that's more complicated thing so this thing is matching
+and now we we want to know what's in this name right so um you can you can see like we have three
+outputs like it was changed it's a trigger it is matching and then there's values so
+values is an object so let's look into this by this little magnifier item
+and then you see it's an object with a member name and this says sphere so this is what I entered here
+so when I enter cube and update this then you see it says cube and this is the information that we want
+basically so now we need to get this from this object to this little boolean true false value right so
+for this we need an op that's called object get a string getting a string from object by key so our key
+is the word name which is the same that we used in the colon root right exactly so this this is our key
+later so we can have multiple we can also say something like color and then we could also specify the color
+um but let's just stick to name so we get the string by the key name and the result is cube already so
+still we cannot connect this to this because it's it's not the same so we want to know
+we need like a true false from this so we can say string equals so we do a comparison so if this stream this
+equals cube so if this string is cube basically then the output will be true so i can connect this here
+and then it will render the cube so when i change this to something else it will be false so and then
+it's not rendering so to get something on the screen right now it just has to be perfectly cube to show it
+yeah now we have to do the same thing over again with sphere and we're still working with the variable so um we can copy this and um
+then just put sphere in there and this will then return false of course because the url um says cube right now
+right now but after everything is connected and we changed url to sphere um we should basically switch
+um the scenes because it's not cube anymore but sphere um so we're seeing the sphere and not the cube
+yeah so you can also see that the trigger is just switching between both of the
+uh objects basically so now i can also click my browser back and forth button and you see um
+it's switching between them and as we've seen before or as pandeo said before we're not reloading
+the entire page even though we're changing the url we're just changing um data in the url
+and having this information um available immediately without the reload so a nice way of um yeah changing
+scenes in your patches yeah but it also works if you just start from scratch right so if i just you can
+send this url to someone um and for example you want to show the cube then you can just send this url and
+then it will open um and then it will show the cube so you can absolutely link this from another website or send
+this via social media or whatever and and just control what the visitor is going to see it's basically
+something like deep links into your patch state right um yeah so that's pretty cool um
+but another thing that you want to do is we want to build like a menu in this patch that also controls
+this um right or did i forget something no sounds all fine okay let's just simply with a sidebar
+and um let's just make two buttons um one we will call sphere the other one we will call cube
+um and those buttons should change the url basically yeah what we're going for yeah usually we're really
+wiring these sidebars to the ops themselves or writing to variables um and then reading these variables but
+now we're doing this completely without variables just having our state information or scene information
+in the url basically yeah this is what i meant in the beginning also like i don't like we don't want to
+connect this to the the if true then ops we just want to change the url and then this whole process works
+exactly as if i would change the url so we need a different op for this um to set this route
+and this is called um set location hash so as the name says like it will just set everything behind
+the hash in the url so how does this look like so there's a string input the hash so that's the
+the result that will be set in there and so i can just enter scene sphere here and press update
+and you have to activate exactly that's always the first thing so i can click update now and then it
+will change to the sphere so um i could just use this twice i guess and um connect this one to the sphere
+and oops this one to the cube and change this to cube and now i can use this those buttons to switch
+between those two operators and it's pretty cool that they are not like this they are not connected
+like this is just different from this thing so you could also have like a little footer menu or
+smaller menu or like on desktop you have a different menu than on mobile and you can just use those ops to
+go to the area of your website yeah and let's not forget that um we see the um the actual url changing
+so if you now copy this and send this to someone um he or she will then have the same state that you're in
+so if we um select cube and we copy this cube url um people will see the cube and if we do sphere um
+people will see the sphere basically um a variable on the outside that you can share with people via the url
+yeah um yeah um yeah this is the basic example so um you can also look at um this up view documentation
+there's um there is no documentation about it um there's this example patch that we showed in the
+the beginning so you can edit this it's basically what we just um built in our patch here it's also
+documented again so um this should get you started and then you can try and add like multiple
+parameters and and build more complex size with it
+yeah if you have any questions about this let us know join our discord and ask questions or in the forum
+and um yeah that's it i guess yeah have fun patching bye

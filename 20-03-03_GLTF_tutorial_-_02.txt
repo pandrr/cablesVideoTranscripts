@@ -1,0 +1,117 @@
+https://www.youtube.com/watch?v=D2iecoKFUtw
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the forums is
+Andrew and today in the second part of the ongoing tutorial series I'll be showing you how to get this
+textured model from Sketchfab and how to prepare it to import it inside of Cables to get something
+similar to what we see here. So without further ado let's get started. So the link to the model is
+underneath the YouTube video or inside a comment inside of the patch. So just click that to go here.
+So now I'm going to click download 3D model and you're going to want to download the GLTF file
+format right here. Now I've already downloaded it. You then want to extract that inside of the folder
+and then I'm going to end up with something like what you see here. We have some textures and here
+we have the GLTF file. Okay, so now I'm going to go into Blender. I'm going to press A to select
+everything. I'm going to press X to delete everything. Now go to file. I'm going to go to import
+GLTF. I'm now going to go to the downloads folder. I'm going to go in here and double click scene.GLTF.
+Now everything's really big so I use the mouse wheel to zoom out. So I'm going to press A to select
+everything and I'm going to press S to scale. I'm going to crank it down. Zoom in again. S to scale.
+There we go. So this is the model without any textures. Okay, so one of the problems you can
+have is you normally want to keep your textures separate from your mesh. This is going to be
+different obviously with each kind of 3D program that you use but I like to show it with Blender because
+it's open source so everybody can use it. So you're going to click these triangles here and you're going
+to make everything available there and what we now need to do is we click the object and then we go here
+to the material section and this part here where it says surface. Now that shader has a texture bound to
+it. Now we don't want to have like 10 or 14 MB of texture files inside of a mesh. We want them separate
+because we already downloaded them. So I'm going to just click this. I'm going to click remove and you're just
+going to do this for every single object. So what that does is it makes sure that the material is
+still assigned but that the texture isn't exported with it. So I'm just going to keep on doing this.
+Great. So I'm going to just click here, press A to select everything. I'm going to go to file, export,
+and I'm going to export GLB file format. So I'm going to make sure that GLB is clicked here. If you're not
+sure about this, just take a look at the previous tutorial. So I'm just going to click all this here.
+I'm going to say selected objects and that's it. So I'm going to just go to the downloads folder,
+go inside the same map and I'm just going to call this forest exports. I'm going to click export like
+that. Okay, cool. We've exported it. So I'm going to minimize this now and I'm going to go into cables.
+So I just want you to pause the video and make what you see here.
+Okay, great. So now I'm going to pull this trigger out and I'm going to grab the gltf scene op. This
+allows me to load a GLB file. I'm going to click add. Okay, so we don't have a GLB file. So I'm going
+to go here and here we can see my file forest exports.glb. I'm going to click. I'm going to drag
+into the cables browser. Here's the upload section and let go. That now gets uploaded like this.
+So now I'm going to click this. I'm going to click GLB file and this is the one that I exported,
+the forest exports. I'm going to click and there it is. So I can now use the orbit controls to look
+around. So I'm going to click the gltf scene op, show structure. And here we can see the materials
+and the sections of the mesh. So right now I want to get rid of these rectangles and these ones here.
+So I'm going to click 10 and then three and then four. Now I just want to show you something that
+confused me a bit at the beginning. I'm going to click clear color. I'm going to move this up a little
+bit. So if we go back to the show structure and pop it open there and click four. Where was it? This one,
+number three. So if we go to the Sketchfab model and we zoom out, the user put it inside that model,
+inside of this really big mesh to kind of like give this like shaded look, I suppose. So that's what we're
+looking at there. That's how we then get the clear color back. So this is how we can expose certain parts
+of the mesh right there. So now what I need to do is I need to assign textures to the model. So I'm going
+to click the GLTF scene up. I'm going to click show structure and the first thing I want to start with
+is say this log right here. Now if I'm going to look, I think that was this one. Yeah, so we can see
+that this uses material 20. It's going to go to material 20 and I'm going to click assign. Now what
+cables does is it automatically creates this GLTF set material up. Now what this needs is a material.
+So I'm going to pull this up. I'm going to type in basic material. Now this is going to need a trigger.
+So I'm going to put that there. So there's two ways of doing this. Now I could type in texture and then
+grab the texture up. A really nice cool way to do it is if you click the basic material and you click
+this little plus icon it's going to automatically create it. Now as you can see this default texture
+here has been assigned to that part of the mesh. So now what I'm going to do is I'm going to go over
+here to the forest scene and we're going to just import all the textures that we need. So I'm just going to
+select all of these here. I don't need these bottom three and I'm going to click and drag them into cables.
+As you can see I hover with the mouse and it shows me the progress bars for everything there. So far so
+good. So it's really nice and easy to assign a material now. So it's material 20. So I'm just going
+to click texture browse file and I'm going to look for material 20 base color and I click that. And as you
+can see this texture is now being applied to those parts of the mesh. So now what I'm going to do is I'm
+just going to copy this and I'm just going to paste it there. I'm going to put this here and then I'm
+going to look at the next part. So I'm going to click show structure. I'm going to pop this open
+and then I'm going to look for the trees. So let's take a look here. I think it's this one. Yep. So this uses
+material one. So I can also go here now and I can just type in one and I'm going to assign this there.
+Click the texture and click the file to browse. Then I look here for material one base color.
+Great. Now, as you can see, there's a little thing that we've got here. There's these like light green
+squares so that the transparency isn't really working correctly. It doesn't doesn't look
+right. So what we need to do is we need to use a opacity map that's here. So I'm going to copy and
+paste this texture up. I'm going to plug it in there. I'm going to click the texture up. I'm going to go here.
+And in this case, it's been called material one emissive by Sketchfab. So I'm going to click this.
+I'm going to press escape. And then what we do is we go down here and we go to the basic material
+up. We need to make sure that these two options here are selected. And as we can see, we now get,
+let me just zoom in a little touch, a bit tight for space today. We now get like the correct edges
+there, but the tree looks a little bit wrong now. So what I do is I click the basic material up and the
+alpha mask source is now the brightness, but we don't want that. We want the alpha. And when I click
+that, we now get the color back and we get these nice, clear, transparent edges. So that's pretty much
+all you've got to do if the alpha data is correct with the texture. So, so far, so good. This is going
+pretty quick. I'm now just going to copy this and I'm going to paste it. And now what I want to do is
+I'm going to take a look and plug this in. And what I now want to do is I want to find the rocks.
+So if I'm correct, that was this one. There we go. So there's that rock like right there.
+Let's take another look. Now, of course, I've already prepared this so the tutorial can go a bit quicker.
+So material 21. So I'm just going to click this. I'm going to put this on 21. I'm going to go to the texture,
+click this. I'm going to look for material 21, base color. There we go. That's looking good.
+Okay. So now I want to do the island. So I'm going to just copy this and I'm going to paste it.
+I'm going to put that there and I'm going to click the show structure. I'm just doing the same thing here.
+So you can see the workflow and I think that's this one 22. Yep. So that's the bottom part of the island
+right there, as you can see. So I'm going to just do this. Zoom out a little touch.
+Okay. So I'm going to pull this over there. So I need to make this one now 22.
+So that was a correct one. I click the texture up, click this. I look for material 22, base color.
+As you can see, we now get that there. So far, so good. And now one of the last things that I want
+to do is I click the GLTF scene up. I open this up and we're looking at this grass part here. That's all
+of these different parts there that you can see. So that's material 23. Okay. So what I'm going to do
+is I'm just going to copy paste this. I'm going to put it down and I'm going to set the material to 23.
+And now I'm going to get this and I'm going to put it there. And now I'm going to click the texture.
+And I'm going to click material 23 base color. There we go. This already has the correct
+alpha data encoded. So, so far, so good. Look at this. This is looking really nice.
+And that's how quick and easy it is to get this textured look on this model like this. So now what I
+want to do is I'm going to just show you if we put the clear color down a little bit and we make it a
+little bit darker, um, then everything pops out a little bit more. So there's a couple of different
+things here that I discovered while, um, working on this. So these are the trees, right? So if we're
+going to look here at these edges, we're going to have to zoom in a little bit for that. Right there.
+Can you see this? Those are like kind of black edges there. So I just want to show you, if you click
+the basic, um, material, uh, sorry, if you click the texture up here, what we have is we have different,
+um, texture filtering options, nearest linear and map map.
+There we go. So as you can see, if we click nearest now or linear or map map, we can get a different
+look. Now the thing is sometimes if you have flickering with a model, um, you basically might
+want to put it on map map. It's more expensive, but it will smooth things out. So let me just reset here
+with the orbit controls to go back. Let's put the transform down a little touch. So we're just going
+to move it down and we're going to, we're going to rotate a little touch. Let's put it back a little bit
+again. So it's looking like this and now I just want to make it rotate. So I don't have to keep on
+doing this, um, by hand. So I'm going to get this timer and I'm going to plug it into rotation Y.
+I'm going to put the speed on say, um, six. Okay, great. So now we've got this kind of viewed out of
+the model. That was the basics of how to get a model from Sketchfab, how to put it into Blender and how to
+prepare it for cables. So I hope this video has been educational and informative. If you've got any questions or
+comments, please feel free to leave them under the video below or to post them on the forums.
+Thanks for watching and have a good one. Bye.

@@ -1,0 +1,48 @@
+https://www.youtube.com/watch?v=XvVBnPakE28
+hello this is Alex from cables.gl let's say you want to use a MIDI device with
+your cables patch totally can and there have been quite a few tutorials about
+making this happen but I think it's time for a refresh because the operators that
+we use are a lot better now a lot quicker and you know I feel like doing
+kind of an intro video where we just simply hook up your MIDI device and then
+assign a controller to then plug into something on this screen here and then
+we'll get into the other topics that were covered in other videos so like
+synchronization and maybe talk about a little bit of the differences between
+doing software and hardware MIDI inside your operating system maybe there's some
+differences macOS and Windows I don't know but let's just say you have a MIDI
+device it works your operating system recognizes it you know it works with
+your browser of choice you just want to get going right and in this example I just
+have a patch with some point material with a texture going to it and what I want to
+try is to see if I turn a knob how would it feel like to change for example this
+random size of the points here okay so how do we get started first we need to open
+up our search and I'm gonna clear my past search here and you're gonna see this right so if
+we look over on the right here we'll see orange devices section and then there's this whole
+name name name space of MIDI so all these devices are ops dot devices dot MIDI and there's a there's quite a few of
+and what we need to get started with is of course assigning a MIDI device that we're going to then take the information from right so we need a MIDI input device I place this down and I look at the parameters not many so there is a device drop down field which actually has a input port so we can maybe set up some kind of sidebar for our users because of course you got to keep in mind like you might have an input port so we can maybe set up some kind of sidebar for our users because of course
+because of course you got to keep in mind like you might have something like mine which is the nano control but then if I save this patch and send it to you the the patch won't recognize what you have so you might have some like Arturia thing or maybe it's even a software controller for media so this is kind of necessary to show to your user or if you're just doing it for yourself you're doing like a digi gig or something
+you can just select the device that you know for sure will work but again there's a lot of things that can go wrong like your cable gets disconnected or something and you need to reconnect it so keep that in mind that you know it's important for the browser to know what device needs to be selected to then take the
+knobs and the sliders and the notes from um unlike maybe something what you're used to in like Ableton or something else where it will automatically like recognize oh okay the the thing got disconnected but now it's reconnect reconnected and it's all good I think in browsers it's a bit like fidgety so it might even be better on a Mac
+I don't know so let's just say everything works we got this operator and we got this operator and we're gonna select a controller and we're gonna select a controller and we're gonna select a controller and it's a bit like fidgety so it might even be better on a Mac
+so let's just say everything works we got this operator and we're gonna select a controller that you want to use in my case this nano control and the other stuff you see here is like my sound card and stuff so you if you have a sound card with a media input you might see that in there as well
+all right so then we have this learn and panic and learn is kind of cool because of course I can start using these ports right because now I'm reading my media device and it will output the different events the notes the control messages the clock even
+even but if like you're like me I'm a little bit lazy like I know I want to use this knob so if I on my on my on my controller that I don't have a video of but maybe I'll set up next time so I
+know I want to use this knob that I'm moving right now all I have to do is click learn and then move it and you see an operator was just created for me I'm basically done because that's that's it
+that's it this thing is already outputting you see in this value output it's outputting what my knob is being told what to do right so
+that's pretty awesome and quick right like this video could have been 20 seconds long
+so what else do we need to cover here there's also a panic button this I think is great when you have a lot of media devices connected together and there's like stuff going
+in and out of the devices and you might end up with a media loop so like just messages are just stuck so this panic will kind of just block everything out from your browser or that's coming in from this device to your browser and you might be able to recover from some sort of mishap that happened with maybe some incorrect cable incorrect cabling inside cables
+or maybe outside of your browser you had some MIDI routing setup
+anyway that's what the panic is it's pretty much the classic MIDI panic button
+all right and what I also want to talk about is for example this MIDI CC operator that was created when I was moving my knob and of course if we press escape we can search for MIDI CC and this operator is here right there's also another one we'll cover another video but this MIDI CC is exactly the same however it's really cool to just have this learn button on this kind of master
+MIDI device operator and when I use another knob now I have two different MIDI CC is already created so it kind of saves me the time of having to search set up this correct MIDI channel and MIDI number it just does it automatically for me another cool thing you can do is let's say I'm like tired of using this loop
+and I'm like tired of using this learn button and you know I'm in a situation where I know I just need a MIDI CC and I plug it into the CC input of the MIDI control or the MIDI device input but here I have to set up the index right this operator also has a learn
+so if I click learn and then move a knob it will catch whatever was going into it so it will catch whatever was going into it so also super handy and yeah this is this is just awesome I think
+alright so let's move on to this other operator we're going to talk about the MIDI CC
+operator that will catch whatever is coming out of your input device and then output an index so the channel number that has been assigned to this operator and also the value out
+then also there's like triggers and an array even very cool little operator so everything is set up correctly because we use learned learn and then what we can do here which is super handy is not use these
+classic MIDI values or whatever you have your MIDI device set to transmit so my knob is transmitting 0 to 127 and if I want to change that to like another map range I would use a map range but
+let's just say I'm happy with a 0 to 1 or like actually a negative 1 to 1 let's just try it out so all I do is use this handy parameter panel to switch it to 1 to negative 1 range so when I move my value
+value it's no longer 0 to 127 it's negative 1 to 1 so another like step saving feature super handy let's hook it up to
+what I wanted to hook it up to so the random size so now when I change my knob it's obviously changing the operator parameter that I hooked it up to and let's just say okay yeah
+okay yeah maybe negative 1 to 1 is not big enough for me so I'm just gonna use like a multiply to multiply the range
+so now it's a bit more visible so pretty pretty nice I mean like yeah to put it lightly it's incredibly incredibly fast I love this so I hope you like this tutorial please ask questions
+please ask questions because I do want to make this kind of a series and a recap of what we used to have but now with the cool new improved operators so thank you and bye

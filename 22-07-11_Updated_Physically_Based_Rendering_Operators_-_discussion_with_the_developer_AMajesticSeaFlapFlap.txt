@@ -1,0 +1,2379 @@
+https://www.youtube.com/watch?v=C2FjpdRWPxw
+Hello, this is Alex from Cables.gl, and today I am joined by Alex, aka a majestic C-flap-flap, who you might know as the creator and the mastermind behind some of the cool new operators we've been seeing in the last updates in Cables.gl.
+Especially the PBR materials and PBR environment map lighting, texture-based lighting for the PBR material.
+And in the last update, you made some more additions to the operator, and we're going to try to talk about them all.
+And hopefully it's not going to take a while, but I am in your example gallery right now, and you made this with the last update, and used a bunch of your new operators as well.
+And I want to ask you, how are you able to come up with this stuff, first of all?
+Like, is this something you do for work, or is this something you are, like, passionate about to do physically-based rendering in WebGL, or maybe even on other engines?
+Because, yeah, this stuff is really great, and it runs quite smoothly, I think, and quite performative, and I'm super happy that you've made this stuff.
+And, yeah, super glad that we can chat about all the new features, and I can pick your brain about, like, how do you come up with all this stuff.
+Yeah, right.
+So this room was pretty much created as a test case, because I was like, yeah, I want to show my patches, maybe, like, in a little gallery thingy.
+And then I realized that there were some features missing still from the VR material that you need to create, like, a realistic-ish-looking environment.
+So this was the main motivation behind adding those features.
+And I guess that must have been sort of inspired by the fact that there was, like, new physics engine rewrite coming, and some sort of collision, and you could actually, like, walk around rooms, or I assume that's how you came up with, like, oh, no, we need parallax map correction for the reflections or something.
+Yeah, definitely.
+Like, as soon as you start playing around with the example patches for the ammo stuff, you realize that, yeah, this is kind of cool, and you can build on top of that.
+So that's definitely an inspiration for this one.
+Yeah, I really like it.
+I think it kind of keeps happening.
+We're all getting inspired by little breakthroughs and pushing our own, like, I wouldn't say agendas, but, like, our own, like, favorite parts about all this graphics rendering biz stuff on the web.
+But, all right, so I like the artworks and everything in here.
+You haven't published this patch yet.
+I don't know why.
+It's awesome.
+I hope people can see that it's actually not that difficult to create this stuff, I think.
+I assume you're quite well-versed in Blender.
+I mean, I know you are, obviously.
+So, can you tell me, like, how much of a leap is it to go from Blender, if you're more or less comfortable enough in Blender, to do baking or maybe creation of PBR materials in Blender?
+Like, what's the jump to doing it in WebGL?
+Like, is there a lot of things you need?
+Are there a lot of gotchas or what?
+I mean, if you're used to baking workers in Blender, you probably know how to bake diffuse lighting into a texture map, and this can pretty much be used one-to-one in cables now.
+So, you would create your lighting setup and your environment in general in Blender, bake all the textures, and then take all the mesh into WebGL and use the new PBR features to get the lighting properly.
+And when you create the operators, I assume you're also creating them for yourself, right?
+So, it's based on a bit of the Blender workflow and, like, the way maybe other engines work, like Unity and things like that.
+Like, I guess that's where you see the AORM maps the most nowadays, maybe?
+Yeah.
+Yeah, so, it's nice to get those workflows, like, under my belt as well, because, yeah, it becomes quite smooth, I think, if you get versed in Blender.
+Or maybe, like, the fact that you can do something in cables pushes you to do it in Blender as well, and then you can have this nice tool pipe.
+All right, well, I think I'm just, like, rambling now, but let's talk about specifically what's new since the last update.
+Like, what have you added to PBR environment map and materials?
+And I want to start with something that jumped out at me, like, right away, was this parallax correction.
+And we had PBR since the previous release, the one before the last one.
+And I always thought, okay, this looks quite good already, right?
+So, I have this vase.
+It's from a past tutorial.
+You guys might know where I did the AORM map workflow.
+But even, I think, then, when I did that video, I didn't fully understand how to use the parallax correction yet.
+I think it was on the developer version of cables.gl.
+By the way, if you guys don't know, dev.cables.gl is the secret place where all the ops get birthed.
+And you can test them out and write issues and suggestions and stuff like that.
+But, yeah, anyway.
+So, what happens is if you have the helpers turned on,
+and you press parallax map correction, you get this box.
+And can you tell me, like, this is, I think, quite a unique feature, I think, in an operator.
+I haven't seen it before.
+And, like, how does it work and what is it supposed to do?
+Yeah, right.
+So, if you have a normal reflection going on, like, without the parallax correction,
+it's pretty much only using the direction of the surface normal to do a lookup into the texture that we use.
+So, this also implies that the reflection is pretty much, like, on a sphere that's infinitely far away.
+What you usually want to have, though, if you want to have, like, more depth in the reflections,
+is to use a projection, for instance, on a cube.
+And this is all that this does, pretty much.
+Like, it assumes the reflection to have been created on a cube,
+and this cube is also displayed there with a bounding box.
+So, I can kind of visualize these faces of the cube are projecting textures onto,
+it's like a cubic projection onto the reflection effect or the shader of this.
+You can think about this, like, if you have rendered out, for instance, a square room,
+then this will fit the room perfectly.
+Like, this would have to be put, like, right against the wall and against the ceiling,
+and then you have a more correct reflection.
+So, I should use this cubic bounding box to pretty much approximate, you know,
+it's maybe a little bit difficult, because here I have a skybox with a big room,
+so I kind of have to fake it a bit.
+But you basically use the bounds of your space of what the environment is supposed to be,
+not to try to, like, put your object into this cube,
+which is almost what is happening here by default.
+All right, so...
+Kind of.
+Like, you would have to put your object into the cube if you don't want clipping issues.
+Like, if you go with a camera against the ceiling, for instance, it would just extend it.
+And also, if you're wondering what the third gizmo is,
+because, like, the two gizmos there are pretty much the information that you need for the bounding box,
+and the third gizmo is the center of the projection.
+So, this would correspond to, for instance, the camera height in your 3D application
+that you use to create this environment texture.
+I see.
+So, okay.
+Well, let's set it up correctly, because this vase is looking a bit sad now.
+So, initially, I guess I would start with the center.
+So, you can see that I'm already having some different effect onto the vase,
+and we're already getting some sort of reflection.
+Whoops.
+Spoilers.
+Okay.
+So, then, when I adjust the handle that controls the height of the room,
+I can also see this kind of distortion.
+Yeah, you're seeing kind of like a clipping issue as well.
+Like, in this phase, you should usually, if you have a room or something,
+get the camera inside the cube.
+Because if you are at the border of this one, then it will just clip upwards, pretty much.
+But, yeah.
+Yeah, so, now it's already starting to look quite good.
+And what's your advice about keeping the shape of the room?
+For example, if my room, let's say, is cubic, it's probably not a good idea for me to keep this not cubic here,
+because it's kind of like rectangular.
+Like, is it good practice?
+Yeah, I mean, you should always be used to line up reflection.
+So, if you have a non-square room, and you have, for instance, like a window in the corner of the room,
+and you want to line it up perfectly in the floor reflection, for instance,
+then you should try and tweak this to a point where you think that it looks kind of physically plausible, I would say.
+So, don't rely 100% on these handles, but mostly try to just match up.
+I mean, the handles are useful if you have, like, an exact 3D room,
+like, if you want to just render out a room and create, like, a little gallery thing, for instance.
+Then you can use the exact values, but it should still be, like, if it looks right, then it probably is.
+I'm even thinking, like, if I want to squeeze in highlights somewhere,
+I can just totally cheat and, like, move it into place,
+and maybe it will look even better than trying to just match the boundings.
+What you should always keep in mind, though, is that the object position also matters.
+So, for instance, if you have an animated ball or something rolling around
+in one of those reflection cubes, then the reflection will change.
+It will not do that if you don't have periodic correction on it, but it will if you have.
+Let's try this, actually.
+Yeah, so you can see the reflection is moving along.
+Right, so you get, yeah, it's a much more believable effect.
+And if I, again, turn off this correction,
+yeah, the difference is quite drastic.
+And I think, to my brain, like, it does look better, like, when you use it.
+Yeah, I mean, it does have depth, and it doesn't have before.
+And also, if you're used to engines like Unity or Unreal,
+where you have, like, reflection cubes,
+this is pretty much exactly the same thing, like, from an implementation standpoint.
+Yeah, I guess, I don't want to skip ahead,
+but definitely when you're dealing with things like
+already walkable spaces and galleries, right,
+like, it gets quite tricky to keep the reflections correct.
+If, for example, there's a hallway and a door that leads to another room, right,
+and this ball rolls from here to there.
+But I think there's still, like, cool tricks you can do
+and maybe even fade those things.
+I don't know.
+There's definitely no limits to the creative ways you can solve that issue.
+But I would definitely, like, I definitely think about it.
+Now that I have this effect in the toolbox,
+like, you just want to keep everything looking awesome all the time.
+So, like, when you traverse into different rooms
+or you're making a game or something like that,
+you might hit this kind of conundrum.
+But I really want to try it,
+and I hope someone else tries it,
+like, to just show what you can do with multiple reflections like this
+or multiple environments, how to, like, fade them
+or maybe cheat in some way.
+And also something that you see in this example,
+like, very well in this example,
+is, like, one of the smaller tweaks
+that you probably won't, like, change for an object,
+which is the multi-scattering.
+So the approximation of rough surfaces got a lot better
+with this update as well.
+So the color of the vase is also a lot more accurate.
+Yeah, definitely.
+I remember opening some older patches,
+and there definitely has been a much, much, much improved color treatment
+to these materials.
+And I guess we can jump right into that, actually,
+because you can do way more with the colors now.
+You can get into tone mapping,
+which is now we're moving on to the PBR material.
+It's a section inside the parameters
+that allows you to get into a couple of different modes.
+And there's also an exposure control.
+And can you tell me, like, what's the usual workflow for you?
+Like, how do you decide, like, what's best to use?
+Yeah, right.
+So the tone mapping itself is just pretty much, like,
+if you have the result of the old PBR material,
+it was pretty much only, like, the result of a calculation
+and not really color values.
+And what the tone mapping does is it remaps it to a range
+that is actually, like, more pleasing to the eye,
+for instance, like, approximating a photographic sensor
+or using a different kind of approximation.
+What this means in practice is that you can use it to, like,
+get rid of the weird tonal range that you have.
+Like, for instance, if you just put it on sRGB,
+you see you clip very fast.
+Like, you have a lot of clipping going on in the highlights.
+And this is usually something that you do not want.
+So you would usually use, like, another one of those tone mapping operators.
+Those are, by the way, from Babylon.js.
+If you people used it, then it's the same thing, pretty much.
+Nice.
+And then you would go in and get the dynamic range back
+by, for instance, doing something like contrast
+or saturation in post to get the effect that you like.
+Yeah, so this is, I'm not, like, a total colorist guru or anything,
+but playing around with DaVinci and F-Log
+and all that Fujifilm stuff definitely reminds me a little bit of this.
+I'm like, wait, this is, like, subdued colors.
+Should I be doing some color correction in post now, like, on these materials?
+And I guess that's the idea, right?
+Yeah, the idea is to have, like, a more cleaned-up pipeline
+where you actually have something that you can use as a result
+and then use, like, a lookup table
+or other, like, image-compose operators to get the look that you like.
+Yeah, I feel like there's some movement behind the scenes
+at the skunk labs of cables
+with better treatment of colors and tone mapping
+and post-processing color correction stuff.
+But that's for another day.
+All right, so that's really nice.
+I love that you can adjust the settings a bit more now,
+like, in a more interesting way
+instead of going directly into post-processing stuff.
+You got some controls in the material now, so that's great.
+And now moving on,
+there's another thing we wanted to talk about,
+which is this use roughness from normals, I think, is new, correct?
+Yeah, true.
+Yeah.
+This is trying to solve an issue
+where you have, like, high-density normals.
+So in cables right now,
+you have in the PVR shader two options
+to get rid of two dense normals, pretty much.
+Like, the first thing is geometric roughness,
+which is roughness based on geometric density.
+So if you have a very geometrically dense object,
+then you get more roughness, basically.
+But this might be something that you don't want.
+Like, if you, for instance, have a car or something
+and you get way too much roughness in there,
+then you can disable it there with a checkbox.
+And what the next one does,
+the roughness from normal map,
+is also a screen space approximation of roughness
+resulting from high-density normals.
+So what this helps with is specular aliasing, pretty much.
+Like, if you know, like, you have very dense normals,
+then it's very probable that you have, like,
+a lot of samples going in different directions for each pixel.
+And you get, like, these little brightness spots.
+It's a terrible model to show this.
+But if you zoom in,
+if you screenshot this video and zoom in
+and then cycles through,
+you might notice the difference.
+But yeah, I...
+Well, yeah, it's quite clear
+that it tries to solve this spotting issues.
+Yeah, I mean, this is also a very rough approximation.
+Like, you would usually want to do something
+like Tuxvic or something,
+or even lean mapping,
+but that's not really feasible for real time.
+So, yeah, this might also be something
+that would change in the future,
+but this, for now,
+is, like, a nice way to get rid of aliasing
+that you have due to normal maps.
+Yeah, I think...
+I remember we were working on, like,
+a chain mail,
+like a knight or something with chain mail.
+I definitely recommend anyone
+with super complex material
+or geometry,
+and they're using PBR materials
+to pay attention to these
+two new options
+to maybe solve some of those issues.
+Yeah, that's really cool.
+Then,
+quite an interesting addition
+is the usage of vertex colors
+in PBR material is also new.
+Yeah, so now you can actually
+use vertex color channels
+as inputs for the PBR material
+and choose what you want.
+For instance,
+if you have a high-density mesh
+from a CRD software, for instance,
+then you could use
+the vertex color channel
+for something like ambient occlusion
+and save a lot of texture memory
+by just dumping it all
+into the vertex colors.
+Yeah, that's quite interesting.
+I think I've...
+Whenever we talk about vertex colors,
+I always say the same thing,
+which is I think they're underused,
+so it's pretty awesome to see
+the fact that you can use
+RGB vertex colors
+to control the AO reflection
+and metalness of a model.
+And in practice, I guess,
+you could actually save
+quite a lot of memory
+and file size.
+And also something
+that is kind of ignored here
+is that you could also,
+in theory,
+have more than one
+vertex color channel,
+for instance,
+like one for the AO,
+one for the light map and stuff,
+but that's stuff
+that might be coming in the future.
+Yeah, true, true, true.
+I think it's on dev.cables.gl
+if anyone's interested.
+I think we now support multiple colors.
+But anyway,
+that will probably help evolve PBR material.
+I guess that's this like feature tennis
+that we talk about
+where it's like,
+hey, that would be cool,
+and then someone else,
+like Panda,
+adds it to another operator
+and then it allows us
+to play around
+or to develop operators
+that use that feature.
+Wow, what is this?
+Go away.
+So then height map.
+Well, let's leave this vase finally
+and move over to the height map.
+So I already did a tutorial about this,
+but it's a lot different
+when I can ask the creator
+of this stuff
+actually how it works.
+So to me,
+it's still quite magic.
+I see the word parallax
+and I'm amazed immediately.
+But tell me
+what is actually happening
+because I understand
+you take a luminosity map
+like black and white texture
+and you put it into your PBR material
+and then magically
+you can start to use
+the height map intensity
+like so.
+Yeah, right.
+So first of all,
+I'd like to take a huge shout out
+to Jasper Flick for his tutorials
+because it's pretty much
+like following along to that.
+And what it does
+it translates the camera view
+into the general space
+of the surface
+and then does some ray marching
+based on the document
+that you get
+with the displacement map.
+Nice.
+Yeah, that's really cool.
+It's actually
+it's not that expensive
+on the processor
+or the graphics card
+I think.
+Yeah, relatively.
+Like the most expensive part
+about this
+is pretty much
+transforming the camera
+into the tangent space.
+This is like one
+not the most
+but one of the most expensive ones
+which is also why
+there's an option
+to choose for
+faster height mapping
+because animation
+can be done
+per pixel
+and it can be done
+per vertex.
+So what I do by default
+is do it per pixel
+because this results
+in like
+a lot more accurate result
+with stuff like planes
+that are bigger
+than the camera.
+If you zoom in a little bit
+and change to faster height mapping
+you see the difference
+like this is right now
+calculating it per fragment
+or per pixel
+on screen space
+and if you enable
+faster height mapping
+you see the look changes.
+The look changes
+for this one, yes.
+But not for the background.
+And this is due to
+like the interpolation
+because you have
+like one huge triangle
+on the right side
+and the thing in the background
+is a lot more dense
+because you have a cylinder
+so the effect is
+a lot more subtle
+like the artifacts
+that you get by
+interpolating
+instead of calculating
+it per pixel.
+So this means
+as a practical point of view
+if you have a huge
+like floor for instance
+and you have like
+nice little height map details
+in there
+don't check faster height mapping
+and if you have
+more dense geometry
+where you know
+okay I have triangles
+that are in screen space
+and a lot smaller
+than you would usually have them
+in like this example
+then use faster height mapping.
+And the cool thing is
+you can do this at runtime
+which is great
+so you can actually
+I mean if you really
+get into it
+you could definitely
+like test
+how far
+the viewer is
+and then
+the closer
+they get to
+whatever has height map
+maybe it can flip on
+like
+at certain distances
+you can hardly notice
+the difference
+so actually
+you can do it
+quite seamlessly.
+it turns on
+and then it's like
+wow it's so amazing.
+So you can also use it
+to just load your mesh in
+and click it a bunch of times
+and see like
+okay does it make a difference
+no yes
+and it doesn't just use
+fast height mapping.
+I see.
+And I would
+okay getting more
+in depth
+with this stuff
+like the
+field of view
+seems to matter
+quite a bit as well.
+Yeah kind of
+but like this is
+this is to expect
+like most
+most implementations
+of the
+of height mapping
+actually
+have this kind of
+artifact.
+So you get like
+if you use
+very high intensity
+height maps
+then you get like
+a little bulging
+in the middle
+pretty much.
+So
+just keep that in mind
+if you like
+overdo it
+then you will get
+some artifacts.
+Well
+my favorite thing
+is to overdo it
+for sure
+because you can
+make some crazy
+crazy materials.
+I think that's
+always the best
+is when you
+come up with
+an operator
+that is
+both realistic
+and artistic
+at the same time
+like that's
+that's so fun
+to be able
+to be like
+okay
+these bricks
+are cool
+but what if
+I put in some
+plasma
+or
+you know
+diffused
+whatever
+water
+waves into there
+or something
+like that
+and see what
+happens.
+And also
+like nothing
+is limited
+like intentionally
+none of the
+parameters are
+like limited
+to positive
+values or
+something like
+that like
+you can go
+absolutely crazy
+if you want
+to.
+And
+when you
+create operators
+like do you
+do you
+keep that in
+mind that
+like okay
+this
+this height
+map intensity
+you know
+at extremes
+doesn't make
+any sense
+maybe
+but I'm
+going to
+leave it
+in anyway
+because you
+never know.
+I think one
+of the basic
+ideas behind
+PBR is to
+get like
+physically based
+rendering is
+to keep
+the parameters
+understandable
+and if you
+can in the
+range between
+zero and
+one.
+So this is
+also something
+that I
+tried to aim
+for with
+those parameters
+so you have
+like logical
+zero to one
+values that
+make sense
+I mean this
+kind of makes
+sense right
+if you put it
+to one then
+you get like
+a certain set
+depth.
+but I
+also find it
+very important
+to keep
+it open
+like if
+someone wants
+to do
+something with
+negative
+exposure and
+negative light
+sources or
+something like
+why not
+keep the
+artist from
+doing that
+time.
+Man how
+could we
+like that's
+that was
+the one
+of the
+coolest
+features that
+you added
+for me
+was the
+fact that
+we don't
+need the
+environment
+anymore.
+We can
+actually use
+cables lights.
+How could I
+forget?
+Yeah so
+this exists
+now.
+I don't know
+if this is the
+best patch to
+show it with
+this is also
+like a huge
+shout out to
+filament guys
+like the
+Google WebGL
+engine because
+this is pretty
+much like
+taken from
+them because
+they have a
+very permissive
+license so
+you get like
+nice very
+physically based
+light sources
+with the
+default phong
+operators so
+if you're used
+to working with
+directional light
+or point light
+or something in
+cables then you
+can also just
+continue doing
+that.
+The parameters
+are a little
+bit different
+like for
+instance the
+radius isn't
+used for
+like the
+distance but
+rather for the
+light source
+radius and things
+like that.
+So you might
+have to play
+around with it
+a little bit
+but yeah
+try to keep
+it as like
+bare bones as
+possible.
+I'm just
+going to place
+down a sphere
+and see what
+happens.
+Yeah it's a
+sphere.
+Okay so
+this is
+now not
+using any
+image based
+lighting so
+we just
+have a
+point light
+and
+that
+sphere is
+probably too
+big.
+Yeah it's
+probably covering
+everything.
+Oh there we
+go.
+It's back.
+Yeah so
+the way you've
+implemented
+how PBR
+material
+understands the
+lights
+is I
+guess
+closer to
+how it
+works in
+Blender or
+Unity or
+because I
+guess I
+would think
+okay if
+you're making
+the light
+giant and
+it has an
+intensity like
+it's going to
+be an intense
+giant light
+but in reality
+like your
+intensity
+gets spread
+out right
+over the
+size of the
+sphere so it
+becomes actually
+weaker as a
+light source to
+the object you're
+working with.
+Yeah this is
+all like one of
+the principles
+behind like
+physically based
+light sources
+where you try
+and mimic
+reality so if
+you have the
+same intensity
+over like a
+bigger sphere or
+something then
+we'll always have
+like a smaller
+intensity per
+surface area
+patch pretty
+much.
+So I think
+that's important
+to keep in
+mind when
+people will
+well I hope
+our listeners
+will try out
+this new
+workflow with
+cables lights
+and PBR
+material but
+remember to
+maybe make
+them a bit
+smaller or
+way more
+intense for
+the PBR
+material to
+work.
+It will
+require some
+tweaking
+definitely like
+if you have
+a scene that
+you used to.
+And also this
+is one of the
+examples where
+the parameter
+limitation isn't
+applied so you
+can use negative
+light sources if
+you like it.
+Yeah exactly
+that's what you
+said earlier that
+made me remember.
+You can do really
+crazy like almost
+light painting with
+different light
+sources and just
+stack them and
+get really wild
+effects.
+and it takes
+some time to
+experiment but I
+highly recommend
+it because it's
+pretty fun to
+mix super
+intense and
+positive and
+negative lights.
+Yeah you get
+interesting shapes
+but yeah that's
+for a special
+type of
+creative.
+all right so I
+love this feature
+so much because it
+really brings PBR
+material into
+like you know
+into traditional
+cables material
+world where you're
+like yeah I don't
+really have any
+image based things I
+want animated
+dynamic lights and
+in our
+June release
+room updates
+patch
+you get this
+effect
+quite in a
+cool way because
+it starts to act
+like a reflection
+of the light
+itself like as
+it animates around
+at the source
+I think it's
+really
+yeah please
+everyone try it
+out don't be
+scared it's super
+easy to set up
+it's just like
+everything else
+in cables just
+throw it and
+try out the
+new physically
+based
+materials with
+the dynamic
+shadows or
+dynamic lights
+that can have
+dynamic shadows
+which is cool
+okay well let's
+move on to
+something else
+now
+clear coat
+what is
+clear coat
+so a clear
+coat is a
+thick
+thick
+layer on top
+of the
+underlying
+material
+and this
+was something
+that I
+wanted to
+implement for
+the floor
+in the
+gallery room
+that I
+created
+because I
+noticed the
+reflection
+looked very
+dull with
+just using
+the wood
+itself
+so the
+clear coat
+was the
+next logical
+step
+so maybe
+something that
+is a little
+bit different
+to other
+implementations
+of clear coat
+this isn't
+very energy
+conserving so
+you don't really
+get the proper
+energy conservation
+for now
+but that
+might change
+in the future
+so just keep
+that in mind
+like if you
+use a clear coat
+with for instance
+like a low
+roughness then
+you will have
+some too much
+energy on the
+grazing angles
+but yeah
+it can be used
+for stuff like
+car paint or
+this way fake
+like a more
+complex object
+yeah this is
+very interesting
+I never
+actually looked
+at this
+without the
+clear coat
+and it's
+a completely
+different
+effect
+because you
+are affecting
+this kind
+of bubbling
+surface
+only
+yeah this is
+also something
+that the
+clear coat
+can be used
+very well
+for like if
+you have a
+very complex
+surface behind
+glass
+in a room
+where you have
+something like
+a fire extinguisher
+or something
+behind a glass
+window then you
+can use this
+to fake this
+effect pretty much
+oh that's a
+cool idea
+yeah yeah
+that's great
+and I also
+think if
+I remember
+using this in
+my tutorial
+about about
+the new
+features and
+this I think
+has a huge
+impact now
+with the
+parallax
+correction
+it looks
+quite different
+without it
+and it's
+pretty interesting
+to see
+parallax
+correction
+and clear
+coat
+like on
+the same
+material
+it looks
+super wild
+like it's
+indeed behind
+like a glass
+layer
+yeah so the
+cool thing
+about clear
+coat it
+has its own
+control for
+the roughness
+so it can be
+very shiny
+or dull
+so you could
+yeah indeed
+I want to try
+that actually
+that's a good
+idea like a
+jar of
+pickles or
+something
+or like
+yeah something
+some specimens
+in jars
+that would
+look cool
+okay well
+I'm gonna let
+the next patch
+guide me
+because I'm
+I'm kinda
+I think we're
+reaching most
+of the features
+now
+ah yes
+of course
+most important
+new feature
+that I had
+a lot of
+experience with
+so this
+is the
+template room
+that you'll
+find with
+included in
+the templates
+for cables
+now
+when you
+create a new
+patch
+from the
+drop down
+in the menu
+and you'll
+see that
+it has a
+blank
+look to it
+right like
+it's
+there's no
+textures
+it's a totally
+blank room
+but there is
+some sort of
+an effect
+of as if
+there's light
+coming from
+somewhere
+and there's
+some shadows
+here and
+there and
+these lamps
+are casting
+lights but
+this is all
+obviously fake
+but it's
+fake in a
+good way
+because
+C flap
+added
+light map
+support to
+PBR material
+and this is
+actually quite
+interesting
+and you'll
+find it all
+the way at
+the bottom
+of the
+PBR material
+parameters
+and
+tell me
+like
+how does
+it act
+with
+other
+texture maps
+and everything
+that I would
+plug into
+PBR material
+because I
+guess that's
+really like
+the goal
+of PBR
+material
+for you
+to have
+more control
+over
+this kind
+of light
+and shadow
+effect on
+your material
+because
+you know
+from first
+glance this
+just kind
+of looks
+like
+what we
+are used
+to seeing
+on the
+web
+which is
+completely
+baked
+out
+textures
+that are
+without
+any
+kind
+of
+dynamicity
+or
+dynamicism
+to the
+way they
+work
+and
+this
+isn't
+really
+the
+case
+with
+the
+way
+light
+maps
+are
+in
+this
+PBR
+material
+that you
+made
+all right
+so if
+you have
+the
+environment
+light
+without
+any
+light
+mapping
+and
+stuff
+like
+that
+you
+pretty much
+have
+the
+same
+situation
+like
+with
+a
+specular
+map
+where you
+have
+the
+same
+lookup
+just based
+on the
+normal
+just varying
+with the
+normal
+and typically
+you want
+more detail
+in there
+like for
+instance
+if you
+have
+a
+room
+you
+know
+that
+the
+diffuser
+lookup
+from
+the
+center
+of
+one
+of
+those
+walls
+would
+be
+very
+different
+to
+one
+of
+all
+the
+diffuser
+information
+in
+the
+environment
+light
+with
+the
+information
+that
+is
+baked
+into
+the
+map
+so
+if
+you
+bake
+for instance
+in
+blender
+a
+diffused
+channel
+without
+a
+color
+then
+you
+get
+the
+result
+that
+you
+can
+directly
+use
+in
+cables
+and
+the
+to
+me
+like
+because
+I'm
+quite
+new
+to
+this
+if
+you
+can't
+tell
+like
+the
+AO
+map
+is
+different
+from
+a
+light
+map
+because
+light
+map
+is
+also
+kind
+of
+going
+in
+the
+other
+direction
+of
+not
+just
+having
+shadows
+which
+I guess
+is
+what
+occlusion
+is
+for the
+way
+light
+loses
+power
+but
+here
+you
+also
+have
+the
+brightness
+of
+like
+a
+lamp
+next
+to
+a
+wall
+or
+something
+like
+that
+and
+like
+are
+these
+two
+texture
+maps
+close
+or
+are
+they
+you
+know
+why
+do
+we
+have
+both
+now
+like
+is
+there
+a
+reason
+to
+have
+light
+map
+an
+AO
+in
+one
+material
+ambient
+occlusion
+isn't
+really
+physically
+based
+right
+I mean
+ambient
+occlusion
+is
+just
+the
+way
+to
+approximate
+diffuse
+lighting
+around
+like
+an
+object
+so
+you
+get
+more
+more
+detailed
+lighting
+that
+you
+wouldn't
+have
+other
+ways
+because
+you
+only
+have
+a
+lookup
+right
+so
+if
+you
+bake
+diffuse
+lighting
+in
+blender
+then
+you
+by
+default
+do
+not
+have
+any
+ambient
+occlusion
+in
+there
+it's
+just
+the
+ray
+tracing
+information
+and
+if
+you
+want
+to
+have
+some
+more
+contrasty
+lighting
+on top
+of that
+you
+can
+use
+an
+ambient
+occlusion
+map
+on top
+of that
+but keep
+in mind
+that this
+is always
+fake
+right
+it doesn't
+consider
+okay
+you have
+a lamp
+there
+so
+there
+will
+be
+less
+shadows
+somewhere
+else
+it's
+just
+it's
+just
+looking
+I guess
+at
+angles
+of
+the
+room
+it depends
+on how
+it's
+implemented
+but
+yeah
+along
+those
+lines
+okay
+well
+the
+coolest
+thing
+I think
+is that
+you can
+have
+way more
+control
+of how
+your
+scene
+looks
+to
+keep
+it
+simple
+and
+there
+is
+this
+light
+map
+intensity
+control
+so
+I think
+you could
+even
+simulate
+lights
+being
+turned
+off
+or
+turned
+on
+or
+time
+of
+day
+changing
+in
+the
+same
+space
+I think
+that's
+yeah
+quite
+a
+huge
+leap
+I think
+for
+PBR
+material
+and
+what is
+the format
+that
+do you
+recommend
+to use
+for
+this
+texture
+map
+for
+this
+because
+I
+guess
+they
+need
+to
+be
+like
+a
+linear
+format
+or
+32
+bit
+float
+or
+something
+like
+that
+yes
+so
+this
+is
+actually
+probably
+using
+the
+XR
+textures
+that
+are
+like
+a
+new
+feature
+in
+the
+second
+to
+last
+update
+I
+think
+so
+you
+can
+just
+use
+XRs
+natively
+in
+cables
+if you
+want
+to
+but
+always
+keep
+in
+mind
+that
+those
+can
+be
+quite
+big
+like
+if
+you
+have
+a
+large
+XR
+file
+then
+it
+can
+be
+a
+lot
+bigger
+than
+you
+want
+to
+and
+then
+you
+always
+have
+the
+option
+in
+cables
+to
+also
+use
+RGB
+encoding
+to
+maybe
+save
+some
+space
+right
+and
+this
+toggle
+here
+is
+for
+if
+you're
+using
+RGB
+encoded
+textures
+right
+or
+I
+think
+here
+I
+am
+basically
+just
+using
+RGB
+to
+float
+32
+to
+then
+have
+a
+really
+tiny
+file
+and
+then
+turn
+it
+into
+a
+cables
+image
+compose
+that
+I
+can
+play
+around
+with
+quite
+nice
+to
+get
+rid
+of
+some
+artifacts
+that
+RGB
+textures
+have
+you
+can
+use
+this
+setup
+to
+get
+rid
+of
+banding
+or
+boxing
+that
+you
+may
+be
+getting
+if
+you
+use
+the
+RGB
+option
+yeah
+this
+operator
+is
+quite
+cool
+RGB
+to
+float
+32
+so
+you
+can
+have
+really
+tiny
+RGB
+and
+then
+it's
+512
+pixels
+yeah
+maybe
+also
+on
+this
+note
+these
+light
+maps
+are
+always
+using
+the
+second
+UV
+channel
+so
+the
+object
+that
+is
+being
+used
+should
+have
+two
+UV
+channels
+even
+if
+they're
+the
+same
+right
+that's
+another
+thing
+not
+only
+are
+we
+getting
+into
+multiple
+vertex
+color
+channels
+that we
+can use
+for
+different
+things
+and
+in
+the
+future
+probably
+at
+the
+same
+time
+but
+we
+also
+have
+multiple
+UVs
+that
+you
+can
+you
+know
+allows
+you
+to
+have
+more
+flexibility
+in
+the way
+you
+texture
+your
+models
+where
+you
+might
+require
+way
+higher
+resolution
+and
+somewhere
+else
+maybe
+lower
+resolution
+but
+for
+the
+light
+map
+you
+might
+want
+to
+keep
+it
+completely
+even
+or
+have
+a
+completely
+different
+approach
+there
+so
+for
+example
+let's
+say
+here
+where
+the
+light
+falls
+in
+through
+this
+hole
+here
+I
+definitely
+need
+more
+information
+for
+the
+light
+map
+so
+it's
+not
+splotchy
+and
+ugly
+looking
+but
+maybe
+for
+texture
+wise
+I
+don't
+really
+need
+this
+area
+because
+there's
+not
+going
+to
+be
+any
+wallpaper
+here
+or
+there's
+nothing
+unique
+happening
+I
+just
+want
+white
+or
+something
+like
+that
+so
+multiple
+UVs
+small
+tip
+on
+this
+note
+if
+you
+use
+blender
+to
+create
+your
+models
+keep
+in
+mind
+that
+the
+GLTF
+exporter
+from
+blender
+will
+always
+use
+the
+tangent
+space
+from
+the
+selected
+UV
+channel
+when
+exporting
+so
+if
+you
+have
+a
+mesh
+that
+you
+want
+to
+light
+map
+and
+also
+use
+height
+mapping
+or
+normal
+mapping
+on
+make
+sure
+to
+select
+the
+first
+UV
+channel
+or
+whatever
+UV
+channel
+you
+want
+to
+use
+for
+the
+normal
+mapping
+true
+that
+I
+don't
+know
+if
+we
+should
+probably
+make
+an
+issue
+about
+that
+for
+the
+GLTF
+exporter
+because
+we're
+huge
+fans
+of
+the
+GLTF
+exporter
+if
+anyone
+is
+listening
+from
+that
+team
+huge
+thank
+you
+but
+yeah
+that would
+be a
+nice
+thing
+to
+catch
+and
+avoid
+in
+the
+future
+because
+it's
+kind
+of
+strange
+that
+it
+matters
+which
+UV
+you
+select
+when
+you're
+working
+with
+multiples
+because
+PBR
+material
+highly
+shines
+when
+your
+GLTF
+scenes
+have
+proper
+tangents
+exported
+in
+blender
+which
+is
+by
+default
+off
+in
+the
+GLTF
+exporter
+yeah
+like
+there's
+a lot
+of
+small
+issues
+that
+you
+can
+fall
+into
+when
+using
+the
+PBR
+material
+so
+also
+feel
+free
+to
+ask
+questions
+on
+discord
+yeah
+come
+by
+talk
+about
+what's
+what's
+in
+the
+works
+for
+the
+future
+of
+PBR
+material
+show
+us
+what
+you're
+doing
+with
+all
+these
+sweet
+features
+how long
+have we
+been
+talking
+for
+45
+minutes
+hopefully
+it was
+not too
+rambly
+but I
+really
+enjoyed
+it
+and
+yeah
+I hope
+we do
+more
+of
+this
+and
+again
+huge
+thanks
+it's
+an
+incredible
+operator
+and
+I
+love
+what
+you're
+doing
+with
+pander
+on
+this
+stuff
+yeah
+and also
+huge
+thanks
+to
+filament
+bubble
+njs
+and
+just
+for
+the
+permissive
+code
+licenses
+that
+make
+this
+possible
+yeah
+huge
+shouts
+maybe
+we'll
+tag
+them
+and
+ask
+them
+to
+come
+watch
+our
+video
+thanks
+a lot
+guys
+see
+you
+on
+discord
+see
+you
+at
+the
+meetups
+make
+an
+account
+make
+some
+patches
+and
+thanks
+for
+joining
+me
+Alex
+yeah
+no
+problem
+talk
+soon
+bye
+bye

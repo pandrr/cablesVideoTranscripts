@@ -1,0 +1,255 @@
+https://www.youtube.com/watch?v=Gr3iVMUs_hA
+Hi there and welcome to another video of Copycat with Cables. My name is Mark, my handle on the
+forums is Andrew and today I'll be showing you how we're going to recreate this really cool
+generative art piece from Tyler Hobbs. Tyler Hobbs is one of my favourite artists that I've
+discovered lately and I came upon this really impressive piece from him called Untitled
+Cityscape and I thought it'd be really good to try and recreate something similar to this
+inside of cables. So without further ado let's get started. I'm going to make the main loop up.
+This could go a bit quick today because there's a lot to do in cover and now I'm going to grab the
+orthogonal up that's because I don't want any perspective and now I'm going to grab the clear
+colour up because I want to set the background. So I'm going to set these values to 1, 0.91 and 0.77
+0.77. Okay so now that's the background there. I'm now going to grab a sequence up and from here
+I'm then going to make a basic material and what I want to do is I want to draw a lot of rectangles
+from left to right and change their height to get a similar look. Now for this we're going to use the
+mesh instance up. So I'm going to go to the basic material pull it out and grab a trigger once up.
+I don't want to grab the rectangle mesh and I'm going to get that geometry output here and plug it in there.
+So I'm now going to put the width on 0.02 and the height on let's just do 1 for now. So now I want to go from
+left to right with a lot of rectangles. So the new version of our array up here replaces the old array
+up and the continuous number array up. So on this mode number all the contents of the array become this.
+If I put it on that 1, 2, 3, 4 mode then we get the same behavior as the continuous number array up which is the one I want right now.
+So I'm going to grab value up and this is going to determine our array length. Let's put this on 800 for now.
+Lower, let's put it on 50. So we've also got a slightly new and improved op, the array math op. The old one used to do a math operation on two arrays.
+We've renamed it now. So array math does a mathematical function on one single array and array math array performs on two different arrays.
+So we want this one. So I'm going to get the array length and we're going to divide all the contents of the array by its length and this gives us, sorry, let's pick divide.
+and now we're going to get normalized coordinates between zero and one.
+Okay, let's now grab an array pack free op for the XYZ components.
+I'm going to put that here, I'm going to put that here.
+Now let's go here, grab a trigger extender because I just want to keep my patch a little bit tidy.
+I'm going to grab this and I'm going to plug that in there, move this over here, plug this into the positions array, and voila, we get this.
+So because the value is from zero to one, it's going from left to right, bottom to top and to the back.
+To the back, we're not going to see because orthogonal is fixing that.
+So I want everything to go from left to right.
+So we look at the X component and we just grab the array math op.
+We first of all know that our values are between zero and one.
+So we subtract 0.5.
+So we go here, subtract, and now this is the center.
+We grab another array math op.
+And we're going to do multiply.
+And then by increasing this number here, as you can see, we go from left to right.
+I put it on four.
+Okay.
+So now I want to get something similar to this here.
+So I'm going to use, first of all, array sin.
+So I'm going to go here and I'm going to grab the array sin op.
+And now let's put the numbers on this is what I came up with 3.89, 15.24.
+So there we get like this nice sign.
+And now I'm going to crank the amplitude to 6.7, which is really high.
+Now I'm going to go here and I'm going to grab the array floor op and that's going to make them into whole numbers.
+So I'm going to copy these two, put them over here, I'm going to get the array output and plug it in there.
+And this is now going to get different values.
+I'm going to put the phase on 4.18, frequency on 20, 5.78, and the amplitude on 3.09.
+So now I want to multiply these two arrays together.
+So I go here and I grab the array math array op and I plug in both of these.
+And now I'm going to put this on multiply.
+And now I'm just going to pull this down.
+I'm going to grab single array math op and I'm going to multiply this all by a really small number.
+So I'm going to go here and put it on multiply and I'm going to just turn this up to say 0.06.
+Okay, as you can see, we're getting something a little bit similar to this now.
+Okay, so the last thing I want to do is move it down.
+But first, let's put this rectangle height, say on 4.
+And you get this, and now I'm going to go here and I'm going to say array math.
+Let's just pull this down, get a little bit more space.
+I'm going to subtract because I just want to move everything down.
+I'm going to say 1.5.
+Okay, so this is looking a little bit similar now.
+So there's two points I want to address here.
+In the original picture, it's very dense and very full with a lot of fine granular detail.
+So first of all, let's go to basic material and let's get the color correct.
+So I'm going to put it on 0.09, 0.133, and 0.266.
+And now what I'm going to do is I'm going to put the array length on, say, 1,000, and we get this.
+So if I now go to basic material and turn the opacity down, we get that.
+Now let's put the array length on, say, 3,000, and now they're kind of like overlapping.
+So one moment, and great.
+So the problem we've got is now they're all exactly in the same position, so we need to
+offset them with a random height.
+So I'm going to go here, and I'm going to grab the random array up, and I'm going to put
+the values on 0.2 and, say, 2.
+And now what I need to do is I need to get this array and put it together with these ones
+here.
+So I'm going to grab the array math array, and I'm going to get the output from this,
+plug it in there, and then I'm going to subtract.
+And as you can see, we're now getting something a lot similar to this there.
+So if we now look at the basic material and we change the opacity, as you can see, what's
+happening is we've got a lot of rectangles which are kind of overlapping with their width,
+which gives this really nice pleasant look.
+So let's just put this on there.
+So the amount of points there makes a big difference.
+So this is 100, this is 1,000, 2,000, 3,000.
+As you can see, the more that we overlap, the darker that it becomes.
+Okay.
+So this is kind of nice.
+I really enjoy it.
+I think we need to offset stuff on the X axis as well.
+So let's just zoom out, get a little bit of space.
+It's getting kind of busy around here.
+Let's just color code some of this.
+So this is for the Y component.
+I'm going to make this green, and for X, I'm just going to make it blue.
+So let's just grab all this, move it over there, tidy this up a little bit, put this there.
+Great.
+So I just want to offset everything by a random number on the X axis.
+So I go here and I grab a random array, and I'm going to put these values on a pretty high
+number 0 to 10, and then what I'm going to do is I'm going to grab the array, math array,
+and I'm going to add this to that.
+And as you can see, this goes crazy because everything's just flowing off the screen.
+So this was the little technique that I used, I liked, which kind of gave me the look I want.
+So I'm just going to modulo this stuff, and I'm just going to pull this down.
+As you can see, we get a lot of different looks.
+You could do this with the min/maximum values from a random array.
+This was just a thing that I found that I really liked for getting these different looks
+to come out of it.
+So I'm going to put it on, say, 0.07.
+Okay.
+So I'm enjoying this.
+This is looking a lot more like this now.
+So we've got this basic look going with the buildings.
+It's not exactly the same, but I was happy with this because it's inspired by the piece
+of Tyler Hobbs.
+So now we need to get these points on the screen.
+If we look here, we've got these really nice points.
+They're round.
+They've got multiple colors.
+So let's get started with that.
+So what I'm going to do now is I'm going to grab this, and I'm going to grab the point
+material up, and then I'm going to grab the point cloud from array up.
+Okay.
+But I want to do some different stuff with this because otherwise all the points are just going
+to appear once in the middle of each rectangle, which is not exactly what I want.
+So let's grab an array pack 3 up, and let's grab the trigger from here.
+Great.
+So this is the X array.
+We plug it into X, and this is the Y array.
+We plug it into there, and Z just comes from this here.
+I'm going to plug that in there.
+And now I'm going to plug this into point cloud from array.
+And there's something I want to point out here because this kind of tripped me up last
+time.
+With the sequence up here, if we press F for flow mode, we're drawing the points first,
+and then we're drawing the rectangle second.
+Why is this?
+Well, they're both kind of like on the same position in space.
+So if I would do this and put it here, as you can see, the points are gone.
+So grab this now and pull it back.
+We get this.
+So now what we need to do is we need to do a little bit of sculpting with the array to
+get what we want, basically.
+So what I'm going to do now is I'm going to pull this down and just keep track of this.
+This is the output from the Y component.
+So I'm going to go here, I'm going to grab an array absolute, OK, that's pulling this stuff
+up here.
+And now I'm going to add an array smooth step, OK?
+And now I'm going to put in these values, minus 0.11, and let's put it on, say, 2.67.
+OK, so I hope you can see where this is going.
+So now I'm just going to make a little bit of screen space, because it's getting a little
+bit busy.
+I know it's full, but this is the generative art stuff, and I really enjoyed getting your
+hands dirty.
+So we grab the array math up, I'm going to put it on multiply, and then we're going to
+multiply it by a negative number, as you can see here.
+So we're going to go to, say, minus 2.68, and now it's all flown off the screen.
+So now we're going to grab another array math up, and we're going to do subtract, and as you
+can see, we're now going to move this up.
+OK, this is looking a lot more like what I want.
+So PointMaterial has all these random sizes, so I'm going to turn off random size and put
+it to 0, and I'm going to put the size on 3.
+Great, so now we need to get the color to match up.
+So let's just go here, and let's just kind of put it on white.
+And what's happening now is, we're getting this crazy overlap where some of the circles
+are over each other.
+They're in front of a rectangle, they're a little bit behind, and that gives this really
+nice kind of like blending shape here.
+So you can go in here, and you can play around with this stuff, and as you can see, you can
+get wildly different looks out of that.
+So let's put this back.
+So this is like pretty close to this here, but this like has this really nice, soft, warm
+glow to it that I really like.
+So what we're going to do now is we're going to do a little bit of post-processing.
+So I'm going to go up here, and now I'm going to add a sequence up again.
+And now I'm going to add a render to texture up.
+So we want to turn everything down to a texture.
+So let's just move this up here, just want to get a little bit more space.
+So if I click this, I get a preview.
+So I need to turn MSAA on to get rid of any like jaggies, and just to get the higher quality.
+And I'm going to go over here now, and I'm going to grab a full screen rectangle.
+I just want to show you the default, so we put that in there, and then we're back to what
+we had before.
+So, great.
+Let's just move this up here.
+So I want to make a kind of bloom, basically.
+So we covered this in earlier tutorials, and we just get this and move that over here.
+So it's a little bit tidier.
+Okay, so I'm going to go here, and I'm going to grab a Image Compose up, and I'm going to set
+up a kind of bloom channel here.
+So now I'm going to grab a draw image up.
+And underneath this, I'm now going to add a blur.
+And now what I'm going to do is, we're going to make another Image Compose channel.
+So this is going to be like our blur.
+I'll show you that in a moment.
+Let's just do a quick preview.
+So if I click this, and turn it down to say 2.
+Ah, sorry.
+So we need to get this.
+Plug it into Image.
+As you can see, this is our blurry image right there.
+So this is going to be our basis for what we're going to do.
+So I'm going to put it on 2.
+And a quick thing, I almost forgot, we don't need to use the viewport size for the blur.
+It's very expensive.
+So I'm going to turn it off, and I'm going to put it on 256 by 256.
+It's really small, but it's more than enough for performance.
+So I'm going to go here, and what I need to do now is, I need to get the original image
+from here, and I need to compose it, make it fit together with the bloom that we've got
+here.
+So I'm going to grab the draw image up, I'm going to do it again, and let's just disconnect
+this.
+Reconnect this.
+So, slow down for a moment, we have the original image coming in here, and then we blur
+it.
+So I'm going to get the original image, I'm going to plug it in now, and then I'm going
+to get the blurred image, and I'm going to plug it in here.
+And now what I need to do is, I need to put this on screen mode, and as you can see, we've
+already got this beautiful warm glow, and we can turn this down with the amount, I'll turn
+it up, I liked it around 0.69, let's just reference, and we're getting this glowy look right now.
+So this is looking really cool.
+So the thing is, it's taken a lot of contrast out of the dark blue parts there.
+So I'm going to go here, and I'm going to add a luma key up, and this is going to remove,
+look, can you see this?
+So I can kind of keep that bloom, but I can get that darker intensity back from the image.
+So I'm going to put this around to 0.5.
+So we're almost there, with this copycat.
+So I'm pretty happy with how it's turned out.
+The last thing I notice that we're missing is we've got these kind of stripes, these vertical stripes here.
+So I'm going to go here, and I'm going to grab the stripes op, and these are the settings that I came up with.
+So I'm going to put the number on, say 170, and I'm going to put the width on 0.41, I think it was, yep.
+And then I'm going to rotate it, so I'm going to put it on 0.25 to make it vertical, and then the color I'm going to put on 0.25, 0.19, and 0.14.
+I just want it to be pretty dark.
+So now I'm going to put this on exclusion.
+As you can see, we get these really heavy lines, but I just want it to be subtle.
+So I'm just going to pull this down, and I'm just going to crank it up more than I'd normally like.
+But as you can see, we're now getting there.
+So let's make the screen a little bit bigger and see what we've got.
+So this is quite similar to this.
+It's not exactly the same.
+That's not the idea with copycat.
+We're just trying to make things that are inspired.
+So look at that.
+So I'm really happy with how this came out.
+I know it's a lot, and this piece took me a long time to figure out because it's generative art.
+So you're just going to tweak a lot of these numbers until you've got something which you like and kind of like fits,
+and you go like, yeah, I'm happy with this.
+So that was this episode of Copycat with Cables.
+I hope this video has been fun, educational, and informative.
+If you've got any questions or comments, please feel free to leave them under the video below or to post them in the forums.
+And once again, big shout out to Tyler Hobbs.
+Make great artwork, man, and it was really inspiring to try and recreate this inside of Cables.
+Okay, everybody. Have a good one. Bye.

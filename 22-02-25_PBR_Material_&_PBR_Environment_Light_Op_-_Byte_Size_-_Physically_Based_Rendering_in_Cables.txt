@@ -1,0 +1,173 @@
+https://www.youtube.com/watch?v=uwoj7R52yU8
+hello this is Alex from cables.gl I want to talk to you about physically based
+rendering inside cables yeah so now we finally have this awesome new material
+big thanks to a majestic C flap flap who created this material with our team and
+now we can use image based physically accurate lighting with textures in our
+projects and that doesn't mean we are really moving away from the usual
+workflow that we're used to with for example being able to animate different
+textures inside a material or you know even creating our own or applying some
+effects like color areas or doing animations with our GLTF scenes we're
+working really hard to kind of integrate it completely into our cables and
+kind of workflows that we're all used to but get this really cool effect of kind of
+very realistic looking materials that use textures to
+kind of shape the way the light that they take from a photo based lighting texture so
+for example like an HDRI or an EXR so it takes kind of real-life
+properties of a material and then uses textures to make something visually very
+pleasing on your screen so right here I just kind of set up some models from a
+a really cool website website I'm gonna show you in a sec and I tried to create a
+completely procedural floor here and it looks pretty good then we'll look at it later and
+then I just wanted to show that you can apply shadows as well onto these materials and it looks pretty sweet you can get a kind of approximation or some sort of nice tricks going to make your
+tricks going to make your scene seem a bit more lifelike and what else here oh yeah and
+here I just wanted to show that yeah you can kind of do animated things with
+models so let's say we just want to get started from scratch I highly recommend
+checking out a website called polyhaven.com and here it's a great collection of HDRIs
+textures and models that you can use to help learn this new way of putting together a material that I'll show you in a sec so
+definitely check this website out browse around grab some of these files and
+let's just jump right into it so what do we need we need a main loop I'm gonna press that
+push that into my editor with shift enter and keep my search open then I'm gonna look for PBR
+I'm gonna put down a PBR environment light operator and then a PBR material these two operators
+are what we need to get started and I did show you the website and some of these kind of pre-made projects
+earlier but I was using 3d models that I downloaded right or an artist created that's not necessary you can of course use
+the 3d models inside cables so like spheres and and cubes and things like that maybe some sort of
+even generative stuff that all works so let's see let's see we get errors right away why let's click on this environment
+operator and look at the parameter field let me just maybe make this a bit more visible for us
+so it's complaining no environment texture connected so that's very important these things use kind
+of a special format for their texture where they use all of the available channels so red green blue
+and then also alpha to pack as much information as they can into the texture and then use that to generate
+like a super nice juicy looking lighting image based lighting for our material which is down here and here
+you also see that there's no PBR pre-commute environment setup found in the branch and that's because we
+didn't fix this area so what can we do let's say we don't want to browse polyhaven at the moment no problem
+we'll open up the default library and cables and then just drop down maybe this studio
+and all we do is we plug it in and the errors go away so why they went away is because now we have
+this PBR environment light which you need to kind of have above all of your PBR materials because
+um that's basically your lighting system that you're setting up for your material if you put it above it
+doesn't really logically make sense right it doesn't know where to look for that environment so keep that
+in mind when you're when you're setting this up it needs to be above your PBR material and if you're gonna add
+more objects with also PBR materials then uh once you start adding them below uh your environment light
+they're all kind of inheriting the the uh environment that you've set up with this operator here um you
+can pretty much ignore all the settings here they're a little bit advanced uh even for me but they're mostly
+for optimizing things so if you see smaller numbers in these drop downs that usually means you're gonna
+have lower resolution textures that are going to be used for the PBR materials to approximate their
+physical qualities right on your 3d models so if you know that your maybe 3d model is gonna be really
+small in your project or uh it's not very important for you to have super super high fidelity then of
+course you can lower all these numbers but but the defaults are fine so we can leave that alone for now
+what else so let's see we're gonna make this preview bigger and continue on um i'm just gonna ignore
+the PBR material right now all i did was place it below my environment light so let's put down maybe
+a triangle sphere and see what happens damn so it's already looking pretty interesting it's got some uh
+uh like dual light setup there's some uh already rim light going on here and this is all coming from this
+uh studio small oh yeah look at that so you can barely see this texture and that's again because
+it's using rgba for the encoding of the data inside or the values inside the um file so uh in our preview
+we're seeing the alpha being applied to the texture so it's supposed to look like that don't worry um let's
+just quickly open back our library click on our texture and then i'll click here on the file and pick
+another hdr environment um inside this rgb file format so you see it starts to switch the way the material looks
+and if you've seen the matte cap material it's sort of kind of similar family of of uh
+a way to do lighting i would say like pbr is just like
+just a universe above uh matte caps in in terms of the creative freedom and also like the complexity of
+the stuff you can do with the different textures to control the material itself um well let's stay
+with this one for now so what can we do with this pbr material uh and maybe i'll make my sphere a bit
+smaller and i'll just put down a translate here or uh transform sorry so i'll scale it down
+and then look at the pbr material parameter panel so what do we have we have a color we have an alpha
+so that is you know the transparency of our um model that is getting the material then we have a roughness
+and then we have a metalness those are kind of interesting and then we have some parameters to kind
+of help out uh once you get into more advanced mapping of your normal maps onto the material to kind
+of um make the model look even better so sometimes you need to toggle these on sometimes off it's pretty
+much just visual if it looks better uh leave it on if it looks worse leave it off so then we have this alpha
+mode so the alpha mode has quite a few options here and right now we're uh in opaque mode and then when
+i turn on blend mode we see kind of smooth fades out fade out of the 3d model and if we do dither then
+we're using another way of kind of applying transparency to our object and in this case it kind of dithers
+away parts of the model so uh also basically um up to you and you know whatever you like um whatever looks
+best it's fine uh i think uh it's quite performative this material uh it looks really cool and it even
+works in webgl 1.0 which is kind of nuts but um you should just definitely make it look as good
+as you can and not really worry about the performance stuff it's all quite good uh well
+a note about the performance stuff since it's all texture based and of course at the moment i'm not
+using many textures other than this uh environment here um you're basically going to be dealing with
+maybe larger file sizes if you're going to be using like uh 4k maps or 2k maps for your textures so that's
+like uh you know large pixel size uh textures um you have to keep that in mind and with something like
+this rgbe maybe you don't even need a really large map you could convert a smaller uh hdri that you have
+um and by the way and that's uh let's let's let's say that's a transition so um hdri how do we get this pbr
+light um environment uh let's say we don't we're like kind of bored of of these uh default ones we want
+a new one so uh let's use polyhaven and just find one that we like so i'll grab maybe this really
+interesting circus arena um hdr and here we have two options hdr and exr and for this um operator i
+advise using hdr uh and then we will download a 1k uh file so if you have something like photoshop or
+something like that that can uh work with hdr files then you can definitely make it even smaller and uh you
+know you're gonna sacrifice some detail in your lighting but that's you know at least you get a
+smaller file so now we have this hdr so we can't use hdr directly inside uh webgl and cables so we will
+just drag this in and see what happens we're uploading this hdr straight out of polyhaven and bam we have
+an auto converted rgbe format uh texture that we can use with our pbr environment light so let's place
+that down and see what happens and you see instead of that uh hdr now we have this really funky encoded
+texture so let's plug this one in and now we have our circus arena um applied to our uh sphere here and
+let me put down an orbit um control and then we'll spin around the sphere a bit so
+the interesting thing is the pbr material right so what kind of things can we do we can apply a different
+color of course and then we can apply the roughness and make the ball super shiny and almost mirror like
+we can take away the metalness of the material so it turns more plastic or stone uh and
+then we also have all the way at the bottom of the parameter panel some controls for um the intensity
+of the color or the diffuse of the material and then also the influence of this environment light onto the
+material so if you're going for like a super photo realistic look you might want to adjust this
+but usually you don't have to if uh the artists have created the material textures very well
+then it's just super easy to use and that was kind of i i assume the whole point of pbr is as long as
+everything is kind of standardized and the way um shininess and and the the height of the normal maps and
+and direction and everything like that is uh standardized then you should be able to just throw in um
+objects with different materials into a single scene with a single environment light and then
+stuff just looks like it's in the same space together and you don't need to really fiddle around with this
+stuff but definitely you can which is a good tool to have so let's um think what else should i show you with
+this uh of course the the input um texture um ports here on the pbr material you'll see that the environment light has
+three outputs and then uh this pbr material has three inputs in this area and they're uh the image based
+lighting um lookup table the cube map um diffuser radiance and then cube map pre-filtered environment
+map and you see that we're not actually connecting these together and let me just copy paste this down
+here and lazily put it down below my triangle sphere and maybe put down um i don't know just uh just a normal
+sphere just to see what happens when i compare these triangle and regular spheres and then i'll put a transform
+um because i'm pretty sure one is inside the other and there he is so there is my other sphere
+it has the same material right so they look exactly the same but if i start adjusting the properties of
+this uh second sphere you see it's also kind of looking like it's in the same well obviously it's in
+the same circus arena as this other ball so uh that's kind of the the whole uh thing we thought of here that
+that connecting these um uh ports would be a little bit too much work if we're basically working with
+materials that are in the same space so you can save yourself a lot of time and just ignore this stuff
+and uh stack your materials under the pbr environment light and then they will inherit the um circus arenas
+that you apply to your environment light um and of course if you want to then maybe use a different
+material but maybe keep it the same stack then you can plug in custom um textures into into this port
+here and let's look at these other super important super interesting ports so we have an albedo which
+is the diffuse also uh it's called sometimes or it's basically the the texture material or the colors of the of the
+model that are mapped to a texture so for example if we look um over at the tv here this is our diffuse or albedo
+where uh you know the wood and um the metal have a certain color applied to the material but it's still
+the same material so we don't have to set different materials for uh our object it's all
+the same material with just uvs and textures telling where to put the albedo color and
+yeah so that's that's uh pretty standard and then we have this aorm texture and we'll talk about this
+in a sec because i gotta collect my thoughts and then this normal map is just your any normal gl format
+or webgl format normal map so um correct me in the comments but there is some differences in the way
+applications uh have the green channel mapped in their normal textures so sometimes you need to flip that
+stuff um but uh you shouldn't really have much problem if you are going to be using um at least these poly
+heaven models for um studying the pbr material or maybe even using these in your projects because when you
+download for example we'll click on this pocket watch when you download the gltf um scene
+uh you will get a folder with all the textures pre-prepared for you so they have the correct
+format normals and the correct format uh aorm uh rgb texture as well um but if you're going to use this
+website for uh doing stuff i recommend you also grab the blend uh file because there you will get the
+original blender uh scene that you can study some more and understand how uh they're doing some the uh
+uv mapping and things like that and then um export that as a glb uh from blender uh so then you have one
+file that you're uploading to cables and you don't have two files that um poly heaven provides with this
+gltf option because you get let me see if i have in downloads you get a um a binary um no it's not a
+binary i guess it's the other format the gltf uh format where uh it references this bin file and then
+the textures i guess are in another folder and um what we're going for with cables is that you have this
+single glb file that already has everything in it so you don't have to um upload separate files for stuff
+so here i have this glb that i got from the blender uh file for the tv here so um definitely uh download
+both of these if you're gonna try it out with blender and polyhaven workflow um approach i think you'll save
+yourself a lot of time and it's pretty cool because you get to study also how the blender file is set up
+and um maybe adjust some of the models or maybe like separate them and and uh animate them and stuff
+in cables uh definitely try that and and show it to me so let's go back to our experiment here um yeah so
+this is pretty much it was my biggest hurdle is this aorm texture and it's basically
+um three different maps in one so you have the aeo which is the ambient occlusion it kind of tells the
+um material where to put some shading somewhere or maybe there's some like cavities in your material and
+that should be darker than the rest of it then you have the reflection of the material so for example
+here this sphere is as high reflection right or uh the the roughness i'm sorry not the reflection so
+it's the roughness of the material um it's very high now so you get to see
+the environment reflected almost like a mirror inside this material and then you have the metalness which
+is this other property here which turns it basically into a silver covered metal and with this map which
+would look like for example let's pull this one out it it encodes all those properties into a single file um
+um because if you may may have used blender or something or another software before um you might be used to
+black and white masks to tell a shader how to map things out but this i think is a super nice approach where you just combine all those three things into one
+into one and you get this really uh cool looking texture that then controls our scene um material
+and how it looks on a model and uh what else well i think i'm just gonna publish these files and then
+you can kind of uh look it over leave a comment if you want me to go over how i put together the
+kind of the fake floor here or something like that but um definitely just experiment because those uh
+textures i mean you can just create them with image compose right and then you can animate them
+and do like really cool uh crazy maybe even non-photo realistic but sort of photo realistic stuff
+um yeah please test it out tell us what you think uh enjoy this is super fun to use thank you bye

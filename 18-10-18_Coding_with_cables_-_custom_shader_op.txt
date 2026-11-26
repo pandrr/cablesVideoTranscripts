@@ -1,0 +1,86 @@
+https://www.youtube.com/watch?v=Zfhn8xSM0SE
+Hi there and welcome to another video tutorial with cables.
+My name is Mark.
+My handle on the forums is Andro and today I'll be showing you how to use the custom shader op.
+Okay, let's get started.
+We're going to start off by making a main loop object.
+We're then going to connect this to a sequence.
+The sequence we're then going to connect to a basic material
+and the basic material we're then going to finally connect to a rectangle.
+We just want to make sure that we've got a little bit of a render context here
+so we can see what's going on.
+Now, if I click on the basic material op,
+you can see over here that I can change the red, the green, and the blue.
+Now, we're going to do this with a shader.
+So we first off make the custom shader op.
+The shader then needs to be turned into a texture.
+So we then go to the shader to texture op.
+Now, we get the output shader and plug it into the input shader over here.
+We now get the texture output and we plug it into the texture input over there.
+Now, you can see that the color of the rectangle here is gray.
+I'm going to show you why.
+First of all, we click on the custom shader and over here we can see that we can edit the fragment shader or the vertex shader.
+Let's click this.
+And now we see that the editor opens on the left-hand side of the screen.
+Now, over here we have void main, which is our main function inside of the shader.
+And we have a VEC4 call.
+For the people that don't know shaders, a VEC4 is just four floating point numbers.
+So here we have red, green, blue, alpha.
+So I want to just make this red.
+So let's make this one, turn the green to zero and the blue to zero.
+And we're going to click save.
+Nothing's happened.
+Okay, so now we include this with the render.
+There we go.
+We've got a red colored rectangle.
+Now, let's say that you would like to alter this red value from outside of the shader and not just by typing in code.
+So we do this with something called a uniform.
+So I'm going to make a uniform float and I'm going to call it U value.
+Now, if I click save, you might expect a port to appear here on the op.
+To make this clear, if a uniform value is not used anywhere in the code, the compiler strips it out and cables will not make a port input.
+So if I now get this and I copy and paste it and put it in the red component and click save, you can now see that a port has been created with U value.
+If I now click the custom shader up, we also have here a numerical field that we can change to alter the red.
+That's the basics on how to get a value from outside the shader into it with a uniform.
+Now, let's say that I want to get the width and the height of the viewport and apply them to my shader.
+So, I'm going to make a uniform float called uniform res x, uniform float u res y.
+Now, the traditional way of doing this is to say you have a vec 2 and it's called uv equals gl frag coordinate dot x y divided by vec 2 u res x u res y.
+Now, we're not going to see anything happen when I do this because, once again, uv is not being used anywhere, so no ports will be created.
+So, if I now get uv and I replace the red green with this and click save, we can now see that two ports have been created, u res x, u res y.
+So, for me, u res x is your uniform resolution width, uniform resolution height.
+If we now go to main loop, we see we have a width output and that's going to be plugged into u res x.
+We have a height output and that's going to be plugged into u res y.
+Now, we can see that we have the uv coordinates displayed here as a texture.
+Cables also has another way of showing you this.
+If we say in vec 2 text co-ord, this is the same as what we've just done here and far easier to do.
+So, now I'm going to say uv equals this and click save.
+As you can see, no difference.
+Okay, these are the basic uv coordinates.
+This is how we get a uniform in.
+So, now I could say, for example, uv times u value.
+Save.
+Now, if I click the custom shader, I can apply multiplier to the uv coordinates just to show you how these two things can be combined together.
+So, another thing we normally commonly want to do is to get a texture and apply that inside of the shader.
+So, now we're going to say uniform sampler 2d and I'm going to give it a name and I'm just going to call it text 1.
+Now, if we want to see this, I'm just going to say vec4 call equals texture text 1 uv.
+Now, when I click save, the screen goes black and we can see that we have here an input for a texture.
+So, I'm going to make the texture up and we can see that there's no texture applied right now.
+So, I click the texture up, go over here to file, click the file browser, go to the library, give it a moment to load.
+I'm going to load my favorite picture, the beach.
+And now we can see that the beach texture is being looked up inside of the shader.
+So, we can now also apply this to, say, a cube.
+I'm going to make the cube just 0.5 by 0.5 by 0.5 and to be able to observe this in 3D, I'm going to go over here.
+I'm going to click in between cables, I'm going to say, orbit controls, orbit controls allows me to now click in the viewport and drag, which allows us to see the 3D.
+Now, the last thing I want to show you is just how to do some very basic animation, nothing special, but it gets the idea across.
+So, I'm going to go over here and I'm going to make one more uniform and I'm going to say, uniform floats U time.
+And then, I'm going to go over here and I'm going to say, UV dot X minus equals sin UV dot Y.
+Plus, U time.
+Now, I click save one minute, spell an arrow down.
+Now, we get another port here called U time.
+I'm going to connect the timer to up.
+And now, we can see that the texture is being animated.
+These are all the basics that you need to know to be able to use the custom shader op inside of cables.
+I hope this video has been informative to you.
+If you have any questions about this, please feel free to leave something in the comments or to post something on the forums.
+Have fun and happy patching.
+Bye.
+Thank you.

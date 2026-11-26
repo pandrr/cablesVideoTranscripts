@@ -1,0 +1,1544 @@
+https://www.youtube.com/watch?v=TKcqSTMkJik
+Thank you.
+Thank you.
+Can you guys hear it okay?
+I'm just going to wait two or three minutes for anybody else to come and join.
+The people that already joined, the fans are coming.
+Good to see you.
+Good to see you.
+It refers to CablesGL live stream.
+So if you've got any questions that you'd like to ask before the start, just hit me up.
+Could be a bit louder.
+Could be a bit louder.
+Do you have your desktop following you loud enough?
+Ah, I could just move the microphone a little bit closer.
+Let's do this, turn it up a little bit.
+How is it now?
+How is it now?
+I'm going to turn it up a little bit.
+How is it now?
+I'm going to turn it up a little bit.
+I'm going to turn it up a little bit.
+I'm going to turn it up a little bit.
+I'm going to turn it up a little bit.
+If you've got any questions that you'd like to ask before the start, just hit me up.
+Could be a bit louder.
+Do you have your desktop following you loud enough?
+I could just move the microphone a little bit closer.
+Let's do this, turn it up a little bit.
+How is it now?
+I'm just going to check.
+Hey, hey, hey.
+Hey, hey, hey.
+Hey, hey, hey.
+Hey, hey, hey.
+Hey, hey, hey.
+How's it now?
+Can you guys hear it now?
+Can you guys hear it now?
+Ah, okay.
+Yeah, sorry guys.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on the air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+I'll be asking people on air.
+All right.
+I have no idea how I can see how many people are watching right now.
+So I'm just going to give it one more minute.
+And then I'm going to start with the first Cables GL live stream.
+So just a little bit in the meantime.
+We still need to figure out a little bit what it is that we want to do with the live stream.
+So tonight I'm just going to focus on making some pretty things basically.
+So you know what?
+I'm just going to start because people that are here on time.
+Yeah.
+They're here to watch what I'm going to do.
+And I don't want to keep you all waiting for too long.
+So I'll just give a little bit of explanation first.
+So I'm not going to make a washing machine tonight.
+Just to make that clear.
+I've been a little bit inspired by this kind of concept in the form of like a whirlpool or a vortex.
+And I thought it would be a really interesting challenge to try and figure out how to make something like this in cables.
+Now obviously I'm not going to go for any realism like water or things like that.
+Realism is kind of hard.
+But I want to just try and make something a little bit artistic that's been inspired by this.
+So Panda and Steam from Endev will be helping me tonight with moderating.
+Which basically means if I'm really focused on what I'm doing and I miss a question, they're going to throw that towards me.
+So this is the whole idea of the live stream, of course, is that if you're not following anything or you want to know anything, then please just ask.
+And I can hit the brakes and then go into a more elaborate explanation and maybe make a little mini patch or something to try and make something clear.
+So without further ado, let's get started.
+So let's make a new patch.
+Okay.
+So first of all, we're going to start with a main loop.
+So the first thing I'm going to do is I'm going to try to create a kind of like a basic image, which looks a little bit like a whirlpool.
+So for this, I'm going to grab the image compose.
+If I'm going too fast for anybody tonight, just please say so.
+And I'll slow down basically.
+So what I'm going to do is I think I'll grab the FPM noise up.
+Here we go.
+Okay, so here's the preview.
+If you want to see this in cables, click the image compose and everything connected to it will be there.
+I'm going to put this on a square actually.
+So I'm going to click off use viewport size.
+And I'm going to make this pretty big because I want it to be high quality for now.
+So I'm going to make it 1,024 by 1,024.
+So we have that here.
+So now we have like a really obvious effect.
+We have twill.
+And you can probably already see where I'm going with this.
+So if you look here, we have this twist amount.
+And I can turn this and make this kind of whirlpooly.
+So this isn't so difficult.
+So let's just leave this like this for now.
+Okay, so this is just like a basic template for what I want to work on now.
+So the technique I want to use tonight is vertex displacement.
+And what that means is I'm going to get a rectangle.
+I'm going to add a huge amount of vertices like columns and rows.
+And then the idea is I'm going to use this texture to displace those vertices.
+So let's go over here.
+And I'm going to grab a, let's grab a matcap material.
+And I'm going to grab a rectangle.
+And I'm going to grab a rectangle.
+Okay, so we have a rectangle here.
+If things aren't big enough like I'm too zoomed out or anything, please give feedback.
+I'm not sure how it is for everybody over there.
+So what I do now is I click on the rectangle.
+And let's say I'm going to put this on just 10 by 10.
+And I'll just show you what's going to happen now.
+So look, we have this little image here.
+And one minute.
+Let's get this.
+And we get the vertex.
+Displacement map.
+Okay, there we go.
+Displace the vertices of a mesh with the pixel brightness.
+Okay, so I'm going to add that here.
+So here's my texture.
+I'm going to get that.
+And I'm going to plug that into this.
+Now, as you can see, it doesn't look very different right now.
+So let me just grab Orbit controls.
+So the Orbit controls allows me to click and drag with the mouse wheel and move things around.
+So, matte cap material normally has a texture.
+So I'm going to click here.
+The matte cap input port.
+I'm going to click and drag out.
+And I'm going to type in texture.
+I'm going to get that.
+I'm now going to go over here.
+And I'm going to load a matte cap material.
+Let's just get one of these for now.
+I'm not too sure.
+This can be changed later.
+This is just to get started.
+I want something a little bit brighter.
+Let's just go with this one for now.
+Okay.
+So basically, we're not seeing anything really because we don't have any light and shading.
+So we're going to kind of like fake this, I think.
+So if I look at this now, I can probably click and grab this and put it on diffuse.
+And there we go.
+And we can see there's some kind of displacement happening now.
+So the problem is we don't have enough vertices.
+So this doesn't look very good.
+So if we click the rectangle now and we go here and we put it on 150 by 150, all of a sudden we get more vertices.
+And basically what's happening is we displace a vertex based upon the pixel brightness.
+Now, of course, 1024 by 1024 pixels doesn't add up exactly to 100 by 100 vertices.
+So we're just going to have to fudge around with it a little bit.
+So I'm going to click here.
+I'm going to click like this.
+And let's make this bigger so it's easier to see.
+And change the viewport size.
+Okay.
+There we go.
+So if I'm looking at this now, it just doesn't seem to be really correct.
+And I'm not too sure why.
+So this is the whole idea of the Twitch stream, I suppose.
+Ah, there we go.
+I'm going to make mistakes, which is kind of weird for me because I'm so used to making tutorials and getting it all perfect.
+So the option here was flipped.
+This just wasn't correct.
+It was just wrong with the vertex displacement.
+As you can see, if I click that now, now it kind of looks correct.
+And if I'm going to go to matcap material, we also have just one moment.
+I'm doing a lot right now.
+Okay.
+So yeah, this was a great one.
+Thanks Panda for pointing that one out.
+So basically, now we have screen space normals, as you can see.
+And now we're actually seeing the texture exactly displacing all the vertices.
+So if we turn this off, it's kind of smooth, and if we turn it like this, it's like that.
+So we could do this.
+If I'm going to turn this off, and I'm experimenting here tonight, so it might not all be absolutely amazing.
+What I'm going to do, it might go wrong.
+I'm going to blur this texture, and it also becomes kind of like that.
+But you know, let's put it back on this.
+This looks like pretty good.
+There we go.
+Okay.
+So as you can see, we've got this kind of 3D displacement now.
+And I'm really going to exaggerate it for a moment, so it's just kind of clear what's happening.
+So as you can see, pixel brightness is white, it goes up.
+If it's black, it goes down.
+Now the vertex displacement map has a couple of options in here, like ignore zero values, flip and invert.
+I'm not going to play around with them too much, because these are kind of simple for what I want to do.
+So I want to add this kind of whirlpool effect.
+So to do that, I've got to make it turn.
+Now there's two ways of doing this.
+I could transform the geometry.
+So I use a transform op, and I can now rotate it like this.
+That's one way of doing it.
+And I'm going to do that, and I'm also going to combine it with something else.
+So if I go here to the twirl, and I grab rotate texture.
+So this allows me to rotate a texture.
+Okay.
+Ah, hi, Matagerta.
+Yeah, thank you very much for the positive feedback.
+We like to put things out there for people to learn cables.
+So we're really glad to hear that you're enjoying it.
+Thank you very much.
+So let's go to rotate texture.
+So if we click this, we've got this rotate amount, and you might be a bit confused by what's happening there.
+So when you're working with a texture channel, you can always just click the image compose, and it will now keep this preview window here, even though you're going to tweak the parameters on the ops underneath.
+So we can see what's happening here, right?
+Hey, Muella.
+Thanks.
+Good to see you.
+Thanks for joining us.
+This is all going to get recorded, by the way.
+So if you've missed anything, you can just watch it on YouTube later.
+Okay, so as we can see, we've got these like seams here, right?
+We've got crop on right now.
+So if we turn this off, what happens is now we get these hard lines.
+So basically when we're using image compose, when the texture coordinate isn't covered, something has to be decided by the renderer.
+So we have a wrap mode.
+So here we have it on repeat.
+We could put it on clamp to edge, as you can see there.
+And then this kind of like gets the value of the pixel and just makes it carry on infinitely.
+Or we could do mirrored repeat, which is a little bit more what we want, basically.
+So now when I'm going to rotate it, it's much more doable than if I would have crop on and we'd have these like kind of hard lines.
+So I'm going to just disable crop.
+And what I want to do now is I want to make it just rotate.
+So to do that, we're just going to create a timer op.
+We just want a number that's going to constantly increase.
+And we're going to grab, pull to the middle of the op, let go and plug it in to rotate.
+And that's going pretty fast.
+So let's put it on minus 0.1 for now.
+0.05 because I just want to get the point across.
+So now we've got a kind of like rotating whirlpool already.
+So that's kind of cool.
+There's a lot more to be done to make it look nicer.
+But this is already, I think, a good way to start.
+So we're lacking a color in the background.
+We're lacking something more than black and white.
+And as you can see, I've got this blur here.
+And if I turn this off, look at what happens now.
+We get these kind of like little jagged lines there.
+Because, you know, like I said, getting a texture of 1024 by 1024,
+I'm putting that on 150 by 150 vertices.
+That's just not going to exactly match up.
+So just by putting a blur on one, as you can see,
+we already go a long way with kind of smoothing the output there.
+So that's a pretty neat trick.
+This is a little bit of an expensive operation
+because it's like a full screen blur.
+You know, you can start playing with things like this.
+So then we can put this on 512 by 512.
+And it still looks pretty good, basically.
+So let's just keep it on that for now.
+Because it's also important when you're making things with cables
+that you're trying to optimize things to work really quickly.
+Okay.
+Hey, everybody.
+Sorry I'm seeing the hellos a little bit late.
+I'm not picking that up when I'm looking over here.
+So Panda just told me I could replace my cap material new with basic material.
+I'm going to do that later, though.
+Because right now I'm just in this flow of just getting this to work.
+So, so far so good.
+So this is working pretty good.
+And if we'd want to add like a little bit more of a dynamic touch to it,
+you know, we could now grab another timer.
+And we could make the whole mesh rotate by plugging it into Rotate Z, basically.
+Oh, there we go.
+And, you know, later on we're going to position the camera so that we zoom in
+so that these edges aren't so clear and visible, basically.
+So, let's go here.
+Yeah, okay.
+Let's just show it goes with basic material for a moment.
+I shouldn't worry about getting everything perfect.
+So I'm just going to plug this in there.
+Nice part with cables is you can just click in between your operators,
+typing it up, and there you go.
+So I'm now going to plug this into Texture.
+Hmm.
+I'm not too sure what's happening there.
+Ah, Vertex Displacement Map.
+Flip.
+There we go.
+Actually, yeah, this is looking a lot, a lot tighter.
+Okay.
+I'm just going to disable this for now.
+And we're just going to keep it under Rotate Texture.
+Now I need it to turn.
+I think the other way.
+No.
+Okay.
+Alright.
+This is a lot brighter, a lot clearer.
+Okay, let's just roll with this for now.
+I'm just going to disconnect this and I'm going to move that over there.
+Okay.
+So, we've got this.
+So, right now I want to change the color of this, but the FPM noise is black and white.
+So, to do that, I'm going to go here and I'm just going to grab color.
+And this allows me to fill in the image using a color overlay.
+Okay.
+So, let's click this.
+And then this.
+There we go.
+Okay.
+So, now, what I did was, sorry, I was going a bit quick down.
+So, we're using blending modes here, right?
+So, this is like the, so we start at Image Compose.
+I'm going to press F for Flow Mode.
+So, Image Compose, first of all, it hits color.
+It gets that color.
+And then what I'm doing is I'm putting FPM on a Multiply mode.
+Because if it's just on Normal, then, you know, the values don't get multiplied together.
+So, I click this.
+And I'm going to just turn on Flow Mode for now.
+And I'm going to put this on a kind of like, yeah, just a light blue color.
+I'm not going to try and make it look too stylish right now.
+I just want to make sure things are visible on the stream as well.
+So, we can already start doing some things now.
+You know, we can make this sync down.
+We can make it go up.
+So, I'm just going to put this on, say, 0.25.
+So, now when I'm looking at this, I think, you know, it's a little bit too perfect.
+Let's just look at what's going on.
+Meta Getter.
+I can try and explain that later.
+But just please give me a reminder when I've kind of like wrapped up what I'm doing right now.
+With the render into a video.
+So, what I want to do now is I want to just make the picture a little bit brighter.
+So, I'm going to go over here.
+And I'm going to grab the Clear Color Up.
+Now, the Clear Color Up, this allows me to set the color of the background here.
+So, if I click the Clear Color Up and I click this color picker, as you can see, I can now change the color of the background.
+I just don't want it being black for now.
+I'm just going to make this light gray.
+Okay.
+Now, so far so good.
+This is looking pretty okay.
+It's still a little bit too perfect to my liking.
+So, what I'm going to do is actually, I'm going to add, I'm going to grab some noise.
+So, the encoder is going to die right now.
+So, I'm going to turn off Animated.
+And, as you can see, this creates noise.
+And because we're blurring it, that's what we get.
+So, this is noise when you apply it to vertex displacement.
+As you can see, very, very noisy.
+And by adding this blur, we get this.
+So, what I can do now is I can turn the amount down here.
+So, I'm just going to turn it all the way to zero.
+And I can turn this up a little touch.
+And what I want to do is now, I just want to, you can see we're starting to get a few imperfections there.
+This is like really perfect.
+And I want to do this.
+Ah, I see what I'm doing.
+I should actually add this before the rotate.
+There we go.
+So, there's a couple of motors.
+You can see because it's so normal, we're making everything lighter.
+Right?
+So, I'm just going to turn it up for a minute.
+I'm going to put this actually on Subtract with the blend mode.
+And I'm going to turn the amount down.
+I'm going to crank it up a little bit.
+Let's try add.
+Yeah, add.
+So, you know, I can get different flavors here.
+But I just like this.
+This is adding like a little bit of green to the image.
+It's adding some imperfections.
+And imperfections are good because digital things always tend to be really perfect.
+Okay.
+So, what next?
+Alright, this is looking okay so far.
+I'm just trying to think what I can do.
+You know what?
+Let's try and...
+I'm just thinking, you know, let's call this for a minute.
+Yeah, okay.
+I've got a feeling that the displacement map should be different than the colored map.
+So, what I'm going to do is I'm going to go over here.
+And I'm going to pull this down.
+I'm going to make a new image compose channel.
+Forgive me if I go a bit back and forth.
+It is a live stream.
+So, I'm also experimenting and figuring things out.
+So, now I'm going to grab a draw image.
+And for the people that are in the cables,
+we use the draw image to be able to add an image into a composition channel.
+So, if I now go here.
+And click this.
+And click image.
+As you can see, I now get this in there.
+So, again, I'm going to turn off use viewport size.
+And I'm going to put some 512 by 512.
+Now, just a little trick here.
+If I would want these two to match up, you know,
+it's a really nice part with cables.
+You can...
+I could just drag this out from the width.
+Type in number.
+And the number up now gets the name of the parameter that's attached to.
+So, I could now click and drag and put this over here with width.
+And go down.
+So, I'm going to do the same with height.
+Because when I change one,
+I don't want to have to think about changing the other.
+And I could do this with variables.
+If I'm going to tidy up the patch later to show some tricks.
+But I'm just going to do it like this for now.
+Okay.
+So far, so good.
+So, basically, you know, if I'm going to make this like really small right now,
+I just want to show you what's going to happen.
+And then it's a really low resolution image, right?
+So, we've got this really tiny image here.
+And now that we've got 64 by 64 pixels, that's less than the amount of columns and rows that we've got.
+That doesn't translate over very good.
+And, you know, what would happen if we put them the same?
+Then we get something like this.
+So, by having a bigger image, you know, we've got more resolution, which just translates to a better, smoother effect.
+Okay.
+So, now I want to work a little bit on the camera composition, right?
+So, sorry, I forgot.
+I was doing this over here.
+Hmm.
+Okay.
+One minute.
+I kind of forgot what I was going to do here.
+Yeah, I wanted to do the displacement differently.
+And now I know why.
+Because.
+Okay.
+So, I need to put this on normal.
+There we go.
+I've got this back.
+So, my vertex displacement map, I actually just want it to be black and white because that's what the op is designed to do.
+I just remembered.
+So, I'm going to unplug basic material.
+So, I've got a copy of this image now coming in here.
+So, now what I can do is I can just, I can color that basically.
+So, I'm going to add that here.
+And I'm going to put this on multiply.
+So, basically, I'm going to call this now my material.
+And this I'm going to call my displacement.
+Okay.
+Because, like I said, you know, vertex displacement works on black and white pixels.
+So, now I've got this colorized version here.
+And I'm going to add that to the basic material texture input.
+So, now I know that my displacement is doing what it needs to do, basically.
+All right.
+Cool.
+Now, it's just a little thing, me being a bit nitpicky.
+But, all right.
+So, I'm going to make this rectangle even a little bit bigger now.
+Okay.
+There we go.
+So, I'm going to shake the orbit controls loose by doing this.
+And I'm going to just get rid of that.
+And let's just put all this back to zero.
+Okay.
+So, I'm going to just show you a little finger that a lot of beginners struggle with.
+So, you've got your orbit controls.
+And you've got a nice view.
+And then you're going to save, control S.
+And then I'm going to do control R and you're going to reload.
+And if you watch what's going to happen, my camera is back here.
+It's not the way I had it before.
+So, a lot of beginners struggle with this.
+They just don't know this op.
+So, if I just go here, I'm going to click in between it.
+And I'm going to grab the transform view op.
+So, this transforms the view matrix.
+Okay.
+So, just to show you, here we've got the transform op.
+And this transforms the model matrix.
+So, I can move this model around now.
+Right?
+But we also have like a view point.
+Like a view in space.
+And that's what the transform view op allows us to change.
+So, when I move this now back, it might look the same.
+But actually, what we're doing is we're transforming the view point in space.
+So, if I now move this over here.
+And I'm going to rotate it like this.
+And I'm going to move it a little bit closer.
+And I'm going to save my patch.
+And I'm going to reload.
+Then the transform view is going to keep the state, obviously.
+Because orbit controls is like a really good way to either create an interactive behavior with your scene.
+Or to just like quickly look at things from different angles and zoom in and out.
+So, I'm going to get the transform view op.
+And I'm going to turn it a little bit like this.
+And then I'm going to move it like that.
+And this is a little bit more what I wanted to go for.
+And I'm going to probably play around with this a lot more during the tutorial.
+As you can see, I'm just trying to play around and just see what some nice angles are with this.
+So, if I look at this twirl effect.
+It's only like a thousand now.
+And if I move it back, I get these kind of like different looks.
+And I think that's pretty cool.
+I could do something with that, right?
+So, normally when I want to animate between two random values.
+You know, I try and figure out what the minimum and what the maximum value is.
+So, if I look at this and I think, you know, twist them out.
+Let's say one hundred to a thousand.
+We could even say two thousand.
+Could be a bit extreme, but we'll try that out later.
+So, a neat little trick that I use for this is I'm going to pull this out.
+And I'm going to grab the trigger limiter.
+Like I said, if any of you have any questions, please ask.
+So, this limits how often the trigger goes through in milliseconds.
+So, I'm going to add it.
+So, if you want to understand how apps like this work.
+I'm just going to grab a sequence app for debugging.
+I'm going to click here and I'm going to press F.
+So, we can now see that every three hundred milliseconds, we get a trigger.
+If I'm going to put this on a thousand, we're going to get a trigger every second.
+So, this is really great.
+This allows me to do some really cool stuff.
+So, I'm just going to put it on two thousand.
+I want like a trigger every two seconds now.
+So, I know that's working.
+So, I want to create a random number between a hundred and a thousand every two seconds.
+That's the easiest way to say it.
+So, I'm going to pull this out and in cables, we've tried to name ops like how you would say it.
+So, I want to trigger a random number, right?
+So, I type that in and as you can see here, trigger random number appears.
+Okay.
+So, whenever it gets a trigger, it generates a number here between the minimum and the maximum.
+And as you can see with the preview part here, those are the different values coming in.
+So, I know that my minimum was a hundred and I know that my maximum was a thousand.
+So, now I'm going to get this random number and I'm going to plug it into twirl and I'm going to click it into twist amount.
+I'm going to turn off flow mode for a minute.
+So, that's cool.
+That's the beginning.
+I've got some differences going on there.
+Only problem is this doesn't look very good, does it?
+It's jumping, it's jarring.
+So, we need to smooth the jumps out and the differences in the values.
+So, I'm going to click in between and I'm going to type in smooth.
+Smooth up.
+Smooths out jumps in values.
+So, I'm going to add it.
+Now, as you can see, it's not doing anything.
+We don't have any flow activity.
+We don't have any flow activity.
+That's because it needs a trigger.
+Plugging this trigger in here will not work because it needs to update all of the time, basically.
+So, you need to make sure that it's getting a trigger every frame.
+So, we do this now.
+And, as you can see, it's now smoothly going from one value to the next.
+But, it's still pretty fast.
+Right?
+And, I just want to create this kind of like random deterministic like thing.
+So, I'm going to put it on 64.
+And, there we go.
+This already feels and looks a lot better.
+Sometimes, it doesn't seem to be turning so much, but I'm not going to worry about that right now.
+So, I'm going to press F of flow mode.
+So, this is a really cool trick to generate random numbers at a timed interval with a minimum and maximum value.
+You know, I could go here now and I could put this on -1000.
+And, you know, as you can see, it will now flip the other way.
+So, that's also like a really interesting thing that we can do.
+Obviously, the bigger the difference from the current value to the next value, that's going to have an effect on like how the smoothing algorithm works.
+So, for now, I'm just going to put this on 100.
+Okay.
+Now, I could put this even higher.
+You know, let's make it smoother.
+Okay.
+Let's just leave it like this for now.
+So, this little system there, this is like a really good way to start randomizing parts of the patches.
+And, you know, we can make them - you know, we can put them all at different times.
+So, you could have something happen every two seconds, something else happen every 1.5 seconds.
+And, by just building up these little stacks, these little chains, then basically, you know, you're going to start creating something which is really a little bit generative and evolving.
+And, I really like doing that with cables.
+So, I'm probably going to throw a lot more of that in later.
+So, this is this, like, kind of simple whirlpool.
+But, now I'm looking at it and there's something I'm not so happy about.
+It's like the - how can I show this?
+Let me just move this back a little bit.
+Yeah, so, the edges here, they're kind of like - they're also getting displaced, like, right there.
+And, I don't want that, actually.
+I only want, like, the middle part so you get displaced.
+So, what I'm going to do is - I'm going to look here and this is our displacement channel.
+So, I'm going to pull this down and I'm going to grab a vignette.
+Maybe this will work, maybe it won't.
+Actually, you know what? I want to have a different kind of control.
+So, I'm going to pull this down and I'm going to get the circle texture up.
+So, I'm going to click that.
+Yeah, okay.
+This is what I'm going to do.
+This is going to allow you guys to do much more creative stuff later.
+So, I've got this circle texture and I'm just going to throw it on white for now.
+Click this image to compose.
+There it is.
+So, now I'm going to - let's turn off one overflow.
+Here, we have a fade out.
+Great, okay.
+So, as you can see, this is really cool.
+This allows me to change the displacement pattern here, right?
+So, yeah, thanks Metigator.
+I'm definitely considering doing that because it's actually a really broad topic
+and there's a huge amount of things you can do.
+Basically, I can't wait to do those kinds of streams like just how to generate random things in cable.
+So, thanks.
+I'll try and throw a few more techniques in during the stream.
+So, what I actually want to do is I want this to be inverted, right?
+So, here are the blend modes.
+So, you know, if I'm going to start doing this, as you can see, I'm creating a different kind of look.
+And if I turn the amount down, as you can see, I'm like really changing things here.
+So, there's, there's a lot of ways that we could now, like, you know, alter things.
+Basically, I just want it where the edges of the thing are not.
+Hmm.
+Hmm.
+Hmm.
+Hmm.
+Hmm.
+The answer is probably really looking me right in the face and I'm messing up.
+Which wouldn't be the first time.
+Let's put this here.
+Hmm.
+Okay.
+One minute.
+So, if we do this.
+That, again, is the opposite of what I want.
+Okay.
+Yeah.
+Hmm.
+All right.
+You know what?
+Let me think about this.
+Let me just try it with a vignette just to see if I can get what I want.
+Yeah.
+I think you guys are right.
+I think I need another image composed.
+Let's do that, right?
+Okay.
+So, I'm going to get this and I'll put this over there.
+Yeah.
+Basically, this circle texture, I would just now expect it to have an invert button.
+So, that's something for later.
+Okay.
+So, let's go here.
+Let's grab an image compose.
+And I think we can make this one really pretty small.
+But I'll leave it on 512.
+I don't want to make these things really small because I'm afraid you won't see them so good
+on the stream.
+So, normally I'd put this on 256 by 256.
+So, a really handy thing with cables is, you know, when you pick a mode, maybe a lot of
+people don't notice it, like normal or lighten, that pops up here.
+So, if you think, oh, why am I not seeing something?
+Just look at the op.
+Check the blend mode.
+You can see that on the op itself.
+So, I'm going to pull this down.
+Click image compose.
+I get this.
+And now I'm going to follow the advice that I just got.
+I'm going to click invert.
+I'm going to click invert.
+Okay.
+So, let's turn the size up, actually.
+And...
+Hm.
+No, this is not...
+This is not what I want.
+Am I...
+Ah, okay.
+Normal.
+Am I missing the obvious here?
+That's what we want.
+Okay, that's weird.
+Sorry, guys.
+Let me just do it like this.
+Let's just get the thing working first.
+the obvious here. That's what we want. Okay, that's weird. Sorry guys, let me just do it
+like this. Let's just get the thing working first. Did I really just miss it? Like that?
+Let's try this. Yeah, okay. Alright. So let's get a draw image here. Get that down. Let's
+just plug it in. Okay. I'm going to put this on multiply. Okay.
+So now I can control how much displacement happens, like up to the edges. Maybe it's
+not the cleanest way to do it, but I'll roll with it for now. Okay. So let's just
+rotate this for a minute so I get that view back a little bit from what I had
+before. Okay, so as you can see, you know, now I don't have that happening on the
+side. I'm not sure if this is going to work what I'm going to do now. It's a new
+op that we made a little while ago. Clamp texture. So I'm going to put this on
+remap smooth. So yeah. Okay, so this is like, let's just do this. So you can see
+what's going on. I'm just playing around. I'm just, I'm just experimenting. You know,
+that's, that's the thing when you work with a program like cables, you know, no one knows
+exactly what they're going to get up front. You just got to, you just got to play around
+with this stuff and, and see what you get, basically. So experimentation is key, you know,
+because a lot of people, we have this at the meetup, they say, wow, how do you guys come
+up with this? And it's basically, you, you sit down and you play around with values a lot
+until you get what you want. I think that's just the best way of saying it. Okay. So yeah,
+I just kind of like want this to be smoother. Hmm. Any smooth step? A little bit less displacement
+on the edges. Okay. I'll just, I'll just roll with this for now. I can, I can tweak it later.
+It's all good. So I want to make this look dramatic, but like right now, it just looks
+like some rectangle floating around in space with some nice displacement going on. So normally
+what we do is we, um, um, a normal thing is post FX processing, I suppose. So I'm probably
+going to bounce back and forth between the geometry and, uh, the post processing. Uh, post processing,
+I think is like a really important thing for a lot of people to learn. We've got some great
+tutorials about it. Uh, two good ones on, uh, on our YouTube channel that you should definitely
+check out if you want to know more about what I'm going to do, um, right now. So the thing
+is if I want to do post processing, I have to, um, I have to get this scene here. This
+is a 3d scene, right? And I have to turn it into a texture. So for the people that haven't
+followed the tutorials, I'll just show you what I'm going to do here. I'm going to click
+in between, uh, I'm going to grab the render to texture up. And basically the easiest way
+of saying it is it gets an entire 3d scene and it renders it into a texture. So now when
+I click render to texture, you know, this is the texture preview right there. So to see
+this, we're going to pull this out and I'm going to just grab a full screen rectangle.
+Let's pull it over here. I'm going to grab the texture output and plug it in there. So
+I'm going to put on MSSAA because some of you might notice these jaggies here, right? That's
+because now we've lost the free anti-aliasing that we had because we turned it into a texture.
+So I'm going to put this on eight. Um, and now it's looking good again. So to do the post-processing,
+I need another channel. So I'm going to pull this out and I'm going to make an image compose.
+Okay. There's the image compose. So first of all, I just want to get the basic image, right? So
+I'm going to make a draw image and I'm going to grab that texture output, plug it into image,
+get this image compose, which now has this texture and I'm going to put that in there. So I'm just
+going to call this on my post effects channel. Okay. So now we're back to where we were before.
+So what are the, uh, the post-processing effects that we can use? Um, well, you know, in reality,
+things never look perfect. Things are always a little bit blurry. Things are a little bit noisy. Uh, there's
+always like a touch of difference in light caused by fog and these kinds of things. So let's try and
+create a couple of those, um, aspects of reality and throw them into this cables patch and hopefully
+it'll make everything, um, look a lot prettier. So first of all, I want to get my camera view,
+right? That's, that's really critical. So, um, I'm going to move this a bit closer. You know,
+I kind of like want to, you know, this is okay. Uh, this is how I want to, I don't want to see those
+edges right there and maybe I'm going to fit more on the, yeah, you know, I'm not happy with that.
+So I'm just, I'm going to just do this for now. I'm just going to move it like that. I mean,
+this part, I'm going to probably get rid of with some fog and this is the thing, you know, like,
+how much do I want? Ah, there we go. See, I want that, I want the, I want the depth to pop out right now.
+So I think I'm going to displace this a little bit more.
+Um, there we go. It still looks a little bit jittery, um, once in a while.
+Um, HDR mode isn't going to fix it. I think I just need to blur it a little bit more.
+Let's just put it on free. Yeah. See, this, this just makes stuff look, um, a lot smoother now.
+2.5. Okay. And you know what? I want this random number to change more often. I want it to be a
+little bit wilder. So I'm just going to put it on, um, once per second. And I'm going to put the minimum
+on 200. Actually, nah, that's too quick. 2000. Let's just leave it the way it was. Okay.
+So back to the post-processing. So I've got this now. So I'm going to try and like break this down
+into manageable steps and keep the patch tidy. Okay. You know what? First of all, I'm going to,
+I'm going to set up a kind of, um, depth of field effect. Um, so it's like a kind of, uh,
+when things are out of focus from a camera. So I'm going to grab, uh, an image compose.
+And now I'm going to grab one of my favorite ops ever, the depth texture focus. So first of all,
+I just want to show you this because it's a live stream. So I'm going to grab the depth texture and
+we need to pull the far plane, um, close enough to make sense of what we're looking at now. So I'm
+going to pull this down. And if you watch what happens there, uh, here's the depth, um, texture,
+basically, you know, so what happens is the pixel brightness is kind of used to put into a texture,
+like how far away something is from the current viewpoint. So this white there means something
+is really far away and black means it's really close by. So I just wanted to, um, show this for
+a minute. And as you can see, we can invert it and maybe it makes a little bit more sense. So that's
+just a basic depth texture. It's not what we're going to use, but I just wanted to show it to make
+clear what I'm going to do now. So now I'm going to grab the depth texture focus up as you can see
+from this preview image here. It's kind of like a way to put a part of an image, um, into focus,
+like some parts can be sharp and some parts can be blurry. So we go to render to texture. We grab the
+texture depth output and we plug that here. So we have the same problem. Fire plane is too far away.
+So I'm going to put this on 10 and now this I'm going to have to play around with, right? So as you can
+see, this is like this kind of like focal point. And before I plug this in over there, I just want
+to show it like a, so I'm going to put this in say, um, five, let's put it on 10. So there we go.
+That's like the edge of the geometry. And as you can see, if I move center now, I can kind of like move
+through the scene, right? And width is like how narrow that band is. So if I put this really low,
+you know, we can go over it like this, we can go over it like that, but you know, most camera lenses
+are really not that narrow. They have, they have like quite a, a big, um, width, but you know, we're
+in the realm of computer graphics. So you've just got to do what feels cool. So what I'm going to do is
+I'm going to get this, uh, black and white gradient map now, and I'm going to use it to change a blur
+effect just to say in the simplest way. So what I'm going to do now is I'm going to go here and be
+warned, blurs are expensive. You know, this is like a full screen blur right now, but I'm not going to
+be too worried about performance when I'm just building something on the go. So I'm going to grab
+this blur up here. I'm going to plug it in. And if we click the image compose, we can see what's
+happened here. The entire image has become blurry. I can click the blur up and I can bring this down.
+And if we put on zero, no blur one, two, three. So now what we do is we use this, um, mask input. Now,
+basically you have to imagine this, um, here's an interesting thing. You see this like bright line
+here on the bottom. That's because of our wrap mode. And what's happened is the, the blur, um, texture
+effect is, you know, it's pushing pixels out of the canvas to say it that way. But you know, something
+has to happen with that information. So it's kind of coming back in the way it's being
+interpolated. So if we click image compose, we're on wrap mode, repeat. So to get rid of these lines,
+we click this and we put it on clamp to edge. And now we've got rid of them. So, you know,
+repeat has this to me, that's an artifact that doesn't look good. Put it on clamp to edge and
+that little line there is gone. So I don't want the whole image blurry. That's not like a camera.
+So, you know, I'm clicking depth, extra focus, and I'm going to get this, this gradient map here,
+and I'm going to plug it into that. Now let's play around a little bit with it. So I'm going to crank the
+blur up to a really high number, just so it's clear what's happening here. So as you can see,
+this part here now is really blurry. So I'm going to, I'm going to move the center. And as you can see,
+this blur is now moving across the image, right? So this part is blurry, that's what you can see there.
+And I can move it all the way over here. So I could put this here, I can turn the width up,
+as you can see, and everything becomes this horrible smudgy mess. But if we invert,
+now what we can do is we can create a focal point. So if it's black, it's going to be sharp. Okay,
+so now I could move this over here, I can make the width a little bit bigger. And you know, I'm not
+saying this is the final look, but I'm just trying to show you that you can get a lot of different
+styles out of this. So I can move this over here now. And what I want to kind of do is I want to make
+the middle part there, I want to make this sharp, basically. So I'm gonna, if I do it really extreme,
+we get this really thin line, that's like a little bit over the top. And what I'm going to do now is
+I'm going to start opening it up. And just to show you how it is without, if you click and open cables,
+and you press D, you bypass it. So as you can see, this is it now with a really sharp background,
+I press D again, and it becomes like this. So if we want an even better blur, well, let's just do this
+now, I'm going to click image compose. So blurs are really expensive, there's a huge amount of texture
+lookups to like consistently blur the pixels out basically. So you can really get away with a very low
+resolution size on your blur channel. So I can't do that like right now here, because this is like a
+full screen blur, but I can do it here. So as you can see, I've turned off use viewport size. And watch this.
+I know that my viewport here is if I click it 720 by 480, 16 by 9 aspect ratio.
+So I'm now going to just put this in say 512 by 256. And this is pretty much almost no difference,
+you know, and we're now saving a lot of draw calls, you know, we're making the patch faster and more
+efficient, basically. So I'm just going to turn this a little bit, I want it a little bit more like
+that one, I want to see the back a little bit better. So I'm probably going to tweak all of this later, but
+let's see if I hover with the mouse over here. That's what we see. And this is the depth texture.
+So another thing that I'm missing right now is let's add some fog. Yeah, render fog as a texture effect using a depth texture.
+Okay. So I go back to render detection. As you can see, I forgot to mention that before we've got the normal texture output.
+If I hover with the mouse over here, that's what we see. And this is the depth texture. And I don't know if it's possible
+for you to see with the stream, but it's red there. I've forgotten why it's red. Maybe Panda could elaborate on that
+into the chat for a moment. I'm sure there's a really good reason for this that I forgot. But basically, you know,
+if you see this red thing here, that's your depth texture out. So I need to get the depth texture.
+I'm going to plug this into fog. Hey, I'm not sure if I'm saying it the right way. Thanks for joining.
+You can watch this later on YouTube as it's being recorded. So if I click fog now, you know, and pull
+this down, this is the color picker for the fog, right? So I could put it on black. I can put some white.
+So I'm going to get a fog and first and far. And I'm going to pull this back. And as you can see,
+if I pull that back, everything kind of gets like this. So I'm going to put it on five. Let's just
+play around to these values. And I'm going to pull in the fog and a little bit too much. We have the
+density here. So let's turn that up a little bit. And now let's move that over there.
+Okay. I'll never find this really easy to tweak correctly.
+Now, because the model light isn't very big, you know, it's not like 100 by 100 values. We're
+working with really small values, which can kind of like make it a little bit difficult
+to get right. I'm just going to disconnect this for a minute. I just want to see the fog by itself.
+Okay. Let's pull this back to, say, five. And a little bit higher.
+Okay. Let's put it on 10. Okay. Turn the density. Okay. So I'll make the density a bit lower.
+I just want it to kind of like kick in there at the back. And I'm pretty sure if I turned this.
+Okay. There we go. Let's turn it back a little bit. And I know it's a really subtle thing,
+but that's post-processing. We're going to add all that up in a bit. And let's turn that density up.
+And, you know, I could make this dark now. I can make it brighter. We get a very different look,
+because it's also applying like a kind of like coloring change, of course, to the whole image.
+I don't know. What do you guys think? White or black? Bright or dark? I mean,
+bright kind of makes these edges a lot more obvious and darker. It means they're not so clear.
+Okay. Let's just get this and plug it in now.
+I'm still not too happy with this. I think we can get like a different kind of look.
+Yeah. Okay. This feels a bit more like it. Dark. Okay. Done. All right. So
+let's make that clear color just a little, little bit brighter.
+Ah, that's affecting the edges of the geometry. Now, why was that again?
+I always get kind of mixed up with the clear color. I'll come back to that in a bit.
+Okay. So I think this is like pretty dark, actually. So what can we do next?
+Hmm. Okay. So sometimes I'm just going to disconnect these things because I just want to
+um, show them step for step. So I'm going to get the screen space ambient occlusion up. So I'm just
+trying stuff out here, right? Um, just because, uh, that's experimenting. Maybe I'm not so happy with
+it and I'll just delete it later. So I grabbed the depth texture and that, that adds a lot. I'm pressing D to
+bypass and this is really making the image pop a little bit more. So, um, ambient occlusion,
+basically, if you, if you look into the corner of a room and, uh, you see like where two edges intersect,
+you know, it's going to be a little bit darker. It's like these little shadows that, um, gather.
+So there's a lot of, um, different things we can do here to tweak it for different looks. I mean,
+we've also got noise. That's not really looking too hot. Let's just put it, you know, it was actually
+kind of cool the way it was. One, two, three. Let's put it on three. Okay. And we can change the
+for a stream. So there's that kind of line. I don't know if that's clear on the stream. I'll just put
+this on 15. I did this already. This adds a lot. I mean, that was, that was definitely something that
+was like kind of missing, but I see him getting these like little squares there. I think that's
+from the having occlusion radius. Uh, yeah, definitely mitigator. It's, uh, it's one of those subtle
+things, but you know, I'm getting these kind of artifacts there right now. I think that's caused by the,
+the radius. I'm just gonna, I'm just gonna play around, um, and see what I get. Yeah. Okay. So 15,
+one sample, two, three, four, five. Hmm. Yeah. I'm not too,
+I'm not sure if that's coming from the ambient occlusion or not. Yeah, it is. Okay. Hmm. All right.
+I'll just roll with that for now and just worry about it later where I should like probably get
+rid of some of it. Okay. So the image is like looking kind of dark right now. So I'm going to go
+back over here to my original material, the color, and I'm going to brighten this up a little bit. Hmm.
+There we go. Okay. So how am I going to do this? Um, let me try some, actually, maybe I should do that on the
+end here. I'm going to grab some gamma correction. And that is way too much.
+No, I'm not happy with that. Let's see what happens if I, and there's, there's multiple ways to
+make this brighter. I'm just going to make this brighter. I'm just going to try one or two.
+Yeah. Makes it feel a little bit washed out though. But maybe if I make this a bit more
+blue, I don't know. Maybe I'm not picking there. I'm just getting the pieces into place.
+So I'm looking at this and I think, ah, there could be a little bit more, um, going on here.
+So I don't want to make it go too, too fast. Yeah. Maybe I can, maybe I can animate this to change
+later. We'll see. Okay. Um, please don't tell me not to touch my face with, uh, the whole COVID-19
+thing. Um, I think I've done it like 20 times during the stream. Okay. So I, I don't know. I'm not too happy
+with it right now. Um, I still feel that it's, um, missing, uh, some, some stuff like a, a little bit
+of, um, fairy dust. Okay. Zero, one, two, oh, whoops. Two, three. I mean, I don't want to blur it too much.
+Then I just lose all of the, okay. Is this actually because of the noise? Is that really messing it up?
+Yeah. The noise was actually messing it up pretty badly. You know, so maybe,
+and maybe, hmm, you know what? Let's do the blur there before the rotate. Right.
+I mean, I just want this like grit and, uh, and it's really making it freak out a little bit.
+Um, pearling noise. That could be a good one. Let's take a peek.
+Um, pearling texture. I think we're looking for. There we go. A pearling noise. Draw a pearling noise
+into an image. Let's try this one. So we've got a lot of, uh, noise texture ops inside the cables.
+Hey, look at this. This is already looking kind of interesting. I'm going to slow this down.
+I think it's going a little bit too fast, uh, for the stream right now. Okay. And those,
+those, those look kind of like, yeah. Okay. So there's something ambient occlusions, um, doing there.
+Um, I'll, I'll, I'll, I'll take a look at that in a bit. So we've got this pearling noise here now.
+Let's click this so we can just see it. So we've got that. Um, we can change the scale
+up. And what you're seeing here, this quivering is, you know, because we're rotating the texture,
+you know, the, the values are getting interpolated. There's like, uh, one pixel value moves to a
+different position. That's what kind of gives this like really crazy, uh, wobble. But let's get this. And
+really not too bad. That gives a, a really different, nice kind of look. And what happens
+if I add it here, you know, uh, and then add more of an amount. Oh, that's nice. That's just,
+oh, wow. That kind of lets us add these, these kind of like little waves. Oh, that's cool. That's
+a great idea, Panda. So I'm going to, I'm going to go on this a little bit more. So I'm just going to
+crank this up for now so I can just see what's happening. And I'm going to put the scale and say 20.
+So we have the set parameter. Yeah. Oh, well, look at that. Okay. That's really cool.
+That's a great suggestion. So we've got a good old timer for that. Um, and because I want everything
+to be a little bit synced, I can grab this now and I can plug this into chat. And that's really,
+really not fast enough. So I'm going to grab this and I'm going to just multiply that number. And then I
+kind of like these two effects are now linked to this one timer. So I'm going to crank this up a little
+bit now to say 20. Okay. That's, that's looking pretty cool. So now once again, let's lower that amount.
+Don't want it to be too heavy.
+Uh, wow. Oh, okay. Yeah. It's a, it's a style thing. You know, we either go for the really, um,
+like just clear defined waves or we add this, um, kind of pearling stuff in there. If we put it on 10
+or like say 80, we can get a lot of different looks there, right? I'm not too sure, but I already think
+it's a really cool addition. So let's just turn this there for a minute. So as you can see, we lose
+this like sharpness, but you know, it's just got a different style and a different look. I think
+that's really pretty cool. Actually, I'll just leave it on this for now. Uh, yeah, we could move it like
+that, but that's not going to work. Okay. So this is already looking a little bit more, um, what was it?
+Whirlpool-y, uh, if that's a thing. Mine's 0.33. Yeah. We can, we can start to get quite a,
+well, that's, that's pretty crazy stuff going on right there. Okay. I could really exaggerate it,
+but I don't want to go too far. Yeah. I've kind of got this thing where I want to have it like go,
+go down. No. Okay. Let's just put this here for now. Let's just roll with this. Okay. So this is
+looking all right. Um, yeah, post-processing, that's a thing, you know, you can spend forever,
+um, tweaking this kind of thing to get the look that you want. You know, I really just want this,
+I want this middle part there to be, yeah, sharp. You know, this part I want here sharp and then,
+and I just crank that up. I just basically want this part here at the back to be a little bit more
+blurry. Just playing around over there. No. Okay. Let's just put it back the way it was.
+Let's try it like this maybe. No. Okay. So let's move this, uh, crank that there a little bit. Okay.
+So, you know, I think the trick is, you know, just to try and make this, um, subtle. Maybe I've
+just got too much blur on it actually. So let's just put it on a blur of two and then I should be
+able to crank the width up now a little bit. There we go. Yeah, this feels better. I think the blur
+was just too high. One. So that's zero. One, two, three. Okay. Press D to bypass. So this is it without
+the post-processing care that you can see. All right. So another thing. Yeah. I'm just trying to
+think what I can add now to kind of like, um, make this a little bit cooler. Um, anybody got any
+suggestions, something that we could do something that we could add. So I think we've like got the
+basic thing that we were going for, which was, um, this kind of like a whirlpool, uh, like effects,
+though. I don't have it going down right now. I think it's more interesting with the, the waves coming up
+have to have to account for the twitch, uh, lag more colors, a box with buoyancy.
+Uh, I think that's going to be a little bit beyond what we could do, um, right now. I'm sure it'd be a
+way to do it, but I'm kind of like breaking my brain with how to add a boy with buoyancy.
+I mean, I know we could add like a circle down, make it move up and down, but I'm just wondering
+how we'd make it, um, move with the waves, you know, a full moon. Oh, that's, that's, that's actually
+a good one. A full moon. Um, okay. You know what? Let's just, let's just try and let's try and make a
+crescent moon, you know, so it's a little bit more, um, stylish. Uh, this could go horribly wrong,
+everybody. So, uh, let's see how this goes. So I mean, cause you're definitely right there. Um,
+this guy is missing something, right? Yeah. Maybe we, maybe we can make a kind of like fake, um, sky
+and, um, try and superimpose that behind the rectangle. I have no idea how this is going to go.
+So first of all, let's try and make, um, a moon. So when you have, um, a shape as a texture,
+as you saw with like multiply and multiply info, add and subtract, you know, you can get one shape
+of a texture and you can do like boolean operations on it, say in the simplest way.
+So I'm going to grab the shapes 2d up. I'm going to click add, uh, let's just put this on 512 by 512.
+And I hope you guys can see this. So I'm going to put this, um, this allows me to create, by the way,
+um, different, um, shapes as you can see here. Um, so I'm going to go for the circle and let's put the
+size on. Yeah. Let's just, you know what, let's just actually try now to make a moon. I think top
+right corner, uh, for now, this could look like really horrible load up, but Hey, Sylvia, let's put
+this on 0.4, move it up a touch. Um, what I'm going to do now is I'm going to grab another shapes to the
+office. It's got the circle and actually let's put this on white right there. Let's get this and put
+that there and also put this on white. So what I'm going to do now is I'm going to say, um, subtract
+and, um, let's make the size smaller as multiply invert. There we go. Multiply invert. So as you can
+see, we've got this smaller circle and we're taking that out of the bigger one. So if I'm now going to
+move this over here and this up there, Hey, cool. We have a quick rough moon. Works for me for now.
+Sky. How do I add a sky to this? How do I make something like clouds? Panda, you got any suggestions?
+Uh, 2d texture trick that I could do pog gradient. Okay. Sure. Gradient. That's actually really simple.
+Let's try it out, but that would work. Uh, here we go.
+Point cloud. Oh, we could use the point cloud for stars, right? If we want, want to do something like
+that or, um, a cloud texture actually. Okay. There's two or three things we could do here.
+Um, so I'm going to get this gradient and double the bone.
+Let's get this and put it here. Okay. That's messed up. What is happening there?
+Um, that's not what I expected. Okay. Something going on with some blend mode there. Let's get this. Let's, um, put this there.
+So let's make this black.
+Okay. So that's how we can make a kind of like simple, um, gradient, um, put it on Y, I suppose, just for now, move it around.
+Okay. I'm going to have to create like a channel in a minute to compose it into the, um, main image.
+I think that one's just actually going to go
+here.
+And then the rest will get drawn on top of it. So as you can see, you know, um, any, any visual programming
+environment starts getting a little bit big and unwieldy, um, at one point.
+Um,
+So we've got a really cool, um, up for this. So I'm going to get this texture output,
+um, and I'm going to type in the far. So var variables. Um, it's just a great way to get data,
+um, from one part of a patch, um, to another. So, you know, instead of like connecting really long
+patch cords to each other, you could plug it into a variable op and then just read it anywhere else
+in the patch. So since a little while ago, you can do this with, I don't think.
+Um, no, I don't think we pushed that through yet with the, um, update now. Okay. So, um,
+let's do it like this then right now. So in the next update, just so you know,
+you'll be able to do this with a far set texture. Uh, but I'm alive right now because I want everybody
+to be able to follow along if they're doing this. So we're going to just use far set object.
+I'm going to click this and create a new variable. I'm just going to call it, um, sky.
+Texture. Cool. So now I'm going to go over here and I'm going to press escape.
+Far gets objects, get a variable objects. I'm going to add it right here. Let me just zoom in
+so you guys can see it. I'm going to click sky texture. And as you can see, I now get the texture here.
+So I think we need to use a different blend mode. Hmm. Okay. Now I'm kind of wondering how to,
+to add this into the composition. Let me just check. Okay. So this is coming in. Okay.
+Um, so I've got the sky image coming in. I think I have to do something here. Has it got to do with the clear color?
+Render to texture. Clear. Okay. Yeah. I'm going to have to play around here for a minute.
+Um, render to texture. Clear. So let me just check for a minute. So this isn't transparent now.
+If I'm looking at it. If I'm looking at it. This isn't transparent. Why is that?
+Ah, there we go. Okay. So the clear color. Oh, so as you can see, I've now got these, uh,
+black and white squares there. Um, so that's, um, now I've got a transparent, um, um, image there, basically.
+Okay. Now where was I? Um, okay.
+Oh, yeah. You know, I want to just add this as a kind of like,
+rectangle behind this one. I'm wondering if I should then be using two full screen rectangles.
+Yeah. Blending. It's always, uh, it's always a thing to wrap your head around.
+Okay. So if I just put this on normal, why am I not seeing this?
+Okay. That's kind of confusing to me.
+The fog, you know, the fog isn't connected anymore.
+Fog is overdrawing it. Okay. So let's just plug this in.
+Ah, that could make perfect sense. Tom, uh, ponder. Um, let's turn this up.
+Fog. Disconnect. Right. Okay. So the fog is the culprit here.
+Hmm. And now everything seems to be really messed up.
+Okay. Let's, let's do this and this.
+All right. Why am I not seeing anything?
+We have this, this. Okay. Amount. There we go.
+All right. I was losing a little bit of track of the sentence there. Okay. I think this is, uh,
+getting back to what I wanted. Now, I'm not too sure why, but yeah, the fog is overriding this then.
+Okay. I'm just going to leave the fog out now, um, for Dan. Um, okay.
+So where were we? All right. So we were trying to, um,
+we were trying to get the, the moon into this, right?
+Well, there's a moon. Okay. I'm waiting for someone to say, that's not a moon.
+Put your star Wars reference here. Okay. So I'm just gonna have to play around for a minute with, um,
+with this. So let me just get rid of the gradient for a moment. And this, I'm gonna click here and
+let's move this over here. So that looks squashed because reasons. Okay.
+Yeah, no, that's obviously not it. Let's put it back on. Let's just use viewport size for now.
+I'm feeling a little bit lazy. Okay. So let's move this over there. Let's make the size, um, smaller.
+Put this there. Oh, that's so cliche. It's amazing. Okay. Let's grab this now. Actually, let's just
+copy this because then I've got the same size settings.
+I'm going to get this and I'm going to put it on multiply invert. And I'm going to make the size
+smaller. There we go. Okay. Let's move this over there. This over there and make it a little bit
+bigger. Okay. Not the best moon, but it's a moon. It looks really cheesy. Okay. I'll tweak all of this
+later. Um, okay. So now I want to get that, um, gradient back again. So let's go here. Um,
+and let's put this on a kind of, um, dark blue, I think.
+Why am I now not seeing the moon? Wow. Okay. I'm not saying it's absolutely anything to write home
+about, but it is a beginning of, um, of a sky. And I'm sure we can go, uh, further from here.
+Yes, exactly. Um, I mean, it's definitely, uh, made out of cheese.
+Okay. So we can, we can play around this with this later. Um, with the gradient, as you can see,
+we can kind of push, uh, uh, the sky a little bit there. Um, get this going here.
+I don't know. Um, I'm just trying to figure this out as I go along. Uh, nothing amazing right now,
+but that'll do. Okay. It needs a howling wolf. Um, yeah, that's, that's going to be a little bit, um,
+difficult to, um, put into there. I think I'm just trying to think now of a way to add, um,
+like some stars. Um, Hmm. What could I do for that? I don't know. Something in the sky,
+like some clouds or something like that. Clouds, clouds are never, uh, an easy thing to do with,
+um, computer graphics. God, that moon is really,
+um, it's very cliche. That's going to make me chuckle during the whole, uh, stream, uh, basically.
+Um, okay. So, all right. What next guys, we've got, we've got a moon, we've got a really, um, cheesy
+sky. Uh, I'm not too sure why the moon is blurry right now. I think it's because the texture size
+is pretty small, or is it because we've got that blur effect on it? Obviously. Right.
+Hmm. Yeah. Okay. So if we get rid of this, then we'd have a, and that looks terrible. Let's,
+let's just blur it. Let's just roll with that. Uh, lens flares. I don't think that's going to work,
+um, right now it could do, um, Hmm. This is a tricky one. Like what to do, what to do? Uh,
+I mean, it looks really perfect right now, you know, so a fish, do we have a fish mesh, uh,
+anywhere in the house? Um, let's do this now. Hmm. Yeah. It's not exactly what I was going for.
+Does add a little bit of grit to it though. Some rocks at the edges. That's an actually
+really good suggestion, but how do we, wow. How do we make some rocks? Uh, the first thing that comes
+to mind is doing some really crazy stuff with, um, a mesh instance, uh, um, hmm. Would that work? Would that work?
+Yeah. Surface Scatter would do it on the, uh, on the edges. I'm just trying to think now, like, I mean,
+if I do vertex displacement on, uh, on a cube, then I could get something like that. Um,
+Hmm. You know, the, the, the first thing that comes to mind is like going, um, um, going online and
+downloading, um, a rock model, um, getting a circle up, uh, that would output the points of a circle,
+grabbing half of that. And. Hmm. So Panda, do you mean like a 2D, uh, thing?
+Hmm. Think, think, think. Okay. You know what? Let's just do this for a minute.
+Right. Okay. Yeah, actually that could work. Uh, you know what? One minute. I'm gonna just save this.
+Um, and I'm just gonna, I'm just gonna jump into, um, a new patch. Because this one's getting pretty full.
+So what I want to do right now is, um, I want to just make some low poly, uh, spheres. It was a great
+idea, uh, from Panda. So I'm gonna go here, uh, and I'm gonna grab a mesh instancer. Um, I'm gonna plug
+in a sphere. I'm gonna give it for now just a matcap material. I'm gonna plug this in there. Okay. So we
+get this sphere. I'm gonna put this in 0.5 and let's put this in, say, 4 and 8 or 3 and 9. I don't know.
+Let's, let's try something out. 3 and 5. Grab an orbit controls. No guarantees this is gonna look great,
+by the way. But my attitude is if you throw enough blur at it, hopefully that'll, um, do the trick. Maybe we
+should use a Lambert material. Let's just try that for now. Okay. Put some white. Uh, whoop. Okay. So, um,
+points circle. Hmm. Okay. Let's grab this one and let's put that into positions. Okay. Let's go here.
+Uh, I think it's done. I think we can ship this. Uh, no, I'm kidding. Uh, let's make that radius smaller.
+Okay. So, you know, we're only interested in half of the circle right now. Uh, but because it's a live
+stream, I don't think I'm gonna try and remove those parts there. Uh, basically let's just reduce the
+amount of, uh, segments to say 30 for now. Okay. So, uh, really bad rocks. Cool. But they're all like
+exactly the same. So with their orientation, so I'm gonna rotate them all randomly. So I'm gonna get
+total points output. And I'm gonna plug it into random numbers array free. Generate in a random
+array of numbers. Uh, X, Y, Z in this case, I'm gonna plug that into rotations. And I'm gonna put it on,
+say, minus 90 to 90. Actually, let's just put it on minus 180 to 180. As you can see, we now get a different
+kind of rotation on each one. Though I'm not sure why the material is looking so weird. This is why I
+want to jump into a new patch. This would be harder to do. Um, okay. This feels a little bit better.
+Now let's pull this up here and let's grab a
+Mac app texture for now. Oh, we go with these awesome black and white rocks, uh, right there. Um,
+so, um, let's just look for something. I have no idea. Maybe we should go for the sleep really.
+That would be terrible. Okay. It's terrible. Let's roll with this for now. No, that that's gonna look
+really bad. Do you guys think we should do this? Default texture for life? Definitely. Um,
+uh, I think I'll take that as a yes. I can change it later if it's like really, really bad. So,
+um, I'm gonna, I'm gonna make, ah, you know what? Okay. We can, we can do something really interesting
+here, right? So what I want is they're all the same size, which doesn't look very good. So now let's make
+each of the rocks, uh, the rocks, uh, a different size, right? So to do that, we can use the scale array
+input. That's right here. So the thing is one X, Y, and Z to all scale, um, along with each other.
+So what I do now is I get the array length, not the amount of points. And I'm gonna pull. Yeah,
+there are, there are, there are no mistakes, only happy accidents. Okay. So I'm gonna grab the random,
+um, numbers array up. Okay. Because I want this same number to go on X, Y, Z and I pull this out
+and I grab array pack, uh, three. This is for X, Y, Z for the scale. And what I do now is I just
+hold in alt and I copy it and drag it into each input there. So I'm going to grab this and I'm going
+to plug it down. Okay. So now I'm going to plug this into the scale array. Hey, okay. We're
+getting something a little bit more like rocks, but I want the minimum value to be one and say the
+maximum value to be four. Ooh. Okay. Three, two, three. Okay. This is, this is looking,
+this is, this is not what I had in mind with what I was doing tonight. This is wonderful. Okay. Great
+suggestions, uh, from you lovely people. Okay. So I'm sure we can play around with the seed and get
+something really good. Oh, that texture is terrible. Should we, should we roll with this? Yeah.
+Bob Ross are patching. Thank you. Uh, we have a running gag, uh, at the company
+that one day I'm going to do the stream with a Bob Ross wig. Who knows, uh, maybe we'll order one soon.
+Looks very JRPJ. Okay. All right. Let's, um, let's just grab this for now.
+So I've copied it. So you can copy all of your option one patch into a never. So I'm going to go back here with
+control tab. And so I actually just want to throw this right into the 3d scene. Uh, I'm just worried
+that this is going to displace it. Obviously. Uh, is there a way for me to reset the displacement
+with an identity op maybe? Uh, first of all, let's just paste this in. Okay. So this is already gonna,
+uh, this is probably going to go horribly wrong. Let's just take a peek at what happens.
+I think it's almost finished. Okay. So the vertex displacement isn't happening.
+It's like so bad. It's amazing. Okay. Um, so let's put this over here. So, uh, there's quite a few
+things we could do here. We could, um, we could do a sub patch. Uh, sorry, uh, Izubi asked the,
+and the sub patch, how would it work here? Uh, we could put all of this into a sub patch, but I would
+say that the amount of ops, uh, really doesn't, uh, warrant, um, doing that because then we create
+another layer of abstraction that we've got to jump into and out of. I'd say that's good when you're
+working with like a huge amount of ops and you know, you've, you've finished the kind of thing that
+you're working on. We've not finished this yet. So if I click point circle, I can change the radius,
+right? And oh boy, look, ah, this, this is getting really too good. I suppose.
+Okay. Um, all right, let's put this on say, uh, five and oh boy, this is, this is just so many
+different levels of wrong. Um, it's amazing. It's just, it's amazing. So, you know, I want,
+I want like that. This is like blocking my camera shot now. So I'm going to just change the, the seed
+in the hope of getting something different. I might just need to make it bigger. Oh, this is so tacky.
+It's wonderful. It works pretty good. The ice wall. Okay. Um,
+yeah. Okay. What do we do here now? I can't, oh, wow. Like this did not work out the way that I've
+been planning. I mean, really, do we do the ice wall or do we just do rocks? Cause, um, yeah,
+it's very, very final fantasy. Okay. I'm going to try and focus. I'm just, I'm just losing it right now
+off. Um, everything that's happening with this. I think I'm going to make this just a little bit,
+uh, bigger too. Yeah. I don't know guys. What, what the dire wolves for? Yeah. Okay. A rocky finish.
+Sure. Let's, let's do that. Cause this is like really very final fantasy. Um,
+okay. Okay. Do we really have anything rock like with a mat cap? I do not think so.
+That does that look okay. Well, what do you guys think of that? It's pretty black and white, but I mean,
+um, this is good. Any other opinions on it? Better. Okay. Yeah. There's, there's a lot of different,
+like, mat cap is an amazing, it's God. Give it a noise texture. Yeah. I could do that too. So, um,
+of a little random trick here. Let's, let's, let's go out from the, um, so I'm going to just move these
+up a little bit. So I've got my, um, triggers back. Okay. You guys are really pushing me out of my
+comfort zone tonight. It's wonderful. Let's grab, let's grab this texture, right? And let's pull it over
+here and let's create another image compose because we could make our own mat cap. Um, it's not that
+difficult. It doesn't mean it will look that good, but hey, this might not work at all. Let's just see.
+So I'm going to say, um, draw image. Um, and I'm going to plug this texture in.
+Yeah, I could, that, that would kind of feel like cheating. Uh, and I just said I could use mesh pixel
+noise and he's very right with that. Um, I, I just also feel like experimenting and right now I'm
+feeling kind of playful with this. So, um, let's do this. Like what, you know, what happens if we
+get this, turn it down, turn it, I don't think we're actually going to see much of that. Oh,
+Hmm. Ah, the Bob Ross emoticon, you guys are too good. Yeah, you're really too good.
+Ah, oh, oh boy. Could it get any worse than this? Ah, this is, this is gonna, this is gonna get good
+or horrible. Ooh. Oh, okay. Uh, I say, let's try this. What could happen? I mean, there are no, there are,
+there are no mistakes, only happy accidents. I love Bob Ross, by the way. He's, uh, he's the bomb.
+So I'm gonna get the texture output, var set object, and the next update of cables, it'll be var set
+texture. Just so you know, uh, I'm going to call this epic rock texture, just so you guys know. Epic rock
+texture. Okay. Let's, let's plug this in. So I'm going to go here to the mat cap and I'm going to type
+in var get object. Okay. Um, epic rock texture. That actually doesn't look too bad. Or am I completely
+wrong? And it's terrible. What do you guys think? What happens if I plug it into diffuse? And now it's
+too dark. Let's just plug this back in again to that. It's good. I'm just going to save and reload
+because I'm not sure if that's going to change things back. So just control S control R.
+You know, it's actually got this nice, like kind of like crazy vibe to it. So the cool part is now that
+we've like created our own texture. Um, is it, is it going to glitch when I move the camera?
+I don't know. This is, this is, it's pretty okay for what we've got. I mean, wow, look at this. This is
+this is actually so kind of cool, right? The, the, do you guys think we should put, um, some of the rocks
+here at the front, um, I'm thinking that starting to look a little bit better, you know, are we going
+for lava now? Okay. Lava. All right. Um, let's go for color. Doom style. Okay. Yeah. How, how can I refuse
+the doom slayer? Uh, a little bit more red. That's like a blood pool.
+Um, yeah, I, I get what you mean from any, like, uh, making it go into the depths. Like so right now,
+I mean, I actually think this is kind of cool. Um, let's, let's make the rectangle, um, a little bit
+bigger. So I'm going to put this on 3.5 by 3.5 because that, I want to hide those seams, right?
+Uh, they're really not so pretty. No, this is, this is, I don't know. Is this, this is doable?
+It's dope. Uh, I mean, he says it's a dope, then who am I to argue? Let's, um, let's get this depth,
+texture focus back again, because now, you know, we want to add, there we go. So you want to blur
+these rocks at the front. That's what we want to do. And at the back. So let's do this. And
+this, this is okay. This is, this is going more the way, uh, that I'd like. So if we put this in zero,
+we got that one, two, three, four, three. Okay. So is this, is this going, um, the, the right way,
+uh, for you guys, like the, the doom look, I mean, I think we need to change the color of the sky now.
+I mean, I'm not sure what it should be because the sky is now my little pony. It's not very doom
+slower. So we're making a doom slayer whirlpool lava pool apparently. Um,
+okay. Let's, that was it. Let's see if we can make this, um,
+let me think, uh,
+it's too dark. Colorize add. What am I missing?
+You know, I think the easiest thing to do
+would be to, um, let me just see if that's going to work.
+Yeah, I don't know. It just kind of looks wrong then.
+Do I have to, um,
+uh, okay. One minute.
+The nineties pixel look. I, I do not even know what that looks like. I have played a lot of games
+and, uh, the nineties, um,
+ah, okay. No, this isn't gonna,
+this isn't going to do what I want. Okay. Hmm.
+Okay. Let's keep it like this for now.
+You know what? I'm just, uh, I'm getting a little bit stuck with what to do. And there was a little idea
+for something that I had. I want to add that right now.
+So, um, I actually want this displacement amount here to change, um, a little bit.
+So I'm going to, I'm going to drive some crazy number now. Like yeah, 0.6 to 0.1.
+So I'm just going to paste this little thing that I made before with the trigger limiter.
+Uh, and I'm going to put it on like a different time because I don't want it to always be in sync.
+I don't like that kind of stuff. Um, and I wanted it to go between, say 0.15 and 0.6.
+And now we're going to add this to the extrude amount.
+And smooth gets a trigger here.
+And hopefully that's going to make it start to go up and down.
+Okay. So we're getting a little bit more life of it now.
+Um, all right. Hey, thank you. Um, you can watch the rest of this later on. It's uploaded to, um, uh, YouTube.
+Okay. So yeah, this is the lava pool so, so far. I mean, do you guys have any idea what color the sky should be?
+Um, because I've got the feeling that this blue, uh, kind of thing isn't working right now.
+Um, dark purplish red.
+That sounds like something we could work with.
+Um, and then we can click, um, I think it's this one.
+Ooh. Ooh. Uh, it's very nineties.
+What, what do you guys think? Is this, is this more better than dark blue?
+The night is cold. They want to talk. They do. They do.
+Needs more red.
+Um, okay. So what we can do is we can change the position here and move that up a little bit like this.
+Yeah. Oh, that's so tacky. It's, it's wonderful. You know, we can take the noise out and we get this.
+Let's, let's leave that noise in there. That kind of like adds something to it.
+Yeah. Okay. It's perfect. Well, I'm, I'm glad. Um, uh, I'm here to please, uh, you lovely people
+that are here and, uh, encouraging me to do amazing things with this cables patch. It's really ended up in a
+different place than I thought it would, which is like really all kinds of, uh, awesome. Moon yellow.
+Okay. That's a good one. Thank you. That's a real good one. Uh, I think we can just go here and we can do this.
+Yeah. All right.
+Yeah. The blur from the sky, that's gonna, that's gonna require some, uh, some trickery basically.
+Hmm. I'm just going to drop the fog for now. That's, that's not really, um, working with this one.
+It's done. Is it done? Is it, is it finished? You know, there's really nothing more that we can do with this.
+I mean, Hmm. Would it be cool to make the rocks change size? Like also, oh, it can always get better.
+Maybe animations, you know, let's just try this for a minute. So I'm going to get this trigger limiter.
+I'm going to trigger another random number. Let's just do it at the same time because I'm
+feeling a little bit lazy today. Um, actually, I'm just feeling a bit tired.
+So we get this and I just want to get a random seed, right? So I'm going to say between zero and 10.
+Okay. So this is going to give me, um, a random number, um, once in a while. Okay.
+So I'm now going to plug that into the seed of random numbers array.
+And as you can see the, the rocks now jump around. So what you saw me do before with, um,
+smooth, we can also do that with a race. It's like one of my favorite things that you can do
+because I love a race by the way. And, uh, as you've noticed straight lines, all of my
+twitch streams will be with straight lines, straight lines for the win.
+So I'm going to type in array, uh, sorry, smooth array.
+There we go. Smooth out changes and values of an array. So I'm going to plug that in now.
+Nothing's happening because it needs a trigger. So press F the flow mode. We can get that from
+array pack. I'm not going to plug that in now. And Hey, look at this. And that's going really quickly.
+So let's put some 64.
+Let's put it even on. Well, I don't want it to reach the next value. Most of the time.
+I just want this to be really subtle. I don't know. It's, uh, it's, it's more interesting than the,
+the static thing. Uh, I think that's for sure. Hmm. I'm not saying it has to be this. Now I want to just
+give the, the, the epic rock texture a little bit more love. Uh, let's go here to the foreign noise.
+Let's put the number down. I just want to just want to see what kind of
+looks we can get here. So we had it on 50, 50 was actually okay. Some 20. Um, if we put it in gray. Oh,
+oh, that's kind of nice. That makes it look like these fake highlights by drawing the distance from
+the center of the cell. That's, that's, that's pretty cool. I think it's going to be the multiply mode,
+but I just, you know, I just like to experiment and just try stuff out.
+You know, just because you think something should be done a certain way. It doesn't mean it should,
+but it's just good old multiply this time. Let's just put it on that. Okay. So, you know,
+if I'd want to change like the, the brightness contrast of this, I could now go here and I could add
+like a brightness contrast. Um,
+you know, I can change the contrast right here. I can make them even darker. 0.5 is the default.
+I could make them a little bit darker like this with the brightness
+because I felt they were like a little bit too bright on 0.5. I know it's nitpicking, but I don't know.
+Let's just give it a try.
+Yeah, actually too much black doesn't work. You know what? I'm going to drop that. I don't like it.
+It's pretty okay like this actually. Um, the rocks might need some of the sky and lava colors.
+Wow. Um, how would I do that? I'm pretty sure as, as always for cables, I'm sure we've got an op for that.
+I think we could use the color remap.
+Uh, there's an op for this. Color map.
+Colorize a black and white image using a gradient texture. Okay. That's been a little while, um, since I used this one.
+So it expects a gradient texture. Okay. So let's grab a gradient texture.
+And you know what? Let's just grab the one that we already, um, used here.
+Yeah. Okay. So we'll use this one. Let's just grab that one for now. So we've got something just get rid of this.
+Mmm. I don't know. I have to create a texture. Okay. So I need another, um, image compose.
+And then after this, um, if there's any other simple suggestions, I'll be open to doing them.
+I think I'm going to give myself like another 15 minutes, uh, max to try and make this patch
+as, uh, epic as possible. So let's put this in normal.
+Okay. So I'm going to get this and I'm just going to make it 512 by 512.
+So I've not done a lot to optimize everything right now, people. I'm just, uh, being creative.
+Color map. Okay. There we go.
+Now, you know, I've kind of forgotten, um, how this works. So this is the great part with cables.
+I should have shown this, uh, earlier for new people tuning in watching this for the first time.
+If you click on opposite cables, you can click a few example and, uh, it will take you to a patch
+with, uh, an example of how the op is working.
+Okay. So, uh, let's look at this image compose gradient. It's on XY mode, color map. Okay. So,
+let's get back here. Let me just put this on
+XY mode.
+Hmm. Let me just think about this for a minute.
+Okay. Let me just, I always find this up a little bit tricky, um, to get to grips with.
+Let me just turn everything down right now. I'll be honest. I was, I was struggling a little bit
+with this one. So let's make this one a bit more red like this. I want to have like two really
+different kinds of colors, right? So let's grab that kind of purple that we're going for. Ah, okay.
+Look, you can start to see something there, right? So these purple edges, um, on the rocks,
+let's use the color map.
+Now, you know what? I'm not saying this fits exactly, but you know, it does add, um, something
+to it. So like, we just had black and white rocks before and it seemed quite jarring, uh, with the,
+the color and this kind of like adds, um, something to it. I'm not saying it's the best it could be
+right now, but you know, we're definitely getting this like kind of like fake light right now that
+there's some purple. It seems to be like kind of on top of the rocks with some red. I can make this black.
+Okay, that's, that's, that's really too 90s, um, for me. Um, yeah, let's put this back on like really
+heavy red. Let's put it up there.
+Uh, should you guys think the rock should be brighter or darker, um, than the pool?
+I'm not too sure right now.
+Darker. Okay, let's, let's do that then.
+Um,
+grayer. Okay, but I've just added the color.
+Grayer. Okay. Um,
+so now we're getting a little bit of the purple, the red and the white highlights, uh, back
+bit of purple, bit of gray, bit of red. I mean, it's just really subtle, but you know, it's definitely
+dark. Yeah. So, uh, on clicks, it's kind of like difficult right now to say, we're going to get like,
+um, something around the inside of the rocks because what we did with the mesh instance was we've rotated
+all of the rocks in a random, um, direction. So the part of the mesh, um, that's, uh, colored,
+that's not going to be the same though. Maybe you're actually onto something there. Maybe
+we could. So if we put this on zero, zero, they all have the same rotation now. Let's start
+tweaking it a bit.
+See if we can get that purple to be more on one face. Yeah, no, I don't think that's going to work,
+to be honest. I mean, we thought we had it on minus 180 by 180.
+Hmm. Okay. Nah. Okay. So another thing is I want those rocks at the back to
+be a little bit, um, bigger. I mean, I'm just going to fake this right now by just tilting them
+a little bit more above the, the middle line. So I'm going to get transform. So, you know, this transform
+now is only being applied to the, uh, uh, mesh instance. And as you can see, um,
+I can kind of like push those rocks up. Ah, that seam then appears.
+Let's put it like this. Um, and let's make the, you know, what happens if we put this in a really big number?
+I don't know, but it kind of feels a little bit, um,
+nicer though. I think they're triggering too often. So I'm going to grab another trigger limit and I'm
+going to put this on, say, 5100, 5.1 seconds. I'm going to put that there. It's just changing too often
+for me and just press flow mode. So you guys can see what's happening here. You know, I don't want
+these things to trigger, um, exactly the same time. Okay. Yeah, this feels better. It's a lot, um, it's a lot
+slower, a lot calmer. Um, and you know, I think this can be more exaggerated. I think we can, yeah, what happens
+if we put on 0.8, it could look terrible. It could look amazing. Let's find out. And the SSAO, it still
+has this like really, I don't know if you guys see, this is like black, um, shadow there. It's a bit too
+much, um, for me. So we're gonna, we're gonna play around and try and reduce that, um, a little bit. So
+let's do this. Okay. Um, I think it's the radius of the AO. Yeah. Okay. It's the radius. So you can see
+it's like there. So three is quite a lot. Let's put it on two, one. So, you know, when we put this
+in zero, you know, this is, this is basically without the ambient occlusion. So this is one,
+this is two. So three goes too far for me. It kind of like breaks it. So I'm going to put it on
+two. So right now I feel that the image could use, um, a little bit of, yeah, um, simple color correction.
+So there's a few tools for this, you know, we could do gamma correction on the output and we could make
+it darker like this and then we could multiply the texture. Uh, but I think with this right now,
+I'm just going to go for, uh, actually it's brightness contrast. Let's do this again.
+I'll just experiment in here to see what it gets. Remap smooth. Yeah. That just,
+I don't know. That just, that just feels a little bit better. You know, I'm trying, I don't know.
+I don't know if I want to go for a darker image or a, or a lighter one. If we just clamp it,
+that's what we had before. Yeah. A little bit of noise. Definitely. That could, that could definitely
+be added. Let me just check it out. Yeah. Maybe that's too aggressive with the blocks. Maybe it's
+okay without it. So that's actually just, um, so that's some noise. And we're going to put this on
+subtract. So then we're going to subtract stuff from the image. Let's get rid of this.
+I'm just going to add a touch, like a kind of grit, right? You know, it's like a little bit of
+a little bit of noise is always okay. And, um, images like this is a lot right now, 0.1.
+And you guys probably aren't going to see this on the stream. So, you know, I'm just going to crank it
+up for a minute. So you can see, you know, this is the noise, um, that we're adding, um, to the image.
+So let's just put it down for now. If we put it on animated, you know, the encoder is going to go a
+little bit crazy if I, um, do this, but you know, that's like, it's kind of effects like they have in
+the old games, like Quake. It just breaks things up from like looking so perfect.
+Okay. Ah, that, that, that moon is amazing. It's the, the best moon ever. The thing that's
+niggling me is it's just still too big. So we're going to, we're going to just like change that right
+now. So we're going to put the size down there. Let's click this so we can see it. And we're going
+to put the size down, size there and actually let's just move this up to here and move this one up a
+little bit. Yeah. That just feels, um, a little bit better. Yeah. Okay. Um, wow. Okay. This,
+this turned out differently, um, than I was expecting. Let's just clean up, uh, for a moment
+here and take a look at this. Yeah. Ah, that was okay. So that's why the, the, the color correction
+thing wasn't working so good. I was already doing a gamma correction on the material, you know,
+and this is not something you want to do twice. Uh, basically, I mean, it might actually just be
+better to disconnect this. No, no, you know, I'm just, I'm just going to roll with this for now.
+Okay. So just before I, I, I, I, I wrap this up, I'm just trying to think, you know, like what,
+what could I do? Um, there's, there's a lot of things we could do here to play around to get
+different looks, right? So, um, sorry, what I'm doing here is we've actually got the, the, the texture,
+um, size. So you just don't see it because right now it's a 512 by two. There's like a two pixel, uh,
+line bar there. You know, if I turn this up, you, you see it come there, right?
+So, you know, you can do this kind of thing for a really like kind of cheap, um, watery pool
+like effects. And of course this isn't working so good with the rocks. I didn't tweak it for that.
+But, um, as you can see, we can already start to create a lot of different looks, a lot of, um,
+different, um, um, textural effects. Yeah. It's kind of like fabric. Um, and there's so many things you can
+do with this that, you know, when you make your own, um, uh, gradient map, black and white texture,
+and you're going to apply that with a vertex displacement, you don't only have to do it with,
+um, rectangles, you can do it with spheres, uh, which is like a really interesting trick.
+And then you have to start thinking like, you know, um, your, your pixel values between zero and one,
+you know, maybe you don't want it ever to reach one. And that's when we start using things like clamp
+texture. So you could say it never goes higher than 0.5 and playing around with that kind of like relation
+between the value of a pixel and the amount of vertex displacement that you're using. You know,
+that's how you're going to like fine tweak these things to look like something really cool basically.
+So, uh, what did we have it on? 512 by 512. Okay. We could make this higher now, you know, to, um,
+get more detail basically at the expense of, um, more GPU, uh, cycles basically. And if I put this on one
+now, um, I've got less, uh, blur, but because I've got a higher resolution, it's smoother and it's not as
+jaggy as it was before, you know, so there's, there's that kind of trade off with, um, what you're going to
+do that basically. So, uh, I'm just going to put this on, this actually looks kind of good about too
+much blur. So I'm just, ah, yeah. Okay. This, this is way better. The blur two and three, that was
+actually destroying all of, ah, this is way better. Now we see, uh, we see a lot more dynamics, a lot more
+there in the image. This, this feels a lot better. Yeah. Okay. That was, that was really one of those
+missing touches right now. The other thing is though, it's kind of really missing this last, um,
+transform and look at that. Now I've got the rocks attached. Okay. Let's, let's solve that problem
+in a minute. So let's get rid of this. Whoops. Clear color. Um, let's get this transform and I'm
+going to plug in a timer. Let's put it on 10. I'm not sure what I just did there. I think I deleted
+something that I didn't want to delete. Hmm. What is this? Okay. So that is moving everything. I've just
+got to put a number a lot higher. Okay. Let's see. Let's crank that up the other way. So I want to get
+that kind of whirlpool effect. Do I want the rocks to turn? Let's just say that I don't. If I'm correct,
+it's just going to need a tweak or two. Um, I go here and I type in identity.
+This resets all transforms. There we go. And that now stops the, um, rocks from turning. I still see
+a lot of seam once in a while. So I'm going to make the, let's just put it on four and four.
+And you know, I don't want that blur to happen on the edges again. So I was doing that thing with the,
+um, the circle, uh, before. So let's make the circle a little bit smaller, you know,
+and then we only get the, um, let me just try that. Yeah. So, okay. So that's the blur just here.
+So I'm going to turn this up now because I don't want it to happen too much on the edges.
+You know, I could do this, but then it like goes through the rocks a little bit too much.
+So I'm just going to turn that down to about there.
+Yeah. It was kind of nice of the spinning rocks. I also just wanted to show you guys the, the, um,
+identity art. So basically that, um, resets, um, the, uh, the transforms of the model matrix.
+It's a really cool way to just be able to, um, reset something without having to like throw it into
+another, uh, render to texture pass. A lot of people, um, would also like grab a transform up
+and then do reverse transform on it. And this is not a term a lot of people know. So identity just
+allows you to reset all of the transforms that are going to happen underneath. So I'm going to,
+you know, the rocks, it's also kind of cool. All right. What do you guys think? Should we keep the
+rocks or should the rocks go?
+You know what? I'm going to keep them there then. I'll just leave this. So I'm going to publish this
+patch later, um, to insert, reset, transform, and stop spinning.
+Okay.
+Yeah, this, this is actually, this is actually really kind of nice. I'm, uh, I'm happy with
+how this turned out, uh, tonight. Of course, there's, there's a few artifacts and some other
+little things going on, but, uh, we could, we could end up tweaking this, um, forever.
+Um, basically, uh, one or two last weeks, two, three, four, five, let's put it on four.
+Yeah. I'm just going to leave it on this for now. Okay.
+All right. Um, I think I'm going to call
+a wrap right now. Uh, it's 9 30, just been working on this for, uh, just under, wow.
+I think it's almost two hours now. Wow. How the time flies, uh, when you're patching with cables.
+Um, yeah, I'm, I'm really, uh, happy with this, um, for the first, uh, cables GL, uh, live stream.
+Uh, it's kind of tense and exciting to, um, patch something on the go, uh, and then to be open to some
+suggestions. Uh, I think the moon is probably, uh, one of the best parts of it actually. Um,
+and as you could see, we, we could really go very far with all of this, you know, you could start to
+randomize the, the colors. Hi, engine 3d. Thanks for joining us. Um, so, you know, we could really
+go really far with this, like what we're going to randomize and change. I, I normally like to create
+really wild generative things, but I think that's, uh, beyond the scope of the, the time that we have
+right now. So what I'll be doing is, um, in, um, in a few, in a minute or two, I'll be asking people
+if they've got any questions. Uh, if you don't, that's fine. I think absorbing all of this for
+over two hours is, uh, is a lot to ask. Um, once I'm done, I'll be, um, making the patch public.
+Uh, I'm not going to tidy it up right now. I'll, uh, do that tomorrow. Um, so the moment the stream's
+over, you'll be able to go to cables GL, this patch will be published and you can open it up. You can
+play around with it and, um, see what you'd like to do with it basically. So, um, if anybody has any
+questions, uh, now's the time, uh, to ask them, but I'm putting a freeze on a request with what should
+happen in the actual patch. So does anybody have any questions?
+This is where I like really need a button with like a sound of a massive Chinese gong. Like,
+you know, the, the time, uh, is over like bang. I think I'll work on that. Um, making the sound,
+but for next time also for make any puns, how could you add a wolf? Uh, that's a good question.
+Uh, where would the wolf go? Uh, you know, I mean, basically you could definitely like download
+a model of a wolf, right? Um, let's pause the timer. So you could download, uh, I'm not going
+to do a PNG, not right now. Like I said, uh, okay. So if you'd want to do, if you'd want to do a wolf
+in the back as a PNG, you'd, um, basically look at your sky texture, right? And you were just like the
+moon, you could add your little wolf, like, um, over there. You could also grab a 3d model, um,
+put it in the scene, use a transform and move it somewhere to the side. So you could have your awesome,
+um, spinning wolf, um, going along with, uh, the, the pool, the, the sky's the limit, you know,
+the night is cold and they want their wolf back, um, basically. So let me put this up and I'm just
+going to slow it down a touch. There we go. And, ah, you know what, look, look, look, ah, should we,
+uh, I'm not going to do it now, but you know, we could, um, you know, we can tilt things here to make
+them, uh, more dramatic. I'm not a fan of things being exactly centered. So as you can see, just
+tilting this even a little bit, it just seems to create a little bit more edgy energy inside of
+the image. So that was one of the last finishing touches that I wanted to do though. So, um, without
+post-processing, uh, okay, that's her. Now there's some, some stuff going on there. Oh, it's okay.
+You guys know how to, um, bypass this stuff now. D or shift D.
+Undefined, country boy, Sal Hamdula Das, Priyata Shift, Segal Gloss. I'm not too sure what that
+means. Um, I would not download a wolf right now. Uh, no, I'm not doing it right now. I'm not adding
+a wolf to this, this thing of beauty, uh, even though the inner Bob Ross inside of me, um, is not
+able to, uh, put the wolf in there right now. Um, yeah, Panda made a great suggestion there. Um,
+if you've got any idea for, uh, future streams, you could just like write it right now, um, in the chat.
+That would be great. Um, I've been considering, um, doing a multi-part, um, stream, um, soon where I
+actually from scratch, uh, build a rough prototype of, um, some VJ software with cables, which is being
+driven, uh, by an external sequencer like Ableton Live. Um, I already did, um, two or three tutorial
+videos on how to use MIDI to drive and control animations inside of cables. And it's been something
+I've been wanting to do, uh, for a long time. Um, and I don't think it's only applicable to people that
+want to VJ. I think there's a lot of really cool things that you can learn there because you know,
+a note on or a note off to trigger a sequence of events is no different than a trigger, um, inside of
+cables. So that's one idea that I had, uh, building VJ software, um, from scratch inside of cables. Um,
+post-processing, uh, I was also thinking of doing, um, two or three copycat, uh, requests, or also the
+most exciting thing ever, which is like really kind of scary is that people can, um, uh, ask a copycat
+like live on the spot before the stream starts. Like, uh, okay, Mark, try and make this. Um, and maybe
+I'll turn around and go, no, because that's going to be really difficult. Um, and there's a good chance
+I'll say yes. And we're hoping in the future, maybe that we can live copycat gets the win. Yeah, definitely.
+I can imagine. Um, so yeah, as you can, as you can see, we've got a lot of ideas where we want to go
+with this right now. And of course, in these difficult times of everybody being at home,
+um, you know, it's kind of cool. I think that we've, uh, started this. So this is something
+that we're planning on doing, uh, more often if there's a demand for it. And I've got to say tonight,
+the response was already really good for the first stream. So I'd like to thank everybody, um, for being
+here tonight and, uh, start 51 pirates. Yeah. We'll, uh, we'll be ready for the wolf. Maybe you
+can pop in there and modify this published patch and add your own wolf. That would be great. We would
+love to see that. So, um, hit us up on the forums, uh, if you want, uh, if you've got any ideas for
+future cables GL Twitch streams, um, the more suggestions, the better, because we'd like to do
+stuff that you would like to see, uh, and would like to learn from. Otherwise we're just taking a
+little bit of a random guess with what you'd like. Um, so I'd like to thank everybody, um, who's
+tuned in, who's watched along, who's participated. It's been really wonderful that you're here. I'm
+really happy with how it went, uh, for the first stream. I was a little bit of overwhelmed at the
+beginning with chat and the, the window and talking and thinking of everything. But at one point it's, uh,
+become a really cool experience and I really enjoyed it. So on the behalf of me and panda and, uh,
+steam and undev, I'd like to say, uh, thank you very much for tuning into the first, uh, cables GL
+live stream. This patch will be published in about, um, five minutes max. Uh, just log into cables GL and
+then you can see it there and then you can, um, copy the patch and modify it and pull it apart and do as
+you'd like to it. All right. I forgot and defined a country boy because that name is just too
+difficult to remember. Thank you, Simo. Um, so guys, thank you very much. I hope you all have a
+wonderful evening and, uh, if all goes well, I'm planning on doing another Twitch live stream,
+um, next week. Uh, maybe not as long, but, um, you know, I'm planning on at least trying to do this
+each week for a little while right now because everybody's stuck at home. So I think, uh,
+a little bit of distraction would be really cool. So I'm going to, uh, wish you all a good night.
+Thank you very much. And, uh, all the love from the undev team and I'll see you guys later.
+Have a good one. Bye.

@@ -1,0 +1,204 @@
+https://www.youtube.com/watch?v=PrkdnENo8wQ
+hello this is alex from cables.gl i want to talk to you about the brand new workflow that is in the
+last update of cables that allows us to use textures instead of arrays to manipulate our
+mesh instancer and point cloud and uh you know rotation and stuff like that but with the texture
+and it took me a little bit to understand like what uh how does this even like what am i doing
+here but it's actually really simple now that i've used it for a few days and i'm just gonna cover
+the basics and then maybe get you experimenting with what's possible and i think you're gonna
+really enjoy using this new workflow and definitely comment on it and and see how it is for you because
+i think we're really excited to keep pushing this forward and then get like really really crazy with
+this uh in the future because it is way faster than using arrays and for um a lot of us it's it's
+like it's a lot easier to look just at a texture and at a glance like understand what's happening in it
+compared to looking at this huge uh list of xyz values in an array for example so
+what we have here is now it's it's an okay example but um we're gonna just go through it real quick
+right so i have a geometry that i take from a gltf scene and then this gets converted with one of our new
+operators called geometry to texture and then we end up with a square texture with kind of like this crazy
+mess of pixels and each one of these pixels is a location for a point right so if this uh geometry to
+texture is 210 by 210 pixels uh wide and high then um that's however many instances we'll have and all these
+colors the blue red and green tell the xyz positions of this um point cloud and then the points are populated you
+know uh all right and so then an interesting thing happens here i put this um texture into an image
+compose and i think that's really cool because you start to be able to use the image compose which is
+this is traditionally like for us to do 2d post processing or maybe creating like normal maps or
+doing some sort of um you know visual effects but here we're doing the same things but now they are data
+effects so now we can use a draw image multiply for example to multiply a position of a vertex or we're doing uh
+kind of additive colors to then add to a position of a texture or a vertex so i think it's very
+very crazy to start to uh think of these blend modes in a new way and then all the different texture
+effects to see which work really well with uh this new workflow and uh just get really into it because
+you know i had no idea this would be possible where i'm just uh almost recreating like the area effects that
+that we have which are uh super easy to use as well but now i'm like visually able to understand okay
+this is a green kind of waveform moving up and down and that's gonna move my pixels up you know on the
+wide uh direction and then here it's uh just some color that i put into the point material and basically
+yeah that's a really really funky new way of working with uh point clouds and mesh instances and things
+like that so uh let's maybe look at other things that i did here uh here i kind of reconstructed
+a plane of cubes that then are ordered in this in such a way that i can use a wave gradient from the bottom
+left uh scrolling to the top right or here it's spinning in place and this creates uh kind of an interesting
+wave of um cube instances and yeah i i it's it's hard for me to continue to to explain it but like
+you can get really into like diffusion effects or fading um mesh mesh locations or or whatever
+like it's really wild and i don't know i i think i'm just all over the place because i just keep
+thinking of what else i should show you so this is a super easy simple example that maybe we'll
+uh take a look at soon and then uh in this example we're using another operator called texture to
+coordinate grid which is another great way to start with this entire workflow because it's uh quite
+visually understandable how it's going to take um a texture for example this text mesh and then just
+create this grid um with you see it has a little bit of color here red and some almost invisible greens but uh
+then this can be quickly plugged into a point cloud and then you will be able to manipulate your um
+texture and kind of like 3d space now because it's now a point cloud so it's kind of handy uh nice intro
+i think to the this whole world because you don't have to really uh worry about where is this pixel and
+you know is it going from the uh bottom left to the top right and uh all those things but um you'll get
+into it i'm sure but i think um this uh particular operator is really great a really great start but um we'll
+go through it as well and then here i just wanted to see if i can take this uh texture to coordinate grid
+operator and then plug it into not a point cloud but into a mesh sensor and in the end i kind of ended up
+with some sort of 3d um 3d font here which is kind of cool and if i plug in this i can also start doing
+crazy effects that are super super uh quick on a gpu you know i can't even imagine what this would uh
+cost me if i used cpu arrays and things like that so pretty incredible um i'm not going to show you
+these two just yet because they're super weird and experimental but uh let's start from the beginning so
+let's say i just want a cloud of points right i'm going to put down a point material because we're
+going to be working with a point cloud from texture so it needs a point material and then i'm going to
+put in this point cloud from texture now let's take a look at this operator it looks pretty simple and let's
+actually compare it to oh there it was point cloud array kind of similar it has some some shared settings
+like number of points uh to limit the amount of points you have this uh new one has access so you
+can actually flatten your point cloud if you want to work in 2d or kind of like a 2d plane um and then this
+one has some texture coordinates stuff but we don't really miss anything because we also can do the same
+thing in the point material where we have a scramble uh texture coordinates where is it colorize randomize
+so it's kind of the same as this um it here but you see that this one takes only arrays and this one
+takes texture so here we have coordinates so that will be an array of xyz and here is a texture input
+and that's going to be an hdr rgb texture i'm going to tell you all about this so we're going to
+create an image compose and um i'm going to throw down a pixel noise i like this operator it's kind of nice
+and tidy so how is this texture how should it be constructed um definitely try to keep it square it's
+uh that that's just a lot easier to work with i think in the beginning so then we have a 64 by 64 texture
+and you would want to use hdr um toggle on here because then we can push and pull the values of these colors
+maybe outside of our visible range but it's still going to have the data in the texture that will allow
+us to put this point cloud in specific like uh areas in our project because if we don't use hdr then we're
+really limited to the the values of the colors and then um you won't get the control that you would want
+when you're using these new operators of uh um mesh instance and point cloud creator from texture so
+uh what we're going to do is we're going to connect this into our input for the texture
+for the position texture and we see that it doesn't look great all of our points are kind of flying
+into the top right here i'm going to put down a vis texture and let's get into it why is this happening
+because white and black are kind of like all the colors in one right so it's rgb if you um matt if you
+put those colors together in uh additive mode right when you add them together not mix them like with paint
+or something like that when you add them together you get white so what that means is the red channel
+is our x so that's um moving a pixel for example left to right i'm going to use this uh kind of analogy
+right and then y will be green and that's up and down and then z will be blue and that's forward and back
+so what's happening is we're using the color white let me put down an orbit control here
+we're using the color white or or this value white and which is red green blue and it's just shooting off
+into space here what we need to do is to use kind of distinct colors so
+let's switch it to rgb and now we have this 3d point cloud so we're almost there right and
+if i turn on hdr you're gonna run into some times where your texture is not actually in hdr so for
+example this pixel noise at the moment is not in hdr mode but if i want to offset this i can put down
+this thing called rgb math and it becomes really useful with this workflow because now i can use one of
+these operations so for example i will subtract x which is one of these values here from my color which
+is c right so c minus x and to center this whole thing i'm gonna just subtract 0.5
+and now when i rotate um my point cloud it's pretty much centered right i think it's exactly centered
+actually and what else can we do now now that we have sort of a grasp of us having a 64 by 64 pixel
+texture which means 64 times 64 instances for this point cloud and then we have some values and our pixel
+noise is actually set to 10 so although we maybe are generating 64 times 64 um instances we don't really see
+them because we're giving pixel values for this with these colors or the pixel color values are
+telling the point cloud where to place these instances and it's not a high enough resolution here so we can
+actually type in 64 and 64 and now our um texture is getting like a per pixel random color from this pixel noise operator
+so now we have a lot more visible instances because each pixel is a different color more or less
+and we have this big cloud all right so moving along what else can we do in this image compose that is
+pretty cool and super quick and like you know it's it's just wild what we can do we can use this brightness
+to make the mesh or the point cloud of our noise here bigger or smaller so you might get into moments for
+example here where i converted um or maybe it was this one where i converted um a gltf scene node which is this face
+with this geometry to texture operator and i can immediately see that i'm gonna have some issues here because this is super bright
+so that means this geometry is giant right like the the the scale of it is huge because these values are even
+visually telling me that they're super bright so it might not fit and i might fight like to find it sometimes
+so here i use the brightness contrast to lower the values of these um locations for the vertices and now
+i was able to kind of uh place it into the project how i want it you know and i didn't use a transform
+operator here i didn't uh change anything in my cameras i'm just using this texture to manipulate
+where to place this point so without it i would think oh something's broken there there's like this
+weird pixel in the center um you know i broke something but actually the reason why i don't see anything
+is because all those points are super far away and uh they might not even be drawn in my like
+camera view like the frustrum or whatever is too too small but yeah so keep that in mind like if you visually
+see like whoa those are really bright just lower the brightness a bit and then you can uh manipulate
+kind of the size of your point cloud um so what else can we do here um well we can play around with this
+this operator in particular where we're manipulating the z and maybe we can put a timer on here
+maybe slow down a bit and then if i loop this then we start to kind of have some sort of flying particle
+effects so pretty interesting but uh i don't i don't know it's all right but it's still the the point is it's
+incredibly fast to do this at the texture level as opposed to using an array uh to do the same thing
+so right now we're barely even using any resources because all we're doing is manipulating this simple
+texture um what else let's try this other operator i talked about i'm just gonna remove everything and
+and redo it um and let's save and reload actually because of this i'm not gonna talk about so
+we have this thing right we're gonna put down a sequence to space out our stuff and i'm gonna type in
+what was it called again brain error texture to coordinate grid right texture to coordinate grid
+so what we need to give this operator is pretty much just a normal 2d texture so what i'm gonna do is
+i'm gonna use a render to texture because i want to i want to show you something really really trippy so if i put a circle in here i now have
+a circle drawn on this texture i'm gonna make it square just to make my life easier 128 by 128
+and turn on auto aspect and then i'm gonna plug it into this texture coordinate grid and now you see that
+this operator creates kind of something similar to the geometry to tech to texture this one kind of takes
+a texture to a grid and then this grid is now our locations for points so if i put down point cloud
+from texture and give it a point material we should be able to just see the circle on our screen nice so
+this is another thing um that you can manipulate with an image compose of course i just can't get over this so
+drop it in here and then connect it to our texture input and then again see um we have some issues because
+first of all i'm not really keeping my textures the same size but i think it's a lot a lot easier if you do
+you don't get into some kind of filter modes um blurring your pixels or something like that and then another
+issue here this texture to coordinate grid like the geometry to texture it creates an hdr texture so
+actually let's check that texture info
+hdr true right and our image compose is not in hdr so we're not able to grab all those negative values for
+for example or maybe uh just things outside of the non-hdr range of values for the colors so it still
+works so if you want to really really um attempt to maybe keep your project super light for mobile devices
+or you're doing like just a lot of lot of uh point clouds that are animated and things like that at the same
+time and you don't want to use hdr textures as long as you kind of keep them in this zero to one um area or
+i i guess it's an area it's like a spawn area for your point cloud right um am i does that make sense so
+anyway you just have this cage that's a lot smaller in dimension where you can paint those uh locations for
+for the vertices so if you're able to use a tiny um
+texture for that and and keep those colors non-hdr definitely do that definitely experiment with that
+because i think uh you shouldn't ignore um the ability to do that like you're not just stuck to hdr but
+um in this case let's just turn on hdr and stop rambling about that so what i can do is again put in the brightness
+and just make it bigger and just make it bigger and of course since we're in hdr mode i can just put in a number
+and then go outside of those legal zero to one uh values and now i'm able to even go on into like crazy
+land right and all this stuff actually we can see these this texture here it's kind of really nice looking so
+this texture pretty wild so
+we can see that these ones are green so they're probably above red are mostly to the right
+yellow is kind of a mix of green and red yeah so you start to to kind of understand what what those uh
+colors mean and see if i as i lower them those colors get uh less bright and
+our point cloud gets smaller all right so that's cool and what else can i show you
+let's return to one of these pre-made projects i have here so
+mesh sensor from texture also has uh unlike the point cloud here it just has a size it has a
+rotation texture scale texture and a color texture to colorize your mesh instances and
+the rotation is also rgb because you're rotating on the x on the y and the z so if um
+in this example i'm rotating on the y and from here and i change it to black
+you see that the meshes are no longer rotating and if i add a red now they're rotating on the x
+and that's how it looks because we have a gradient waveform that goes from the bottom to the top and
+our array of cubes rotates as the color gets brighter and darker right so if i want to rotate them
+on two axes then i just add another one and maybe add a green and maybe add the frequency a bit and also
+hook up a timer to the offset so now it's it's going a bit crazy but if i lower this
+then it's a bit more visible that we're rotating not only on the x but also on the y so yeah keep
+in mind that the rotation texture is also rgb now the scale is also rgb but since i want to keep them all
+even the the scale on the x on the and the y and z even i just use black and white right because i'm now scaling
+all those um axes at the same time so i get this even um scaling of my cubes
+what else and i guess i'll just cover like how did i make this um field of cubes i basically just use a wave
+gradient uh to tell the mesh sensor to paint hey uh the first one in in this corner will be red
+let me just turn off this waveform here waveform
+gradient add and then i'll unplug the rotation and the scale so this one will get the like the most red
+in our texture so that will be the the most uh um the right most cube and then as it goes
+right in this texture then the value uh on the x-axis gets smaller and smaller so then
+it goes into negative values and then you know it's not visible really because how do you how do you do
+a negative so we get this line of cubes and then as it goes up uh further in this texture it'll go from
+left to right and then up then these also start to get this green color as well so
+then they're also moving on the y direction so that way we're painting
+uh a texture that tells
+the mesh instance or point cloud where to put these um instances and points with colors so we're not
+converting anything we're just like straight up painting these colors these and mixing them with
+additive mode we're um doing this all by hand which is you know if you're gonna do something crazy like uh
+paint this by hand definitely comment below or show it to me because that's awesome
+um i still didn't reach the level where i can look at an object and go like oh i understand the vertex
+texture for this thing i'm gonna paint it now but i think if we all keep using this maybe we'll get to that
+point maybe um yeah i guess we're pretty much done definitely ask if i didn't cover something uh this is
+kind of a lengthy tutorial and and um a bit rambly but um i also want to show you this experiment here
+where i took kind of an old and forgotten vertex position from texture operator and used it with the new
+operators we have in store now which
+will push and pull the vertices of this rectangle which is uh basically four vertices right uh let's do
+geometry info it's just four vertices so for four four vertices i need a two by two texture uh and then
+i'm going to color it color each one of these pixels a specific way and then here i put an rgb math to
+offset them uh in the right place and i end up with my rectangle again which is kind of cool and uh
+uh yeah here i'm just adding stuff just to see what happens so see the the colors are changing and and
+and the values start to manipulate where um this plane is being drawn which is kind of cool and after
+that i was thinking well can i kind of recreate uh basically our vertex um displacement operator with image
+compose and this um vertex position from texture and i think i was relatively
+successful in doing it and basically yeah i have i have a much higher resolution version of this basically
+so this texture is 128 by 128 and then i'm just putting in a random
+effect like a plasma um just to see what happens and it actually looks quite great like good and uh
+i was actually surprised by this but i think that that could be also another future for for this
+workflow where we're going to get into um meshes from vertex textures but anyway um hope you enjoyed this
+definitely comment below um maybe that's not the greatest format uh also let me know um but please try
+this new workflow and tell me how it goes thank you bye

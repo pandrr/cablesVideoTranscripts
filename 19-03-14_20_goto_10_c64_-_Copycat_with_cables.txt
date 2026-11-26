@@ -1,0 +1,60 @@
+https://www.youtube.com/watch?v=mXqTmVaf9_g
+Hi there and welcome to another video of copycat with cables. My name is Mark, my handle on the
+forums is Andro and today I'm going to be showing you how to recreate the 20 go to 10 maze generator
+from the Commodore 64 that you can see right here in this picture. So today we're going to be doing
+this with the mesh instance up and the array ops inside of cables. So without further ado, let's get
+started. So first of all, I'm just going to zoom in a touch and then I'm going to create a matcap
+material new. I'm then going to plug this into a mesh instance up into the geometry input. I'm going
+to plug in a cube. I'm going to connect a trigger and in between I'm going to add the trigger once up
+because we only need to send the cube once into the mesh instance. So I'm just going to define the
+sizes here. So if we look at the original picture, it's not a cube, it's like a long rectangle. So I'm
+going to give this the sizes 0.2, 0.2 and 1.5. Okay, so far so good. So we just did a bite-sized video
+about the points field 3D op. It's a really great op to be able to just generate a 3D array of points.
+So a point is XYZ data, the XYZ coordinate of a point. So I'm going to get this, I'm going to get
+the array out and I'm going to plug it into positions. Great, we don't see anything because
+we just need to add something over here. So I'm going to do 20 by 20 by 1. And we don't see a lot. So I'm
+going to go here, I'm going to create a scale up. I'm going to turn this down to say 0.1. Great. So
+this is a grid, like a 3D array of points. And on each of those points, we're rendering a cube. So if we
+look at the original Commodore 64 piece, all of the rectangles are diagonal, they're not straight. So we'll get
+there in a moment. So what we need to do now is we need to create rotational data. So the handy thing
+here is we get the total points out here from the points field 3D op. So I'm going to grab this,
+I'm going to plug it into an array op, create an array and fill it with one value. I don't need to
+rotate on the X or Y coordinate, only the Z aspect. So I'm going to go down here, I'm going to grab an array
+pack free. So this is X, Y, Z. So these can just be zero, as you can see, default value zero, we're
+going to give it a trigger. And I'm going to plug this in here to rotations. So now I'm going to pull this
+out. And I'm going to grab the random array op, generate an array of random values. And we're
+going to plug this into the Z component right here. Now we don't see a lot because we're only rotating
+by one degree. So I'm just going to crank this up. And as you can see, everything here starts to move
+and to get a random offset. So we need to make this more fixed, more constrained to get the look that we
+want. So this is actually a lot easier than it seems. So I'm actually just going to generate a
+value from zero to two. Okay. And now I'm going to go here, I'm going to say array seal. And this is
+going to make all of these floating point numbers, if I click here, you can see we've got floating point
+numbers, it's going to make them into whole numbers, it's going to round it up. So I'm going to click here,
+we only get a one or a two coming out of it. So now I'm going to add an array multiply op.
+And I'm now going to put this on 90. And voila, we're already pretty close to the Commodore 64 look.
+Let's move this up. So we have a bit of space. So this is the X component, Y component, Z component.
+So now we just need to rotate it 45 degrees to get that look we want. So we just make an array sum op.
+Let me go here. And if I now put this on 45, as you can see, we have the Commodore 64 go to 10 look.
+We can go here to the random array, and we can change the seeds, and we can get different outcomes and
+different results from the maze. Pretty simple, pretty quick. So we can just make this a little bit
+flashier. So let's move this up here, move this up here. And I'm just going to add a clear color,
+pick the color picker, put it on some kind of light blue, put this here, just to step out of the white and
+black region of the colors, go over here, and I'm going to make that a little bit darker. So it's just
+a little bit more Commodore 64 like. So this is a really good basis to start generating lots of
+generative patterns out of this. So with the points field 3D, we could go here and put this on two,
+on three, and on four. And as you can see, we can start to create really interesting, complex forms with
+this. So let's put it back to one. We could change the multiplier, which is the spacing between each of the
+grid parts from the point field. And if we pull it down, we start getting this interesting thing where
+they go through each other. I can now use the scale and bring it back up again. As you can see,
+we've now got a different look again. So let's put this back in 0.1. Just trying to show you there's a
+couple of really cool things that you can do here. Put the multiplier back in one. So we could go here,
+and instead of only generating two random possible outputs, we could go, let's put this on 8.
+And now let's put the array multiply on, say, 45. And as you can see, we've now got a very different
+look again. If I'd go here and I put this on 0, we get this. 45, we get this. I could now go over here,
+I could put this on, say, 6. And I could put the array multiplier on 22.5. As you can see, I don't
+think this is very pretty, but I'm just trying to show you that with a couple of changes to a few
+parameters that you can start to create very interesting looks of this. So let's just put this
+back the way it was, 2, array multiply, 90, array sum, back on 45. So this was the copycat with cables on how to do the 20,
+GoTo10 Commodore 64 Maze Generator. I hope this video has been educational and informative. If you
+have any questions or comments, please feel free to leave them under the video below or to post them
+on the forums. Thanks for watching. Have a good one. Bye.

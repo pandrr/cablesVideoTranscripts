@@ -1,0 +1,7 @@
+https://www.youtube.com/watch?v=4SncFeBgmPA
+Hi there! We at the Cables team would like to welcome you to our new channel called Bite Size Tutorials.
+The purpose of this channel is to demonstrate core concepts, cool tricks and the ops that you never knew you needed while working with cables.
+These videos are aimed at helping beginners, but we're sure advanced users will learn a lot of cool new things along the way.
+All of these videos will be no longer than 3 minutes each and example patches will be available for all of them.
+We hope that you enjoy this new channel and if you have any requests or suggestions, please feel free to leave them in the comments section below.
+Now, let's go make some cool stuff.

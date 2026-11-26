@@ -1,0 +1,179 @@
+https://www.youtube.com/watch?v=DW9U5tv1GHM
+Hello, this is Alex from cables.gl. I want to show you a few different techniques to use mesh
+instancer and then vary the colors, textures, and even animations of your cloud of instances.
+And in this example, we have various models set up in a bunch of point clouds that are then being
+affected by a area scalar. And we're going to look at this example a little bit later because it has
+some concepts that are quite different than the simpler approaches, I think. So what we're going
+to do is actually briefly look at all the examples I'm going to show you and then I'll go in depth
+through all of them. So here's another similar approach to the one we just looked at where we
+have different animations set up for the various models that are then mapped and set up in our scene.
+And then we're going to look at this one last because it's quite difficult to get into and I think it
+even needs its own tutorial. But it's actually a really proper way of mapping different colors and
+textures to your mesh instances. And the one we're going to start with is pretty easy and fun and simple
+to do. And yeah, it's pretty much a single mesh sensor with a texture map to the entire object or the entire cloud.
+So you get this kind of homogenous feel to the shape and it's being animated and distorted and it's super easy to set up.
+So we're going to kind of start with a blank version of the same thing and what we have here is
+a mesh sensor with an instant displacement map operator above it and then some kind of boilerplate stuff
+which is a matcap material that I've made quite neutral and then there's no post-processing and it's just kind of
+some kind of feedback effect for the displacement map. So our displacement map is black and white and it's being
+applied via the instant displacement map operator to the entire cloud of little spheres here.
+We have a point sphere random populating the mesh sensor and all that good stuff.
+So let's say I want to now map a texture and not to every single sphere or particle kind of mesh in this big point cloud.
+big point cloud, but I want to do it to the entire object.
+So what we can do is we can actually just use the instant displacement map operator.
+If we look over at the parameters, we'll see that there is a channel parameter that's important.
+and then also a colorize parameter which is the key here. So by default, it's set to red channel, but we're going to set it to RGB.
+And what we're going to do here is instead of using this black and white simplex noise in our image compose, we're going to use this plasma here.
+And this plasma is set to RGB, right? I've turned off the grayscale.
+And what we see now is there is a displacement happening to our cloud of points with meshes that is getting this matte cap material.
+But what we want to do is also map this texture over this entire thing and then colorize it.
+So what we do is we go over to the colorize toggle and we press it.
+So now our colorful plasma is also being mapped to our material.
+And, you know, it depends really on what your base material is.
+So, for example, if we remove it and use a basic material and then hook it up to our sequence here, you'll see that this basic material of green is then getting this plasma color applied to it.
+So if we change it to white, then, excuse me, it's more or less closer to our texture.
+But this is a really quick, simple way of doing it.
+And, you know, it's fine, but it matches your displacement map.
+And if we want to have a different displacement map than our texture, like I have here where I have, let's see, I think I have some polka dot and simplex noise.
+So we'll put down a vis texture.
+So this is our displacement map for our sphere of spheres.
+And then we have an instant displacement map and it's not colorizing anything.
+And then we have something else set up here.
+I want to show you this a little bit later because you can actually use more than one displacement map operator.
+So it's not great, but you can.
+So I think it's not great because it's like it's too heavy handed.
+Right.
+So why are you using an instant displacement map?
+But if we set all of our settings to zero for the strength and we just use it to colorize, then we can vary our displacement map, then vary our map texture to the entire object.
+So if we change this to something else, you see that the displacement isn't changing.
+So you can get extremely lazy like I do sometimes and just duplicate this thing and turn off the displacement map feature for it by doing this thing zero.
+But I don't recommend it.
+So I don't know why I'm showing it to you.
+Maybe just because you can do it.
+Okay, so now let's remove our basic material and return back to our matte cap here and I'll delete this basic material.
+Okay, so we have our displacement map and it's doing what we want, but we just want to project a texture on it and we have an operator for that called texture projection.
+So right now it's basically on defaults.
+I think I think I think I just changed the scale a bit.
+So when I plug it in and I turn on my amount, you have this plasma texture.
+Let's hook it up actually with a new vis texture.
+So we know what we're doing is texture so the texture projection is cool because it has a lot of different settings for the texture that's being applied or projected to your geometry.
+And by the way, it doesn't have to be a mesh instance there.
+But anyway, we're going to be talking about it in this mesh instance there example.
+So you can change the position and the amount and then the mode it's applying itself to your shape with.
+So if we go to normal, then it's almost like the material underneath is completely invisible.
+But if we apply it a little slightly, maybe we can get some interesting effects or some shading to our overall blob of stuff.
+So this is I think the easiest way to colorize your instances in the mesh instancer.
+Now, what if we want to get into animated meshes and we can't really do that with the mesh instancer.
+Or we can't do that yet with the mesh instancer.
+But we can use our repeat and well, I'll call them the repeat family of operators because this one's called random cluster, but it's basically a repeat with some random positions in it as well.
+So the way you set this up and if you haven't seen the tutorial for the repeat up, I think it's still quite relevant.
+But the way you set it up is you drop it in, you set up the amount of instances that we'll have in this number parameter.
+And then everything below it will be repeated that X amount of times.
+And the way I've done it here is I'll just stop them from animating.
+I applied a color area to this stack of operators under the random cluster.
+And then I'm using the index out port from the random cluster to then randomize the or not randomize, but get different seeds to randomize the numbers that are coming out of the color area.
+So each color area is applied to this GLTF scene of this monster, it's getting a different color.
+So it's an interesting concept and I haven't seen it much before, but I think it takes some time to get used to, but I highly recommend you play around with this stuff.
+And I think I'll just publish this example so you can kind of start to understand how it works to use repeat operators and then put stuff under them and then differ the settings for all the operators under the repeat and random cluster operators to then give each instance something new to do.
+So what I did here was to also offset the animation for each instance, because if I don't do that, then they're all going to be animating at the same time.
+So that's what it's doing here. So it's a super quick, super lazy way of doing it, but then it also is quite beneficial for doing things like animated meshes at the moment.
+So definitely explore it, but keep in mind that not using the mesh sensor is now kind of just duplicating all the stuff X amount of times under these repeat family of operators.
+So you have to watch out for performance on your mobile devices, for example, but yeah, you can get away with really quickly doing different things.
+And another thing you can do is finally we're getting to this project is to vary the different models and maybe even textures.
+Yeah, you can do that that are assigned to your operators below.
+So in this example, I have GLTF scene where I'm using color area to color is colorize it and then do the animation.
+But in this example, I have a mesh instancer under the repeat op, which unlike the random cluster, it doesn't move your instances around randomly.
+It just it does whatever you tell it to X amount of times.
+So what the concept was with this little example was I want random spheres of points to be populated with different models.
+So I have different animals per mesh instancer that is then being repeated.
+So yeah, I guess some of the magic is lost when I explain it.
+But yeah, it's basically a bunch of mesh instancers with different settings to them.
+And the way I got around not doing textures with the mesh instancer is by simply using 3D models that already have vertex color in them.
+And I think I always say this, but I think it's an underused technique to just use vertex color for especially low poly stuff.
+And I kind of try to experiment with this here where I wanted to see will it work with mesh instancer and the different repeat ops.
+And then I get to kind of fake them having different materials and different textures and stuff like that.
+I think it's a cool concept.
+I definitely definitely want to explore a bit more.
+But one more thing I wanted to say about this example, which I'll also post and actually before I move on, I wanted to show you what's going on with this repeat op.
+The index out for the repeat op is used to switch the arrays for the positions for each of these mesh instancers that are being created under the repeat op.
+But also one of these cords goes into the sub patch cords, I mean cables.
+So one of these cables goes into the switch object operator that is then switching with each instance of the mesh instancer to populate it with different geometry.
+So we have some sheep and then cows and all that stuff that are being switched and then they come out of the sub patch into the mesh instancer.
+So, you know, hopefully you understand this stuff faster than I did.
+It took me a while to understand how I can use switch operators with the repeat family of operators to then kind of control the things I want to happen with the operators underneath.
+Super cool way of doing it.
+All right. So what I wanted to say about performance with this stuff, you definitely have to test.
+I can't stress that enough.
+But one thing I think is kind of helpful, at least from an organization type of thing is to keep your operators that won't change, but are affecting things under it.
+So for example, the mesh instancer, it needs things like a material or in my case, I want to wobble the geometry or something like that.
+And I can put all those things above the repeat operator.
+So here it's kind of like easy to understand, you know, I'm working with a setup and the font material uses a vertex color with this use vertex color operator.
+And then I have an area scaler that is set up to the mouse.
+And this is going over all the mesh instancers underneath.
+So, you know, I can't be 100% sure it totally is more efficient than not having them under the repeat, but I think a little bit for sure.
+But then just overall, it's a lot easier to keep track of the things that you want to repeat and don't want to repeat.
+So I like to keep all that stuff above the repeat.
+All right, so there is more there is this and I admit I need to practice more with this stuff and I think I'll eventually get it.
+But there are already some really cool demos on our library that I'll link in the description that I think will get you thinking in the right direction with how to do texture coordinates with the mesh instancer.
+And what it uses is an array 4 and this array 4 is texture coordinates.
+So that's 0 to 1 values that are then given to every single instance or yeah, every single instance of geometry in the mesh instancer that is being set up by the coordinates, right?
+So the mesh instancer looks at the coordinates.
+So I have 375 coordinates.
+So divided by 3, you know, that's how many objects there are in space here, how many pyramids there are.
+And each of those will have a different set of texture coordinates that are mapped to the UV map of the geometry.
+So that also starts to matter, you know, how is your UV map set up?
+Is it, you know, what are the coordinates for it or whatever?
+So it's needs a lot of practice.
+I'm in the same boat as you here, so we'll get it eventually, I'm sure.
+But anyway, without getting too deep in how it should be set up properly, you can do some really cool ways of just varying the different shapes or the different geometry that is in your point cloud.
+So what I did was I had a noise check texture just put into the basic material that is then applied to this mesh instancer.
+And it starts to look a bit weird because they're all the same, right?
+Like everything is getting the same texture and it looks not as interesting as it would if they were all a little bit different.
+So what I did was just apply the same amount of random points or random numbers and the same amount.
+I mean this 125 meshes or this number of total points is going into the random arrays.
+So it's generating the correct number of points needed for texture coordinates needed for each of these meshes.
+So for example, if we unhook this, you'll see that a part of them is gone because up here it's not 125.
+So as we remove it, even less are getting the texture coordinates needed.
+And the same goes for all the rotation stuff as well.
+Maybe like once the mesh instancer starts to get different size arrays, it starts to act a little bit funny.
+But maybe it's a cool effect to do, you know, to hide some meshes or something like that.
+So what I did was just connect them all to the same initial array and then I can mess around with the correct number of points needed for the coordinates.
+So, all right, enough. So another thing, the super easy one to do is this colors array that's on the side.
+It's an array for again.
+So RGBA because A is alpha and mesh instancer does like that one.
+So we do an array and then actually I'm going to do a random array.
+Random array.
+And then I'll set it up to be four.
+So ABCD.
+And then again, I'm going to connect this to my initial total points from this points cube operator.
+And then I'm going to set up the numbers for each of the coordinates or each of the color values.
+So the first one will be red.
+I'll do that zero to one.
+The next one will be green zero to one blue zero to one.
+And then the last one is our alpha.
+And I want them always on.
+So I'll just give it one one.
+So we have our colors set up rent like from random numbers.
+You know, it works sometimes.
+It's a super quick way to just give colors.
+The one thing that I don't really recommend you doing is to vary this array too much or animate it.
+Because it can get, once you start getting to like hundreds of thousands or whatever points, you can really eat up performance quite quickly by doing calculations for the different colors very quickly or animations with the stuff.
+So yeah, that's the kind of last thing I wanted to show you.
+Super quick way to randomize the colors.
+And then, of course, we can use the seed and if we set up our basic material to be white, then the colors are correctly applied onto a white pyramid.
+So do I need to cover anything else?
+Yes, the material blend mode is what you might need to tweak when you're applying colors, for example, onto your material.
+And I think it also works with the texture as well.
+No, it's for colors.
+So this is going to blend the color onto your material.
+So if we have green, for example, it's all a bit dark and green because we're using the multiply mode.
+And then if I click on add and then change my array, we're now adding those colors to the green.
+So if we do a black, now it's the black is getting an additive color added via this random array of colors.
+All right.
+So thanks for sticking around.
+Pretty cool stuff.
+I think personally, I'm going to leave a bunch of examples with you.
+Definitely try them out and message below.
+And also we're starting a GitHub discussions forum where you are able to suggest things you want us to cover or to implement or to take a look at.
+So I'll link that as well.
+Thanks. Bye.

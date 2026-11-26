@@ -1,0 +1,100 @@
+https://www.youtube.com/watch?v=a56wk9Xm9dY
+hello this is Alex from cables.gl I want to show you an operator called
+vertex displacement map and I got this patch from last night's discord weekly
+meetup and I really liked the way Bagoof approached creating the normals that I
+felt like I want to share this with everyone and I think it's super
+efficient and quite easy to do and I wonder if we should just start a new
+patch or look at what Bagoof is doing here let's start a new patch and then
+we'll pretty much create the same thing alright so
+vertex displacement map it uses a texture to displace geometry and that means to
+move it up and down basically or to move it in a specific direction using the
+white and black values of an image so I know I need a main loop and I'm gonna use
+shift enter to create a bunch of ops here so I know I need main loop I know I need
+sequence I know I need a couple of image composes and then I will do an orbit
+orbit control and vertex displacement map
+and a font material there we go on okay so this is our box of Lego that we're going to
+use on the two image composes will use to create the height map or the kind of
+displacement map and the other one will be for the normals and I'll deal with those
+later and I'll just show you how to use vertex displacement map with a black and white texture
+so um we'll put the font material before the displacement map and we'll
+so I don't jump around too much I'm gonna use a rectangle like Bagoof did but yeah you can use it on any geometry
+really especially if you have your own custom GLTF scenes or 3d scenes that have properly UV models this is
+going to be super fun to use um so we'll do a rectangle and then let's do FBM noise for our image compose here
+all right so we kind of have the building blocks and we have this pink
+rectangle I'll keep it pink and then um here's our image compose and this is kind of our height map right now and it's right now set to the canvas size so you'll see that whenever I change the viewport it's changing the image compose size and I don't want that I want it to be set to
+um 512 by 512 by 512 so if you want to do that you select your image compose
+height map right now and it's right now set to the canvas size so you'll see
+that whenever I change the viewport it's changing the image compose size and I
+don't want that I want it to be set to 512 by 512 so if you want to do that you
+select your image compose you untick this use viewport size and then type in
+512 and then press tab move over to height and type in 512 so now we have
+these two textures that are square on the top we see this black and white
+preview of our height map height map to be okay so vertex displacement map will get
+this texture and we already see something popped right it like popped in
+so the displacement map is working and oh wow that's the parameter panel is like
+pretty pretty intense on this one but I assure you I assure you that the defaults
+are very serviceable okay so the problem is our rectangle and let's let's make this tutorial
+even longer and I will show you exactly what's happening here so I'm gonna deactivate the rectangle
+and our entire stack is kind of hidden now because the rectangle isn't being drawn and then I'm gonna use a
+operator called simple wire wireframe and this thing needs a geometry so it's gonna take it from the rectangle
+and let's zoom in here so oops like so
+so this is our rectangle and this is all of the vertices that it has that's not enough for this vertex displacement map to work
+so if we increase this we're starting to kind of increase the resolution of the mesh and this is exactly what vertex displacement likes
+it likes nice and beefy geometry that it can move around with your texture of course if you're going for like low poly effects or maybe you want to do like a low poly mountain or something
+uh yeah you don't want to use something that's so um intense uh in terms of geometry probably a good idea to to keep it the same as well 50 50 um you know we'll leave this wireframe for for something else for later um okay so where were we let's turn the rectangle back on activate
+okay and we have our orbit controls set up here so we can rotate the
+the displaced model and we see or geometry and we see that we have an issue we have a default light in the scene um which is a kind of a spotlight pointed at the mesh we have um but it looks horrible like the the light doesn't know where to bounce correctly so we
+we have this displaced geometry with completely flat uh effect and what we need to do is to um give normals which
+are like the information for the material to bounce light in a um kind of simulated way for us to um
+um like believe that it's uh being displaced and and these uh pink um kind of valleys and mountains are
+are actually in in the geometry so right now there are no normals in this
+um composition here and the vertex displacement um operator has a calculate normals toggle and if we toggle
+this on we already have like a a much better result um the the you know this can work actually really
+really well with um for example uh like low low poly stuff it looks pretty decent you can get some cool
+effects with it but we want even more control um than that and we'll set it to something extreme
+you know it's it's it's not really good enough and also uh the issue is it's using the geometry to create
+these this displacement so if we um really zoom in here
+making the geometry to make this geometry huge you'll see that there is there's a lot of like um
+issues if we even like lower the geometry maybe 200 is actually pretty decent
+so yeah it becomes a bit blocky and um we don't want that we want more control over this
+you see that it's uh super blocky and the only way we can make it not blocky is to add more and more
+geometry which is not great when you're you know see it's still blocky um it's not great when you're
+dealing with low power devices or um mobile or or some like vr headsets or something like that so
+that's usually what i did and i was like ah you know not great um but what you should be doing is not
+uh relying 100 on this it's to turn your um displacement map this black and white image into a normal map and
+that's why um i want to show you this because it the effect is so much better so we use an operator
+a texture operator called to normal map so it um resides in the image compose
+and what it needs is a black and white image to generate normals from so if we add a draw image
+which will draw an incoming image um into this image compose stack we'll give it this height map we're
+using and we're gonna get a normal out of it and we can adjust like the strength of it
+and of course apply like more effects um like a blur
+uh yeah so we can blur the map a bit um in case we have issues and
+what i also recommend you do is uh since i'm not going to be scrolling this image side to side for example
+with this transform position we're not going to be scrolling our texture um
+don't use the wrap mode on repeat because you get some issues with um i'll show them to you actually
+all right so we have our height map plugged in and we're going to be using these um custom generated
+normals and we're going to put it into the normal map so now this is a lot easier to control we can
+control it in our image compose stack with this strength modifier or we can go into the font material uh and in the
+parameter panel go all the way down where it says normal map intensity and we can adjust it here as well
+and uh yeah so now we can control our displacement and have um an interesting control over
+our normals and the the thing i was getting at with this wrap mode and texture scrolling is
+things like this on the edge you'll have um an issue with the normals because this is a like a normals issue
+where the um the light is kind of reflecting off the edge when i think it should just be
+you know flat or something like that and then we also have the the displacement itself getting this weird
+kind of uh wall on the side and that is because we are using these wrap modes um on repeat so the texture
+is set up for us to be able to scroll to the side and up and down and things like that so if we use
+this wrap mode clamp to edge and also on the normal map we'll get these nice sharp uh edges on the sides
+um yeah that's pretty much it and then if we add a spotlight
+we'll be able to you know get more interesting things with our normal maps
+and of course all this stuff can be animated you know um of course i'm gonna put a timer on this thing
+timer
+yeah so that's pretty much it and you don't have to use of course a noise you can put in a picture
+or like a height map from nasa or something like that and and get into cool territory with uh making cool
+displacements but i left this simple wireframe here hmm let's try this actually let's unhook this
+and unhook this and unhook this and then plug it into this uh simple wireframe and see what happens
+wow okay so this wireframe is now getting the vertex displacement that's pretty cool
+yeah i like that we can plug this back in so we can adjust it live and deactivate it so it's not drawing
+over our wireframe and go to like i don't know 64 by 64. so maybe it's going a bit too fast
+for one so we can get into like funky territory with uh wireframes as well and we can color the wireframe with a
+basic material yeah um yeah hope you like it um definitely check out the example patch
+uh that magoof posted and play around with uh the vertex displacement map and all these cool settings here bye

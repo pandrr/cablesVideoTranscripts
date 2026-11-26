@@ -1,0 +1,121 @@
+https://www.youtube.com/watch?v=00WtPvE720M
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
+forums is Andro and today I'm going to be giving you an introduction to the Weave Arrays op. So
+we're going to be using this op to create a set of lines which we can then use to kind of make
+some generative art pieces. So without further ado, let's get started. I'm going to press escape
+and I'm going to create a main loop op. I'm going to pull this down then I'm going to add an orbit
+controls and just once I'm going to add a clear color up and I'm going to just put this a little
+bit brighter and now I'm going to get a basic material new and I'm going to connect a simple
+spline. The simple spline is what we're going to use to visualize the lines we're going to create
+with the Weave Array op. So I'm kind of missing a reference in 3D spacer so I'm going to pull out
+from the orbit controls. I'm going to grab the grid op and basically let's let's just change this clear
+color and make it a little bit brighter. There we go. Just a little bit more white.
+Great. So we've got this grid and I'm going to put it on number four, spacing one and I want to have
+like a reference where I am in 3D space for this. So I'm going to add the transform and I'm going to put
+the rotation of X on 90 and then I'm just going to copy this grid op and put it here. Put this there
+and now when I turn with orbit controls, as you can see, I've got like a 3D grid. So this is handy
+for me to know where I am in 3D space. I'll just zoom out a little touch. So you might want to follow
+some of the other tutorial videos that I made with arrays to follow this. If not, don't worry about it.
+Just pause the video if you lose track of what's going on. So I'm going to make a continuous number
+array and this gives me values ranging from 0, 1, 2, 3, 4, 5 and so on, as you can see here.
+And I'm just going to create 50 values for now. And actually, let's pull out a value. That's the
+number of values. Put it on 50. And then we're going to grab an array divide op and then we're going to
+divide everything in the array by the size of the array. And this will give us normalized values between
+0 and 1, as you can see here. Great. So now what I want to do is I'm going to pull this out and I'm
+going to grab an array subtract and then I'm going to grab an array multiply and I'm going to copy this
+two more times two more times here and here. Just tidy this up. So this is going to be for the x component,
+the y component, and for the z component. So I'm just going to plug this in here,
+this in there, and now I'm going to pull this out and I'm going to grab an array pack free.
+And we're going to use this to pack everything back together again. I'm just going to put that there,
+that there. Let's pull down the simple spline. I'm going to plug this in here and then this needs a
+trigger. So actually, let's use a trigger extender because I just want to keep the patch a bit tidy for
+now. Okay, great. So there's something there, as we can see, there's this kind of line. So we just need to fix
+this for a minute. So I'm going to subtract 0.5 so it becomes centered on the x-axis and I'm going to
+multiply it by 2. This I'm going to subtract 0 and then I'm going to multiply it by 0.5 and this I'm going
+to subtract 0 and multiply by 0. Actually, sorry, I'll just do this. Put it on 0. It's hard to see,
+but we've got a line right there. So the first thing I want to do is kind of introduce you to
+the basics of this op and it's called array 3x transform because you might think, I don't see
+that line there right now. That's okay. So I'm going to grab translate y and there's that line, right? So
+this line is just made out of all those points. And now let's go to simple spline and turn off line
+strip. And as you can see, let's just make this guy a little bit bigger. So I'm just going to multiply
+this by 4. There we go. So as you can see, this is a line. So there's an x, y, z point, x, y, z point,
+and it draws a line in between. So turning line strip on and off has this kind of effect. And I just want
+you to see what's happening there. So I can use array 3x transform here. And I can now rotate
+all the values of the array, as you can see here. So this is going to be really handy for what we're
+going to do in a minute. So this is actually my framework to draw two sets of lines. So I'm just
+going to go here and I'm going to grab this and press control C, go over here and press control V.
+And now I'm just going to connect this array divide over here. Okay, I'm going to get this trigger
+extender. I'm going to plug it in there. And I'm going to plug it in here. And now this is where the
+magic happens. I'm going to go here and I'm going to add the weave arrays up. Weaves two arrays together.
+Okay, so it expects two arrays. So this is the first one, this is the second one. So this I'm going to
+plug in here. So the important thing with weave arrays is it needs to know how big the chunk size is.
+So that means a chunk right now is like in the array on the left, x. So it's just merging x, x, y, y, z, z,
+and so on. But we want to do it for each vertex, which is x, y, z, x, y, z. So that just basically
+means we need to put the chunk size on three. And you might think, I don't see anything right now.
+And that's correct. So look at this, what's happening. So let's just try and make sense of this. So I'm
+going to put translate y on one. And here I'm going to put it on minus one. So basically,
+what's happening here right now is we've just generated a bunch of points there and a bunch of
+points here. So this section here is that top line. This section here is that bottom line. So we're
+drawing lines, right? So we're grabbing the x, y, z from here, and then we're weaving it with the next x, y, z
+point. And then we jump on and we grab the next three, and we weave them together with these three,
+and it all becomes one array as far as the simple spline up is concerned. And you might think, okay,
+that's pretty cool. So what can I do with this? Well, this is when we can start to do some really
+interesting transformations. And we can create these really cool effects. And you've really got to play
+around with them, because there's just so many different things that you can do with this. As
+you can see, it's kind of like this awesome 3D, 2D effects there, we can change the scale on x, on y,
+and z, and we're going to have a point on x and z. So let's just put this back. So this is like the
+framework for some other stuff that we're going to do. So as you can see, we've now just been able to
+successfully draw lines between two different arrays. And if we put line strip on right now,
+and the zoom in, you can see what's happening. Let's just lower this to say 20. And this is with
+line strip. So it's doing this. And if you're a little bit confused about that line at the top,
+that's just the grid over here, I can just put the space in on 1.5. And this one also on 1.5,
+because that might have been a little bit confusing. Sorry. So here we go. So if we turn off simple spline
+now, turn off line strip, as you can see, these are our lines. So turn on line strip, and they join
+like this. So this is like a really cool framework to do a lot of stuff, because you could like get the
+array from a shape with geometry points with two spheres. I'm going to show that in the next video,
+and you could weave them together. But right now, I'm just going to show like another little simple
+thing here. So I'm going to pull out from num values, and I'm going to grab a random array.
+And I want the minimum value to 0.5 max. And as we can see, I get a bunch of numbers here. So let's
+just say I want to change the height of the bottom part here with this random array. I go here, and I
+grab an array math up. I'm going to put this here. And I'm going to say subtract, and I'm going to plug
+this in. And as you can now see, we've got like these different heights over here. This is just to
+show the very basic of something that we can do to start to create something that's looking a little
+bit generative. And so we can start rotating this and getting some really crazy looking things.
+And like I said, this isn't the prettiest thing right now, but it's just to show like what we can do.
+So if I would now grab the translate X, we can move them all this way, that way. So let's say that
+I'd want to create something like some pendulums swinging a little bit randomly. That was kind of the
+idea which led to this patch. So I'm going to go over here, and now I'm going to pull out another random
+array. And it's just to give an example of what you can do. Again, minus 0.5, 0.5. And now I'm going to
+get this random array. And I'm going to grab an array math. And let me just move this here. I'm going to
+get that normalized coordinates set and put that in here. Okay, and we're just going to add it together.
+That's fine. And now I'm going to grab an array sin op. And what I'm going to do now is I'm going to put the
+frequency, say on 2, amplitude on 0.25. Great. So now I'm going to make a copy of this. I'm going to put it over here.
+And I'm going to put this on, say, 5.2, some arbitrary number, 0.5. And now I'm going to grab an array
+math op. And I'm going to pick multiply. And what I'm now going to do is I'm going to get the normalized
+array and put that in here. I'm going to grab this, and I'm going to put that in there. And now what I want to do is I want to change the
+the Z component forwards and backwards on the bottom. So this really isn't so difficult. I click here,
+and I'm going to make an array math op. I'm going to put that here, and I'm going to leave it on plus.
+And now what I'm going to do is I'm going to grab this, and I'm going to plug that in there.
+And now what we're going to do is we're going to pull out from phase, and we're going to grab a timer 2.
+And I'm going to put that on 2. And then I'm going to grab a multiply op, and I'm going to put it on
+just some different number here, like 1.7. And I'm going to plug that into phase.
+Okay, let me just zoom in a bit so you guys can see this, move it out.
+So as you can see, we've now got this kind of like pendulum effect, could be going a little bit too
+quickly. Let's just turn it down a touch. So wow, we've already got this like kind of like random wind
+like motion, like I don't know, some wind chimes or something. We're only doing that on the Z axis,
+we could also do it on X, but I just want to keep it simple. And the last thing I want to do to show us
+some from this tutorial with what more is possible. I'm just going to pull this down. And I'm going to
+grab a matcap material new. And then I'm going to pull out a trigger once, and then I'm going to grab a
+sphere 2. And I'm going to pull out from the matcap material, and I'm going to make a mesh instance up.
+And then I'm going to plug in this right here. And it needs a position array. And for that,
+we're going to use the bottom one right here. I'm going to plug that into positions.
+I'm going to click trigger once and reset. And as you can see, everything is way too big now.
+So let's put this radius and say 0.1 and do trigger once again. And as you can see, we've now got these
+kind of like pendulums there, which are kind of like swinging in the wind, to say it that way.
+So this was a kind of basic tutorial with the weave arrays up and some of the little tricks that we
+could do with it with some lines. This is the first part of an ongoing series where I'll be showing how
+we can do more with the geometry points up and how we can use actual geometry and weave those together to
+create some really interesting stuff. I know this is pretty simple and it's the basics, but hopefully
+it's enough to give you guys a framework for the rest that's going to come. I hope this video has been
+educational and informative. If you have any questions or comments, please feel free to leave them under
+the video below or to post them on the forums. Thanks for watching and have a good one. Bye!

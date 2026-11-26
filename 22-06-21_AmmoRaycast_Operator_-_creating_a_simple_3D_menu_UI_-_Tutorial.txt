@@ -1,0 +1,156 @@
+https://www.youtube.com/watch?v=hlmNf_42raY
+hello this is alex from cables.gl i want to quickly show you how to set up a 3d navigation
+menu type of thing with the new ammo world and ammo raycast operators and then maybe show you
+a little bit about this ammo debug renderer that's really helpful but yeah i have a patch here that's
+set up to allow me to do this so i'm using my mouse to rotate and then when i mouse over the
+different 3d cubes they will move up and down and it's really nice because it's quite precise that
+you know they all move when they should and if i show you this debug renderer and maybe remove
+the materials here you go here you go you see this green bounding box and some sort of directional axis
+things on here and then when i mouse over this green box then an animation plays and if i actually
+turn on this flow here and focus on this first cube on top you'll see that there is a little trigger that
+happens a boolean gets flipped when i mouse over and it triggers a boolean animator operator and then
+changes the transform of the 3d model and uh we'll get into why i did it this way because um
+uh i used to do it another way and then you get into kind of ui um interface issues that are very common
+with um computers and mice and interactivity and the web and all that stuff so what should we do we should
+uh probably start from scratch right and then um continue with exploring all the intricacies of the stuff so
+let me just um let me just disconnect this and then i'll move over the main loop and then start
+from scratch so let's say we're working on a menu and we want it to be in 3d space maybe it's going to be
+in 2d space but we want this uh geometry to be our buttons right i like cubes and they're going to be my
+buttons so i'm going to put down a cube and then i'm going to scale it actually i'm not going to scale
+what i'm going to do is start this ammo world
+in my project so now i have this ammo world and my physics objects will start to live in it
+uh if you look over the parameters there's some gravity and a simulation tick box and uh reset
+and activate um pretty basic stuff the gravity we don't really need because i want to make this menu
+um kind of a traditional website menu sort of thing so it's just going to be flying in space basically
+um and not moving other than uh reacting to my mouse over and then the reset's pretty handy
+i'll probably use that a bit and simulate yes we want that and activate all well i guess it's already
+activated um it's it has its own uh use cases but for this menu project i don't think we need to worry
+about it so next we need the ammo raycast operator and if you've seen the previous raycast tutorial i've
+done last year when we used to use a different physics uh setup but quite similar one actually
+uh it's i think even faster to set up but the the um the concept is pretty much the same we're shooting
+out lasers from our mouse uh coordinate to uh a physics object which has a bounding box and if our laser hits it
+then we get a report that yeah we hit something so um let's take a look at this ammo raycast operator and we have some
+inputs for our mouse coordinates or maybe some other um values that you will feed into it maybe there's a
+uh tracker that you're using or maybe one of the sweet new uh augmented reality operators you can you can uh do that stuff um
+um not just with um not just with a mouse so then we have the active and change cursor um inputs or
+flipping these tick boxes so we can um change the cursor when we mouse over a square or a cube or something
+um or not and then we have some outputs has hit and hit body name so what this thing will do is tell us
+yes we hit something and then when we need specific information of what we hit then we'll get a string of the
+name of the object object we hit so right now we have this cube and it's pretty much in the graphics world it's not
+living in the physics world what we need is actually i'm going to remove this connection and put down this
+ammo body operator uh it's very very nice to use very um self-contained like very it has a lot of good
+parameters that we need so we don't we can just use it by itself we don't need to modify with other ones it's a
+really really um well well equipped operator i should say all right so for mass we don't need anything right
+name that looks important let's do that first cube we're gonna name our ammo body cube um then we have
+mass friction rest restitution love that word the that we don't need to deal with right now as well but
+maybe in a future tutorial or of course in the future tutorial we'll get more into the actual
+physics um as we know them uh and have some things collide and ricochet off each other so we'll use that
+then but right now we don't need to worry about that and then we have a shape which is basically our
+bounding box cage and right now we have box selected but i can't see it but uh as i mentioned before we have
+this debug render operator which is really handy um and i'm just gonna disconnect it from that setup and
+move it over here and it needs to live under the ammo world and now we see our cube right and if i change
+it to a sphere then we have a sphere and i'm gonna put down a orbit controls and zoom out a bit and then rotate
+rotate around this bounding box cage so we have a cube let's actually change it to a cube again
+box and what else do we have we have a simplify max triangles parameter that's more of for a convex hull
+uh that we'll get into a little bit later in this tutorial as well uh then we have size which is really
+interesting because we didn't have this earlier and now we can actually transform the physics cage
+and then we have this output on the bottom of the um operator that has a transformed uh trigger output
+so for example if we connect it simply to the next trigger we can see that our kind of graphics
+um rendering of the cube doesn't match up our collision cage and i hope you can see it um i hope so it
+could be it could be quite small to see this cage sorry about that it's this green pixel line um but
+it doesn't match the shape right so that's a problem so for example if i want to pick the cube actually
+it's already active right so um we no it's not active because we're not feeding anything into the ammo
+raycast let's quickly set this up and then i'll show you why it matters when the cage is the wrong size
+okay so mo raycast needs x and y from our mouse and we don't need the pixel values which are what are
+reported by the mouse operator right now we need uh zero to one so we'll just normalize the mouse and now
+when we mouse over the cage you'll see my cursor changes right so back to why this way is kind of
+annoying right we have a cube and then we have this cube and they're different sizes so then we need to
+like match the size to the the graphics version of our uh cube that i will throw a material on
+um so this is kind of what we had to deal with before but now all you have to do is plug it into the
+transformed output and the geometry below the physics cage will be transformed to fit the cage which is
+so so nice so if you're working with um primitives like uh cones and and spheres and boxes um that you can also
+find in our you know typical um cables geometry simple geometry nodes um then for example we'll put in a
+sphere and then change this to a sphere and now i am changing the radius and my sphere changes as well
+my kind of graphics version of the sphere so super nice right like so much time saved i love it so good
+so that's neat too now um we have a nice cage for our sphere and when we're around the sphere nothing
+is triggered and then when we do also over the sphere we get this report in our ammo raycast operator and
+also on the ammo body which is fantastic because um you know in some cases you might want to check if uh the name
+was hit so for example this this string will show us that we hit a cube or nothing right um it's now a sphere
+okay so if we hit the sphere it will tell us and then we would have to do maybe like a check um is
+what was reported by the ammo raycast the sphere and if true then maybe play the boolean animation for
+maybe making the sphere bigger so you can do that and there might be good reasons to do that in the future
+or in your future project where you do need to quickly maybe check for a name from this mo raycast
+operator but for quite simple things like doing a menu we can simply do
+uh a check inside the ammo body operator it has an output of was it hit by a ray true it's exactly what we need
+right so i'll put down maybe a boolean animator uh animation bool anim and then
+i'll do the scaling again because i want to show you why
+it's sometimes nice to not scale your geometry hitbox
+um okay so we plug in our scale
+yes scale into
+our boolean anim and instead of zero we'll do one and then here maybe a two or something and then
+we'll plug in this to the next or it can even go in between it doesn't matter
+to make it a bit neater we'll just put it here right so now when we mouse over our sphere gets gets bigger
+and we're closer to doing some cool interactive stuff
+now what can you also do with this ammo body and ammo sphere that's amazing now we can actually use the
+the transforms above the geometry object and move around this static um geometry body
+uh into any position we want and with that moves the cage and of course the ray uh raycast result um changes as
+well or we're looking for the sphere in a different place in the screen super cool you can animate this it works perfectly um fantastic
+fantastic now if we change the scale um it doesn't work so don't worry about that
+the scale doesn't work it's strictly for position of the object at the moment so good stuff
+now the scaling if we scale our radius right
+and animate it as well so let me do this um we'll do it like this into the radius and then remove this
+transform whoops didn't want to do that we'll remove this transform and now um our
+cage and the graphics rendering of the sphere will get larger when we mouse over
+but you see you get into the strange um
+catch 22 where you're you're changing the size of your hitbox and also kind of the graphical representation
+of your button or sphere or something like that so it's just kind of like a um a thing to watch out for when
+you are doing interactive menus and um maybe some sort of panels inside a virtual room or something like that
+remember to keep in mind that you probably need to leave the mouse over or the interactive areas
+of your um user interface completely alone otherwise you're going to get into weird um
+glitches where where the hitbox is changing size and it's again checking if the ray has hit
+and then you get like stuck basically so um wanted to do this mega tangent to just um uh get that point across so
+you can change this but sometimes it doesn't
+make sense to change it interactively is what i'm trying to say so all right now back to our
+original setup so don't need this anymore we will um hook up this pre-constructed menu
+and maybe connect all these basic materials as well
+by the way i kind of like this trick where you're using uh basic materials and then you just add in the
+fresnel glow and then you get this kind of cool uh unique material anyway so we have our menu like
+thing and you see like when when i also mouse over as i'm rotating the camera it still animates so
+you might need to do some cool logic where it's like well don't check for this if your
+buttons already press so you're you know you gotta uh do some cool like logic checks that make sense to
+your user interface and in our um demo room that i talked about before i think there's a few places
+where it does do some sort of checks like uh don't activate this if you're rotating i think here
+if you look into the um how this gallery is constructed the user gallery see when i mouse over
+i don't trigger the web pages opening um uh the the projects that are being shown on these these panels
+here so you can do some sort of ray casting and checking um that makes your user's life a lot easier
+and doesn't um activate certain animations when they don't expect them um so yeah uh we're basically
+doing the same thing as you see in this demo room uh feel free to copy it there and see how it's made
+and uh we have it here as well so we're just using cubes and we um pretty much made one setup like we
+just did with the sphere and then copy pasted it and then transformed it to a different location right so
+pretty sweet um you just basically make one of these smart uh buttons and then change them maybe put in
+another texture or put in like a text mesh 3d to give it a name and um yeah you can do that with uh
+the simple meshes but what happens if you have a gltf scene right um can you do anything like ray casting
+and checks for um mouse hits and stuff like that with glts of course so let's plug this in
+and we got this piece sign right and let's see if we can actually um show you the debug renderer
+result of what we're getting from this gltf and we need to reset our world so it forgets the
+physics objects that were plugged in before and now you see that we have a gltf with
+the geometry broken out so i went into the show structure and then just um kicked out one of these
+nodes i press node and then i have this node with a geometry output and then this geometry output i plug
+into that same operator that we were just working with the ammo body and then for the shape i select
+geometry convex hull and now these um parameters for the simplify max triangles start to matter because
+we can create a super super simple cage for this piece sign maybe with like four um vertices okay that's
+that's extremely small maybe like 12 right and we get this approximate shape that um the operator
+figures out and this could be really handy sometimes when you for sure don't need a very high detailed
+hitbox and you want to save some resources um and maybe a shape like this is good enough for you so
+this is where you change that the number of triangles so i had it at 64 let me type it in 64
+and it looks pretty good it matches my p sign and that's pretty much how you do the same
+thing with custom geometry so you're not just stuck to using cubes and spheres and stuff like that and if
+you remember our past um physics engine it didn't really do the cages in such a cool way we didn't have a
+convex hull with a controllable amount of triangles we basically had a box that would go around your object and
+it would be not super cool when you're uh trying to pick an object that is behind like 10 other objects
+or something like that anyway um that's pretty much the basics of raycasting with ammo and i hope you stuck
+around and learned all these cool new tricks and hopefully you feel that it is 10 times if not a hundred
+times better than the old way of doing things and i'm really looking forward for you to try the um
+trying to make 3d navigation and maybe then we also add some uh velocity and physics and friction and
+and collisions and stuff like that in a future tutorial so thanks a lot see you around come to
+our discord come to the meetup bye

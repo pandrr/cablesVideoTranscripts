@@ -1,0 +1,1696 @@
+https://www.youtube.com/watch?v=zjrDRNxqwYk
+okay yeah shall we start yeah let's start okay
+so hello everyone welcome to our weekly stream um today we're gonna talk about the latest release
+and zemo who developed the new shadow system will show us how awesome those shadows are
+and we will see other features from that release which was a huge one and you guys can ask questions
+about the release or about anything really um you can join us if you want you can join us with your
+webcam and speak to us with your voice um if you are on you can you can join us on discord um below
+this stream there's this discord link and you can join there and then you can just join the cablescast
+channel and um you can just talk to us if you want don't be shy we really love to see someone new
+someone we don't know yet um and that would be great um
+um yeah um so
+i want to show like first of all i want to show something from the community
+in the beginning of every stream so uh i don't know something like the patch of the week or something
+um not really planned but we we saw this awesome patch and we were so like we love this thing
+um let's enjoy it for a moment
+like it follows your mouse and the guy is really alive i think it also has sound i hope the sound works
+i don't think so
+i don't think so
+um because of this
+uh for over 10 years the ecosystem is bulletproof and has a massive amount of options
+the base is interactivity and can be as simple as the position of your mouse or a scroll bar but just as
+easy a link to a database the files are lightweight play on your graphics card for performance and will
+integrate into any website if you want to hear more and how it can apply to your projects then give me a
+call or drop me a line
+it's amazing it's so good um yeah and suzanne however you say that uh published a lot of really cool patches you should check them out um and they are also really
+well organized um and interesting um and yeah as always you can look into public patches
+and um yeah if i was like like how did he or she i don't know uh do the the the mouse uh movement raw ego has something new because it looks so good
+and it's it's it's really just uh it's just uh it's just the um audio analyzer and just like the average volume is is scaling the mouth up and down and works so good um it's really surprised by this i love this love this patch
+yeah absolutely love it i didn't think it was so easy with the mouse but yeah that works really well let's feature it
+let's feature it no really really really great thing um i love it um another thing that we wanted to show from today
+today actually in our discord um the user akagawa probably wrong how i say it but
+oh yeah um he or she posted this link to to a website that was done with cables so let's have a look at it
+and um the website is using um the cable's gl patch as the background
+and it's just changing over time
+and um the real content is is overlaid over this background which works also really really good
+i think we had like an earlier version um of this background um on instagram so
+actually it uh
+it was published then if we featured it on instagram so let's have a look um
+i don't know the
+i don't know the username
+but maybe i can find it quickly
+isn't it the last same as his last name
+oh there
+yeah he published a lot of stuff yeah so this patch has already 18 likes it's it's a really big
+let's also feature this
+uh am i missing sound on the website but yeah so this was also published so you can have a look at
+it how we did it
+so am i missing something maybe i can turn on sound
+and i think it's probably right okay it's okay it's only after this and what did i press yeah you can you can
+explore this website on your own you see there are some secrets and you can find find new content uh yeah
+but really cool website um we need to put it on our um made with cabets page
+um yeah so if you if you made something um with cables or use cables for anything just just uh just
+tell us we love to see this stuff um just put it in general or publish it or um um just tell us we
+want to we want to we want to feature this and we want to show this on on the website and um yeah just
+tell us really um what you are doing with cables yep publishing it is like a good way to get our attention
+right so we got this bot channel where um where we get like every published patch and i really like
+going through this like every day or something just scrolling back and see what the people do in cables
+yeah but also if you're using it in a in a real in a real life project um that's external from cables
+please just tell us and you don't need to publish um if it's a it's a bigger one or whatever you don't
+need to publish but just tell us we we are this makes us so proud um to see those kind of projects
+uh makes us really happy and motivates us um yeah um stefan you want you wanted to say something about
+no vogue maybe uh right now yeah um because we're still uh in the process of um um well starting a new
+cables jam um maybe that's a good um opportunity to um say something about novo which is the replacement
+for evoke um that won't happen um this year because of um situations arising basically um we're doing this
+online it's going to be an online demo party um with a few competitions music competitions graphic
+competitions executable real-time um competitions uh it's going to be on the 15th of um august and from
+15 um uh 1500 to i don't know something like three um uh three in the night um with talks and dj sets um
+competitions moderation and um yeah everything in between um this really um a huge hobby project of
+tom and um me with a lot of other people um also doing lots of work we'd really love to see you there
+and maybe um if you still get the time do something cables and enter one of the competitions you might even
+win something yeah so yeah exactly so usually this is called it's it's always in august and it's called evoke
+which is like a real-time animation festival basically so there are like a few hundred people
+that are developing and drinking beer and listening to djs and um this this is in cologne usually so
+because of the whole covet 19 situation we cannot do this in real life so we we are doing this online
+at this time and um yeah it will be streamed on twitch um it's the whole basically most of the 15th of
+august and um if you saw last uh last week's episode something like daya and kb did stuff like this will be
+shown that isn't not uh not everything is done in cables but some things sometimes and also like this
+website that we did cables and also the whole system maybe we'll also do a stream about that i thought
+the whole system and that shows information and shows like the competitions and stuff like this is done
+in cables by us and um yeah so if you want to see this uh try this out there will be a timetable here
+when you when there will be the the interesting competitions in the evening and yeah check it out
+um yeah so then our next point is the the new release um so probably you heard already that we had this new
+release last week um actually today we already uh made an update it's not it's not here yet but we
+already fixed quite some bugs that were stuff that was going wrong but all in all it's it's going
+it's going fine i think um um so we will publish the information that what we changed uh tomorrow
+i guess and um yeah so we will go through this list on and check some things out but probably like the
+biggest thing is the um um the shadow system um from from zemo he brought it hi zemo
+hey everyone nice to finally be on the stream yeah you never you were never on the stream right
+i was in the chat making uh cheeky comments but never on cam
+yeah so so simu is also working at uh under and um so simu tell us what like was one reason why you
+made the shadow system was not only because uh you like shadows so much right yeah no not only so um
+maybe i can introduce myself yeah my apartment is kind of shadowy all the time so i kind of do live in
+the shadows but uh yeah apart from that maybe i can introduce myself and how i got to unnav and why
+this whole shadow thing actually started so um i i study computer science for media and i started working
+at unnav about one and a half years ago and um i was in october last year i finally got to the point
+after a long long study where i'm finally able to write my thesis my bachelor's thesis and i thought
+since right since i work at unnav and do so much with computer graphics it would be cool to
+write about a topic that could actually benefit unnav as well and not just only me for academic
+purposes and then get hidden in a drawer forever so um tom and me we discussed about what we could
+actually add to cables we had a few options of bigger systems we talked about i think pbr and
+shadows were the two main ones and then i went to my professor professor and he said yeah pbr is too
+easy so uh do shadows and which was cool by the way since pbr is much more difficult in my opinion but
+whatever um so yeah that's why i started writing the shadows physically and i've been writing them
+since i think october september october was the time when i started um i got the first version working
+and then we realized okay there are some problems with the engine so we had quite a bit of stuff to
+prepare before we could actually release the shadows in a stable version so yeah that's how i wound up
+writing the shadows one for my thesis and second for undef or the other way around actually first for
+undef and then for my thesis and will this thesis be public after that uh i hope so okay i don't know
+actually i never even asked but i'm in the process of writing bigger documentation which features
+various parts of the thesis so for anyone technically interested they can of course always uh contact me
+on discord and ask for the thesis thesis i will gladly send it once it's published so it shouldn't be a
+problem but i will get back to you with that yeah so if you have been working for this for quite some
+time uh a few months basically what were the greatest challenges any one thing so was yeah yeah there
+actually were uh quite a few challenges in the beginning it was come completely overwhelming on how
+to like uh add a multi multi-pass rendering system which shadow mapping basically is into cables so that
+everything runs smoothly i mean um you guys know that we have some picking ops which use that kind of mechanism
+or also some other ops like particle systems but with this one uh it was kind of a bit more difficult
+because you had to um i don't know you have three ops all rendering two passes you have to make sure that
+they work in combination you have to make sure that they work alone so uh the algorithm itself was not
+that difficult i think that took like one or two months to get right but then integrating it into the
+ecosystem and making it work flawlessly was i think the biggest challenge but as well then see i think it
+was absolutely uh worth the wait and um what you get from it's like a really modular system where you can like
+just pick and plug in shadows and lights everywhere right yeah totally totally i mean it still comes
+with a few caveats here and there and i guess it's not a hundred percent perfect but which software is
+right so i think the state we are at now is a pretty good one so you can definitely use it for your demos and
+your websites and everything so yeah yeah as always it's a it's a it's a work in progress um but i think
+i also think it's really usable and um yeah we we just have to use it now for real and and yeah it comes
+up yeah so so before i dive deep into it i think also when you showed it the last time um since we didn't
+have proper documentation yet um the different algorithms work differently right so you gotta know which one
+you are sorry you gotta know how you gotta know how to use which one you know so i will show it to you a bit
+later but takes a little bit of uh getting used to the different settings and what they can do before
+you can actually get good results but 80 of the times works right off out of the box so i think we also got some
+good default values in there and yeah i'm excited i think we will also make more tutorials about this also with andro
+and um and um and you are writing the uh a big documentation right yeah yeah and how to use it and
+how what what's the performance issues uh where you can run into and um like what artifacts are there and
+how to solve them and stuff like this um yeah so we are we are still working on this but we just wanted
+to get it out and and get people to use it and then
+uh see how it goes
+yeah i'm very excited i can't wait until people make some patches i saw that for maybe me already
+published something which was quite nice it was the first published patch with the shadows yeah
+something with the new form material i think came right after that thing i'm not sure but so far
+people have been maybe hesitant to use it maybe everyone's on vacation i don't know but i'm very
+excited only five days it will happen eventually
+yeah let's show something right
+yep um what do you think should we start with a very simple example and i explain a little bit how
+how everything works and we start to move forward with a bit more advanced stuff then yes and for all the
+people like um if you have any questions um just type them in the chat and we try to relate them uh to
+simo while he's working so um
+all right
+so should i just open my patches yeah yeah just do do what you want
+okay um you can also lock out if you want to that's easy
+uh yeah sure can i can i see my user here somehow or my patches or you know the quickly
+do you know your password i know my password yes okay yeah let's just relate this okay
+all right so i prepared a few examples and the first one i want to show you is
+the most basic one it is kind of like um the example that is published with the op
+can everyone see it
+i can open it
+let me try something okay one second um yeah i don't have i have no idea
+okay let's try the development server
+no maybe just start from scratch then can you clear your cache so for me yeah i can also
+do it for me it works works online right but yeah i mean i can patch it up really quickly it's no
+problem i'm not quite a few times so
+okay wait a second um the other one works so the complicated one works so i don't think it's a
+big big thing okay you you do your match yeah
+so we're doing it on that sure all right so now it's always one i don't know
+i'll just start really quickly it's very easy to set up so for everyone that has not worked with
+shadows um
+first we need to patch something that receives shadows and we need to patch something that casts
+shadows uh maybe a bit of terminology first so you know what i'm talking about something that uh
+receives shadows it's called a receiver and something that casts shadows it's called an occluder
+and i will try to refer to these terms while we're working on it so first thing i'm going to do
+do is add a floor which i will use a cube for um i will go into more detail on why i'm using a cube a bit
+later but um first thing to write down always use a geometry sorry sorry can you wait a second
+um because um because um because um because um i don't know why i'm locked in now again
+um because i'm deaf most likely i i let's do it on let's do it on live and then it's fine okay sure sorry
+um okay guys so test for you what's the receiver what's an occluder uh just kidding so
+the basic scene will be we have one geometry it's going to cast a shadow onto a floor the floor is
+going to be a cube and the geometry i pick now it's going to be a torus so let me set up the floor
+really quickly um before i do that let me add a camera control orbit controls my favorite camera control
+um yeah so let's first create a floor now
+um what do we need so to be able to cast shadows we always need a material right so
+i will take the lambert material because it's the more simple one before getting into detail with all
+what the material can do i will just take the simple one let's make some nice colors and now let's
+add geometry we want to cast the shadow and occluder so i will take the torus i like the torus because it
+has a hole in the middle and it's good for seeing um shadows so here's our scene as you can see
+it's just the torus for the floor so what do we need to cast cast shadow we need a light source right
+so i will show you everything with a directional light and after i showed you the different algorithms
+i'm gonna get a little more into the different lights that we have and how they apply to shadow mapping
+so
+sorry guys it's very loud here on twitch on this part
+i don't know how this happened i don't know how this happened someone
+yeah keep it visual is in here can you maybe turn off the sound on your twitch for us
+keep it visual
+ah there's a keep it visual hi
+finally
+bye keep it visual
+okay so let's continue then shall we
+all right all right so i will also add a material to the torus i'll take the phone this time just to
+make it look a little more shiny so if i look at our direction light you can now see
+the way it's casting or the direction that's casting into it so keep that in mind
+now with this update we got a version two of our shadow op and the shadow op is responsible for
+basically you allowing you to decide whether an object should receive a shadow whether it should cast
+a shadow which algorithm it should use and like change some parameters within the algorithm so i will add a
+shadow up to the floor now um so we also added a few cool warning messages so now you see
+warning there are lights in the patch but none of none that cast shadows please activate the
+cast shadow property of one of your lights in the patch to make shadows visible right so we try to give you
+as much clues with the ux as possible so you don't feel stranded in a sea of ops so the shadow op told
+us hey we need to activate cast shadow so you see it here cast shadows if i turn that on boom there we go
+we instantly have shadows so it's actually pretty easy to get a default shadow example going really quickly
+now to be in control of our torus i will also add a shadow op after the phone material of the torus
+what you have to keep in mind maybe for people which i didn't know when i started out happened to me a lot
+the shader effects always go after the materials right so don't put the shadow before the phone
+material always put it after so you get the results you expect okay so what can we do now with this
+shadow obvious you can see here we're casting a shadow you see here our torus is not properly
+on the floor so we have this kind of white spot here do you see my mouse yeah but i guess you know
+what i mean right so let's try to raise the position a little bit yeah there we go okay so you see out of
+the box we have proper shadows now what can i do with the shadow op so basically i can decide if i want
+to if i want an object to receive a shadow or if i want an object to cast a shadow so if i deactivate
+cast shadow everything that follows the shadow op it's not going to cast a shadow anymore but we want
+our torus to cast a shadow so we keep that activated but we don't want it to receive a shadow since with
+this example we'll just use a minimum one receiver minimum one receiver so now the basic shadow thing
+we're seeing here this is the default algorithm right it's called default and
+you can move your lights around change the direction and maybe what's interesting you can
+always see what the lights camera sees when you mark or click on your light operator so let me change the
+x direction c to show you what i mean so if you see i'm turning it now i turn too much sorry i have to write it
+right so i can type five i can type minus five you see the camera of the shadow map changes and also the shadow
+on our main main patch view changes so
+you can play around with these properties and like check out how you want the shadows to look now
+that's all you need to add a shadow basically
+there you are you have a shadow so very cool if there are no there are no questions in the stream i
+would like to show you the difference in the algorithms now yeah no questions if you have any
+questions uh you can always ask us and you can also try to join again if you want um i turned off the
+the sound signal so it's uh it should not be too annoying if you want to try it out again
+but please um turn off your sound maybe i didn't turn them off turn off your sound
+okay um yeah i think you can continue sorry maybe maybe we do this later maybe that would be a bad idea
+sorry yeah yeah don't worry all right so the the default shadow algorithm the algorithm itself is
+from 1978 so that's a long long time ago and um and this is called shadow mapping right or um
+i actually wrote that down in the documentation sorry i don't have it open anymore i think it's called
+casting curved shadows on curved surfaces was the title of the actual paper back in 1978 so this is a very
+very very old algorithm but it still technology we are doing is called shadow mapping right with yeah
+yeah basically yeah yeah so maybe i can explain the process just very quickly what we're basically doing
+is um we're taking a fictive camera we place it at the light's position and we we render what the what the light sees into a buffer
+and once we're back in the material we compare the values in the buffer to the values
+on the screen basically or in our in our in our actual scene and what we're doing is we're saving the depth value
+so how far is my object away from the light and can i still see it from my normal camera and if these values you compare these values and if you don't see it from your light but you see it from the camera
+you basically get a black pixel so it's actually a pretty simple mechanism for people who understand
+anything about computer graphics and yeah what i wanted to say the basic algorithm is fine for actually
+adding shadows but as you can see we have these jagged artifacts right and
+i think they're more prominent when i do it like this so if i change the map size to 256
+512 you know the higher the resolution the less edges you get less jagged edges you get but you
+still have them with this algorithm so it comes with performance drawbacks right i cannot just like
+basically switch these for free to whatever i want yeah yeah sure i like you have to keep in mind that
+the higher your texture resolution the less performant it will be and especially if you're interested in
+making it work in mobile we should definitely try to stay at a max of 1024 if you plan for an iphone 8
+and above iphone 7 but if you're going below i guess 512 and even 256 would be better but i will get into
+the map size a little later because i want to show you the difference of the algorithm so the problem
+with the default algorithm is that you cannot get um soft shadows so what are soft shadows soft shadows
+are shadows that basically blur out at the edges right so they get lighter at the edges which is what
+real shadows look like i don't know if you can control here on my yeah you now you can see it on my wall
+like the shadow there it like fades out and if you look back at the screen uh you don't see that like
+we have really hard edges so computer scientists from all around the world they wanted to get soft shadows
+and there were numerous algorithms written about this some persisted some don't for my thesis i chose
+three algorithms that are able to produce soft shadows and these are the ones that i'm gonna
+present you right now so if you want soft shadows the first thing you can do is check the next
+algorithm voila so as you can see here if i zoom out a little bit you see with the pcf or percentage
+closer filtering algorithm we are already starting to get pretty good looking soft shadows
+the algorithm itself basically works by linearly interpolating the values of the map
+i won't go into much detail with that now but just think about about this algorithm as taking the
+average at the borders of the shadows and trying to smooth it out a little bit so what can we do with
+this algorithm we can set the amount of samples that we want to use so maybe i will just show you
+what happens if i change the sample amount so if i use one amount of sample so we use a sample amount of
+one we're basically getting the same result as the default algorithm so you can always back check with that to
+compare so if i use two samples we get a bit of blur if i use four samples we get even more blur if i use eight samples
+starting to look pretty swifty right so i would recommend using four at most especially if you work with
+texture resolutions of one k or above because this process can get very very uh expensive so try to keep
+it with four um there are other tricks with which you can make the shadows appear softer which i will get
+into a bit later so this is second algorithm i actually from all my testing the shadows i prefer this one when i'm using multiple lights
+because it's because it's the most um you can basically you get what you expect right so there won't be any
+weird uh light issues shadow biasing issues stuff that we're going to come to a bit later but
+um i prefer pcf for multiple light setups and yeah i think that's about it but i can say also so the next one
+i want to show you is the poisson algorithm i am allowed to click here which i'm not
+sorry oh yeah there we go hello again okay so the poisson algorithm basically the poisson algorithm
+works like pcf but instead of linearly interpolating the values it um samples points that are distributed
+on a so-called poisson disk uh i will not go into detail into the technical detail but basically think
+about it of creating a noise around your shadows or like a noise-like pattern to blur it out of the
+edges so here again we can choose different sample sizes so one we have the default pack
+two we get a little bit of blur as you can see four we get even more and eight it starts to look good
+with this one so as with the pcf here i would also recommend using four samples and the poisson algorithm
+exposes another parameter which is called sample distribution so let me lower this to show you what it
+what it does so if i put it on 50 see i get weird results it's kind of what this does basically
+i change it to 100 now let me change it to 150
+250 uh sorry 200 so what i want to show you is the more i increase the value the lesser the blur basically
+so if i'm at 500 i have very very little blur so what this basically does is um it defines the amounts of
+points that we sample at the edges so the higher the higher the sample distribution the lesser the distance
+between the points that we sample so think of it as if i decrease this value i can get these uh blurry kind
+of shadows and i think a good value for this distribution is 250 300 depending on your
+on your desired looks so with eight samples 500 and if you get into the 600 or 700 800 even there won't be
+that much of a difference 1500 to see we have 1500 we're almost back to the default algorithm so try to keep
+this value when you're using the poisson algorithm between 100 to get this kind of look
+and 500 to 800 so 150 to 800 i think is a good value for the sample distribution
+this 100 value gives a cool old schoolish look i think yeah yeah i mean
+what can you hear this a bit more the those pixels there is this the shadow or the map size or exactly
+that's what i wanted to show you so right now we have a map size of 512 i decrease it you see we're
+getting these edges um the higher i increase it the softer it gets so there are other factors involved in
+getting smooth shadows these look jaggy because of our map settings which i will get into in a bit when
+comparing the different lights but basically use the sample distribution to kind of like stretch your
+shadows or like have them overlay with multiple shadows if you want that okay next up vsm what a cryptic name right
+so vsm stands for variance shadow mapping and it's fairly new algorithm i think it's from 2006
+so actually pretty recent still old in a way but recent so let me turn that on to show you what it does
+but isn't all the other stuff like basically 70s math or something like this and these algorithms are
+really old some of them uh yeah the ones we showed before they're from like the 70s 80s 90s a little bit
+as well like there have been um what do you call it for best home um like updates yeah improvements uh to
+the algorithms over time so maybe sometimes somebody finds a clever way to store values in an array or
+something i don't know like people optimize these algorithms but they are still being used in game
+engines so the ones we have here they are common algorithms that you will probably find in unity and
+unreal and whatever so yeah now vsm variance shadow mapping for anyone that is familiar with maths
+variance comes from probability theory and what this algorithm does it basically uses probability theory
+to determine whether a shadow sample is at the edge or not and this works by using linear textures
+linearly filtered textures and applying a blur to them so what you see right now is
+sorry what you see right now is vsm without any blur right so um let me apply some blur to see what
+actually happens now if you want to apply the blur you have to go to the light and at the very bottom of
+shadow map settings you see this blur amount so let me increase it see what happens i'll try to do it slowly
+so you can see it ah there we go now it turns to one continue but as you see
+it starts to look pretty pretty convincing if i turn up the blur value let me now put it on a very high
+number just to see what you can actually do with it or eight or something so this is where you get into
+territory that you can use for abstract designs but keeping the value on one sometimes even
+too depending how soft you want your shadows is a good start um this is actually my favorite
+algorithm of all when it comes to looks but it's really cool yeah so i can also try lowering the map
+size and as you see with the blur i can use a 256 by 256 shadow map without having any edge artifacts right
+so it's actually pretty cool but it does come with its own problems problems that i'm gonna get into
+as in a second but um basically whenever you can whenever your scene permits try using variance shadow
+mappings for the nicest and smoothest soft shadow results so let me increase the map size again
+and show you a bit what's happening right with 1k you have to increase the blur value a bit more
+but yeah basically variant shadow mapping awesome for mobile if you design your scene correctly
+because it's the second fastest after the default algorithm and it also looks the best so whenever you can
+try using variant shadow mapping but i will come to problems with the different algorithms in a second so
+are there any questions and there was a question of um hardy he asked is there a depth information for
+the shadow map available so one could set the blur amount based on the distance then but you kind of
+answered this with um showing vsm um so i guess that works okay so he's kind of talking about like a fog i think
+within the shadow mapping with the blur um if you want the more technical explanation what we're basically
+doing is we're storing the depth values not in a depth texture but in a color texture so we can interpolate
+between them when we're using linear filtering so we're actually not using depth textures in a way which
+you would actually use in a normal shadow mapping algorithm so the old way right but and are you blurring
+it depending on the distance from camera to texel basically or is this the same blur everywhere okay no
+it's it's it's it's like our fast blur up uh in uh in post processing it's the same algorithm basically
+okay what we're doing is we're blurring the 2d picture and since we're blurring it we're getting a
+an interpolated value and especially at the edges we're getting this soft look and within the shadow
+mapping algorithm you basically re-extract that and compare it to the actual depth
+and then you can use it to build shadows but it's not a three-dimensional blur we're blurring the 2d
+texture and actually blurring the values so i think a depth dependent blur would be more of a fog in my
+opinion i don't know if that has been used in shadow mapping actually but as of now you cannot blur by distance
+in the shadow mapping algorithm that was a question yeah yeah um i just wanted to know like how this
+works i thought it's more complicated sounds i mean not simple but um yeah it's really like the results
+yeah so it's really the best looking the most performant compared like for soft shadows but it
+comes with this problems problems i'm going to get into a little later intersect yes exactly but if there
+are not any more questions then i would like to show you the camera settings different lights and how
+the different lights work okay since we started with the direction light i would love to show you the
+shadow map settings here so take a look at this map can everyone see it i'll increase it a little bit
+let's take the default algorithm again so we don't um get too complicated oh a note on the blur you can
+also try using the blur with the normal algorithms as you see you can also get kind of soft shadows with
+it but it kind of deforms your your shadow a little bit so be cautious when using it in more complex scenes
+but i would recommend using maybe a little bit and your normal so let me put that on zero and put everything
+here on zero sorry zero zero zero zero zero okay now we don't see anything okay so that's okay we're gonna
+start so what we have here with the lr bottom top near far are the camera settings of our shadow camera
+shadow shadow camera so just like i don't know how familiar you guys are with normal cameras but
+basically you have a viewing system and you define its border so you find where's the near point where
+my camera starts seeing things where's the end point where does my camera stop seeing things right so you
+you can set these up however you want i think the default values are pretty good so let's try setting
+this to to one i think it's 30. yeah it used to be 30. i just want to get it so that we hi there you go
+so as you see you can see it on uh on the shadow map itself you see that the floor is kind of not
+completely visible and when you have that what you will get are these kind of completely shadowed areas
+so here's tip number two to keep in mind always make sure the stuff you want to
+receive shadows you want the stuff you want to have receiving shadows is visible in your shadow camera
+it's like rule number one if you don't see it it will probably be black
+all right so lr bottom top basically the view part of our shadow camera so let me just decrease it a little
+bit see what happens there if i get closer and closer you see we're getting we're getting the same artifact
+again so my recommendation is always limit this lr bottom top value so that your whole scene is captured
+but nothing more so maybe here the best would be seven actually yeah yeah seven is perfect so you have the
+sorry uh you have the whole scene visible but um nothing more right so the algorithm works as optimally as
+possible which basically means yeah yeah go ahead um yeah so just wanted to say that like if there's
+like empty space like you have to minimize the empty space because you're just throwing pixels away so you
+always have the resolution problem with shadows because you don't want your map to be 4k or something
+at least not in the browser and on mobile and uh so you have to use all the pixels that you can use
+because otherwise they're just thrown away basically so yeah you have to squash it into the texture basically
+what's the problem when you have a huge scene or something yeah let me just show you what happens if
+you make the shadow map too big right so i'll increase this to 50 and as you see i don't know if everyone
+could see it but our our artifacts here they just got huge with the size of 1k now if i decrease it back to
+seven with the default algorithm voila we're getting less jaggy edges so always keep that in mind like
+try to make the shadow camera as fitting as possible this will solve a lot of problems that you might
+encounter so always start with the camera basically whenever you set up shadows start with the default
+algorithm and start with the camera and make sure that it's really really um catching
+uh the whole scene and nothing more so when you're saying camera you actually mean the parameters of
+the light that kind of behave like a camera right exactly so the shadow map camera that's what i would
+call it here it's called shadow map settings and parameter region but these lr bottom near far there
+are the cameras so what the light sees make sure that what the light sees is only what you wanted to see
+don't lose any space don't make it too small don't make it too big just make it a perfect fit basically
+as as perfect as you can all right so now other problems that can occur uh let me just activate the
+shadows on the torus see does it get some we can't see it really properly so let me change up the light a
+bit so we're getting um a bit more shadow
+yeah i actually can't reproduce it right now
+uh so uh other types problems may arise
+but um yeah let's look at the different lights maybe we'll come across a problem actually um
+the other parameters here i will show them to you with the spotlight so
+as with the update not only the direction light can cast shadows but also the spotlight so let me just
+remove this directional light here
+i'm shaking yeah there we go all right where's the light now okay okay so let me insert the spotlight
+now we don't have sorry
+uh we don't have any shadows now let's look at our shadow up oh there's a warning so if you don't see
+shadows don't forget when you add a new light activate cast shadow there we go and now
+we can actually see some problems right but you see
+here on the torus we have this weird um black area
+so one of the most important properties with shadows is the so-called bias so let me set that to zero
+now you see our problem is gone what the bias basically does is if you're getting weird
+mori-like artifacts or any kind of artifacts that like cover your whole your whole scene in a way like
+like little shadow drops basically it's a good idea to um try increasing the bias so
+here was this a self-shadowing problem there what we saw or is it something different yes yes it was a
+self-shadowing problem that was caused by having a too high of a bias so let me increase the bias to
+see what happens see well now it's gone so 0.1 is way way too much but if i put it on 0 0.4
+you start we see we have too much bias so we're getting these these light holes in the in the shadow
+and we're getting this and this is basically a threshold when to cut off like the depth comparison
+or what uh uh probably exactly so since our texture is limited um we cannot like reproduce the depth values
+to the accuracy that we want and sometimes especially at like borders you have the problem that the value
+resolution is just too small to capture the finer details so some parts might be shadowed while they're
+not or the other way around some parts might be light even though they should be shadowed so if you
+experience these kind of problems sorry i can't uh
+should i click something yeah try it by clicking in the patch
+yeah let me try it yeah it should work yeah so yeah all those values have to be dialed in
+differently per scene probably right or per camera setting and size
+yes it really really depends on the scene like everything that you do with the shadows is it's really
+dependent on the scene that you're showing so while it might work here if we should we just
+try to add another geometry to make it a bit more
+complex in a way here you see this artifact so
+no okay
+yeah maybe one more thing for the spotlight
+sorry just zoom in a little bit yeah
+so the camera of the spotlight what you're seeing here now
+here sorry it's kind of kind of you don't see anything right so the spotlight works a little
+differently than the directional light it has a different camera it has a so-called
+perspective camera and not an orthographic camera it basically means that it's dependent
+on an angle and the camera of the of the spotlight it needs a little different near and far value so you
+see as i increase the near value i see more and if i increase it too much i don't see enough so
+always play around with these values until you actually see something on your shadow map
+and you'll probably get good results so now the main as you see here you only have near and far and
+you don't have lr bottom top as i explained the shadow map camera for the spotlight works by angle so
+we kind of connected it to the cone angle so if you're changing the cone angle
+you're also changing the shadow map whoops that was a stupid change that too
+you need to fiddle around with the parameters a little bit so if i
+increase the cone angle you see the light gets a little
+sorry can you click again uh pablo yeah thanks yeah i think you cannot press escape
+yeah i don't know so let me turn up the light a bit so we see it yeah so you see now the light of it
+so we see the hole again or something it looks a bit wrong or is that the bias
+no definitely the lights position there you go okay cool am i falling again for this one
+so let me increase the height yeah so here you see now i decrease the cone angle which basically makes the
+stuff wider and works in reverse order why i don't know to this day but just keep in mind like decreasing
+the value actually increases the angle so you see let me turn down the intensity where this one
+so you see the further i open up the angle the more the camera sees and you can see it here
+uh we have the same problem again that we're under fitting under fitting our texture so we get these
+very jaggy artifacts so when you're working with spotlight shadows i think 130 let me increase the
+intensity again 130 is a very good starting point to actually get somewhat okay looking shadows with the
+default algorithm keep that in mind so let me try increasing it 140 150 now we need to make it a bit brighter again
+yeah so this looks actually decent for just the default algorithm but uh yeah what you can take away from this
+one the shadow map camera for the spotlight is defined by its own cone angle so whenever you're seen is
+under fit or over fit try changing the angle and changing the angle not only affects the shadow map
+camera but it also affects the intensity of the light this is just the way that spotlights work so
+whenever you're increasing or decreasing the angle of the spotlight try also working with the light intensity and
+the spot exponent to get the spot exponent to get the look that you want it's really like fiddling around
+a bit more than with the directional light with the spotlight but you can get pretty good looking
+results with it as well so yeah let me increase the height and there we go that looks different
+okay okay we have two more parameters i want to show you so they are the same for
+the shadow sorry the directional light and the spotlight they both have this property that's called normal
+offset what you're doing here is sometimes right now we don't see it but um sometimes you get these
+these jaggy artifacts at the border of your geometry what you can do then is like increasing the normal
+offset a little bit i will try to increase it um a bit higher so you see what happens so i put it on one
+which is way too much but what it does it basically moves your shadow along the geometries normal so
+what you can do is like move artifacts away from where they are if used sparingly so
+whenever you have some artifact problem that are like tiny little black dots at the borders of your
+geometry try using the normal offset parameter the last one i want to show you is the polygon offset
+where you basically where you basically let me show that with the directional light because um there
+you can see it more on the map what happens when i increase it
+i'll do it like this this time
+you can also press x by the way to disconnect it yeah nice i didn't know talk about stuff okay let's keep it like this
+so what happened now
+oh yeah so it's probably time to reload yeah i think so too yeah so you see we're still having
+you see we're still having some problem with removing and adding the lights and stuff i'm going to fix
+within next weeks um but yeah please don't hate if you find a bug just write to us and i will gladly gladly
+fix it so uh let's take this thing again make it five or six seven six okay so what happens with the
+polygon offset um oops let me change the angle of it so we can see it a bit better so when you have self-shadowing
+uh can you click again tom oh yeah move it again thanks
+okay yeah okay that works so what basically happens if i use the polygon offset it offsets my polygons
+into the direction of the camera so this as you might see now can be used to also combat artifacts
+so if the artifact should be moved away from where the camera is pointing try increasing
+the polygon offset like i'm overdoing it now but
+um this also works in negative direction so if you want something to get closer to the camera you can also
+use the minus one but this will often result in this kind of stuff so be careful with this one i think
+values between zero and 10 or minus 10 usually work the best um
+but yeah only use like normal offset and polygon offset if like problems you cannot solve with the
+biasing still persist right so they should be your last resort basically
+yep so that's it for the controls um
+maybe one more thing the shadow spotlight and the directional light they have the possibility to enable
+multi-sample anti-aliasing so let me show you what that does really quickly
+i'm still on the default algorithm right so let's increase the size 1024 now we still have these jagged
+artifacts and i can turn msa on and as you see our artifacts kind of decrease
+this takes a lot of performance so caution point number one uh if you use i think two to four is okay
+eight i wouldn't use it's just there for the high-end pc people here in the stream so maybe you guys can use
+that um it only works with webgl2 so if you plan on using it on ios don't enable the advanced mode because
+it 100% sure won't work on iphones or safari yeah okay so that's it for the controls now um are there any
+questions regarding the controls no no questions for that matter i just wanted to say that i really like
+um how i mean there's like tons of different parameters that you can tweak and um and we were
+aiming for correct and smooth shadows but everything in between that you deem to be an error or wrong
+also they had like cool um effects that might be wanted and just like really nice to play around
+with it and see um where you're going and then maybe um yeah finding something on the way that worked
+really well yeah totally totally i also think that like we still haven't done any post-processing and i
+don't know if we are able to do it today but like imagine using these um messed up shadows with like
+cool blur effects or i don't know edge detection or whatever i think you can get some nice
+abstract artificial looking stuff out of it okay so so i have a question can you use them both at
+the same time the spotlight and the direction light yes wow that's actually what i just wanted to show
+the system is developed so that you can use multiple lights in conjunction uh we or i try to make sure that
+it works with as many lights as possible so
+what a bit i'm not so that is so um i'll just press cast shadow
+voila and we have a second shadow and we have two shadows that are overlapping right nice increase the
+native bridge turn the intensity down that much yeah like this okay and as you see
+we have overlapping shadows and as you can also see now here we have a hole that is leaking so
+what we can do now is we can check which which light is causing it right so i deactivate cast shadow
+it's a direction light okay so now i know it's the spotlight and here again maybe we will change the default
+value but if we decrease the bias you see our problems gone all right and if i add the bias again it's there
+so yeah just try parent laying around looks way better i think that should be the default also for normal offset
+probably but yeah cool yeah yeah yeah like default values are subject to change um we'll definitely
+configure that a bit more thoroughly so yeah if you now rotate the torus then that would yeah with the two
+shadows would be a nice effect i guess yeah let's try that i'll just use a simple timer for that
+let's increase the speed a little bit but you can already see it
+let's change the spotlights position a bit
+yeah that's really cool
+minus one three or something
+oh yeah there we go now our camera
+again sorry
+um language please yeah what did you just say um i'm trying my best to be a responsible grown-up okay
+don't judge all right so yeah now we have two maps going
+let me get rid of the review yeah so two shadows we're still seeing
+yeah okay so we're still with the default algorithm right so let's try changing um
+this to pcf right it looks very very cool i think uh poisson
+so here we have the problem of the sample distribution so when you see these artifacts
+your sample distribution is probably too low i forgot to reset it back to 500 and there you see
+we can also increase it so if you add more lights you also need to like try and change the different
+parameters of the shadow op as well so like always work in conjunction you know you add a light like
+you check okay do we have any biasing problems edge artifacts whatever go back to the shadow op try
+changing the algorithm see which parameters there makes sense like all the trial and error and like
+step-by-step process right so don't expect to like get immediately great looking results out of the box
+like i say 60 70 percent of the time you will but um don't be scared to dive into these parameters
+okay now let's try the vsm for quick reference and here you go
+we have an artifact right so this time it's again our spotlight now what's the problem here
+you can see at the border let me turn the direction right off so vsm is very angle and position
+dependent right so i could try and decrease this value or increase it see nothing happens so
+this is something where you gotta check your parameters oops one sorry increase the near value
+see that solves it a lot of the times like with the spotlight yeah you need different near and far
+values and with the direction like so the reaction is usually 0.1 to 20 30 whatever big your scene is
+but with the spotlight you always have to make sure that your camera starts a bit away from the spotlight
+because it's very very um subdued to artifacts if not set up correctly and what you see here now is a
+problem there you see these these lines that were just popping up there wait let me stop the timer and rotate
+it so that you can see them properly okay 45 20 70 yeah there you go yeah yeah so does everyone see these these lines
+this is something that will only happen with variance shadow mapping and it's also been the topic of quite
+a few papers that i had the pleasure of reading and what you see here is called light leaking and this is
+something that's inherent to the vsm algorithm itself just by design and there is actually
+kind of no real fix for it with the standard variant shadow map algorithm there are algorithms that try to
+tackle this problem using different calculations i won't get into them right now but um but this
+problem don't they disappear then oh yeah let's let's try that i i can blur it but it should not disappear
+actually good to see they just get blurred with it so a note on the vsm algorithm now that we see the
+light leaking it's called light leaking i know i think i didn't say that yet and this is something that
+happens when see i also put up my light here i think you can see it casting so imagine the shadows being cast
+onto my hand right if i have two objects my fingers like one casting
+a shadow onto the other finger and then casting it on my hand so the floor
+you basically get what you see here it's basically two geometries overlapping each other
+and causing this problem this is caused by the way probability theory works um
+like stuff at borders gets either very high or very low and this is why you get these artifacts
+there is actually no no real solution to that but what you can do and this comes with a caveat
+of the blur not working correctly is you can try increasing the bias and actually increase it
+quite a lot not as much as you would with
+the stuff the stuff the algorithms are short before but you see 0.1 gets us a little bit there
+so 0.2 yeah that's actually workable i think we still have some artifacts
+yeah so maybe 0.3 it will be different from yeah so here it's gone right um it will be different from
+scene to scene as well sometimes like you would need a bias of 0.8 or even one to actually tackle it
+the problem you get with increasing the bias is you get less blur so if you look
+at the edges here now they are not as blurry as they were before when i put it on 0.3
+you see that it's visible for everyone so you always have when working with variance shadow mapping
+you will definitely experience this light leaking problem um there are two solutions
+one is increasing the bias with um the caveat that the blur kind of starts looking weird or the shadows
+can also deform right now we don't see it uh as
+as thorough let me try change the rotation to zero again yeah okay i'll just increase the bias here
+so you see what i'm talking about
+right so if i increase it to one the blur is gone um
+if i put it on 0.3 i put it on zero so sometimes you will only get rid of light leaking if you set the
+bias to one if you have that problem it's probably better to use another algorithm because like you're
+can you can you now increase the blur and is it coming back then or no it will just deform the shadow
+you see okay
+yeah this is a problem with um the way the algorithm itself works like there is
+no fix for it in the standard version i'm still thinking about implementing uh so so-called
+exponential variance shadow mapping which tackles this problem but comes with its online leaking
+artifacts so the whole probability theory shadow mapping algorithms they have these light leaking
+problems what i would advise when using this one is usually vsm and game engine stuff is used for like
+terrain shadow mapping so if you have like a large area with not so many overlapping geometries but you
+have like i don't know a mountain hill or like i don't know generated you know mountains this kind of
+stuff this is what it's usually used for um if you take care on designing your scenes so that no two geometries
+overlap in the shadow camera you can definitely get by with um various shadow mapping can you click again
+undo so um i think it's the most of them yes thanks so let me set the bias back to zero as you see here
+uh you have to do it again sorry yeah thanks um
+we can like we have this tiny little bit maybe it's also our camera setting no let's try yeah you see so
+uh there's definitely ways to work with it um if you really experience this problem of light leaking
+and you can't get rid of it just use the pcf algorithm or try designing your scene so that no two
+objects overlap in the shadow map camera this is the advice i can give you with this algorithm but if you
+if you have a scene that fits it it will look the best
+any questions to that um none so far
+all right then um there's one last light i can show you if you want to
+it's a point light so maybe we can add that to the scene really quickly and check what it does
+let me remove this up wow and i worked for one and a half years here and i didn't even know that shortcut
+terrible okay so let's take the point light so as many of you might know a point light is an
+omnidirectional light so it casts light into all directions and also when you want point light shadow
+mapping you have to render the map in all directions so what you're doing is you're using a cube map to
+render it if you want to go a bit more into technical detail what rendering a cube map means is basically
+your scene is rendered six times instead of two so seven times with the actual rendering of your scene
+so use it sparingly um sorry but i was again maybe we can toggle that you don't render like the top view
+or stuff like this um because many times you don't need it for example but yeah another thing yeah we will
+definitely optimize this for sure um we see it gets a border so point light uses cube maps um
+it has the camera that you see here sorry i think this way so what you see here in the texture preview
+it's basically um it's basically um the cube maps camera folded right so each each square is basically
+one direction all directions so let me change the position really quick so we see what happens
+like try looking at both the scene and the texture preview right so put that on 10 see we're getting very far
+away light changes so let's get close to it try raising it up a little bit okay so as you see with the variance
+shadow mapping now we've got a huge load of this light leaking issue um if you want to use point light shadows
+which i would recommend only if your scene is pretty simple because you're rendering it quite a few times
+um i stress tested the stuff and it's definitely possible to use like two or three point lights but
+the more complex your scene gets you work with 3d models that have a lot of vertices and stuff it can
+get very slow very fast so you better watch out with that um another thing with the point light is
+i wouldn't use it with variance shadow mapping because right now um variance shadow mapping depends
+on burring your tech blurring your texture and um webgl1 neither webgl1 nor webgl2 allow for seamless
+blurring of cube maps for the technically interested so if anyone knows a way on how to blur cube map camera
+sorry cube maps in webgl please hit me up on discord i will gladly implement it like i couldn't find a
+way so uh you don't have the blur parameter with the point light um sorry that's not the point light
+that's the point light so you only have near far values and the bias maybe it's
+yeah so usually when you use a point light with the variance shadow mapping
+you have to you can increase the bias to one because you're not getting any blur but you will have jagged
+edges so if using variant shadow mapping try using directional light and spotlight only um
+you know but the other algorithms they work so let me show them really quickly with the point light
+so ahadi just now says um as a suggestion you can turn off rendering of sides of the cube map based
+on the camera angle unless you go extreme fisheye with the field of view that is
+okay um so so the view basically is a perspective camera
+um which has like what he means okay what he means is like you could maybe calculate like
+is every side of the cube visible to the current camera because right now then the top plane
+would be in the viewport at all so maybe maybe you could calculate this but yeah
+um i think like toggling then manually would be already fine but yeah yeah i think the problem is
+always like the modularity of cables right so you will never know how people in which context are going
+to use it and the more you you have like these dependent options if the camera field is like this and
+that and that pass and stuff so on it can get dirty really quickly so um what i noticed from developing
+it and using it actually it's better to have the parameters in there but i will definitely write
+that down and think about that if we can like somehow automatically check which cube face is visible to
+the main camera also it would be super cool if we could just render them once the shadow map and then
+just not update it and then you have like if you have like a landscape as you say then the landscape is
+not changing in the game and it could just be rendered once and then always i mean the shadow map
+rendered once and then the shadow is always rendered without re-rendering the whole cube map all the time
+yeah i also thought that like giving triggering to possible triggering possibilities to when the shadow
+map should actually be rendered could also be a good idea so people can decide for themselves when they
+want to render a shadow map so you can definitely like optimize the hell out of it yeah if you're working
+on demos like update or not update yeah so any suggestions please write it in the forums or on discord
+i'm gladly to take everything in that you guys propose it will just make the system better so don't be shy
+okay let me switch default algorithm there we go um now here you see these artifacts that i was talking about
+these little jagged edgy edgy things so the point light unfortunately does not have a normal
+offset because we have six directions right and which one would be offset it doesn't work like this but
+here we can only show use case for the bias so the bias is on zero let me try changing that to 0.1
+oof that's way too much right you saw but our little jaggy artifacts the little jaggy artifacts
+disappeared so let's try like with the bias really the values 0.00001 to 0.1 are more than enough most of the time
+so this is a bit too little yeah there you go so just so you can see it again here we have these artifacts
+like if you care about this stuff i do so i'm very meticulous meticulous about this thing so whenever
+you have these kind of artifacts just increase the bias a tiny little bit and you will most likely get rid of them
+okay let's show the pcf algorithm
+take some samples here
+everyone write that down um the sample distribution not only works with poisson algorithm but with a
+point light it also works with the pcf algorithm this is all written down in the documentation
+but let me just decrease this so you see we can kind of increase or decrease the softness of the shadows
+so if i put it on 50 you see we get a lot of artifacts but looks cool we get some cool shadows so these
+artifacts they are called shadow acne you usually get them when you don't write your system properly
+this is what the bias is usually for so maybe we can try increasing it a little more here as well and
+see if we can get rid of them yeah you see the more i increase the bias the less of these artifacts i get
+but since
+yeah so as you can see here we still have these kind of moray lines while using the pcf algorithm of the
+point light so a general hint a point light and pcf algorithms like it's taking a lot of computing power
+so be very careful with that especially if you're on weaker systems like i am but yeah let's try
+increasing the bias here a tiny bit more so yeah yeah now they are gone all right and
+the last algorithm for some it also works with uh with the point light so here again try changing the sample distribution
+see what happens so here maybe lower values are good to make it blurry it's really hard to get
+cool alert point light shadows so really be careful when using um the point light but as promised
+our system works with multiple lights so let's add all the different lights
+and see where we get all right since we're using the poisson distribution oh sorry sorry the poisson
+algorithm and we have a very low sample distribution increase it to 500 there we go now here you can see
+we have three shadows
+now okay let me change the direction so we can actually
+the intensity of every light so whenever using multiple lights make sure you set the intensity
+of the lights accordingly but as you see now we have three lights each of them casting a shadow let's animate the
+torres again just so we can see hey i can hear you nice
+if voila
+so maybe i can do a little fps check with everything turned off
+so we're still on 60 fps with um with three lights casting shadows
+let's just try the repeat off to see how many repeats we can get until this stuff starts to break down
+position
+also a little tip when working with this stuff right if you're using materials on multiple meshes
+like try all this like use all the repeat ops and stuff everything after
+your shaders and shader modifiers so all of this stuff
+yeah maybe we should wrap it up yeah maybe we should wrap it up yeah oh what
+just really quickly give this position there you go
+so we're still on 60 fps let me increase that a bit 10 30
+yeah i mean on this machine it runs super super smooth like yeah for this you should use the machine
+sensor this is not too good i don't i just wanted to show that it's actually it can handle a lot of
+geometry is quite well even with three lights on um are there any questions left is there something that
+i forgot to show something you want to know no i think it pretty well showed that we have like a really
+really new huge new part of cables where you can play around with lights and shadows and lots of um
+different algorithms and settings for for everything um so no questions um at the moment um but yeah
+thanks for the presentation that was really cool yeah no worries and thanks for your work obviously
+yeah great work don't you have like an example that's more a bit more complex than this yes um
+something that we were not able to touch on today but i want to show two things really quickly
+um one thing is uh i think you can see it here so i'll just leave it here um if some people of you
+has used have used opacity textures to like carve holes into models you can use these same opacity
+textures in the shadow op to carve holes into the shadows so here is a basic basic example i have this
+black and white texture that puts a hole into my cube and um i have the same settings that i have in the
+font material with like um discard transparent pixels we have that here in shadow op as well so
+we can use that to creatively design our shadows to look a bit differently and work with textures and
+stuff i'm sure a lot of people will come up with cool ideas for this stuff so you can also define the
+threshold for the alpha values right so let me just do a quick blur here just to show show the capability so
+we'll take the fade out to 0.5
+3 and now you will see so we have we have this faded out texture and now we can use the threshold
+to actually decide which which parts we want to blur right so that's another thing and as pandu already
+mentioned um we are actually able to use it in conjunction with mesh instancing so i put up an example here
+let me open it in editor editor so i don't know maybe you can navigate around it because i'm using the
+wasd camera yeah and i'll just talk a bit um
+yeah so as you see um it's actually possible to render shadows onto walls and like have a 3d thing going on if you
+look into the patch where it says moving toruses in the patch field I did a little I don't know
+animation of toruses there don't worry about the area ops it's just basically them circling around
+you can definitely use the op with mesh instancing and we're also in the process of making everything
+work with everything right so you will soon be able to use shadows with work vertex displacement
+and if you cannot already by now I'm not sure but I can use most of them now yeah right but we're
+still at it so if you find any box with the shadows if you have problems with them feel free to write
+to me on discord feel free to post in the forums I will publish the examples and the full documentation
+by the end of this week um anything else not from my side no I think that's it yeah you can see maybe
+look at the cube camera there you can definitely see what the camera does how big is the map for this
+1024 okay you can try decreasing it should but I love this how this looks
+yeah yeah cool okay so on the channel also saying thank you and good job and very cool and nice and stuff like that
+yeah yeah yeah sounds cool I hope you guys enjoy it and um hopefully in the future we will see some very very cool patches
+I'm sorry, I have not been reading the chat, which I'm very, very sorry for.
+But my computer is kind of old, so...
+Yeah, I think we will see crazy cool patches with this stuff.
+Totally.
+Yeah, nice.
+So, yeah, definitely we'll post this example.
+I'll document it a little better.
+And it should be up by the end of the week.
+So, be a little patient with me.
+Yeah, cool.
+Great.
+Awesome.
+Thank you.
+Thank you very much.
+Yeah, you're welcome.
+Yeah, thanks a lot.
+I'm in the chat now, by the way.
+Ah, yeah.
+Wir machen Bunt also says, yeah, great in-depth explanation of the shadow text.
+Gonna watch this again.
+So, this will go to YouTube after this Twitch stream.
+And we usually publish these a few days after the stream.
+So, that's your chance of like revisiting all of this.
+Yeah, yeah.
+And I guess like also the documentation will be in that format that you can find like solutions
+to artifacts there or something.
+But, yeah, we talk so much about artifacts now, but, yeah, I mean, they are like the biggest
+problem with the shadows.
+So, yeah.
+Cool.
+Great.
+Yeah, super cool.
+Thank you, Simo.
+So, no worries.
+If there are any more questions, I will be hanging out a little in the chat.
+Right now, I need some me time.
+I drank too much water.
+I'll catch you guys soon then.
+Yeah.
+Cool.
+Thank you very much.
+Thank you.
+Thanks, everyone.
+See you.
+Bye.
+Enjoy the stream.
+Bye.
+Yeah.
+This one I really like.
+There's so much to learn how to set up shadows in a good way.
+But it really adds like the light and then the movement.
+It really has like a really great atmosphere.
+Totally.
+Yeah.
+And, well, from looking at the patch, it doesn't look too complicated.
+I guess it's like twiddling around with a lot of these parameters that I just learned.
+But, yeah.
+Yeah.
+So, what else did we do in the last release?
+I forgot.
+It was basically like, okay, really, shadows were a huge part of it.
+Look, if you make the shadows blue, it looks a bit more realistic.
+So, okay.
+Yeah.
+Let me quickly log in with my account.
+I mean, you have like a really massive change block of all small, lots of little changes.
+Are there any bigger areas where you, like, apart from shadows?
+Yeah, I would start showing the lines, which is also like a big thing, at least for me.
+So, drawing lines in 3D or in WebGL or in OpenGL in general is pretty hard because you have to build them from triangles, basically.
+So, so, we need a better spline system in KWIT.
+So, this is like the first version of this.
+I have already like a thousand ideas to make them better, but they will all work like this.
+So, I would just show it.
+So, we have a new operator spline mesh which we can just connect to main loop and it needs spline mesh material.
+And it needs some points as an input.
+So, let's just use some random array 3 and then you see splines are popping up on the screen.
+So, lines that are connected, connecting those random numbers, basically.
+So, we can just adjust the number of points and we can, so, the problem with this is like, if you want lines like this, like a million different lines that you could want.
+So, maybe you want like 3D splines in 3D space or you just want to draw like 2D lines on the screen and so there's a lot of options that you can adjust.
+Let me add subdivide array up here and then you can add subdivide array up here and then you see the lines get much smoother and now they look much better than before.
+Let me add an orbit control so you see this in 3D and scale this up a bit.
+And so, there are a few options so if you want to draw like really edgy lines like with hard edges you should go here and say tessellate edges and then they look much better than before.
+So, there are a few tricks in there because they, like this is optimized to be super fast so that's, that was the whole goal that you can draw a lot of lines at once and this is why you have
+To make some adjustments and tweak some settings.
+It's a bit like the shadows like there's no solution for everything you always have to tweak it a bit and but the cool thing is with this you finally can adjust the width of the splines that wasn't possible with the old spline system.
+Because someone forgot to implement this in WebGL but yeah, with this you can do this and then you can create like thick lines basically, and you can also, you see when I'm closer with the camera, like there's a perspective now they are small in the background, right?
+So, but if you want for example, like data visualization or something like you don't want 3d actually but you want 2d but maybe it's in 3d space but you still want them to be 2d you can disable this with perspective.
+So if you do this, then you see everywhere it's the same with basically, so if I zoom in, like it's super near the camera, it's still the same with as the far ones and if I zoom out, it looks super strange, but the width is still the same.
+But in pixels, you know, this is the width is always the same in pixels basically, I mean, it depends on your resolution, but they don't get thinner if they are far further away and this is like often you want this with splines because they are more like a user interface thing or like an overlay thing or something, then you don't want this perspective thing in there.
+with this you can do both, and it's super handy.
+Exactly. So, and right now, you can also use it to draw multiple splines, so if you use this op array of arrays,
+I can connect.
+Let's make it a bit smaller.
+Like this, oops, windows.
+So you see now we are drawing two lines.
+Okay, cool.
+So this is super handy.
+If you just have a few lines, there will be a mode and this is what I mean, we will make this better, there will be a mode that
+the array format of those points is interpreted differently.
+So you have like, right now it's like draw a line from A to B to C to D to E, but it will also be like draw a line from A to B, from C to D, and then you can make like disconnected lines with just one array.
+But this data structure management is huge pain.
+So I thought why not also, it should also be possible to just give it like an array of arrays.
+So, however, you want to produce that like with code or with this op and probably you can also do this with array set array ops.
+But this one is like the easiest if you just have a few lines and you just want to draw them with one draw call, then this is the easiest way.
+That's the main difference.
+That's the main difference as compared to the old line system, right?
+This is basically one draw call and meshing stencil style.
+No.
+Yeah.
+I mean, it's a totally different technology.
+The other one is also one draw call.
+It's also super fast, but you cannot adjust the width.
+So you can only draw like one pixel and exactly one pixel white lines, which is like this, this GL lines functionality.
+And usually on desktop OpenGL, you can set the line width, but somehow like it's not in the specs and the Windows implementation, the angle implementation, they treated it differently on Mac, it actually worked.
+And then they said, okay, then we, nobody can use it.
+And then they removed it again.
+So you have to care about your splines yourself.
+Basically.
+And yeah, so probably there will be another one.
+So what this does is basically like it renders rectangles on the screen in 2d, but we already know that we also want like a really 3d extruded tube 3d mesh, which can also work with fun material and has, has real normal.
+So this is probably like the next thing that we do that this is really in 3d and can be lighted and can cast shadows and all this kind of stuff.
+So this is basically like the basic material for splines.
+And there will be another thing where you can draw 3d, real 3d splines like extruded tubes basically later.
+Um, yeah, and you can also, that's also, I think it works in the old one, but it's not as nice.
+You can also use textures with it.
+Uh, so for example, um, um, I can connect this, um, um, gradient, uh, up to it.
+And then you see, um, maybe just use one line and it's better.
+Um, it basically goes like through the whole gradient.
+Uh, it just maps the whole image from, from left to right.
+Yeah.
+Yeah.
+And now I can do, um, um, uh, does it have this note?
+So I can use, for example, scroll texture.
+So I can let this scroll and it's just like, I can show you, I'm just changing this texture
+basically.
+And it's the really neat effect.
+Yeah, absolutely.
+Super cool.
+And, um, so if you, if you, you can like this texture can be really small, like, um, eight
+pixels or something like this is, this costs nothing.
+Um, it's really handy.
+And this looks very American.
+French.
+I was about to say actually.
+Um, yeah.
+And, um, that's super handy.
+Um, one thing I discovered that.
+Um, you can also use the texture mask, but I think there's some problems.
+So if you want to disconnect, like make them like little lines, you can also draw them, um, transparent
+at those.
+Um, let me try that because I think it's just some setting problems.
+I think it's just some setting problems.
+So I will generate another texture.
+Um, which uses the stripes off like this and connect this to the mask.
+Cool.
+Make this white.
+And then you see, uh, I can control like how many.
+Yeah.
+And there's the park, like how many little steps there are.
+Um, so I can, again, use this scroll texture on this first.
+Um, but yeah, so there's a little bug, um, which I'm working on or will work on.
+Um, maybe it's also the interpolation.
+Um, yeah, um, whatever, but this will, this will work on the next update.
+Um, but yeah, this, um, this is quite nice for, um, visualizations and just, just drawing
+some, uh, line effects on the screen.
+Um, and you can also, I think, uh, I can also control this offset thing here.
+I forgot that.
+Um, uh, you can also, yeah, this is also cool.
+You can say like the texture is repeated by the length of the spline and then you can also
+do, um, cool stuff.
+So basically, uh, maybe this is what I was just, so you can, you can, uh, um, probably also
+create the effect of transparent, um, parts in there, but yeah, um, really neat effects.
+Yes.
+Really quick.
+Um, also if we add some blend mode, um, I can see they go through each other.
+Um, yeah, there's a lot of, um, a lot of stuff you can do with it.
+Also like for little, little things that happen in your patch.
+Um, it's really, really versatile, I think.
+Um, yeah.
+Any questions about splines in general?
+Splines in general.
+Uh, no questions so far.
+Yeah.
+Um, yeah.
+So, so that is, I really like to, I don't know, stars and lasers or whatever.
+Yeah.
+Yeah.
+We already did a website with this, um, which uses this technology as wireframes that, um,
+um, super colorful and I cannot show yet, but, um, looks really cool.
+And I'm, I'm really happy with the, with the rendering style.
+It's also, um, there's no aliasing and those kinds of problems.
+It's, it works really well.
+And now we just need this in 3d also, or like real 3d with normals.
+And then.
+Yeah.
+That's cool.
+Um, yeah.
+Also.
+Okay.
+Should I go to the next one?
+Sure.
+Um, yeah, just go through, let's just go through them.
+Um, they are also from Zemo by the way.
+Um, it's, it's, it's really the Zemo release this time.
+So, um, so this is, uh, can a shader, but it's not, we had this like in multiple materials.
+We have the possibility that you can add, uh, final shading to, uh, in the material, but this one is now a shader effect, so you can apply it to any, uh, material you want.
+So you can make a basic material basically and use this with, uh, uh, and apply final shading on top of it.
+So that that's really interesting because it just works with everything.
+So you can just set a plain, simple color and then add this on top, which is, which is super handy to have.
+What does it do is about the glow shininess of the thing, right?
+Um, so basically it looks at the normal.
+So if they are really like the angle between your camera and direction of this triangle, so to say, is super high, then it, then it's, uh, brighter.
+Basically.
+And so, and this is used like for, um, Nintendo games quite a lot.
+If you want a cartoonish look, um, it's a really, it's really simple trick and it's also really not that expensive.
+And, um, yeah, you can like, can even fake some, uh, cell shading with it or like cell outlines.
+Uh, if you adjust it more, yeah, that's, that's super cool.
+Um, also, uh, I think I, I tried this out locally.
+Um, but yeah, um, really cool thing.
+Also something that was requested for so long and I don't know why we never.
+So finally, uh, Cimo did it.
+We have, we have a nice merge request, much conflict in there.
+Um, so basically you can drive math, uh, expressions in an op and they get evaluated, uh, at runtime.
+So, um, um, um, um, so we have two math expressions here and, um, um, you see like, how is this?
+So, um, you see here our formula basically to animate this thing.
+Um, and here you see the output as a graph and you can just change this to, I don't know, multiply it and then it's, it's not so far anymore.
+Um, so you can just write, uh, formula in here and gets every evaluated every time.
+Uh, input value changes.
+And, um, cool thing is we also have this for errors.
+Um, so you can input a whole area and you can calculate the values in this area.
+And you also get like the index, um, and you can work with that index.
+So, um, I don't know.
+Uh, so I can just like change the speed of the rotation here.
+Uh, I don't know.
+I haven't tried this.
+Okay.
+Okay.
+This is wrong problem.
+Okay.
+So now it should rotate and then rotate back, but you don't see it because this is super fast.
+Yeah.
+So you can, you can, um, you can input like up to three areas into this and, uh, up to three numbers and then, uh, work with those values in your formula.
+So you have ABC and X, Y, Z, and also you have I, which is the index and, um, yeah, it's super handy because it's not everyone's thing to just combine a million math ops.
+Um, often it's also, uh, way less space to just input a formula in here, um, then to build it with math ops.
+So we wanted this for a long time.
+So finally we have it.
+Um, super handy, I think.
+So that's the math array ops, uh, math expression ops.
+I think also like, uh, uh, uh, Andrew Mark will show it in some tutorials.
+Um, I, I'm pretty sure about that for a particle systems or something like this.
+It's super handy.
+Also super duper.
+Um, so, um, yeah, so we have another op, uh, which is also like an old op, but we, we just updated it.
+So we have like, uh, text, uh, text texture.
+So now our last update, we, we just featured the, um, MSTF font, which is super happy.
+And I really love it.
+But sometimes you just like, we had this client and it's like, yeah, okay.
+We now need Korean, Japanese, uh, and Chinese and traditional Chinese, um, to, to display.
+And we're like, okay.
+So you cannot do this with the MSTF texture because like those textures you generate, like there would be tons of them.
+Um, because like tradition Chinese have thousands of characters.
+So, so we updated the text texture op, um, which basically uses, um, your browsers font rendering engine.
+Um, and in the past that only created a texture.
+So you see it here.
+And this is the texture that comes out of it.
+You can still use that, but we also made it possible that you can just, just render it to the screen, which is super handy.
+Because often you just want like a predefined fixed area where you just run right text in there.
+So this is possible with this op.
+So I, I can, uh, make this border visible, which is basically for debugging purposes only.
+So I see where the texture.
+So see when I, when I type too much, um, it will shrink down.
+Uh, this is because of this maximize size.
+If I turn this off.
+Um, oops, um, right.
+Um, you see, it's actually, um, creating new lines.
+So you can now set like, um, how many lines you only want in there.
+So you can, um, really control about the text rendering that wasn't, wasn't in there before.
+And it's super handy.
+And this way you can say, okay, I want, I want to create this area, which has three lines.
+And, um, it breaks automatically.
+And if it's, if it's over those three lines, it has this, uh, ellipses point point point thing there.
+And, um, yeah, that's just super handy.
+And it's just super handy that you don't need a basic material and the rectangle.
+And then you have to set the rectangle to the correct, um, aspect ratio of the texture and blah, blah.
+So if I just change this, you see, it looks, it still looks correct.
+It just changes also the area.
+Um, so the pixel size is also like the size in 3d, the aspect ratio of it.
+So if you don't like, if you really need, like you can also type emojis in here, like it really renders everything like your browser engine.
+Um, and that's super handy if you have like Asian fonts or you don't know what people type in there, basically, then you can use this and it will always be shown basically if the browser can handle it from the user.
+Um, so yeah, this is why we have different text solutions and cables, um, um, um, because everything needs to be treated differently.
+Basically.
+Um, that's, that's this.
+Also another thing is like, if you have those texture problems here, you can now, so this thing has its own material built inside.
+You can say, um, hard edges and then you see it looks a bit like the, it's the same algorithm basically at the shadow maps.
+Um, it makes those, um, edges harder.
+So, um, it looks better when you zoom in and you have really big texture.
+So sometimes this helps, and this is not MSTF.
+This is just like, uh, a hard threshold where it renders full opaque and, uh, and full transparent.
+It's quite handy for this kind of stuff.
+Um, yeah, and also has some more options like, um, uh, the anisotropy and this kind of stuff, which doesn't work without shadows, without edges.
+But yeah.
+Um, yeah.
+So you see, this is super blurry there.
+If you change this value, then it gets, it gets much better.
+Yeah.
+But yeah, with this perspective, it's, there's no, not much hope to fix it.
+But yeah.
+So this is also super handy, um, to get some texts on the screen really, really quickly.
+We should maybe do a stream on just doing text and cables because there's so many different, like, ways to do it.
+And all of them serve a purpose.
+Like you can do it.
+Yeah.
+Yes.
+You can do it in text texture.
+You can do it in MSDF.
+You can load a font file, do TTF.
+Yeah.
+Yeah.
+Like three, I think there are three or four GL methods, how to render text and everything
+is like has a different purpose, right?
+So this renders everything you would throw it.
+Like the text mesh is super fast.
+Um, to change this text is basically uploading a new texture from the CPU.
+So this is not fast when you update your text, um, um, a lot.
+So then this is not good.
+So, uh, the MSDF and the texture text are way faster than this to update and change.
+Um, so yeah, everything has, um, is pro and cons.
+Um, but yeah, you, you basically have to learn like which one is the correct one for each use
+case.
+Um, there is no solution for, for everything like as always basically, but yeah, like we
+think it's a good idea to have like those multiple systems in there because there's no
+choice.
+Then you have the choice.
+I mean, it's a bit harder to learn, but, um, yeah, you have the choice.
+And then you can decide like, I want to draw a hundred thousand characters that rotate.
+Right.
+So that's a completely different technology than just showing, um, some characters, uh, in
+2d on the screen.
+Um, exactly.
+Um, so you want to talk about the format button.
+Yeah.
+So I always get mocked in the company because my, my formatting skills are so awesome.
+Um, so Stefan built something.
+You want me to take this, take over?
+Oh, you can.
+Yeah.
+Sure.
+Does this work with them?
+Yeah.
+It seems to be, well, it's actually a bit more, um, not only about the, uh, the format button,
+but we, um, we kind of worked on, uh, in the background on making collaboration cables a
+bit more, um, a bit better actually, and, uh, less, um, less buck ridden.
+And, um, we actually, um, figured out that lots of people, um, are doing, um, are writing
+their own ops.
+Um, what?
+Sorry.
+Um, they are all crap.
+Yes.
+Okay.
+Um, and we have this editor and we had this before, right?
+And, um, you can, um, save these.
+Um, and now you have the, um, this is correct.
+And this is not even.
+All right.
+Um, so now this will, according to our internal style guide, um, format your call, which can
+be really helpful to clean up stuff.
+Maybe we'll find something else in Tom's user ops that we can use to just, um, form it.
+Okay.
+This is okay.
+Nice one.
+Um, so this is one of the things we did.
+Also, um, we tried our best to make these buttons only appear when they are actually relevant
+to you.
+So, um, this is not really, um, showable right now because, um, Tom is like the only person,
+the only person, um, who may add it everywhere and everything.
+Um, but in general, you, you should like, um, not be presented by a safe button and then
+safe and be shown an error message.
+Um, this goes for, um, for basically all the, um, all the core base ops, um, that you always
+can, um, see the source code, um, off.
+Um, this could be formative.
+Um, this looks okay.
+I think it's not working with base ops.
+Then you have to reload.
+Okay.
+Um, and, um, also a few things that we, um, did to make collaboration a bit easier.
+There used to be like a real nasty buck, um, that made user ops basically being non shareable.
+So whenever you went into a patch and, uh, a user op was in, uh, there be it a public patch
+or, um, or one that you have been sent through, uh, via a secret, uh, URL or whatever you, um,
+you saw the editor, but you weren't, uh, a color writer on this patch that would lend bail on user ops.
+And, um, this is no longer the case.
+Um, you can actually see and use user ops and public, um, patches.
+Um, you may not edit them if they are not your own.
+Um, but you can in, um, patches that you collaborate with.
+Maybe I'd show this quickly.
+I don't know if people, um, really know this or use, um, this a lot, but in patch settings,
+you're usually, um, you're able to add collaborators to your patch.
+You can send them an invitation.
+They get an email.
+They're being invited to this patch and all these collaborators work on this one patch
+and their own user ops as if they were their own.
+So you can, if you collaborate on a patch, use the user ops of other users.
+And, um, then also, um, publish this patch and, um, have the user op usable there.
+Also, one small thing that we never noticed.
+If you have collaborators, one of them is the owner.
+That button works now too.
+I think that was reported by Kevin last week or something like this.
+And last thing to make it, um, more easier, um, to work with patches.
+We always do sometimes to save as, and, um, to make a new version or send, um, another version of the patch to, um, to the client or whatever.
+Um, then we do save as and work from there.
+Uh, these will now keep your collaborators in the patch and then you can, um, continue working with them, uh, on the new version basically, um, of the patch.
+Yeah.
+This kind of stuff.
+Yeah.
+Sorry.
+Uh, all of, um, what I said, um, also goes for libraries.
+Basically, this also didn't used to work, but if you have a user op that, for example, uses a library that is, um, the Lottie player or, um, whatever other library.
+Perlin post net library, QR code reading libraries, whatever we have in there, um, then these will also be, um, available to all the other people that somehow managed to, uh, to end up in this editor of the patch, not only collaborators.
+I hope this, um, well, this is actually one of the, um, one of, uh, way that we want to go more because more and more people seem to be collaborating on, um,
+um, on patches and we're thinking about, um, doing a lot of more stuff, uh, to make this more convenient.
+Um, one of the biggest and always requested features, uh, and like basically a dream of, um, ours would be like actually being able to life edit with the same people in, um, the same patch.
+But, um, while we're going there, we're, um, also thinking about, um, team functionality, sharing, uh, and copying sub patches, maybe doing like a library of, um, of smaller patches that can then be templates for the team to start from there and use, um, from there.
+So, um, apart from all the super cool 3D stuff, um, we, we're also, um, always sitting there and thinking, okay, like, how can we make this better to work in a team?
+Can you hear me?
+Can you hear me?
+Can you hear me?
+I don't see you anymore though.
+Okay.
+Um, well, that's good.
+Yeah.
+Yeah.
+Um, yeah, this kind of stuff is, um, it's really hard to get right, I think.
+And, um, it's because everyone uses it differently.
+Um, and yeah, we need, we need also feedback.
+So a lot of this was reported by people because we use, we use totally differently than other people.
+So if you have any problems with this workflow or like, how can I collaborate better or something, or like you wish you could then, then just tell us what, what is missing there because, um, yeah, we, we want to know like what, what kind of struggles you have when you're working together.
+And, um, yeah, that's, yeah, we really want to work on this, um, and have more features for people working together, basically.
+Yeah.
+And as always with these like kind of workflow related stuff, there's like, not one, um, single way to do it, but it would be really nice to hear, um, more about how people with the current state of cables work together and then, um, basically, um, go from there and, um, try to find features that, um, make sense.
+Yeah.
+Yeah.
+So while we're at working together, I don't know if you wanted to show this, but we want you to work with us on a stuff that we did.
+Um, we made, yeah, this I leave, right.
+Yep.
+Um, so we moved our, um, our documentation to, um, to this, uh, new URL and, um, moved a lot of the stuff, um, over, added, um, uh, an FAQ that will then, um, be filled by us over time.
+And, um, a lot of stuff is in there.
+Um, I think CMOS shadow documentation will also eventually end up here.
+Um, and we're now basically made it a lot easier for us to work on this documentation or, um, apart from like the, um, the actual documentation in the ops and then source code documentation.
+Um, this one, like a high level FAQ style documentation, um, we made it a lot easier and because we did, um, you can now help us.
+This is like a public GitHub repository with, um, a cables, uh, the cables documentation.
+And for every page, you can basically, um, go in here, um, scroll down and whenever you see something that is no longer right, um, could be done better, could be explained better.
+So if you have an FAQ, um, you can always go in here, um, if you have a GitHub account and then edit it and, um, do a pull request.
+And then, um, we could use your help on improving this because as you can imagine, um, it's a lot of work to keeping the actual, the, the documentation of the, um, ever changing ops and more features, um, in sync with, um, these stuff that cannot be generated.
+And so, um, whenever you see something that is not up to date or, um, or think something could be better.
+Um, well, write us on discord or, um, would be even better.
+Just edit it like editing.
+I'm not doing this.
+Um, now, but, uh, okay.
+Um, yeah, you, you can basically just, um, do a pull request here and then, um, edit whatever you want.
+Or, um, add FAQs or, I don't know, create a fixed typos.
+So these are the, the bigger things when working together, uh, working together, um, in the release, what else do I have on my list?
+The first button I talked about.
+Yeah.
+The only thing that I can think of is the upgrade button.
+Oh yeah.
+Right.
+Uh, we have this.
+If anyone's what, why is it doing what?
+Am I not in here?
+I don't get it.
+Okay.
+You're pressing O and not P.
+Uh, right.
+Um, we got this patch statistics.
+Um, do you remember what's the record on that one?
+Aren't like Andrew?
+I think four and a half thousand ops.
+Yeah.
+Yeah.
+So that's a benchmark to go for, or maybe not.
+I don't know, uh, work, worked really well for us though in, uh, that project.
+Um, and the upgrade button.
+Do you want to do this?
+Because then.
+Um, yeah.
+So, um, basically anything was achieved at this.
+Okay.
+So I test this, um, maybe not use this example page, right?
+Yeah.
+I'm, I'm not, um, but yeah, whatever.
+So, uh, so if you have, like, if you open up your old patches, um, and you see, like, it says, like, there's a newer version of this op available.
+I mean, you don't need to update, but if you really want to work on this patch, then like, if you continue working on this patch,
+like, if you continue working on it, then you should upgrade or update all your ops basically.
+So what this does is basically we have something like this.
+We see like, um, a newer version of this office available basically.
+So let me just make it.
+Yeah.
+Red.
+Um, so it's really red and, um, we see this as an old version and I can now click upgrade.
+And you see, we fixed this awesome one text.
+So all, so this will be re so this will replace the basic material V2 with basic material V3.
+So all old parts are available in the new op.
+It should be safe to replace with new version, blah, blah, blah.
+You should really be careful with this, like make a backup of your whole patch before you do this.
+Um, but now I can click re really upgrade.
+And then you see.
+It was replaced with a V3 op and the color is still red.
+So it tries to match like all the old parts to the new parts.
+Um, and then you can hopefully use it in the same way than the old op.
+So you can also do this in place basically.
+So if this would have been connected to any kind of texture or trigger or whatever, then that would be in place.
+Yeah.
+Uh, hopefully.
+Yeah.
+So you see then it's, it's still connected.
+So, um, we found some really edge cases that, uh, we will work on, but all in all, this is super handy.
+And we, we need this to update the examples, um, which is really important because they are so old.
+And, uh, I think it's my, like tomorrow I would sit down and update, um, thousands of patches basically, or hundreds of patches with, with this system.
+So, um, yeah, this is also really useful.
+If you're like, go back to a patch that basically, uh, back then used form material or directional light or any light that now has the ability to, um, to work with shadows.
+Then you can just like click on update your phone material will get a lot longer and you have all the new options in there and can, uh, then continue working.
+Yeah.
+I mean, you will, you will get those problems that like the, if you replace like the light and don't like to the newest version and don't have the newest form material version, then there could be some problems.
+Um, but yeah, so at least it's possible in a way now.
+And, um, you know, we're still, still figuring this out, but, uh, good step.
+Yeah.
+I did like, I dunno, I did like 50 example patches or something like this and updated, I dunno, 300 ops in one and a half hour on Friday.
+Then I was like really, really done with it.
+But I guess that would have been a lot more work, um, before.
+Uh, totally.
+Yeah.
+So what else on my list?
+Main loop can do something magic now.
+Yeah.
+Yeah.
+So we have this new option when the patch is not focused, then it will reduce the FPS.
+So your clients don't complain about their fans so much anymore because they just have the patch running in the background and, uh, the, the fans keep on spinning.
+So you actually can see this if you have the performance up, you see, we are rendering at 60 FPS right now.
+Um, and, um, so this is on by default now.
+Um, so we are rendering at 60 FPS.
+And when I now, I dunno, uh, open another app.
+So this is not in focus anymore.
+Then it will be reduced to 30 FPS, uh, which most of the time is, uh, enough to, um, to, to let the fans stop.
+You can also always, we have this op like, um, uh, window has focus or canvas focus.
+So you can, you can do your own detection.
+Like maybe you just want to, so if you do this, um, active and connected to has focus.
+So now you see when I go to the calculator, then it stops completely.
+So this is even more safe, but then you don't have any animation in here.
+So you could also set your own, like, you can set it to 10 FPS with a bit of logic.
+So then you can control how, how much, uh, the computer has to work when you're not in focus, but this is a good thing to do.
+Um, um, um, if, if someone complains or if you're not like, if you can expect that this patches, like if you have a website or an application with multiple windows and you know, this will be keep opened in the background often, then you should definitely do something about this because it's just, um, it's just good to not burn so much, uh, power.
+Um, it's also just being nice.
+I mean, if you integrate, um, a patch into a website and then people have like 50 taps open and one of them is like rendering in the background.
+Um, a lot.
+I mean, in the top it's already pausing, but for example, if you have music playing, then please, please control this music with the, when you switch it up that you pause the music because it's super annoying, except you want to do like a SoundCloud website or something, but, uh, most of the time it's super annoying, uh, to find this, this website.
+Yeah.
+Yeah.
+Any questions anywhere?
+Tito says a lot of stuff that makes the patches smaller.
+Um, yeah, that's always, uh, a bit of a goal to have like stuff.
+Yeah.
+Um, yeah, that's always, uh, a bit of a goal to have like stuff.
+Being compressed and not being super complicated.
+I think it was, uh, about, uh, at the time when we showed the math up.
+Um, yeah, that's always, uh, a bit of a goal to have like stuff being compressed and not being super complicated.
+I think it was, uh, about, uh, at the time when we showed the math up.
+It's also like a really gray area because we also don't like super massive ops that do a lot of stuff.
+So it's always an in-between and, um, arguing about like, okay, does this have to be one op or shoot these five hours we won up.
+Uh, can you have some calculation to happen in the background?
+So the frame rate doesn't drop.
+Oh, I don't know.
+Not really.
+Um, yeah, what kind of calculations do you mean?
+Like, um, do you have an example or something or like, I mean, one way is to basically cash your calculations.
+So you do them only once and then, for example, use a trigger once.
+Um, if it's a triggered operation, um, uh, to only calculate it once basically.
+So, so basically the magic is like, just really control what you are doing is really needed.
+Um, so for example, that we could also show it's also from the, from the, um, release.
+I totally forgot it.
+Um, so one way to do this is like the trigger ones or the trigger limiter.
+So you only calculated like every second frame or every third frame while you render in full,
+a full frame rate.
+Um, but we have, for example, now this thing, which we used in a big project where we have
+to render like a huge, like a long scroller.
+We had a long scroller and we didn't want to control this manually.
+what is, uh, what is visible on the screen.
+So imagine you have like a thousand objects and you, you want, don't want to render them all.
+You just want to render what's on the screen.
+So you can draw this bounding box.
+Um, you can create a bounding box.
+Um, you can create a bounding box.
+I will not go into detail, but you see this yellow box here.
+This is basically the bounding box of this sphere and I can detect if this is on the screen.
+So I can just cancel a whole lot of rendering and maybe also calculations when this is not on the screen.
+So you like, like before you optimize an algorithm or anything, just like the first thing, like the easiest thing.
+And the first thing that you should do is like, do I need this right now?
+Like, do I do this too often or do I need this at all right now?
+So maybe it can be just calculated in an array or just only needs to be done when this is on the screen or something like this.
+So those things are like the first things you could check.
+So there is no magic background sadly.
+I mean, we have like those multicore computers, but it's not really that easy to move tasks to the background.
+I mean, there are technologies for this even in the web browser, but, um, it's really, it's really hard to do.
+And, um, most of the time you can get around this and this would also make cables way more complicated because it would have like multiple patches.
+Um, multiple patches running in on multiple processes or threats.
+Um, so right now there's no magic background thing.
+Um, yeah.
+So you answered already, right?
+Yeah, I think there's a lot of different types of calculations.
+And, um, what we often do is like basically pre calculating all the data preparation for, um,
+um, if we, if we, if we get static data, then just make sure that you're not preparing the static data that never changes by 60, um, frames per second.
+Um, then there's other stuff you could fill array buffers.
+I guess that kind of goes into the same direction.
+Okay.
+Yeah.
+Yeah.
+So one, yeah.
+So one thing I also want to show is, um, we have those opposite.
+They are also quite new.
+Um, those filter ops, um, sorry, um, gate, those gate ops.
+So, um, I don't know, imagine like we have, this is a timer.
+Sorry.
+I need to switch this off.
+Um, so we have, um, we have this gate number thing, right?
+So, um, you see, this is not outputting the value.
+So imagine like we have this, I don't know, it's not really heavy, but we have those, uh, calculations down here.
+Um, and as you can see, they are not changing.
+Um, they are not calculated anymore.
+So if I just opened this, then you see, we have a value in here.
+So this is the old value that was calculated when I just opened this.
+So, um, so for example, if I just wanna, um, oops, I just want to calculate this when I'm, uh, uh, when the mouse is on the screen, I can connect this to mouse open.
+Um, so you see, it's not active.
+So when I'm using my mouth over, then it's calculating.
+So this is also one way to control when something is executed.
+And you can do this with arrays, with, um, with objects, with a lot of stuff.
+Um, it's basically the same with the, uh, if true, then.
+So this is, uh, not executing because the Boolean is off.
+So when I activate it, then it's, um, it's triggered.
+And this is the same with data, with values basically, which is also super handy to control, control stuff.
+Um, yeah.
+Yeah.
+Yeah.
+Async stuff.
+We don't really have in cables because most of this stuff is working in the GL loop.
+Um, there are like a higher requests and stuff like this, which is asynchronous, but, um, um, um, yeah, most of the time we don't really have it.
+Um, um, yeah, I hope this answers your question.
+If not, then maybe build, um, example patch, um, and post it on the forum and with the problem.
+And yeah, this whole value op, that's also something maybe we should, we should look into and make this easier for people that switch from other visual languages.
+- Cool, so actually a question that was nice.
+- Yeah.
+- I think it's, I think it's, yeah please.
+- Are you a keep it visual by the way?
+- I think so.
+- Hi, keep it visual.
+Is there a way to get the camera,
+fly around the scene randomly with the custom speed?
+- Yeah.
+I think I would look into,
+I would just build splines
+and let the camera follow those splines
+because then you can really set up,
+like you can model your spline basically.
+We can try to do it right now.
+So let me see, like,
+okay, I need to find the op that I mean,
+but yeah, I would try and store.
+Windows.
+Yeah.
+- Okay.
+So let's build a little scene.
+Let's put a cube in the middle.
+Okay.
+So now I want something to fly around this basically.
+So I want to basically model an array.
+So, so how do we do this?
+Like maybe we just start with a random array three.
+So I want to basically model an array.
+So how do we do this?
+Like maybe we just start with a random array three.
+Like maybe we just start with a random array three.
+And let us visualize this.
+Let's just use the simple spline
+because this is just don't need the material or something.
+So this is our spline right now.
+And we want to subdivide this.
+And actually I don't want random numbers array three
+because we have this handy op sphere,
+point sphere random,
+which it's not really visible.
+Let me show this with the point material.
+And point cloud from array.
+So you see, we have those points on the sphere basically.
+So we can say we have way more
+and then you see it perfectly fine.
+And if we connect this by splines,
+it looks like this actually.
+So I just want way less.
+And I want to subdivide this.
+So now you see it's not on the outside of the sphere anymore.
+I mean, the points are still on the outside of the sphere,
+but they go through the inside.
+So we have this really cool op,
+which is like sort
+error three by distance.
+So this always searches for like the next point,
+like the nearest point from the current point.
+So in this sorts it by this.
+So you don't have so many
+lines going through the middle.
+So let's just make this bigger and then
+then you see it a bit better.
+So there are not many lines going through the center.
+So
+probably you can use some error array math to remove like the inside.
+Actually, we want this like this.
+Yeah, that looks much better.
+So now so I was subdividing it before and this is not really helping this algorithm.
+So if I subdivided after, then you see like the points are really on the outside of the sphere.
+So that's cool.
+Now we can.
+Now we could use a camera.
+I would use the look at camera because I'm just like the simplicity.
+So you said, you said like you have an eye coordinate and you have a center coordinate.
+So we can just start, but let's just not use a camera right now.
+Just use a sphere just to visualize it.
+Make this really small.
+And transform the sphere.
+So this is basically like our eye or point of the camera later.
+So we have this.
+Those ops to interpolate arrays.
+So for example.
+Interpolate arrays number, interpolate numbers, array three.
+So this one.
+You just given a number.
+So this is the index.
+So we have 55 points.
+So 55 is the last point and it will just output the coordinate of this last point.
+So we can just connect this to the transform like this.
+And now I can just scroll through this.
+And then you see, we are smoothly interpolating between those values in the area.
+And I actually lied, I guess.
+Probably it's 150 is the last point.
+So we can just put a timer here basically.
+And then it just follows this line and there's one.
+Oh no.
+I don't see it because it's under the floor.
+Yeah.
+Yeah.
+So for this, I would say we just use a, and let's just ignore this for now.
+This can be solved with ArrayMath like Andrew showed this a million times.
+I'm just lazy and remove the rectangle.
+And then we have, we have it going through around the cube.
+So now I will use the look at camera for this.
+So, um, I can say, look at this point that is moving right now.
+Um, and, uh, the open controls has to go.
+So now you see the sphere is always in the center because we are focusing on the sphere right now.
+So now we want the look at camera, like the center.
+Um, let's just look what happens if I use the same value for the center.
+And that's already, and this looks probably stupid because it's the same value.
+But if you only have one, then you see already like there's a moving camera around the scene, but it's, it's not good.
+Um, so what we want is like, we want another one of those.
+And we just make, um, use the same timer, but just, sorry.
+Um, so just offset this, so just subtract, I don't know, 22 and connect this to the center.
+Um, and then you see, um, and then you see, um, we're still following this sphere, but if we turn it off, then you see, um, we're just following the path.
+So if you want to look into the center, basically, um, you can just change this area, for example.
+Um, um, and make this a little bit smaller and then you see the cameras more or less focusing on the center of the scene.
+So, um, um, I mean, it's not perfect, but with the tricks like this, you can already build like a nice, uh, camera setup.
+So if I make this bigger, yeah, then perhaps differently, probably you want to do this bigger, it was better before.
+I think Stephanie, you're still there.
+Yeah.
+I'm still here.
+I'm amazed.
+And like, right.
+Um, yeah, what is really cool is like, you can like, I call it like modeling with arrays.
+You can just, um, do so many things with this splines and, and, uh, array setup, um, array stuff.
+So, um, yeah, you could just also like cut off, uh, the points and make more points on the top or like, make different forms, not only spheres, um, that work with it.
+And, um, then you can do quite a lot of stuff.
+Um, yeah, so if I want, would do this, then I would go this way and try, try to do this basically.
+Uh, yeah, half sphere, um, we think, uh, I think my, um, my headset is out of juice, pretty soon.
+Stefan, can you say something?
+Uh, test test.
+Uh, test test.
+I don't know.
+I don't know.
+I don't know.
+I don't know.
+I don't know.
+Do we have this?
+Like, Andrew would know this.
+Uh, so what you could do is like, you sort the array, uh, sort array three.
+No.
+Uh, what are you trying to do?
+Don't you want to?
+Sorted by the wire access.
+And then cut them off.
+Like everything that's down there.
+Um, don't we have like an array clamp or something like this?
+Um, I'm not sure.
+Um, I'm not sure.
+Maybe.
+Um, we have this for geometries.
+Yeah.
+Uh, uh, we have this for geometries.
+Yeah.
+Uh, I don't know.
+Uh, I don't know.
+Uh, we have this for geometries.
+Yeah.
+Uh, I don't know.
+Uh, strange.
+Okay.
+That we need for sure.
+Uh, that we need for sure.
+Yeah.
+Yeah.
+Okay.
+Uh, then cut them off.
+Like everything that's down there.
+Um, don't we have like an array clamp or something like this?
+Um, I'm not sure.
+Maybe.
+Um, we have this for geometries.
+Yeah.
+Uh, strange.
+Okay.
+That we need for sure.
+Okay.
+Array clamp.
+Yeah.
+We have awesome.
+So now, um, yeah, okay.
+So this is only now we only have like positive values in here, but
+actually we want to only clamp this on the y-axis to have a half dome.
+So you need like an array unpack and then, um, uh, clamp it.
+And then, uh, let's do this.
+Array unpack three.
+Um, so with this, you get three arrays basically.
+And we just want to clamp this one.
+Oh wait.
+Then we want to array pack three.
+Um, um, so now you see, um, it's a half dome basically.
+But I think the clamp, yeah, actually we, we want something like a clamp that also, uh, crops it.
+So, uh, that's, that's not working.
+Yeah.
+Yeah.
+We need some more array ops, I guess.
+We need to show this Andrew.
+Then you, when he's back from vacation, like he will fix this in one day, probably.
+Or he knows already a solution, but, um, yeah, so, um, it's quite strange that we don't have this sort thing because that would solve it.
+Because we have this array crop and you could say like sort this and then crop by half of it, because it's probably like roughly half of the points are below.
+And I think you could get some nice result with it, but yeah, I was so sure.
+But, you know, I think, I guess it's only, um, for geometries.
+Yeah.
+Looks nicer.
+Yeah.
+Probably because you're not like have this gimbal look that you're turning upside down and like on a roller coaster.
+You're right.
+I have to seem like how good the controls you work right now.
+Yeah.
+Right.
+Uh, yeah.
+So, yeah, so this is the way I would, I would go and, um, and try this out.
+Also, we have this array follow path, which is also a bit like this.
+Um, and you could also like, if you want this always changing, you could do another one with the,
+other random seat and then interpolate between those two areas and then change the other one that you're not seeing.
+And then you could have like something that's always changing, uh, all the time.
+Um, but I don't want to do this right now.
+So I would just publish this.
+Yeah, I hope this helps.
+Um, yeah, if you have other, like, tell me if you have other questions, like keep it visual is one of the, like, uh, the cabins uses that also helps other people.
+We see that.
+And we really, uh, thank you for that.
+That's, uh, that's super awesome.
+Um, and that you do that.
+Thank you for this.
+Um, yeah.
+Any other questions?
+Um, physics body, right.
+Physics body, right.
+Casting.
+Um, yeah, we showed this last, last week.
+Um, um, and you can, um, you can see it in the, in the chat and in the stream.
+Um, um, also I fixed, um, I fixed the physics simulation, which I also will publish soon.
+Um, yeah, so I don't want to do this, uh, right now completely again, um, but, um, we will do tutorials about this for sure.
+Um, and, um, we now have those examples here.
+Um, um, so there was a stream last Tuesday and we, um, we set up this, uh, something like this, um, also with, um, also with the GUTF and also like this.
+And, uh, and yeah, you can see it.
+Um, and yeah, you can see it like we publish it today only.
+Um, so you can, you can have a look at the, uh, at the, uh, YouTube video.
+So, and the awesome thing now is that you can, uh, Dino asked for this, so I can do this.
+Um, and you see they are simulated now.
+Um, and it looks stupid because it looks good, doesn't it?
+Yeah.
+Um, but, um, so the mesh instance, the arrays now is the original array.
+So this is when I click now, it will reset.
+So this is the position where the initial position is right.
+So now the physics bodies array outputs a position array.
+So, and when I click this, then you have, um, like a real physics, uh, simulation.
+Uh, it's, it's just right now it's missing the rotation, uh, parameter.
+So what they are actually rolling here.
+Um, but, um, I will also do this probably the next days and, um, yeah, which is super cool.
+And this will get the rotation and then you can just, uh, uh, uh, like spawn.
+Uh, this is because they are all in the cube in the beginning.
+So, uh, you can build nice explosions.
+And yeah, let's turn off this.
+And yeah, so actually they are already rotating, but we just don't have this rotation.
+But yeah, we will continue working on this and, uh, this is super, super cool.
+You can also.
+That's good.
+Bam.
+Yeah.
+Um, yeah.
+And you still can pick them.
+So you still have this correct, uh, ray casting, picking stuff in here working.
+So, and it's actually quite fast.
+Um, yeah.
+So there's that, um, yeah, look up the stream.
+There's like the whole setup.
+Um, yeah.
+Um, yeah.
+Yeah.
+I also just posted the video on, um, on the chat for convenience.
+So.
+Yeah.
+Cool.
+Thanks.
+Thanks guys.
+- Yeah, I also just posted the video on the chat
+for convenience, so.
+- Yeah, cool.
+Thanks, thanks guys.
+- Yeah.
+- Working on shadows, Simo, working on shadows.
+- No, I think, yeah, I think it's the COVID times.
+- Also, yeah.
+- I think we should do, yeah, I mean,
+yeah, we need those streams more often also for us.
+Because I also didn't know a lot of stuff
+about the shadows, this blur parameter I never found.
+I think we need to put it somewhere else,
+but yeah, we also need to do this internally.
+But let's not talk internal stuff.
+Yeah, I think my brain is slowly not working anymore.
+- You just banged out like a camera simulation.
+After two hours of stream, so yeah.
+- Yeah, that was my last energy resource, I think.
+No, but yeah, yeah, thank you all.
+And keep it visual, like, great questions.
+Like, maybe next time we can work it out
+with the Discord chat, and then we can talk to each other.
+Yeah, great, okay, guys, and thanks Titos that you're back.
+I didn't see you for a long time, cool.
+Okay, guys, then, bye-bye.
+- Bye.
+- Bye.

@@ -1,0 +1,29 @@
+https://www.youtube.com/watch?v=x0mjo8XStzA
+Hi there and welcome to another video I've made with cables. Today I'll be giving you an introduction to the MIDI button array op.
+So this is a really simple op to use. So first of all let's get started. Here I have the launchpad mini which is just basically a huge amount of MIDI buttons.
+So you could do this with this controller or with a MIDI keyboard. So I'm going to first of all make a MIDI input device.
+I'm going to put this here and now I'm going to click launchpad mini and now I'm just going to make the MIDI button array op.
+I'm going to press F. I want to test that this is working so I'm now press a button and as you can see here on the screen I've got activity.
+So if we look here at last index nothing's happening. We need to tell the MIDI button array how many buttons to use.
+So I'm going to click learn start. I'm going to press the button in the top left corner. You can see this turns to zero.
+I'm going to click learn end and I'm going to click this button in the bottom right.
+So now if I go to index and press this as you can see the number jumps to the corresponding button. So we're starting from zero. Nice and easy.
+But how can we use this data in a meaningful way. So I'm going to make an array get value op.
+One moment. Array get number sorry. And I'm going to grab this. And if I now go to last index and plug that into index here and I get this array of buttons and I plug it in there and we press this.
+If you now look over here when I hold the button in is one when I let go is zero. Right. And we can also see the button number here.
+So this is this is like in its most basic form. This is just now being able to access this data.
+So if I now click MIDI button array I can also click toggle. And what this will now do is I press the button once and let go and it stays on one. I press it again and it becomes zero.
+So it's like a note on no off behavior or toggle. So once more just to show that if I click toggle off and I click array get number and press and hold it in.
+It's like a note on let go. It goes to zero. So those like the two patterns of behavior that you can get out of the controller.
+So this will work with your midi keyboard with a midi midi controller like this pretty much anything if it's supported by Chrome one last little thing.
+If you plug in your device and for some weird reason it's not recognized you're just going to shut down all instances of your browser and then open it and then it should be fine.
+This almost never happens. But once in a while it can occur if everything set up and running then you're just pretty much good to go.
+And one last thing that I want to show is let's grab a main loop and let's grab the array iterator up loop over every element of an array.
+And this is only good for small arrays currently but I just wanted to show this so I'm going to plug that in there.
+And now I'm going to grab a value router up routes the value to one of the output ports and this is actually just a great way to debug what's happening.
+So if you look over here if I now press these buttons oh sorry one moment we need to plug this in here so we get the value and plug it to value.
+So I can now press multiple buttons and I can see what's happening here. I think it's just a good way to debug stuff.
+You can also use this to route the information that's coming in here to an output port.
+Currently it only supports nine ports but we're working on a new version for in the future but this should just be enough to get started with the MIDI.
+So I hope this video has been educational, informative, if you have any questions or comments please feel free to leave them under the video or to post them on the forums.
+Thanks for your time. Bye!

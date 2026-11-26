@@ -1,0 +1,94 @@
+https://www.youtube.com/watch?v=X8731HN0Ah0
+Hello and welcome to another KBITS tutorial. My name is Tom on KBITS and Discord. My name is Pandur
+and I want to talk about Handlebars. Handlebar template engine in KBITS today. So Handlebars is
+a little library that we can use for HTML, for dynamic HTML generation. And we do this in KBITS
+all the time. So if you click any op, you see the parameter panel on the right. All of this is
+generated HTML using Handlebars. And we have this handy Handlebar HTML op, which is quite underrated
+and I want to show this to you. So in this example that we will build, we will generate a list of words
+and a little title here that is coming from an object. So the objects look like this. It has a
+title, it has a show title and it has an array of words. And in the end, we will generate this HTML
+from those words. And we will do this using the Handlebars template language, if you want to call it
+like this. And this, so this is our template. And this takes the dynamic input and generates HTML in the end.
+And then in the end, we will even add an interaction. So when I click this title, you see the screen
+is flashing. So we can add also interaction to those HTML elements. Okay, but let's start from zero. So
+I will add our Handlebars HTML operator here. And I will create an empty object. So you can use any object. So you
+can use the comp object ops that I showed you in another tutorial. You can also use data coming from an
+API, for example. You can put in any object data, basically. And for example, we want to add a string to this object,
+using object setString, for example, title. And we give it, the titles have a word, very creative, and
+that we feed into our Handlebars HTML operator. So let's have a look at the result using the
+this string operator. So the result is still empty. So when I click the Handlebars HTML op,
+you see there's an input template, which is a string, and I can edit this. And I can type in some
+stuff here. So when I save this, you see the output of the Handlebars HTML operator, you can see here. So
+when you go to the Handlebars website, there is a whole documentation about this little language. And so
+they show you those expressions here, for example, this first name, last name, which will be filled
+with their first name, last name in this example. And we can use those little handlebar expressions in
+our patch now. So in the, in our Handlebars op, I will add a little title like this. And then you see
+h1 title. Let's put this into a element of, I will disable the size, so it gets a dynamic size. So I had to
+type in here title. So now you see, we are generating an h1. So if I type something afterwards, it will be
+shown like, shown more like normal text. So let's make this title dynamic. So I put in an object that has, let's have a look at the object first.
+The object has this title key value pair. So this is title hello world. So I can now go in here and write
+curly braces title curly braces.
+And now you see magically this will be replaced with the hello world title from the object.
+And that's super handy, right? So you can, you can put in strings or numbers and can use them in the,
+in the Handlebars op. So for example, I can put in
+So I can now check set number, for example, show title.
+And I can now go in here and also do this show title.
+And then we see this zero. So this is the, the number that we have in here. So I can also put in numbers.
+But I can also use this, um, like a programming language, like a logical, uh, expression.
+I can say, uh, that's the, you have to type in a hash and then if, and then we can say show title.
+And then it should print this title. And then we want to end this if block.
+So when I save this, uh, nothing has changed, but I, when I change show title to zero, then the title is gone.
+So every value that's bigger than zero is true-ish in JavaScript. So then the title will be shown.
+Um, so that's really handy. So you can, so you can enable, uh, printing something or showing something
+for the user based on values and you don't have to have many, uh, HTML element operators or something.
+You can just dynamically create, recreate this HTML.
+Um, and you can do so much stuff with it. So you can, for example, use object set array.
+And then we use an operator random words,
+which will give us a lot of random words. So let's crop this array to like 10 words.
+And now, uh, let's have a look at this object. Oh, I forgot to enter a key.
+So let's call this words. And then we see, uh, in our object, there is an array called words with all
+those words, but the night ball, whatever. And so we want to display this in our HTML as a little list.
+So with handlebars, you have the each, uh, expression. So when I, uh, do each words, so our, our key
+for this array is words. Uh, and then I have to end it basically like the if statement. So I end this here.
+So this whole block is the if statement and the same I can do with each.
+And then I can use, uh, curly braces, curly braces dot.
+And this means print the current thing in this array. So whatever, like you can also have objects
+in this area or whatever, but if you have strings or numbers, you can just say dot. And then it will
+use the current word basically. And now we see, uh, we see all the words that we have in there
+next to each other. And so we can, we can style this like a list. So for example, we can use, uh,
+a, um, ordered list and we can use the li, the list entry, uh, HTML element and put the word into a nice list.
+And then, uh, uh, and then, uh, it will look like this. I did something wrong, I guess.
+I guess it doesn't like the, um, uh, so I have to close this li text. So here it starts and then I
+have to close it like this. And then we have a nice list of, uh, words here. So we can then also use the CSS operator, uh, for this,
+and, uh, for example, style the li and give it a different color like this or like this or use a different
+version of the, of the circle here, of this, of the disk. You can also use disk, for example. And you
+can style this like normal HTML and, uh, or like the h1. Maybe we want to color this right like this.
+So, so this is really handy to, if you want to produce dynamic HTML, obviously. So how about making
+those elements interactive? So I, so when I hover this hello world here, you see the cursor is still
+the text cursor. So I will set a cursor pointer in the CSS. And then when I hover it, it looks like I can click.
+So this is just so that it feels like a normal clickable element. Um, we can now use a different op that
+is called query selector. And we can use this on our title. For this, I will give the title an id.
+For example, my title and the query selector, uh, we use hashtag my title. So if you want to select
+by id, it's a hashtag. And if you want to select by a class name, you use a dot. So this is just
+"standard HTML, CSS, DOM, query selector". And, um, oops, and I want to
+select this element every time the handlebars HTML is changed. So I will add a string, uh, trigger
+on change string. And I will connect it to this query selector. So, um, so now this outputs
+this HTML element. So I think we should be able to see this here. Yeah. Okay. So you see, this is our
+HTML element. So you, we see already in our tags. So this is, this is just our element, um, which is fine,
+which is nice. So we can use another operator, the element interaction, um, which is
+usually used with the element ops or with the diff element op, but you can also use it with this one.
+So this will just give you like a normal HTML element, and then you can use all the CSS
+elements that are showed in the last tutorials. Uh, but you can also use this one.
+So this I want because I want to react to a click on this, on this title. So I can just connect
+this first trigger output, which is mouse down left. So every time the mouse is down left on this element,
+we see a little trigger counter. So I made this, this element coming from this template interactive now.
+So I can, I can control stuff with it. So I could use, uh, for example, a bang op,
+feeding into a clear color, like this. And now when I click the, uh, let's make it a bit slower.
+So now when I click the, the title, then the whole screen will flash. So we can, we can control GL stuff
+with it and, um, yeah, do a lot of stuff with it. So in the next update of cables, there will also be a new
+operator for this. So you can have a lot of elements, make all of them clickable and you can produce
+a dynamic list of elements using the handlebars op and then make them clickable. And then you get,
+basically the data of those ops back. And then, uh, it will, then it's really dynamic,
+really flexible to create HTML stuff with it, create content on your website with it or menus or whatever
+you want. You can do so much stuff with this. Okay. Let me know, uh, if this is interesting to you and
+have a nice day. Bye.

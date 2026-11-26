@@ -1,0 +1,138 @@
+https://www.youtube.com/watch?v=d3jGof4GSCc
+Hi there and welcome to the second video of an introduction to cables. My name is Mark. My handle
+on the forums is Andrew and today I'll be showing you how to get started with creating your own
+projects and patches inside of cables. So if you haven't registered yet please head over to cables
+dot GL register as we just launched a public beta and then come back over here and we'll continue
+with this video. So I'm going to go over here to create and I'm going to make an empty project and
+click it. Now we're not done anything yet but I just want to show you that when you're working on
+a patch it's normally a good idea at the beginning to go to patch save as and I'm going to call this
+test free. Okay so I've now saved the patch. If I do ctrl s I save it I can go over here and click
+this as well. So it's a good idea to do that often when you're working on something. So I'm going to
+press escape and I'm going to type in cube. So what did escape do? Well when you press escape it pops open
+with a menu and it allows you to type in things and then a list of ops will pop up. You can scroll up and
+down. So the thing that matches best with what you're looking for will be shown at the top and then
+everything else related to it will be shown under there. So I'm going to click here. I have a cube but
+I don't see anything. So these black and white squares here show you that the renderer isn't
+working. So I'm going to click here. I can make it a bit bigger or smaller. Pull it over there.
+So this is a thing a lot of people forget at the beginning with cables. You need one really
+important op. I'm going to press escape and I'm going to type in main loop. So main loop
+basically is necessary in every patch if you want to see something on the screen. And what it does is
+it draws 60 frames per second. But why don't we see a cube? Well we have these trigger outputs and inputs
+and ops. So these are inputs on the top outputs on the bottom. So I'm going to click and drag and let
+go. And then I have a cube. Awesome. So if I now right click this I disconnect it. If I click and drag
+I can connect it again. So if I disconnect it again. If you click and drag like this and let go in the
+middle and there's only one possible connection. Cables will automatically connect it for you.
+So we've got a cube. It's the start of something great with many graphical things that people do.
+So let's click here in the middle. As you can see it highlights and I'm just going to type in transform.
+Now we've made the UI in cables as fast and fluid as possible. So there's least interactions with what
+you have to do to get to where you want to be. So I'm going to click on the transform up and I'm going
+to move this parameter by clicking and dragging with the left mouse button. As you can see it can move
+its x position, y. I can rotate it like this. So I'm going to put the position back on zero.
+So believe me that's a cube but it looks really weird. It's got no shading or lighter shadow.
+So I'm first of all going to show you a material. So a material is like a color or a light and shading
+that's applied to a mesh. And a mesh is something like a cube or a sphere. So I'm going to click here,
+click there, and I'm going to type in basic material. Now this gets added in between. Now if I click here
+on this color picker I can change the color of the mesh. But it still looks weird. No shading. So I'm going to zoom out
+with the mouse button. And I'm using the right mouse button now to move around and I can zoom in and out
+with the mouse wheel. If I want to select this op I can click it. But I can also click and drag and select
+multiple ops and move them around. It's pretty self-explanatory. So I want to disconnect this.
+Now you could click it and delete it and just undo. But there's a better way. Say I want to keep this up and I want to keep the
+connection. Right. I just click, drag and shake. It disconnects and now the connection is restored. Really cool
+feature when you want to just like disconnect something but keep the connections. So I'm going to click here in between and now I'm
+going to type in lambert material. This is a simple shaded material. I'm going to click on the color picker and I'm going to move this up.
+And now this looks more 3D. But every time I want to rotate this cube I'm having to move these numbers. It's getting a little bit annoying.
+So I'm going to put these back in zero. I'm going to move main loop up and I'm going to click here. I'm going to type in orbit controls.
+And now let me just get rid of basic material. If I click and drag with the left mouse button as you can see I can move around and I can scroll in and out of the mouse wheel.
+And this just makes it a lot faster than having to click this. So you might be looking at cables and thinking how is all this working.
+Well the order of execution is from top to bottom. And to help you visualize that we've got a really cool feature called flow mode. You click in a patch and you press the F key.
+And now you literally see the direction of the data. So if I now go here and disconnect this, you can see that this stops because there's no movement, nothing's being rendered.
+So I'm just going to plug that back in. So when you want to look at how data is flowing inside of your patch, just click there and press F. Really handy feature.
+So now I'm going to move this back. So click orbit controls, move down and I click reset. And now I see the cube exactly from the front.
+So I want to add a circle around this. So now I'm going to go down here and I'm going to pull this out and I'm going to type in circle.
+And I get a circle mesh. And if I move this bigger, I can see it, right? You see, that's what's going on.
+But I want to make the inner radius bigger. And I'm going to click and drag that up. And as you can see, I've now got this circle around the cube.
+So let's say I want to make the cube smaller. I can click it and I can change its width and its height and its length.
+But maybe I want to do this with a different op. So it's time to show you something with the UI.
+So I'm going to go here to width. I'm going to click and drag out. And now I'm going to type in number.
+I've got a number here. I can now click and drag this and plug it into the width, the height and the length.
+Okay. And now if I click and drag this one number, I change all three at the same time.
+But this width doesn't make sense. It's more size. So if I click the op and I go here, I can change the name of the op as it's displayed.
+Really cool feature. One other thing I want to show you is, if I disconnect these, if you hold in Alt and then click and drag with the right mouse button,
+you can copy a link over like this. I can also click and drag with the right mouse button to disconnect.
+So I'm going to put this on 0.5. Okay. So let's say I now want the circle to have a different color than the cube.
+Well, I can just go down here because everything is passed from top to bottom. I click in between and I add a Lambert material.
+And as you can see, this now has a different color. So this is the way cables works.
+This material and this transform is passed onto the cube, but the material gets overridden.
+But transform is a bit different, right? Now, if I would now go over here and look at rotation, I grab a timer op.
+And this gives me a number which increases based upon time.
+So I've clicked the op. You can see this number going up here.
+So I'm going to just plug this into rotation X and Y and I'm going to crank the speed up.
+So as you can see, this transform is transforming the rotation of the cube and the circle.
+Imagine I don't want the circle to rotate. Well, I just disconnect this and I move it over here and I'm going to grab the trigger before the transform.
+So if I press F for flow mode, you can now see that this cube is being transformed, but the circle and the material for it here go from before it.
+OK, so this is the basic structure of cables. I could now go here, click in between, add another transform.
+I could grab this timer, do control C, control V to copy paste that.
+So if I pull to the middle of an op now, not to a port, but to the middle and let go.
+Cable says, I don't know which port you want to plug this in and it pops up with a radial menu.
+So I'm going to click Rotate X and now I'm going to pull this to the middle.
+I'm going to say Rotate Z.
+And now I'm going to click on the timer and I'm going to put it on a different number than the other one, say in reverse.
+Turn off flow mode. I'm just going to make this a little bit brighter.
+As you can see, now I've got a very different animation and transform taking place.
+So this is the basic idea of hierarchy and structure inside the cables.
+Another thing we can do here, imagine that I want these to be aligned.
+I just select them and I do A for horizontal alignment.
+I can do that here as well.
+And if you do shift A, so if I do this now, shift A.
+Well, it actually just kind of squashes everything together and aligns them at the same time.
+But the A key is a really handy way just to like get your patches nice and clean.
+So I'm going to click and drag these and move them over.
+So this is the basic way that you can just work with cables, with the ops.
+And now I just want to show you one or two other little things.
+So over here, you've got this like customizable icon set here.
+So I can click save patch and the patch is saved.
+But I can go here and click this.
+And now I could add one of these things as a kind of shortcut for something that I want to do.
+So I could add like a toggle full screen op or show settings, which is already there.
+Show timeline.
+There's a lot of really cool stuff here.
+So one thing I want to show you here is before we close this off is if you do control and P, you get this, the command line.
+So there's a lot of really handy stuff in there.
+So say I want to change the render size.
+That's the viewport here.
+If I type in render, it pops up here.
+Change render size.
+I click it.
+Oh, sorry.
+I have to click here.
+And now I can say 1280 by 720.
+And I change the size, which is way more accurate than trying to click and drag this and make it perfect.
+If I do control P again, I could type in scale.
+And this will allow me to scale the renderer.
+Sorry, I've got to press enter.
+So now if I put it on 0.5, it's still rendering at the same resolution, but it's only showing us half of it.
+Press control P, enter and I type in one and now it's back to how it was.
+So control P for the command line will show you a lot of really cool handy functions that are just tucked away because we don't want to make the screen too busy.
+So I'm just going to change the renderer size back to 720 by 480.
+So we've got a lot of stuff here.
+I'm just going to click save one more time.
+So you guys get used to seeing that we can go here and then we can go to the project settings,
+which allow us to publish a patch, generate a secret URL to show it to people.
+You can go to collaborators, add another cable's username there, and then you can both work on that patch.
+They have permission to edit it and save it.
+You can go back to previous versions in time and you can also delete it here.
+So this is like the basic workflow of cables, you know, make an op, tweak it, plug it into something else, generate, keep creating.
+You just keep on doing this iteratively and then you'll just come up with some really cool visuals.
+But like anything, you've got to start with the basics, which is why we have a really awesome cube and circle spinning on the screen.
+So I hope this video has been educational and informative.
+Please head on over to the documentation.
+Definitely check out our YouTube channel.
+The bite-sized playlist is great for beginners.
+Three minutes per op.
+You can pick up cables in no time and get started with making really cool stuff.
+Open other people's patches in the editor.
+Look at what they did.
+Grab some ops, copy them, paste them into your own, start playing with them.
+It's a really friendly ecosystem of sharing knowledge that we just want to encourage.
+So I look forward to seeing some other video tutorials and I hope you have a good one.
+Thanks for watching. Bye.

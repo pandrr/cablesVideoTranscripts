@@ -1,0 +1,126 @@
+https://www.youtube.com/watch?v=VYDYE7w9YFU
+Hi there and welcome to another video of copycat with cables. My name is Mark, my handle on the
+forums is Andro and today I'll be showing you how to recreate something like this. I was browsing
+around Twitter following some of the generative artists that are there and I saw this really cool
+piece and it really just struck me as something really simple but with like a really powerful
+striking design. So this has been created by Yun Kiyoshi, hope I pronounced his name correctly there.
+I'll provide a link to his Twitter page and to his website in the video, under the video and in the
+patches. A lot of cool stuff there that you should check out. So we're going to attempt to recreate
+this today in copycat with cables. So without further ado let's get started. So I'm going to press
+escape. I'm going to create a main loop. I'm now going to make a sequence op and from this I'm now
+going to pull out an image compose. And then I'm going to grab one of our latest ops, Shapes2D. It
+allows you to generate different 2D shapes to use as a texture. I'm going to pull this out from here and
+I'm going to make a full screen rectangle. I'm going to grab this and I'm going to plug that in there. So,
+let's first of all put the color on white and then I'm going to go here and I'm going to pick the shape
+box. I'm going to put the width on 0.2 and the height on 0.1 for now. So I want this to scroll and
+after I've made a scroll I'm going to map it to a cylinder and I'm going to use a repeat op to recreate
+what we saw. That's it in its most basic form. So I'm going to go here. I'm going to type in scroll
+and if I move Y here as you can see I can scroll the texture. So let's pull this out.
+Grab a timer up. It's going too fast. Put it on 0.25. Great. So we've got a scrolling box. It went really
+nice and quick. So now I'm just going to disconnect this. I'm going to pull this out and I'm going to make a
+render to texture because I want to get a 3d mesh and the scene that it's in and I want to convert that
+into an actual texture. I'm going to grab a clear color op. I want to just plug the output of this
+into there. Grab the clear color op. Click this and I'm just going to put it on a slightly different
+color. Great. Now I'm going to add a transform view op over here and then I'm going to add all the controls
+because I want to be able to control and rotate the scene with my mouse.
+And then I'm going to add a basic material because I need to apply this texture to a shape.
+And now I'm going to grab a transform because I'm going to need to move the shape later.
+And then I'm going to add the cylinder up.
+And there's the cylinder. So because we're using basic material, it has no shading or lighting.
+It's just like one color. So first of all, let's let's make it white. And if we click on the cylinder
+now and I turn it a bit, we're going to turn off caps and that means we're removing like the top and the
+bottom part, as you can see. And if I change the segments amount, you can see it kind of like
+becomes low poly to high poly. So I want to cut open cube. So I put on four like this. Hopefully that's
+clear to everybody. So now what I'm going to do is I'm going to get this material here, sorry, this
+texture, and I'm going to apply it to the material. But I'm going to plug it into the opacity right here.
+And look at what we got right there. And now something I want to point out is you can see
+that it looks a little bit broken because what's happening is the inside of the geometry is kind
+of getting in the way of us seeing what we need to. So we go to basic material. It's got a really nice
+option for this. And you just click discard transparent pixels. And now when you do that, it's not broken
+anymore. It's complete the whole time, no matter which angle that you're looking at it from.
+So this is the basic framework for what we want to do. I'm going to go to Shapes2D and I'm going to
+increase the height, say to 0.5. That's too much. 0.3. So I get this kind of thing happening.
+So we're already pretty close to what we need to set up here. So right now, I'm going to say to myself,
+I want to be able to create more instances of this because in the original video, there's like maybe
+eight or 16 of these shapes. So I'm going to click here in between. I'm going to type in repeat.
+And this will trigger all ops below an X amount of times. So click add. And let's put this number on
+eight. So there's actually eight cylinders with eight materials there, but you don't see a difference
+because they're all in exactly the same position and they're all doing exactly the same thing.
+So let's use a really cool thing with repeat. So it's got an index out for each trigger. Sorry,
+for each iteration that's coming out. Press F to see flow mode. You can see it's really busy here.
+So it's like triggering eight times per frame. So this index number we can use to do a lot of things with.
+So first of all, let's pull that out, grab a multiply and let's plug it into transform rotate X.
+And now let's crank up this multiply and look at what happens there. It's kind of like coming out.
+So each index has a different rotation slope. So it's like, let's put it on just say 20 for now.
+So it's zero times 20 for the first iteration, one times 20, two times 20, three times 20. So we could
+replicate this. We could get the repeat again, plug it into a multiply and now plug it into Y.
+As you can see, we're starting to get some really interesting looking patterns. Let me just make the
+scene a little bit bigger with transform view scale. So it's a little bit easier to look at. But as we can see,
+everything's kind of moving at the same time, which makes it really difficult to see things. In the
+original video, the start and end point of each of these moving lines was different. So what we're
+going to do is we're going to go down here and we're going to grab the repeat index and we're going to
+plug that into a random numbers op. What does this mean? We're going to get a different random number for
+each index. If we give it zero, we get that random number. If we pass in one, we get a different one
+and so on. So let's now get this random number output. I'm going to plug it into texture offset Y.
+We're going to multiply this by a big number. I'm just going to start turning it up. As you can see,
+they're all now moving at different points. So what's happening is the texture that's coming out of here
+for each shape, the offset where it is on the Y position is different. It's still a little bit
+difficult to see. So I'm going to turn down that width a little bit more and this makes it a little
+bit easier to see what's happening there. So we're already getting pretty close to what we saw in the
+original video. We could click the random numbers here and like try out different seeds until we get
+something that we're happy with. So let's zoom out a little touch and let's move this down. So the key
+here, if you're not following this, is there's like everything underneath this is being triggered eight
+times and each index number is being used to make something different happen. Okay, so now I want each of
+these to have a different color. So let's grab the HSB to RGB up. Okay, I'm going to just zoom in a little touch
+again. I'm going to plug the red into red here, green into green, blue into blue. And this now means that with
+one number, the hue, I can change the color. Okay, and the trick to this is we want to just get one
+number from random numbers. And we want to use that to generate a different color for each shape. So we're just going to plug it into
+hue and watch what happens. We now get a different color with everything. This is great. So imagine
+you'd want a little bit more artistic control. You click here in between, you type in map range. It maps
+one value range into another. So random numbers output zero to one. So we click here on map range,
+old min zero, old max one. And now we could say I wanted to go from 0.25 to 0.5. And as you can see, I now get
+these like hues of color. So I can now turn this up. And now we're kind of like staying within a color
+range. So the map range up is a really good way to kind of like get that color control that you want
+to have instead of it just being like seemingly random. So like zero to one can just be anything.
+4 to 0.8 gives like more of a palette. So I'm going to put it like this. I just want it to be a little bit
+obvious today. So we're already pretty close to this. So let's say I want to rotate everything now. I could
+plug her a timer into transform view. I could also just plug it into here. And let's turn that up.
+And as you can see, we're now rotating each of the instances from the repeat on this x axis.
+I could now put this into here or use a different timer. And then we're rotating them on x and y.
+So we're already pretty close to the look in the original video from the artist.
+We could also do a little trick here now where we could pull out the repeat index,
+put it on into a multiply. And this we could now plug into a scale.
+And let's put that on one. And now I'm pretty close up. So I'm going to turn the scale down to
+something smaller like this. And now by using this multiply number, I could make them seem smaller
+or bigger depending on each index number that's coming out. So there's a lot of potential to play
+around here and get a lot of wildly different looks. You've just got to kind of look at what works
+for you. So this still looks okay. I'm going to I'm going to pump up the clear color so it's a little
+bit brighter. And the one thing I'm missing right now is like some depth. So there's a really cool
+trick for this. So I'm going to go over here and I'm going to make a kind of post processing chain.
+So I'm going to grab the image compose up. I'm going to disconnect this. Now I'm going to grab
+draw image and I'm going to plug this into image. I'm going to get the output from image compose and
+plug it in there. And now I just want to add some ambient occlusion. So grab the ss802 op and I add it.
+And right now I'm just going to pause the timer because otherwise this can be pretty
+difficult to see. So let's just like disable it all and I want to get some brighter colors here with the
+map range. So let's just move that up here a little bit. It's kind of tricky to get right. This looks okay.
+So I'm going to go to the ss802. I'm going to put the samples on three, AO radius on one,
+clamp on this. And now I kind of like want to zoom in. And if we disable this, it's kind of tricky to get
+right at the beginning. Ah, there we go. I have to plug in the depth texture. Great, there we go. So as you can
+see, we've now got this kind of like depth being added, ambient occlusion. So where two edges meet,
+we get darker lines. So if I disable this now, as you can see, the image is really different. I can turn
+up the luminance influence so the image doesn't get darker. Let's turn those timers back on.
+Let's just actually slow it all down a little touch because it's going pretty quick. It's pretty
+difficult to follow. Okay. So as you can see, if I'm going to bypass the ambient occlusion,
+it's all quite flat. It doesn't look like there's any real shading. And by getting the depth texture,
+and then using that to power the ambient occlusion up, we get this. I could now go to repeat. I put
+this on 16. Zoom out a little touch. We could put the scale just on one. And as you can see,
+they're going from bigger to smaller. So there's an awful lot of stuff that we can do here. Let me just
+disconnect the scale for now. And let's zoom back in. And I'm just trying to show you that that scale
+is changing the size of everything. And if we don't do that, then they're all on like exactly
+the same location, as you can see. And there's a little bit of clashing there with what's going on.
+So let's just plug this guy back in. Scale. Transform view. Scale it down a little bit.
+So without making an attempt to get exactly the same colors, this was our copycat with cables today.
+There's a lot of parameters here that you can tweak and a huge amount of looks that you can get out of
+this patch. So I hope this video has been educational and informative. If you
+got any questions or comments, please feel free to leave them under the video below,
+or to post them on the forums. Thanks for watching and have a good one. Bye.

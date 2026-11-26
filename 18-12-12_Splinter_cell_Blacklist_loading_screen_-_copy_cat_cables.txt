@@ -1,0 +1,101 @@
+https://www.youtube.com/watch?v=pbNmLllmqO0
+Hi there, and welcome to another video of Copycat with Cables. My name is Mark, my handle on the
+farms is Andro, and today I'll be showing you how to recreate the loading screen from Splinter Cell
+Blacklist. So I'm just going to go to this YouTube video here and press play. Splinter Cell is one
+of my favorite games of all time. I love stealth action games and I've played it since the first
+one in the series. And Blacklist I loved so much and they have this really amazing loading screen
+with this transition from one image to another with this kind of like pixelated look. I thought
+this would be really cool to recreate this inside of Cables. So this is what we're going to try and
+recreate today inside of Cables. So Ubisoft, please be sweet if you see these images. It's all in the name
+of good fun and free publicity. So let's go here to main loop. And we're now going to make a sequence
+op. So first of all, I want to see both of the images. So I'm first going to make an image compose op,
+and then I'm going to attach a draw image and I'm now going to go to views files and I'm going to say
+here upload file. I'm going to go to this and then there we go. I'm just going to upload these two images.
+As you can see they're uploading there. Great. So I'm going to pull this one in and this one in.
+So I'm just going to call this one
+image one. I'm going to call this one image two.
+So I'm going to grab the texture output and I'm going to plug that into here. We don't see anything
+yet because we're not rendering to anything. So I'm going to make a full screen rectangle.
+I'm going to plug that in there. Cool. We've got an image. So I want to be able to see both of them.
+So I'll make another draw image and I'm going to plug in image two. Image two is overriding image one.
+If I pull down the mount, as you can see, we can fade from one image to the other. So this is the basic
+thing I want to recreate. So I'm going to go over here and I'm going to grab a sign anim.
+And as you can see, this outputs numbers from minus one to one. You can go here and see the shape that I'm
+getting. So I'm going to use this to make a kind of crossfade between the two. So I'm going to pull
+this out and I'm going to grab a map range up and say old minimum minus one old max one. I want to just
+remap it from zero to one. So let's like relabel this zero to one. I want to have another one which goes in
+reverse. So new minimum one, new max zero. So I'm now going to plug this in here. So this one I'm going
+to plug into a mount here. And this one I'm going to plug into a mount there. And now we get this basic
+fade from one screen to another. Cool. So, so far so good. Now we need to kind of like make that pixelated
+effect and the grid that we saw. So I'm just going to disconnect this for now. And I'm going to go over
+here and I'm going to grab the image compose op and we're going to grab one of my favorite operators,
+pixel noise. That's it. So let's just plug this into the, there we go. So it was 18 by 10 squares in the
+original loading screen and we need to get that like kind of like morphing effect. So I'm going to grab
+timer two and I'm going to plug that into Z and we get this bit too fast, but put the time on 0.2.
+Great. So we've got this right now. So, um, how can we use this to make that transition effect? Right. So let's
+plug the original image stuff back in. So we have here image alpha. So I'm going to plug that into
+image alpha and with this one into image alpha. Now the alpha output of pixel noise is one.
+So if we click draw our image, we can see that the alpha source is alpha channel. We can turn it to
+luminance and do that with the second one. And then all of a sudden we see that this texture here
+is now having an effect on what's happening over there. It's like changing the opacity.
+Okay. So, so far so good. The problem is we never see like a full screen. So I'm going to go over
+here and I'm going to add a color op. Um, and as you can now see our texture is just completely white.
+That's because, uh, this is a normal mode. So now I'm going to turn this to add. And if we pull this
+down, you can see the texture appears there. So this is a kind of way to make like a, um, a swap between
+the pixelated look or the non pixelated look. So I'm now going to, uh, copy this sine anim and the remap
+range. And you know what, I'm going to grab a value. Uh, and this is going to be frequency. It's on one right
+now, and I'm going to plug it into here with frequency. This guy expects a trigger and I'm just
+going to divide this one by two. Okay. And we're now going to get this one, which is now operating
+at a different speed and we're going to plug it into amounts. And voila, we get this full screen effect,
+but we get the pixelated look when it goes from one image to the other. Okay. That's pretty cool.
+So far so good. So now we need to get a kind of grid. So I'm going to go over here and I'm going to
+say, um, render to texture. And the render to texture is now going to go into an orthogonal op because I don't
+want this grid. I'm going to make it to be affected by the camera view. I'm going to plug this into a scale,
+X, Y, Z, and last but not least, I'm going to get a grid op. Um, now just to show you what's going on,
+I'll disconnect this and I'll plug this in here. Let's just label this red, uh, render to texture.
+Okay. So I'm going to put the amount of grid spaces to 18 and now I need to like make it max, uh, match
+up with the pixel noise stuff. So I'm just going to very quickly make a very temporary channel just
+so I can get this stuff aligned. So I'm going to go here. I'm going to make an image compose draw image.
+Let's just make a bit more space and I'm going to make another draw image. So in the first one,
+I'm going to add, um, our pixel noise. Let's just label it quick.
+This is just so I can like match the two up and then I'm going to get the grid and I'm going to plug
+this in here and disconnect this. I'm going to plug this in. So let's now put this down. Look,
+there's the pixel noise. There's the grid. So one thing I'm kind of missing right now I see is a way
+to color this. So I'm going to make the grid have a basic material and I'm going to just make it kind
+of greeny for now. So if I now pull this down, I've got a way of like seeing, do they add up? So I'm
+going to click on scale X, Y, Z and I'm going to put this one 0.22 and this one on 0.39. It's pretty close,
+but it doesn't exactly add up. So X seems to be okay. And 0.225, 432. Okay. And Y.
+let's take a look now. I think this is pretty good. Yeah. Okay. So cool. This adds up. So
+I want to like add this back in, in a minute. So
+if I think about this, we also have these kind of like cross hatched lines in the original video.
+Let's make this full screen. Yeah. See these lines here. So let's see if we can recreate something like
+that. So right now we're just looking at this channel. Um, so I'm going to pull this down and
+I'm going to grab the stripes, uh, two up. Okay. And let's just get rid of this for a minute
+and turn that down. Let's put a number on a hundred and the width on 0.75 and the rotate on 0.125.
+So we've got this diagonal. Okay. That's, that's kind of cool. So you might be thinking,
+why did I just delete the, um, pixel noise? Well, I'm going to re-add it,
+but I need it to be at the bottom. So I'm going to go to draw image and I'm going to grab pixel noise.
+I'm going to add that here. We overwrite everything. And now I'm going to say, um, multiply.
+And as you can see, we've got this, um, pretty cool look. I'm going to just turn this kind of down.
+Um, one minute. And actually, that's the grid. Let's just put this on add.
+Uh, let's put it on average. I think that's a little bit more what I'm looking for.
+So now we're going to turn the grid down a little bit. We're going to turn the stripes down a little
+bit. This is just kind of tweaking it to get this look we want to go for. Great. So this looks pretty
+okay now. So I'm going to go here. I'm going to just composite it all back into that last part of the
+chain. So I'm just going to disconnect this. I'm going to go back to the original thing that we were
+looking at. And now I'm going to compose this back in. And for this, I'm going to just use, um, add.
+And I'm going to turn the amount down. Let's turn it up a little bit.
+And voila, it looks like we've got something pretty close to the Splinter Cell Blacklist loading screen.
+So let me just make the size bigger. So it's easier for you guys to see.
+And yeah, here we can see the hatch lines. It looks like it could be a little bit more.
+So I'm going to put the stripes here. I'm going to put it on say 150.
+Let's say 200. Yeah, this is better. This is a way cooler look.
+So the last thing I want to do right now is just make it a little bit noisy. So I'm going to add
+noise, which is this effect. I'm going to turn off animated. I'm going to put it on subtract.
+And I'm going to just turn the amount up to about 0.2 something. So I could do this, but that's too much.
+And it's just to add this touch of grit. So there we go. It looks like we've recreated the loading
+screen from Splinter Cell Blacklist. I just did it with two textures now due to the limited amount
+of time to make these videos. I hope this has been educational, informative, and hopefully will inspire
+you to try your own stuff out in cables. If you have any requests with CopyCat, please feel free to post
+it in the comments below or to pop in on the forums and put it there as well. Thanks for your time and
+and thanks for watching. Bye.

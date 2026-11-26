@@ -1,0 +1,2303 @@
+https://www.youtube.com/watch?v=b54nxwEdPTg
+Good evening and welcome to another Twitch live stream with CablesGL. I'm Andro and tonight I'll
+be doing another episode of building my VJ software inside of CablesGL. Just kind of getting ready
+right now into the flow of things. I hope I'm audible and that everybody can hear me. We did
+a quick test upfront a little while ago. So hopefully that's all okay right now. So as usual,
+I'm just going to give it a little while for people to be able to get into the stream. All
+nice and dandy. Hey from me. Thanks for joining us. So I don't know what really low high tech webcam
+stuff going on a professional Twitch stream for life. Okay, I think that'll be okay. So
+yeah, tonight I'm going to be working with some MIDI controllers for the first time in this whole
+stream. Ponda has been kind enough to loan me his MIDI fighter and I've got my launchpad. They'll be on
+the screen in a little while. And I've also been putting a lot of thought into where I'm going to go
+with this basically because like I said in the last stream, this is kind of like a perfect case scenario
+where Ableton Live, you know, everything's been made perfectly with music and, you know, it's visual
+software. But my definition of VJ software is where you can go to a club and be thrown into pretty much any
+any environment with a DJ and be able to make cool visuals with it. And of course, I've got my own
+style with that, which I think is very beat locked. I really like things moving along with the lights and
+stuff like that. But this is how I did it back in the past of other software that I built. Just first of
+all perfect it with Ableton Live. And ultimately, in the next episode or two, I'm going to want to step
+off using Ableton Live. And then I'm probably going to be asking Rick Tick, Ronnie, for a wicked DJ mix
+to kind of simulate like being in the club. And then I'm going to build a lot of the functionality that I
+kind of use out of Ableton Live inside of cables. With that, we're talking more stuff like BPM tap,
+resetting, resynchronizing, because resynchronizing is really one of the biggest issues that you can
+hit, basically, when you're in a live situation that, you know, DJ changes to a different BPM or
+something skips or whatever, and you need to get back into the flow of the music, basically.
+So maybe I'll be doing that in the next live stream, then building the kind of like a way
+to drop Ableton Live for now. So it's kind of like two versions of the software, one for live,
+one without. And then in the live stream, probably that'll look really bad at the beginning while the
+system takes place. So yeah, that will be like an audio only kind of software, which will require a
+very different approach. Just give me one moment. It was chilling in my room before, and now it's too warm.
+Okay, so let's get started. So basically, what I've got is, I'm just going to need a minute to do this,
+everybody. So hopefully, this is clear for everybody. I've got my midi fighter on my launch pad.
+And I was looking at this before I was testing for the stream. So this is like, this doesn't look
+right to me on the screen. So what I'm going to do is, I'm going to, I'm going to flip this vertically.
+So it's going to look a bit weird. But you've kind of got the view that I've got. Now this is like,
+say my button zero, or this is my first midi knob. Let's move this a bit over there.
+Yeah, it's the first time I'm doing this. So it might not be perfect. I'm just so everybody just
+need a minute. It is a webcam on top of a monitor. Yeah, okay. It's this kind of,
+Hey, Titus. Thanks for joining us. So I hope this is visible. So this is like my knob zero,
+one, two, three, goes all the way up to 16. And this is like my first midi button. And this is the
+last one. So it looks a bit weird with the camera. But now you kind of see what I see, which I think
+is the best way to do this. So yeah, I didn't actually really do much preparation as usual,
+because otherwise, I may as well just do a tutorial video. So yeah, what do we, what do we want to do
+with this? Well, we want to use these controls, obviously, to be able to do something live with
+the visuals. So you know what, let's, let's put the music on. Get rid of that. So I already loaded
+the patch, made a new version, I've called it part three. So let's just actually turn the music off
+for a minute, and then I can just focus a little bit on what I'm going to do. So for people that aren't
+familiar with this, I mean, I've got a sub patch right here, if you didn't see the previous streams,
+and inside the sub patch, this is where I want all my MIDI logic to be. Because I'm going to reuse a
+lot of it all over the place. And I did a little test today. I'm just going to get rid of that,
+because I want to show you this from scratch, just that's a plug in the hardware, make sure that it
+works correctly before the stream. So I've got the MIDI fighter here. So this is the first thing I want
+to map. And you know, this, this has values that go from zero to 127. And hopefully you can see this
+with those lights that I hope that's kind of visible. And then we can see like where it is,
+right. So this is a MIDI CC signal, continuous channel data, it's continuously sending out this
+number, apparently. So let's just get this mapped nice and quickly. So I'm going to zoom in. And I'm
+going to call this MIDI fighter. Okay, so to get this MIDI input inside of cables, you first of all,
+always need to make sure that all of your MIDI devices are plugged in before you load the patch.
+And if I'm correct, cables does not support hot loading right now. So if you would plug in a MIDI
+input device, while your patches open, I don't think that scene, don't quote me on that. But if you plug it in,
+and you don't see it, just plug it in, reload the patch, and then it should just be visible.
+So I'm going to type in MIDI input device. Now this allows me to get a MIDI input basically. So if I
+now go ahead to device, here, I see the name already MIDI fighter twister. So I'm going to click that.
+And this is now connected to the MIDI fighter. So I can just duplicate this.
+And control C, control V. I'm going to make one for the launchpad mini, which is this controller here.
+So this does exclusively no on, no off messages. This does normally MIDI CC. It can be,
+can use a custom editor to also do no on, no off and CC stuff. I'm just keeping it on CCs for tonight.
+So let's just say I want to have all 16 of these knobs available because I don't want,
+I don't know what I want to do with them yet, right? So I'm going to go here.
+It's got a really cool function. So we click learn, and I turn the first knob. And what happens is
+this appears and it shows me what this is mid to channel one CC index zero. We've got here an option
+that's like normalize. So I just want to show you that if I turn this knob, now I can go all the way to
+127 and I can turn it all the way back. So I don't want to work in this range because normally like in
+cables or other software, I'm just used to working in the zero to one range. So I'm going to put
+normalize zero to one, and that's going to give me a value from zero to one. This is just way easier
+to work with basically mathematically. So what I want to do is just very quickly
+build this controller inside the cables. So I'm going to click here again, and I'm going to click
+learn. I'm going to do this. So this gives me the second one. I'm going to click here. Learn gives me this.
+So I've got my first like four rows down. I'm going to have to do a bit of repatching in a moment,
+but it's just to show you how quick and easily this goes. So I'm going to disconnect this for now.
+You'll see why in a minute.
+You know, this is something you've got to do once, right? And, you know, of course, if you
+build this into a sub patch, you can just copy and paste it and put it into any of your cables
+patches later. So it's just a one-time process basically. So,
+and I really love this one function. It stops you just having to create an op and then pick the right
+CC and everything like that. So real awesome time saver. Okay.
+Let's just align these. Okay. Almost there. So as you can see, I'm just building what the controller basically looks like.
+Now you might be thinking, why is Andrew disconnecting all that stuff? Well, you'll see that in a minute.
+I mean, I just want to keep the patch nice and tidy. So a little explanation there. I'm going to press
+F to go into flow mode. So if I turn a knob, you can see activity. So this is CC data. So we've got
+event data, which is all of the MIDI data that comes out of this, just like everything. We have note data,
+CC, um, and RPN and clock data basically. So, um, this is event data. So what I'm going to do is now
+I just want to have a clean patch. Let's do this. I just don't want all these cables going over each
+other. Basically. Uh, I just want it to be nice and readable for now. And I don't have to worry about
+like which MIDI, uh, CC note that it is because the learning function is just taking care of that.
+I'm just seeing in a little bit more. Now, you know, I just prefer this compared to having all
+of the cables dragged over each other like that. So, uh, as you can see, if I just turn any of the
+knobs now, I'm just getting event data passed through everywhere. Okay. So far, so good. So
+that's it. We basically just, um, recreated the MIDI fighter. There's some other functions here, basically.
+Um, so like if I'm going to click here on learn, but the midi fire, I can push, uh, let me go here.
+It's easy to see. I can push the knob in. And what that does is that also acts as a midi CC,
+but it's only got like an on off value. Right. You can see that here. Uh, and that's basically the same
+as a midi button. You can just do that with CC data as well. Right. So if we're smart about this,
+let's just take a quick peek. If I'm going to click learn and click the first one. So if we look
+here, this is CC index zero, one, two, three, four, five, six, seven, continues all the way up to 15.
+And the only difference is this is on channel two. So basically what I can do is I can say this,
+I'm going to make a copy of this. I'm going to move this up here. I'm going to call this, um, dials
+right there. Let's get a bit more space. And I'm just gonna copy this and put it there.
+And I'm going to give these guys a different color so I can just differentiate between them.
+So just pick them all and do this. And I'm going to click and drag this out, put it there. Now for
+holding alt, right click, drag, I can just copy that cord. Now, the only thing I've got to do now is just
+put all of these on midi channel two and basically they are then mapped to the midi fighter. So it's
+a really nice, simple way that they've done it. I mean, you've got 16 midi channels, so there's no,
+there's no problem with doing this. It just makes it nice, quick and easy. So, um, so far so good.
+I mean, to me, if you can get something like this set up in 10, 15 minutes, then that's pretty fast.
+Basically, we tried with developing these ops to make this as quick and painless as possible. And
+this is just like scratching the surface of what we can do. So, um, right now, and once again, this is
+sending out, um, values of, um, this one's zero to one, but these also need to be zero to one. I just
+want zero to one because that's just an easy number to work with. Zero is off. One is on. Okay.
+So in the meantime, I've been thinking a lot about, um, where to go with this. I mean, I've got so many
+ideas, um, and I suppose the hard part is I've got to focus on getting the basics set up because,
+you know, once the basics are rock solid, then you can work some more and everything else. So,
+there we go. I'm going to put this here. I'm going to call this, um, buttons. That's just an easy way
+for me to remember this. Okay. So these now I'll go from, uh, zero to one. Ah, okay. That's the last
+thing that I've got to do. And you know, this is normal. Normally you just want, normally midi cc is
+just zero to 127. So that means you've got 128 values actually, because the zero also counts as a value.
+Um, and this, this mode zero to one or minus one to one is something that we decided to
+add because it just makes life a lot simpler because there's just something you end up doing a lot.
+Okay. Let's save. All right. That's the midi fighter done.
+Okay. So this patch is looking pretty nifty for midi. So this is all of our timing stuff there from
+the previous streams. This is the medium from live. These are the notes that come from the individual
+instruments. So let's call it that. Just because the bigger your patch gets comments to your friend.
+Okay. So there we've got the midi fighter. Let's just type this in.
+I'm going to go over here. I'm going to type in the, um, let's copy and paste this comment. And then we're
+going to say, um, launch pad mini controller. Okay. So if we're going to click the launch pad mini,
+there's one or two things we can do here. So I'm going to click learn, press the midi button and it
+automatically creates the midi note because the launch pad is sending out midi notes, right? So if we're going to
+click the midi note up, we can see here, um, let's do clear. So if we clear it, right? So if we don't
+do a midi learn, we can get the current note here. So I'm going to try and do this slowly. You can see
+the buttons and pressing in here and that values increment. And so we see that the lowest button
+is current note zero and the max is 120. So it's 121 values. And if I'm correct, these ones up here,
+I think they're midi CC. It doesn't matter though, because we've got enough buttons for now. Um,
+so yeah, you know, I could make one midi note for all of these and that'd be eight by eight,
+64 if I'm correct. That's a lot of ops. Uh, I don't want to do that right now. So we've got this
+other cool op, um, called midi notes filter and this allows you to only read a range of notes,
+basically. Um, and you might think, well, why would you want to do that? It's really just very handy.
+So, um, what I'm going to do is I'm going to click learn and I'm going to hold in the low note and I'm
+going to press the high note right here. And as you can see, it's now mapped the note start and note end.
+So it's a C minus two to G minus two. Okay. And this is the note number. So that's the note number
+zero and highest one is seven. So zero, one, two, three, four, five, six, seven. Now, um, I'm just going to
+copy paste this and I'm going to go to zoom in a little bit tonight, go down here and I'm going to
+click learn and I'm going to do the second range. I'm just going to do like the first, uh, four for now
+could do all of them just so I don't have to come back and do it again.
+Well, okay. I'm not using these buttons on the right right now. There's going to be a reason for that.
+And later on, let's connect this, go down one, two, three, and then four.
+Okay. So what this now does is it only accepts those notes. So if you look here, I've mapped
+these midi notes here on the top row, right? So if I click it, you know, I get those notes,
+but if I click these ones, nothing comes out, that's only going to be received here basically.
+So this is a really handy way. Um,
+Hey teachers. Yeah. Um, it seems like cables needs a simultaneous edit feature. This would be kind of
+handy. Uh, it's like an Ableton live. If you would select, um, 12 or 16 or 32 clips, you could change the
+quantization rate. And if that parameter is in common between all the selected clips, then it will do that.
+That would be a cool feature. Um, for sure. So the reason I'm doing this is that, um, I've just got
+in my head right now, cause I'm just trying this out. I'm going to type in FX1, FX2, FX3, FX4. Now I have no
+idea how many post FX that we've got. That's this stuff right here. Okay. So, um, what I had in my head
+was that these buttons, um, would be like an effect on off. And I don't know, actually, we're just going to
+map this stuff and just see what happens. So we're inside of a sub patch. And, um, for this,
+we're going to need to, um, use variables to send the data out to the rest of, um, the cables patch,
+basically. So let's make a little bit of space. Now I'm not going to do this for the entire controller
+because that would be a little bit, um, boring for the stream to watch. So I'm only going to do it for
+like say the, the top row or two. So let's look at what we can do with this. So, um, we're looking at
+this top, um, midi, um, CC at us, the buttons dials. There we go. So we're looking at this, we can go
+between zero and one right now. Let me just turn the flow modes run this one. Okay, great. So we can get,
+I just want to show you a few tricks we can do so we can, um, I'm going to press F flow mode so we can
+get a trigger whenever it changes. As you can see there, it's also really handy. And we have the
+index out, like, what is it actually? And this is what we're interested in the value out.
+So I'm going to pull this down and I'm going to do var set number and it's always a good idea to have
+like a kind of naming convention here. So I'm just going to put in, uh, midi fighter CC and then I'm
+going to hold down shift. I'm going to copy this because I want to do that quickly and rapidly with
+more parts. So let me just make some space here. Okay. I'm going to move that over there. Yeah,
+I know this isn't a visually, uh, super exciting stream right now, but we'll get that. So cables
+remembers the last last up that you made, so I can just do this now. I'll just drag out press enter.
+And you know what, just to make it a bit visually clear, but that's different. I'm just going to
+move it a bit like this. I just thinks that I think that makes the patch a little bit more, um, readable.
+So I'll tidy all this up in a minute.
+You know what, I may as well just do this for everything I want. So it's just going to take
+longer later. So I'll tidy it up in a bit.
+Okay. So, um, I'm going to go here, create any variable. I'm going to be paste. I'm going to type in
+one, I'm going to click here, creating variable paste two, paste three. You can see where I'm going with this.
+So this is, this is my way to kind of do this stuff nice and fast.
+Once again, something you've only got to do once.
+Anybody's got any questions in the meantime, please feel free to throw them in the chat. If I'm a little
+bit late with responding, it's probably because I'm just in the zone and very focused on what I'm doing
+right now. But I will get that.
+Okay. I forgot. Was it shift A?
+Or was it A with these guys? I've forgotten. Do you align with stuff? Ah, it's shift A. Okay.
+Shift A should do the horizontal alignment, but I think they're a little bit too close to each other.
+Okay. No worries. We'll just do this by hand for now.
+Got to get those straight lines in the same straight lines for the win.
+Okay. All right, great. So now we've set our variables there. So this is the reason I wanted
+to use the MIDI note filter because I don't want to end up with 64 of these buttons, which is actually
+not really a bad thing because this allows you to do a lot of different things later. But I just want to
+keep this nice and easy right now. So if we look here, we can look at the current note. So this is
+a really interesting thing with this up, if you know a little bit about MIDI. So let's put the,
+that was it. We have to put the velocity in zero to one as well. So it's all within the same range.
+Okay.
+Seems to be something up the gate. Not sure why. No, that's something I won't be using tonight then. Okay.
+Um, so let's get this, um, current note. So I'm going to do the set number.
+I'm not too sure what I'm going to do with this. I'm just going to do it for two layers for now.
+I'm going to say launch pad row underscore. I'm going to copy this.
+I always start with like zero. So I'm making new variable again, row one.
+Let's just do it for four for now.
+So basically, you know, we're just, we're just saying like, what number do I have? And I just don't want
+all numbers to go through each, um, variable set number there. It's just a way for me to break down
+all of that data, save it. Okay. Now this is of course been quite a lot of boring stuff to watch,
+I think, or maybe it's actually not been so boring for you guys. Um, I'm not gonna, um, do it here with
+the buttons for now. Um, I'll do that later. If I decide stuff needs to get added, let's not make it
+more complex than it needs to be. So what can we do with all of this? Right? Well, there's one last
+thing I forgot about. Sorry. So these buttons here, um, you know, when you're VJ, it's really easy to
+lose track of what you're doing and what's going on. Right. I mean, you can be in a really busy place,
+lights are flashing and it's like, you know, you can't really put a piece of paper over this thing and
+write down, you know, what every single little button does. So I like to just create a system
+where even if it's like a really hectic moment and I can't remember exactly what something does,
+that's going to do what I want or do something really cool. Even if I forgotten, sorry. So one of
+the other things we can do here is, uh, I'm going to use these as main buttons. They're really easy to
+recognize. So this is a row of something like say for a post of X, and this is just going to be,
+I think my bypass like on or off. So let's, let's just try and implement that. So to do that,
+um, we're going to go here and I'm going to click learn and this should just give me the midi note up.
+Right. Cool. So let's click learn again, do the second one.
+Let's click learn again, do the third one.
+Okay. I'm just going to disconnect these because I just want that nice
+clean patch. I'm going to pass the event data through like this.
+All right. Great. So, um, range zero to one, zero to one, zero to one.
+So it's one now, um, if you look here, I'm going to press this button. Um, gate is like this. If I
+hold it in, the gate is open. If I let go, then it's closed. It's false. Right. But I want this to
+be an on off button. It's not why I want to hold this button in the whole time that I want like a
+blur or a mirror effect. So I just want to press it once for on and once for off. So if we go up here and
+press toggle gate, we press it once should be working. Hmm. That's weird.
+I don't know what's going on with the midi ops tonight, basically. Okay. Well, we're going to
+just work around this time. So, um, let's get this trigger. Okay. And we're going to say
+trigger send and we're going to create a new one
+actually.
+Give me a moment.
+Right. No, we're going to do it differently. So I'm not sure what's going on with the gate right now,
+but we're going to get this, um, gate. Um, and I'm going to do bull to number
+just want it all to be numbers for now with this kind of thing on and off.
+Actually not. Sorry guys. I'm thinking a little bit far ahead. Let's just do it like this.
+Var set number. So, um, zero or one is also true or false in JavaScript basically. So we can just send
+the bullying through and it'll be interpreted in the correct way. So I'm going to make a new variable.
+I'm going to say launch pad, um, row zero main button, big, long name. Okay.
+And I'm going to go to this bull.
+Var set number. I wish I'd copied that name first.
+Launch pad, um,
+Row on main button. Let's just copy this. So don't let's do that again.
+Make a new variable.
+I'm going to paste that. I'm going to put this as row two. Okay. Get this one again.
+And then we're going to create new variable and we're going to put it as row three. Okay. So, um,
+what we then get is, um,
+this. So first row, right? So we've got this
+and we're going to put the normalized velocity to zero to one.
+Okay. All right. Cool. So I'm not sure what's going on here with the, ah,
+of course. Sorry. I'm just being silly here. This makes perfect sense.
+Unless, no, there is a problem. The toggle gate here is not working the way that it should.
+Unfortunately, this should, um, just toggle the gate between the open and closed state.
+So I think I found a new bug there. No sweat. We'll squash that one as quickly as possible.
+Um, so what we're going to do is we're going to, we're going to use a really cool up for this.
+Basically, I'm just going to show you here before I use it in the rest of the patch.
+So, um, I'm just going to type in trigger true triggers next only after value has changed to true.
+All right. So this is only going to send out a trigger going to flow mode.
+If the value coming in is true. All right. So if I press it, uh, as you can see, it sends out a trigger,
+but if I let go, it doesn't. All right. So trigger change, true trigger change, false really handy up.
+So that's the stuff I'm going to use later on to create this kind of like, um, toggle effect.
+So I can also go here and I can type in, um, toggle bool. So this is like really cool.
+Now let's just show you what's going to go on. So I'm going to go here. We already used this in a
+previous stream. And if I'm going to press this button now, it becomes true. If I press it again,
+it becomes false. So now I was, I was, uh, a little bit mixed up there, but this is what I want,
+right. I want to be able to turn FX on and off basically. Um, you might think, why don't you just
+do this here, the toggle bool, and then send that into the var set number. Um, I really, I'd advise
+against doing that because when you're using var set number or var, um, array or something like that,
+I always try and keep the data going into that just as low level and simple as possible. If you
+modify it there, you modify it everywhere else in the patch, which can just really be a bad idea.
+So this is what I'm going to use this little combo here. I'm going to copy that. I'm going to get rid
+of it. So let's now implement it with something really nice and simple. So I'm going to go back
+and let's put some music on because it's been a little bit quiet, really cool track here still from
+up for us. And I know you guys have been hearing this for quite a while. Um, but I think it's a good
+track, so I'm fine with listening to it the whole time. So let's turn the flow mode and we need to go
+to the post effects part, right? So let's take a look at what's going on here.
+Okay. So that's where this comes in. And this is where we get the post effects going on. So if I'm
+going to disconnect this, actually, here we go. So we've got these sliders up here, right? The UI
+elements that there. So I'm going to turn global effects off. There we go. So this is it without
+anything. So I need to, um, rebuild this a little bit, I think. So I'm going to try and keep this as
+simple as it can, right? We're just going to, we're going to break this, um, down. So first of all,
+let's look at this one, right? I'm just going to disconnect this because we're going to use many
+controls tonight. So like this is if true then, right? So because, um, it's not evaluating to true,
+the render pass just stops it, which means everything underneath is just ignored, right? So this is our way
+of just turning off everything. And what we can do is we can use a system, um, systematically to be able
+to turn effects on or off. At least that's how it is working right now in my head. So let's give this
+a try. Okay. So the first effect that's how I want to look at it is this, um, zoom blur, right? So let's
+turn this on, let's turn these off, right? So yeah, so we've got the zoom blur here, right? So this,
+this is like everything on everything off that should also probably have its own button.
+Okay. So let's say that I want to turn everything on and off. I'm going to use
+this button here in the bottom right corner, because that's just the only thing I can come
+up with right now. So instead of having to do this and then go over here and go into midi all,
+whenever you've made a sub patch, right? So if I click an op, you get the op parameters, right?
+If you click anywhere in the canvas, you get your sub patches here. So I can just click midi all now,
+and I'll jump inside of the sub patch. And it's a really quick handy way to navigate your stuff,
+basically. So this, this, this button here, bottom right corner, that's going to be my reset everything,
+turn all effects off. So I'm going to click here, learn. And it's a lot of streams. So I'm not going
+to get it all right in one go. It's going to, I'm going to just put a note here because I'm going to
+forget it later. Disable all post effects. All right, nice and clear. So I'm going to go here.
+We're going to get that bool right. And the number from lucky I've still got will know that was an op
+accidentally pasted. So we're going to type in launch pad row. We're starting at zero. So zero,
+one, two, three, four, five, six, seven. So it's row seven. Main button.
+Okay, there we go. So I'm going to get this bool plugged that in lovely. So I'm going to click this,
+go back to main. All right, cool. So I want to be able to turn all the effects on off. It's going to
+flow mode. So everybody can see what's going on there. And this could all change later,
+but I just want to build it into little modules right now. Let's move that over there. So assuming.
+So this is my disable all effects. All right, so I'm going to go here. I'm going to do far get number.
+Okay, I'm going to go here to variable and look at launch pad row seven main button.
+That's this one. So if we press this button now,
+that's going to change. Great. So we're going to go here. I'm going to do trigger changed true. So
+triggers next only after it's evaluated. It's true. And we're going to go here and grab the toggle
+bool toggle a boolean value by triggering. Okay, so if I now click this flow mode, I can slow stuff down a
+bit. I can do this and we go between true false. That's it, right? So I'm going to make this really
+compact because we're going to be doing this a little bit more right now.
+Okay, so I'm going to get this and I'm going to put that into that. And this will allow me to now
+turn off the global effects, right? So now I've got the zoom blur, which can turn on.
+Okay, let's go ahead. And if I press it again, we turn it off.
+Now, I know so like right now, this is a big problem. I don't know if this button is on or off.
+So I'm not sure if I'm going to do it in this stream. It's possible to send midi data to
+the launchpad to light individual buttons up, which is great because I can go like, oh, if this is on,
+it's green. If it's off, it's red, which is kind of like how the launchpad works with Ableton Live,
+basically. So that's something for something else. We're just going to have to wing it for now,
+because you've got to build it all in steps. So that's something on the wishlist in a future stream.
+Okay, so let's make this nice and easy to read. So I'm going to move this here. Okay, so let's disable
+all effects. So I've got here the zoom blur. That's one effect. And I've got these two mirrors and edge
+detection and chromatic aberration. Okay, so let's just go step for step through this. So if I turn this
+on. That's the thing disabled. There we go. Alright, so this is the mirror effects, right? But the mirror
+is actually made out of two effects, right? Hmm. Okay, so how are we going to do this?
+So I'm just looking at like, oh, these are cool buttons that I could just add to the launch pad,
+basically. So let's just move this down there. Okay, so this zoom blur, that's the next thing I want to
+work on. Let's move it over here. So it's more readable. Okay, so I want to be able to turn this on or off.
+So right now, this is my main thing. So now I'm just going to do my post effects here. So we're going to call
+this number one, actually zero, then it matches up with row zero, right? So I'm just going to copy this
+little part here, don't need to rebuild it anymore. I'm going to pull it down. And here, I'm going to go to launch pad,
+row zero, main button. So that's this one here, right? You need a system, okay? I mean, you don't
+have to do my system, but you need one that works for you to be able to just come back to this and go,
+this makes sense. This is because I've done a lot of stuff with these controls in the past.
+This is just something that works for me, basically. So now I'll be able to turn the zoom blur on or off,
+right? So if we go here, we can see that I can toggle between being on or off. Now don't forget,
+this is also affected by the MIDI coming from the bass gate. So that's like when the bass synth is
+playing, you know, that's making this turn on or off. Now a lot of people might argue,
+oh, this gets really complex. I'm like, No, it's okay. You know, all these variables come together just
+means you're not looking. I'm not a fan of VJ stuff where you look at the screen and it's like one
+minute later, a few things changed, like a few, but most of the things you're looking at are the same.
+I don't know. That's just my personal style. So maybe I like things to be overly complex. Who knows?
+Somebody from the past said I'm a fan of building death stars instead of simple solutions. So that
+could be something. If you start two effects below each other and you deactivate the effects on top,
+the second will not run too. It's a question from Titus. Well, yeah, I mean, that's, that's the thing,
+right, Titus? So what I want to be able to do right now is I just want to be able to,
+I hope you're still watching. So if you look here, you know, I, I want the, I want the triggers to
+always run down even if I bypass an effect. So if I'm going to bypass the soon blur now,
+everything else in the need still gets a trigger. So this is why I'm using the if true, then up
+basically, right? If I do something like gate trigger with a Boolean, then it would just cut
+everything off, which is not what I want. I mean, I could use that here, but this is just easier to
+read, I think right now. So, um, this is going to be the mirror. So I'm going to call this one,
+which is going to be this row. So I'm just going to copy this part here again. I'm going to paste it
+in. I'm going to put that down. Okay. Let's move this over here. All right. So now we want to get
+launchpad row one main button. Okay. So, uh, let's check it in flow mode. So if I press this mirror goes
+on and off lovely. Okay. See where we're going with this. So we're just turning the effects on and off
+right now. So we need to simulate this again. So I'm going to get if true then, and I'm going to pop that
+here, basically, and this is going to be for the edge detection. Now this has a strength. So sometimes
+it's on, sometimes it's not, not too sure what that is right now. One 16 bull on it must be doing
+something. All right. So let's move this down. Of course, that's something I did quite a while ago,
+so I don't remember it all right now. Now if I want to make things a bit more readable, which is always
+never a bad idea, we can use the color coding. Great. So first of all, let's put this in.
+This is row two main button. As you can see, I'm just duplicating a lot of the same action. So
+this is row two. Make it even clearer. Type in row two. You know, we can even type in launch pad.
+Row one. Yeah, let's just do this. Because it's so easy to look at this stuff later on and go,
+what did I do again? I'm going to go here as well.
+Make it nice and easy to read. Okay. So we need to move this here and we then need to move that there.
+So we get the same effect as with the zoom blur. So this is like our bypass system,
+right? So this is the effect. This is when we bypass it. It carries on on the right hand side. So
+we're going to double the bump. Let's move this down. So this is for the if true then. Okay. So we're
+going to do this. Pull this down. And you know, maybe we also want to, ah, whoops.
+We also want to just reconnect this. Maybe we also want to disable the chromatic aberration.
+So I'm going to get this and I'm going to put that in there. And this is kind of like the last one now.
+Launchpad row three. So let's just like crank this up, um, mad amount. So it's like really over the top.
+So, so there's all that color now from the chromatic aberration. As you can see, I can turn it
+on or off of a button. I'm just cranking it up. So it's really clear that it's doing something.
+Okay. So, you know, this is really nice. So we've got this like bypass system here now.
+So we're going to look at it in flow mode. That'll slow the visual down a little bit.
+But as you can see, I can now turn everything on or off, right?
+Yeah, there we go. So this is correct. This only needs this one connected basically.
+So this is just like a simple bypass system, right? And this is cool because we could have like
+effects zero and three on, but not one and four. So this just makes itself very dynamic.
+Of course, without any feedback on the LEDs here from the buttons, it becomes a little bit more
+difficult, but we're not going to worry about that right now. So, you know, I could turn all these on and
+here's my global disable, which allows me to do stuff like this, right? Because, you know, I like to,
+when I VJ, I like to turn stuff on and off, right? You know, I want to be able to like, listen to a beat.
+So I just, I like to play with the controller later on when everything's plugged in. So I just like,
+I like a launch pad because you can just, you can bang it really fast. Okay. So let's look at the
+mirror effects, right? No, it's just funny. I'm noticing that we don't have with the mirror effect
+an amount like we normally do. So that's most of our texture effects have an amount so you can
+turn it on or off. So these ones don't have that yet. So that's going to be something for a future
+update. Okay. So I'm going to stop the music playing for a minute because I want to just be able to
+follow what's going to happen now. Okay. Because I just want to be able to control this.
+So I've got this right now, like I said, I just want it where if I press something, something cool,
+something's going to happen basically. So this is axis X, this is axis Y.
+Yeah. So, you know, I'm just going to make this like really, really simple now.
+So there's only one of two possible states. So maybe I should do with the zoom bluff. It doesn't
+matter. Let's just do it here. Right. So I'm going to go here. A lot of freestyles. Not everybody. So
+bear with me. Okay, so I'm going to go here. And what I want to do is I want to get that range,
+right? So I'm going to go here variable. This is why named variables are really important. So I'm going to
+type in launch, I'm going to get launchpad row zero, and this will give me these numbers, right?
+So this one will go, I'm just going to put it here now, because that's for the zoom blur,
+control C, control V. And this one is going to be row one. That's for this effect, just putting it all in
+place right now. And this is going to be for row two. Whoops. There we go. And this is going to be for row three.
+Okay, so you know, this is just going to add up. Now the thing I wanted to do before was some color
+coding, right? Just so I knew what was what. So I'm just going to grab these and give it all the color green.
+I can just look at it down and go, ah, okay. Um, this is, um, all related to each other.
+And actually, let's move this down a little touch, a little bit more space.
+These guys, I'm just going to make yellow. Um, this is launchpad row two. So I'm going to move this up.
+I just want these things to be easy to recognize, basically.
+So when I'm at a distance now, I can, I've got it, I've got a nice overview of everything.
+Um, I'm going to use blue down. Okay. Let's do control S. So, um, there's a lot of different
+tricks we can do it, but I want to try and keep it really simple. So, um, what we're going to do here is,
+we're going to do, um, equals, I think. So let's put this on zero.
+Ah, okay. So this is the thing we need to see what the minimum is. So the minimum is 16,
+maximum is 23. So the minimum is 16. So we're going to say, um, if it's 16,
+it's true. So if we push this button and if we press anything else, it's false.
+So I just want to know if that's true. So I'll do trigger change to true.
+Let me zoom in.
+Okay. So now I can use this button too.
+Oh, no, this isn't going to work. All right. Just give me a minute.
+Hold it. How do we set this? This is an axis index.
+Okay. So this should mean that we can just plug in a number. So if it's zero,
+it will be X. And if we put this on one, then it becomes Y. Okay. Great.
+So, um, you know, maybe, maybe I'm overthinking this, right?
+Maybe it's just the amazing map range up. So the minimum is 16. That's this button.
+Maximum is 17. And then I'm going to say zero and one. I think that's actually going to be way easier.
+So zero, one, zero, one. Okay. I was really overthinking that for a minute.
+So I'm going to plug this into the axis index. I just want to explain this is a drop down.
+This is the equivalent of like a drop down or a switch, you know, so there's only one possible state.
+It's the same as if we go to, um, like a blend mode here, you know, there's all these options,
+but we can only pick one. And that also takes like a blend mode index. So what we're doing is just to
+break it down. We're getting the number in from this launch pad row. So it's 16, 17, 18, 19, right?
+So we go 16, 17. We want to do this. We want to remap it to zero and one. So I'm now going to plug that
+in here. And now with this, I can swap between states,
+which is different than a toggle, right? Toggle. That's kind of hard to keep track of
+when this is full later. And later on, I want these buttons to light up to show state. So
+now I want to be able to change this for this one. Um, so I'm going to go here,
+plug that into value and let's look at buttons three and four. So that's 18 and 19. Okay.
+I really love the map range up. It's, uh, it, it's got so much functionality bundled into it.
+So now I'm going to plug this into here and now what I can do is I can
+I think, nah, this is really silly of me. I should only be doing this with one,
+I think to get the effect that I want.
+Yeah. Okay. So I only need to be doing this with one. No worries. This is a session to improvise with.
+Okay. So that. Hmm. Okay. That could be interesting, but not really what I'm looking for.
+Oh, sure. That should be zero. Is flip what I want to do?
+Right. Yeah. Of course. That's not going to do a whole lot right now.
+Maybe it's just flipped. I need to work with. Let me just check.
+Yeah. I mean, I may as well only do it with one. So actually let's just leave this on X and this
+on Y. I was getting mixed up there and we're just going to plug this into flip.
+Yeah. Overthinking things though. No problem.
+Okay. So let, let's look at the width. I'm not a big fan of what that does to the image.
+I mean, this could be cool, but I could do this with a different effect. So let's just keep this simple
+for now. So I could do a lot more here, but let's just keep it like this. So it's just two buttons here,
+which let me change that state. So let's actually go to the, um, zoom blur. I'm interested in doing
+some stuff here. So we turn that on by pressing this. Now nothing's going to happen because we're not
+getting any base in, so I need to press play. Okay. So we're going to, so I can now change that here.
+I'm going to put it back to its default. Okay. I'm going to turn off edge detect, turn off chromatic aberration.
+Okay. So let, let's look at what's going on here. So, um, we've got a number coming in,
+which is the base gate. So that's when the base synth is playing or the kick. I'm not sure right now.
+I think it's the base. Okay. All right. So we're doing a map range from 0.5 to 1 now, and then the effect
+should be a lot heavier. Did I disable that? Yeah, I did. Okay. There we go. This is why the visual
+feedback there will be good. So this is really crazy over the top. So this is 0.1, 0.5, and if we're
+putting something like four, um, it's going to just become very abstract. Let's put it on two.
+Now we already get this kind of like smooth value here, right? Because of the smooth off,
+so it accelerates very quickly to the value and de-accelerates. So let me put this back the way it
+was before, since 0.5, right? So an interesting thing that we can do here is
+and we're using the map range. We don't actually need to do this. We could do a multiply by 0.5.
+So I'm just wondering what we can do here that could make this cool. So
+and if this is on 0.5, it's done. If I put this one on one, it becomes way more horizontal, right?
+Also a kind of cool effect. Yeah. Tweaking effects. That's just something you can just do all day long,
+basically. So if it's in zero, that's kind of interesting. My apologies for the background
+sound. So 0.5 is default. So this is like where the blur kind of is, right? So I'm just wondering,
+like what I can do. I mean, you've got two kinds of things here that you can do. You can make something
+jump on and off and press a button, which is very direct kind of effects. Or you can, you can make it
+smooth from one value to another. Now, you know, we're getting these values here. So we could say,
+I'm just curious, I'm just going to try it out. So let's look at this. This is zero, right? So I want to say equals
+I want to trigger. So let's do if equals then let's just try this. So this needs a trigger. So I'm going to
+do trigger receive. I've got that global one in my patch called T1. There we go.
+So I'm going to put it on zero. No, wrong one. Sorry. Let's continue. So let's just do equals.
+Okay. So we're going to put it on zero. So this is pressed. It's true. If it's one, it's false.
+Let's grab a blue one. Okay.
+Grab a trigger receive.
+Grab a T1. It's just a global trigger, right? I just want that to always be available. It's here as
+well. So, um, if I'm going to press zero or one, this will run grow. So by pressing this button,
+it's kind of in reverse, you know, one, zero. So if I press the second button, it goes to one,
+press this button, it goes to zero. So, you know, I could plug this into
+that X. So actually I want the minimum to be 0.5. Let's put this on one.
+It's just me trying stuff out, right? So now it's on one, which is like really crazy much. But if I'm
+going to press this button now, I'm going to have to grab a piece of the music where it's a little bit
+busy, might just work better as a toggle effect. Let's put a blue minimum on 0.25.
+So it's just really subtle. Yeah. And if I press it, it now goes to one. Now, you know, the duration here,
+that's a big factor as well. I could put it on two. It's going to take a long time for it to go from
+one value to another basically. So if I'm going to press true, it's going to be like this. And to me,
+that's like way too long and VJ country.
+Now, the thing I like about this is it's really subtle, but it's not jumping abruptly. It's kind of
+like, you know, if we turn, you know, the mirror on and off, you know, this is an effect we want to
+have jumped very hard, right? But this one, I don't want that. I want it to go down basically.
+Let's just try this out.
+Ah, okay. Yeah, of course I've got this plugged into X. That is really silly. I was just thinking like,
+why is the effect so heavy? This is the X coordinate of the ceiling blur. It's not the strength. Okay.
+All right. So I've changed my mind. Let's, let's do it like this.
+Um, we'll get that max, the map range. That's what I was planning on doing. So we're going to grab this.
+I'm going to put that into new max. That's what I was planning on. So now we've got like a really
+subtle one. And if I press this, it goes up to one and we get the heavier kind of blur. Okay. Press this,
+then goes down to 0.25. So this is just a way for me to just like make it
+Yeah, subtle, but it's fine for now. It's just building a control system and trying some stuff out.
+So 0.5, if that's how long it's taken is still as 0.25. That's okay.
+All right. Let's just leave this for now. It's just getting the stuff in place. So
+if we're going to look at the zoom blur, what happens if I put both of these on zero zero
+and we put the strength on one, it's in that corner, right? And if we put it on one, one,
+it should be in the opposite corner, like down there. Okay, cool. Now, if we combine that with the mirror,
+we start to get the stuff like this. Okay, cool. All right. So maybe I want to have a way to be able to
+toggle this XY stuff, right? It's kind of difficult because we've got
+zero, 0.5, which is the middle, the ideal sweet spot. So we've got zero, 0.5 and one,
+and we've got that two times, so that's six possible combinations. How do we map that nicely, basically?
+Just trying to think about that. And I don't want to have to keep track of like so much over here,
+that just becomes overly complicated. I already feel like I'm overcomplicating it right now.
+Let's do a quick thing in the meantime. What to do before that I forgot about. So I want to be able
+to change this more cubes. All right. So searching in cables is really very powerful. So look at this.
+I don't know why I called it more cubes. That's the texture coming in. So do control F
+more. And this now pops up. And I'm looking for the VAR set texture. Here we go. Set more cubes up that
+VAR set texture, so patch patch too. So I'm just going to click that. I don't know where it is. I don't
+care. Cable's just going to leave me there basically.
+All right, now I think I did it with a root trigger. Okay. Wow. I don't remember any of this anymore,
+which is fine.
+All right. So I did something. Okay. So I did something with a root trigger, right? That was
+if I'm correct. Here we go. Root trigger.
+No. Here we go. It's underneath MIDI all. So this one, scene select. That's what I'm interested in
+right now. So that's this one, right? Yeah. So this allows me to change the scene. Let's just,
+let's just put that on this, um, MIDI knob here for now, because I just want to start mapping a little
+bit. So you got to feel it out as it all comes together. You can't get this perfectly.
+So I'm just going to go here. I'm going to do get number. Okay. So we go there and we go for
+MIDI fighter CC zero. That should be this one. Yeah. Okay. So that's the top left one.
+Edit. See, let's push it into the picture. Hopefully that's visible. Okay, cool. So, um,
+let's get that one. And now if we think about it, it's going between zero and one, right?
+But we've got zero, one, two. So we've got three values, zero, one and two. We don't want this flow.
+So, um, I could just do multiply
+right by three and now zero to
+one comes this, but these floating point values are not going to work with the root trigger, right?
+They need to be, um, integer numbers. So I'm going to go here. I'm going to type in flow
+and now it's only going to give me whole numbers
+and actually it's multiplied by two, of course. All right. So this should now go between, um, zero,
+one, two. All right. That's what I'm looking for. And it's really simple because that root trigger, you know,
+it can only work with integer numbers, you know, so if I press F now for flow mode.
+Sorry, I just need to plug it in.
+So we're using this to select the scene and before we just did it with this slider. So this can go.
+Okay. So now I can pick, let's just disable all the effects. That's what I'm doing here with this
+button, right? So I wanted that there before. So now I can swap between the scenes, right?
+So this is two, one, zero. So slowly come together. So now I'm going to, um,
+do this. Now the interesting part I'm looking at here is this also isn't being used.
+Okay. So that sounds the effects on and off. Uh, you know, this is a thing that can happen. I was just like,
+Hey, is this not doing anything, but you know, I've got this stuff off, right? So I'm just going to leave all the effects on.
+Okay. So here we've got scene zero.
+And then we go there. And then we go here. It's a lot of chromatic aberration. Okay. So this is all coming
+together a little bit more now. So we've got the scene selector.
+I'm just wondering why it's going next with this.
+Now, you know, this mirror is working on X and Y, I keep seeing, and I don't know why that kind of
+bugs me. And I'd like to be able to bypass this one as well. That would require another if true
+down, and that would break this logic that I've got this working, but you know, this could be a
+global bypass, but then if I'd make these two bypasses, I'd get really lost. Like if this is on,
+but these are off. So I should actually,
+that's way too complicated for this one. So that's really making things bonkers, basically.
+All right. Let's just check this, this, this edge detection thing on. Yeah, it is. So let's turn that
+off. So edge detection is adding this like white outline. Um, and that depends on this,
+this one 16th bull anim here. Ah, right. Okay. So every 16th, there's a bull anim being triggered with
+true, false, true, false. Okay. Sure. So, you know, if I put this on a really high width now,
+we get this. Didn't say it looked pretty, but it's a more exaggerated effect.
+Okay. Let's just put it there. This is the easiest scene to read right now. Turn off the mirror. So
+there's the edge detection given that white edge. You know, I just want to plug stuff in right now.
+So this is road 2. And here's a really interesting idea. You know, um, instead of using a medi knob,
+you can get this range of numbers, plug them into a map range and, you know, also assign that to
+something. It's kind of a waste of buttons, I suppose. But like, what am I going to do with this
+right now? This edge detection isn't doing a, isn't doing a whole lot.
+I'm just really thinking what to do right now.
+I'm pretty sure I don't know why I was dropping it with the depth map because there was something up
+with that last one. I can't remember what it was. Okay.
+So what was this set effects one?
+I think this changed this density of the shapes being together.
+Yeah, it did. And I think if I went to another patch like here.
+I think it changed like how many stripes were together. And I tried to just make it.
+And so let's start the patch for a minute with the music.
+Okay, so if I do this again, I think that's this one. I get different lines. And if I spot to a
+different scene. So this is what I meant with just like having something that if you just tweak,
+it does something in all of the sub patches. So you know, this is my scene select, right? The first knob.
+So I'm just gonna grab the second knob now. And you know, we're gonna, we're gonna get this actually.
+And that was just a value which goes from zero to one. We're just going to unplug this.
+And we're going to put that in there. And now the second knob, I should just be, okay,
+so I've got to put a midi fighter CC one. So now with this knob, I can do this, right?
+Okay, yeah, tricky to do back in the day was a create kind of toggle that if I was pressing and
+holding it in, that I could turn it and it wouldn't send the value until you released it. And that was
+a great way to avoid this kind of stuff. You could like, click it in to let go and then it would jump
+down. But we're not going to worry about that now. So yeah, now with these two knobs, I'm already adding
+some more control to the patch, basically. Okay. Now the thing is, like here with this first one,
+I've got to really turn it a lot to get from one, zero, one and two. I don't, I really don't like that.
+So you know what, I'm gonna, I'm gonna drop this multiply and put a map range in. And I only actually
+want the first half. So I'm going to put in 0.5 and then I'm going to put new minimum zero, new maximum
+two. And now I don't have to turn it the whole way. If I turn it up the whole way, it just goes to
+preset two. So now I can very quickly and easily change between my presets. You know, if I put it on
+0.25, I can really rapidly change things. You know, I could also put this on the launch pad,
+right? Like scene zero, one, two, three, which would probably be better. Cause then you can just change
+like on the beat, um, of the music with your fingers, but it's okay. We're just trying this out. This is the
+first time I'm building this all in cables. So, um, it's not written in stone how this has to be,
+basically. So I'll just leave it like that for now. This, this feels bad. I don't have to make these big
+movements. Okay. So now we've got this knob here that's doing this. And again, feels like I've got
+to turn it a lot to do stuff. So, you know, why, why don't I just do this again? So I'm just going to
+grab my map range and just cause I can turn it the whole way. It doesn't mean I've got to use it for that.
+Right. Um, so I'm going to go ahead and I'm going to put it on 0.5. So I'm only using half of the knob
+now, but look, I can, I can turn it a lot faster. You see? And, uh, the old max was actually, uh, one,
+but now it's in two, which is actually kind of cool. So, you know, this is nice now cause I can just like
+turn this stuff on and off and just look at, um, how that's working basically.
+If I look at map range. Yeah. So it's clamping the outside values. So it is a really interesting
+thing that I'm thinking of, right? You know, say I want to say, I want to like put two different kinds
+of behavior on, um, this one knob, right? So it's like, I want it to go, um, from zero. Let's,
+let's say this zero to 0.5 is zero to two. So it's going to do this. Actually, let's do this 0.25.
+So it's very fast. Now let's turn off the mirror, but the moment I go past 0.25,
+it's not doing anything anymore, but that's not what I want.
+Uh, actually let's do it like this. Yeah. 0.5.
+And this is on easy linear. Put that on smooth step. So you get the most smoother part at the top and
+the bottom. Let's just turn off the chromatic aberration. So what I can do here is, you know,
+I can just grab another map range because it's, um, it's clamping after you've hit the min max values.
+So we know this is going from 0 to 0.5. So now I can say min 0.5 to 1, because I notice all these
+controllers only go from 0 to 1. So this is 0.5, 0 to 0.5, 0 to 2. Now I can go here 0.5 to 1 is 2 to
+6. Crazy. It's going to probably look horrible, but you know, you gotta, you gotta start building it to
+see how it looks. And so what's happening here is I could actually put this in 0 to 1.
+And then this also has to be 1 to 6 for it to be smooth.
+So what happens is, um, zero, actually let's do it like this 0, 0.25, 0.25. Okay. So at the beginning,
+it opens very quickly and then it opens very slowly. Now there's a little thinker that can be a problem.
+No, no, actually, this isn't a problem.
+This is fine. This is, everything is fine. Okay. So I like this because I can, I can just do this now
+and it, you know, I can make it really twitchy and I can make it bigger as well. And it kind of slows down.
+Now the reason it looks a bit weird is because we've got a smoother step on one, but linear on the other.
+This is just experimentation. So let's just go from there. I mean, there's no rules with this being set in stone.
+So, as you can see, when, when I'm turning this, it looks a bit jerky.
+You know, and this isn't actually really surprising because let's think about it, right?
+So we've got this midi knob here and it's got 128 steps values, right?
+They're stats values. And now we just even reduce the range even more.
+We just said, Hey, you know, we want to get zero to 0.25 and do this.
+This is why it looks smoother on the second part because it's got a bigger number range.
+So yeah, you know, it's all discovery for me with doing this and cables for the first time.
+Now we can throw smooth up after it, obviously.
+Yeah, let's just do that because I don't want to worry too much now about solving too many technical problems.
+I just want to kind of be in the creative flow.
+Just get everything plugged in.
+So I'm going to type in smooth, smooth out jumps in values.
+So right mouse button, I'm going to plug that into value.
+I only want it on like four, it's really pretty fast.
+Smooth up needs a trigger to work.
+As you can see, it's not doing anything right now.
+So I'm going to go here and I'm going to say trigger receive.
+Okay, let's get that and put it here.
+Grab T1.
+All right, so now, yeah, that feels better.
+You don't get those jumps anymore.
+This just looks good.
+So I can still just do this kind of stuff.
+Now, of course, this is going to have a really wild effect on the other patches
+because I didn't look at that, right?
+Let's just disable all effects.
+Like this only went from zero to one before.
+And now I think it's going up to six.
+So I'm probably just going to break lots of stuff like this.
+Who knows?
+Yeah, I look like these lines, they're like way too small.
+But I can figure that out later in those sub patches and remap those ranges.
+So actually, you know, I'm kind of already breaking my first rule here.
+Yeah, so the output should only be between zero and one.
+So I'm going to put it on 0.5 and put it on 0.5 and one.
+Yeah, okay.
+So if I want that to be crazier, I've got to fix that in the patches themselves.
+So if I want this to now go to six, because you just got to keep your sanity, right?
+Like if I have to remember that this is outputting zero to six, I'm going to go crazy trying to debug this later.
+So I'm going to look at FX1.
+So what I want to do now is this is, I think, patch one.
+Let's find out.
+Pretty correct.
+This is patch one.
+Let's go into flow mode just to check.
+Yeah.
+Okay.
+So we're in patch one.
+Great.
+I need to just find that one, FX1, and that was connected to scale.
+So here, FX1.
+I always like to give these things a quick color so they're easy to find in the patch.
+So, you know, this is getting zero to one, right?
+So I wanted it to go from zero to six.
+So I'll just throw in a multiply.
+I'm just going to put that on six.
+And now my original data coming from like the top root level of the patch is zero to one.
+So I don't have to keep track of too many number ranges.
+So this still goes from zero to six, basically.
+Which is funky, which is kind of cool.
+I like it.
+Okay.
+Cool.
+But if I go to, say, dispatch, this is still going between zero and one.
+Let's turn off the chromatic aberration for a minute.
+So I'm going to look here.
+It's like, ah, the transform view.
+It's not working for me that we fly inside the cube.
+So we need to fix that now, because that's really niggling to me.
+Like this was old stuff.
+I'm not using that right now.
+Let me just check.
+This is our scene.
+We can see this is our scene.
+Because if I'm going to turn this now, we're on scene zero.
+That is not this.
+I'm going to go ahead to scene one.
+So we're in here.
+So now I'm just going to look for the fx one.
+So we control f fx.
+One, what did I call it?
+Ah, like this with a space.
+And I'm going to do underscore.
+So if I do fx space one, click this, as you can see.
+So this is just a really handy part of the search function in cables.
+So you know, it's normally showing you at the top, the patch that you're in,
+which has found that result.
+So this is this one.
+So this is zero to one multiplied by 10.
+And that's for the amount of lines there.
+But we're not seeing it because we keep flying inside the thing.
+So I think we have a transform view here that we need to modify.
+But I don't want this black screen, basically.
+All right, cool.
+There we go.
+Let's move back a little bit.
+It's minus 0.5.
+I think that put us on 0.5.
+I don't remember what we just have it on.
+Let's turn it off.
+I don't care as long as I don't fly inside that cube anymore.
+Or at least not most of the time.
+That's just a rotation problem.
+This is better.
+All right, let's put that there.
+Because now I want to be able to see what modifying this does look.
+So this changes the amount of lines there.
+And actually, I don't want it to go to 0, right?
+That's kind of bad.
+If I put it on 0, I just lose my visuals.
+I don't want to have to keep track of that in a live environment.
+So I'm going to turn it all the way to the left.
+And this is not what I want, basically.
+So here we do a multiply 0 to 10.
+And I'm just going to be doing it with a map range for now.
+So I'm going to get rid of that multiply.
+So I'm going to say alt min 0 to 1,
+nu min 0, nu max 10.
+Get rid of the multiply.
+And now it's a no-brainer.
+I don't have to think about this.
+If I turn it all the way to the left,
+I've got at least a value of 1.
+If I turn it all the way up, I get 10.
+You know, what happens now if I put it on 20?
+I've got a crazy amount of lines there.
+But this is cool.
+I mean, you want to have these extremes, right?
+You want to be able to get a lot of different visual styles out of it, basically.
+Okay, cool.
+So as you can see, you know, it's like I'm mapping something here.
+I've made sure that the root level is 0 to 1.
+And now I'm just trying to go back into each sub patch
+and make sure that it's just kind of nice when we tweak it, right?
+It's like here as well.
+This is bad.
+If I'm going to hit mirror now, I have a black screen.
+So this is just too low, right?
+That one shape down.
+So that's kind of bad.
+So let's go into patch one.
+It's a lot of back and forth when you're doing this stuff.
+Control F, FX space one.
+I'm going to press this and cables flashes up there to show me it.
+So, you know, let's just do the same trick again.
+Let's not do multiply by six.
+Let's do map range.
+Map range is your friend.
+Okay.
+So we're going to go old min zero, old max one, new min.
+Let's put it on one for now and six.
+So if I turn this all the way down, this is one.
+I actually think it can be 0.5.
+I want to make this really dense cluster.
+I'm going to bang mirror on.
+Do I lose it all?
+No, you know, I just want to be able to turn this both ways to the full
+and the other way and pretty much most of the time see something.
+That's just my golden rule with tweaking these kind of things right now.
+Because you don't want to be there in a live show where you're like tweaking knobs
+and then your screen goes black and you don't know why.
+You know, you should just make sure that that stuff cannot happen basically.
+And trust me, by all the amount, the amount of things we're going to throw together later,
+we'll end up with a huge amount of possibilities with things we can do.
+Okay, so this was zoom blur.
+So I can press that to put it down to 0.25.
+I can press this to put it up to two.
+And I think what I'm going to do is I'm going to do something with the preset up.
+Now, the thing is, I could have just done everything on this one midi controller, right?
+I could have said, oh, this is like, this is the effects level, row level zero, like here,
+row level one, row level two, row level three, right?
+I could say, ah, effects on, I'm going to tweak everything.
+But it's just some stuff you just want to do with buttons that you just want to hit it,
+you know, during the beat and the music you want to get in and this kind of stuff like a DJ,
+you want to kind of turn it up and down.
+So that's kind of like what I'm going for right now.
+So we've got this other one here, right?
+So this one, let's just get back and track.
+This isn't doing anything.
+So we're just trying to clean that up, replacing that UI with this stuff here.
+So let's make it a bit more ordered.
+So this one, set, shape, select, instance.
+Let's see what this does.
+Right, so that's what's between these things, okay.
+That's something I want to change now.
+So let's go to the next patch.
+I know we've got different shapes.
+Okay, let's let's just let's plug this in and get it working, right?
+So we're going to go
+here.
+And we're just going to go for the third knob.
+I'm just doing it nice and easy.
+We're just going to use four of them for tonight.
+So this is midi fighter CC one.
+Two, sorry.
+Zero, one, two.
+Okay.
+If I turn this now, the number should change.
+Great.
+So I'm going to drop this map range thing for now.
+And I'm going to drop the floor.
+I'm just going to output zero to one.
+And then each sub patch, I'm going to change it.
+I'll explain why.
+So let's go to this patch.
+So now I can swap
+between.
+All right.
+All right.
+All right.
+Okay.
+So of course, when we're using something like a switch or a root,
+it's got to be an integer number like zero, one, two, three or four.
+And if it isn't, then well, it's just not going to work basically.
+Here we go.
+So we are using switch objects, right?
+So this is the problem.
+Okay.
+So this, this isn't valid.
+And switch objects says, I expect an integer number.
+So we're going to go here.
+I'm going to say flow.
+I thought, let's just take a quick peek.
+I am zero to one.
+So as you can see, I've got to turn it all the way up, right?
+It's like, I've got to go from zero.
+So I have to turn this knob like 99% to get the cube.
+So now I'm actually just doing this.
+I'm never going to remember that.
+That's, that's just like kind of horrible.
+So I just want to, I want to remap it.
+That, you know, because the midi fire has this really great feedback,
+the visual leds there, right?
+And I always want stuff to just be like here.
+I just don't want to have to do a lot of work.
+So, you know, once again, we're going to get this,
+we're going to get a map range.
+And we're just going to,
+I'm just going to do this in a dirty fashion right now.
+So we're going to say,
+let's just put some 0.25 and put this in zero and one.
+Do this now, as you can see,
+I've got to turn it like way less for it to change.
+Basically, there's still too much for my taste.
+Basically, I've still got to turn it like way too much.
+So I'm going to just put this on, say 0.15.
+And now I need to be able to do it fast with my fingers, right?
+So this will do for now.
+This is fine.
+Now, let's say I want the default to be cube.
+And me, I'm always going to turn everything to zero when I start a VJ set,
+because then I know what everything was at the beginning.
+And as I'm turning things, then I remember what everything does.
+So if I want to flip this around, I've got the cube on zero.
+It's really simple.
+Just go here, one, zero, right?
+So we flip it around.
+Now I get the prism when I turn it up.
+Okay, cool.
+Just a little trick there.
+Let's save for a minute.
+So let's get this parameter now, which is called shape select instance.
+Handy finger, I'm going to go here.
+And I'm just going to copy that with control C.
+I'm going to go into patch two.
+Which is this one.
+And I'm going to do control F control V.
+And this is going to let me run patch.
+Sorry.
+That's inside this patch.
+You know, if you don't know where it is and you like that,
+just click here again and cables will take you down.
+Ah, run patch.
+My bad.
+Here we go.
+Ah, I don't think.
+Ah, so that's the thing.
+I didn't map it yet.
+Right.
+So we're going to jump into patch two, which is this one.
+Yeah.
+Okay.
+So we're here and this is what we had down here.
+So we had a root trigger.
+So this is the thing.
+Now I remember what it was doing.
+So this shape that we're looking at there, the outside one.
+Yeah.
+It's a cube cylinder or pyramid.
+So like every one bar.
+This triggers a random number between zero, one and two.
+Right.
+Actually, I don't think it's hitting.
+I'll just disconnect this and just try it myself.
+That was silly.
+Okay.
+So as you can see, this is changing the shape on the outside.
+Okay.
+So let's say I want to control that by hand.
+Let's say I want to be able to switch between the two.
+So let's do.
+Let's change the music up a bit.
+So here, what we can do is we can plug in numbers, different number streams and then swap between
+them.
+And you might think, why would you want to do that?
+Well,
+sometimes I'm going to want the patch to be kind of generative.
+That's doing his own thing.
+And don't forget if you find this difficult to follow it is because I'm not getting true
+visual feedback yet from my MIDI controller.
+So that's something I really got to address in the next stream.
+Let's just assume that I'm going to be getting that working in the future.
+So I'm going to add like some kind of visual feedback here.
+Like I am manually in control of a parameter or that is randomizing because who knows,
+maybe you need to use the toilet, right?
+Or you need to talk to somebody for 30 seconds.
+Isn't it really handy if you can just press a couple of buttons and it's going to randomize
+with a timed sequence, right?
+So let's say I'm going to do that.
+So I'm going to get this trigger random number.
+And I'm going to put this on every half because I found it a little bit on the low side.
+All right.
+So now it's kind of kind of a rule.
+I'm going to say, if I'm ever using the switch number,
+zero is going to be random.
+One is me taking control.
+So I'm going to put this into value zero.
+So with the index here, we're going to decide if we are looking at this one or this one.
+So I'm going to go here and get number.
+And this one was Shape Select Instancer.
+Okay.
+So if I turn this knob now, it goes from zero to one.
+Okay, cool.
+So I know we've got zero, one, two.
+So three shapes, right?
+So I'm going to do map range.
+And I'm going to do zero to two.
+And then I'm going to do the flow.
+So if we turn this now, zero, one, two.
+Okay, so let's just get a bit of space here.
+So once again, the way it was before was let's just plug that in.
+So you're going to look here at this half trigger with flow mode and every half of a bar,
+this is going to trigger a random number.
+And that changes the outside of the cube.
+Okay, great.
+So I want to be able to control that myself.
+So I'm going to get this now.
+And I'm going to plug this into value one.
+Okay, so this knob is going to do one of two is going to do something right.
+But what I want to be able to do is change it.
+Now, I don't want to keep that logic over here.
+This is for post FX, right?
+And this is the stuff inside of the actual patch.
+So I'm going to get this here.
+And I'm going to use that to toggle between them.
+So I'm going to do var get number.
+Don't know if I actually did anything here.
+I'm just going to add it as a go now.
+I don't think I did it with the buttons.
+No, okay.
+So look here with these buttons on the midi fighter.
+I didn't do anything yet because I said it would just be a lot of work.
+So now I'm only going to add them when I need them basically.
+So it's this one corresponds to this one.
+I press this button.
+It's going to be this one right here.
+Okay, cool.
+So I'm going to go here.
+And what we're going to do is we're going to get the CC value out, which is zero to one.
+So I'm going to do var set number.
+And I'm going to call this creating variable.
+Actually cancel.
+I want to see the variables.
+I'm going to just call it midi_fighter.
+midi_fighter
+dial dial press zero one two.
+That's this one.
+Okay.
+So let's go back here to patch two.
+That's where we're going to go.
+So I'm going to go here to this number now.
+And I'm going to grab a midi_fighter.
+Where did I just put it?
+Ah, that's set.
+Making a mistake there.
+Got to do get.
+Here we go.
+Midi_fighter dial press two.
+So if I now press this in.
+Get zero to one.
+So, um.
+If I plug this in here.
+It's going to allow me to swap.
+Got a problem though.
+I have to hold it in.
+If I want to have manual control to turn it.
+Which is not what I want.
+So we're going to go here.
+I'm going to do.
+Trigger true.
+Trigger change true.
+And then we're going to do what we did before.
+With the toggle bull.
+Okay.
+So now.
+I can press this.
+And I can.
+Alternate between the two.
+So I know it's also possible.
+To send data back.
+To the midi fighter.
+So that I could say.
+The value of what we see here.
+Is going to change this.
+Indicator.
+There.
+That little red light.
+Because as you can see.
+When I push it in.
+It becomes green.
+You can see that.
+It's very small.
+Nice thing guys.
+So if you can see it.
+Yeah.
+So.
+That's another thing.
+For another episode.
+But.
+Basically.
+We're going to.
+We're going to put this in now.
+And we're going to put it in.
+There.
+To the index.
+Okay.
+So.
+Let's take a look.
+We're on.
+I need to do bull to number.
+Okay.
+Because.
+This is output in the bull.
+Right.
+True or false.
+And bull to number.
+Changes that into a number.
+So.
+Now we can look here.
+And as you can see.
+We can toggle.
+Between what we're doing.
+So if I'm on zero.
+Then.
+It's.
+As you can see.
+It's changing.
+Every time.
+With this.
+If I'm not going to click this.
+It's only going to change.
+When I.
+Turn.
+This.
+Knob.
+Basically.
+So that's me.
+So even though.
+This is being triggered now.
+As you can see.
+It's not.
+Listening to that.
+It's listening to.
+What I'm doing.
+Okay.
+With this shape.
+Let me just move.
+The transform view back.
+Because.
+It's really difficult.
+To see this.
+When you're inside.
+The shape.
+Let's put on minus 0.5.
+A bit better.
+Okay.
+Let's go back here.
+Okay.
+So.
+So basically.
+To summarize it.
+I am getting this.
+And I'm saying.
+If I press it once.
+Then please.
+Do your own.
+Generative stuff.
+Swap this shape here.
+I don't want to think about you anymore.
+And me turning this.
+Now.
+Won't actually do anything.
+As you can see.
+Me changing this value here.
+Is not being passed through.
+But.
+The cool part about this.
+Is right.
+It can be generative.
+And I could swap it.
+All the way to the right.
+And then I.
+Tap it.
+And that value.
+Now gets pushed through.
+So.
+That's the basic idea.
+Behind that one.
+So.
+Once again.
+This idea here.
+Is this shape select thing.
+Which is now disconnected.
+Which is here.
+I want that.
+No matter which patch.
+That I go in.
+That's going to do something.
+So now.
+Let's jump here.
+Wow.
+Okay.
+How are we going to do this?
+So we're going to go to patch three.
+You know what?
+Let's just grab this.
+Bit of logic.
+Right?
+Yeah.
+We copied it.
+So I'm going to jump into patch three.
+Which is kind of like this.
+I was inspired by the.
+The Tesseract.
+A while ago.
+From.
+Um.
+Interstellar.
+Really loved that film.
+Wow.
+Did I do all that in that stream?
+Holy shimole.
+Okay.
+Completely forgot about this.
+All right.
+So what can I plug it into here?
+That's going to make this kind of cool.
+Let's turn this up.
+So we get more.
+Lines.
+Now this also shouldn't go to.
+Right.
+So I think I did it here with the FX map before.
+I didn't do it with this one.
+Right.
+So this isn't good.
+Because I can turn it to zero.
+Which means we don't have anything on the screen.
+Let's just do a quick fix.
+And I'm just going to do some.
+Add one.
+So this is that thing I said.
+Right.
+Like oh look.
+I turned it to zero.
+And it's just black.
+That's not acceptable.
+I don't want that.
+So I'm going to.
+Put this now.
+Like this.
+Okay.
+Cool.
+So now I get something from the screen.
+No matter what.
+All right.
+So we had some stuff.
+I can see these grayed out ports here.
+So we're doing something with the preset up.
+Okay.
+Right.
+So we built this entire system here where it's triggering a random number.
+So what it's doing is it's getting a quarter trigger.
+The trigger count is counting how often it's going.
+We've got it on a loop before which is zero one two three.
+And when it equals zero sends out a value of true.
+This then sends out a trigger.
+And that creates a random number which then picks a random preset.
+Right.
+Okay.
+That's just me getting back into it.
+So if I'm going to press this in.
+If I'm going to turn this.
+I want it to do this kind of like shape select.
+But do I have something here that I can do a shape select with?
+Plugged a lot of it into the preset.
+Boo.
+With this work.
+So if I do.
+Fargate number.
+Um.
+Then we're looking at.
+Midi fighter cc2 right.
+That's this one.
+Yeah that's this one.
+So I'm going to do a.
+Pull it over here.
+Yeah.
+I've bundled a bit too much into the preset up.
+But it's okay.
+So I'm going to get map range here.
+It's one.
+And I'm going to put it on say.
+4 to 24.
+16 was kind of a sweet number.
+But I don't want floats.
+Because it's the repeat up.
+It expects integers.
+So I'm going to grab the floor up.
+So that sends it into an integer.
+And I'm now going to plug this into repeats.
+There.
+So now if I turn this.
+So look.
+It's kind of like.
+So when it flies off to the.
+So okay.
+So when we don't have a lot of cubes.
+And it jumps all the way to the left.
+Then we lose it.
+So maybe the idea here.
+Is just not to put it on the 4.
+But to put it on the say.
+8.
+And that still just feels kind of lame.
+I suppose.
+So let's put it on 6.
+Like I said.
+You want to make it there.
+If it flies off the screen.
+You don't lose it.
+And that's obviously got to do with this.
+Transform here.
+We're moving everything.
+Okay.
+Yeah.
+So this is the transform view.
+We're looking for the position Z.
+It's making it move left and right.
+Scale.
+It's rotation.
+And it's moving to the left and right.
+Where am I doing that?
+Great.
+Let's just get rid of that stuff I'm not using.
+And this as well.
+Position X.
+Right.
+So it's this one.
+So this is just like too high basically.
+Cool.
+So we tweak it.
+And now even if I put this on a low number.
+And it flies towards the camera.
+It should always be on the screen.
+Alright.
+So here's a problem with just it.
+So if I put the mirror on.
+That's cool.
+Right.
+But look what happened to it when I pressed flip.
+Went black.
+Right.
+This doesn't seem like such a bad thing.
+Because you know when I'm pressing it I'm realizing it.
+You know what would happen if I'd have it like that where it's black and then I turn mirror off.
+And then I'm pressing some effects and putting some things on.
+And then I do this and it's not there.
+I'm going to be like oh god you know what did I just do.
+So yeah.
+That's something I'm not too sure how to solve right now.
+It would be really cool to create a system of raycasting like something on the screen right now.
+But that's not something for this stream.
+I just still think it's actually just flying off too much at the side.
+So let's just put it on minus one and one.
+Turn the mirror on.
+Press flip.
+And you know do we do we lose it then?
+A little bit but it's actually not too bad.
+Okay.
+So you know I'm getting it now where just like
+any combination of things that I'm putting on should just start creating different output.
+You know I really need to have the visual feedback later on from if it's been generative or not.
+Yeah so that's a real thing you know I mean you press a lot of dials and buttons and it's like
+where am I? How is this stuff working right now?
+Okay.
+Step this up a bit.
+So this is a little bit of scene blur.
+This is a lot.
+This is how many lines.
+Flip makes that stuff disappear.
+Okay.
+You know and I think this kind of system is just like anything you know.
+You know I'm trying to make it where it's always kind of good you know no matter what you turn.
+But as you can see it can go wrong right.
+It's like you know you can lose things on the screen.
+And I actually at one point I really don't mind this.
+It's like a it's like if you're jamming with instruments you know in a band or something like that.
+Yeah there's a chance it can go wrong.
+It's not the end of the world.
+That's like how how things should be able to work in a creative environment right.
+So that's the edge detect.
+You know it's impossible to get all this stuff like good in one go the first time.
+I mean if you just want to make like you know.
+You know let's just say you did this and you focused on this looking really good.
+And you didn't really have any changing poster effects and then you just swapped between scenes.
+Sure you know and then you let that play for two minutes.
+But I like just being able to change this stuff really quickly.
+So one thing I don't like right now is that you know I tweaked this.
+Look I'm changing it and you see me jumping from scene to scene.
+Now the thing that's really handy is that you make a number only change on a quantization rate.
+So live has this built in where you can say I'm going to press these clips.
+And I'll just show you for a minute.
+So we've got the quantization right here on two bars.
+So these play buttons indicate like if something is playing it's solid green.
+And if it's flashing it's a follow action it's going to be the next thing to play.
+So if I'm going to go here and I press enter.
+I'm going to I'm going to hit the keyboard pretty hard now so you hear it.
+It's not going to instantly do it watch.
+It waits until it gets to a downbeat.
+And this means you get like a smooth changeover right.
+This is like really cool.
+Now if I put this quantization rate say for example on like 116.
+And I press it at the wrong time.
+You know it's changing like this.
+Now it's not in time right.
+So I don't want that so I'm putting it on two bars.
+So we can simulate something like this in cables where I say I'm going to turn this
+but I only want the number to change like every first bar.
+So this is how you can get stuff to change according to like your global midi clock right.
+So this is the one we're looking at here.
+This allows me to change scene right.
+Now what we do here is we do trigger set set number and trigger outputs and number one triggered right.
+So we're going to do trigger receive.
+And later on in another episode I'm going to be using this to kind of create this
+global quantization system like what you saw here in live.
+This will all drop into place at some point in the future if you're still following all of this.
+So I'm going to go here to one one trigger right and I'm going to do this.
+Now let's pay attention to what's going to happen here.
+So every every bar this then changes.
+So when I'm going to turn this now to scene one it's not going to happen
+unless it's on time with the music.
+So watch this again.
+See if you can follow my hand.
+Notice how it's changing on the downbeat.
+This is just something I could never do with the actual midi knob right.
+You know I turn it and you see it go from zero one to two but now I can be on two.
+You can turn it to zero and it changes in time with the music basically.
+And this is a really handy feature when you're doing abrupt changes.
+So this thing that I just did here basically.
+Um you know we could now say you know this this so like this kind of thing where you're changing
+values that are like um floats you don't want to do this obviously.
+But when you're like changing this let me click this in you know so now I can change the shape right.
+So I can go between there we go.
+So I can change the shape between cube, circle or prism but I've got that same problem.
+It's changing as I turn and there's no way for me to synchronize this.
+So I'm going to go into patch two.
+I'm going to go down here.
+This is basically where we did it.
+Same idea.
+So we just go here and grab this and say set number on trigger.
+Put that back into the index.
+And now you know if I'm going to turn.
+Like for example later on two knobs.
+I go from and I changed them.
+But you know you don't do it.
+You can't tweak a knob on the downbeat and then have it work like when you're pressing the button.
+So I can tweak these knobs before the downbeat and then it's going to swap the shape.
+So you know now it's on the cube right.
+And it's swapping now on the downbeat basically.
+It takes a bit of practice because you've got it.
+You've got to really listen to the music.
+Like you know when is downbeat like here as you can see.
+When that one one trigger is going off like right here.
+Because you know this is the way that I like to make visuals really punchy and snappy.
+You know because when you're doing this stuff normally in like a
+venue with like 2,500 people there.
+It really stands out when this stuff is not moving with the lights.
+And the music right.
+If it's just like playing the whole time it's just kind of like.
+I don't know.
+To me that everything in a live venue should complement each other.
+The lights should complement the DJ.
+Well actually it complements in the musical artist right.
+So you know the lights should complement it.
+And the visuals should complement it.
+And the lights and visuals should complement each other as well.
+So you know this is that thing I just want to do now.
+Where I can just say hey I just want to turn this stuff.
+And I only want it to change in time with the music.
+Now this scene select I might actually put over here later.
+Because it's kind of difficult to know if I'm on 0, 1 or 2.
+And if I'm going to add more scenes later on this could get trickier.
+You know I could say later on with this series like I'm going to do a maximum of 8 scenes.
+And now I can hit a button.
+And once again you know I only want it to change like on time.
+And I'm looking now at the trigger receiver.
+It'd be really good to be able to change what it's receiving.
+But I could do that with a root trigger.
+But that's something for another episode.
+So you see I'm just I'm just trying to build these little systems in place.
+Which are going to make it easier to create a more
+easier to control experience I'd say.
+Yeah okay.
+Ah that chromatic aberration is just way too much.
+But I just want it to be clear that it's on.
+Okay so you know this this is the thing I think with developing this uh this this patch.
+This this VJ software.
+This you make a lot of steps forward and then you plug a lot of stuff in.
+And it's like does this work the same way now?
+You know if it doesn't that's okay.
+That's all part of the creative process.
+I feel like I'm slowing down a little bit with making progress with the patch right now.
+But it's nice being a lot more brain technical work than um actually getting creative.
+So let's turn everything off.
+I mean we can do so much stuff here like change the color of the matte cap material on um each level.
+I mean we can do so much stuff here we can do so much stuff here we can do so much stuff here.
+So we can do so much stuff here.
+So we can do so much stuff here we can do so much stuff here and we can do so much stuff here.
+So we can do so much stuff here.
+So we can do so much stuff here.
+So we can do so much stuff here.
+So we can do so much stuff here we can do so much stuff here.
+Okay so I think to round it off for tonight um the last thing I want to do
+is a different post effects.
+Yeah I really gotta get this thing working with the visual feedback then.
+So I'm gonna do if true then.
+And I know I already did this before.
+But I just want to approach this with like a fresh head now.
+So now because we're building extra effects we've got to build a bypass system.
+Okay so now we're building a bypass system.
+All right.
+So let's turn those effects off.
+But I still want this to be on basically.
+Okay.
+So this pixel displacement thing.
+You know it doesn't have a texture now so it's um.
+Just give me a moment.
+Got a little problem down.
+So I just open the ctrl shift i to console.
+Control ctrl shift r is a reset.
+Control shift i okay.
+All right so.
+That's the displacement amount.
+Is this on?
+Ah no.
+Did I disable everything?
+Yes.
+So that's my problem.
+All right so we're bypassing all those effects.
+I just only want to look at this last one.
+That's it.
+Okay so.
+I want to make a little separate post effects chain now.
+So I'm going to get the midi all.
+I'm actually going to move it right to the top of the patch.
+Because that's what's controlling everything.
+And this stuff I'm going to put next to it.
+Yeah this is a fade everything out.
+I'm just going to leave that there for now.
+This one isn't there.
+Fade all out.
+I'm not going to worry about that for now.
+That can obviously get mapped to this later on.
+So I've just got another little idea here.
+So I'm going to move this over here.
+Why am I doing it like this?
+I think it's basically I could just.
+Yeah so basically this is just.
+I'm not sure why I did that.
+Okay.
+So right now I want to make a little.
+Pre-visualization for what I'm going to do.
+So I'm going to.
+This is the last thing for today.
+So I'm going to grab the orthogonal.
+Up.
+And then I'm going to grab a basic material.
+I'm going to make a little visualizer.
+Basically.
+We need it to be over here.
+So it makes sense.
+Let's run to zoom in now.
+Okay rectangle.
+Now the full screen rectangle is drawing over it.
+If I'm correct.
+Because of the draw order.
+There we go.
+So just in case you didn't see.
+What was happening there.
+This this full screen rectangle.
+Was being drawn last.
+So obviously it was going over everything.
+There's one or two different ways to do this.
+Let's just do it like this for now.
+So I'm going to go here.
+I'm going to grab a transform.
+I'm just going to.
+Move it over here.
+Okay.
+So.
+I know I did something similar before.
+But I just want to try something different now.
+So let's make this.
+I don't know.
+512 by 512 for now.
+Drop the viewport size.
+We don't want that.
+Wrap.
+Climb to edge.
+I'm going to grab something really really simple.
+For a nice.
+Okay.
+And what I want to do is.
+I want to just visualize it there.
+For a minute.
+And.
+I'd rather do this.
+Variables later.
+But I'm just going to keep it.
+Quick and easy.
+So get that.
+All right.
+Great.
+So.
+This is something.
+No.
+Let's do it.
+Let's do it.
+Variables.
+I just like to keep it clean.
+Var.
+Set texture.
+Set texture variable.
+We've already got one.
+For the displays.
+I'm going to probably call this.
+Something different later.
+Yeah.
+Let's just call it something different.
+So.
+Displace.
+I normally do this at the beginning.
+X when it's a texture.
+Displace.
+New.
+Zero.
+I'm going to go here.
+And say.
+Var.
+Get.
+Texture.
+Right.
+And we're going to say.
+Text.
+Displace.
+New.
+Zero.
+Yeah.
+I had an old one there.
+I just want to try something.
+Right now.
+So let's put this on.
+0.1.
+0.1.
+So that's where we can see.
+The.
+The varonize.
+And.
+You know.
+We need a visualizer.
+So.
+We're just going to.
+I just find it really handy.
+To see it there.
+It's going to do.
+Var.
+Get.
+Texture.
+Again.
+So we're just plugging this.
+Into.
+The basic material.
+For that rectangle.
+So we're going to go here.
+And.
+I'm going to make.
+Text.
+Displace.
+New.
+Zero.
+Now I can see.
+It there.
+And I can see.
+What's happening here.
+Right.
+So.
+A couple of different things.
+We can do there.
+I just want to.
+Play around.
+And try some stuff.
+So.
+If we.
+Look at movement.
+This stuff is going to.
+Change.
+Of course.
+I'm using my mouse wheel.
+So that's going.
+So let's just get time.
+Grab a timer.
+I just want to set this.
+Last little thing.
+Before the end of the night.
+As you can see.
+The very nice.
+Here.
+Isn't.
+Mirrored.
+Which could be kind of cool.
+I suppose.
+Just try and stuff out.
+So.
+I mean.
+Pixel displacement.
+Is a really kind of tricky.
+Effect to get right.
+So.
+You know.
+I'm going to kind of.
+Pick a number now.
+And then stick on it.
+I know that the 0.2.
+Is pretty high.
+Already.
+I didn't have an X.
+There we go.
+Okay.
+I'm just curious.
+So, let's go.
+So, this can give us a lot of different looks.
+Okay.
+So, I want this effect to be able to be turned on or off and then use a different amount
+of displacement.
+It could actually be better to put it, like, before the mirror effect.
+I've got feeling the mirror effect should kind of go last, actually, but we'll worry
+about that later.
+So, I'm just going to go here and now I'm just going to do a, you know, I could do a re-trigger,
+but let's just do it like this now.
+I'm going to pixelate an image and we're going to put it on, say, 16 by 1.
+Now, this is where I'm getting curious.
+Let's do this.
+Let's do this.
+Oh, sorry.
+Let's just do an if-true now.
+Not over-complicate it.
+Let's just do an if-true now.
+Not over-complicate it.
+So we're going to get this.
+I'm going to get fpm.
+noise.
+Now, this is where I'm getting curious.
+Let's do this.
+Let's just do an if-true now.
+Not over-complicate it.
+So we're going to get this.
+Let's just do an if-true now.
+Not over-complicate it.
+So we're going to get this.
+We're going to get fpm.
+Noise.
+So we're going to get this.
+Nice.
+So we're going to get this.
+We're going to get fpm.
+Noise.
+So we're going to get that.
+We're going to get this.
+We're going to get fpm.
+So we're going to get this.
+I'm going to get this.
+I'm going to get fpm.
+Noise.
+I'm going to get that timer.
+We're going to plug it into anim.
+And we're going to get that timer.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+So we're going to plug it into anim.
+So we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+So we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And as you can see we're now getting this smoother change there.
+And I'm just curious why the Voron noise gives it this like staggered jump in there.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+And then we're going to plug it into anim.
+So now it swaps on time with the music.
+And then we're going to plug it back in there.
+Okay.
+So then we get the FPM.
+This is something I just want to have brighter I suppose.
+So I think if I'm going to turn it off.
+I just want this stronger contrast.
+And this one's brighter.
+This idea with the pixel light isn't working out the way it went though.
+But I think it's because the values aren't going high enough.
+So basically we, you know, there's two ways of doing this.
+We, this is really extreme.
+And this is more actually what I'm going for.
+So repeat will sort of wrap mode.
+We're going to repeat.
+So when it gets pushed off the side of the screen, it's going to come back.
+This is okay.
+Mirror.
+It will mirror.
+Clamp goes off.
+And we get that.
+Don't want mirror because then we get those like mirror mirror effects.
+I'm going to just put it on repeat for now.
+So I've actually got the amount X and Y and sort of five.
+Put it on one and one.
+It comes kind of crazy.
+So the thing is, you know, we can change how much that's working by just actually.
+plugging in brightness, contrast.
+So look down.
+So, you know, if we're going to turn this up right now, you get a much heavier displacement.
+And I think we need to put this on HDR mode.
+So, you know, I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to turn this up right now.
+I'm going to use contrast and brightness here to get these really extreme effects.
+Now, you know, this is obviously way too much.
+So actually, let's go down here now.
+Let's just put this in 0.5 because I think that was the problem.
+The image wasn't bright enough.
+Okay.
+Yeah, this can create some cool stuff.
+Yeah, I like the way this is going.
+It's really simple right now.
+It's way too many.
+Yeah, okay.
+It's going in the right direction for me though.
+And of course, now I probably want to reorder some of this stuff.
+Like I said, the mirror should go more towards the bottom and things like that.
+But this is something that I already like that gives some pretty different looks basically.
+And this is its own little effects chain right there.
+You know, I could do a little stuff here like 12 by 12 or 12 by 1 again.
+So, you know, this is a pretty complex setup.
+So, you know, if I just want to do this like really simply.
+So, this is the VAR noise.
+Just throwing in if that's just a fail with the trigger count thing.
+It's nice that it's beat synced, but I just get these jumps here.
+Which I'm really not so happy about.
+Just trying to wrap my head around Y.
+So, does movement just have to be higher?
+One minute.
+I don't think movement should be above one actually.
+No, okay.
+So, let's plug that back in.
+I just don't know why I get these jumps.
+Like this.
+Ah, okay.
+Yeah, of course it's rotating.
+Hmm.
+Hmm.
+I don't think movement should be above one actually.
+I don't think movement should be above one actually.
+No, okay.
+So, let's plug that back in.
+I just don't know why I get these jumps.
+Like this.
+Ah, okay.
+Of course it's rotating.
+Hmm.
+It's actually not too bad.
+I'm just going to make a quick preset up for now.
+Yeah.
+So, first of all, I'm going to plug this into there.
+It's going to let me decide which noise type that I've got.
+Okay.
+And then I'm going to plug this into.
+One minute.
+Ah, that's the multiply texture input.
+I wonder what happens if I change these.
+Ah, that's not going to do a whole lot.
+Nah, no problem.
+Just put it on normal.
+So, I'm just interested in width and height for now.
+I don't want to over-complicate things.
+Width.
+Height.
+So, um, if I'm going to bypass it, I can do that like down here at the end of the global effect chain.
+Which I'm not even going to plug in tonight because it's getting a little bit late.
+I just want to get this last thing in there.
+So, let's now say I'm going to press F for flow mode.
+And I don't want to start with foreign noise.
+So, I'm going to click this.
+Ah, I'm going to put this on zero.
+And this now takes me to FPM noise.
+That's the 101.
+So, I'm just going to make a couple of presets.
+I'm going to put it on two by two.
+Actually, two by one.
+And this just breaks up that whole mirror thing.
+Which isn't actually so bad, I think.
+If I put it on one by one, let's just...
+Let's just try it out.
+Let's just do it like this.
+Two by two.
+So, we're going to create a preset.
+I'm going to call it two by two.
+I'm going to make a preset.
+Four by one.
+I'm going to call it twelve by one.
+Twenty four.
+These can all be changed later or deleted.
+So, cool new things that have been added to the preset up.
+They were deleting stuff.
+Let's put it on sixty four.
+Yeah, this is the stuff I'm liking right now.
+With the preset up, it's great.
+You can just do all this stuff and...
+Yeah, look at this.
+That's pretty.
+That's pretty cool.
+Let's put it on 128.
+It's just a really weird look, but I like it.
+Of course, I can do this all the other way around.
+So, if we go here, like a one by four.
+Let's just do it.
+Okay, then click.
+And then one by eight.
+One by twelve.
+One by twelve.
+Twenty four.
+I can filter all this out later. I don't want to think about it now. So you know now I can
+go here to this. I'm just gonna grab a knob for now. I'm just gonna get number 4 from the midi
+and wrap it up. That was weird. I'm not happy with that for some weird reason. I'm not sure
+it just happened there. Let's reload. Got a precepts. Yeah. Okay. So we got that on AB. Okay.
+So this is the one I want to change. Var get number. So that doesn't happen again. Ghost
+in the machine people. Ghost in the machine. So midi fighter CC 0 1 2 3. Right. So go
+here. Okay. So that's this one. Yeah. Okay. As you can see, I can now go between these different
+precepts. But look, we're only going between zero and one. So this is really cool. So let's
+make it dynamic that, you know, it's just outputting zero to one and no matter what it's going to
+output, no matter how many presets we've got, it's always going to map to that. Right. So
+we're just going to grab map range and old men, old maxes zero and one. So that's precepts. That's the lowest
+preset. And we just look here at the amount of presets, right? So number of presets is 12. So we put that into new max. And now we can
+interplay between all of the different presets that we've got them.
+Of course, this is going to look a bit crazy because the effects itself could also just plug in two knobs and do something like this. Now, if we're going to plug in floor, then we'll get those jumps. Yeah. Between presets.
+Bypass. Right. And why is the effect not on?
+Something happened down here.
+Ah, it's not on. Ah, global bypass with everything.
+I can do the same thing again that later on, this will only change in time with the music, but I don't want to be doing that right now.
+Okay.
+All right. Well, I didn't get as far as I expected to tonight, but that is okay. It's all work in progress.
+It's almost 10 o'clock.
+All right. So I think I'm going to wrap it up for tonight, actually.
+Actually, there's one last thing I should do in the name of consistency.
+So I should make one last button. I'm never going to forgive myself.
+So we're going to go here. We've got these main buttons.
+So basically, let's do this. Learn zero, one, two, three, four.
+Oh, not velocity. We're looking for the gates.
+And then this one we're going to call launch pad row four main button.
+I'm going to go back to main.
+All right. So now I should just be able to.
+Yeah. So this allows me to turn the pixel displays on.
+These use the toggle system, obviously, not sure.
+Okay.
+So this now allows me to turn pixel displays on or off.
+You know what? Last thing of the night.
+Let's just do it because it's all over the place right now, but that's okay.
+Let's just say I'm not going to use this, right?
+Ignore that because when I turn through the presets like this,
+I don't think that's very pleasant.
+It's a great way to have a lot of presets.
+I'm just thinking like, you know, I've got it here on row five.
+So I could just store presets here, right?
+Let's do that. Just, just for the sake of the stream.
+It's going to be far get number.
+Let's go to MIDI all.
+Proceed to center the patch.
+So we need one more here, right?
+So this is the MIDI note filter.
+So I'm going to get that event.
+And I'm going to say learn, and I'm going to press the lowest and the highest.
+That maps.
+All right.
+And this one I'm going to call.
+Launchpad ruffle.
+Save.
+Okay.
+Go back to main.
+This is just because I want to show how this can work.
+So, you know, we've got this preset here, right?
+We don't need this floor anymore.
+This is just going to work.
+So we're going to go here.
+I'm going to say launchpad.
+Did I not just make it?
+Let's go back again.
+Launchpad row four.
+Okay.
+Is this working?
+Zero, one, two, three, four.
+Yeah, that's working.
+Yeah, that's working.
+Okay.
+It's just been missing some out.
+I'm not sure why that's not appearing.
+Let's do a reload.
+There we go.
+Launchpad row four.
+So let's look at the minimum.
+So we press this button.
+It's 64.
+The maximum is 71.
+So then we say old min is 64.
+Max is 71.
+And we want to map that from zero to 12.
+This is obviously going to map up exactly because we've got 12 presets, but only eight buttons.
+But if you now look here, I can now press this and change these things.
+Let's turn the effects on.
+I think I'm missing something there.
+And I've just got to, just not making much of a change.
+I've just got to jump through.
+So it's lazy, but for now I'm just going to...
+Yeah, basically I should have just made eight presets, right?
+So let's fix it with the preset up.
+That's what this stuff is for.
+I don't like two, two.
+So I'm going to get rid of it.
+Let's get rid of the 24s.
+So we've got zero to eight.
+That's one too many.
+It doesn't matter.
+Let's get rid of the eight.
+And delete one, eight.
+Fine.
+Zero to seven, eight presets.
+So now when I press this button, wrong one.
+I'm missing something here.
+I've got to put it back on AB.
+There we go.
+So as you can see, I'm going through these presets, but it's doing like the zero, one, two point two.
+So it's because it's going to eight, but we need to subtract one.
+Okay.
+Now I'm not sure why that's not turning on.
+I think it's because I did a disable global bypass.
+This is why we need this feedback stuff.
+All right, that's where we were.
+So now I can just like pick different displacement patterns based upon this.
+You know, obviously I could leave like a button available here to be able to swap between stuff.
+I mean, I used the preset up so I could like change foreign noise or FPM noise, but it's okay.
+Yeah, we could, we can do a lot of stuff with this.
+Okay.
+All right.
+So I'm actually going to, uh, round it up, um, right now.
+Cause it's been like over two, uh, two and a half hours or something like that.
+So I didn't make as good, uh, as much progress as I'd like, but I've made progress nonetheless.
+And I'm happy with how a lot of it, um, turned out.
+Um, there's a lot of, um, different things, um, that we can do with this.
+Basically there's a lot of ways we can go, which is, um, really nice.
+I suppose there's a lot of, so many different things we can do later on.
+I think the displacement texture stuff's going to work and mapping things at us.
+That's an art into itself.
+That can take a really long time to just tweak it until you're right.
+I also want to create, um, thanks Dima.
+Um, glad you like it.
+It's, it's, it's very experimental right now.
+It's the first time I'm really doing something as big, um, in cables with MIDI controls and stuff.
+Um, I'll be getting my, um, own MIDI controllers, um, back from my old crib, um, in about a month,
+which is great.
+Cause I've got like the Behringer MIDI controller and it's got like motorized faders.
+There's a lot more visual information and it matches up a lot easier and things are really cool.
+So in the meantime, um, you know, I'm gonna, I'm gonna investigate like how to send MIDI out of cables.
+Yeah.
+Right.
+Experimental is the only way to go.
+And I don't want to pre-script and pre-do this stuff.
+You know, it's, uh, I think it's good for people to see the process that everybody goes through.
+If you want to make something you've not done before.
+Um, so I really need to research like how to send MIDI out of cables to give me visual feedback
+on these controllers.
+Okay.
+Hold it.
+Hold it.
+Let's, let's tilt it up a bit.
+Yeah.
+Look, there we go.
+That's cause I did that tilt thing.
+Hi everybody.
+I'm upside down.
+Let's select that.
+There we go.
+Hey everybody back again.
+Yeah.
+So, uh, I think the last part of the stream, it's just nice to be able to see me while
+explain this stuff.
+So, you know, um, I think I've definitely got to get the visual feedback working
+on the, um, controllers.
+You know, I need to know if something is on or off, uh, like, you know, like, is this global bypass
+on or off?
+You might think it's obvious, you know, is mirror on or off, you know, you need that visual feedback.
+Um, so that's something I've really got to focus on.
+Um, so that's not actually so related to making pretty visuals, but it is related to making
+it possible to make a cooler, pretty visuals.
+So that's one of the next things I want to do.
+The other next thing I want to do is, uh, I'm going to, I'm going to hit up Ronnie Riktik.
+Um, if you can give me a nice, um, DJ mix, uh, I don't want to go through the, the terror of
+setting up a live DJ VJ mix, uh, live DJ VJ mix over the internet.
+That's just like, um, not something I want to wrap my head around now.
+So I'm going to ask him if you can just make it like a nice half hour, 40 minute, um, mix.
+And I think I'm going to ask him if you can put that in the SoundCloud.
+And then we can use the SoundCloud URL up, and then we can stream, um, the audio from SoundCloud,
+which means that we don't have to upload this like one, 200 MB, uh, file into cables,
+which is just pretty much bad idea, you know, if you don't need to do it.
+Um, and then I kind of like want to, you know, I don't, I don't want to only work on this now,
+uh, on this MIDI controller stuff.
+This was just to get the ball rolling, also to give people insight into how it works.
+And then, like I said, I want to do this like audio analysis stuff,
+like based upon some previous tutorials I've done with like the bi-quad filter.
+And that's really interesting thing to map to the MIDI controller.
+So like if I get this mix of Richter, you know, that I can, um, figure out like,
+how do I change these two to three bands, like bass, mid, high,
+and then it's a completely different system.
+I'm not getting MIDI notes anymore.
+Right.
+So it's going to be a different version of the VJ software.
+This is like the Ableton Live stuff.
+That's going to be a completely different one.
+That's only going to work on triggers.
+And it becomes very minimal then because like with Ableton Live,
+I'm getting a lot of really rich data.
+So like, oh, here's a bass synth.
+Um, I'm getting 32 different notes and velocity, you know,
+and when you've got a DJ playing, all you've got is audio amplitude
+on your like bass, mid, high, and you could split it up into four bands,
+but not really much point from my experience.
+So that's going to also require different approach.
+So I'd rather get that into the software now instead of going,
+oh, I've built it and I've tweaked it and it's all perfect.
+So this Ableton stuff with like 96 bits of information coming in.
+And now I've only got five and it all doesn't work anymore.
+So I think that's going to be the next stuff that I'm going to solve.
+Feedback on the MIDI controllers with MIDI coming from cables.
+Um, and then the audio analysis, um, DJ thing.
+And I think when I do that actually with the set from, uh, Richter,
+because you, you already said one or two times it was really cool with doing that.
+I don't think I'm going to do that in this patch.
+Um, I'm going to just build it inside another patch with like some very simple visuals on the
+screen, like in my tutorials and then I just focus on like solving all these problems,
+like amplitude levels, thresholds, how to reset the triggers and things like that.
+It sounds very simple, but it can be quite a tedious process to get it right.
+But once you've got it right, then it's really good.
+So, um, that's the end of the, the, the stream, uh, for tonight is interesting for me.
+I did a lot of new things with cables that I haven't done, um, before, um, which I'm always
+happy to do basically.
+And I'm really, um, glad that this, um, yeah, you know, I made a lot of progress tonight.
+I'm really happy with how it went basically.
+Um, yeah, it's actually okay.
+I thought I just expected myself to get more done.
+So I'd like to thank everybody who, um, tuned in tonight, who's been watching.
+Um, it's always really nice when there's some people following this later on.
+This video is going to get uploaded to YouTube in case you've not been able to watch it all,
+or you want to be able to do a recap on some of this.
+Um, it's been a little bit quieter tonight, but that's okay.
+You know, uh, we just do these things because we like to do them and share them with the community.
+Hopefully this will inspire you to, um, just do some new different things inside the cables.
+Basically, um, if you've got any questions about this, post them on the forum, post them under
+the video on YouTube that should be up in a day or two.
+And, um, I'll be doing another stream next week.
+Um, where I'll be continuing with, um, this probably, I think with this, I could do a copycats,
+but I'm really in the vibe of this one right now.
+So I'd rather do it while it's all still kind of fresh in my head.
+Anyway, I'm rambling on, uh, thank you very much for tuning in.
+Thank you for watching.
+Um, and I hope all you lovely people have, um, a good night and a good week.
+And, uh, I'll see you in the next stream.
+Have a good one.
+Bye.
+Bye.
+Bye.
+Bye.
+- Thank you.

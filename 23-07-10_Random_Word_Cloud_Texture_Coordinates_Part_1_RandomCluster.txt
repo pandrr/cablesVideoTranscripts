@@ -1,0 +1,107 @@
+https://www.youtube.com/watch?v=fHayPTVRH5k
+hello everyone welcome to another kbiz tutorial thank you for the positive feedback from the last
+one that was really good and i think it's the right way to do more visual visual examples visual
+tutorials and this is what i want to do today so i we want to create this random word cloud
+that just scrolls by and we want to build a texture that contains those words and then
+those are rectangles that just display one of those words so we will work with texture coordinates with
+the concept of texture coordinates and this time we will just use a random cluster to render it and
+in the next tutorial i want to show how to do this with a mesh instance okay so let's do this
+so first of all i create a new patch with the main loop and then the text texture operator
+we want to disable the draw mesh and just have the texture and just have a look at it so it looks like
+this i can enter some text here and it will fit in the texture so
+for this example i will just use the really handy operator random words array and i can just crop this
+array so you could also do this with parse with string to array and enter your own words but i will just use
+this because it's it's just so handy and it's really useful for testing i will show this later so
+we would use a crop array so
+maybe 10 words we want to have and then
+we want to
+join this array to a string so we want to array to string it's called
+we want to convert it to a string and let's have a look how this looks like so right now it looks like
+the string is separated with commas so we will remove this separator here and check new line
+and let's have a look again so this is how the string looks like it has basically 10 lines and each word
+is in one line um so we can connect this to the text texture now and then we see we have
+this texture full of random words in each line so this is our main
+main thing so you can also add a shuffle array which is quite handy for this and just
+randomize the seed and then you you get right random words out of it because this array
+is 96 words and then they are just shuffled and then we crop them to 10
+words and this is our result then okay cool so we created our texture already
+um next step um next step is how do we get this uh onto a rectangle right so um let's create a sequence
+here oh let's just add a rectangle here and we need to create a material so we can map the texture on the
+the rectangle so um we can connect this basic material to the text texture um so that looks like this so the whole
+texture
+is mapped onto the rectangle let's set another background color so we can see the boundaries of the of the
+texture so we don't want to see all the we just want to see one word with on one rectangle right now
+so this is this is my goal for now so how do we do this so we can use texture coordinates for this so
+texture coordinates would tell the shader or the material to only render one word on the rectangle so
+if you click basic material there is this texture transform right so this says this has this repeat
+operator so if we repeat if we do it like this and this needs to be when i i go to text texture this
+needs to be on repeat also then you can see i can repeat the texture like two times next to each other
+or two times uh on the y-axis and the offset will just scroll those things right so this so if i if i
+resize this to 0.5 for example i will only see half of the texture for example so this is really handy
+you can you can cut it off and yeah you can basically just crop your the crop the image and only render a
+part of it um okay so let's set this back uh to the normal values and then now let's let's try to
+calculate what we want to show so we only want to show one word of this right so the texture coordinates
+go from zero to one so this is zero zero and this is one one so one word
+has a width of one has a width of one because it's using the whole texture width so this is the width
+of one and the height is actually one divided by the number of words that we have so this crop array
+outputs so we input a 10 so when the output is also 10 so we know it's 10 words right so i can
+use a divide operator and divide one by 10 words and then we get 0.1 so 0.1 is actually the height of one
+word so we connect this to repeat y so now we see we only see one word which is exactly what we want
+right so um we can now much so this is actually the last word down here so we can act we can multiply this
+uh with another number so um uh sorry so this shows us the last word right so to as we did before like i
+can just change this number and then i can scroll through my texture so and if i do this in 0.1 steps
+you see i can see different words so i can use that number that comes out of here and connect it here
+and then connect this to the offset y and then i can enter say like this the fourth word or the second
+word or the first and then you see we always have like one word we see one word in the result and this is
+just using this not entering those values directly but using them calculated is super handy because you
+can just say okay i just want five words or 20 words and you see uh this still works the the numbers are
+still correct here's something completely different now but you can just uh change those numbers however
+you want okay so does this rectangle that we see here looks weird because the the aspect or the um
+the aspect of this rectangle is is still um one by one right so but our words they are not one by one
+um so i can uh the uh the text texture operator has this handy ratio output so we can use this ratio output
+so this is the ratio of the whole texture that we see here so um this texture has the ratio one
+to two two two two two two point five five five five so it's two point five five higher than it's uh white
+so this number um we want to divide um we want to divide our number of lines by this number so
+because this ratio is for the whole texture and we need to divide it by the number of words that we have
+and um that we can connect to the width of the rectangle and then we see you see the aspect ratio or like
+this is not stretched anymore this looks correct so this is the correct aspect ratio and now
+um i can add for example a scale operator and make this bigger or smaller whatever i want
+so so so this is how you can transform texture coordinates just using the basic material
+um so i will change the background back to black because we now have like the correct mapping and we
+have the correct uh aspect ratio and everything so i'm not interested in this anymore what i want to
+do now is create lots of those words so i change it back to to the black black background and i will use this
+texture as texture as texture opacity so now you see the word gets um greenish because this is now a mask
+only for this color so you could actually add another texture and multiply this um with the mask which is
+super handy so but i would change it to white so what i mean is like you could add uh just any image here
+you see and it's the background for the text but yeah i want to use it as opacity because i would show you
+in a second why um so now i want so we want a full cloud of many random words right so
+i will add in this case add a random cluster
+and then we have lots of apple words flying around um but actually we want a different word every time
+right so um right now you remember we have this index here and this changes the word
+so we have to change this basically for every rectangle that we draw so we can use the
+index from the random cluster and connect it here and use a modulo so it doesn't
+so this is 100 rectangles and we only have 10 words so you can use a modulo with the length of the
+array and then it will not go out of the out of the array basically um
+right so um we can click the random cluster and change the rotation x y z to zero and then you will
+see the the words are like flat parallel to the screen and we can change the random seed
+um and it looks quite nice so we have one problem uh sometimes you see words are a bit cut off so this
+is because uh we are working with transparent images right now so in this case the easiest way to
+work around this is just to turn off death testing and then they will just work uh like overlay nicely
+over each other so you see without and with so you why is this happening you can see if we change back
+the background to red you see the the rectangle is always uh much bigger than the text so they are
+overlapping and then they are the death test is also overlaying them and um this gives you problems but
+so the the easiest way is to just change this back to black and just disable this test so this also gives
+you the the nice possibility to just change this color and just uh turn down the opacity and then you
+can see we can actually see through the words um you can change the behavior of this with the blend
+mode operator for example to add so they will add up where they overlap which is quite nice so i can also
+use the scale thing again to just scale them up and then you see uh more more overlapping and without
+those two ops it would look like this so so this is just handy for for this case um let's clean it up a bit
+yeah so that that's our example actually uh what i showed before was animated right so um in this case i
+used the random cluster feature uh scroll x um which i can connect to a timer
+and then it will just scroll those words from left to right and actually you see them flipping here so
+you can make the the size of the um random cluster a bit bigger and maybe add a orbit controls and scroll
+it in the right area and then you will not have overlapping anymore or better you just use a transform
+and transform it that that that looks fine
+yeah so this is this is this example in the next um tutorial i will not use a random cluster because
+this will get slow uh quite fast so um i will use a mesh instance and then we can have thousands of those
+ones okay thank you for watching bye

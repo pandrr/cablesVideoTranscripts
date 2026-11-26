@@ -1,0 +1,35 @@
+https://www.youtube.com/watch?v=jiOLZaMUH78
+Hi there, I'd like to welcome you to our first new tutorial video on the ByteSize channel.
+Today I'll be giving you an introduction to the repeat op.
+Please pause the video and just build what you see here on the left hand side.
+Okay, let's get started.
+First of all click on the repeat op and give it a number like 20.
+Now get the index out and plug it into position X.
+Now click on the global scale, make everything smaller, go to your global transform and move everything to the left.
+Okay, now grab the index and plug it into position Y.
+Now, as you can see, we're now going to add a multiply op and this will allow us to scale things down.
+You can also do this on the X axis as well.
+Now I'm going to get this and I'm going to plug it into a sum.
+Into the sum, I'm going to plug a timer 2.
+As you can see, everything is now moving off the screen.
+The output from this, I'm now going to plug into a sign op, which now gives us this nice waveform.
+I'm going to put my repeat on 30.
+I'm going to move this a little bit more back to the left.
+Okay, with the sign op, I can now increase the amplitude to get this shape here.
+I'm now going to create another sign op.
+I'm going to get the output of sum and we're going to plug it into here.
+And now I'm going to add a multiply op.
+And what I'm going to do is I'm going to multiply the results of these two sine waves together.
+Now, if I put the sine amplitude on one, also here on one.
+Let's actually put it on two.
+I can now change the phase and the frequency to start creating different waveforms that you can see here.
+Let's make it a little bit bigger.
+So I can put this on a real slow frequency and I can change the phase.
+And as you can see, I can create different waveforms here.
+So this is the start of how to use the repeat op.
+We could make this even larger now and put it on 40.
+We can get the scale and we can make it smaller again.
+So this is a really cool, interesting way to add movement to shapes and to place them inside of your cables patch.
+We hope that you've enjoyed this tutorial.
+If you have any questions or comments, please feel free to leave them in the section below.
+Thanks.

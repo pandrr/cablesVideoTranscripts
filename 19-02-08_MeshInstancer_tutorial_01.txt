@@ -1,0 +1,102 @@
+https://www.youtube.com/watch?v=7xlElfbMWgw
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
+forums is Andro, and today I'll be giving you an introduction to the Mesh instance op. This
+will be the first video in a part of an ongoing series. So first of all, I'd like you to pause
+the video and just make what you see here. Great, let's get started. So typically when you want to
+generate a lot of instances of a geometry on the screen, you would use something like the random
+cluster op. So I'm just going to insert that, and it now gives us a hundred cubes with a random
+position and a random rotation. So this is a really cool op, and if you press F though, we see a lot of
+activity here. It's looping a hundred times, and this is mainly running on the CPU, which at one point
+can become a little bit inefficient with larger patches. So what's the Mesh instance op? Basically,
+it allows you to process a lot of instances of a geometry on the GPU. And because GPUs are really
+good at parallel processing, it's way more suited to this task than the CPU. So we're going to just
+recreate the behavior of the random cluster op today with the Mesh instance op, and give you a kind of
+like basic introduction to the array ops inside of cables and what you can do with them. So let's get
+started, I'm going to get rid of the random cluster op. And in between, I'm going to add a trigger once op.
+Now I'll explain why in a moment. We'll grab this here. I'm going to grab the Mesh instance op, draw the
+same Mesh multiple times very quickly. I'm going to put it here. Now it expects a geometry, right? Because
+it needs to draw instances of geometry to the screen. So I'm going to grab the cube, and I'm going to plug
+that in here. Now you might think, why are we using trigger once? Well, once the Mesh instance gets the
+geometry from cube one time, it doesn't need it anymore. So there's no point in continuous ascending
+this data in because then Mesh instance would have to recalculate the whole time, which kind of defeats
+the purpose of the op. So if I click here with reset, you can see it gets one pulse over there. So this is
+just an efficiency thing. We don't need to look at this anymore. So let's look at transform and just go
+through some basics here. We have this cube, and every 3D object inside a 3D space has a position on
+the x-axis, y, and z. It also has the rotational value on x, y, and z, and there's one number for the
+scale. Now Mesh instance works the same way. Positions, scale, rotation. So let's go over here and make a
+random array 3x op. Don't let arrays intimidate you if this is your first time using them. It'll become
+really clear after a while. So I'm going to put the number of values on three. This now gives us a length of
+nine, nine numbers in the array. Let's just click this magnifying glass to inspect the contents of the array.
+It's an x, y, z array, right? So this is like x, y, z, x, y, z, and just carries on. So for each instance we're going to
+make, we're now generating a random x, y, z position. So let's just grab this output and let's put it on
+on positions. Zoom out a little bit. Let's put a number of values on say 20 and let's put the
+minimum on minus five and five. And as you can see we've got something coming close to the random cluster
+up. Let's put it on 100 for that busyness and there we go. We've just generated 100 random positions of x,
+y, z data, okay? So that array is just creating instances here. So the next thing we want to do is
+we want to create the rotational data, right? So let's put this on minus one and one, okay? And
+let's backtrack a bit and let's grab the array multiply up. Multiply every number in an array.
+So grab that. So this is x, y, z data, right? So if I increase this number we get the same behavior
+as altering the minimum and maximum here on random cluster. Okay, so I'm going to put this on five.
+So this is the array multiply up. We have mathematical operators for all the parts of an array. Array multiply,
+subtract, sum, divide, and you can just put an array in and give them a number and they'll do their
+thing. But this is the simplest one to see. So let's grab this and just plug it into rotations because
+positions is x, y, z data and rotations is x, y, z data. So we can apply the same thing now with the
+rotational data. So they're not rotating because they're only moving one degree. So let's go here
+and grab the array multiply up and we're going to grab that and put it here. And we're going to call
+this array multiply pos for position and this one rot for rotation. And if I now crank this number up,
+we can see that all the values are now getting multiplied. So let's put it on 360. And voila,
+we've got pretty much the same effect as the random cluster op. Let's jump in the patch, press F.
+And as you can see, we've got a really like not busy patch. It's not going through 100 iterations with
+the mesh instance because it's all running on the GPU. So let's press F. So far so good. So the last
+thing we now need to do is scale. So let's go over here and just create an array op. So if we add the array
+op and we have it on 100 and we have a default value, let's just like put this on one. Now what's happening
+here is a little bit confusing for beginners when they start out with this. So each cube needs an
+XYZ position and XYZ rotation numbers, but it only needs one number for the scale. So let's go over here
+and grab the array length op. Okay. And basically we want to get this value and it gives us the length of
+an array, right? So here the length of the array is 300 and he says, went 300. But then we need to divide
+this by three because we only want one number per instance. If this is confusing, don't worry about
+it. It doesn't get much more complicated than this. And there's a reason for this later on when you're
+going to be trying different things out with different ops. Sometimes you're going to get a
+warning because it's going to say your arrays have to have the same length. So by using this array length
+here, we can use it to decide the length of all the other array operators when we change this.
+So I'll just show you that now a little bit more in action. So I'm just going to make a random array
+and this generates an array of random numbers. It's not like 3x. So now I'm going to get this.
+I'm going to plug it into num values and I'm going to grab this and I'm going to put it here.
+And as you can now see, we're generating a random number per instance for the scale. So I can bring
+up the minimum, I can increase the maximum and I can change the seed. So this is a really, really
+simple thing to do. So arrays have to match with their length. Okay. So now let's go into something
+else. It's a little concept, um, which might be a little bit difficult to wrap your head around at
+the beginning. But once again, it's really easy. Once you get the hang of it, let's grab the array
+unpack free up splits an X, Y, Z array into three individual arrays. Let's put that here.
+And now let's click in between and grab the array pack free up. So I'm just going to do this.
+So this is the X array, the Y array and the Z array. It's the easiest way of explaining it. It needs a
+trigger. As you can see, we now have everything back the way it was. Why are we doing this? Well,
+you saw what we did before with multiply, for example, like here. Well, this multiplied the X, Y,
+Z components of the array. Now we can just do it on one single part of the array. So I'm going to grab
+array multiply. And now I'm just going to change it on the X axis, right? So I'm just trying to show
+you here that you can use this and you can just basically, um, extract any part of the X, Y, Z array
+and change it as you want. And we can go really wild here. So I'm going to go, um, I'm going to go here.
+And now I'm going to grab array sin, perform a sin or cause operation on the contents of an array,
+and I'm going to grab it. Actually, it needs to be before the multiply. There we go. And if I now move
+phase, as you can see, we get this and I'm now going to use amplitude. And if you look, we can now get
+this really kind of cool animated motion, right? So we can animate this now by just grabbing a timer
+to up and we can plug this into phase. Once again, this is all working only on the X component. You
+can, uh, select a couple of ops and give them a color code if you want so that you know what, um,
+part of the array that they're working on. So this is like, just to show you that you can just like
+extract one part of an array and you can start going crazy with operations that you can do.
+And it's generate some really interesting results. So I could grab this as well now,
+and I could put this, for example, on the Y component.
+And I can now put this in a different frequency and I can put it on a slightly different amplitude.
+And as you can see, we're now generating some really interesting movement there with the shapes.
+So I could also go to the rotational data. And this is the XYZ data. And I could grab erase some,
+and I'm just trying to introduce it to some of the tricks. Don't worry if you don't remember it all.
+And I'm now going to add a timer to this.
+And put it on 10. Let's put it on 20 even. And as you can see, we're now making all of the cubes rotate
+on the XYZ axis and then moving around. Let's just get rid of the multiply, multiply, because we've also got
+amplitude built in to send. I forgot to show that and it kind of gives the same behavior. So as you can see,
+this is just like a really great way to just like start playing around with arrays inside of cables.
+Don't let the array ops intimidate you. There's a lot of them, but at one point you'll become very
+familiar with them and their operations. And it's going to become really quick and easy to do this
+kind of stuff in no time. So this is an introduction to the mesh instancer op and the basic arrays inside
+of cables. I hope this video has been educational and informative. If you have any questions or comments,
+please feel free to leave them under the video below or to post them on the forum. Thanks for your time and see you in the next video. Bye!

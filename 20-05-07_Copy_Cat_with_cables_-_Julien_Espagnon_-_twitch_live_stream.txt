@@ -1,0 +1,2085 @@
+https://www.youtube.com/watch?v=bVsW0FUo-zg
+Sorry, I'll just ask you one more time. I think I just had to refresh Twitch. Could somebody just type in if you hear me?
+I'd really appreciate that. Ah, great, perfect, thanks. I just had to press refresh with the Twitch.
+A lot of new stuff tonight, talking with two people. Last time I did it with Panda, he'd taken care of the technical hassle.
+So, hi everybody. Great that you're all here. As you can see, we're trying to mix up some different things again by doing the Cables Jam announcement, and then after that, the Copycat with Cables, first time.
+I'd just like to check, is my voice loud and clear? Is it okay? Because now I'm using some different audio settings than before.
+Just want to make sure everybody can hear me okay, without me having to eat the microphone. Great, loud and clear.
+Okay, so without further ado, let's get started. Good evening again. Tonight, Copycat with Cables.
+So let's go over here. Press F11. I've picked something that seems seemingly simple. Trust me, seemingly simple things are not always simple to do, basically.
+Sorry, guys. Just got to get my Windows here set up. Okay, now I can read everything.
+So I get really inspired by a lot of generative art things that I see.
+I used to do a lot of stuff with processing back in the day, and it was a really great way for me to get into code, and I really loved the way that were just a couple of simple algorithms you could make.
+Things that I found really interesting, and processing was a really big way for me to get into generative art, like how to make art with computers, pretty things on the screen.
+So with the Copycat series, I'm always like once in a while looking around Twitter, and I see some amazing things go by, and it's always a challenge to recreate that in cables.
+So for the new people that don't know Copycat with cables, we look like an existing image or animation, and we recreate that with cables, or we give it our best shot.
+And sometimes it goes great, and sometimes it doesn't, and sometimes I think, oh, this will be done in half an hour, and it's two days.
+And sometimes it goes really quickly.
+So I'm keeping it nice and easy for myself tonight.
+I don't want to make it too hard, though I actually think it's not so easy.
+Really nice artist on Twitter called Julian Espanol.
+Really nice.
+He's got a huge amount of stuff.
+You should definitely check out what he's got.
+And for tonight's Copycat with cables, it looks really simple.
+I'm going to be doing something like this, basically.
+Sorry, I've just got to stop the Twitch stream.
+It restarted.
+I really just like the minimalism of this, and it seems really simple, and it's probably, it is probably simple, but the trick, as always, with these kind of things is figuring it out.
+And if I can nail this one kind of like this, we'll always try and go a little bit further, because as we say with cables, go real-time or go home.
+So, you know, the challenge of doing this stuff in kind of like 3D real-time is always different than doing it maybe with something that's running on the CPU most of the time, like processing.
+So, let's go over here, and I'm going to say, let's get started.
+So, if I'm going to break this down, we're going to be using Mesh Instancer and PointsFieldCube just to get started.
+And this is 2D.
+I'm probably going to do a 3D version of this.
+I'm going to make this window a little bit small for now, so I've got plenty of room to patch with.
+Let's go into full screen.
+So, first of all, let's grab a Mesh Instancer.
+And you know what?
+Let's put a cube into that.
+And we're going to apply Material to the Mesh Instancer.
+So, I'm going to get a Lambert Material cube.
+Need to trigger.
+I'm going to put a lot of these on the screen.
+So, let's just do 0.2 by 0.2.
+Okay.
+So, we've put our geometry into our Mesh Instancer there.
+And now what I want to do is...
+So, if you use Mesh Instancer, you want to use this namespace or this word Points.
+You've got PointsCube, PointsPlane, PointsCircle, PointsFearRandom.
+You know, so we can do a lot of really cool stuff.
+And I wanted to show you this.
+Ah, there we go.
+Hey!
+All right.
+That looks like a bug if the amount of points goes below zero.
+Hopefully, one of the Undev teams are typing that into GitHub as I speak.
+Let's crank this up again.
+Didn't expect that.
+Okay.
+All right.
+So, it's keeping...
+Okay.
+So, hey.
+It's still in the development.
+Let's put this on a positive number.
+100.
+Reload.
+Great start there.
+Andro's looking good right now with that stream.
+Okay.
+Let's plug this into positions.
+Ah, there we go.
+So, look.
+This is the Points Ops.
+And let's grab an Orbit Control.
+So, I can rotate the scene.
+All right.
+Nice and easy.
+So, as you can see, I'm just doing this just to show you how it goes.
+So, I'm going to make these 0.1, 0.1, and 0.1.
+Smaller cube.
+So, I'm going to use something like this, but then a different op.
+And as you can see, this already lets you quickly and easily get like a lot of...
+There's a ticket already, I think, says Panda.
+Okay.
+All right.
+So, let me...
+I'm going to jump back and forth a little bit quick tonight, guys, because sometimes it's
+hard to focus on talking to everybody and planning two steps ahead.
+So, I'm going to make a grid first.
+Let's make a grid.
+So, type in points, and I'm going to grab PointsCube.
+Generates a 3D point field with a controllable amount of XYZ points.
+Allow me to get a drink of my Commodore 64 mug right there.
+Okay.
+Let's plug this bad boy in.
+Okay.
+What's going on?
+So, if we look, yeah, we've got a 3D field of cubes.
+Use orbit, control, zoom out.
+So, I just want to have a grid, right?
+So, I'm going to put the set amount on 1.
+And the multiplier is the distance between each occurrence of each point in this field.
+So, when I reduce the multiplier amount, we're going to make the distance between each one
+not one, but less.
+So, let's pull this down.
+I don't know.
+Let's put it on 0.2.
+Okay.
+Zoom in with the mouse wheel.
+Okay.
+This is cool.
+So, if we look here, yeah, he's got his screen vertical.
+I'm just going to do my horizontal, so we've got easy access and stuff here.
+So, let's just start simple.
+I'm just going to put this on, let's say, 20 by 10.
+Zoom out a bit.
+Okay.
+So far, so good.
+Let's change that clear color a little bit, because I always get a little bit sadder for black.
+Let's make it a little bit of a slightly different color.
+There we go.
+Okay.
+So, we've got a basic grid now.
+So, let's break this down.
+He's got rectangles.
+He doesn't have cubes, right?
+So, Mesh Instancer has a scale array.
+Okay.
+Yeah.
+Let's do something with that.
+Okay.
+So, let's make a bit of space here.
+So, the important thing with Mesh Instance is you've got to make sure that your position, your scale, and your rotation array is always the same size.
+So, you know, right now, this is like a total of 600.
+The array length has a length of 600.
+So, we need to make sure that all these have the same as well.
+Sometimes, that can get a bit difficult to keep track of, but don't worry about it.
+So, I look here at total points is 200.
+Array length, 600.
+So, I think I need total points.
+So, I'm now going to grab the random numbers array.
+Okay.
+So, if I look here, they're not all exactly the same size.
+If I'm looking at them.
+Some of them are a bit thinner.
+Some of them are a bit longer.
+Like, the length is pretty consistent, but the width is kind of different.
+Okay.
+So, you know what?
+I'm just going to be really lazy.
+I'm just going to grab three of these right now.
+I'm just going to copy-paste.
+So, let's grab the number of values and plug that in there.
+And I'm going to pass that out again and again.
+I could have just grabbed it from here and pulled it all out.
+But I don't know.
+I just kind of like doing it like this because it seems straight lines for the win.
+Okay.
+So, the scale array expects a x, y, z array.
+Okay.
+Like the scale on each of those axes.
+So, I need to pack all these together.
+So, I'm going to grab array pack three.
+Let's just like get it working first.
+Okay.
+And here.
+And let's give this a trigger.
+So, I'm going to try and just keep this a little bit tidy right now.
+So, I'm going to go here and I'm going to grab that trigger extender.
+I just like doing it like this.
+Okay.
+There we go.
+So far, so good.
+So, these random numbers are ready to go from zero to one, zero to one, zero to one.
+So, let's plug this now into scale.
+Okay.
+There we go.
+All right.
+So, just a lot of people don't notice.
+You can, you know, pick a seed number.
+If you've got it on zero, every time you load a patch, it's going to be a different seed number, basically.
+So, if you just want to have it random each time, just leave it on zero.
+If you want to have it fixed each time you create something with the random numbers are right, then put this on a fixed seed number.
+So, I just want to put, I'm just going to put them all in one for a minute.
+Okay.
+So, as we can see here, so, this one is changing like the thickness, as you can see right there.
+So, that one I'm just going to leave like this for now.
+So, let's pull this down a little bit.
+Pull it up.
+There we go.
+So, as you can see, I'm already generating like these random parts there.
+Let's make it a little bit less thicker.
+Okay.
+So, pretty thin.
+Bit long.
+Okay.
+So far, so good.
+And with this, I can change the width.
+Let's say I put it on 0.75.
+I'm going to tweak these numbers a lot later.
+And then we can make them wider.
+Okay.
+Let's put it on one.
+Make it a bit narrower.
+Cool.
+Okay.
+I think that's going to go more the way I want.
+Don't forget, if I use this, multiply that.
+I can put them closer together and already get quite a different look.
+Okay.
+0.2.
+I just want to see what I'm doing here.
+Okay.
+My apologies.
+I forgot to put my phone on.
+Do not disturb.
+Okay.
+So, if we look at this piece right now, they're all rotating.
+But they're all kind of like rotating based upon this one point.
+And I've got an idea or two on how to do that.
+But I'm not too sure right now.
+So, I think I need to get the density correct.
+Like, this is a really dense amount of rectangles, right?
+Like, they all overlap.
+That's a thing.
+So, let's put a lot more on the screen.
+Let's do 50 by 30.
+Now, I keep having to zoom with the mouse wheel, which can get a little bit annoying at one point.
+So, I'm going to click Arbit Control, scroll down.
+I'm going to hit Reset.
+And I zoom in a lot.
+Okay.
+Now, I don't want to keep changing the multiplier amount with the distance in between and the scale of the cube.
+So, we just go here.
+And we add a good old scale all child object.
+So, I can just pull that down now.
+And look at that.
+Now, I've got all of these things on the screen.
+Hmm.
+So, we're going to have to crank these numbers because they've got to overlap, right?
+So, let's put this on one, on two.
+Okay.
+As you can see, we're already getting, like, a lot of different looks here.
+This is the height.
+Let's put it on three.
+Okay.
+I mean, this is going to take a lot of tweaking.
+A lot of tweaking.
+So, I'm going to say, let's tackle the rotation problem.
+So, I want them all to rotate like this.
+And sometimes, I forget the axis.
+So, we're going to just figure this out.
+So, I only want them to rotate on one axis.
+Okay.
+So, I go here to the total amount of points.
+I can also just grab it from here.
+I'm going to create the array up.
+Now, the array up.
+This is a new one.
+Already since quite a while ago.
+It has quite a few modes.
+This is the thing.
+It needs to be plugged into the array length.
+There we go.
+So, I've got an array, which is with a length of 1500.
+And I could fill them all over default value.
+I could fill them with, like, 1, 2, 3, 4, or 0 to 1, or 1 to 0.
+So, I'm just going to put out a number 0.
+I'm going to grab an array pack 3.
+So, this is just kind of like, hello world, right?
+Like, I just want to get all this stuff working.
+I'm going to grab.
+Let's just keep it nice and tidy.
+Another trigger extender.
+Pull that over here.
+Great.
+I think it's the Z component that I need to rotate.
+So, X and Y, they should be on 0.
+And just to test this, I'll make another array.
+The lengths all have to match up, right?
+So, whatever goes in here, there, and there, they all have to be the same length.
+And just to show you what's going to happen if I don't, ArrayPack's going to give me this
+little red dot, and it's going to say, hey, arrays do not have the same length.
+And it's just going to output nothing, basically.
+It's just not going to work correctly.
+So, I just want to show you.
+So I'm going to plug this into rotations.
+And it's just not going to work now if I change this
+because it's complaining, like, hey,
+all your arrays have to be the same length.
+So I'm going to get that there and plug that into array length.
+Great.
+So as we can see here, length 1,500, 1,500, 1,500.
+Total points 4,500.
+Total 4,500, 4,500.
+So you've always got to make sure this stuff always adds up
+or it's just not going to calculate it and compute it, basically.
+Is anybody there?
+It's, like, really, really quiet on the stream.
+I'm going to keep talking, but really nice.
+Sometimes I'm not watching the Twitch stream back
+because I want to save bandwidth so I don't get any dropouts.
+So can you guys hear me okay?
+Ah, great.
+Okay, perfect.
+Thanks, Panda.
+So this one.
+So look, if I now turn this number here,
+I'm rotating them all like that, right?
+And I'm already getting some really interesting patterns.
+I mean, this is all kinds of cool.
+So, you know, let's just put this in, like, 45.
+Okay.
+Yeah, okay.
+And I want to make them longer like this, right?
+But I keep getting mixed up with which one's which.
+I think it's this one.
+Yeah, okay.
+Look at that.
+All right.
+So, I notice the Lambert material.
+Ah, look.
+If I turn it like this with the shading,
+now it's really clear to me the difference between these things, right?
+I want to make it clearer what's happening.
+I don't want to do this black and white look.
+It's a little bit too simplistic for me.
+I want to make it more stylistic.
+But we need to.
+I know.
+So we've got all of the points right now.
+And they're perfectly flat, right?
+Because the points cube, you know, it's doing X and Y and then Z.
+Z is, like, perfect.
+Everything's on the same.
+Everything's on zero on Z, right?
+Everything.
+So, let's offset that a little bit.
+So, we need to do array unpack free.
+So, I want to get.
+This breaks everything right now because, you know,
+the array length coming out is 1,500.
+And these are 4,500.
+So, this is just breaking everything.
+Don't worry about it.
+So, I want to plug it just back in so it works the way it did.
+So, I'm going to go here.
+Array pack free, right?
+And if I just plug all these back in, then I give it a good old trigger.
+Great.
+So, we've got it back the way that it was.
+And the cool part is now we can change anything on the XYZ component.
+So, just to show you what I mean here, I could go here and do array sum.
+So, I add one number to all the values in the array, right?
+So, this is the Z component, like the depth, right?
+So, if I pull this back now, I can move them all the way or I can bring them closer.
+So, I want to affect this axis.
+So, I'm going to grab all this, move it over here.
+And I'm going to make another random numbers array up.
+And I'm going to say, min, I don't know, minus one, max, zero.
+I have no idea how this is going to look.
+So, I've got this random number there.
+It's going to be minus one to zero, as you can see, all here.
+And I'm going to add that to the Z component.
+So, I'll go here and say, array, math, array.
+That means, do array, math, on an array.
+So, it expects two arrays.
+As you can see, this has a length of 1,500.
+This has a length of 1,500.
+So, I'm going to plug it in.
+Look at that.
+Okay.
+So, as you can see what's going on here, everything is now randomly offset on the Z axis.
+Way too much, but that's okay.
+So, I'm going to reduce this to, say, minus 0.2.
+And this is already helping me see a difference in how the grid looks.
+So, the problem we've got is everything is turned to the same number, right?
+So, on his piece, there's a rule here.
+There's a pattern.
+And the thing I'm looking at here is there's a point.
+You know, everything, like you see this pointer, it's almost like a magnetic field, right?
+If you've got iron filings.
+And it seems that the further away things are, the less they rotate.
+So, this probably has something to do with distance.
+Okay.
+You know what?
+Let's just make this a little bit brighter.
+I just want to see it like this.
+Okay.
+Okay.
+Okay.
+Hmm.
+All right.
+So, I could make them all randomly rotate, but that's not going to give us what I'm looking for.
+Let's put this in zero.
+Hmm.
+Hmm.
+Actually.
+Let's put this in zero.
+If you want to make things look, I don't know, more realistic, things in the real world have ambient occlusion, I'm going to try it.
+So, render to texture, okay.
+So, let's grab a sequencer.
+So, just for new people to cables, I'm getting this entire 3D scene and I'm turning it into a 3D texture that you can see here.
+So, this is now outputting a texture there.
+So, first of all, let me just set up a rendering context.
+So, I'll make a full screen rectangle.
+So, if I just plug this in like this now, I get this.
+As you can see, there's some jaggies, right?
+So, we go to render to texture and we can increase the amount of MSAA.
+I'm just going to put it on max.
+I just want to make it look good for the screen.
+Okay.
+So, we got that back.
+But now, I want to do SSAO.
+So, grab an image, compose.
+What do you mean you don't know why they prefer straight lines?
+What do you mean curved cables?
+No, no.
+Team straight lines for the win.
+For me, it seems straight lines for life.
+I'm not putting this on curved cables.
+You have to watch Pandestream for that.
+I'm not even going to tell the people how to change this.
+I mean, they have to Google this themselves.
+It's like a rite of passage.
+If you want to have straight lines, you have to figure out how to do it.
+So, I've got an image, compose.
+I'm going to add the draw image.
+And I'm going to put this back.
+Okay.
+Let's go here.
+I'm going to grab SSAO2, screen space ambient occlusion.
+For it to work, it needs the depth map.
+Wow.
+Look at that.
+Okay.
+Press D.
+Turn it off.
+So, it's way over the top.
+Let's see what we can do about this.
+Hmm.
+It's already looking a lot better.
+This makes it way easier to pick out all of those shapes there.
+Let's look at it a bit bigger.
+Yeah.
+Okay.
+I'm liking the way this is going.
+This is feeling right.
+Okay.
+Yeah.
+This is popping now.
+I like things that pop.
+Okay.
+Let's keep it like this for now.
+Let's make it a bit smaller.
+Okay.
+All right.
+So, this is like the rendering context.
+Let's move all this up for now.
+Keep it a bit separate.
+Okay.
+Hmm.
+So, if I look at this, you know, I don't want this being random, right?
+I want to have control over this.
+I can see there's like different points.
+I don't know what rule he used to do this.
+I mean, like I said, I think it's really got something to do with distance.
+So, we're going to tackle that in a minute.
+I'm just putting it off until the last part because I've got to clear how to do it.
+But, yeah.
+Okay.
+Let's go here.
+Okay.
+Let me, for a minute, try something.
+I was going to...
+I'll be honest, everybody.
+I kind of get nervous with doing this live stream stuff once in a while because, you know,
+for some weird reason, people think, you know, you just throw this stuff out super easy.
+Trust me.
+We all, including the devs, sit down sometimes and argue with our computer for hours to get
+this stuff working the way that we'd like.
+Yeah, okay.
+So, look at this.
+I have my mouse coordinates x, y.
+I'm trying to think right now of like making it where I've got like the mouse coordinates
+and, you know, that would, the mouse coordinate would turn them.
+Right.
+Yeah.
+Returns the length of a vector from an array free.
+Yeah, okay.
+Yeah, okay.
+Yeah, voila, okay.
+So, that would make it really messy.
+Let's see if I do that right.
+But, yeah.
+Now, you know what?
+I'll just do this again.
+Let's just grab this part.
+I could do this with variables, but I don't want to do that in this patch right now.
+I just want everybody to be able to follow what I'm doing.
+So, you know, let's first of all tackle this problem.
+I'm going to go over here.
+Transform.
+Let's make a basic material.
+Let's go to sphere.
+That's a big sphere.
+That's a big sphere.
+Okay.
+Let's make it white.
+Sphere.
+Smaller.
+Let's get the X position of the mouse.
+Oh, there was an app for this.
+Screen pass to 3D.
+Convert screen coordinates to a 3D position.
+Okay.
+Let's do this.
+X.
+Y.
+I need an extra trigger.
+I don't want everything becoming really super long right now from my patch.
+So, I'm just going to go here, and I'm going to make a...
+I just do this for stuff that just pops up, so I don't have to pull big cables through.
+So, I'm going to make just a trigger called T1.
+I don't have to pull it all the way over there.
+I'm going to go here.
+Trigger.
+Receive.
+There we go.
+T1.
+So, just to check.
+F of flow mode.
+Yep.
+Got it.
+All right.
+So, there we go.
+So, let's put this into X.
+And this into Y.
+And Y is this not working.
+I think it's because mouse is on normalize.
+There we go.
+Whoa.
+Okay.
+So, if we go to mouse, it's inverted with Y.
+There we go.
+Flip Y.
+Let's disable that.
+This will do for now.
+So, I want to try and get this sphere and kind of use its position to make things rotate.
+Okay.
+Give me one moment.
+Okay.
+All right.
+All right.
+So, if I look at this one again.
+Okay.
+Yeah.
+Yeah.
+Yeah.
+All right.
+So, if we go here.
+I'm going to do erase some.
+Because I'm only adding a single number.
+Just pretty much following what you just saw in that other patch there.
+Go here.
+Okay.
+This could go horribly wrong.
+Horribly wrong.
+I'm going to look like a fool.
+I don't know.
+Sometimes I do stuff and it doesn't always work out.
+All right.
+I know we want to.
+Okay.
+You know what?
+It's going to be difficult to inspect everything.
+Let me just do this.
+Sign.
+I'm just going to do it twice.
+The reason I'm doing this now.
+I'll plug the mouse back in later.
+I just want to be able to tweak stuff.
+Without having to constantly go back and forth to the canvas.
+I don't know.
+Let's put this on a different phase number.
+Let's put this on 1.5 so it's different.
+And as you can see, we've now got these numbers here.
+Let me just check this.
+Okay.
+That looks good.
+So let's plug this into X.
+Let's plug this into Y.
+Okay.
+Cool.
+Let's make the amplitude bigger.
+And let's slow the frequency down because it's going really fast right now.
+Whoa.
+Go over here.
+Okay.
+Let's turn that frequency down again.
+Let's put the amplitude in, say, 2.
+This has to be a little bit more.
+0.6.
+Just kind of want it to almost go in a circle.
+Okay.
+All right.
+Sure.
+So we're getting the length of the vector.
+Okay.
+Now, if I'm correct, we have this for the rotate, right?
+These are really small numbers.
+We go from 0 to 360 degrees to rotate.
+So we're ready to multiply.
+I just want the numbers to go higher.
+Voila.
+That's pretty cool.
+That's pretty, pretty cool.
+That's already coming up with some really nice stuff.
+Let's put the radius a bit smaller.
+Wow.
+I'm trying to wrap my head around this.
+Let's turn this up.
+That looks kind of off.
+Do I have to invert this?
+Okay.
+You know, I'm not exactly sure exactly how it's working, but I don't need to because this is kind of close to this.
+So, um, I should just be able to unplug this now.
+Let's get that mouse.
+Um, plug that in there.
+Hmm.
+Wow.
+Ah, of course.
+Silly me.
+My bad.
+I'm not doing it the wrong way around.
+Okay.
+So, yeah.
+That's plugged in.
+And this needs to be plugged into there.
+This needs to be plugged in here.
+Okay.
+Now, yeah, of course, the, hmm, um, due to the distance on the Z, um, axis and stuff, you know, the sphere and the mouse is not going to add up exactly.
+I could use multiply and make all that work, but I just don't want to right now.
+Um, hmm.
+I'm not, I'm not so happy using the mouse right now because when I'm using the mouse, then I can't do a lot.
+So, let's, you know what, let's do this differently because I can't stop this.
+So, let's get a timer.
+Let's get a sign.
+Let's get a cosine.
+I could also just use something like a random, um, anim here.
+So, let's plug that in there.
+Let's plug this in.
+Here.
+Uh, so the amplitude is only on one, so let's put it on four.
+Four, uh, okay, we've got to plug this into here, so we can, you know, we're just using that white circle there as a visualizer.
+That is pretty much, uh, so frequency, we're going to slow that down a touch.
+And just, we're going to put on two, you know, we could put it on something really crazy, right?
+And it's going to fly off the screen, but that's going to have a kind of crazy effect on this stuff.
+Okay, let's put it on two.
+So, the advantage is now I can just stop it where I want.
+You know, if I like this.
+So, let's put it in the middle.
+Re-multiply.
+So, let's put this in zero.
+We have this.
+As you can see, the ones in the corners, you know, they're furthest away from this point.
+So, you know, they're, they're going to start rotating, um, the most, basically.
+Hmm.
+Hmm.
+Okay.
+So, the, the thing I'm thinking about is now, you know, like, say you'd want to, um,
+Hey, Baghoof.
+Nice to see you, man.
+Thanks for joining.
+Just tucked the little ones in.
+I hope you've had a peaceful day in these troubling times.
+So, you know, I'm using this, like, right now, so I can just visualize the changes, right?
+You know, as you saw, if I put this in, like, some crazy wild number here, we, we, we get some
+really cool different patterns.
+Ah, okay.
+Look, X is the thing that also needs to be inverted.
+Right?
+I probably had to do erase/subtract.
+There we go.
+Look at this.
+That's what I felt was wrong.
+So, the point, there, you kind of, like, see it around the circle now.
+Ah, that's, that's what I was, that's what I was looking for.
+So, you know, by putting this in even, like, 10 or 20 or 45, we start coming up with some
+really nice, interesting patterns.
+And, hey, hold it.
+That looked pretty close to, um, the thing we started out with, like,
+here, even though it's kind of flipped right now, in the middle.
+So, this is already really cool, I think.
+It's kind of dark, though.
+So, you know what?
+I'm, I'm using Lambert right now.
+I'm really curious.
+If I use basic material with the SSAO, if it, like, pops a little bit more.
+Yeah, that's a, that's a, that's a, that's a very different, uh, kind of look.
+Let's take a look at this now.
+Let's change that.
+First and far to, let's see.
+No, 15.
+So, yeah, this is way too much.
+One.
+So, if you use one sample, it's very rough, but, you know, it makes it really pop.
+Three, four.
+Let's put it on three.
+I really want to enhance that a little bit, go a bit over the top.
+Oh, let's not use noise for now.
+Uh, SSAO, that's something you've really got to play around with.
+But, you know what it is that I'm thinking right now?
+It's like they're all offset, um, but that's not making the AO do a lot unless they come close.
+So, if I'm going to make them thicker.
+I know that's scale.
+Let's put that back on six.
+Um, I don't know if that's exactly what we want to look at.
+One minute.
+There, look.
+So, if we're going to make them, like, thicker now.
+Uh, pull this up a little bit.
+Uh, two.
+Just take a peek.
+Let's crank it on a really wild number just for the look.
+Yeah, there's so many different looks that you can start to get out of this now.
+But let's just put this on, um, two.
+So, the thing is, uh, I want it, I want it to have more of this, uh, condensed look.
+Like, it doesn't look to me like there's any gaps, um, in between the right.
+So, if we go back to points cube.
+And we lower, there we go.
+0.15.
+Yeah, this is looking more like it right now.
+And we're using mesh instances, so we can go wild.
+Uh, let's put this on 70.
+Let's put it on 100.
+Yo, okay.
+Let's put it on 50.
+Just a bit too much.
+I want it just to kind of be on the screen.
+Okay, this is looking more like it's not, like it, uh, like it for me right now.
+Of course, I'm not going for this look.
+You know, I just want to make it, uh, a little, uh, bit my own edge detection.
+Yeah, I could do it.
+Um, I'm going to throw that on later, actually.
+Um, you know, so that's the thing right now.
+We have to, we're using the SSAO to get those edges.
+And that's probably not going to work very good with this.
+Why do we not have a color for this?
+I'm probably not going to do this.
+But what we could do is add a touch of it, um, with add.
+Yeah, look, so we can add those glowing lines there.
+Interesting look.
+Interesting look.
+Thanks for the suggestion.
+I'm just going to put it on zero for now.
+Um, we can, we can do more post-processing later.
+Um, let's just look at it a bit big for a minute.
+So, you know, this, this already looks kind of cool from a lot of, um, different perspectives.
+Basically, you know, you could turn this into some city.
+You know, if we go here now and we crank this to, ah, sorry.
+Run one.
+If we go to this one, you know, we can really start to get some really different, um, looks out of it.
+Basically, I love this with, uh, mesh instancer, like, you know, you can.
+So many of the things I used to do with processing, um, you know, I really love working on processing,
+but I couldn't go back to typing this all out with code.
+Now, of course, there's only some things you could do with code, but you know, it's just tweak and iterate.
+There's just nothing that's going to beat the visual, uh, programming, uh, setup.
+Basically, if you just want to try out things really quickly, let's reset the orbit controls.
+So, I mean, that is pretty much the, the, the, um, the basic idea.
+You know, let's, you know, I'm not done yet.
+That's for sure.
+Uh, I'm just getting, you know, now that I'm a little bit close to what I wanted to do,
+I'm a little bit stuck.
+Let's just set a few options up here.
+So, um, I'm going to make a, a toggle.
+And with this, I want to be able to, uh, show the sphere.
+Okay.
+So let's call this, uh, show helper.
+I could do variables with this right now, but I don't want to, um, let's make another one slider.
+Let's just call this, uh, rotation multiplier.
+Okay.
+And then we're going to plug that into here.
+Right.
+Okay.
+So as a minimum max, let's put it on, um, minus, I don't know, 360 to 360.
+And that allows me to come up with all kinds of crazy stuff.
+And, you know, okay, let's, let's make another two sliders.
+I'll plug them in later though.
+I'm going to call this x position.
+Let's move this.
+Sorry if it's a bit small, everyone.
+Let's call this the, um, y position.
+Um, and this we could say, I don't know, minus five, five.
+Minus five, five.
+So I want to be able to do
+this.
+It's becoming a bit cluttered.
+I know.
+But basically, uh, that's my sine cosine part.
+So let's plug this into the transform there.
+I could do this with variables, but that's for cleaning up.
+So we do x, we do x, and we do y.
+Let's turn this down.
+Now look, this is, all right, this, this feels more like I'm controlling things now.
+And I could go for, uh, some looks that I really, um, like basically.
+So, you know, this, this is a nice, um, start.
+Let's, let's, let's, let's minimize the sidebar.
+So I'm trying to think now, like what I could do, you know, because to me, this is, uh,
+for edge detection.
+Yeah, I'm going to, I'm going to come back to the post-process in a bit.
+I'm still, uh, thinking in arrays.
+I like arrays.
+So, um, I really like arrays a lot.
+I think I'm going to get a tattoo of that one day.
+Like, you know, just the array symbol, like, why not?
+Uh, that'd be really cool to show on the Twitch stream.
+I'm just thinking like, right now, what can I do?
+You know, right now I can clean up my stuff.
+Make a little bit of, you know, that's what I do on my cables patches.
+I sort of clean them up, and then things become a bit clear.
+Everything is on the screen, right?
+Um, I think the position also changes here.
+Based upon stuff.
+Okay.
+Here's one.
+So, let's look.
+There's 9,600 numbers, which represent all the x, y, z points of each cube there.
+So, 80 times 40.
+Okay.
+Times 3.
+Let's just say we want to make some of them disappear.
+You know, this is kind of like a good crash course in a lot of stuff with meshes and things like that.
+So, um, let's use some logic.
+Let's use some array logic.
+Okay.
+Let's go over here.
+Trust me.
+If you find all this overwhelming, don't worry about it.
+We've got some amazing tutorials over on YouTube, which start out really simple with arrays and mesh instances.
+And once you've got your head wrapped around this and it clicks into place, you get, you look at pictures like this.
+And once you know a couple of the key ops, you can just throw this stuff together.
+Um, so let's put that over there.
+We can maybe try that later.
+I want to make a way that I can make a couple of the rectangles disappear.
+Just basically by the end of the stream, I want it where I can click this and have quite a lot of options
+and create huge amounts of outputs, you know, because to me, that's the whole concept of generative art, right?
+Uh, we can make a seed number and stuff like that, but we can do it later.
+So let's do this.
+Whoops.
+Let's just save as well.
+Always a good thing to do.
+Let's move this over here.
+Grab this, move it up.
+Let's move this here.
+That's the sphere.
+Okay.
+All right.
+So let's make a random numbers array.
+I don't know.
+We only want to do this for each point, right?
+Yeah.
+So 3,200.
+Okay.
+Random numbers array.
+Could be wrong with the numbers here.
+We'll see.
+Um, number between zero and one.
+Okay.
+And now let's do array logic.
+Performs logical comparison operations on a single array of numbers.
+Okay.
+So I'm going to say number for comparison is 0.5.
+Comparison mode is greater than.
+So if this evaluates to true, it outputs one.
+If it evaluates to false, it outputs zero.
+So this array should only have zeros or ones in them.
+Okay.
+So this is below 0.5.
+This is above 0.5.
+I want to do greater or equals to.
+So if you look here, we have the scale array, right?
+So just to visualize what I want to show you what I'm going to try.
+I don't know if it'll look cool.
+That's the whole point of generative art.
+I'm going to turn this down with multiply.
+And if I put it on zero, we have nothing, right?
+So we could even do them multiplied by different sizes.
+Yeah.
+Look at this.
+So much good stuff.
+Okay.
+Sorry.
+Getting sidetracked.
+Okay.
+So we have this.
+This has a length of 3,200.
+This is a length of 9,600.
+And you might be thinking, why did I do that?
+Well, I want it to scale on X, Y, Z with the same number, which is one or zero, right?
+So now I just go here and I do array pack three like this.
+I'm going to plug this in here, this in here.
+So they all have the same number.
+I'm going to do a trigger extender for the tidiness.
+I like that.
+I just like my triggers to go down vertically.
+I find it easier to read a patch.
+So now we have 9,600.
+So now we do array math array, right?
+And this breaks stuff because it expects two arrays of the same length.
+I'm going to plug this in.
+And now I'm going to do multiply.
+Voila.
+So let's break this down a little bit.
+So here I've got an array of random numbers outputting a number between zero and one.
+We do array logic to test if it evaluates the true or false.
+And then we pack those together.
+So it's the same on X, Y, Z.
+So if it's one, X, Y, Z is one.
+And because this is for the scale array, this is working pretty good.
+So we can now go here and we can change the seed number to get different outputs.
+Now, let's say we wouldn't want many cubes on the screen.
+Then we make the number for comparison way higher.
+If I put this on 0.8 now, there won't be a lot.
+Put it on 0.9, there's also not a lot.
+Put it on 0.1 and there's just a few disappearing.
+And this is a really cool way for me to just all of a sudden break up the image from having this repetitive look for it.
+So you could do stuff like with a comparison mode, like if it's between or not.
+And you can also do some other interesting stuff here.
+So if I put it on 0.5, we've also got the pass mode, which means if it evaluates the true, let the number through.
+Don't become one, basically.
+So with that, we can keep the randomness that we had before.
+But the thing is, we don't need to do that because here we're making stuff random with a random numbers array.
+So I'm just going to keep this on greater or equal to.
+So this is a really cool way to just add some more variety to the image, right?
+So I'm looking at this and I'm like, hold it, the ambient occlusion isn't working on the back stuff.
+So let's like pretend to put it on a piece of paper, right?
+Let's go to a basic material.
+Let's add a rectangle.
+Okay.
+Let's crank up the width.
+I mean, this is already looking really interesting.
+There's not enough time to do all this awesome stuff, really.
+Let's put it like this.
+Let's use a transform, because right now it's chopping everything off.
+I'm going to move it back on the set axis.
+And I don't want it to make anything actually disappear.
+Let's turn, take a peek.
+Yeah, so it's slicing a few there.
+Let's move it like this.
+And the reason I'm doing this is because I want the ambient occlusion to work for the cubes that
+are on the bottom as well, because there was no ambient occlusion there, because there was
+nothing else next to it with the depth texture, basically.
+So this is kind of like a quick way to do it.
+Okay, let's make it look a bit more stylish.
+I've not used this.
+Let's get rid of that.
+Uh, HSB2 RGB.
+Okay, so we have Hue, Saturation, Brightness, Outputs, Red, Green, Blue.
+So I'm going to plug this into Red,
+and Green, and Blue.
+So now if I change the saturation, or the brightness with the hue, I can change the color.
+Right?
+I'm going to put a, I really like bluish-like colors.
+Now, yeah, you know, how do I make this fit?
+Well, I want the color of this to be close to this.
+So I'm going to hold in Alt, click-drag, plug into Red, hold in Alt, click-drag with the right
+mouse button, plug into Green, hold down Alt, click-drag, plug into Blue.
+So they've all got the same color now.
+So now I can just say, sum, I don't know, 0.1.
+Let's do this for all of them.
+Uh, so this is a way for me to control, uh, that the numbers are a bit close.
+And that amount, I can pull this out and create a number.
+Right?
+Let's put this in there.
+Let's put this in there.
+Okay.
+So, uh, I can control, like, the, the difference there.
+And the cool part is now, let's just put on 0.1.
+It's a bit heavy, but sure.
+Now when I'm going to change this, that background's also going to kind of, like,
+follow, as you can see.
+Um, yeah, we shouldn't go past, like, 0.9.
+It's really not going to work.
+I don't know if this works exactly, but it's, uh, it's a nice way to, uh, to do this.
+And we can turn the brightness up to get, like, full white.
+And we can pull it down a bit to get these, uh, tones.
+Because, like, the original piece is, like, pretty, uh, bright or pretty dark.
+Um, hey, no dirty talk about cubes and, uh,
+chat room.
+All right.
+So we have array, um, logic here.
+Now, the array logic thing is kind of different now with that background.
+Um, let's go over here.
+So let's plug this in there, this in green, this in blue, and let's pull it up a bit so it's visible.
+Let's do again some...
+There's a lot of ways to do stuff with colors.
+I'm just kind of hacking this together right now.
+And, you know, let's put this on, say, this is on...
+Zero point one.
+Let's grab a multiplier.
+This is probably going to be so subtle we're not going to see it.
+Okay, so now if I change this...
+I should also kind of follow.
+That's really not too bad, if I may say so.
+Could be tweaked a lot more, but I like it.
+I think that's pretty cool.
+So let's add something for it.
+Slider, um, facet, number, and we're going to just...
+I'm just going to make one for now.
+I'm going to create a new variable.
+I'm going to call it hue all.
+That's there.
+So there's a number that's going to go through.
+Go from zero to one.
+Awesome.
+Let's go to the hue here and do var get number.
+Let's do hue all.
+And if we now go here.
+You can change the color.
+You know, I want to make it nice and easy to do there.
+Let's, um, relabel this, um, hue all.
+Of course, we can make this a bit bigger now.
+So the sidebar is a bit smaller.
+Okay, you know, I like the way it's going.
+I like the way it's going.
+So, um, color's always a really tricky thing to get right.
+I don't want to sit down and focus on that too much tonight.
+I mean, I'm already pretty happy, um, with how this went.
+So let's add another slider.
+Let's zoom in there.
+I'm just going to go to full screen for a moment.
+I don't really need to see the Twitter thing anymore.
+I'm just going to move this like that.
+slider, and let's call this, I don't know, um, space.
+Let's just call it space.
+And I'm going to do far set number.
+I'm going to call this, um, create new variable spacing.
+Now I'm going to go to the array logic here, with the number for comparison.
+That's this one.
+Far get number.
+And then I'm going to go here, I'm going to put in spacing.
+And now I can control that here.
+X, Y, and a rotation amount.
+That's a little bit low though, like this.
+Okay, space.
+So an important thing when you use the, um, the sidebar ops,
+it's like the, the settings that they've got now.
+If I, um, save the patch and I reload it, um, they're gone.
+Needs more moons.
+Maybe, uh, it's going to become a running gag, uh,
+that there's going to be a moon in, uh, every single, uh, stream in the future.
+Um, so, sorry, the, the moon that we had in the, um,
+one of the streams was a really fun thing to try and make, uh, under pressure.
+So if I would save and reload the patch now, I'm just going to show you.
+So just take a look at that and remember how it is.
+If I reload it, um, those settings will not be, um, stood.
+But you can do it.
+Look, everything's back here.
+So I'm just going to show you how.
+So I'm going to turn up this, um, multiplier to like 30, move this over here, move this down there.
+Let's change it to, um, this.
+Take only a few out.
+Cool.
+So I'm going to click save.
+And what you do is you go here and you click set default on the sidebar elements.
+And then what happens is the default number here gets updated.
+So if I go here now, default is on 0.5, but my number is 2.6 something.
+So if I click this, that number now goes there.
+Nice and easy.
+So, um, this is like, this is how you want the patch to be.
+When you load it up, you just click set default on everything.
+Do control S and now I'm going to reload the patch.
+Everything will be as I stood it.
+Voila.
+Super cool.
+Okay.
+Let's get rid of the helper actually that I don't want to have visible.
+All right, save.
+I'm pretty happy with this.
+This has gone, um, pretty cool.
+And, you know, this is a really cool template to do a lot of other stuff, right?
+I mean, this is a ridiculous amount of things on the screen, but, you know,
+we could even just go here now and put this on 10.
+And as you can see, we're now getting more of a 3D form.
+You know, if we crank up space,
+let's just disable that rectangle for a minute.
+Active.
+Just want to show you how we can get a bit playful here.
+You know, here we can just go wild now.
+You know, we can start doing things like 30 by 30 by 30 and we make a cube.
+And this really lends itself to some really cool stuff.
+So, um, just to show you what's going on there, let's, let's turn on that helper.
+You know, so we've got that sphere, right?
+Um,
+so let's make another slider, right?
+We're in 3D space, right?
+We're not on a TV canvas.
+So let's do this.
+So let's say minus five and five, because we've already got all this stuff plugged in.
+So this has to go into the transform, right?
+That we can move it.
+And we need to do a last array sum, like we did there to calculate the length of the vector.
+So we're going to put this in, and we're going to get slider Z position.
+And we're going to plug it in there.
+And now if I'm correct.
+Okay.
+So this is having an effect, but we're only rotating it on, um, one axis, obviously.
+So I could probably sit down and work this out.
+I think we even had a question on the forums, um, uh, about how to make a point, um, in space,
+point at another, uh, point.
+I'm not on my Fensilopedia, so I definitely do not have this one in my head.
+That would be a really cool thing to do here.
+You know, you have a point on the screen and everything kind of points at it.
+But maybe that would also be really kind of boring, actually.
+Can you imagine it?
+It's like everything would just be kind of like that.
+And now by using this like length of the vector and then using a multiply,
+you can get some really cool stuff.
+But I don't know.
+Z position did not work for me.
+So out you go, buddy.
+I really do not need you here right now.
+So let's get this back the way it was.
+This is on one.
+I think this was like, what was it?
+80 and 50.
+And we turn down space.
+And let's bring that rectangle back.
+Yeah.
+So you see, this is a difference that that thing makes with the ambient occlusion.
+So let's just save.
+Reload.
+Yeah.
+Okay.
+So I'm getting a bit tired.
+This is a really cool thing, right?
+So imagine you've made some really cool generative art generator inside the cables and you've embedded it in your
+web page.
+And you could add to save.
+Is it save screenshot?
+Yeah.
+So we can go here now to.
+this part and let's add a button and the button will just output a trigger.
+I'm going to show you because I think a lot of this stuff is really new for people.
+So go into flow mode.
+So if I click this, as you can see, this goes there.
+Okay, cool.
+So if I put this button now into save screenshot and we call this button
+screenshot.
+I probably can't show you all of this because it's going to go into my second monitor.
+I don't know.
+Let's find out.
+I've never done it on the stream.
+So I say screenshot.
+Great.
+There we go.
+So that allows me then to pick a download location.
+So, you know, I could now go in here and I could tweak all of these settings until I find
+something that I really like or allow a visitor at my web page to do that.
+Click screenshot.
+Up.
+And then voila, you get like a really cool image of the patch, basically.
+So let's get rid of the helper.
+Let's fold this up.
+Now, let's say I don't want people to be able to rotate this.
+I can just get rid of the orbit controls, right?
+Okay, and we've got this really cool thing here now.
+I'm just putting this on some resolution.
+Panda added this really nice option.
+So I'm going to put it on 16 by 9.
+And I know what I'm seeing is definitely 16 by 9 there on the screen.
+So let's change the scale a little bit.
+You know, so it's just like this on the screen.
+I like it.
+Control S, we're going to save it.
+All right.
+Yeah, I'm wondering a little bit what to do.
+Does anybody have any reasonable requests that don't involve a wolf howling at the moon?
+It's a generative art piece made from a simple rule.
+So I'm not sure how wild we can go with this, basically.
+And don't let this mess here scare you.
+You know, this could just all be done with variables.
+There's nothing crazy going on there.
+A cowboy riding on a pregnant horse.
+No, I don't think that's going to be what I call a reasonable request.
+I'm just wondering, like, what I could do with some post-processing curve.
+Yeah, because it's really just straight on.
+Can you make those things rotate around the center they are rotated around?
+I think you mean this steam.
+So let's take a look here.
+This is the rotations, right?
+So basically, if we go here and we do array.
+Could I set the brightness by rotation value?
+All right.
+Awesome ideas.
+Thanks, guys.
+I was getting a little bit stuck.
+These are really nice, simple rules.
+So Steam, I hope I'm going to get right what you just said now.
+I'm going to grab a raise sum.
+So, you know, this is our multiply, right?
+But I can just add to that number.
+Yo, okay.
+And just make them turn.
+Let me just add that helper.
+Though that's not going to make a lot of sense now.
+But we could get this.
+Hey, let's just get playful, right?
+Timer.
+Plug that in.
+Let's put it on 10 for now.
+Let's put it on 50 just to see it happen.
+Okay.
+Steam.
+Is this what you meant?
+Is this what you meant?
+with everything rotating on its center?
+Say that as a yes.
+Say that as a yes.
+Nice.
+All right.
+So what I'm just going to do right now is I'm going to pause this and reset it just to put it back for now.
+I'll remember this for later.
+Okay.
+So now I'm going to follow Panda's suggestion.
+Could I set the brightness by rotation value?
+Could look cool like worms.
+All right.
+So.
+Yeah.
+Yeah.
+Yeah.
+I can do this.
+Okay.
+So let's pull this mesh instance down.
+So we've got a really cool addition.
+Lately we have the colors array and this always breaks my brain to use a little bit.
+Okay.
+How we have an up for this?
+Wait.
+HSB to RGB array.
+Okay.
+Let's let's let's get started with this.
+Let's just pull this one down here.
+So it needs to get the array length right.
+I always forget about.
+Ah, okay.
+It needs an array.
+Why can't we just plug in an integer and have it output the default stuff?
+Why'd have to plug in an array?
+Okay.
+So we're going to go here.
+Total points is 4,000.
+I'm going to grab an array up.
+Do not want it in mode select index.
+We want it in the length.
+And I'm going to plug this into...
+One minute, everybody.
+Let's just plug it into...
+It was brightness that Panda said.
+Brightness array.
+Okay.
+And let's now...
+I'm not sure how this is going to work with the material right now, actually.
+I mean, it is basic material.
+Colors.
+Okay.
+So let's take a look at what's happening there.
+Right.
+Yeah.
+Okay.
+Boom, boom.
+So if I put this in zero and we turn this up, we get...
+So we're getting the same effect, basically.
+Whoops.
+Sorry, everybody.
+My bad.
+I'm going a bit fast.
+So this is in brightness, right?
+So let's put this on one, which is kind of this default thing.
+Just to show you what's happening here.
+I could now get...
+So hue, saturation, brightness goes from zero to one, right?
+So if I get zero to one, and I would plug this now into hue.
+Let's see what happens.
+Nothing because brightness is on one.
+There we go.
+Yeah.
+All right.
+Okay.
+So look, we've got an array here going from zero to one, right?
+That's what we're looking at here.
+And here we have the brightness.
+Sorry, I just have to debug this in my head.
+It's been a long time since I did this stuff.
+So let's disconnect this.
+Great.
+Okay.
+So Panda said brightness based upon position.
+Now that becomes a little bit tricky, I think, because what number is this?
+Array vector length.
+It's not between zero and one.
+So let's do this array info.
+Info array.
+Get the min, max, and average values from an array.
+So the thing is, if we want to do brightness, it can't go higher than one, and it can't go lower than zero.
+So my head's saying, get the min, max, and maximum.
+We don't need to scale it and define country boy.
+We check what the minimum and maximum value is inside of the array, and then we're going to use that with the map range array up.
+That's what my gut feeling is telling me.
+That's what my gut feeling is telling me.
+But yeah, basically that's one way of scaling it.
+So we've got min, max, right?
+So then we do map range array.
+So the old min is the minimum from array free vector length, and the max is the old max, and we want that to go from zero to one.
+Well, I have no idea what that means.
+I'm not going to type it into Google Translate.
+All right, hold it.
+So that's it.
+So we get, we get this.
+Yeah, so we get this array, which will have a minimum and a maximum value.
+And as we can see, it's going between five and nine and three and two, but probably never zero.
+No.
+So we get that array, we get its min, maximum, and we're going to remap it to zero to one.
+But we have to get that array and plug it in here.
+And this now has a total length of 4,000.
+This has a length of 4,000.
+So this was just for me to check it, right?
+So fingers crossed.
+It's inverted right now.
+So
+close, but not exactly there.
+Just wait.
+But it is working.
+It's now changing the brightness based upon the distance.
+Actually, this is just reversed with X and Y.
+Would I then have to just reverse these two?
+Hey.
+No, not at all.
+I don't think that's what I'm looking for.
+Let's just put it back the way it was.
+I'm not trying to get mathematical perfection right now just to get the thing working.
+So yeah, this is working pretty good.
+What am I doing wrong here?
+It is Panda.
+It's just, it's really subtle.
+Oh no, I'm not working with the angle.
+I'm working with the distance from that point.
+There's no angle stuff here.
+This is just the length of the vector, basically.
+I'm not going to try and solve this problem now that these two things are inverted,
+because the whole idea is later on, it's just that you turn this off anyway.
+And you do this kind of thing.
+I know that the output of this is going to be zero to one.
+Let's say it that way.
+Sorry, let's put it on one to zero.
+That's more what I'm looking for.
+We can shape this a little bit.
+So we can use Smooth Step to
+get different effects.
+But of course, it's just actually naturally clamped
+at zero to one internally, I think, by the
+the HSB to RGB up, basically.
+And we've also got those color blending modes and mesh instances, right?
+That's something new.
+Multiply, add, normal, right?
+Yeah, this is some new stuff that we added a little while ago.
+That's why multiply is doing this now.
+So basically, if I'm correct, undefined country, but I should know this.
+Yeah, I can do that in a minute, Panda.
+Basically, this material blend mode, multiply, add on normal,
+that's working with the material that's being applied here.
+So you've got this RGB alpha array going into mesh instance, right?
+Which is used to change the RGB alpha values of all of the meshes.
+But of course, you know, like how does that interact with the basic material or the material
+assigned to the mesh instance?
+So this is a thing we added a while ago.
+So you can see here, the results of this RGB array are getting multiplied
+with the color values here, right?
+Or we can say add, or we can say normal.
+So that's a cool little thing I just wanted to point out.
+I'm just going to put it on add for now, because if I disconnect this,
+right, it's add.
+Add is more what I'm looking for.
+Yeah, that's why it looks a bit weird with multiply, I think.
+Let's just put this smooth step out for now.
+So the thing is, it just seems like a lot of them are just hitting one,
+which is really confusing to me.
+Let's try an array multiply.
+Yeah, yeah.
+I don't mind me, I have no idea what I'm doing.
+I just do whatever it does with cables, ops and other stuff.
+You just throw the stuff in and hope it works.
+Yeah, okay.
+This is becoming way too much.
+So if we do this...
+Yeah, okay.
+And the thing is, this is actually way easier to do with a color area op, basically.
+But hold it, what panda was saying before.
+We have...
+This, this, and that.
+Okay, give me a minute.
+Sorry, so I'm just tickling my brain with what I think panda meant before.
+Here we've got the rotation.
+Let's grab this array modulo.
+And let's modulo it at 360.
+Okay.
+Now we know it can only go between 0 and 360.
+I'm just trying something out here, right?
+I'm going to plug that into map range array.
+So the old is...
+I don't know how this is going to look, guys.
+So it's 360.0.2.1.
+Wow.
+Okay.
+Yeah, this is really tricky to get right.
+It's like, how much is it actually?
+These are really high numbers.
+Yeah, because we're multiplying by a lot.
+Let's put this...
+This slide is like way too sensitive.
+It's like minus 360 to 360.
+Let's put it on minus 90 by 90.
+It's just too much for me right now.
+There we go.
+Yeah, that's that modulo kicking in.
+We're already coming up with some really cool happy accidents because...
+All right.
+Okay, let's try that then.
+30.
+Map range array.
+Hey.
+Okay.
+Now we're getting different colors.
+Right?
+Yeah.
+Kind of like this, I think, Panda.
+I mean, it's not probably exactly what you're going for.
+But you mean that the rotation changes the what?
+Look at that.
+And I think if we change this modulo amount here.
+Anyone want to make some music for a music clip?
+That's pretty cool stuff.
+You know, now it'll kind of be cool to do what I did before with the smooth step.
+That'll allow us to like change the blending over from one part to another.
+See, so we can get these really hard edges.
+We can pull that up.
+Yeah, this just lets us get a lot of different effects.
+It's pretty funky.
+Yeah, I like.
+Okay, but let's just keep the number with a linear for now.
+So hold it.
+So hold it.
+So hold it.
+That is brightness, right?
+And it's one to zero.
+So that's pretty intense.
+So if we do 0.5, actually, 0.5 and zero.
+Yeah, blah.
+No.
+Let's do it like this.
+And now your movement.
+All right, let's do this.
+Ah, one minute.
+So your movement should be taken into account here.
+So this one has to go out.
+This one has to go in here.
+This should now change the color based upon.
+I like.
+All right, let's slow that timer down.
+This is like intense.
+Let's put it on five.
+Look at that.
+This is legendary.
+So the thing is we need to get that number,
+which is the modulo, right?
+So, you know, we've got it rotating from 0 to 360 degrees.
+With the modulo, we're making that loop like 0 to 27.8, 0 to 27.8.
+That's where you're seeing these rings here.
+So if I'm correct, let me plug this now into old max and then change it.
+We can get bigger and bigger circles.
+And if we make the circles really big, like, say, 180.
+Let's just put it on 360.
+Yeah, we get this kind of like, it's coming over.
+And if we'd now put the timer on, say, 50.
+Let's put that exposition all the way off over there.
+There's a lot of different looks that we can get with this.
+It's really cool ideas from everybody there.
+Like, really, really cool.
+So I'm really curious right now.
+I'm not sure if this is going to work without it, like, freaking out.
+So we're going to get a smooth array.
+We want to get rid of those changes in value.
+But I don't know if it's coming because of that, basically.
+Look at that.
+That's the face of Paul.
+And I'm really happy with how something came out.
+So there's so many different looks that we can get, right?
+You know, if I'm going to put this on 30.
+And, you know, let's do a modulo on.
+Yeah.
+On this, right?
+That has to be the same.
+So look, if we increase this now.
+Okay.
+But that's going to stop this endless rotation.
+Yeah.
+Okay.
+No.
+Take it back.
+Can't win them all.
+Okay.
+Bottom center edge.
+You mean like this?
+Okay.
+I had something way, way cooler going on before.
+Yeah, exactly.
+Let's put this on 20 for now.
+It's going way too fast.
+And let's put smooth array on 16.
+Yeah.
+Well, there's so many.
+This is awesome.
+There's so many different looks that we can get here.
+So you know what?
+Let's change the colors a little bit over time, right?
+Because the thing is, it's adding.
+So stuff becomes white.
+If we do normal, now we're keeping the original.
+No we're not.
+We're overriding them.
+Okay.
+Uh, multiply.
+I think multiply is what we want.
+Because then we're multiplying the basic color that we've got here with the HSB.
+No, okay.
+I'm tired.
+I'm losing track of it.
+Don't mind me.
+Let's just leave it on add for now.
+So we could, like adding one is like way too much, right?
+You know, that just makes things bleach to white, obviously.
+But I'm not, actually I'm not going to worry about that.
+This is a cool, happy accident.
+Yeah, I'm going to bang it in the corner though.
+And this is the thing now.
+Like this is rotation multiplying 21.
+You know, when we make it less, this is awesome.
+We get these like bigger circles.
+We can add some space and uh, legendary.
+I love it.
+I love it.
+This is, this is really awesome stuff.
+Don't want too much space right now.
+And look at this.
+Ah, this uh, I could look at this for quite a while.
+It's really cool stuff.
+As you can see, this kind of converges now on the, on the middle.
+Yeah, I really lived the way.
+Um, this, this is turning out, uh, as something really, uh, different than this.
+But you know, the, the, the form is still the same, right?
+You know what I mean?
+I'm not sure exactly how he did this, but it doesn't matter.
+We got close enough.
+And this is, this is just really cool how this has come out.
+You know, we can now change the color.
+And there's so many possibilities, uh, that we can come up with.
+I mean, the fact that it's white, I don't know, it is kind of cool.
+Um, but sometimes I'm like, ah, this just gives me shades of red, of course.
+Okay.
+Yeah.
+This is, this is something that you could just sit down and play around with forever, basically.
+Yeah.
+Let's keep it like this for now.
+I really love the way, um, this is working, the way this is turning out.
+It's really a lot of fun, uh, to play around with.
+Okay.
+Um, any other awesome, wild suggestions with what could be done, uh, to this patch?
+Uh, that was a really cool idea from Panda.
+I didn't get it, um, at first since it was a little bit difficult to patch and, uh, think ahead,
+basically.
+Look at this.
+Definitely looks awesome.
+I love it.
+It's just like so much stuff going on.
+And the cool part is that the idea from you, um, steam with the, the timer, if I turn this off,
+everything stops, right?
+You know, I mean, we could even get that timer now and add like, uh,
+a sign.
+And let's put the frequency on something really low, like 0.2.
+And let's put the amplitude on, say, 30.
+Frequency on something really low.
+And now we can probably get it to expand and kind of, um, collapse.
+Okay, this is really, really slow.
+There we go.
+And then it should go back in a moment.
+There we go.
+Just a little frequency number.
+Yeah, there's a lot of stuff that we could do with this.
+I'll get rid of that signal.
+Let's just have that number.
+That's really, really cool.
+Okay.
+Let's just reload for a moment.
+All right.
+Um, ah, where did it all go?
+All right.
+Add the hue.
+The default hue was, uh, was it.
+So let's just put this down here.
+So the reason they're all white is because we've got this, um, add mode right now.
+We could go even further with this actually.
+I mean, look, this is all going from zero to one, right?
+Map range array one to zero.
+Hey, let's just plug this into hue and go wild.
+And that completely sucked.
+But hey, you don't know until you try.
+Yeah.
+Now I think I had the problem is if the brightness is on one.
+So let's look here.
+Brightness arrays.
+So let's just multiply that by a small number, right?
+Yeah.
+And then we can use the heat.
+Then we can use the rotation with the hue to get different colors,
+but that doesn't look so pretty, but hey, um, you don't know until you try.
+Maybe we can put this into saturation.
+Let's just unplug it and go back to where we were.
+That happy place.
+All right.
+Now let me just put hue all on set default.
+Okay.
+So let's not forget here to just add, um,
+one or two things.
+So I'm just going to put here and then the, um,
+turns horrible name.
+It's okay.
+Let's just pull this down to here.
+And then we can pause the whole thing.
+And as you can see,
+we've got like a little bit of a catch up from the, um, smooth up.
+So we do this and we, um, turn this off.
+And then it takes a few moments to kick in.
+Way too much.
+You put it on one.
+You get this very fast response.
+We put it on, say, 16.
+It just becomes smoother.
+It just helps it a little bit.
+Let's do control S.
+Okay.
+Yeah.
+This is pretty cool.
+Pretty cool.
+You know,
+when we put this in a really,
+yeah,
+it's so nice the way these,
+these things just work together.
+Right.
+I mean,
+look,
+I can just,
+I can just get so many different looks from this.
+I'm so happy with how it came out,
+especially with the last couple of suggestions.
+Anybody else got any, um, suggestions that they can come up with?
+I can see that that rectangle is too small, actually.
+I need to make that a little bit, um, bigger.
+Lost track of that one.
+You know,
+I could actually just make it the whole screen, but I don't know.
+I kind of like the,
+the look of this.
+Personal preference, as always.
+Yeah.
+I like it like this.
+Okay.
+Um, anybody else got any of our suggestions?
+Less rectangles on the wider parts.
+I can hear,
+I can hear steam with, uh,
+an evil laugh,
+um,
+right now.
+Um,
+okay.
+Okay.
+Um,
+well,
+so we have the array logic here,
+right?
+So actually,
+this is really easy.
+We don't use the random numbers array.
+We use this array.
+But now we've got to reverse it,
+right?
+Let's do this.
+So this has to go into brightness.
+Let's grab a copy of that and put it in there.
+Uh,
+oh yeah,
+no,
+this is not going to work because we're doing it with erase.
+But that's also a really cool effect.
+Um,
+created an equal pass.
+Yeah.
+Okay.
+Okay.
+So it's the reverse of what,
+um,
+steamer was saying.
+So basically then we need to do this.
+We need to say,
+get an array.
+Let's make it have a length of 4,000.
+And we're going to give it a
+default value of one.
+And then we're going to go here.
+I'm going to say array math array.
+And then we're going to subtract this from there.
+Right.
+And then this is going to get plugged into.
+No,
+completely not what I wanted.
+Right.
+Oh boy.
+Hold it.
+That is connected.
+Yeah,
+no,
+no,
+of course.
+Sorry guys.
+I'm getting tired.
+I mean,
+this is kind of correct.
+It's just not going to work that good with the whole array logic part.
+I mean,
+it's doing what I want it to.
+Yeah,
+I'm a little bit too tired to crack this one right now,
+but this already had some pretty cool stuff.
+It's too late for me to worry about something like that right now.
+I mean,
+I mean,
+I think this is already also just a really cool effect basically.
+We want to do this with great and equal is one space.
+Yeah,
+we can,
+we can just get some really,
+really cool stuff with this.
+Okay.
+So this is the,
+this is the awesome sauce,
+right?
+This is the amount of rings.
+What?
+That was so cool.
+Come back.
+Don't save this.
+Sure.
+I'll plug it all back in the way it was.
+No problem.
+Uh,
+you know,
+that's not a problem at all.
+Let's get this.
+Let's put this in.
+I mean,
+we don't have to make the original,
+right?
+Copycat is inspired,
+um,
+by,
+so we don't have to do,
+things the way they are.
+You know,
+they're,
+they're an inspiration for us to do things basically.
+But yeah,
+it is a little bit far off the original.
+Let's put this on 45.
+And if we turn this up,
+yeah,
+then we get more of this.
+I mean,
+we,
+we could do some really,
+um,
+really crazy stuff with this.
+You know,
+this is just like a template to,
+to get started with.
+I mean,
+these are very simplistic in design,
+which is part of the reason I also actually really loved them.
+You know,
+we could have gone for something like with an inverted,
+um,
+edge detection,
+and sort of the edges being white,
+that they're going to be black.
+Um,
+but I,
+I like being playful with these kind of things.
+And I really enjoy it with the stream actually,
+just,
+either things can go like absolutely awesome,
+or go incredibly wrong,
+I suppose.
+And so we're going to put the rotation amount down.
+And we're going to get it more like this,
+which is kind of cool.
+And we can turn that off.
+I mean,
+this is,
+there's got to be a way to turn this off.
+Uh,
+so actually we can just do,
+um,
+this,
+I think,
+this one here,
+just because I'm going to forget how to do this slide.
+So I've put this on zero.
+We just,
+we just have the original
+thing.
+And the cool part is I can just add,
+bits of this now.
+I have no idea what to call this.
+color,
+color,
+rotate,
+color.
+It's a horrible name,
+but at least I know,
+roughly what it's doing.
+And that's going to go between zero and one.
+So that's going to allow us to add,
+this here,
+like we saw,
+let's turn the hue down.
+And we can decide how much of that is affecting,
+the patch basically.
+Like,
+so we can make it really subtle.
+And it's actually got to be a little bit higher.
+There we go.
+I think that's just because of the smooth array.
+Let's put it on eight or four.
+Yeah,
+so when there's too much of this,
+it just smooths out all the,
+yeah,
+we just lose all the color stuff.
+Basically,
+let's just put it on eight.
+I like the effects that it gives.
+Let's save.
+It just adds some really nice,
+um,
+touches
+um,
+to it.
+There's so much more that could probably be done
+with,
+uh,
+whoops,
+the,
+to color here.
+It's just,
+it's a lot of tweaking these numbers,
+basically.
+All right,
+let's put this just up here for now.
+Put it on.
+Set default.
+Okay.
+Control S.
+Hmm.
+Go full screen.
+There we go.
+There we go.
+All right.
+Um,
+I think I'm going to call it,
+uh,
+quits for tonight.
+Um,
+I'm not going to publish the patch right now.
+I'll publish it,
+uh,
+first thing tomorrow.
+I want to just clean it up a little bit,
+add some variables and stuff.
+I'll patch this together really quickly,
+and there's a couple of ops floating around there
+that aren't,
+um,
+really necessary.
+And then hopefully we'll see some really cool,
+uh,
+remixes or things that are inspired,
+uh,
+by the result of this,
+um,
+copycat,
+uh,
+stream.
+Yeah.
+Thanks team.
+I'm,
+I'm really happy,
+uh,
+with how it came out from,
+uh,
+the,
+the,
+the simple,
+uh,
+start and a really nice,
+um,
+real and suggestions that you guys,
+uh,
+gave,
+gave,
+gave,
+you know,
+just,
+it's just,
+you could just plug a few new things in and repatch some stuff and just end up with so many different looks,
+you know?
+Yeah.
+Thank you guys.
+Ah,
+okay.
+I can't stop.
+One more thing came up.
+How about we change the length of each of the rectangles based upon this rotation?
+I don't know why.
+So hard to stop once you get started with this stuff.
+Like really it's it's the healthiest form of crack you can do,
+I suppose.
+So,
+um,
+let's do,
+uh,
+I think,
+uh,
+we're looking for scale.
+Yes.
+We're at the scale.
+All right.
+That's here.
+Cool.
+I know the original one that is here,
+right?
+So if we do this,
+they become a lot longer.
+All right.
+So we're going to just do,
+um,
+array,
+math array,
+because we want to add,
+um,
+a number to
+this.
+Right.
+Mark.
+I think so.
+Give me a minute.
+Uh,
+one more.
+One more.
+Yes.
+So we want to do this based upon the rotation,
+right?
+This outputs one two zero.
+And this one we then.
+Not tweets perfectly right now.
+I mean,
+I mean,
+if we do this,
+then this is too much.
+So basically this is pretty smooth because we're using,
+I don't know.
+Hey,
+whoa,
+we can make it way smoother.
+let's do this.
+There we go.
+Too much right now,
+but you know,
+um,
+you gotta just try this out.
+there's a lot of,
+uh,
+a lot of cool options to,
+to pull out of this.
+It's going wild.
+It's just going wild.
+All right.
+This is too much,
+way too much.
+We lost the original thing.
+I just have to do this all again with another map range and things like that.
+Put the timer on 10 for now.
+Slow it down a touch.
+Save.
+Don't need this one.
+Well,
+we're not using this anymore,
+but it's a really useful chain.
+So I don't want to get rid of it right now.
+Let's just pull these and put them over there.
+Yeah.
+So we,
+we could go a lot further with this if we wanted to.
+So it's between zero and one.
+I know.
+Let's try this.
+I just delete the multiply.
+Yeah,
+I did.
+Okay.
+Yeah,
+no,
+this is really,
+really,
+really tricky to tweak correctly.
+It's though it's really difficult to see.
+I know I'm going to drop that one.
+You can't win them all Mark.
+You can't win them all.
+Okay.
+I'm just going to leave it like this for now.
+Do a reload.
+Mesh and gravy.
+Yeah,
+it's mesh and gravy for sure.
+Definitely.
+Well,
+you first said mash and gravy.
+Cool.
+Yeah.
+All right.
+I'm going to call it a wrap.
+It's almost 10 30.
+It's late.
+I'd like to give a great thank you to everybody that came along to watch tonight with the cables
+jam announcements and this episode,
+the first one of a copycat with cables.
+I'm really happy with how it turned out.
+I'm really happy with all the suggestions and the feedback from everybody.
+I'm going to clean this patch up tomorrow morning and then I'll publish it online.
+It always takes a few hours but we always get the edited video of the live stream.
+We just have to chop the end and the start off with the waiting and then we upload that to YouTube as well.
+So if you've missed this or you want to recommend it to somebody later and it's not on Twitch anymore, just go to our YouTube channel.
+We've got a Twitch channel there which shows all of our Twitch streams.
+So I'm not too sure what we're going to do for the next Twitch stream because we've been pumping them out each week since we started,
+which is really cool and awesome because it's a really nice way to share things with cables.
+It's got a very different vibe than doing things with tutorial videos where the effort is to try and make it as short and informative and concise as possible.
+And with a live stream, I think it's more fun to just have it on the background with cables and andro and let's look at the screen every five minutes and see what the guy is doing.
+So yeah, it's really a lot of fun to do and it's getting a bit easier to keep track of everything now with the chat window and OBS and cables and everything and talking.
+It's like it's like it's like kind of mentally drumming, I suppose, so I'm going to call it a night.
+I'd like to say once again, very big.
+Thank you. Thank you to everybody that's following us and supporting us with what we do.
+We love it and we really appreciate it.
+And we love seeing the things that people are making with cables GL every single day.
+And we just want to do everything we can to make that as accessible and as cool and as fun for you as possible.
+So I'll probably be seeing you next week.
+So I hope you all have a good night and I hope you're all doing well in these slightly difficult times with the coronavirus.
+You've got this.
+Stay positive, stay awesome and see you on the forums.
+I'll see you next week on the stream.
+All right, everybody.
+Have a good night.
+Bye.

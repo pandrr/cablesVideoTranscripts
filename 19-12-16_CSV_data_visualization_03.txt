@@ -1,0 +1,117 @@
+https://www.youtube.com/watch?v=mJP5UcN5isg
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
+farms is Andro and today I'll be giving the third part of our tutorial series with data
+visualization inside of cables. Today I'll be showing you how to get air pollution data from
+the city of Katowice in Poland and how to map this into the city coordinates and how to visualize
+how severe the pollution is in certain parts of the city. That's what you can see right here on the
+screen. So today we're going to learn how to do this from the raw csv data. So I'm just going to close
+this. Now if you go to the cables webpage and you go to learn and you click this part here coding with
+cables it's going to take you to our github repository. So here we go to this folder data
+visualization. Now we're interested in two files here. This one 2019-04-01 and Katowice csv. So
+Katowice csv is a latitude and longitude data. So if we're going to click this file now it's going to
+open up here and here we can see the latitude and longitude data. So to get this I click raw
+it opens like this in the browser and press ctrl and s and now it says how do I want to save this file.
+So I'm going to put it in downloads and I'm going to make sure it's called Katowice csv. I remove the txt
+extension click save. Okay so now I'm going to go back and go back again
+and now I'm going to get this one 2019-04-01. So I'm going to click it and this is going to show
+the quality of the air at different stations through the city. I'm not going to go too much into it
+right now we're just going to do the same procedure. I'm going to click raw. It's going to open it like
+this. I'm going to press ctrl s. I'm going to remove the txt extension so it's only dot csv. I'm going to click
+save. So now I've downloaded my two csv files. I'm going to close this window. I want you now to make
+a new cables patch and I would just like you to make what you see on the screen here.
+Great so first of all I just want to get these two files into cables. So I'm going to go here and I'm
+going to say show in folder. And if I look here now I've got the Katowice csv and the air quality daily.
+So I'm going to grab this file click and drag into the upload area. It's going to upload the csv file
+and then it's going to create the past json file. I'm going to go back and I'm going to grab this one
+and I'm going to pull this one in as well. That's the air quality through the city.
+Great I'm going to press escape press f11 to go to full screen.
+So without further ado let's get started. So first of all I want to create an outline of the city like I
+saw there. So I'm going to go here and I'm going to grab a trigger extender. I just want to keep my
+patch nice and tidy right now. It seems straight lines. And now I'm going to create the csv array up.
+Pass csv files into an array. So I'm going to grab this. I'm going to click on file and now I'm going to get the
+catal feed csv.json file. I click and load it and we can check the array contents right here by clicking
+the op and the inspect icon latitude and longitude. Okay. So now I'm going to pull this out. I'm going to
+get the op get values from array of objects. I'm going to copy it and paste it again. I'm going to grab the
+array. I'm going to plug it in here. Zoom in a touch. Okay. So if I look here it's lat for latitude,
+l and g for longitude. So I'm going to type here that the key is lat, key, l and g. And as you can see
+we now have the latitude in one array and we have the longitude in another. So now we need to pack these
+together. So I'm going to grab the array pack two op. Pack two individual arrays into a new array.
+Okay. You need to trigger. And now we have the arrays combined. X, Y, X, Y, X, Y. So
+now I'm going to grab a cool new op. The micarta coordinates array.
+Macarta map and center an array of latitudes and longitudes to a local coordinate system. So that
+allows me to get latitude and longitude data and map it to a local coordinate system that we can use
+inside of cables. So I'm going to add this. It expects an array to X and Y data. So I plugged that in.
+And basically, I'm going to just show you how we can do this wrong now. So I'm going to just pull this
+down because we want to draw this to a line. I grab a basic material and I'm going to grab a simple
+spline op. Now the thing is a simple spline op needs X, Y, Z data. So X, Y, Z, X, Y, Z for each point.
+But right now this op is only outputting X, Y, X, Y. So we've got a really cool op for this. So we just
+drag this out and type in array two to three. It inserts a zero for every third item. So now we get
+X, Y, Z, X, Y, Z. So I'm going to get that array and I'm going to plug that into the simple spline.
+Now the problem is we don't see anything on the screen right now. And that's because catafute is
+somewhere over here or over there. It's not being centered on the screen. So what we need to do is
+we need to use these two parameters here. Center latitude, center longitude. We need to center
+catafute on the screen. Imagine if you've got a globe. Right now catafute could be behind the globe
+or at the top and we want to turn that so that we can see it. So there's a really easy way to do this.
+I'm going to grab the array output. I'm going to grab the info array two. Let's zoom out of touch and move
+this down. So this is going to give me the average X and the average Y. So I'm going to go here and I'm
+going to grab the average X and I'm going to plug it into center latitude. I'm going to grab the average
+Y and I'm going to plug it into here. And now I've got something on the screen, but it's really small.
+So now we need to make the map width bigger and I'll explain why. So I'm going to just crank this up to
+a higher number. If we were looking at Germany right now, which is a really big surface area,
+this number would maybe be on 100 or 200, but because we're looking at a city inside of the
+country, the area is smaller. So we need to make the map width bigger. So you're just going to have to
+play with that number until you see something on the screen. If it's really big, make it smaller.
+If it's small, make it big. So let me just change the color here to white. So in under five minutes,
+we've got like the outline of a city on the screen. Really cool. Really great. So now what we want to do
+is we want to map the air pollution data, which was recorded at all these different stations in the
+city. And we want to map that onto those coordinates inside of the city. Now, the good news is we just
+did a lot of the work already. So what I'm going to do now is I'm just going to grab this
+with the CSV array, all of this parts are rated to three. Sorry, let's copy this with the trigger
+extender. I do control C. So I copy them and I paste them here. I'm now going to grab the trigger
+extender and pull it over there. So now I'm going to load in this CSV array, I'm going to load the air
+quality daily information. So I'm going to go back with escape. Now, if I inspect this array, we can see
+that we also have latitude and longitude, the position of each station. Here we have a station ID,
+the time that the data was measured, the minimum value of air pollution at that time, maximum value,
+mean value and the percentage of norm. I'm interested in the percentage of norm, but don't let that confuse
+you. Right now, I just want to see all of these points in the city. Let's keep it simple. So we have
+latitude and longitude. So the great part is that these two get values from array of objects, they're already
+working correctly. So I will now want to use this for mesh instancer with circles. So I'm just going
+to grab a basic material. I'm just going to make it a little bit red. And now I'm going to grab a
+mesh instancer. What I'm going to do is I'm going to grab a circle mesh. So circle mesh, as you can see,
+that puts a big circle on the screen. I'm going to get the geometry output and plug it in there. But I don't
+want to see this anymore. So I'm going to click draw off. Okay, the mesh instancer is drawing one on the
+screen. So the great part is now we now have the position data. So let me just zoom in a little bit.
+So we go to array two to three, we plug it into positions. Everything is really filled on the screen.
+So now we're going to pull the radius of the circle mesh down. As we can see, there it is. But now we've got a
+problem. This isn't aligned to the city. Now, if you think about it, this actually makes a lot of sense.
+So now we're getting the average x and y position of the station data. But that isn't the average of
+x and y for the city. So we're just going to unplug this and get rid of that. And we're going to get the
+average x from the city and sensor the station data around this. And now it all falls within the city,
+as we can see. So this is nice and quick and easy. And it makes perfect sense. So we're already pretty
+far now. So the last thing that I want to do is I want to make those circles bigger if there's more air
+pollution at that station. So what I'm going to do now is this. I'm going to create a new get value from array of
+objects. I'm just going to copy it. I'm going to grab this. And I'm going to inspect this array. And I want to
+get the percentage of norms. So with the mouse, I just click and drag. And I've got to make sure I just get that
+exact with the key. Control C. I'm going to paste that here. There we go. So now we can see that I've got 83 numbers,
+which are going to map to all those stations there. So now I'm going to do map range array. And if you
+followed the previous tutorials, this is going to make a lot of sense. So if we're going to look at this,
+the minimum value, I don't know what it is, it could be 34. The maximum may be 70. And I want to map,
+remap that to the range 0 and 1. So I'm going to pull this array out. And I'm going to grab the array
+info up. It's going to give me the minimum and the maximum values. So I'm going to get the minimum.
+I'm going to plug it into the old min here. Maximum. I'll plug it into that. And now I want to remap it
+from 0 to 1. So I want to change the scale of the circles with this. Now I need to change x, y, and z
+all at the same time with the same number. So I'm just going to pull this out. And I'm going to grab an array
+pack 3. Okay. I'm going to give this a trigger. So now I'm just going to get the same array.
+And I'm going to put it in here. And there. And now I'm going to plug it into scale. And now what I'm
+going to do is I'm going to put the new maximum up like this. And now I'm going to make the screen a
+little bit bigger. So it's easier for you to see. And this does have an effect on the size of the circle.
+If I put the size of the circle now to 1, everything's huge. And now I could pull down
+the new max and the map range array and pull that to a value, which makes sense. So if you ever get
+that happening with your data, you just got to play around with those two numbers. So now the bigger
+that a circle is, the more air pollution that there is at that point inside of the city. So that's
+covering the end of this tutorial. So with this one, we've learned how to get CSV data, map it to the
+outline of a city. We could also do that with a country. We've also learned how to get data from real
+world locations and to map that inside of the same location and how to get a really simple
+thing like a number and remap it to a size. So I hope this video has been educational and informative.
+If you've got any questions or comments, please feel free to leave them under the video below
+or to post them on the forums. Thanks for watching and have a good one. Bye.

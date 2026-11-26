@@ -1,0 +1,43 @@
+https://www.youtube.com/watch?v=ooW2FL0vnWM
+Hi there and welcome to another video I've made with Cables. My name is Mark, my handle on the
+forums is Andrew and today I'll be giving you an introduction to the div element op inside of
+Cables and how you can use it to create some simple interactivity inside of your patches.
+So first of all I'm going to press escape and I'm going to type in main loop and now I'm going to
+pull out the trigger and then create a clear color op and then use this to change the color of the
+background. Great let's go over here and press escape div element so I press enter so here's
+the development so this now creates a HTML div element inside of the canvas so first of all
+I want to change the text into click me and as you can see the text up here updates. Now I want to
+click interactive and if you look here at the hover parameter it's now zero if I now go over the
+letters it becomes true so by going over we now have this boolean value. We also have a trigger
+out so I'm going to make a sequence op and I'm going to press F to go into flow mode and if I
+now click this as you can see you now get a trigger. So those are the two things we're going to use for
+the rest of this tutorial. So I'm going to click the development and we're going to go to the style
+here and I'm going to click edit. Now make sure that your developments always have a position and a set
+index. I'm not going to explain why that's something you can google for yourself just if you remove them
+your div will disappear. So first of all I want to debug what's happening with my div how big is it
+just because the text is there doesn't mean the div is literally that size. So something you'll end up
+doing a lot is you're going to type in border and solid I use the color red I'm going to make it
+one pixel. Here you see a red line now I know the size of my div I'm going to just make it a little
+bit bigger for this tutorial so now it's full. So I want the text to be bigger so I'm going to type in
+font size 500% and now I want to have the text white so I'm going to type in color white and now I just want a
+little bit of padding so I'm just going to do padding 2% and then we get like a little bit more
+space around. Okay that's all I'm going to do for now for the sake of this tutorial the rest we're
+going to do with the other cable ops so I'm going to pull this down I'm going to make a transform I
+just want to put a cube on the screen so I'm going to get a matte cap material new then I'm going to get a cube
+I want the cube to be half the size so click on the transform and I'm going to put the scale on 0.5
+Okay so we get a bool out from the div element so I'm going to pull this out I'm going to make a bool
+and an op like this and I'm going to get the boolean out and I'm going to plug it into bool. Now what's
+going to happen is it's going to animate between two values depending on if it's true or false so 0 to 1.
+Now this already isn't going to do much because one degree isn't a lot I plug it into rotation X
+barely moves let's put this on 90 and now when I go over the development as you can see it's doing
+this so that's the first level of interactivity nice and easy so now let's make something when
+you click it so I'm going to get this out to trigger out I'm going to plug it into trigger counter and if
+you look at this here every time I click we get a number. Okay now I want the cube to rotate by 45
+degrees each time so I'm going to do multiply by 45 let's move this down so this happens when I
+click I'm going to plug it into rotate Z and as you can see the cube is now rotating but it's not
+moving smoothly so I'm going to click in between and then type smooth so we get smooth up I'm going
+to get the trigger and this is going to smooth out jumps in the values so now when I click we get this
+nice smooth turn I remove the mouse and this happens so as you can see we can just now combine this to
+create some basic interactivity inside of our patch. Okay that was the first tutorial I hope this video has
+been educational informative if you've got any questions please feel free to post them under
+the video below or to post them on the forums thanks for watching and have a good one bye

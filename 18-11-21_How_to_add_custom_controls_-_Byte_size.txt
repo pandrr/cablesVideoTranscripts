@@ -1,0 +1,42 @@
+https://www.youtube.com/watch?v=cpRVswVdvI0
+Hi there, and welcome to another video on the ByteSize channel.
+Today, I'll be giving you an introduction to the sidebar ops,
+which will allow us to create a user interface inside of the window view of cables.
+First of all, I'd like you to pause the video and just build what you see here.
+OK, great. Let's get started.
+So first of all, I'm going to press escape and I'm going to type in sidebar and press enter.
+And now get the sidebar up and click and drag out from child.
+I'm going to make a slider up.
+As you can see, this belongs to the group ops dot sidebar.
+Now we have a slider that's appeared here in the window and this has an output here.
+I'm going to grab the output and I'm just going to plug it into, say, rotation Y.
+Now, as I move this, you can see the shape is moving a little bit,
+but not very much because we're only outputting values of zero to one.
+Click the slider up.
+We have a name, so I'm going to call it rotation Y.
+The name changes here.
+Input 1.
+Min, max.
+So I wanted to be able to rotate 180 degrees.
+So now I can make it turn like this.
+Step, if I would, for example, put in 1, that would mean every part of the slider here would output whole numbers.
+There's no floating point, no decimal value.
+So let me put this back to 0.001 as you can see I have a higher precision.
+So that is the basic of slider.
+Let's now make a new op called the toggle.
+And toggle op, I'm then going to plug into a bool anim, so I'll become clear in a moment.
+So bool anim needs to be triggered, so I'm going to plug that into here.
+I'm going to get the toggle out and I'm going to put that there.
+And now I'm going to plug this into position X, and now when I click toggle, as you can see our shape moves around.
+I can sweep the parameters here for bool anim, but that's something you can explore later.
+Another one is the button.
+So I'm going to make a button element, and now I'm going to plug this into a toggle bool, and then I'm going to make another bool anim.
+Expects a trigger.
+I'm now going to plug this into the red.
+If I now click button, as you can see, I change the color of the cube.
+It's a very simple example of what you can do with the interface, but these are the three basic things you'll need to get started.
+This is the introduction to the sidebar op series.
+I hope you've enjoyed it.
+If you have any questions or comments, please feel free to leave them in the section below or on forums.
+Thanks for your time.
+Bye.

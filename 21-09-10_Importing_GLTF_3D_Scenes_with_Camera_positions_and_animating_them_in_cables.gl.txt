@@ -1,0 +1,624 @@
+https://www.youtube.com/watch?v=iqIXSb-kAws
+Hello, this is Alex from cables.gl. Let's take a look at how we can import a 3d scene into cables and
+reference the camera views that we've set up in our 3d package and in my case that is blender. I'll show you the scene that I've pre-prepared and
+we'll
+most likely rebuild it from scratch because it's it's got a number of things that I want to show and
+show you how to build.
+We'll also take a look at blender because there are some essential things you need to remember when exporting your scene
+for cables to be able to reference the
+information of the camera and
+Yeah, that's pretty much it. All right, so
+What I have here is the 3d scene that is a glTF file with some cameras already embedded
+and I have a
+Little camera switcher here that allows us to animate between the two cameras, which is really interesting
+And of course, there's some materials and a skybox for fun
+Alright, so let's look at the scene first
+If you notice
+There is a drop down here now that allows us to switch between the embedded cameras and
+And if I select the second camera our view switches to the camera that I've set up in blender. So if we'll alt tab to
+blender and
+I'll pop open this view here and
+Click this camera button
+We will be looking at the first view and if I select my second camera
+We'll see the view that is also in cables right now
+So this is our second camera and this is our first camera and then in blender
+This is our second camera and this is our first camera
+all right, so
+That's pretty cool, but um, let me show you the the animation
+Between the two cameras. That is pretty neat. So if we select none here
+Um, the glTF camera view matrix op will then take over the controls of
+our
+camera view and
+With this little setup here, I can switch between the two cameras with a mouse click
+So look at this
+Bam
+Bam amazing
+So I think it's a very useful or actually like a quick way to
+Animate cameras or maybe set up in a more familiar way
+inside your 3d package and then
+Easily animate those camera views inside cables without having to
+use an animation track or maybe some sort of
+animation ops
+All right, so let's
+Delete everything so it doesn't
+Scare us too much. All right, so we have a main loop. All right, and now let's go to blender
+I'll move my camera a bit so we're in regular blender view and
+I've imported this 3d model that I've downloaded from sketchfab that I will link below and
+I've set up two cameras here
+But let's even
+Set up completely new cameras too
+All right, so now we have a 3d scene without any cameras. Let's create a new camera
+add
+You know
+You know
+I'm not really an expert in blender, but
+Hopefully
+Hopefully this isn't too slow for you
+All right
+So
+Add camera and this is our camera and what I like to do is to
+Use my viewport to adjust where the view is so I don't have to use the
+Transforms to place the camera somewhere
+All right, so if we click this button
+Wow, all right, we're now viewing the scene through the camera
+And if we lock the camera view to the viewport
+Whenever we manipulate the view we're also moving the camera
+Okay, so
+Let's zoom in here and maybe pan a little bit
+And let's just say this is our first camera, great
+Let's add another camera
+Add camera and this is our camera 2
+I do want to rename this
+I don't have to but I just don't really like this .001 for my second camera name
+I'll rename it to camera 2
+And also take control over it
+By default this is deselected but
+What you will need to do is select this local camera
+Tick box here and then
+Switch to camera 2
+And then adjust where it is
+Let's put it right
+In front of the truck
+All right
+So these are our two cameras
+And we're done basically
+Now the most important thing is
+How do we export this stuff?
+Click on file
+Move the mouse down to export
+And GLTF 2.0
+Now what we need to make sure
+Is ticked is inside this include tab
+And you'll notice that I have limit to selected objects
+And that means only the selected objects from
+Blender will be exported
+So I've just selected my camera
+And the model
+And the most important thing is that
+We will need to export camera data
+So you need to make sure this is checkmarked
+Okay so we'll name this truck2
+And export
+And export
+And then let's go and upload it to cables
+Like so
+All right so
+Now we will have our
+New scene with the new cameras
+That we've created
+Let's connect it to the main loop
+And give it a basic material
+I'll give it a texture
+That I've already uploaded
+And
+Connected like so
+All right so here's our scene
+Now
+How do we look at the cameras that we've exported?
+Let's look at GLTF scene
+And since version 3
+We have a camera
+Dropdown here
+And
+Before we click that
+Let's look at the show structure
+Button
+And
+If we click it
+And we'll see that
+We have our model
+And also our cameras
+With the hierarchy showing
+There's a camera
+Underscore orientation
+And
+The nodes
+Are the ones that contain
+The camera
+Matrix information
+That we'll use
+As we go
+Further
+All right so
+Let's close this
+And let's try out
+This new
+Dropdown
+Okay
+That's supposed to be
+Our first camera
+And
+This is our camera 2
+Now let's
+Check it against
+Blender
+And
+I'll use this camera button
+And
+This is our camera 2
+And this is our camera 1
+And
+Then if we'll go back to
+Cables
+This is our camera 2
+And this is our camera 1
+And now let's look at
+Blender again
+And you'll see
+Something is off
+Right?
+It's
+It looks actually
+Very different
+And
+Let's
+Let's debug this
+All right
+So we have a rescale button here
+Hmm
+We probably
+Don't really need to use it
+Okay
+But that doesn't actually change anything
+All right
+So let's go back to Blender
+And
+If you look at the camera
+You'll see that it has a focal length
+And then if we look at this tab here
+There's also some settings for the sensor
+Okay
+But
+I don't think Cables is getting this information
+So how do we fix this?
+Well
+We can
+Drop in
+Cables camera
+And then adjust
+The iz
+Which is the distance from the object
+We will be at 0
+And then
+Here's our field of view
+And actually
+We can match it
+Exactly how it is in Blender
+All right
+So I'll use these twigs here
+To
+Kind of
+Eyeball it
+All right
+Maybe a bit closer
+Like so
+Yeah
+And
+Now it's looking
+Pretty much exact
+Nice
+Cool
+All right
+So
+Now you know
+How to adjust
+The field of view
+Difference
+Between your 3D package
+And
+Camera
+And
+Cables
+Okay
+So
+This is our basic setup now
+We can switch the camera
+With a drop down
+But what else can we do?
+Hmm
+There was a new op
+Released in the option
+A new op
+Released in the August update
+Called
+GLTF
+View
+Camera view matrix
+Okay
+Let's use this one
+All right
+So let's look at it
+It has a
+Node name input
+And then it has a matrix output
+Okay
+And
+What do we
+How do we hook it up
+And
+What do we put into this node name?
+Okay
+So
+Let's
+Look at our GLTF scene
+And
+Since we're going to be using a
+Special op
+To
+Reference the cameras
+We actually should
+Select
+No camera
+On the
+GLTF scene op
+itself
+All right
+All right
+So
+Everything
+Is
+Different
+Now
+And
+Let's connect this to
+The GLTF scene
+Because
+This operator needs to be connected to GLTF scene
+Since it will be
+Referencing a camera from the scene you connect it to
+So
+We'll
+Connect it to the next
+Trigger out
+And
+Then let's look at the structure
+And then we'll see these
+Camera nodes
+With
+The information we need
+And they're called camera_orientation
+So
+Let's copy paste this
+By selecting the text
+And
+Pasting it in here
+And
+You see
+The
+Matrix is now being output
+And
+The node has been found
+And if I
+Delete this
+The node is not found
+And the
+Matrix is the last one
+That I could find
+So
+We'll leave it to
+We'll leave it as
+Camera_orientation
+And
+Now
+How do we use it?
+Well
+We need to use
+Multiply_view_matrix
+And
+This will take
+Incoming_matrix
+And then apply it to
+The
+Scene we have
+So
+Let's put it
+Above the camera
+And
+Then connect it
+To the op
+Nice
+Okay
+So
+We'll
+Adjust the
+Field of view again
+To
+Correctly match
+Blender
+Let's
+Double check it again
+Okay
+Alright
+So
+Let's
+Now
+Let's
+Double check it again
+Okay
+All right
+So
+Alright
+So
+We have
+Our
+Camera
+Orientation
+Being referenced
+From the
+GLTF scene
+And
+Applied to the
+Multiply_view_matrix
+And
+To
+Copy the
+Switcher
+I had in the beginning
+Of this video
+Let's
+Put in
+A
+String switcher
+Switch
+String
+Up
+And
+We'll
+Paste
+Our
+Camera
+Orientation
+Name
+Here
+And
+Then
+The second one
+Was
+Camera
+Two
+Underscore
+Orientation
+Camera
+Two
+Okay
+So
+Now
+The
+GLTF
+Camera
+View
+Matrix
+Is
+Getting
+The
+Name
+Of
+The
+Node
+From
+The
+Switch
+String
+Operator
+And
+If
+We
+Change
+The
+Index
+To
+One
+Our
+Camera
+Changes
+That's
+Pretty
+Cool
+Alright
+So
+I
+Want to
+Do
+This
+Is
+Pretty
+Simple
+We
+Use
+Trigger
+Counter
+Loop
+Connected
+To
+The
+Switch
+String
+We
+Need
+To
+Limit
+The
+Trigger
+Counter
+Loop
+To
+Two
+Numbers
+Zero
+And
+One
+Because
+That's
+The
+String
+Zero
+And
+String
+One
+Will
+Get
+Number
+We
+Use
+Mouth
+Button
+To
+Increment
+This
+Counter
+Loop
+And
+Once
+We
+Reach
+The
+Maximum
+Of
+One
+It
+Will
+Start
+Over
+At
+Zero
+Again
+So
+If
+We
+Click
+The
+Canvas
+To
+To
+So
+What
+What
+I'm
+Working
+Up
+Towards
+Here
+Is
+The
+Coolest
+Thing
+Which
+Is
+Animatrix
+That
+Was a
+Really
+Good
+Movie
+By The
+Way
+And
+What
+What
+We
+Need
+To
+Do
+Here
+Is
+To
+Make
+Sure
+That
+The
+Animatrix
+Is
+Getting
+A
+Constant
+Trigger
+Before
+Our
+Scene
+To
+From
+From
+The
+First
+Node
+To
+Somewhere
+Here
+Maybe
+It
+Doesn't
+Really
+Matter
+As
+Just
+As
+Long
+As
+Before
+Or
+I
+Mean
+And
+Then
+Instead
+Of
+Feeding
+Mole
+View
+Matrix
+With
+GlTF
+Camera
+View
+Matrix
+And
+To
+The
+Multiply
+View
+So
+Now
+Animated
+And
+What
+Happens
+When
+We
+Click
+The
+Button
+It
+Animates
+Between
+The
+Two
+Cameras
+Alright
+So
+Pretty
+Interesting
+A
+Little
+Bit
+Involved
+I

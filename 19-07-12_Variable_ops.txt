@@ -1,0 +1,49 @@
+https://www.youtube.com/watch?v=sUR6b0zvuSY
+Hi there and welcome to another video of made with cables. My name is Mark. My handle on the
+forums is Andro and today I'll be giving you an introduction to the variable ops inside of cables.
+So let's get started. I'm going to press escape. I'm going to type in var set. And as you can see,
+I now get four ops pop up, var set array, var set number, var set object, var set string. So I'm
+going to click on var set number and the explanation says variables and numbers you can read anywhere in
+your patch without creating very long cables. They can also be written and read by external scripts
+when embedding cables patches. So let's get started with this. I'm going to grab the var set number up.
+So I'm going to click this and pull it there. I'm going to grab a number. Let's give this number
+of value. Okay. So I now need to create a variable because variables have to be unique. So I'm going
+to type in num underscore one. I now want to get this data. So this was setting the variable. Now I want
+to get it. So I type in var get and here I see the var get number up. I'm going to add it. Now I just
+need to pick the variable which was assigned, which in this case was num one. And if I now move this,
+as you can see this has the same value. So this would allow me to grab this and move it really far away
+inside of a cables patch and still be able to access the data. So let's just zoom in for a minute. So
+another way to create these is to pull out, make sure the bar here is empty and then click create
+variable. And here I'm going to type in number two. And as you can see, we now get the setter and the
+getter all in one go, which is really cool and nice and easy. So I'm going to just run through the rest
+of the variable operators. I'm going to say var set. I'm just going to get string. I'm going to go a little
+bit quick because it's just pretty much repeating what I did before. And I'm going to type in I love the beach.
+And if I now go over here and I do var get string and I pick, see, there we go. I need to give it a variable.
+So I say str underscore one. Go here. Str underscore one. And I get the string out here. Just pull it out.
+String. There we go. I love the beach because who doesn't. So now we're going to be var set array.
+Same idea. So I'm going to go here and I'll grab a random numbers array and I'm going to fill it with just
+five values. If I click the array now, I can inspect it over here. These are numbers. So now I go here
+and I'll say var get array. So now I'm going to give it a variable name and I'm going to just say
+array random one. Okay. I'll go here and I pick that variable name array random one. If I click this,
+as you can see the array is accessible there. One last one is the object. Var set object.
+This is a good one because a lot of things inside of cables are an object. It could be a texture. It
+could be a geometry. It could be something that you're reading from a JSON file. Objects can be a lot.
+Basically just keep an eye out for this colored part of the type object. So now I'm going to be far get object. So
+I didn't even realize this until a while ago. We could use it to send a texture. So if I pull this out,
+I make the texture up right here. I'm going to say create variable. I'm going to call it text one.
+I'm going to go here. I'm going to access that variable with text one. Now let's go over just
+to confirm that it's working. Main loop. Basic material. Rectangle. We're now going to get this texture. I'm
+going to plug it into there. Now let's click on the texture. Library. Go to my favorite picture. The beach. So as you can see,
+we're now sending the texture wirelessly to say it that way. So one last little thing that I want to show
+you that's of interest to web developers that want to embed a cables patch inside of that web page. I'm
+going to just touch upon this very quickly. I'm going to press control shift I and I bring up the
+developer tools. So if I go over here, I have this variable called num2. So I'm just going to use the
+command line for this. So I'm going to say cables dot patch dot set var value. And then I'm going to say
+the name of the variable, which is num underscore two. And I'm going to say 1001 point something.
+And so. And if I now click on num2, as you can see this value has appeared here. Let's just do it one
+more time just to demonstrate. So now I can do one, two, one point something. And that goes here. So this allows you to send a variable from another part of your web page into a cables patch.
+You can also listen to variables from inside of the cables patch. So you could generate data inside of the cables patch and then send that to the rest of your page.
+So this is where you want to be for this later. This is the cables documentation. You can access it for you, the main page and this part right here with exporting, embedding and setting variables.
+This goes in depth into how you can do this for your web page. So that was a tutorial about variable ops inside the cables.
+I hope this video has been educational and informative. If you have any questions or comments, please leave them under the video below or post them on the forums.
+Thanks for watching and have a good one. Bye.

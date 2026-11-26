@@ -1,0 +1,45 @@
+https://www.youtube.com/watch?v=ZZKdaQw1bMo
+Hi there, and welcome to another video on the Bytesize channel.
+Today I'll be giving you an introduction to the Image Compose op.
+I'd like you to pause the video and just make what you see here.
+Okay, let's get started.
+Image Compose basically allows you to create or generate a texture and fill it with what you want.
+So I'm going to try and show this in its most basic form.
+So I'm going to pull this out here and I'm going to make a Stripes 2 op.
+So this generates a texture which is output by Image Compose.
+I'm just going to make this white.
+So I'm going to grab another copy of this and I'm going to chain them together.
+I'm going to put the blend mode on Multiply.
+I'm just going to rotate it so we can see there's two textures here being used.
+So this is something that confuses people from other programming environments or beginners.
+So I'm going to press F.
+Image Compose generates an empty texture, like an empty canvas.
+And it's then going to go down and it's going to process every single object underneath it.
+At the end, when there's nothing left to process, that final result is then output as a texture by the Image Compose op.
+This is the way it works because it's textures, not just standard data flow like numbers, for example.
+So I'll get rid of this and I'm going to go over here.
+I'm going to make a render to texture op.
+I'm going to make a basic material and now I'm going to make a cube.
+I'm going to disconnect this and render to texture works the same way.
+So it also generates an empty texture and it processes everything underneath it.
+So I'm going to get Image Compose, the stripes, and I'm going to plug it into texture.
+There we go.
+So let's say, for example, I want to change the opacity of the material here.
+I can go over here, make another Image Compose op, and I'm going to grab a checkerboard pattern.
+And I'm now going to plug this into the texture opacity.
+And as you can see, we've now got this.
+So here I've used one texture for the basic material, the diffuse, and the other one for the opacity.
+So one last thing here that I want to show is performance and optimization.
+So Image Compose by default uses the viewport size, this resolution here.
+So I'm going to turn this off.
+If I click here, I see it's 720 by 480.
+If I want to make my patches faster, I can lower the texture size.
+So I'm going to put these both on 512 by 512.
+There we go.
+So we've now got a performance increase, especially in slower computers or mobile devices, for example.
+So this was the basic workflow of Image Compose.
+If there's 25 ops underneath here, it doesn't matter.
+It's just basically going to go from the top to the bottom and then output that final result.
+So I hope this video has been educational.
+If you have any questions or comments, please feel free to leave them in the video below or on the forums.
+Thanks for your time. Bye.

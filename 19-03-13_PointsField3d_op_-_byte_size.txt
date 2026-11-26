@@ -1,0 +1,20 @@
+https://www.youtube.com/watch?v=tVphEMCXDb4
+Hi there and welcome to another video on the Bytesize channel. Today I'll be giving you an
+introduction to the points field 3D op. So I'd like you to just pause the video and put these
+two ops into your patch. Great, let's get started. So I'm going to create a matcap material new.
+I'm then going to plug this into a mesh instance. So let's just move this up for a minute and the
+geometry input I'm going to plug in a cube and then here I'm going to add a trigger once up because we
+only need to send this once into the mesh instance. So let's move this up. So I'm going to go to the
+positions array, drag out, and I'm going to grab the points field 3D op. Now as you can see we don't
+have anything. I have to put some parameters in so let's put it on two by two by two. And to all
+appearances it looks like we've just got a cube. So let's get a cube here and put the size and say
+0.9. And as you can see we've now got two by two by two cubes. So if I now go here I can turn this up and
+we can create more points in a 3D field. It's a really handy op to just either generate a grid so we
+could say 10 by 1 by 10 and it's like we've got a 2D grid but we've now got 3D positions. And this is
+really handy just to generate these points really quickly. If we click center and we turn that off as
+you can see we now have this origin point which is here in the corner. If we click center then the
+origin point is in the center of the array. So if we use the multiplier here we can kind of like
+increase the space between everything. So let's do this. So as you can see we can now go here and
+increase the gap between all of the shapes. So this is an introduction to the points field 3D op. I hope
+this video has been educational and informative. If you have any questions or comments please feel
+free to leave them under the video or to post them on the forums. Thanks for your time. Bye.

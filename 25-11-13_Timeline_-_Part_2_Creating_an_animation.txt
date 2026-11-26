@@ -1,0 +1,182 @@
+https://www.youtube.com/watch?v=KMhAjqn_fGg
+- Hello and welcome to another KBITS tutorial.
+On KBITS my name is Pandor and today I want to show you
+how to create your own keyframed animation
+with a new timeline.
+So I prepared a really simple patch here
+and I want to animate the KBITS logo
+to move around on the screen.
+So, and I don't want to use a timer or a sign animation
+or something like this, I want to create manual keyframes.
+So how do I do that?
+So first of all, we are talking about
+the transform X and Y positions.
+So I go here into the parameter panel
+and select animate parameter with this little three dot menu.
+Animate parameter and then you will see
+we have a little dot here in the port.
+This means that this port is animated.
+And when you see the parameter panel,
+you see this little rhombus here and you see this icon,
+the timeline icon here, also down here.
+So I can click this timeline icon and then it will open the timeline.
+And this is how it looks.
+So by default, we have a key at zero frames or zero seconds.
+And that's when you activate an animation for a port, it will create one simple key.
+So now let's create another key.
+So I can drag around in this line here in the time ruler bar and I can scrub the playhead.
+So this is our cursor or playhead and I can just scrub it and move it around.
+So I can just move it here to one second or 30 frames and just move and just change the parameter here.
+So when I do that, so when I do that, you already see there's a curve here.
+So this is because I'm in the curve layout so you can or in the graph view, you can change this with those buttons here.
+So when I click this, this is the default view where we only see the key frame.
+So when I, when I move the cursor again somewhere else and then drag the value, you will see it created another key and I can switch between this view and this view.
+And then I see the, the curve of those keys.
+And this is the most simple way to create, uh, keys in KBIT.
+So I can rewind this and press play.
+You can press space, you can press control space to, um,
+automatically play and start from zero.
+Otherwise space is play and pause and control space is from the beginning.
+And now you see like the, the logo is, uh, moving to the right.
+So this is because I animated, um, pause X.
+So now let's create another animation.
+So I will create an animation for the Y position.
+So I will click animate parameter on the Y position.
+So it created a key now here where our cursor is, and I can just move it around, uh, move to zero and then change the parameter, um, here.
+And now our curve is, uh, moved out of the screen.
+So we are not seeing this other keyframe to, to show it again on the screen.
+You can always press F and then the timeline will zoom, uh, all keys.
+If you have none selected, it will zoom to all keys.
+You can also use this little button here.
+Or if I select some, then it will zoom in and zoom into those keys only.
+And when I deselect and press F again, it will zoom out to the whole screen.
+So I will just create some random keys.
+And so when I, when I press, when I select those keys and press F, it will zoom into those keys.
+And when I unselect, it will zoom into, into all keys.
+Um, yeah.
+So, so, so this is, uh, this is our little animation here now.
+And you see in the overview line, you see two keys here and you see more keys here.
+So when I, when I drag this around, you will see the overview line just scales.
+So our duration of our animation just grew now.
+And I will see every, or like, this is just an overview where we see some of our keys, uh,
+and where they are in, in, on the timeline in the overall duration.
+So when I zoom in, you will see this gray bar is getting smaller.
+And now we only see this little part of our animation.
+So I can, I can drag this around and then I will see this is our last frame here.
+And, uh, those are our two, uh, frames.
+So, and when I, when I zoom out, you will see the bar grows.
+So if it's fully gray, then you see the whole animation that we have.
+And if it's a small part, then we only see a part of our animation.
+Those are, this is really handy to, to know where you are in your animation,
+if it's really long and, and where the keys are.
+So, uh, it's really helpful to know, ah, there's another key on the right or something.
+Um, yeah, so, um, now our logo, um, animates on both axes.
+So, um, so now sometimes it's a bit hard to, in the graph view, uh, to, to know which graph
+or which curve belongs to which part.
+So you can hover those and then you see, um, you see which, which part it belongs to.
+And you also see this in the parameter panel and also on the patch view.
+And the, the hover, uh, works the same everywhere.
+But sometimes this is still not enough because then now you work on the details in here.
+And then which curve is this.
+And you can also see like when I select something, which, uh, which part it belongs to.
+That's also really helpful.
+But you can also go here and click this little, uh, pen icon, this little edit icon.
+And now I disabled editing for this part.
+So now if I press command A or control A, I will select all the parts,
+but only the ones that are editable.
+So this is not editable now.
+So this is really, this really helps you to edit only one curve, but still see the other one.
+And then you have the relation or the timing when, when the other keys are happening.
+So, so that's really helpful.
+And the other button you see here is, um, the mute button.
+So when I, when I click this, I muted the X position animation.
+So now you see the logos only animating on the Y axis and not on the X axis again.
+And when I, when I switch this, then you see only the Y animation.
+And the X animation will just stay at that value that it had before.
+So that's also really handy to just see like where something comes from.
+If it's not so easy, that's X and Y is really easy to identify.
+But sometimes you don't know is it Z or is it Y or some, some other parameter.
+And you can just disable them and, and see if, if that helps you to find out which animation you are thinking about.
+And in the graph view, you also have those buttons.
+So, um, you can also mute the animation.
+Um, yeah, so that's, that's, that's about the keys in cables.
+Um, another helpful thing is this, um, uh, automatic key generation.
+So if I disable this, it will not create new keys, um, by default.
+But you see, I would change the position of the logo, but this is only temporary.
+So when I, so you see, this would be the new Y position or the new value position of the, of the curve.
+But when I, when I move the curves again, it will be gone.
+So you, when you disable automatic keys, it, you will not create keys on, uh, by accident.
+So now when I see, okay, this is the value I want to have, I can, um, press this little button here.
+And then it will create a key at this position.
+So now I, I added the key and now I, you can, you can play around and decide when you want to add a key,
+which is, which is helpful in some situations or some people like this workflow better.
+Um, so you can, you can use that to not accidentally create many keys or out of scope.
+If, if you have this problem, then you can use this mode.
+Um, then let's talk about the curves themselves.
+So they are really, um, okay, this, this needs to be fixed that this disappears automatically.
+So they are now really pointy, right?
+So now, right now we have only straight lines.
+They just go like on the fastest, the, the fastest connection between two points.
+So they are really straight and you also see this in the animation.
+It's not really smooth.
+It's just, uh, just like a really hard, hard edges and, and not smooth at all.
+Um, so we can change this, um, by choosing another interpolation method.
+So let's disable this one.
+Um, so now I, I just select all keys and now you see you on the right panel here, we have like an
+information panel about the selected keys.
+So we have five keys selected.
+They, like the animation of those five keys is 56 frames long and so on and so on.
+You get some information and then you get this little bar here.
+And this is for the interpolation method.
+So on, on default it's linear interpolation.
+That's, that's what we see.
+This is the straight lines.
+When I change this to absolute or step interpolation, you see it's like, uh, like stairs.
+Um, the values are really like they are even more, uh, um, straight.
+But now the, uh, the value in between is not really interpolated.
+It's just staying the same until there's a new corner.
+And then it will stay on this, uh, value again.
+So this is interesting.
+This is helpful for some things.
+For example, if you want to switch between different scenes, you don't want to interpolate the value.
+You just want to show scene five and then you want to see, uh, show scene nine.
+But you don't want all the scenes in between.
+You just want this one scene.
+So for this, you can use the absolute interpolation mode.
+So, and now we come to the, to the round stuff.
+So I will press command a again and then press, uh, this one.
+And this will show me predefined curves that we have in cable.
+So, um, you can just click around and then you, you will see, uh, some different curves.
+And maybe for, for many things, they are already fine.
+And you can just choose, uh, one of those curves.
+But if you want to have, um, full control, then you can click the next interpolation mode.
+And that's a busier curve.
+So now you see, um, the timeline added some control points and some lines here.
+So, um, for example, let's choose this one.
+I can just click this point and drag it around and then we can exactly change our animation.
+Uh, the curve of our animation and change the speed and the length and the pointiness and,
+and all this kind of stuff you can change with those, uh, busier control points.
+You can also toggle free tangents and then, um, you can even control them more by just, uh,
+changing one of those control points, uh, which is really handy.
+And yeah, that's the busier curve.
+So the next one is clips that we will go into detail in the third part of this tutorial.
+Um, but first, so when I'm tweaking my animation, um, you found, find yourself often to like play this,
+this one part all the time and see until it fits real, like you tweak the animation until it fits really well.
+Right.
+And that's really annoying when you have to scrub the timeline all the time.
+So for this, uh, in cables, we have the loop, uh, area or loop mode.
+So that's this little icon here with the, with the two arrows.
+So when I click this, you will see there's a, uh, red area here.
+So I can, I can just, uh, drag this right corner of the area and make it, uh, uh, bigger or smaller.
+And if you drag the middle part, I can move it around.
+I can also, I can also, so when I click this, I can, again, it's now an X, then it will be removed.
+I can also select a few keys and then, um, click loop area boundings.
+And then it will create a loop area between those three keys.
+So, and now I can just, uh, let it loop and, uh, continue editing my curve and, and look at the outcome and, and fine tune it until I'm, I'm really happy.
+And then I can remove this loop area again.
+This is, this is just for editing and yeah, you can resize it while editing.
+And then you can work on this really little small part of your animation, um, while seeing the results.
+And, yeah, so this is the basic overview, um, of the timeline of key creation of the timeline.
+Um, there's, there's even more stuff and we will talk about this in the third part of the tutorial.
+Thank you very much.
+Thank you.

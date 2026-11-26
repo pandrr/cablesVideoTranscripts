@@ -1,0 +1,35 @@
+https://www.youtube.com/watch?v=46MCfZRQiGU
+Hi there and welcome to another video of Made with Cables. Today I'm going to be showing you how to connect cables to the MIDI clock signal from an external sequencer. This could be Ableton Live, Reaper, Cubase, it could also be Max MSP or Pure Data or Touch Designer.
+So let's get started. First of all on Macintosh you're going to use IAC MIDI driver to allow your DAW to talk with cables. In Windows we're going to use IP MIDI.
+It's free for 60 minutes per restart. So basically every 60 minutes you have to restart your computer for it to work. It's just a great way to test if this will run correctly in your system.
+And to make it really clear, you just always need a third party application to allow two programs to talk to each other with MIDI.
+So I've already installed IP MIDI. You can check out other alternatives like MIDI Oak and check some forums somewhere else. I'm not going to cover that in this video.
+So I'm going to go to Ableton Live, I'm going to go to Options, Preferences and you'll just have to find this relevant menu in your own sequencer.
+And here, Evernet MIDI is the IP MIDI program that I installed. So I'm going to click Track, Remote. These are the options that are getting sent out.
+And this is the most important one, Sync. So if I click this, in the top left corner these two boxes appear and there's pulses and flashes.
+And that's live telling me like we're transmitting a MIDI clock signal. If you just look there and I click this a few times on and off, you can see the difference.
+So right now I'm going to go here and I'm just going to put this on Evernet MIDI. This is how I would send out individual channels for later. Just want to put that one in.
+And now I'm going to go here to Cables and it's really easy to get this stuff up and running.
+So I'm going to grab a MIDI input device because Cables doesn't see a difference between a MIDI hardware controller or IP MIDI.
+I click here and I get Evernet MIDI, which is the same option as in Live.
+Now if I pull this down, I make the MIDI clock beat up and by pressing F for flow mode, you can see I'm getting signal from Ableton Live.
+I'm now going to go here and I'm going to grab the output. I'm going to put a divide up here.
+I'm not going to go into the real math behind this. I just want people that are starting with this just to like kind of get the hang of it.
+So I'm going to throw this here and just the easy way of saying it is just divide it by multiples of three, like three or six.
+So I'm going to put this on three and I'm getting a floating point number out, which isn't normally what I want if I'm just like looking at MIDI.
+So I'm going to get the floor up. And if I now click the floor up, you can see this is my output, but it's going really quick.
+So I'm going to go back to Live and I'm just going to pull down on the BPM there so we can see what's happening.
+And now you can see that dividing by three, I'm getting a number that's going from zero to seven.
+Let's slow it down even more. All right. So here you go. Zero, one to seven. You can see it there.
+This is basically a loop from our sequencer. So this is the easiest way just to get data.
+If I go to divide and I now put it on six and then look here, we're going to loop from zero to three, which is basically four divisions.
+MIDI clock also has a start so that if you press start in Ableton Live, one trigger will come out from here.
+You also have beats. So let's just visualize this for a minute by getting the sequence up.
+And as you can now see, the pulses, the beats are going to come out here.
+We're going to crank this back up again so you can just see what's happening.
+And here we have the beat. So it's really, really easy to get the MIDI clock signal from another sequencer running inside the cables.
+Here's the BPM. Here's a tick duration. Google that up and then you'll figure out what that is.
+But this is enough to get anybody going with bringing a level of control from MIDI clock from an external sequencer into their cables patches.
+I hope this video has been educational and informative.
+If you have any questions, please feel free to post them under the video below or on the forums.
+Thanks for your time. Bye.

@@ -1,0 +1,352 @@
+https://www.youtube.com/watch?v=xRbg1Az0k8k
+Okay, so at the beginning of this month, we did some updates to cables.
+We kind of felt that what we were working on dev was in a pretty solid stage to push
+it to live and as we do, usually we will just walk through the blog post for the release.
+Again, same with the talk before, if you have any questions or any feedback, just feel
+free to interrupt us wherever we are talking and with that, we just start going through the
+blog post and the first thing that we mentioned in the blog post, also the first thing that
+I want to mention here, so we started asking for support on Patreon a few months ago.
+I think two or three months.
+That turned out pretty good.
+So, now we got something like 18 to 20 people actually financially supporting us with cables
+development and that actually turned out to give us enough money to kind of update our servers
+and work on that.
+So, we spent some time optimizing page load speed, optimizing server infrastructure, working
+on making cables faster.
+So, if we can chip in some money, just be aware that we're actually spending this on cables development
+and infrastructure and we have some more things up our sleeves that we want to do with the money.
+Thanks for the support of everyone, keep on giving.
+Yes.
+Yeah, and as Pandor also shows, like you get your name.
+Like if you can't connect your Patreon account with cables, you get some credits on the credits page.
+And also, like an icon on your user profile.
+So, that being said, that's what we do with the money that comes in through Patreon.
+And the next thing would be the so-called new activity feed.
+We always thought that it was possible for a long time to actually invite people into teams
+and patches and share patches to collaborate with.
+And then with the last releases, we kind of fine-tuned on permissions and how that works.
+But this invite page was a bit convoluted for what we thought.
+So, we created a place where we basically combine any and all activity that is going on on cables
+around you or your teams and patches in the new activity feed.
+Pandor already clicked on the icon that is new on the top right in the navigation next to your avatar.
+And for Pandor, it also has like an indicator that there's something that needs some attention.
+So, all the invites, you being invited, you request someone requesting access to your patches or teams or whatever
+will now appear in the activity feed with this red bubble up there.
+But we are also collecting even more than this.
+So, if we scroll down a bit, we will now see that whenever someone follows you on cables or likes your patches
+or even just reacts to your invitations or requests, we are putting this here.
+So, you are always able to see what's up.
+So, if you don't have any actionable things, so if Pandor now exacts my invite basically, then this thing will be empty.
+And if you get some new like for your patch or something, this will update and have like a small white indicator
+for you to see that things happen.
+We're trying to build more on this, so patch lists will surely follow on something happened to a patch list
+which you're a member of or liking patch list or whatever activity there is.
+And to not keep this too convoluted, this will be this data like any data on the activity feed
+that is not in need of taking action is retained for 30 days and then deleted.
+So, because we all know that these things pile up a lot.
+So, that's a new place where we work with invites and you can see whatever happens.
+But some things are really, really urgent and get lost a lot.
+So, especially invites or requests or collaboration rights, we thought it would be nice to react immediately
+and also be notified immediately so we dove into what we do with notifications.
+So, up until now, for example, someone invited you to a patch and the only way you will know
+this is either by reloading cables or being notified on the website with this old red button.
+But now we are also able to give you this information in the editor with a small indicator
+or via push notifications on basically any device that has a browser.
+So, on this page, now you can click on add this device.
+It will ask you for permissions to do this.
+And then to test this, you can press the send button to see if all your operating system settings allow for this.
+So, we send a test notification.
+And with that working, you will now be notified of any invite or requests on mobile phones wherever you want.
+And we try to keep it as low as possible.
+So, it's only actionable things that you're being notified of.
+Yeah, it's only important things that like someone wants something from you basically, right?
+Yeah, you need to do something.
+And this, I think, is a pretty good way to not be distracted.
+So, once you get a push notification and you're in the editor, you get an icon in the editor.
+You click that and then in the editor, you can react on this call to action basically.
+Yeah.
+So, that's a big cleanup thing that we did with notifications, activity feed, and decentralizing the invites
+and keep you a bit more updated on what's happening and what needs action.
+Yeah, I really like to receive the notifications on the mobile phone.
+I don't really want it on the desktop, but on the phone, it's really handy that I see there's something, someone wants something.
+So, yeah, we try to keep it non-spammy and I think then it's really useful and not annoying in the end.
+That's the hope.
+Yeah, along with that, as always, came some improvements to different parts of the website.
+For example, the patch page, but you will see this on the blog post, but more updates on the editor changes, small quality of life thingies that I guess Panda will show you around a bit.
+Yeah, so we improved the texture preview functionality, I really use it a lot.
+So, if you click on a texture and open this panel here, you see the preview.
+And you can now easier zoom it in and out.
+And you also see the size of it, which really helps with just understanding the picture that you're looking at.
+Yeah, then we added those color indicators.
+It's really still a bit experimental, but in this example, in this patch, for example, you can see really clearly that this is the red one.
+And if you scan over the patch, you will know this is the material of this rectangle, so you can identify in many cases really quickly what is drawing what.
+So, so that's really helpful, maybe there will be more, we will improve that or make it more, I don't know, feature rich.
+But, yeah, for now we really like it and, yeah, you have to experiment with it.
+So, it's also always great to hear if you like this or not, or if you have some, some other ideas, you know, there's this, this function to colorize the operator.
+So, it's basically, it's kind of like the same.
+So, maybe the color rise should overwrite this or does it exist in parallel?
+I don't know, like, so we will, we will experiment with this, this kind of stuff for easier identification of operators.
+that are important or where there are to do's or I don't know, like, yeah.
+It's super handy to have an overview of all the materials or operators that work with color.
+Because you have like this texture and all the bizoffs, but you put them in after you're trying to get an overview.
+But this gives you in bigger patches a really great overview of where is this red coming from, where is this blue coming from.
+Yeah.
+Yeah.
+Yeah.
+So, yeah, we are experimenting with this.
+Let's see where it goes.
+Then we have this little color scheme, which I find really, really cool.
+So, you can read out the, the operating system settings of your users.
+So, you could, for example, you could do the haunted house at night.
+It's a bit darker.
+Or, okay, there's a, there's a bright background or something, depending on, on the user.
+So, yeah.
+I actually just thought the same thing.
+It would be super nice to have this haunted house and it's super not scary if you have like a light.
+And it's really, the nice thing is, there's super real time.
+I mean, it's not really that useful, but you can just have this operator and when you switch your operating system to another color, it just changes in real time.
+I don't know, I thought it's a neat thing, so you could just adjust stuff on your screen to what the user prefers right now.
+So, yeah, I really like this, this thing could be a neat, neat feature.
+Okay, manage opcode.
+So, this is when you program your own operators.
+We had this, actually, we had this panel here.
+So, this was divided in two, which was always a bit annoying.
+So, when you resize the view part, it would show a different second panel.
+And if you make it small, then you, it was always confusing to which panel cable switches back.
+So, we completely removed the second panel because a lot of the stuff was already, has already been moved to the.
+The code editor and to the tab panel where also the code editor lives, like the file panel, for example.
+And, yeah, so we went further this way.
+So, the code meta panel, which you used all the time when you programmed operators, is now gone.
+So, you can click an operator that belongs to you.
+Let me quickly use this one.
+So, this is a user operator.
+So, now I have those items here.
+So, this means I can edit this operator directly here.
+Or I can click this icon and then it opens up this new panel that we now call Manage Orb.
+That was the code tab panel on the right.
+And you can now do create your attachments here and add libraries to your operators.
+And all this kind of stuff you can just do it here now.
+And you can reach this, like, multiple ways.
+Like, you can click this button here.
+When you're editing an op, you see now there are a few more buttons up here.
+So, you can click this Manage Orb and then you're here again.
+And what's super handy is you can...
+I need a different operator for this.
+Ah, this is because I'm on live.
+Let me just quickly go to dev.
+So, when I'm editing this operator, for example...
+So, this operator also has shader attachments, for example.
+So, you see this button here.
+And then you can quickly open a new editor with the other attachment from this operator.
+And you can just open all the attachments and then switch through them.
+Which is super handy because you don't need to change switch to this tab and, like, move around the screen.
+And all those different contexts.
+Now you just have this editor and the editor now tells you this is our basic material.
+And it has those attachments and I can just quickly open them.
+Which is really convenient and also makes it more accessible and easier to find your way through the operator codes.
+So, yeah, I think this is really neat.
+It's a bit...
+You have to get used to it.
+But I think it's like after...
+Now, with all the ways to open those things, it's actually way better than before.
+And the screen is not so convoluted.
+Also, you can resize this and make it really wide, which is also handy in many cases.
+This also gives some space to this canvas info bar.
+Oh, yeah, right.
+So, this bar here, in the old version, it was faded out in the bottom and you had to click the canvas to resize it.
+So, now this resize button, this resize thing is always there.
+You can always resize it, which is also really handy.
+And in the beginning, like we showed all the icons, but I thought it was a bit distracting.
+So, if you have this panel open and you have all the icons, it's a bit too much.
+So, we just fade them out to only show them when the canvas is focused.
+And, yeah, I don't know if you have any opinion about this.
+Let us know, it's really interesting and I don't know.
+We just want to keep the UI relatively clean, so this is why we fade this out.
+But, yeah, could also be user setting.
+I'm not sure.
+I really like it this way.
+Also, there's no distraction with the out fading and overlapping.
+There was some overlapping, but, yeah, let us know what you think about this.
+Yeah, this is also now it was always a problem that like things were hidden when you are resizing.
+So, now it opens this.
+It shows you those little contacts menu here and there you can also select all the functionalities.
+So, we just move them out of the way and you can still open the functionality.
+So, it's much cleaner now, I think.
+Yeah.
+So, then there's the PBR material.
+I don't know.
+Maybe Cflap is in the meetup and wants to say something about it.
+Yeah, I can also show the changes if you like.
+Yeah, that would be great.
+Are you streaming?
+Yes, I think so.
+Okay.
+Yep.
+Okay.
+All right.
+So, there were two changes to the PBR material in this update.
+Basically, one of them was mark control of the clear code.
+So, if you're now creating PBR material, you have some options for the clear code, which
+is basically normal map related and also the intensity is also exposed.
+So, we have the clear code intensity here, which is the intensity of the clear code.
+And you have the option to use the mesh normal map for the clear code effect as well, or use
+a separate one.
+For instance, like in this example, I have two normal maps.
+One for the background object and one for the foreground, basically.
+And they are overlaying each other.
+Oh, nice.
+So, for instance, you have the background object and the foreground is then overlaying.
+With like a different clear code normal.
+This can be very useful for stuff like orange peel effects or some more shenanigans with clear
+code.
+Yeah, the second edition was also kind of clear code related, but a little bit thinner, which
+is thin film interference.
+So, if you scroll down here, you can see that below the clear code you have the thin film
+iridescence, which is basically an effect where you get some wave optics into a physically-based
+renderer and take into account interference that happens on thin surfaces.
+So, basically, it's complicated from a physics point of view, but for the usability is basically,
+you set an intensity for the thin film.
+So, how intense should the effect be?
+You set the IOR of the thin film, so the index of refraction of the film that you use, and
+then the thickness.
+This is basically the only three values you need, and then you can tweak the effect.
+For an artist, maybe the IOR is a little bit confusing, but it's basically just a factor
+of contribution.
+So, if the IOR is very high, you get a lot of wavelengths in there.
+So, the effect gets a little bit less intensive, but with more colors.
+And the thickness is basically also kind of controlling how many wavelengths are coming
+in, and if you have a high thickness, you usually have more pastel colors, more desaturated colors.
+So, for the most intense effects, you use low thickness and low IOR, and then you get some
+nice colorful waves.
+So, is there a way to establish specific colors for iridescence, or just play around with the
+values?
+Basically, you can use physically best values.
+So, if you want to use this to create colored iron or something where you know that there's
+a certain thickness to a certain color, then you can use the AI slider basically to match
+the color.
+And then go from there, you can use physically best values.
+Yeah, why I asked, I started playing Forza Motorsport, if anybody's into that, but they
+have a kind of custom color selector, and you can actually create multi-layer flaking.
+So, like on one side it's orange, and then the second layer can be, you know, whatever
+color, where you can do purple and blue, or similar to those iridescent color wraps and
+paints that you may have seen on vehicles.
+Yeah, I mean, most multi-colored vehicles use different flakes, as far as I'm aware, where
+you have different reflection behavior between certain types of flakes.
+So, this is strictly thin film iridescent, so also not an optical grid or anything like
+this.
+So, there's a lot of effects that can create rainbows, this is just one of them.
+I feel very cool, like this helps us a lot on some of the projects that we're even thinking
+about working on.
+Yeah, basically, for an artist it's more important to kind of understand what these values do.
+Like, the IOR can be very technical, but you can also just, like, wiggle it to the left
+and the right.
+And if you know, okay, I have a high IOR, so I have a lot of colors in the Fresnel or something,
+then you can work with this.
+One of the most important parts of this is basically that the difference of the base IOR
+and the IOR and the IOR of the thin film control the intensity of the color.
+So, if you have a metallic surface like this and then a low IOR for the thin film, then
+you get a very intense color.
+You can also see this if you decrease the metalness of the surface.
+So, for instance, here we have an IOR of 2 and the base IOR of the surface is 1.5 around
+there for a dielectric material, so you can see the effect decreasing towards 1.5 and then
+getting stronger again.
+So, you can see around 1.5 the effect is very subtle and if you go up or if you go down,
+it gets more intense.
+Interesting.
+Like, main things you have to think about when working with this.
+Very cool, thank you.
+Yeah, so you can also plug in a texture, and the texture is a bit home-brewed, so it's not
+really commonly how it is exposed, where we have three channels, one for the intensity, which
+is red, the green one is for the thickness, and the blue one was the IOR, so you basically
+expose the intensity, again, just the intensity of the effect, and the green channel holds a
+value from 0 to 1, which is getting remapped to the thickness that is provided in this section
+here, so you basically have this text min, text max, so the value from 0 to 1 is remapped
+to these values.
+So, this is in line with GDLTF spec, and the only thing that is kind of uncommon, I guess,
+is the IOR value, which is exposed as 1 divided by IOR in the blue channel of this texture.
+So, yeah.
+Yeah, really cool.
+Maybe this is kind of the example that you mean.
+Like this helmet, for instance, has like a slight IOR, like a thin film on it, which is causing
+this yellow color, and if you change the IOR, you get like different kind of colors for different
+people, for instance.
+I don't know.
+And then you could also mask it.
+And isn't there also a GDLTF extension for it?
+I think we should also implement this.
+Yes, but this one doesn't really specify a composite map for this, so it's basically just two maps for
+the intensity and for the thickness.
+And the thickness is also remapped from like a start value to an end value.
+And it doesn't really expose the IOR in the texture, but I think this can help people.
+So, I added it.
+But yeah, we need to add it to the GDLTF scene loader so that it uses those values automatically,
+right?
+That would be possible.
+Yeah, that'd be cool.
+We should look into this.
+Also, this is entirely dependent on the normals.
+So, you basically take the normals and then do some math on them.
+So, you can use a like nifty normal map to also get some cooler effects, I guess.
+Yeah, this is so cool.
+So, if you have any questions or suggestions on this, feel free to message me on Discord.
+Yeah, thanks for the contribution and thanks for showing us.
+Really neat stuff to play around with.
+Yeah, really cool.
+Really cool effects.
+Yeah, great stuff.
+And I think it's also the PBR material feed so advanced now.
+It's really, really great.
+I also have to play with it with those two normal maps.
+That's actually, yeah, I need to learn this.
+This is really great stuff.
+Thank you.
+While we are in off territory, I think it kind of wants to show something.
+Oh, yeah, exactly.
+So, somehow it's not landed in the blog post.
+But we really like the new operator called rectangle nine slice.
+The name seems a bit complicated, but it's actually a standard way of doing things.
+So, often it's used in games.
+So, the idea is that you have just create one image and you can basically divide this image in nine parts and those nine parts are mapped onto a rectangle.
+So, I can create a rectangle.
+I can do this here.
+I can just resize and usually if you just have a rectangle here and I would change the width and the height.
+You see it would just stretch out, right?
+But the nine slice rectangle just takes, in this case it takes a quarter of the image and just moves this to the side.
+And then you don't have any stretching, but you can create buttons or areas for text with it.
+And you can use, yeah, please.
+I thought that was a question.
+You can use more complex textures like this, for example, and create nice buttons.
+And you can just switch the texture and change some parameters to create different buttons, like this one, for example.
+Yeah, so here's the point material that just shows how the rectangle is basically composed, right?
+So, those are the vertices and when I change the width you see the corners stay the same size and only the inner part is being stretched.
+So, yeah, really useful stuff if you have a lot of buttons or other content to show and want to create this and don't want to create
+You also use the texture for it all the time.
+You also use this to create some shadow.
+Yeah, exactly.
+So, you can also use this to create like fake flat shadows on the object and just resize it so that it fits really handy stuff.
+So, if also, so if I do make this texture really small, really small, even smaller.
+Okay, doesn't really work with this case.
+Oh, sorry.
+So, this texture is actually pretty cool because this is a generated texture.
+So, this is with the gradient texture operator.
+So, you can set it to radial and then you get this circle and this works perfectly with the operator.
+So, I can go in here and make this more blurry, for example.
+And then you see it kind of already looks like a shadow.
+So, I can set this to black and then you can place it under underneath an object and then it kind of looks like a shadow.
+So, really handy stuff, especially with the gradient texture operator combined.
+You can do interesting effects.
+Yeah, really neat operator, we think.
+Yeah, I think that's the release, right?
+Small rundown of the release, but it was also just one month between the two releases.
+As always, let us know what you think about the release and everything and give some feedback to
+DigitalPanda as well, even if it's just like, hey guys, well done.
+Yeah, okay.
+So, we will stop now the recording on YouTube and then just continue with basically the social part.
+So, everybody on Discord can just join in, ask questions and just talk about anything you want to talk.
+And if you watch this on YouTube, join the next meetup on Discord.
+We usually do this on the something, on the second or third Wednesday of the month,
+which next month would be, you know, whatever, 13th of December.
+Yeah.
+So, join us then and there.
+Okay, bye bye.
+Bye.

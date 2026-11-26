@@ -1,0 +1,57 @@
+https://www.youtube.com/watch?v=00Rvb749wrc
+hello this is Alex from cables.gl I want to show you a really simple really easy
+to use operator which is so handy and I have no idea why I didn't cover this
+earlier or why I don't use it because it makes life so much easier when you're
+trying to simply add animations to your value changes so anything you change in
+a parameter panel for another operator that's a value so a number you can run
+through this operator and it will animate it and smooth it out so the smooth
+operator is super nice a great name and describes it pretty much on point so
+I'm gonna put it down here right and we'll look at the parameters first the
+description smooths out jumps in values super nice and in parentheses it says
+average interpolation so it will average the last and new value you feed to this
+smooth operator and you can do it by changing it in this parameter panel the
+value or of course plugging something in which is what we're gonna get into then
+you have this toggle and another parameter here called ink deck factor and that's
+the increase decrease factor so right now it's set to four and this toggle is not on by default so what's
+gonna happen is when I give values to this operator that are higher than the last one so for example I have one and then I'm moving into three right it's gonna use this factor of four so it's going to smooth out the change over some time
+some time with a factor of four and if I decrease the these numbers or the values
+that come into this operator it will also use this factor of four but if I
+toggle this on then I can set my increase and decrease factor separately so for
+example if you click or mouse over a menu item or you know you want a color
+change or something like that once the user interacts with this thing or you
+know you send a trigger or you change the value somehow it will maybe play it
+faster and then when you do another interaction will play it slower so yeah
+long story short let's try it out so I have this rectangle here this blue big
+rectangle and what I want to do is change the width and right now I'm doing
+doing it in the parameter panel and it's changing and then once I let go it stops changing and then when
+I change it it changes immediately and I want to start designing maybe like a menu
+button and I want to see how this thing will look so with some animations so I'm
+going to put down the smooth operator it needs a constant trigger so usually hook
+it up to the main loop or yeah that's that's the basic usage of it you can of course like
+start doing different ways of triggering it but it won't really be smooth then so you'll defeat the
+purpose all right so let's hook in the output of this operator into the width and then when I change
+the value it's smoother and let's let's go to the default settings it's smoother but I want to change
+this four to maybe like 20 or something right so now when I quickly change it and if I select this text
+these numbers and I just type in five right it you can see this graph over here and I'll try to do this
+again so I'll go to zero and then you see that there was this like gradual change from 20 or whatever I
+was at two zero so yeah that's pretty much the whole thing with um smooth it's super easy to use right and
+just to make this um tutorial longer I think I will try something we looked at um before in another tutorial
+where we used user interaction to um change values and I used uh I think trigger var number for this
+our trigger number and uh I also will use a mouse button operator
+and okay so left mouse button we'll set this variable and uh if you haven't seen the video for this
+um operator set um operator set I definitely recommend it because it's not just for numbers it's a whole other
+thing that you can also use with smooth operator or um well yeah mostly values you will be using with
+smooth operator but of course you can like break out variables from uh an array or something okay so
+let's create a new variable and let's call it with uh change okay and the value will be let's say one
+so right now I have the the flow the trigger flow activated that's button f so if I um focus my patch
+and press f I can see like the flow of uh my triggers so now that I have the mouse hooked up to this um trigger
+variable and I click you can see that it flashes um and I'm setting this variable okay nice and then what
+what I'm gonna do is assign my right mouse button and I'm going to duplicate this with um ctrl c ctrl v but I actually
+bound it to a mouse button on my billion button mouse and I'm gonna set is this the right yeah so I'm gonna set
+another variable or yeah I'm gonna set another value for the same variable with my right mouse button okay so
+let's make this one five okay so now when I click I change these variables right it's gonna be an immediate
+change from one to five and then I'm gonna go to the smooth operator and uh the value here
+I want to control it with this uh little setup and I'm gonna click these three dots and assign a variable
+and select this with change variable I just created and now when I click it smoothly changes amazing right
+but yeah so that's just an example of how you can use it of course you can feed in um values from somewhere
+else or you don't have to use variables but anyway I hope that was useful um see you soon bye

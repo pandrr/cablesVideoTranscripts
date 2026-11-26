@@ -1,0 +1,189 @@
+https://www.youtube.com/watch?v=f_XWFanm_JY
+hello this is alex from cables.gl and today i am joined by stefan from the on dev team
+hi there yo so we have a really cool uh setup here we're gonna try out and demo the multiplayer
+slash remote viewer feature of cables that is brand new uh since the last release um of cables
+that came out a few weeks ago and my goal is to show that you basically use this new feature to
+test multiple operating systems and mobile devices from a single workstation for example and then
+you can see all the changes that you make to your patch inside the editor so we have the scene of
+um this kind of example that we are working on together that we want to show to um uh another
+client or something like that or an um another team member we got to prepare this thing together
+and we're working on it inside the editor at the same time so whenever we add things to the patch
+it will show up across all of our devices and we can say like okay this needs to be
+cropped in a little bit more or this model is a bit too big or this actually doesn't work on mobile
+there could be instances of that uh and then we're gonna get into the super freaky feature which is
+multiplayer where i can hand over the controls of my patch to you and then you will add things live
+inside the editor um to the patch that then i can see on my devices as you add it i guess that's the
+concept we got sounds great actually yeah um let's go for it so uh we have the scene with a gltf uh
+model in the in the front here on this pedestal and the pedestal is looking a little bit uh shabby
+like it's totally flat and uh i need to work on that and i think i want some font maybe behind it
+as well and i'm gonna use the the new extrusion feature that we got from uh the last release
+and by the way this model i'm going to leave a link uh below uh in the description it's really cool
+i got it from sketchfab fantastic artist and all right so let's get into it right now i am in my
+patch and i need to connect my other devices to this session this remote viewer session right
+um guide me through this stefan because i'm actually not that expert at it yet uh yeah we kind of added a
+new um option to um the patch menu so if you go over the patch name where it says copy of new project
+um then you will find that um we have view and patch page as we uh view patch page that we had before
+and now we added a qr code as well and now we have the kind of same thing that appears um in your patches
+and in patches you're a collaborator with and now you can um open this in a new window or as we do
+uh now open this on mobile um this will then open um a new window or it will load your browser on mobile
+um with the current state of the patch and basically you have like um the the renderer part um what we
+call um the right side this um now on your mobile um presenting the state of the patch at the current
+time and everything you um you change in the patch like um adding operators and everything will be
+or um changing value use in materials colors as we uh want to do will then reflect on the other device
+this requires a network connection um obviously because we're sending this um yeah via network
+um but it's a really convenient way um as we will see really soon to debug stuff on different browsers
+operating systems mobile devices and everything so let's go for it well what i got is you said i can
+actually open it in a new window so that means well let's try it it opens a full screen version of
+of this patch and now yeah and as you can see the patch loads your orbit controls are working as
+expected um i'm interacting with this version yeah yeah this is interactive so it's not a rendering or
+video or something so um all the controls you put into your um patch are available in remote viewer so
+yeah that's a good idea so if you do this right now and then um change some color or change the position
+um of the model um we have to go back and forth between the right but it's cool because i can put this
+on a on another monitor like a big one so maybe i can maybe like you know uh sometimes you get to a point
+where um you know font material has a billion different settings that i want to work on but i also want to
+see this bigger but then i have this not enough area to like to see all my parameters so actually i can
+actually make my parameters really big and then go to my um this one uh that was my my font that will uh
+that was a spoiler for the font we're gonna use later i'll also link it don't worry about it so
+now i have this window here which i can keep on a other monitor or like full screen
+to check you know what i'm changing so if i will for example
+remove my pedestal completely and that's that's another part i'm going to get into later then it's
+removed on my other tab okay right yes same on mobile then right so all the changes that you make
+to your patch like you just um did with disconnected enacting ops or connecting ops um they will
+instantly reflect on um on all the connected um windows basically you can do this multiple times
+also you can open this in multiple tabs multiple browsers multiple devices whatever so like i can
+actually open this in a new window and then copy paste this uh url into another browser and yes okay
+so let me actually um open a mobile tab with this project with this session and then we'll get into it
+i'm going to actually record and hopefully this works
+i'm going to maximize this a bit
+all righty
+so i got this other tab open where i already prepped some of the things that i want to add to
+my project and i'm going to record this on my mobile and the goal of the whole thing is like we're basically
+just now copying over um ops it's not so much about what we do with the patching it's more about seeing
+how the changes reflect um instantly on all the devices and as you can see like um when we joined
+with the remote viewer you will see this small um additional navigation bar uh up here to uh next to
+the patch navigation oh yeah and um this will give you some information um like the small mobile icon
+is our icon for the remote viewer and this will also tell you hey we're chrome mobile on android
+um and you can always send um a resync command so if stuff is out of sync um for example if your mobile
+phone uh got into lock screen and you open it again then you might not have the correct state um so now
+if you press send recent command or if you would press send recent command um the patch would basically
+reload on that device um that you just selected yeah it's doing that now and and reloading the 3d model but
+anyway so i want to add the stuff that i worked on in another version of the patch where i need this font and
+i'm going to just cut it and then go into my patch that we're going to present to our secret client and
+then i'm going to add it in to the patch and you should be able yep it's on my mobile now great
+and then maybe i'll just do this uh box as well
+cool yeah so as you can see it's all nice and easy you don't have to like stray away from the usual
+workflow of patching it's just um synchronized as you go you can copy paste and um you know
+basically adjust everything as you're as you're using cables and um the remote viewer will always
+reflect the current state of of your patch and um your settings basically nice yeah i can like i'm
+already if uh i'm gonna include this mobile recording on top of this one and then you might
+notice that it's a bit difficult for me to orbit really quickly so maybe for mobile i need to try
+something like a different setting for the orbit control so i'm just editing it live right now in
+the parameter panel and then you'll see that on the mobile device now it's rotating a lot faster
+cool actually i'm gonna adjust this um texture because it's a bit too dark
+i'm gonna unplug this plug this and then do it like so
+cool well i guess i'm done right so i'm happy with this and then i'm not yeah well sorry well you know
+what i think maybe you should do it then because it would be weird for you to tell me what to do right
+how about i uh invite you to my session you got the link right yeah i got the link so um first of all
+maybe let's just quickly go into this because it's also um really missed if you click on the patch um
+name again and then you will see patch settings and then you will see a tab that is called collaboration so
+um whenever you're a collaborator and you added or invited um people to the patch they are collaborator they
+can edit um uh everything and if these collaborators then join the same patch at the same time um as i'm
+now trying to do um you will see um you can close this again i think um because then in the multiplayer
+bar as we call it you see me appearing like i'm there and i'm kind of kind of blurred out and on my
+screen it now says join because you have a remote viewer you're already in kind of a multiplayer session
+um so i cannot join this and um then um i will see what you're doing so if you do so i see your mouse
+yeah yeah you also see my mouse right and um you will also see something like hey can you quickly clean
+this up it's like really i don't know it annoys me can you like okay sorry i'll put this up by five pixels
+or something like yeah that's a lot better um so this now is all um clean and tidy and i um i see that you
+um basically added this before so um that's where we're going um but then i kind of still don't like the colors i don't like the black background and um maybe um yeah maybe the pedestal mm-hmm this one
+um so um right now i'm following what you're doing and um we call this you're the pilot of this now um so any one person that's a collaborator and in a multiplayer session can be the pilot um and their changes will then um be also transmitted to everyone um so any one person that's a collaborator and in a multiplayer session can be the pilot um
+um and their changes will then um be also transmitted to everyone else so let me be the pilot for this i click
+on the um on the icon of the pilot that has the pen right next to it and for me it says okay request pilot
+seat yeah this pops up for you and now you have 20 seconds to accept or decline my request if you don't
+do anything in 20 seconds we will accept this this is so people don't right if they're like out to lunch
+or something yeah or something like this so if you accept this then we will see um that it now says uh
+you're following stefan in a multiplayer session um editing is restricted so now um i can work on the patch
+and um we still have the marking of the areas and um you will follow my mouse and you will also see all
+all the ops that um i selected and the um current um state basically right but i can't interact with
+it right yeah yeah because you're the pilot i mean you have the areas to hint me and it also makes sense
+i guess to um as we do now have a voice chat all the time but as i said i don't like the black background
+so um let me see if i can um somehow quickly fix this um so i'm putting in a clear color and the black i
+don't like so let's do something like this i guess um and as you can see the same thing as with the remote
+viewer um your changes in to the patch like my changes to the patch are reflected um to your renderer
+but in this case also to your um to the editor so you saw that um that the clear color up appeared
+and if i now disconnect this again um then it would disconnect you will see um where i'm at and this you
+can basically do with with everything we just added the clear color change the um color but i can also
+do this with um with the form material so let's also change um the color of um the pedestal so this is nice i
+i guess if no one asks any person with like an idea of color no it's fantastic and um as with everything
+so now i can also do like i transform this and um you see um this is being reflected um in real time
+it's a real nice way to um to hand over control and um maybe work on the final steps of uh of a project
+do like small adjustments uh and work with that um cool so i guess that's
+so maybe to show that you could now um like now i'm done and you say hey this blue is really crap or
+yeah like a red so now um as i did before you click on my icon that has so the one with the pen yep and
+then i go to request pilot seat and now i have the same pop-up um appearing and now i um accept this
+and now it says you're the pilot in a multiplayer session and now you're in charge nice again yeah
+very cool now i can undo all your changes
+yeah this is sweet i think uh very very new um
+interesting step in the way to collaborate in inside cables gl um pretty exciting and uh
+yeah i feel like we're pretty we pretty much covered it all right yeah i think so i mean there's a few
+more options so if you um for example it has a leaf button so if you're um in a multiplayer session and you
+don't want anything to don't press it now yet um i don't want anything to do with it but go back to old
+style of cables where um you had to press f5 and for reloading the remote viewer a lot of times and also
+um communicating to people i'm in the patch um then you can always leave and then you're back um to normal
+and um this three dots menu also gives you the option to load the last saved version so if we do this we
+basically destroy um what we did and also remove the nice um logo yeah all the stuff that i added yeah
+because i still haven't saved it yeah but if you do this um then this will also reload on my side right
+so um yeah and on my mobile phone on on your mobile phone and everything um so we put in some because this
+synchronization is like obviously network heavy and um some things might go wrong in transmission
+um we put in a few things that first of all it's optional you don't have to join a multiplayer session
+you can work the old version if you want you can always leave and you can always resync with the remote
+viewer you can also resync with the pilot if you're not the pilot and um the pilot can always go back to the
+last saved version if um something should be um weird due to network issues or even you just did a mistake
+or um didn't like what what the other person was doing while being pilot
+right and also i can create backups as we're working on this stuff as well yeah this you can always do yeah
+yeah sweet i think um we pretty much covered it i think everyone should try this out this is now live
+this uh this uh i think it's of course tell me more like how did this come to be really because i um i
+remember it started more as a remote viewer um so this was for testing across devices and then
+suddenly there was multiplayer like what yeah it kind of shifted back and forth um so we wanted multiplayer
+um having like this collaboration feature for a long time and then um we um started doing um this remote
+viewer which is a nice debugging tool like again i said this before it's not like you're not remote
+rendering basically whatever you have so um as said for example your orbit controls will be on the device
+um but that's a nice part um of it that you actually can test on multiple devices especially
+different resolutions different browsers different operating systems and we have to do this a lot in
+in projects and so we kind of um made it possible to have a setup where i actually have like five to
+six like an ipad and uh an android phone and an um an iphone maybe a mac a windows machine whatever
+um to actually test this and position this correctly and this gets really interesting if you do
+um stuff like you did with the orbit controls um with with gate like gate triggers if true then things so
+if you're then setting this to speed 10 on mobile phones only but you keep it at one on desktop um by
+i'm using browser info for example whatever i'm rambling um but this is how this came to life and then we
+um say hey if we're sending patch information um or via the network anyhow then we might um just update
+the patch state and all the variables because we have them anyhow um and then um yeah this came into life
+and then we kind of like the idea of doing this um not super collaborative um thing where everyone can work
+at the same time um but having this handover which kind of saves us i mean remote viewer saves us um
+pressing our um reload button a lot of times um in different browsers and um mobile sys uh mobile
+devices um and this basically saves us for talking to each other a lot um while like can i go into the
+the patch are you out of the patch yeah yeah also recording videos and um even if you don't do
+multiplayer it's the nice information to see who's in the patch right now because even if i um right now
+i leave the multiplayer session then i will fade out um at the top and you will still see okay someone's
+in here and then maybe um you have like a reason to ask me hey or are you working on this currently or um
+can i go in yeah and again like the the permissions are uh based on the patch settings and the collaboration
+right yes um so um for let me think for public patches you always see who's looking at your patch was
+also really nice if you make a patch public and um publish it on twitter and go in there and see oh
+there's like 20 people looking at my patch right now um but all these collaboration um features are um
+restricted no they are available for collaborators in the patch so uh whenever you want um to work
+together on a patch with uh someone invite them to the patch via this um collaboration tab and patch
+settings um then they have to um open the patch that will be given a do you want to accept the invitation
+hint um and then i can um start working on this yeah yeah excellent i um really really uh amazing thing
+like you start to discover more ways of using this as you use it because yeah of course testing it across
+devices is nice you can check the colors for example on mobile but then you get into cool stuff like
+all right like my orbit controls are too slow for this particular device or on this device they're
+actually perfect so i need to make an extra like check or i need to develop a little bit
+my patch to do a check like easy on mobile easy on desktop and i can do this live and then save it and then
+re-synchronize my mobile device and immediately test it so it becomes not just a like a remote testing
+browser testing thing that we're all i guess quite used to but this is like cross-platform development
+that then morphs into cross team member development i love it yeah super cool i'm really looking forward to
+see um maybe someone has some more creative uses for um for this maybe it's more than a debugging tool but
+let's see what comes out of it i would love to hear some feedback and i'm also if something doesn't work
+as always like write in the comments contact us on discord and create discussions on github yeah come
+come hang out with us on discord and uh i'll link all that stuff below anyway thanks a lot stefan that was
+great um hoping everyone enjoys working together a bit more inside multiplayer cables yes yes bye bye

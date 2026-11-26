@@ -1,0 +1,103 @@
+https://www.youtube.com/watch?v=gPS2aeOFk1U
+hi this is alex from cables.gl i want to show you an awesome new feature in the pbr material
+and the pbr material got a number of new features in the last update but i think each one of them is
+quite amazing and needs its own video so i actually want to sit down with a majestic cflap who created
+this operator he's a member of our community and just overall cables guru at this point but
+he added some awesome new stuff and i hope we can sit down and talk about it a bit later but
+what i'm going to show you today is just a quickie about height map in pbr material so height map you
+might know from other 3d packages maybe as displacement maps or bump maps it's i think in
+the same kind of category maybe even like vertex displacement map because the way the height map
+works in pbr material in cables also takes into account the the camera angle and the viewers and
+position at how they're looking at an object so um before i make any crazy mistakes about how it
+actually works let's just look at how to set it up right uh what do we want we want a cool looking
+brick wall in this project um and i'm going to show you a couple of them and then maybe some creative
+stuff uh and maybe a real world and a nice uh space saving um project application that i came up with and
+uh i just want to say the the textures are from uh i think hdr haven but uh i'm going to um link it below
+and it's a again an awesome resource to uh try out all this um cool texturing stuff with our pbr material
+and uh you might also notice that i have a point light here and yeah now pbr material reacts to
+the cables lights but anyway we're going to talk about that later what can we do here right we got a
+pbr material with diffusion uh some reflection maps plugged in which for a brick wall i guess isn't
+uh so interesting and then we got normal maps and then this displacement map and right now the height
+map um or displacement map value uh is zero so we're not having any effect here on this wall and i'm just
+going to turn on this animated uh point light and you can see like the the effect of the separate bricks
+reacting to light looks quite cool thanks to the normal map right um however for example if we are
+going to be making a 3d room where we're going to walk around or let our user um run around like in a
+game or something like that in first person or even third person um we will need to do something
+about this effect right now that i'm close to the texture to the wall i'm looking around and even
+though there's some cool light effects on the normal map it looks really really flat especially when i'm
+like right up against it like this so this is where the hype map comes to the rescue and i plugged in
+number value into the port for the hype map intensity and i got this hype map here and let me show you how does a
+hype map look so this texture it is a black and white uh or luminosity map right that tells um the pbr
+material that the white areas are higher than the ones that are dark so here we have some bricks with um
+missing bits and uh some bricks have fallen out so they have black um representation in this texture so we're
+expecting some sort of a dip in height there and what i'm gonna do is enable this now and i'm gonna take
+it down and now hopefully you can see this effect now that i'm rotating the camera around i'm getting this
+effect that the bricks are sticking out from the wall and it looks really really cool and of course with the lights
+it also looks quite nice again thanks to the normal map so the way you really should be using this hype map
+feature is if you have a normal map and um the the textures that i'm using here are professionally made and um you know
+you know they're they're they're maybe even uh deduced from depth map uh or depth cameras or something like
+that or maybe some sort of interaction between um of more than one photo you know how they do 3d scans with
+uh photogrammetry things like that so you get really nice proper behavior of these bricks that are missing in this
+wall and what i'm gonna show you is look if you got a decent enough diffusion map maybe you can kind of
+fake these textures and and um cables can do this dynamically but of course you should probably uh save
+out those textures and not um have your users pay in performance for generating those on the fly all the time
+so let's um let's move on to another example right here is a really cool creative use of this hype map
+feature uh cflap made this and he is generating this kind of lava bubbling liquid um texture with
+a noise map and then that gets converted into a normal map here with a to normal map operator really cool
+um and then the fbm noise is black and white and that goes into the height and we get a pretty
+cool effect of as if there is this glass orb with some sort of um things happening underneath this clear
+layer of the sphere and look what happens when i unplug the hype map it gets completely different right
+especially this big um sea or ocean of this gold uh material you can really tell that it doesn't look as
+good as it just did so if we reconnect the hype map we start to get this parallax effect see the the black
+bits are gone and now when we rotate the camera it looks really cool as if this uh liquid stuff is under some
+sort of shiny layer and um i think that's great for for example like car materials or something like that i
+know they have like a whole science behind them uh and the whole like 3d industry built around uh doing
+proper car materials but um i think even with hype map you can get like really cool like flex and and all this uh
+stuff happening underneath a glossy waxed surface um and yeah let's see what it looks like with different
+values for the hype map intensity yeah pretty cool so i highly recommend playing around um not just in a
+like with like real world uh with like real world uh materials like this but also try some creative weird
+uh glitches and and cool materials this way like we have in our 3d room that we made for the
+uh june 2022 release we have this material painting on uh in the room that is just animated um
+type map values and it looks really trippy in in some sometimes and of course it's reactive to the user
+user's angle of view see it's a really cool effect to play with all right let's uh i'll show you one more
+kind of real world um example where i have this model from sketchfab of a carved wooden chinese box
+um really cool model it's a 3d scan actually and uh you get this wood carving
+on top of the model and since it's a 3d scan we can look at the wire map and or the uh wireframe and
+it's pretty insane right like the model is about 10 megs the texture is just um this uh diffusion map for
+for the box we don't have any normal maps we don't have any height maps uh and it's just this big jpeg uh
+photo of the surface and we still get a cool effect with the because i'm using a pbr material i made the box
+shiny with with just simply adding the low roughness to it and because we have a lot of geometry on this
+model we get some sort of relief going on and uh it looks pretty decent right but again it's almost like
+a 12 megabytes download just for a cool little box um not worth it i think because uh if you are used to
+baking in things like blender or other 3d apps you can actually take that geometry um and create normal
+maps from it maybe even height maps with it and then get uh a super low poly model and then get a cool
+effect of yeah there's a relief going on and all that good stuff so i didn't do the baking um properly
+properly i just made a box i uv'd it and then transferred the the diffusion texture
+to it and then from this diffusion texture i used again cables operators to create a fake height map
+where i just used a desaturate and some levels to get um you know thanks to the photo being quite good
+actually um or maybe even worn down on the places where where the the relief is taller than the the rest
+of the relief or box um i'm able to generate this um height map for the carving and then i just make it
+into a black and white image adjust it with some levels and then save out the texture now i have this
+height map for my uh box and also i made a aorm the as we talked about in another um tutorial about how to
+make pbr texture maps that are combined for this input port here the aorm map i mean inclusion reflection
+and metalness um yeah i just generated that from an ao that i baked out in a blender and just adjusted the levels a bit and then
+adjusted the um settings for the reflection and the metalness with the combined textures operator super
+easy so totally faked it but the result is really cool because the height map actually does give a good
+effect so if you're doing um some sort of gallery of um museum artifacts or something like that and you
+want people to just like load up this project super fast and and not wait uh 10 minutes for it to
+download you can get a really nice approximation of yeah this is a cool looking carving um of dragons
+on a box and uh one more bit about it this is all web um web m's or web peas i think yeah web peas sorry
+all the base color and normal and everything like that the the gltf of the box is just a box tiny um
+it's basically just there for the the uv map and all this stuff combined is i don't know maybe
+maybe a megabyte or something like that and these are still 4k textures like i i didn't go totally totally
+low um and optimized for this but i think maybe for a mobile project maybe you do a
+a guess that they're on a bad connection or something like that maybe measure it in some
+cool way in your cables project and then knock down the the textures that you will be using so you could
+use maybe 1k texture or something like that but yeah so um this is about a about two megs you know and
+it's still it still looks quite good compared to this one so anyway that's um very simple real world
+example of how you can use hype map to get a good um parallax effect for your um camera view to get some
+sort of relief going on and uh let me just disconnect it for good measure and we're kind of back to the normal
+map doing its cool thing with uh with the light but in terms of nice parallax effect for the for the hype map
+you you you need a hype map so all right hope you enjoyed it um uh try it out and look forward to our
+kind of interview slash discussion with majestic c flap flap who made pbr material much more interesting
+since the last release bye

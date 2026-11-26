@@ -1,0 +1,34 @@
+https://www.youtube.com/watch?v=EzV5CRAMyTA
+Hi there and welcome to another video on the Bite Size channel. Today I'd like to
+give you an introduction to the depth texture op. I'd like you to pause the
+video and just make what you see here. Okay great let's get started. As we can
+see with the scene I've used a random cluster op and a material so that we can
+see a random bunch of cubes and I want this to move around and just add an
+orbit control and click and drag with my mouse. So the distance from the camera
+has a depth and we can access this inside of cables so if we look at the render to
+texture op first of all let's make this nice and crisp by clicking MSAA and
+putting it to 8. This is the depth texture output but it's gonna look weird if we
+plug it in here it's just red so we need a way to see this. So if I go to sequence
+and I type in image compose and then I pull down and I type in depth texture I
+now grab this and plug it in there get the output from image compose and plug it
+here we now see this on the screen. So what we're seeing here is is the darker
+something is the closer it is and the brighter some fingers the further away it
+is. So if I now pull far plane down and keep dragging it down as you can see we
+get more of a gradient effect now it's kind of like more what we'd expect and
+there's a reason for this we can't know how far away something is up front so you
+can control this with the far plane near plane you don't normally have to touch if
+we click invert we get this so now it's the other way around if something is
+brighter it's closer to the camera so you may wonder what you could use this for
+well it can be used with the depth of focus op which allows you to blur things
+like looking for a camera lens you can also use this in a multitude of ways to do a
+lot of really cool compositive tricks so if I go over here and I put in image
+compose and then draw image and then another draw image I'm now going to get
+the original image and plug it in here let's just see that like this and I'm now
+going to get the output from depth texture and add it here so if I now click on this and say add so I
+don't override as you can see I've now added a brightness to the cubes depending on
+distance so this is originally and I can now make them brighter the closer that
+they are I can also go here change the far plane and the way that this reacts so
+there's a lot you can do with this but I just wanted to show you where to find this
+in cables I hope this tutorial has been informative if you have any questions or
+comments please feel free to leave them in the video below or to post them in the
+the forums. Thanks for your time. Bye!

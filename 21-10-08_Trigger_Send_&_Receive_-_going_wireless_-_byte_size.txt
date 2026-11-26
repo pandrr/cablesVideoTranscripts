@@ -1,0 +1,45 @@
+https://www.youtube.com/watch?v=QZqtvPytsKE
+hello this is Alex from cables.gl let's take a look at trigger send and
+trigger receive and I'll talk a little bit about what these modules are but
+first let's put together a super simple scene and press tab or escape and let's
+type in main loop and I'm gonna do the trick which is shift enter which won't
+close the search dialog and then we will type in transform and then maybe a
+cube and of course on on material okay so here's our scene transform goes into
+the material and then into the cube and we have a cube in the center of the
+screen and I'll put in a timer of course to rotate the thing give it like 45 or
+something okay so we got the scene right and let's imagine that this is part of a
+giant project or you know something a small part of a bigger thing and we want
+to optimize this and for example move it away from the main loop that we're using
+to connect stuff to and of course if we do that it's it starts getting a bit
+ugly I guess or it's just you know if you have a lot of cables and if I'll show you
+another project you'll see what I mean for example here you know you start getting
+into a territory where you're like looking at this thing three months from now and
+you're like I don't know where the post process effects are or where is the
+texture for this fake lens thing you know and I think this trigger extend and
+trigger receive sorry trigger send and trigger receive is very handy for
+organizing your patch visually where you can have a section somewhere on the right
+for your image compose and then you you know put a big comment there or
+something and then your interaction is somewhere else and things like that
+okay so let's drop those down trigger send and trigger receive there we go
+so here's this pair of operators we'll be using and how do you use them well let's plug in the main
+loop into this trigger send and then neatly put it over here and then put in
+the trigger receive into the transform and nothing is working why well if you look over
+at the trigger send there is this one and only parameter in the panel that says name to trigger and
+and um I don't know if you've already started experimenting with variables but it's something along those lines or at least the interaction with these operators is quite similar and we'll definitely look at those in another video but let's look at this name trigger okay let's click it and then it says create new one and then dots and I guess dots doesn't do anything right no it doesn't because we don't select any names
+trigger and we don't have one so this is where we create one and we'll call it um main loop and then underscore trigger um i'm pretending to use like good naming um conventions here but okay so we have this um trigger
+uh trigger uh trigger send now renamed to the name trigger that we just created so it's already visually kind of uh helpful for us so if we have it somewhere else
+um we're like okay the main loop sends a a trigger constant trigger to this name trigger and then we'll go over to our cool rotating cube section of our patch and uh we have a trigger receive that we've placed in
+connected and connected and if we go down to this selection bit we select our main loop trigger and there you go wireless cables that's pretty cool all right and yeah uh let's just i mean we're kind of done but let's look at um uh some something like uh an old patch where you're like what
+uh an old patch where you're like uh an old patch where you're like what you're like and you want to just make it neater
+and for example i'll just quickly show you what we can do for example this um section is kind of
+uh this triangle right and uh we don't really do much with it it's just running by itself and
+maybe let's move it over to the side or um you know get rid of this thing so we'll type in trigger send
+add okay well it doesn't uh create anything in the cable because you know it's one way so
+you can't just like drag it in that's okay so and then we will do trigger receive
+receive and we just uh hold down shift alt key on our keyboard and pick up this cable and then connect it to this one
+and then connect this one here so now our um you know triangle is still
+okay it's not running because we we forgot to do this or i'm sorry i forgot to do the name trigger thing so
+we'll create a new trigger and then we'll do this is the main loop or for the triangle
+and we'll just name it like this and then when we go to this section we will
+select it here and now it's working so yeah i hope um that makes some sense and then for things like this
+i think you'll have to watch another video which i am can't wait to make bye

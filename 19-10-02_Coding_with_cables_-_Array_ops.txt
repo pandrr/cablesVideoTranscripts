@@ -1,0 +1,81 @@
+https://www.youtube.com/watch?v=cpjlm9tjgGo
+Hi there, and welcome to another video of coding with cables. My name is Mark, my handle on the
+forums is Andrew, and today I'll be showing you how you can get started with coding your own array
+ops inside of cables. So I'm going to click here, press escape, and I'm going to type in array tester
+seven, because this video has taken a few takes today. I'm now going to click the create button,
+press escape. I want to add the op to the patch. So I'm going to type in array tester seven, add, you
+could call this op, whatever you want to. So I'm going to click the op, press E, and this brings up
+the built-in editor. I can delete this. So I want to be able to grab an array, and I want to plug that in
+here and have it past the output. That's it. So now I'm going to put this on increment mode. As we
+can see, the values of the array go from zero to nine. So let's click this, press E, and get started.
+I'm going to type const array in underscore one is equal to op dot in array. I'm going to name the port
+array in one, semicolon control s. Great. So we've got this. I'm going to plug it in. I now need an output
+port. So I'm going to say const array out equals op dot out array. The name of the port out is array out,
+control s. Great. We don't have anything yet. So now what I need to do is think a little bit ahead.
+I want that whenever this array changes for a function to be run. So the control C, paste,
+and I'm going to type in on change equals function. Whoops, made a lot of typo there.
+This function. And I'm not going to make a variable. I'm going to call it ARR one shorthand for array
+one. So here I say, create a variable of this name and get array one come again and assign it to it.
+And now I'm going to say, array out dot set bar one control s. And as you can now see, the array is coming
+through. If I'm going to change this to this from zero to zero point nine, this will also change to reflect the
+differences because we're using the on change call. Sorry, just lost it down. Okay, let's go back. And I'm going to put
+this back on one, two, three, four. So now let's just say that I want to do a mathematical operation on two arrays
+coming in. So first of all, I'm going to make an input port. I'm going to call it array in two. I then need to listen to that
+array for a change. So I'm going to copy this paste up and say, array two on change. So if array one or two coming in
+changes, run this function. And then I'm going to go here. And I'm just going to create another variable for the
+second array, control s. So now I'm going to get this and I'm going to put it on number 10. And what this means is this array is
+now just filled with all these values of 10. And copy paste that. And this one I'm going to put on increment from zero to
+nine. And that would mean that when I add them both together, I'm going to get 10, 11, 12, and it should carry
+up to 19. So that's the basic goal right now. So first of all, I need to check that both arrays are plugged in. So I say if
+not array one, or not array two, I want to set the output. So that will be array out dot set to null, nothing
+should come out because we're missing an array. And then I'm going to say return. And that means we're
+going to jump out of this function call. So, so far so good. If I click this, we have this, but if I now
+disconnect this one, as you can see, we have no array, nothing. So that's good. Now we know that we have to have two
+arrays connected for it to work. So now I want to do some basic math on both arrays. So first of all, I'm going to go
+here, I'm going to type the const, I'm going to say math array equals type array. This is an uninitialized
+array. So after these two checks here, I want to say, okay, math array dot length equals zero. And then I want to say
+math array dot length equals array one dot length. And there's going to be a little problem with this in
+a minute, but I just want to show you how to approach this. So what we're doing is we're saying we've got an
+empty array, math array, math array dot length zero, reinitializes the array, just resets it. And then we make
+it's length the same as array one come again, control s. So now let's go here. I'm going to make a for loop.
+I'm going to say var i equals zero. If i is less than r one dot length,
+then we increment i. Okay. So now say math array i equals r one i plus r two i control s. And now I want
+to set the output to math array control s. So let's take a look at this array again, a little refresher.
+It's filled only with values from 10. And this one has values from 0 to 9. And if we now check here,
+there we can see they've all been added together. So I wanted to show you a problem here. If I get this
+array and it's got a length of 10 and I put this in 6, what's going to happen? And I click here,
+what's going to happen? We have null. So basically, when this one was shorter, it was okay because math
+array is following. It has the same length as array one and not array two. But when array two was shorter,
+we've got null. We've got null. So we've actually not got 10 values in our array because null is not
+truly a value for the math operations that we want to do. So what we can do now is we can say
+if array one dot length is not equal to array two dot length, then we're going to get the same code
+here. I'm going to say, set the array out to null and return control s. Oh, there we go.
+So let's test this. So this has 10 values, this has six, and we now have no output. If we now put this in 10,
+we click here, then we do have output. So just to summarise it, we first of all check,
+do we have two arrays coming again? If we disconnect one of them, then nothing works. Great. Do both
+arrays coming again have the same length because they need to have the same length for this function to work?
+If they don't, we set it to null and we return. Now, assuming those two checks are good,
+we reinitialise the math array length to zero, and then we set its length to the length of array one.
+And this is perfectly valid because we know that these two arrays coming again have the same length.
+And then we iterate over the contents of array one and array two, we add them together,
+we put them into the math array. That's the basics. Let's say I want to go a little bit further with
+this now. And I want to add like a switch for different modes. So say const math mode
+select equals op dot in switch. So the name I'm going to call math mode. First mode is going to be
+addition. Next one subtraction. And the default mode when the op is created is going to be addition.
+semi-colon control s. So we get this nice button here. So I also have to say when that changes,
+run the function. So say math mode select dot on change equals function. So for array one,
+array two, or the math mode selected changes, run this function. Control s.
+So now I'm going to make a variable. I'm going to say var math mode equals
+math and select dot get. And that's going to return a string. Now I'm just going to go down here,
+I'm just going to move this in. I'm going to say if math mode equals
+plus
+run this code.
+Okay. And we also want to do it for subtraction. So just copy it and paste.
+I'm going to say else if math mode equals subtraction. Then we do this one.
+Let's just type this up a touch. Okay.
+Control s. So these were filled values of 10. This one from 0 to 9. So if we put this on plus,
+we get 10 to 19. And if we put it on subtract, we now get 10 to 1. So you could expand upon this and
+building your own modes and conditions for certain things to happen and to occur. So this was a video
+on how to code your own array ops inside the cables. I hope this video has been educational
+and informative. If you've got any questions or comments, please feel free to leave them under the
+the video below or to post them on the forums. Thanks for watching and have a good one. Bye.

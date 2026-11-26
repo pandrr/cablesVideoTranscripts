@@ -1,0 +1,1286 @@
+https://www.youtube.com/watch?v=iNdHuqGWF8A
+good evening everybody uh can you guys hear me hey panda i just want to check
+yo hello hello everybody ah good evening ah it's always nice when somebody responds
+and you shout out into the the void hello we're machenbund hope i'm saying that right with my
+amazing german accent there uh as you all know i'm really good with that uh let's let's get something
+started up so um i'm going to start in just a minute or two give uh people a little bit of time
+to uh come in hello from imi the void shot is back hot oh that's sweet um so yeah um i hope some of you
+were able to catch the awesome stream last week from panda and um steam they did a really cool one
+with html and css ops if you missed it then you should totally um check it out because i also
+learned a whole lot of uh new things uh from that hold it wait do i i don't think i need this tonight
+let's get the microphone a bit in a better position okay um so uh that was a really great stream i'm
+still um going through that and learning more about the the beauties of positioning and centering and
+scaling with css and divs but everything's a lot easier with that video if you didn't see it you should
+definitely go to youtube check it out and there's a record in there which is uh really uh really good
+and informative so tonight um i'm going to be doing something uh different than what i've done before
+which isn't too hard because we've not done that many um twitch streams yet let me just get my uh
+desktop a little bit set up okay there we go everything's ready okay so tonight um i'm going
+to be doing some uh copycat with cables but i'm going to be doing it differently than i normally do
+normally we get like one good uh big uh reference and uh then we um do our best to recreate that for
+well as long as the uh as long as i can keep my attention i suppose so tonight i thought let's do
+something different let's do lots of mini uh copycat with cables uh and to explain um you know when i'm
+trying to make these uh tutorials for copycat you know it's always um i always see some cool stuff go
+buy from artists on twitter or the social media channels and i think oh that's really cool how
+can we do that in cables um you know a lot of the time that works out okay and the times you don't see
+it doesn't work out okay because things that seem really simple and easy aren't always actually that
+simple so tonight i'm going to try and do uh lots of small copycat with cables um and what does that mean
+so i found this really cool page a while ago uh called uh daily drawbot and this this this was just
+awesome um i don't even know how i found it anymore it's in my list of things so um i'm sorry whoever
+made this i'm gonna have to link to it later i've forgotten the name and stuff um but it's just this
+somebody just made all these really awesome little pieces of art digitally i don't know if they're real
+time or anything like that and they're man there's so many of them there's just so much um good stuff
+in there basically and some of them seem like really really simple and i look at them i'm gonna go
+oh god that is really not as simple um as it looks basically yeah this is the program drawbot right
+so i'm just gonna scroll this through this for a minute so basically um tonight i'm gonna just be
+picking um some of these and of course i'm gonna i'm picking them you guys aren't picking them because
+you're just gonna pick the hardest ones um and i'm just gonna pick some we're not gonna do shadows
+because uh simo hasn't um finished them uh yet and uh copy kittens uh huh um so i'm gonna be just like
+trying um some of these basically uh and i'm gonna give myself like maybe 15 20 minutes hey if it goes
+quicker that's great um if it doesn't um then yeah i mean i'm not going to spend all night getting
+stuck um on one basically that's not something that i want to do and there's a really high chance of
+failure because of course the more different things i'm going to try on the stream uh the more chance
+there is that things that go wrong so i'm hoping that uh panda or any other knowledgeable cables user
+might be able to uh point out um what i could do so as you can see there's a lot of really cool um
+little ideas here you know and i was thinking of doing something like this um these these these um
+display sphere things to start with and it looks really simple and i've got an idea and that's the
+thing i've done no preparation i'm just winging it um tonight you know sometimes i get a few things
+prepared just to mentally prepare but tonight i'm going in blind so it's 7 36 hey rick tick 909 thanks
+for joining us so you know what i think i'm going to start with one of these uh things basically because
+well yeah um i think if i set up that template i can actually do two or three in one period of 15 20 minutes
+so the one thing i'm going to do tonight is i'm going to set myself up first like a little
+copycat environment and then i'm going to keep that um until i finish the copycat and then i'm going to
+delete the stuff that isn't really necessary but things like render the texture and maybe some setup
+stuff if i'm doing something from the missions then so like array pack and array unpack i'm just
+going to keep that i don't want to see i don't want you guys to just keep seeing me plug the same
+stuff in again and again and yeah at one point i might just go ah this isn't working out on to the
+next because i don't want people watching me get stuck for too long because that's probably really
+boring or really entertaining depending on how you look at it so uh as i normally say with my tutorial
+videos without further ado let's get started so let's go into cables i'm gonna make a new patch
+okay so let's grab a main loop up
+um then i'm gonna grab a sequence oh i'm feeling rusty today i'm feeling rusty
+okay let's grab a render to texture because a lot of the stuff i'm going to want to do is like in a 3d scene
+let's grab a full screen rectangle and now let's grab an image compose so i want to i'm going to
+definitely do some post processing for this one so we're going to try and do something like this okay
+so actually let me put this here so um how do we do this well you know this is a texture it could be a
+stripe it could be a checkerboard it doesn't matter so let's set up that channel first so i'm going to go
+there i'm going to grab an image compose and let's grab a checkerboard okay and this i'm i'm not going
+for efficiency tonight everybody um at all i'm going for speed and to make stuff look awesome and cool
+so i want this to scroll okay so let's get that going first why am i nervous about doing this
+okay let's go scroll texture um done okay so we're going to grab a timer and it's going to be going
+way too fast probably yeah that's what i thought so put this in 0.2 and we plug that in there and i want
+to go in the other way actually minus 0.2 okay yeah and we're off we're off to a lightning star here
+so um actually i wow wow this is a good one how am i going to do this let's go
+a sphere okay and just so i can see what's going on my cap material okay cool um so
+let's do a draw image
+um i'm gonna i'm gonna i'm gonna make a lot of mistakes tonight it's all cool it's all disposable
+image compose again let's do this so what i want to do right now is i wanna
+yeah this this is probably not the best way to do it but i'm fine with that let's
+actually depth texture focus i'm just going to go full hog on this one
+that's extra focus we're going to get the depth map from now we're going to plug it in
+and file plane put it on five okay i don't want to have like controller okay let's do this for now okay
+so now i'm gonna go in this
+and let's put this on 720 by 720. hopefully that's pretty big for the stream i need to have room to
+do stuff 640 by 640. this is also square okay so um we're gonna get this yeah i'm gonna plug that in
+there and that time is going really way too fast
+yeah okay so now if i'm correct let's do um pixel displacement i have no idea if this is um gonna work
+or not but that's already looking kind of cool i don't know why it's doing this though um
+let's let's make this a little bit smaller
+i need my patch in space okay is this is this big enough for you guys i hope you can see that
+so um we want to get this and let's just put it on 512 by 512. i'm probably going to put it on
+hdr mode right that is not at all working the way that i'd like um
+no why is this not working the way i want i think it's because i have to do it twice
+ah of course i need to go
+we need it to go from like a minus number to a positive number ah this is already probably
+going to fail at the beginning all good oh yeah i'm totally taking suggestions uh doc retroid
+totally i mean i'm just i'm just improvising here as i go i mean i already gave my disclaimer at the
+start of the night that there's there's absolutely no guarantee that all this is going to work um
+i mean this is how we make stuff right we we try and we fail basically
+let's do this in 0.1 let's do this and zero and this one 0.1
+does this have to be um no of course that is not going to make a difference
+project the texture onto them yeah that's a good one um i'm just thinking right now yeah vertex
+displacement that's something else i was just curious if i could just do this with pixel displacement
+or not basically um and it's not what uh clamp now this probably isn't going to work but it's okay you
+know this is this is how we try stuff out so hold it 0.1 0.1 this is not working
+and let's put this on climb to edge no this is totally not working right okay so it could be vertex
+displacement might be the way to go yeah probably is okay okay i think vertex displacement that's going
+to be the one okay so as you can see this didn't work and that's okay like i said things that can seem
+incredibly simple and not as simple as you think they are yeah i mean we can definitely get some
+stuff going on here it's an interesting idea but of course i'm not yeah that's the problem you see
+i'm only displacing it in one direction on x it's not like displacing it on left and on right
+yeah okay i think it's going to be um vertex displacement okay so um
+let's just throw this to the side for now
+like i said guys i have no guarantee that this is all going to work right now so let's get a
+rectangle let's give it a basic material
+oh so hopeful that was going to work just totally didn't okay let's now get this
+plug that in there okay let's now put this in just two by two for now and we need to give it more
+columns row so let's do 100 by 100 okay now let me just save for a minute
+vertex
+displacement map
+okay and then we have this one here
+aha okay who was it nish new word yes you're the man
+yeah it cut off it cut off definitely but this is actually the the much simpler solution and let's
+just let's just take a really quick look at this with the good old orbit controls
+just uh for people that might not know it so as we can see we get this really cool 3d because as we say
+go real time or go home so let's just reset this quick put it back okay
+so we have this now and we should be able to change the amount here ah do you see okay that's probably too
+much it's more than one way to achieve this let's take a quick look it's looking pretty close
+that's that's okay that's okay and i think there's like some kind of thing yet around it as well um
+which should then probably go here oh close closer closer
+this is of course it's not perfect but i'm just trying to emulate that a little bit yeah there's
+some kind of blue and white going on not perfect but close enough okay and then the best part is of
+course we can just do something like this so let's like do two or three in one way it might be kind of
+cheating but that's fine with me so i'm going to get rid of that and it's also just to show anybody that
+just needs cables like how quick and easy this can go um so we've got stripes let's do a rotate of if
+i'm correct 0.12 not 0.25 there we go number let's put it on 10. let's put this on white
+ah boom that's another one that's that's that's close enough for me you know we can get rid of that
+vignette and then we've got it like as here okay so that didn't that didn't go too bad i'm really glad
+you guys were all here to help me out hey big goof thanks for joining us man so um there we go so
+those are the first two that went pretty okay uh that was that was pretty cool and as you can see
+we've actually got it in 3d which is also really kind of nice okay exciting stuff uh doing this because
+yeah everybody gets to see me completely and utterly mess up all right so all right that's the first one
+down um yeah this was an interesting one but i was like wow how are we going to do that that's uh
+that's a different one i don't know i was thinking so i'm just going to scroll through them for a minute
+because some of them might seem really simple trust me they're not
+haha yes let's do this one mesh instancer for the win i think yeah that's got to work right this one
+should be able to do that in about eight minutes i suppose okay so um let me just get rid of this
+actually i'm just i'm just starting from scratch bum just keep that like that all right um do we need to
+do render to texture yeah just do it anyway mark
+full screen rectangle let's grab this and plug it in there okay so let's grab a um
+matcap material and then a mesh instancer and let's pull this out and grab a sphere
+well let's plug that into the geometry input let's put the radius and just 0.2 for now
+um and then we need to get the positions array and we're going to get points fueled
+points cube that's what we call it now i'm going to put this on five five one and i'm going to turn
+the multiply down so we get something like this okay so far so good and then we've got the scale array
+so what i'm looking at here is a random yeah okay so we're going to get um the total points
+um random array free yeah so actually ah um
+so we need a random numbers array
+and now we're going to plug that into array pack free because we want the same scale on x y and z right
+so i'm going to do this it's going to be horrible patching tonight everybody
+uh
+yeah bagoof i'm going to just first of all get like the motion um set up uh and i don't know if we've
+got ah there's no light going on there actually with this this uh just looks different probably
+the light source is the same actually you could be right yeah actually i think that spheres are just
+rotating but i'm not going to worry about that now but thanks for pointing it out
+um i'm on hyper mode okay so we have a random numbers array and then what we're going to do is we're
+actually going to make this nice and simple we're going to grab an array sin yeah i'm going to grab
+that plug it in here so we're going to get all these random numbers and we're going to add
+a number continuously to them with a timer and then because we've got a race in the scale is always
+going to be between minus one and one so if i do this now hold it let's plug it into scale array
+let's just try it out yeah okay cool i'm gonna get a timer
+and we want a bigger difference in between so uh whoops
+pi and pi there we go and now we're basically going to move them closer to each other so we go to
+points cube like this
+that's pretty close already and um
+choose a transform view and then we're going to move closer a few jaggers there so we're just going
+to put it on like uh mssa4 there we go i don't need to do this as a texture now but i'm just keeping
+that in place so i don't need to keep on uh making it basically now that is
+pretty similar
+now they've got like different speeds that they're going at with like uh the frequency and
+things like that but i think that's kind of like nitpicking
+too much basically what do you guys think close enough
+stop by goofing around oh the pens are terrible tonight okay um yeah maybe just maybe let's let's
+just see if i can pull this off in a minute so i'm gonna grab a fun material and i'm just gonna
+repatch these in there and then we're gonna grab a point light because i'm all open for taking requests
+um let's see where that bad boy is there it is okay so let's put y on zero
+move this back a bit we're already getting some pretty cool effects there so we're going to move it
+like over here and then if we want it to move into um circles around in circles
+so um you want you want something to run in a circle really simple just get sine and cosine
+that's all you gotta all you gotta know basically so we're going to use x and y right so we're going
+to get this and we're going to plug that into x i'm going to put the amplitude and say three and let's
+take a look at that light where is it now there it is and then we're going to go here
+and we're going to plug this into cosine and we're going to plug that into y
+and now we should have a light that's traveling around let's put the amplitude on one amplitude on one
+actually two and two let's put that material back on a kind of uh here we go
+something a bit white there we go not as bright that's okay intensity can turn that up completely
+over light it but there we go just turn the radius up put the intensity on one
+there we go that's that's closer and i could tweak all the lighting and try and make it way more better
+now but um i'm not going to do that because this was close enough for me all right so
+that's another one down god this is intense okay oh i don't know if i could do that one that's uh
+that is really not as simple as it seems
+maybe panda would notice if i do that with mesh instancer if vertex displacement would then
+yeah i don't know i could do that with it okay no and this one i'm not too sure about
+oh right and then it presents like the simpler version right hmm would this one be possible i've
+got a feeling that'll be difficult i might come back to it later i might come back to it later let's
+take a peek god how do you do this one that one i'd have to do with uh with with i'm not sure how i'd do this
+ah yeah there's the the fratzel snowflake effect not too sure oh how do we even do this one
+that's a good one that looks like some kind of feedback effect as i said no preparation for tonight
+yeah l systems that's true that's true maybe
+yeah i'm just it's been a long time since i used that one and i think it's really gonna like slow
+the stream down maybe later maybe later yeah and kaleidoscope i remember from you that you did a
+really cool um l system patch uh with this um
+hmm yeah maybe we can remix your patch what do you think i think we could do that
+yeah okay let's take a look so um here we go
+tree harmonics so hey um never said i'd have to build everything from scratch and by the way for
+how many means got some really awesome uh patches you should totally check our stuff out all right
+tree harmonics ah yeah now i remember this one this one was really really good let's take a look
+how did she do this probably still works yeah it works
+okay okay so the part that i'm interested in are you doing this with points
+oh yeah sure but it's really great that you've um done this yeah
+you know let's just check the awesome power cables here so i'm gonna go here i'm gonna get rid of this
+that was done let's paste that in let's see if we can um tweak this
+to be more like we saw i draw image mirror kaleidoscope
+okay so there we go that's the basic thing set up um how about we disable this one ah this is how you did it
+that's the default tree to the l system that is so cool i never i never pulled it apart uh like that
+before that is that is beautiful that is great hold it is this being used no okay all right so
+yeah that's gonna make lines thinner right okay by the way that's that's that's really really nicely done
+really okay let's do this um
+oh
+all right so i'm just i'm just really curious right now so if we're only going to use the
+spline mesh right and let's let's let's see what we can do here so we're going to do this
+like i said guys completely not only winging it tonight let's put this on 90
+let's move this to zero
+let's move this to here now the spine mesh is pretty thin
+let's crank it ah it's okay like this
+okay thick lines
+it's looking more like it to me okay
+this has those really long lines and not much going on right
+yeah i live i love the way if you know uh you weigh a little bit around ops you could find you can find
+something like i'm doing from mimi's patch right now and then just tweak it and go for a certain
+aesthetic like the l system right now
+has too many
+things on it okay
+so basically what i want to do right now is
+let's put this
+thinner
+okay okay and
+something like
+how did that go again
+ah okay
+all right iterations one two three four
+that's just waiting anyways let's just do it like this for now
+you understand how fractals work you're a better mathematician than me uh from me
+that's for sure all right um let's do this
+yeah of course we're not going to pull off that exact snowflake look
+yeah it's this one i'm looking for i think
+and then they all disappear lol i think this is the one
+okay let's plug that one in there
+now yeah of course pulling off exactly what's there
+ah wait a minute no no let's not rotate this
+let's
+move it
+hmm
+i'm not going to spend too too long on this one just trying stuff
+out basically yeah i don't think i need to move the l system i just need to get a cool
+look with it okay that's not it obviously because this uses these exact lines right ah i feel like i'm so close
+to this so let's get this l system
+default angle
+uh if i really have to do this if i really have my time with the l system i know i could do this um
+if i really have my time with the l system if i really have my time with the l system i know i could do this
+um
+uh
+yeah i mean i've got these patches where i've got these like really
+uh straight lines there yeah
+hmm
+ah there we go okay so this is more like the the straight line look that i wanted to get all right
+let's turn that thickness up
+and i think the iterations are just too many
+come on okay
+and we're doing it with all bounds so that's not going to work
+yeah okay so we can do 22.5 but we're going to go for 45 that gives more of a straight
+line and edge
+let's get random anim
+duration two
+using smooth step i don't know min minus two two let's put that into
+and let's put that's way too much obviously
+now you know what it is definitely not this because this is like that snowflake look and this
+is a recursive thing and basically
+part of the look is this there
+yep that is an instant hippie trap yeah so you know if i'd like do a kind of mask here
+that's not going to work because
+so i could basically get a cylinder put the segments on six
+do a render to texture use that to create a
+mask let's do it we we got this far right
+let's do this because this is all just for fun tonight everybody i'm going to give this one another
+two minutes and then i'm rounding off so as you can see you've got a cylinder here
+and let's give it a basic material this is not the efficient way to do it you just want to do this
+with the texture basically
+and wow okay why is this plugged in under alpha all right so i'm going to get this
+i'm going to plug that in that why is this not going to work
+of course that's not going to work mark
+let's grab another image compose
+oh it's becoming so messy oh let's clean up okay
+and let's grab a drawer image i'm not sure what settings from you might have on there
+probably none okay so we're going to grab this we're going to plug that into there
+there and there because i just don't want any
+um effects to take place on it so this is going to be our kind of fake mask
+there we go i'm going to go to the cylinder and we're going to make it larger
+now i'm not saying um that is exactly um what we've got here but it was just a quick way to show
+how we can um get something similar to that and did random anim stop working
+no it was just so close to one value so with more time and more tweaking we could have definitely
+pulled that one off all right thank you from me for letting me um use your awesome uh l system patch
+there let's just do some cleanup because i'm just losing it with so many different things going on
+on the screen all right so we've got a couple of choice ops here all right that one didn't go as as
+well as i thought but i also thought this is not a very simple um effect to do um oh wow
+hmm that's hurting my eyes to look at
+hmm i'm gonna skip that one let's take a peek
+wow um that's an interesting one that's a really interesting one let's try and let's try and do this one
+simple but sweet um
+yep yep for sure um tuna also did a couple of things like this definitely um let's let's try this one tunnel
+with big ridges with big ridges all right um i'm just going from scratch that just makes life a lot easier
+for me right now for me right now full screen rectangle so um let's just for now grab a matcap material
+mesh instancer
+turn time until time choo choo choo yep um well let's grab a taurus
+um let's make the inner radius smaller i don't know 0.25 winging it as i go
+let's plug this into mesh instancer
+hello over there please all right so let's turn this off with draw you don't want your main geometry
+also rendering with the mesh instancer you only want the mesh instances to do it okay um we can do
+this right so it's just for positions so we're gonna grab a normal array and it's got this kind of
+really subtle winding effect right which i don't know i'll figure that out in a minute okay um
+yeah there's probably so many different ways to do this i'm just gonna do what comes out right now
+so let's grab an array pack free yeah um and for now we're just gonna put this on say 20
+um this is gonna be the movement so we're gonna put this on actually zero because this is for x
+um and y is also gonna be zero for now and let's grab this one plug it in there let's make sure it's
+got the same uh length big thanks to ponder for putting the array length now in the correct place
+that's something i kept on forgetting to do with this so we're gonna plug this in here to positions
+and then we're gonna put this on zero to one voila and i'm gonna say array multiply and then we can do
+this that's this that's working pretty good um so let's get the length of the tunnel
+which is roughly 20 and let's go
+uh multiplied by 0.5 and let's subtract that from the position just for now okay so we've got
+this um and then we're gonna do erase some
+which means us through the tunnel right okay so far so good uh we're gonna get a timer on that this is
+probably all wrong right now but it's okay and we're gonna do array modulo we want to create our
+awesome little loop right
+and let's put this on i don't know actually 10
+10
+um
+okay yeah and then this on
+i have 10 right okay i'm just gonna cheat
+i need to do all of the the matrix math right now let's put on one and then we should get a kind of like endless thing okay
+um what's the url of that gif page um if i'm gonna give that out i'm i'm not taking requests right now all i might do
+uh is right here panda
+here we go so guys this is the stuff i'm looking at right now
+um feel free to uh look at it and ask me to do really difficult stuff that i might say no to
+um so for this i'm actually probably just gonna go like this i'm gonna say image compose
+um i'm gonna say
+actually um
+fog render fog is a texture effect
+that was that was funny it's like the z buffer didn't clear yet
+all right uh first one far let's do this
+okay that's that's looking kind of close
+um and then we're gonna go here
+i'm gonna put on some kind of
+so it's dark up front yeah probably more blue or something
+that's okay
+so we want these things to be offset by a slight number right so we're gonna say
+actually yeah let's just try this array math array
+i'm gonna get this normalized array
+array
+multiply
+we're gonna plug that into i'm gonna get a p
+operator pi
+and then we're gonna get this and plug it into
+i'm gonna get this one and go to array sin
+okay
+and we can kind of go for
+i know
+now that's too much
+and let's just be really lazy and just
+multiply it by a small number right
+okay
+so let's get this plug that in there
+yeah we could make the torus bigger just to get around this problem
+there we go let's put it on 1.5
+um let's get the array number and put it on
+that was a fail
+oh yeah of course okay we'll just leave it like this for now
+so we could just basically um
+cool
+changing the frequency of the array sin
+now yeah of course it's exactly the same
+right now
+i wonder if that would work
+really lazy let's just rotate the array god knows how many
+that's kind of more like it let's go to the fog
+uh fog end
+i want to bring that down a bit so we just don't see it all popping in
+slow the timer down a little bit uh torus looks a little bit jaggy
+so i'm just going to put on a crazy number 48 by 48 so it becomes smoother
+now there we go now we've got some kind of like cheesy spirally thing
+so way more on the x-axis than the y-axis so you know i can fix that again with an array
+multiply just made that a bit less on the y-axis yeah
+all right so this ain't perfect but i think it's actually really not bad
+for the amount of time to put into it so we've got the density here that we can play around with
+and we could do
+a lot of stuff here and we could add some edges to it and things like that
+um
+it doesn't have edges there and it's way heavier with the response actually when it gets closer
+and density can
+yeah i mean this is just tweaking a gradient and that could go on for quite a while actually
+yeah let's do it a bit like this ah look now we've got that like darker
+look to it not perfect it's close a lot of stuff we could do here
+you know like a gamma correction we can pull it down get a lot of different looks just brightness
+clamp texture yeah there we go clamp texture that's it's closer now now we've got those dark edges
+um closer to the screen now and uh of course it's not exactly the same look and he's also got
+it popping in there so hey i can i can do that too that's fine no problem
+you know we could even just like make this all like a little bit um random you know we can
+that we can get a lot of really cool crazy effects of this kind of stuff you know we can
+move it around a lot
+get some really nice uh patterns out of that um yeah yeah okay
+yeah i'm not so by goof i'm not going to do a white color at the front because it's like darker
+actually at the front and it's brighter at the back as you can see but it's like it's a really exaggerated
+effect ton of magic thank you for having me um yeah this was this was pretty quick and easy mesh
+instance is your friend if you want to do um instant stuff and put a lot of them on the screen basically
+um like you could do all this stuff with 2d textures i just prefer to do it with um 3d um textures because
+then it's just all uh i don't know it makes more sense in my head basically um because 3d space is
+pretty um similar to how we think uh so i'm gonna call this one i'm done uh for now good god that one
+no idea that is some fancy fancy stuff with the spline mesh and an array of points
+um hmm i'm just thinking if we make like a curve and we do
+abs on it to make it but then that twist no okay that one's that one's gonna break my brain right now
+oh god uh
+hmm
+yeah that's uh that's a really interesting one okay
+um
+what was that bugger said two lines with a sign in a circle repeat
+ah hold it i think i know what you mean i think
+i think i know what you mean bugger okay let's try this one bugger's gonna be uh
+oh this one the flower looking one
+yeah but you're not gonna get this pedal effect uh where it does this with a circle repeat
+unless okay this could go horribly wrong let's try this one let's try and make one pedal first okay
+uh oh boy let's give it a try all right so um
+um
+about goose a happy man he's like ah andrew you're gonna make such a fool of yourself buddy
+let's try this right so um we're gonna get um the spline
+mesh all right and just if you've never used this before and you want to know it works just get a
+random numbers array free and just throw that in there and there you go and if you want to get curvy
+lines it's just a quick tip for anybody that's new to cables we're going to get um subdivide array free
+we get this and basically adding more points to the thing and we can make it smoother right so let's
+put this on 20. this is a really great way to just make some curvy stuff so i think this is what like
+um a goof um going on about there's a twist twirl shader effect up yes there is um right now i'm just
+going to try and make one um one pedal and then use the andrew never uses that repeat up if i can get
+that to work um okay hold it so uh we want to have sir points circle okay i just want to get like one of
+these working okay so this isn't closed i think we had an up for that um loop array free make the first
+last point of an array the same tada okay um let's throw that one in there right so let's get array transform
+for free it needs this let's put that in there um hey hey look at that okay that's looking like it all
+right so we want to add a twist woof one other twist right let's just get rid of this and this and
+this okay this stuff i'm probably gonna need sorry guys it's just easier if i just do this out of my
+head um so we're gonna do array unpack free and then we're gonna do array pack free because i just want
+to like set everything up that it just works the way it normally does
+that goof almost burned the dinner all right um let's get this and put it this is not going to be as
+easy as i think it is i already know that right now so we need to offset the x and z
+point based upon why
+it's the erase sin on the y axis right now and
+uh ray math ray
+okay okay it's kind of making sense but it's ah it's doing it from the middle obviously so we need to
+get a
+let's get that
+ray i'm not saying i'm going to end up exactly what we got there so we're going to go from normalize coordinates
+um zero to one whoa
+think i've got to do it here
+and then we're going to get multiply
+donno
+that is not what i want
+right okay so
+shake that bad boy loose
+go here
+here yep and no
+ah this is not going to work the way that i want no of course not all right
+aha face thank you
+that's still way too much though
+so if i'm gonna get
+this and plug this and plug that in there we're then going to get this like i said guys no guarantee this was going to work
+all the controls
+two lines with sign to compose one pedal
+right baghuf i think i know what you mean
+it's a lot more ups though
+i just got a feeling it's got to be possible to
+do it with this one like i feel like this is some really little simple thing that i'm not getting
+closer
+that looks more like it
+it's kind of pedally
+kind of pedally
+okay
+and then if we go here and we
+well
+okay so i don't know if i'm going to pull off that uh animation thing uh that's going on the rotation y
+i'm just trying to rock and roll and put something together
+if i had way more time i'd probably end up with the best looking pedal ever
+30. um
+look at that
+well i'll be
+that's kind of close
+close enough for me at least
+all right and of course ah because we're doing the rotation part that it's going to mess it up a little
+bit sure what else all right let's just let's just roll with this for now it's okay
+this will do for now okay um
+so now like you never see me using this up everybody it's going to be history in the making
+on stream it's um it's um it's only been seen a few times in the undev office because and
+andrew and other users repeat ops because it's on the cpu not the gpu it's not okay
+but let's do this so i'm gonna grab a repeat up okay uh yeah right
+so um let's rotate i think from here right whoops
+ah um can't can't swear in the stream okay rotate x
+let's just how many of got that
+okay okay um
+i'm just going to be happy if anything resembling a flower comes out a little bit
+okay okay okay that is not what i was looking for um
+and let's let me think about this
+wow wow it's dying what is happening there really didn't like that okay why
+okay the thing is i've gotta i've gotta offset this stuff from the bottom that is the problem
+and to do that circle isn't gonna work ah
+yeah that circle is not gonna work with this one
+that is just not gonna happen i think at all actually we can still end up with some pretty cool stuff but
+still
+ah so close so close
+okay i'm really determined to do this one okay you know let's just do this for now
+let's see if we can do uh what by goof we're saying
+yeah that's the problem uh when we're using the circle it's always going to make a circle ah unless
+we use percent dot retroid could be onto something there let's let's check this out
+yeah there's me probably overthinking it so if we go to let's get rid of looper right
+okay let's go to the point circle let's put the percent down
+i'd expect 0.5 to be half of that that is so strange why is the one two three four four of course
+okay
+yeah right sure thing so let's put this thicker
+yeah of course this needs
+um more points let's put it on 80. ah we're getting that little edge there
+uh why is it converging like that i don't know
+why strip now we'll just have to roll with this for now so now i have to figure out a way
+to get like a different um amount per pedal with that face
+oh yeah and what i need to do is repeat is um outputting zero
+to eight which means we've got a zero and i don't want that i want it all to start with at least a one
+should be an option there to add one i think to repeat that would make sense to me because you
+know you can't multiply by zero
+okay
+so the problem is ah i'm getting these ugly edges i'm not too sure what it is that i'm doing there
+to get that is it because these guys need a
+material no no no okay
+hmm why is that not working i think it only works with basic material
+all right not too sure what's going on there ah it's the fog obviously
+let me just get rid of this for now
+there we go just to get it black and white okay move it off center i'm hearing
+not what what i wanted but kind of cool
+closer yeah the thing is we're just not getting that repeating um look with it that's the problem
+that was the whole thing that i wanted to go for yeah if i was going to do this again
+i'd have to just do like one line
+um just thought i shouldn't use circle point circle for this basically i need to have complete
+control over the curve and that is that is kind of doable and you know what came so close right
+should we just see if we can do it because i don't think point circle is the thing i'm looking for it's
+not the the op i'm looking for let's just try this okay i'm going to give myself just a few more minutes
+to do it i don't want to be stuck on this for too long okay yeah just start again with the math basically
+so we're just going to make one line right so we're going to say array and i'm not going to worry too much
+about this right now i'm going to put in i don't care anymore 100 points all right and i'm going to put
+this in zero to one okay and then this one
+let's put this one here this is going to be for y
+and then we're going to go this one's going to be for z right
+i'm going to plug that in there okay we'll get this kind of line let's put the fitness on
+really low number like that whoa okay so this one we're going to put on number zero there we go
+um and i've lost my orientation there all the controls let's reset okay and the problem is of
+course lines are thin i don't see it so i need to rotate a touch okay so we want to make a kind of
+like um pedal like curve right so we go here i'm going to say array sin and we're going to get the
+let's zoom in a bit
+this is not working the way i want number
+zero to one what is going on tonight
+ah i've got it all rotated that's why okay
+let's get this back again let's zoom out of touch okay
+so we're going to put this on zero point let's put it on one
+okay and now we're going to put the amplitude
+down i'm not too sure ah of course
+okay so we're going to get that
+okay we'll just do it like this
+there we go that's more like that pedal thing that i'm looking for right that it can do this so i could use pow or
+let's just see which one's easier to use yeah okay it's probably gonna let's just do power
+so i've already been spending longer on this one and i'd like i mean i'm already going to be happy if
+if i just get one pedal up and running right now let's do this so how do we put one opposite that
+that's a good question right
+um we just want to duplicate it that would be inefficient but i could roll with that right now
+because i'm just running out of time to do this
+and if i get another spline mesh and i put this here
+horrible way to do this by the way everybody this is just me trying um stuff out
+there we go
+let's zoom back a bit it looks a bit like a pedal
+i can do this now and move it right
+okay now the thing is that twist that is the hard part um i've got to get like a normalized array and
+then i've got a move x and z based upon that which is something i'm not going to work on right now
+because that's going to take too long for the amount of time that i've already been
+um busy with this so let's try that thing again that i wanted to do with the repeat up right so i'm
+going to get the repeat and i'm going to put it on eight i'm going to get its index now i'm going to put
+that in there so i've got one added to it and was it this one rotate y
+okay hey that looks more like a flower okay
+it's taking a little while to get there i hope i hope i didn't fall asleep in the meantime
+um so ah a little cheat we can do if i'm correct
+of course of course let's give that a try let's just grab another transform
+which one is it not this one there we go look so we're going to get z and we're going to get this one
+and then here we're going to get um some
+and we're going to add a timer
+and then we're going to get power cannot use negative numbers so i'm just going to grab
+sign zero to one let's just tweak it tweak it in a minute so i'm going to get map range
+i'm going to say um minus one to one and then i'm going to say zero point two and zero point eight
+one point two let's just check it out so i'm going to pull this down to
+zero point five and i'm going to push it up to
+two point eight
+and then i think i'm going to call it quits because i've been busy with this for a really
+long time so i'm going to turn that frequency down
+now it ain't perfect um far from it and i'd do it differently given more time because we could
+definitely get that twist in there um but this was this was a tricky one than i thought and that's normal
+things that seemed really easy at the beginning and not always that simple
+see i used the repeat up you saw it here first it's a fact so here it is wafer collines
+hard to do right now display mesh because it's not like a cylinder it's flat
+but this was an interesting experiment i'm pretty sure ah ah of course i just remembered
+so people um remember the stuff that you make i'm pretty sure um i just had something that i could
+have used as a template here um
+yeah see this is that twist i was talking about on um x and z right you see it there
+so this this is all possible to do uh basically yeah so i did this uh quite a while ago um but
+completely uh forgot about it in the meantime because i was so focused on getting it working
+so yeah we could do this and then just like add a sign on the y uh part and it would like just be um
+it'd be good basically all right so there we go
+uh i think that's enough time on this one close enough all right um
+oof that was tricky all right this is a feedback setup um feedback's actually not that difficult but
+it's really hard to get right so i'm not going to do that one right now i don't have like a
+i don't remember how to do feedback out of my head oh god and whoa
+panda do you think i could do this one with the new msdf op
+this will be really difficult right like really really really difficult i think like wow each one of
+those is completely um different
+huh go figure this is panda in the house because he made uh the cool new uh msdf uh uh op
+um oh god and i've completely forgot oh i've not been saving the patches i've just
+been disposing of everything okay all right uh okay so focused on the screen there uh i'm gonna
+call this copper cap mini pedals and i'll i'll i'll i'll redo the rest later um tomorrow ah so silly
+so silly my apologies everybody um ah that's so focused uh oh whoops let's uh get this back let me just get this
+in a in a good uh in a good uh place all right uh make it a bit smaller for now there we go save
+okay and then i'm gonna save as uh
+oh i can't believe i just did it's okay the rest are really easy to do i can do those tomorrow
+i can watch my own stream back and recreate them all right so um back to business let's look for another one
+um
+this one could actually be quite tricky but there's me again trying to think of like how to make all this
+stuff like super um efficient right and we don't have to do that at all you know we could just use like
+nine ops to uh nine um series of ops to do this
+what should we try and do this one in like 10 minutes everybody what do you say should we try it
+is anybody still out there it's awfully quiet it's like am i am i patching to the void
+are you guys all off in the kitchen right now all right still there for me what do you think this one
+give it a quick try all right i'm wondering if i can do the msdf up but i think that would be more work
+than just doing this with a single chain and then just changing the letters let's try it and do this one
+in an efficient manner okay um okay okay let's get rid of that uh let's keep that for now let's let's just set up one
+one letter first right
+text mesh you saw it first cables let's get the letter a
+cool all right so this is going to be a messy um messy patch
+but that's okay um so we're going to get a transform and uh rotate z
+this is just endlessly rotating okay that's the letter a right so let's do it like
+this for my sanity so we're going to grab a sequence up because right now i'm probably going
+to want to do some post processing to fake that shadow um that you see there yeah let's go let's do
+this so uh i also see orthogonal mode being used to as you can see it's like yeah it's kind of going flat
+so let's try that orthogonal all right let's do this um it could do but i think like it'd be so much
+sorry um for the people that didn't see the question later on the stream didn't the msdf up have shadows
+now i think it did i don't know let's take a quick look
+oh that's the font my bad um
+yes it did totally did all right but that's going to take a bit longer and i think i can remember a
+really cool um old school uh trick that panda showed me with this stuff from his mighty demo scene
+knowledge now that you can see that stuff there but that's that's like manipulating all of those array
+things that's just going to be hell on earth for me right now so let's go back to this the n just
+goes up and down so we're just going to do this right um bump and we're going to move this minus one
+one all right and then this one's just going to go up one for now and we're going to make that uh an n
+okay and then we're going to grab a sign and we're going to put that into let's get a bit more spacer
+position y
+and we get a funny n going really crazy
+and i put the amplitude down
+to i don't know 0.2
+um watch the streams from me uh that's that's my best advice and i want to move it up right so we're
+going to grab a some that looks like an n to me and i'm not going to try and get this fun um at all
+um actually it's a small n right there we go um what's the next one i okay we're going now this
+is going to get a lot easier so i'm going to grab this one i'm going to put it here
+and then we're going to say transform is one the letter is i and then we want to
+rotate on x
+let's turn that up a bit
+i think we've got some nitmap filtering going on there becomes a little bit blurry but
+nothing to worry about right now okay so that's the i uh
+ask your boy
+okay m80 i am that's an interesting one okay uh let's grab this one put this one down here
+i'm not gonna like connect them all like that let's just do this so we have an m
+and we want it to just move to random points right so let's grab the timer actually let's just do this
+so we go here and we're gonna say um trigger limiter and let's put it on 300 right and then we're gonna say
+um trigger random number and let's put it on like minus 0.2 and 0.2 let's grab another one
+and put it here and then we're gonna just move these out of the way and this is going to be for x
+higher so we need to get the minus one so we're going to do some and then we're going to say
+minus one and we're adding that little number to it we do this and this one is fine i'm going to put
+that's position y
+that'll do for me a bit much actually
+all right cool a that one's going to be nice and easy so we're going to grab this one which coincidentally
+uses the same kind of system and we're going to get this i'm going to grab the letter a and we're
+going to put the transform to zero and then we're going to put does it okay so as you can see
+it never goes completely small so sign outputs minus one to one so we say remap minus one to one and we're
+going to put it on i don't know 0.5 to one and we're going to plug that into scale and then we're gonna
+turn the frequency up a little bit
+like this and actually let's put that on two 1.5 that'll do and how can i just slow the timer down
+big number and actually it's got to be one two two
+something like this all right next one t okay uh that's pretty much this one with n
+so i'm gonna grab t
+um we're gonna put this on one we're gonna unplug this one and that's just going up and down right
+so actually we can get this part from here sync it up a little bit
+um just up and down right yeah okay so let's get this plug that in there
+value position y
+um and then we're gonna go um
+and we can make the scale a bit bigger now we could tweak all the sizes um later but i'm not too
+worried about it right now um i o n and it's going to be interesting that's when i'll really see the
+orthogonal um kick in let's just do that one now actually so i'm gonna go here grab this one
+let's make this letter n and let's put it down to minus one and we're going to get this one i'm
+going to crank it up to 80 and get something
+similar to that but that that's going way faster and then we get the scale
+and actually
+close enough
+for now okay um then we're going to get this one
+actually
+grab that one from there this is going to become
+an o
+transform
+minus one whoa
+said o
+not zero
+not zero
+and that one just rotates left to right that one's not so difficult
+whoops
+okay
+so we're going to grab we're just going to use that one
+sign there to keep it all in sync it's okay
+and then we're going to say i don't know um minus 32 30.
+let's grab that let's plug that into
+that'll do
+hmm
+that'll do oh yeah this is output in 0.2 okay
+last one is i and that's pretty much the same as this one here it's just rotating on a different axis
+um and this should be minus one
+minus one
+yeah and we don't see it that good because we don't have
+we don't have these bits sticking out maybe i should just make this into
+an l for now yeah let's just do an l a bit more obvious then
+all right so we've got this
+now those aren't actual 3d meshes so let's try and do something good
+um so we're going to do image compose i'm going to do
+draw image i'm going to grab this i'm going to put that there and then i'm gonna you know what i'm
+just going to make all this a bit closer so i'm going to grab bounds so it's like this
+because we're using orthogonal mode right um image compose let's do
+edge detection let's do this
+can make it a bit um wider
+can i just can put and i need a separate channel okay so let's just first of all set up the um actual original one
+draw image
+um get this put that one there all right and now let's plug that back in here okay so that's
+like the basic thing right i'm gonna go over here and say draw image and we're gonna plug that one in there
+and then what we want to do is okay so we need a we need a lighter background right
+um this is what i always get mixed up if clear color is gonna work or not
+and that's gonna mess up with this oh okay one minute so
+okay so we're gonna go here i'm gonna say
+um let me just get this one off for a moment okay so that gives this
+and i need to do something with the alpha
+as well this is never as simple as it seems
+hmm i might need to do this the other way ah around let's do this
+no idea if this is gonna work out everybody it's been a really long time since i did anything like this
+um so that's gonna be like that and then we need to
+uh well i'm not saying it's perfect but those are kind of shadows right now
+um
+i'll be
+let's put it on one full screen uh blur everybody super expensive don't tell you man i'm doing it
+wouldn't be cool all right so we've got that there
+and you know what they're all like really um pretty far away from each other
+so you know i can get a different kind of shadowy effect there and they've got this amazingly
+bright pinky background
+it seems
+i'm not even going to try and get that exact color a bit more red
+okay
+oh yeah you know of course i could go in this now going in and i'll spend a really long time
+and tweaking it all and the last thing is like the the shadows are a little bit
+offset to the side you see that so let's put the wrap mode on clamp to edge for what i'm gonna do
+and let's grab a scroll texture and as you can see i can now kind of fake it with
+um moving that shadow didn't say it look amazing but
+and now i've got that big line there
+not perfect but close enough for a copycat
+yeah okay that's more like it so we've got that kind of like um shadowy effects that are going on
+uh not perfect but um i'm i'm pretty happy with it came out um okay actually so it's really not too
+not too shabby not too bad all right
+animal it's on because if we do the eye it's not visible
+so okay let me save this one um as a copycat mini
+yeah that's a that's a good one oh
+all right that's that one
+hard work mini copycats hard work and uh i'm really sure this could be done
+um with um the the new msdf um text um up the panda made a short while ago that came out in the last
+update um that would just require a lot of um treating very single arrays but you know it'd be
+really super fast and we wouldn't end up with all these text meshes you just have one
+um like text objects on the screen so it'll be really super fast but that would just be watching andro
+do millions of little array things which i think you guys already saw enough of for
+right now so let me just save this now as the next one and i'm probably doing this
+wrong i'll clean up my patches later i'm all over the place right now
+i'm trying to focus and uh keep track of you lovely people being here tonight wow what
+my brain kind of gets it um
+this has to be done with like some no brain ain't getting it no i don't feel like doing this issues
+wow wow yeah
+yeah a list as you wouldn't give a 3d list as you wouldn't give the sphere
+uh we've got an op um
+okay hold it let me just do this
+panda what was the up that we had that
+uh
+random point sphere sort by axis okay let's do this panda you're gonna have to guide me
+through this one so we're gonna get the random points for okay let's let's just get rid of this
+and this and whoa i'll just add all that later if i need it all right
+random point sphere okay yeah um and that's going to give us
+guess what an array of random points matters fear uh i'm going to get point uh material just for now
+now to visualize and point cloud from a ray and we're going to plug this into
+there
+save hello anybody there
+what is happening oh didn't run this extra okay there we go
+all right let's do this all right let's do this i don't need to sequence ops
+yeah i'm going to do that in a minute uh panda i just wanted to see that this was working it's
+always nice to get an idea of the amount of stuff on the screen let's do 100 for now
+so uh what was it to sort um is it sorry free by distance
+sort by axis
+i think it was this one
+that we use to do this kind of thing so if i grab this one now and i say
+let's go over here i'm going to grab a basic material um and then i'm going to get a
+spline mesh and we're going to plug this
+and so there i'm going to say
+right and then if we do
+subdivide array three go for 10
+i'm going to put this down to 20. i don't know 40.
+yeah pull so it's just a uniform for now
+so we've got
+add random cluster
+random cluster that's cpu man
+i already used the repeat up tonight that was that was all the the cpu stuff this there's an array
+path follow
+interplate position in the spline array free so
+how did this one work again so there's actually only a few spheres there and they're using off
+orthogonal right so let's grab this
+and put that there turn the bounds up
+ah that's weird with the
+okay point material let's turn off random size
+scale by distance that's not aligned with
+orthogonal or maybe it is it's kind of difficult to say
+because we don't see it fading out as it goes into the distance
+burn the cpu yeah only once a year
+uh
+because of subdivide aya right for sure
+um what i want to do is
+that's not gonna work
+that's not gonna work
+that's all
+hmm
+so let's say what why not what's going on
+no it should just be free
+i'm getting tired i'm getting tired so i'm missing some air how did the array path follow up work
+beauty of cables click the example
+and you can see it so here we have i i i left this up it's so good
+it's really so good so we just plug in the array and it gives out one transform point right so
+should we just see if we can get this working with like one
+um
+thing moving around because we don't need a lot there's like
+a few there i mean this is done with like these perfect circles basically kind of ah it's okay
+sure i just got an idea with how to do this but i'm not going to change it now this is what we've got
+so uh if i go over here and i do uh there it is rape i follow let's grab that plug it down
+and let's grab a sphere right oh like this
+it's on the radius down
+yo all right
+i mean that's already kind of cool right there
+yeah that's working in 3d now yeah of course these points aren't matching up anymore because like
+pando said uh basically you know if we get this and we plug that into the works but then we get a
+million uh points basically so let me just disconnect this
+because he's just basically got a few would that work with repeat god would andro use a repeat for a
+second time in the evening good god find out in next week's episode of um
+hold it hold it didn't my brain is saying
+array path follow particles isn't that what we were looking for
+i've forgotten how this one works
+that simple really okay and then we can
+aha okay yeah array path follow particles let's do this
+um and that uses point material okay so we get this one i've not used this up in so long
+okay so let's just turn that one off for now we get that one and we plug it in here put it on
+10 and we're going to put it on uh whoops number of particles that's a bit much um
+length
+okay one minute and a thousand
+spread 0.2
+and what was it again time has to go into offset that was it okay so we get timer that gets plugged into offset
+that can go
+still don't see why it's not exactly adding up is it because of this
+what am i missing there
+spread to zero okay yes thank you panda that was it
+all right so now we put this on orthogonal and we go to point material and we can make those points
+bigger let's take a look at this again he just does all white right and we're doing a copycat so
+that's the look we're going to go for
+now of course we don't have those um circles
+as he's got um there but that's okay this is just to be inspired by
+you know the cool part is now this is all really dynamic so we could go in here and just like make
+more points and basically this is rotating around which adds some
+life to it so let's get the transform um oh yeah we've got the did i use orbit controls no
+yeah so we're gonna just get rotate y and we're gonna put that on
+20 this one we're gonna turn up
+so then moving around and then we're gonna spread i think it's like this distance thing between oh
+whoops that broke it should also be in zero okay
+it's been a while since you used this ah random speed and then they all go different random speeds such a cool op
+array path full of particles a really awesome one seriously cool
+that is
+that is not too bad i might add because
+does that
+panda we've got that one uh that i made a patch with ages ago um where you you you throw in an array of
+coordinates and then they're mapped to a sphere do you remember which one that is
+i am by the way everybody um panda just said spline mesh sucks well you got to have something
+panda better spline tech coming up soon i got a sneak preview today of some cool new stuff that
+panda's working on with um new spline mesh technology coming soon to cables and it's really really really
+awesome you you didn't know you needed it until it's going to appear in the next update
+okay yeah i really don't remember it panda you know which op i mean you just give it
+yeah it's a geocords one um map geocords spherical
+that was the one
+this one right here
+so basically um we could also use this to get any array and um you have latitude and longitude
+and then it gets mapped to a sphere um basically um i'm just really curious what this is going to do
+right now uh panda let's just take a peek
+ah okay
+right yeah this isn't gonna work
+no this isn't gonna work because these all need to be
+way further from each other okay yeah all right yeah okay i'm just gonna dump that but that was
+interesting to remember that the op exists okay so what did i just destroy ah there we go one all right
+yeah so two d coordinates that's that's correct so that's why random points fair is messing it up
+because it's outputting um xyz instead of xy all right why have i got those two little floaty guys
+there what did i just do to destroy this
+what's going on with those guys why are they why are they doing this
+go spreadin zero
+that's unusual a certain number that shouldn't be floats
+you know i actually like it over a lot of them that's actually kind of cool i don't know why i've got
+this one guy in the middle though like that one little dude hanging around
+it's okay that's something for another time all right that was another one um
+i'm just gonna call this one
+um
+spherical
+spirally thingy
+save save all right i'm gonna save a new one save as
+i don't know okay
+let's take a look back over here
+that one shouldn't be too hard i think let's try this one it's a really simple one
+um it's also using orthogonal but i'll add that in a minute whoa
+my bad
+let's get rid of this and this
+um let's grab a sphere put on one
+let's just make that piece right so we're gonna grab a transform i'm gonna say
+you go over over there
+let's grab another one say you're gonna go over here
+um
+actually let's do it like this
+position action zero
+put that there
+let's grab a cylinder
+um
+let's transform
+90
+there we go
+actually
+yeah i might i might do it again everybody really
+it's uh
+oh boy
+oh boy
+oh boy
+surface scatter could be cool
+for this one
+uh i don't know if that's what you mean uh ponder
+ah okay sure i was just gonna go for the symmetrical um look right now
+but i think i know what you mean
+but then i wouldn't get this exact um look let's just get the basic thing down first
+because i'm not too sure i'll do that right now with the surface scatter
+though i think i know what you mean if i've got like a sphere i can change the amount of stacks and slices
+put a sphere oh that's more like point material yeah it's getting these um
+things to go through the middle that would be the hard part
+okay let's do this just gonna keep it simple for now
+uh
+um
+no let's just do it with of course it's y or z yeah let's just do it with z for now
+um i don't care that it starts with zero right now
+let's put that on 45
+horrible way to do it but i mean it's that little stuff that doesn't really matter
+no come on
+so it's got to be it's got to be wide then all right i don't know it looks like i'm in until it works
+it's my motto
+oh
+whoa no uh sequence
+let's grab a full screen rectangle let's render this to a texture
+let's do an image compose i'm going to just use that for texture focus just gives me
+the control to the one we're going to get the depth map we're going to plug that in there we're
+we're going to get this we're going to plug it in there i'm going to move this down to
+here ones at the front are brightest
+let's get rid of that are we using orthogonal here not yet let's put that down wow what happened
+oh why did i lose everything what's happening
+hmm
+why is that messing up the
+depth map
+because i see it here
+but i'm not seeing it there do i have to change the far plane
+and there we go okay oh wow that's really affecting uh yeah for a strum
+uh there we go okay that's just way too much thanks panda 10
+um
+um
+um
+okay
+hmm okay
+grab a timer
+uh let's grab a sign and put the frequency on 0.1 i'm going to put the amplitude on 180
+and then we're going to plug that into rotate x actually maybe frequency on
+and then we're going to go
+here i'm going to say multiply by
+and then we're going to grab
+so let's just do it like this
+oh
+cosine
+and it's a lot lot brighter
+panda freshstrom near to 0.01
+um
+panda do you move the orthogonal because that's already on 0.01
+uh
+ah okay great all right i mean
+this gives marder
+yeah let's let's just cheat now
+um
+a bit more like this
+that's looking closer
+uh we could even do fog with this basically
+to get that look that we want as well
+ah that's extra focus doesn't have a blend mode
+but i'm not going to go for fog right now i think that's like too much
+and i see the pattern going on here i'm just not in the mean to figure out the the math right now
+basically even though i might actually i do have it the middle part is rotating like this i've got it
+wow all right cool let's just put it on
+faster
+now we could have done this with um mesh instancer i think no no yeah we could but
+ah that would have been horrible this is just quick and easy it works
+it's uh it's working okay
+and the thing is it's like too many uh there right now
+we could reduce the amount but i like it like this i think i think that's kind of cool i'm not
+trying to get it super exact uh for now all right um
+rotation it's called so patch settings copycat mini
+rotation save
+and then we're going to do save as and again i don't know
+all right you know what everybody this is going to be the last one um it's been going on for just
+over two hours now and i notice i'm starting to lose my edge because i'm using the repeat up
+so yeah uh no it's a great up actually it's just you've got to know when when you shouldn't use it
+all right let's take a look again i love this page it's so good oh god
+that one is way harder than it looks i mean i'm really sure um yeah i don't want to do a remix right
+now though um
+you know i i would just do this with orthogonal and just rotate the whole thing i'd just be lazy and just
+get three rectangles and then just repeat that but yeah this is a it's a really nice one though
+no let's not do that one that's really cool effect though look at that wow bam all right
+that is way harder than it looks that is really way way harder than it looks
+okay
+that's also a really interesting one
+wow okay
+i'm not sure exactly how that's being done
+and i thought i knew most things are mentioned yeah but it's all moving it's like circle packing
+it's like each sphere is uh aware of the distance between its neighbor yeah and then it's filling
+it's fired up no i'm not going to pull that off tonight
+yeah so the hard part cylinder six sides mesh instant so effective free distance from center
+move out could do bit much for the last part of the stream
+i'm sorry frowning me i'm not sure which one that you're talking about
+um
+sorry i saw your comment just a little bit late
+yeah
+might not be that hard but this is one of those where you go ah i look so simple and then it's not
+the thing is they all have to rotate differently and doing that on each row isn't a problem but then
+offsetting each row that's going to be a major pain
+at the circle with the sine circle scale is this one you mean ponder
+this one
+yeah sorry guys uh i keep forgetting uh twitch has a slight delay all right so um this one ponder seems
+to uh of course but i keep thinking doing this with mesh instances but this might not be so hard to
+repeat okay ponder we're gonna do this one together
+with repeat probably
+hmm
+i mean it's just
+the circle point up
+all right i i don't know let's let's just try okay let's give it a shot
+you never know until you try
+that's the whole idea of uh doing this kind of stuff you just you just
+do it and just see what you get
+all right let's do this
+um for this one i need a basic material and then i'm going to get a mesh instancer
+um
+and then i'm going to get the
+points circle i'm going to put it on segments
+nine i'm going to plug that into positions i need i need a bit of music next time on the stream i notice
+music so it's just a little bit good so just like get in the zone and focus
+all right right i'm going to go ahead and i'm going to do that and i'll just disconnect this and this
+plug that in there okay let's make this white okay uh let's make that circle a bit smaller let's just put on 0.25
+for now they're actually closer to each other
+let's do this for now okay
+go to those jaggies and i say a on four
+okay so first of all let's start with the scale right so go ahead and we say um
+how many points do we have nine so we're going to say array
+um and then we're going to say zero to one
+array pack
+free
+i'm gonna get this plug that in there
+um i just want it to be the same for all of them right let's grab that and plug that into scale array
+okay so far so good this is the easy part i think so now what we want to do is
+they go like that okay so let's go here array multiply
+um
+so we can make it bigger um and now let's just actually do array
+modular yeah okay
+and that's also going to be on two for now and we're going to go here and we're going to say
+erase sam and we're going to add a timer
+okay
+so hold it how many is though more than nine okay yeah all right let's put it on 12.
+yeah so that's the thing from me it's um they're fading out it's not just alpha right which is the
+cool part of the mesh instancer because we have an rgb um alpha array that can go in there so
+let's get it right it expects uh an rgb alpha array okay so we're going to get this
+um array pack four and you know what i'm just i'm only bothered if it's white yeah so it could be
+0.5 whatever i don't care let's get this let's put this into there let's get this and plug this into
+colors and it died okay so um actually what i need to do is this is an array module one
+uh-huh what am i missing here um let's put this on one
+let's also have this one on one i just want to make sure it's working first number one
+not exactly what i had in mind what am i missing here i've not got enough um
+um
+actually that should just be happening only here we don't need to do that on everything that's way
+too expensive but it's not actually expensive i'm just thinking in terms of efficiency
+so the thing is the first one is always the brightest right and that's not happening here so
+i need to find some way let's get this array
+one minus alpha right panda you mean get an array of one and subtract this from that
+that sounds like it could work
+yeah i've got to use this array here though for it to match up that's this oh i think
+there's something really right there's something really simple that i'm missing
+right hold it
+and of course
+and of course these ones that's the thing they're fading out and they don't pop right
+they fade out before they disappear that's why this looks so cool they fade out and then they disappear
+and that's not happening here they're just popping out because of this modulo here
+so we need that now to like kind of fade out before it gets there ah tricky
+and i need this and i need this the other way around
+and i know that's not going to work let me just reset here for a minute so we got this we got this and
+if i just plug this into here now
+get that
+and i need it to go i need it to go the other way around right
+now this wasn't it when i tried that before i wasn't
+so hold it because i need it to fade out i don't need i need the opacity to start at one and then go to zero right
+that's pretty much it
+so i'm almost there now it's just got to be reversed
+why am i getting these odd ones in between
+this is doing nothing basically
+oh my brain's just tickling with the
+solution here rotate array yeah i don't think that's going to do it but i can give it a try
+yeah it could be ray has to be shifted i think for me we could be onto something
+well we got a smooth array so that should catch any jumps
+how many points have we got a 12 right
+it's that fade out that i want um
+i mean this number is
+this is not what i want
+this is i just i've just got this really simple solution just looking right in the face i'm sure
+okay let's let's just start from scratcher
+get an array plug that in
+that's what we want one to zero and then we need that to shift with
+that the rotate array
+flow
+no because the um array modulo um has this multiply um on it for the scale basically
+that's looking more like what am i missing there we go
+hmm
+yeah
+seems so simple seems so simple
+okay okay so look it's it's almost there it's just it's not
+so basically this this array i mean i think from me and panda are right there you know this this array has to be offset
+you know i'm doing that here is it because i've got to rotate it the other way
+is that it
+i already did one um minus x
+why is this why is this okay hold it let's just do this multiply on one so this adds up right
+and this is just brightness saturation let's clean it for a moment i'll go crazy i'm flucking at it all
+i don't think we've got a lot to do
+i don't think we've got a way to normal
+i don't think we've got a way to normal
+i'll write like that of course which uh this one right
+but isn't that gonna stop them
+do you mean just panda
+or am i misunderstanding you
+oh into the alpha right okay my bad
+of course right okay
+i'm just wondering if we
+still do it with
+this being shifted
+it's an array of 12 right i just want to make it that it fits
+with this
+yeah i think we already uh did this i'll try what doc retroids saying there i think we already did that
+never never
+never let's just give me one minute
+it says uh one minus x i assume if x you mean this one
+so let's just grab an array
+fill it values of one
+make this the same
+go here do this
+plug that in there
+one minus
+reverse problem
+reverse problem
+see this is what we already did with these
+they're bright at the beginning and they become more faded out as they get to the end
+do i do i even need this rotate right yeah they need to be
+good god
+all right founder i'm going to publish the patch no pressure but uh let's see if you can do this one in
+uh a few minutes
+patch settings copycat
+puddles i am stuck
+all right save
+uh
+uh
+copycat
+puddles save
+bump
+make patch public
+all right
+let's see uh
+let's see uh is anybody going to be trying to solve this we just published it
+you've got like five minutes because uh i'm getting off at uh 10 o'clock
+ah this is the life of a twitch streamer
+get stuck and ask ask the amazing community to uh fix it for you
+i'll go ahead and let my brain popped a little while ago
+let's see who can be the first one to nail it
+if you've got the patch i'm working uh please post a link inside of the um chat and i'll open it
+straight away
+okay yeah this is um this is the exciting part of the stream everybody where uh i'm waiting with
+uh baited breath and anticipation up pandas already got it but boom okay um
+let's see what he did because now i'm super curious
+oh he used map range okay
+i completely didn't think about it god mode activated
+nice one panda love it all right that was awesome okay i'm stuck one one all right um
+i'm stuck one one one
+it works
+it works wood
+thanks panda yeah sometimes the solution is like so simple and um looking you in the face
+look at that there's so much cleaner now love it love it that was great i keep forgetting to use this
+it's like when we developed all the stuff of erase we never had the map range up
+when we made it we didn't realize why we didn't have it anymore all right so let's just take one quick
+look so that's this one here and uh it's close enough as far as i'm concerned the only other thing
+we can do right now is
+for my perfectionist part just move it a little bit closer like this and this we don't need and we
+actually don't need uh this or this let me get nice super sharp crispy lines all right
+um okay guys and ladies um my brain actually popped a little while ago uh doing a lot of little uh copycats
+uh i don't know requires me to keep my brain more on its feet um i suppose um yeah i hope you all enjoyed
+the uh the stream um tonight as usual we're just trying uh different things and i actually i i really
+loved this because um uh everybody's got like some uh advice and uh like a lot of it like just all worked
+out uh really really cool and i feel like it's way more engaging uh with you guys instead of you watching
+me do a big thing for like maybe two or three hours and stuff like the vj software that's fun but i think
+it's very passive you know you can ask a few things but it's like a lot of watching but this feels like
+it feels like a keeper i really enjoyed it and uh i'm sorry if i went a little bit quieter sometimes
+for five minutes i was just completely trying to get into the zone of just like um realizing uh these
+things um that i had to do so i i absolutely loved it tonight with uh everybody it was it was great and
+like this part like right at the end that was also great when panda said hey can you just publish
+the patch and publishes the patch bam 30 seconds later it's fixed it's great for me as well uh i'm
+also learning some stuff off that uh thank you we're mackabund thank you everybody it's i i really i really
+i really enjoyed this i feel like this is the this is a thing to do way more often um because you know
+normally doing like the big copycat um episodes they require a lot of work because a lot of the time
+we really pick like something that's normally more complex or more visually appealing even though it
+might seem to be simple um and this i really liked i love this with this site like these these really
+simple um little design things and as you can see uh there's a lot of different ways to do um this uh
+this stuff oh yeah like add a add one effect then give it away type of thing um sorry i didn't really
+follow that um so yeah this was this was just awesome i absolutely loved it it was uh it was
+really cool um just it's just great everybody can just get involved with this and uh there's more than
+one way to do some of this stuff but um it's just really great to have everybody just like um tuned in
+with this and i think it's just nice that like every 15 20 minutes that uh we have something different to
+do right you know that uh it's not only going to be one thing for a few hours so um thank you everybody
+for um joining us um if i'm correct next week banda will be doing a stream i think i have a clue what it
+is i don't know if it's okay for me to mention it now to get the the the hype train uh going i'm uh
+uh i'm looking to my left uh yes okay cool he popped in so panda is gonna do how to demo
+because uh okay panda already said it well i'm just gonna throw it in there uh as a lot of you know
+panda has made some absolutely amazing wicked stuff by himself and with multiple people uh for demos for
+demo parties with cables for the people that don't know demo parties please go after the whole pandemic
+corona fingers over um so he's gonna show us all how to demo i'm i'm incredibly hyped about this like my
+hype train is like off the scale it's like uh and you might think well andro uses this stuff a lot yeah
+okay but making a demo that's an art into itself pretty much no matter what software um that you're
+using so i'm really excited about that so tune in next week tuesday 7 30 central european standard time
+to watch panda how to demo uh i'm not too sure what it's gonna do um but i'm sure it's just gonna be
+pretty damn awesome non-interactive real-time anime latons yeah anime latons that's the thing from now
+we don't make animations we make anime latons uh so yeah that's that's kind of cool so um tomorrow i'm gonna
+i'm gonna basically uh make the recreate the first two or three little patches that i forgot to save
+at the beginning of the stream um tonight uh when i was just like so that new stuff i've got to get into
+a flow so i'll rebuild those tonight uh tomorrow and i'll publish them tidy up these patches and i'm
+just gonna call it copycat mini uh because yeah it's like lots of mini um copycats uh basically
+and if any of you uh feel like uh um like redoing them or showing a different way to do them um just
+please give them a tag uh publish them it'd be it'd be great to see them because a lot of people
+had the different um suggestions on the different ways to do stuff so yeah i'm really curious to see those
+things as well um so yeah that's kind of it for me it's 10 o'clock uh it's been a long uh long day and
+a long night i'm feeling it a little bit um so i want to say thank you one more time to everybody
+that's joined us tonight it's really uh so great that you all uh tune in and so actively engaged uh we're
+very happy and we just think it's great that everybody uh just tunes in to watch this stuff
+and if you've missed it uh tell your friends they can watch this on youtube um so i'm gonna wish all
+you lovely people uh a wonderful night um and i'll see you in the near future when i do the next stream
+yeah so uh thanks everybody you're all really cool thanks for uh for joining us and um speak to you in
+the future yeah all right have a good one bye

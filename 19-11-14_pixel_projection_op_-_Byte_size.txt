@@ -1,0 +1,27 @@
+https://www.youtube.com/watch?v=xkIrVtSU4FU
+Hi there, and welcome to another video on the Bytesize channel. My name is Mark, my handle on the farms is Andrew, and today I'll be showing you how to use the pixel projection app. I'd just like you to pause the video and make what you see here.
+Great, let's get started. So I've got this rectangle on the screen, I'm going to move it to the left. Now watch what happens if I resize the screen. Its position in relation to the left side and the top and the bottom, it changes.
+So imagine we want to get around that and say I want this rectangle to always be in the bottom left corner, no matter what.
+So we're going to grab the pixel projection app, and this simply remaps the 3D coordinate system of space into a 2D pixel coordinate system.
+So I'm going to grab this, I'll drag it in. Now the rectangle disappeared because the rectangle has a width of 1 pixel and a height of 1 pixel.
+So let's put this in 100 and this in 100. Now we're looking at a quarter of the rectangle.
+I'm going to click transform, and now I have to use pixel values. So I've really got to use values per pixel to move this around.
+Now let's say I put it on 50 by 50, so it's there. And now watch what happens. When I click and drag, this stays there, right?
+It's like its position is fixed. It's based upon the pixel coordinate system. If I'd want it to be in the top right corner, I could grab the width and the height.
+And as you can see, it's now always going to be there, no matter what I do. And imagine I'd want it to be in the middle of the screen.
+I just do divide by 2. And I do divide by 2. Let me just move this down here so you can see what's happening.
+And now, no matter what, that will always be exactly in the center of the screen. So let me get rid of these.
+So I could now also grab the mouse up, which works with pixels, as you can see here, and I could get the position X and the position Y.
+And now this is always going to be mapped to the screen, no matter what I set it to.
+Okay, great. Let's get rid of that. The last thing I want to show you is I'm going to grab a cube here in 3D space.
+So this is not being affected by the pixel projection. I'm going to make this rectangle a lot smaller.
+And now I can move this 3D cube around, but I want to get its position with pixel coordinates.
+So we use an op called screen coordinates. And as you can see, I'm getting its pixel coordinates there.
+So I'm going to grab this and plug it into X and watch what happens.
+So here we have a number of minus 0.18, but here it's 246 pixels.
+So from 0 to over here, I could now grab Y and plug that in. And as you can see, it's here.
+So now when I move this around, that's following with the pixel coordinate system.
+Okay, that was an introduction to the pixel projection op.
+I hope this video has been educational and informative. If you've got any questions or comments,
+please feel free to leave them under the video below or to post them on the forums.
+Thanks for watching and have a good one. Bye.

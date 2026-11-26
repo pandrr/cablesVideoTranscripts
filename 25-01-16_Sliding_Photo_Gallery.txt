@@ -1,0 +1,174 @@
+https://www.youtube.com/watch?v=V2dacm0OwMY
+hello and welcome to another cables tutorial my name is tom on discord and cables my name is
+panu and today i want to talk about how to create a little gallery like this one so we can scroll
+we have two buttons and we can scroll through a list of cat images nice so okay let's create
+a new patch i already uploaded a few cat images here and i will just drag them out and place them
+in the patch and create a main loop so i we want to create an array of images that our gallery will
+display so for this i will use the operator texture array there are other ops that are maybe more
+flexible if you want to build this so you can have a look at texture array from texture array loader and
+texture array loader from array so this one they give you the option to load images more dynamic
+but we will just do this in a very hard-coded way basically and we will just connect those cat
+images here and then we will get an array out with images so we can have a look what's in this array by
+getting texture out again so if i use array get texture and maybe use the this texture operator i can see
+see okay our first image at index zero is this image and at index one it's this image and at index two is
+this image so i can scroll through this array and we have a convenient method to preview what's what's in there
+okay great okay great so now let's let's draw them to the screen let's create a rectangle
+no rectangle i mean and connect this to the main loop
+now to put something on the rectangle we need a material so for now we will use the basic material
+we don't need shading or anything and we will connect this to the array get texture and now i can change
+this index and we will see different cat images depending on the index okay so the cat is a little
+bit stretched out so we have to change the aspect ratio of this rectangle you could also get the aspect
+ratio from the texture up and connect it to the rectangle if you want but we will we will do it this way for
+now okay let's add a scale so we can scale up the rectangle a little bit so it's a bit bigger and now
+oh let's let's keep this out i will disconnect this i i just disconnected it by pressing x which is super
+helpful um and and let's just first put all the cats to the screen so for this we want to draw multiple
+rectangles and we don't want to copy paste this this those ops and create more rectangles we want to
+use a repeat operator so i will insert uh the repeat operator so this operator will just repeat
+everything that's below it will trigger multiple times so if i enter 10 it will just trigger
+everything below multiple times and you can see this when you have the flow mode by pressing f you can
+switch through the flow modes you see this is the normal speed or the normal amount of triggers
+and you see below the repeat there's a higher amount of repeat so you can you know that this is
+executed multiple times so let's change this to three for our three cats and now the rectangle is drawn
+three times but we only see it one time this is because it's drawn over each other uh multiple times so
+that is really not what we want we want to draw them next to each other and for this we want to use
+the transform op for example so with the transform op we can translate the image around but it's still
+all are drawn over each other so to do this we can use the repeat op output it's called index so for each cat
+this number will increase so we can connect this to the x axis to the x input of the transform and then we will see
+exactly three cat images here so they are next to each other so i can also multiply this number for example
+with something like 1.2 and then you see we can change the distance from each image easily
+um great so but we see it's still the same cat so we want to have a different cat on each image for this
+we can use the array get texture again so if we connect this index output from the repeat to the array get
+texture then we will see a different image for each rectangle and this is this is basically our main
+functionality of the of the gallery so we can see all our images now. Great so next we want to I
+would just add the scale again so that it's that it's bigger and then we know which image we are
+focusing right now so this is our first image and this is our second image. So now the main
+functionality of this slider gallery that I showed is that the images are scrolling in front of you
+right so for this we want to use another transform operator so and by changing the x position we see
+we can scroll through our images so we have our our scrolling gallery like this so that's great so
+this we want to control with by pressing two buttons and those buttons should increment the
+index of the cat that we want to see so for this we can use the incremental so the incremental ops
+basically this is just a counter so you have a button for incrementing and for decrementing so
+down here you see the output value so this is our account so this is like five and now I can
+make it smaller and bigger again for debugging reasons it's really helpful that you click
+this three dot menu next to the port and choose extend title so when you do this the title here
+in the patch field will be extended by this value so this is really helpful for debugging or for just
+knowing what what's going on in your patch right so now we see value two so when I increment it will get
+bigger and when I decrement we'll get smaller again so for our cat gallery we want to limit this we have only
+three cat images so I will limit the length to three so now when I press increment it will just stay between
+zero and two or like between zero and three so we have three values now zero one and two so because it's starting at zero the number the last number is different to the length
+but the length but the length is basically how many images do I want and the output is the index so
+there are three indices in the length of three so zero one two so don't get confused if you're not a programmer
+if you have the length three you will get three different numbers out so
+okay so we can connect this increment up now to the transform operator to the position x right and then
+if we are at cat zero we will see the first cat so when we press increment this is wrong we see it's
+moving in the in the wrong direction and we can so now the value is one right but if we just disconnect it and try it out
+again when I when I move my mouse to the second cat it will be minus one so we have to change the direction
+of the increment increment output value and we can do this by multiplying this by minus one
+so we use the multiply op and I just typed in multiply minus one and when I press enter it will just take this
+value into the multiplier up and multiply this by minus one so now this looks correct right so if I press increment
+and decrement I can just go through all the cats and right now when I when I increment at the last one it will just jump back to the first one so we can
+change this behavior by changing the mode to stop at max sorry so now when I increment
+it will stop at the last cat and it will stop at the first cat too
+so this is the behavior I want okay great so now we can scroll through our images which is already
+quite quite quite the achievement but it's a bit boring it's just going step by step right we want
+this to be nicely animated so to smoothly animate a value we can use the smooth operator
+so we can add this so and plug in this value into the smooth operator and the output to the translate
+again and this the smooth operator needs to be in here so it gets updated every frame every animation
+frame that we draw and now when I press the incrementer we see there's already a smoother movement
+so I just want to create make this value bigger so the animation takes longer and it's more smooth
+so I set it to 22 for example and now when I press decrement or increment it's really slow and
+smooth maybe a little bit too much let's change it to 15 yeah so let's let's use this value so we can
+scroll through our cats nice so this smooth operator gives us a lot of functionality that we can use
+for our for our output down here um we can for example um let me just move this multiply by minus one down
+below the smooth because we want to use this value for something else so let's say this cat the currently
+focused cat should be bigger or fully full opacity and the second one the or the off screen one should
+be a little bit smaller left and right from the centered image so we can use this smooth value for example
+and just subtract it from the current repeat
+and for example add another scale so and when we connect this every cat will have a different scale
+so uh it looks it looks wrong now but this is normal like just uh let's let's see what's happening this
+looks really funny um and the cats are uh reversed so this is because this difference from the position
+and from the our repeat is negative in this case so we want to have an absolute number so always a
+positive number out of this so we can use the operator apps and um now the cats are not reversed anymore
+but like our current real focused cat is size zero so we cannot see it and the others are size one so we
+we want to tweak those values a little bit and we can do this using the map range operator so
+the input is now from zero to one and the output also from zero to one but we want to reverse this so basically
+when the distance is zero so when we are at this image in the center we want the value to be one
+and when the distance to the image is greater than one we want a smaller value so i can just use the scroll
+wheel and scroll down and then i can make those uh images smaller by just changing the new maximum scale
+to a smaller value and now when i use the incrementer you will see this the center image will grow and the
+the other images are smaller so pretty cool so we have a lot of functionality with this so we can make
+them even smaller so now they are a little bit uh too much out of the way so i can use um this multiply
+that we had here to make this value smaller and then then then they are closer to each other and then
+you see the the scale animation suddenly makes sense so you can do a lot with this like you can for example
+connect this value to to the rotation y for example um so i use this one so this is still has the negative
+numbers in there and now when i when i increment it will be rotated so but we will not see it because we
+we need a bigger rotation number so i will multiply this by 50 so each step is rotated 50 degrees you can
+already see it there so now when i scroll through it it will be
+rotated and like our center images is a still image and and the other ones are rotated a little bit and
+they are rotated in different directions this is because of the negative number
+and yeah so this gives you a lot of a lot of functionality you can also um change the opacity
+of the secondary images to a lower opacity using the basic material uh or whatever like you can you can do
+tons with this so please experiment with it when you're building and your image gallery can look
+completely different than other image galleries okay great so one thing the the last step that we want
+to add is a nicer way to interact because if you put this on your website you will like the users cannot
+click the increment buttons so for this we can either use this sidebar or we can put our own buttons here and i want to go the extra way and add our own buttons using
+uh html operators so what we did now this is this technology is called webgl so this is the main
+thing of kevisgl is rendering in 3d uh 3d space um those images but for interaction it's often really helpful to use html so
+really like this this dialogue for example is built out of html so this is like the native browser technology
+to do uh to display text or images or just rectangles or something so we will use a different technology for this
+so we can use the element operator um for this and this will just create a new uh html element um
+and to make this visible we use the operator css color so now we have a nice big rectangle there we can use
+the element css border operator to make this um like have rounded corners
+and in the element op i want to just change the size to
+yeah maybe like this uh
+to to to this shape so this this could be our button
+we could also change
+the border color using the border color using this op tool so it's uh maybe it will be uh look better if
+you have a really white image you can just create this border and you see this this element op
+has an output called clicked so we can use this and connect this to the increment button for example
+for this the element has to be interactive so make sure this is set to true the interactive
+so now i can click this button and we see we can increment
+and go through our gallery so let's add another element
+and connect this to the decrement button so we can
+transform elements around using the element css transform operator so with this we can put this
+this one here and now when i click this it will go into the other direction
+so we have our our buttons so nice so now we have our buttons and uh can can scroll through
+through the images so one last thing that i want to show is those buttons should be centered on the left
+and right and centered on the vertical axis so we can for this we could transform this and calculate
+our pixels to reach this exact point um by using the size of the canvas or something
+but there's uh there's an easier op now for this this op is called align element
+so and align element takes two
+html elements and they will align the second one to the first one so
+our button is basically the second one and our first will be the canvas so the
+the whole area that we are using in the patch so for this we can use the op canvas info so this will give
+us information about our about our canvas like the width and height and all this stuff one second
+sorry and it will also give us the canvas and by doing this we can select
+the alignment so we can say this should be on the left side on the right side and in the center
+and also how the button the orientation of the button is so the orientation is like center then
+first of all this alignment selects the point where the element is positioned so in the right
+maximum point on the right and on the center so this point here is our point where it's located and the
+orientation point is basically where the alignment in the rectangle is so now the it's on the bottom
+right corner position so the bottom right corner is where our position is so we want to use the center
+on the vertical axis on the vertical axis and on the horizontal axis we want it to be positioned right
+then it's exactly on the corner there okay let's do this again for our other button
+and use the same canvas
+info element and put this on the left side
+and align it orient it to the left so now we have two buttons on the outer sides of our canvas which is
+nice so one last thing so there's a new option here for this align element and i can set an offset
+to the button so i can add a little border so let's just add like 20 pixels of border to our canvas
+and the same here so here it's negative 20 pixels and
+now we have those nice buttons here and one other problem that is there they are not really reactive
+so when i change our canvas you see our cat images they are scaled like relative to the canvas
+but our buttons are not because they are right now not updating so this canvas info also has this
+resized output so every time the canvas is resized it will trigger this output and we can
+connect this to the align element force update port and now when we resize the canvas you will see
+those elements are automatically positioned to the right position so we have like a nice
+reactive patch so it reacts to change of size and it will always be connected perfectly okay so
+this is our gallery i think the amount of ops is really it's okay it's really not too big and yeah i hope
+you try it out um this patch so this tutorial was made because there was a question on discord about
+how to do something like this and we realized we don't have a nice example for a gallery like this so i
+did this tutorial so if you have other ideas for comp tutorials let us know and then we will do it also
+this example is a bit bigger than our previous tutorials but i think it's a really good example and
+really lots of topics uh captured in this one so let us know if you have any other ideas or any other
+questions or how could we build this or that let us know on discord or in the youtube comments thank you very much bye bye
+We'll be right back.

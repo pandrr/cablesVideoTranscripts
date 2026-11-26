@@ -1,0 +1,49 @@
+https://www.youtube.com/watch?v=qnPFY8qYBUQ
+Hi there and welcome to another video made with cables. My name is Mark, my handle on the forums
+is Andrew and today I'll be giving you an introduction to the CSS property ops inside
+of cables. So here I have a main loop and a clear color and a div element. Just create a div element,
+pop open the style with the edit button and copy this text over here if you want to get what I've
+got there. Great. So these are CSS properties like padding, color, font size, border. So we can
+dynamically change these inside of cables. So I'll show you how to do this. So first of all, let's start
+with something really nice and simple. Let's go here. I'm going to grab a CSS property op. Let's say
+we want to move it on the left side. So I'm just going to type in left and we have the value suffix
+pixels. So now when I move this, as you can see, it's moving this many pixels, but I can now go
+here and I can put this on say percent. Now it's moving 75%. So this suffix, it works like this. You
+have the property, then the value, and then you add the suffix afterwards. Okay. So let's remove this
+and let's put some zero and now let's try out opacity. Okay. So now we've got an opacity of zero and I can
+fade the element in. So how can we use what we learned in the previous tutorials to make this more
+interactive? Well, let's look at this hover here and I'm going to pull that out and we're going to grab a
+and we're going to grab a bool anim like this and we're going to give it a trigger.
+And now we're going to get the value out and we're going to plug that into here. Now we know that div is
+there, but well, nobody else does. So we can just go to the bool anim, put the value false and say 0.2.
+And now when we hover, we alternate between 1 and 0.2. I think it's a little bit slow. So I'll put it on 0.25.
+So there we go. So that's how we change something like a simple property. But what if we want to change
+a property like color? Well, you know, let's keep it simple for now. I'm just going to show you what you
+shouldn't do. So I'm going to grab the CSS property up and let's say I want to change the color of the font to
+black. So I go here and I type in color and now I'm going to type in black. And this isn't going to work
+actually most of the time. It says undefined and now it vanishes because this expects a number. So that's
+where a different op comes in and that's the CSS property string. So that allows you to modify a CSS
+property of an element with a string. So I'm going to pull that out. As you can see, we've now got a string
+input. So I'm going to type in color black. Great. What if we would want to swap between two different
+colors? Now, a really smooth way of doing it would be with RGB values and smoothing the values in and
+out. I'm sure you can figure that one out yourself based upon what you see here. But I want to show
+you something different. As you said, I want to swap between two strings, white and black. There's
+quite a few ways to do this, but I want to show you a way which I think is quite interesting.
+So I'm going to grab the root object op. Now the output of the DOM element here from this op is
+just actually an object. So that goes in here. And just wrap your head around this. This is the color
+black. I'm going to copy it. I'm going to make this one white. And I'm going to connect this one here.
+And this will make the text white. And we go here. So what I want is when I hover over here,
+it's going to give false a true. And I want to turn that into a zero or a one. So I pull this out.
+I'm going to do bool to number. And this will now swap the index of where we're rooting the object.
+So I'm going to go here. And there's more than one way to do this. I just want to show this. So I'm
+going to press F. We make the text black. We go out. We make it white. So that's a different way that you
+can swap between these things. Okay. So let's do one more thing now. Go out of flow mode. Some
+let me just grab CSS property string. So some things are bigger than just a string like color black.
+Like for example, you've got one called margin. And you could just type in one number now and it'll do
+the left. But you can do you can do top right bottom left all in one argument. So I can do this now zero
+pixels, zero pixels, zero pixels, zero pixels. And I can now say 10 and change this part here.
+But I could also do this and do 50. So this is just a really handy thing with the CSS property string
+where, you know, you could go in here and define this inside of the div element, but you might want
+to dynamically change it. So there you go. That's the basics of the CSS property ops inside the cables.
+I hope this video has been useful. If you've got any questions or comments, please feel free to leave
+them under the video below or to post them on the forums. Thanks for watching and have a good one. Bye.

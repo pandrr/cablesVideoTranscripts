@@ -1,0 +1,31 @@
+https://www.youtube.com/watch?v=63UbYklOZ3c
+Hi there, and welcome to another video on the Bytesize channel. Today I'll be
+giving you an introduction to the array iterator op. I'd like you to pause the
+video and just make what you see here. Great, let's get started. I want to like
+generate a load of spheres and put them into random positions. So I'm going to
+get a random array op and this is going to generate an array of random numbers.
+So I'm going to put the amount of numbers in the array to 20. I'm going to
+say minimum minus 1, maximum 1. But how do I get this array of data, which I click
+here in the magnifying glass, how do I get this and get it into my shape? Well, that's
+what the array iterator op is for. This allows me to loop over every element of an
+array. I'm going to press F so we can see the flow. It's not so busy here. I'm going
+to disconnect this. I'm going to plug this here. I'm going to plug this here. Now we
+see lots more activity because there's a trigger for each value inside of the array.
+So the first value is indexed. The second one is the value of what's in the array. So I'm
+going to put this in position X. Voila. We now have these random numbers here and
+they're being mapped to position X. So I can now just get a random seed and get different
+outputs. I make the sphere a little bit smaller so we can see what's happening. Great. So let's
+do something else. I'm going to disconnect this and this and this. And now I'm going to
+make a random array free X. So this is to generate X, Y, Z values. Very similar approach. I'm going
+to type in array iterator and get array iterator free X. So now I'm going to get the trigger. Plug
+it in again. This trigger here and we have index out and now we have one, two and three. It's
+like X, Y, Z values. So I'm going to plug this into transform position X. This one into position Y
+and this one into position Z. And now I'm going to make the scale smaller. And as you can see,
+we've now generated an array with a lot of numbers, which we're then splitting into groups of three,
+which is X, Y, Z. I'm just going to turn off flow mode for a moment. So if I now go here,
+I can put the number of values in 20, 30, 50. I can change the seed. And this is a great way just
+to generate 3D positional data for a lot of shapes. I can now say minimum minus 0.5, max 0.5. So
+they're more clumped together. I could say minus two to two. So the array iterator up is just a way
+to get values out of an array. So I hope this video has been educational and showing you some cool new
+tricks today. If you have any questions or comments, please feel free to leave them in the video below
+or in a forum. Thanks for your time. Bye.

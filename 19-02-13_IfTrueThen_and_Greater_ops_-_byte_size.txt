@@ -1,0 +1,27 @@
+https://www.youtube.com/watch?v=3dYztfuw4lA
+Hi there and welcome to another video on the Bitesize channel. Today I'll be giving you an
+introduction to the if true then and greater ops. I'd like you to pause the video and just make what
+you see here. Okay so let's get started. This is going to be one of the first videos just giving a
+gentle introduction to boolean ops and comparison ops and for people that aren't familiar with
+programming this can seem a little bit intimidating don't worry it's really easy once you wrap your
+head around it. So imagine I would want to swap between the sphere and a cube. I could use a
+switch trigger for this. I can also use a different op. So I'm going to go here and I'm going to grab
+the if true then op and now I'm going to pull this output and I'm going to grab a cube. So we see a
+cube but not the sphere. So this op expects a boolean. It expects a true or false value. So if I click this
+I'm generating a true or false value if I press F for flow mode you can see that by determining if it's
+true or false we jump between the two. I can go here and I can grab the value boolean op and this
+allows me to make it happen in the same way. So that's just the basic workflow of this. If it's true
+then do this. If it's false else then do this. So let's get rid of that and now I want to show you a
+neat little trick. So if I go to the random cluster op and zoom out with my mouse wheel we can see we're
+only getting the sphere. So we get a random number here between zero and one for every single instance
+there. And I mean like 0.1, 0.6. So I'm going to grab this, pull it out, and I'm going to get the greater op.
+Result is true if number one is greater than number two. So I'm going to grab that. As you can see we've got a lot of activity
+because random cluster is rendering a lot. Let's just put it on 20 actually. There we go. I'm now going to grab this and it's going to output a boolean.
+So we're going to plug that in there. And we don't see anything happen yet because the number here is on zero. If I put it on 0.5
+all of a sudden you can see that we get a mix between cubes and spheres. So I'm just going to try and explain really briefly
+what's happening here with the flow. So a random cluster is generating a random number between zero and one for each
+instance. We throw that into the grader op. The result is true if number one is greater than number two. So if it's true we trigger the
+sphere. If it's false we then trigger the cube. So this was a basic introduction to some boolean and comparison
+operations inside of cables. I hope this video has been educational and informative. If you have any
+questions or comments please feel free to leave them under the video below or to post them on the forums.
+Thanks for your time. Bye.

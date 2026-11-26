@@ -1,0 +1,31 @@
+https://www.youtube.com/watch?v=-X93M13KodM
+Hi there and welcome to another video on the Bitesize channel. Today I'll be giving you an
+introduction to the geometry points op. I'd just like you to pause the video and make what you see
+here. Great, let's get started. So we have here the simple spline op with the basic material new,
+point material, point cloud from array. These two are covered in a previous bite size so check them
+out. Go over here, I'm going to grab a random array 3x. This generates an xyz array. So I'm going to
+plug this also in here and I'm just going to put the seed on one number and as you can now see we have
+the points and in between all of the points a line is drawn. We could go here to simple spline,
+turn off line strip and then it renders them individually. Let's put it back for now. So this
+is just to show that these guys here are working but what we're interested in today is a different
+op. So I'm going to go over here and I'm going to grab a sphere 2 op and boom the whole screen fills up.
+I'm now going to go here, I'm going to grab that geometry output and I'm going to go here and get
+the geometry points op. Get the vertices of a geometry as an array 3x. So I'm just going to click this.
+So here we can see we've got four different array outputs from this geometry that's plugged in.
+Vertices, faces, text coordinates, normals. We're only interested in this one right now.
+So I'm going to get it and I'm going to plug it in there and I'm going to plug it in here.
+And we're not really seeing much. Why is this? It's because we're rendering the sphere.
+We only need to output the geometry once. So let's go here and insert the trigger once op.
+This now means that the geometry is output once on load when the patch starts and it now outputs this
+array here. So let's go to point material, make the size a little bit smaller. And as you can see,
+we've now got an array of points from the geometry. So basically all the vertex data has just been turned
+into an XYZ array. We could go here and we could grab a cube op. We could now disconnect the sphere,
+plug this in here. And as you can see, we now have the lines and the points from the geometry points op.
+One last little trick with some ops. If we go here and we say tessellate geometry, you're basically
+subdividing it. That's something you're just going to have to Google. Don't have the time to cover it in
+this video. But if I go here now and I put this on three, as you can see, we now get this really detailed
+subdivided mesh. So the geometry point op is a great way to be able to grab the vertex data from a mesh
+and to be able to visualize it as an array. I hope this video has been educational and informative. If you
+have any questions or comments, please feel free to leave them under the video below or to post them
+on the forums. Thanks for your time. Bye.
+Thank you.

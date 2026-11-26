@@ -1,0 +1,1764 @@
+https://www.youtube.com/watch?v=84pXsmJghdM
+Hi everybody, good evening. Thanks for joining us for the live stream.
+Tonight, as usual, we think we've got an idea what we're doing, but we're gonna have to figure it out as we go along.
+So tonight, Banda is going to show us how to demo, and hopefully if you tuned in on time,
+you saw a couple of really cool demos go by, which if incorrect are all made with cables, GL.
+So tonight, Banda is going to be doing most of the patching. I'm here in a supporting role,
+and also to ask the questions that you might want to ask, just kind of co-host, basically.
+Yeah, just make sure that things are clear for people, basically.
+Yes, Alkema, he has showed us how to demo since 1887.
+Tom, I didn't know you'd been around that long, man.
+Only 20 years next year.
+Okay, only 20 years. Well, you've got to be getting nouns after 20 years.
+Okay, yeah. Thank you all for coming. I hope that some more people are coming.
+But we will just start. And we have this little agenda here in our totally professional PowerPoint presentation.
+So, this is what we are gonna go through this evening. So, first of all, what the fuck are demos? So, are the name, like most of the names,
+I see that know what they are, but we want to just give like a really short, general introduction, because,
+Maybe cables is used by some new demos in us. And that was always one of the goals. So, we will just explain what demos are, what demos parties are, etc.
+And then we go directly into patching and have a look at a demo we did and have a look at the general setup. Like basically all demos we do have like similar layout in cables.
+But they used to take one timing of and everything is structured basically the same way more or less. It's always a bit different, but there is.
+So, what we want to do is like build like a basic demo that is synchronized to music that probably is totally not fitting together parts or something, but we just want to have like a demo that runs from 0 to 100.
+And yeah, so the next thing is we are patching live and putting in audio and putting in a basic timing and have a look at the timeline and keyframing.
+And also, if you don't like keyframing, we show like how we do it without keyframes.
+The next part is post-processing and how to set up like we are most demos consist of different scenes that are played after each other.
+So sometimes you have a crossfade or something, but we just say like we have multiple scenes and we want to make them look more the same or like have the same post-processing so they fit better together and we show like the general setup of this.
+Okay.
+Then we want to use the audio Fourier transformation FFT analysis to show some stroboscope effects and use a MIDI file to synchronize the audio to the visuals.
+So use like MIDI commands that were exported parallel to the audio and we can use those basically instruments to show some effects or like to time stuff.
+So this point alone like makes the demo so much more dynamic and alive without without having to keyframe a lot basically.
+Yeah.
+And the last one is like how to package cables demo because we are in the web world, but demo scene exists much longer.
+And basically you want to submit an executable file for windows in the end at your demo party.
+So we go over how to export and how to package this basically and then have a zip file with an exit in there.
+Um, yeah, that's the, that's the agenda I would say.
+Sounds good.
+Yeah.
+Like, actually, I think like, I just want to put this out there to everybody, you know, like points, uh, three, four and five, and maybe even like, maybe each one of these points is something you could actually do a whole stream over.
+Yeah.
+If you really wanted to go in depth with it, right, Panda.
+But it's like, we want to just, we just want to, I think the important thing is just to show tonight, like, look, you can just throw some stuff together.
+And get something that's working with all these elements.
+And, you know, whether it's finished or not, isn't the point you can make a block.
+Oh, this is done.
+I can export it.
+It works.
+And then you can change it later on, obviously.
+Yeah.
+So the goal should be, we have like a template that we will publish and then you can take this and, and play with it and, um, like copy it and make, uh, their own demo out of it basically.
+So, so that's the, the general idea.
+So we have a template here, if you want to do a demo, get this and, and make your effects.
+So this is not about taste or concepts or, um, like, um, I don't know, um, the content itself.
+This is more like the structure, like how, how we set this up.
+So it's not about how, how we like in an artist way, uh, conceptualize our demos or how we approach like a look or something like this.
+We just want to show like how to patch it in case.
+And that's it.
+And the content is, uh, you have to come up with this yourself.
+So in Panda, if I'm right about this, like this template you're talking about, right?
+Like, you know, if you're using the timer or the timeline, and I think later on some ops, like root trigger and stuff like that, you could actually make a really simple template and then make some sub patches.
+And you could use that to make lots of different demos, right?
+Yeah.
+This is, this is what I want to do.
+Yeah.
+Okay.
+Sure.
+Yeah.
+Let's see, um, how long this takes, but I think we can do this in like two hours or something and have a, have a, have a decent setup.
+Um, yeah.
+Okay.
+So, so if you have questions, ask us, there's, um, steam war in the chat and, um, Mark or Andrew will also read it.
+Um, I will also try to read it, but I'm mostly patching probably.
+So if you have any questions about anything, just, uh, just say so.
+Um, and yeah, so, uh, what I want to say is about the content.
+So if you want to learn cable, so we want to like the beginner's introduction or something, it will be more like advanced.
+You should, you should be able to follow it, but it will not go into every detail.
+So we have a YouTube channel with over a hundred videos now, Mark.
+Did you know this?
+Really?
+Yeah.
+We have a hundred.
+We have a hundred.
+Holy shimole.
+Ah, and I was thinking we were lagging behind.
+So, uh, there's a lot of content there, how to do stuff, how to do a tunnel effect, for example,
+how to do particle stuff.
+And there will be more.
+We are doing this every, every week and producing something new for this.
+And, um, um, so if you want to learn how to make like effect or content stuff, go there and learn this, but you will have a basic understanding today.
+I'm, I'm pretty sure.
+Yep.
+Okay.
+Um, so first point, what the fuck are demos?
+Um, so it's a long story, um, what demos are and how they, how they started to be.
+Um, I don't want to go into detail now, but in general nowadays, um, it's an art form for real-time graphic, um, people.
+So people that love real-time graphics, um, and that maybe not focused on games, but also, also only on just like showing real-time stuff.
+Um, it's a, it's a huge community of people.
+Like there are a lot of old school computers that are still, uh, people are still active programming on them and just making demos for it.
+Um, then there's a lot of like PC demo scene stuff.
+There's also like maybe you heard of shader toy, um, which is also, uh, made by demo scene.
+Uh, and, um, people are creating those shaders there and many of them write shaders there.
+And then they make four kilobyte executables out of them.
+So, um, those, those, uh, this is another, um, competition basically.
+So I'm going all over the places, right?
+But yeah.
+So in the end people go to those parties and they look like this, uh, not, not in Corona times.
+Um, but usually that they look like this, this evoke in Cologne, which the cables team is also, um, part of the organizing team there.
+And, um, people just submit their, their entries that they have done and then everybody watches them and everybody votes what they think was the best or the nicest or the most beautiful or the best programmed one.
+And then, uh, uh, uh, uh, there's a price given everybody gets a price.
+So, um, basically, um, there are different competitions.
+For example, you have to, uh, do something in four kilobytes or 64 kilobytes.
+Um, with cables, we are more, um, focusing the demo competition.
+So there is basically not really, uh, um, restriction to it.
+Uh, you can, you can submit to 500 megabyte demos.
+So we, we try to keep it small, like 20 megabytes or something.
+So all of our demos are like 20 megabytes and we try to still produce everything like generatively and not like prepare, um, like bake everything in it.
+So, um, but that's totally fine.
+So in the end you submit something that has, that is somehow programmed or patched or something.
+And that shows beautiful graphics and music, um, in the best case synchronized to the music.
+Um, and then everybody drinks beer and enjoys this.
+Um, and that's basically a demo scene for me, Mark, what would you say?
+Well, um, I only actually joined a demo scene, I think just over five years ago.
+Um, I've, I've not been around for a really long time.
+So to me, when I went to my first demo party, it was, um, seeing real time visuals with sound or music.
+That was the best way I can say on a big screen and a really friendly gathering of, uh, people.
+Um, and it was later on that I got more of an idea of the technology because of course, demo students love to talk about this stuff.
+And it blew my mind that, like, uh, Panda said that, uh, you know, people are still developing, um, demos for the Commodore 64, which is still pushing what this really old piece of hardware can do or the Amiga or the Atari ST.
+Um, and to me, you know, a demo, of course, a demo is a very different thing for a lot of different people, but it's, it's when you're trying to either make something that's really visually, um, and aesthetically pleasing, also with the music and sound.
+Uh, that you, you're trying to make a complete thing and you're trying to push the technology as much as you can and also yourself.
+And then I think you've got the old school stuff, which is also doing that, but it has a lot more, um, restrictions.
+And to me, the main reason to make a demo is just to have a reason to go to a party.
+You don't need one anyway, but you need, you need demos to have a demo party, right?
+You know, to sit down and enjoy, uh, everything together.
+Um, my, my background is pretty much more 64 case with, uh, PooBrain.
+Um, so, you know, I'm really curious to see what Pando's going to do tonight with cables.
+Cause I've been using cables quite a while now, but I didn't make a demo of it.
+I just did some music for a demo.
+We did a demo together, man.
+Yeah.
+Yeah.
+Um, yeah.
+And so if you, if you find this interesting right now, um, we have this shitty crisis, but this is also a chance because, um, the parties are allowing, allowing, uh, like you can remote submit it.
+So you don't have to go there, uh, be there and you can just submit something.
+Um, and, um, it will be shown, uh, live on the internet on Twitch or something.
+Um, so this is also a chance.
+Um, if you, if you want to try this out, um, you can do it now without even going there, but going there is actually like the best part.
+Um, amazing community and, um, yeah, you should just go there.
+Um, yeah.
+Um, so maybe we, we will, we will provide some links on the YouTube video later.
+This will be uploaded to YouTube.
+And then we put some, some links down there also like a better introduction and this kind of stuff.
+Um, we will try to put that.
+Um, we will try to put that.
+So, okay.
+Um, I think that's it about the demo scene.
+I mean, there's so much more, but let's just, let's just keep it like this, right?
+Um, yeah, so actually, um, I can show something, um, one second.
+So, if you want to see the, um, the, um, the cables demos again, you can go to PoE, um, which is this nice blue website that's blocked here.
+I'm blocking myself so I can concentrate on work.
+I know.
+So this is, uh, uh, the big demo scene database and, um, they have those, uh, demo lists.
+So I made a list with all the demos that are made with cables.
+Um, and you can go here and, and, uh, watch them if you want.
+And also you'll find them on YouTube, uh, our channel.
+There is a playlist, which is called demos.
+And there are also all the demos in there.
+So you can, you can look at them again there, um, and find out, uh, who made them.
+Yeah.
+Um, okay.
+So, um, let me get the agenda again.
+So, um, general setup.
+One thing I just like to say first, Panda, for me, for anybody that's normally the demo, the thing that was a real challenge for me at the beginning was like, how do you sync Rana's stuff?
+Yeah.
+And that's something Panda is really going to cover in this because normally the demo has visuals, audio and music.
+And you normally have scenes just like a film where you're going to want to switch from like, say scene A to scene B to scene C.
+And maybe you want to go back to scene A, but then with a different view or something like that.
+Um, that's normally the main problem.
+A lot of people can tackle when they're starting to make a demo.
+And I think we're pretty much going to get that covered tonight with the general setup part.
+Right, Panda?
+Yeah.
+I think, um, like syncing to music, I think you can have a demo that's only a cube.
+And if it's sent to the music in a great way, the people will love it.
+So, um, syncing to music is basically like the most important thing, but probably, um, so I want to cover that part because it's also, it's kinda, um, it's kinda automatically done in a way.
+Uh, you can, you can do it like that.
+Um, and still it feels so alive and dynamic.
+So, um, I think it's, it's really, it's also an easy thing to do basically.
+I think in cables.
+So, um, yeah, I want to show this.
+Yeah.
+Um, so I'm opening our demo mark.
+Ah, lovely.
+Uh, it takes a bit, but, um, so, um, um, I want to show this because, um, the setup is really, it's kind of readable.
+I mean, it's still a mess, but it's not that messy.
+That's pretty cool.
+That's pretty cool.
+Then other projects.
+Um, so, um, so for the people that never seen cables, so this is our patching field that we have like little operators that do stuff.
+Um, and, um, we have a timeline down here and, um, I can now press play and I can, um, scrub through the demo.
+So it can just, um, go here and see the whole demo and, um, um, just scrub through it.
+And, um, how is it with the sound?
+If it's, uh, if it's too loud, the music.
+I think if you, if you go to the output, I'll just put it on 0.25.
+That should be fine.
+Yeah.
+I muted it.
+The top was muted.
+Okay.
+Um, so usually you, you hear sound, but I muted it, but I just want to show like the, um, the basic structure.
+So, um, why is this so slow?
+Um, so here we have our main loop and there are the whole rendering pipeline basically starts.
+And we have a loading status like this can display like a loading bar.
+We will do this later and prepare all the assets that they are loaded when, when the demo starts
+actually.
+Um, then we have this time sequence here and another one down here.
+So this controls when, which scene is played basically.
+I just want to show this really quickly and then go to, uh, go into detail later.
+So right now, so I, I pressed F to see the flow mode.
+You see those are all inactive.
+So those little operators here are all our scenes basically.
+So this scene is called Koi pond.
+Um, and so when I scrub the timeline, you see that, um, other things are activated.
+So now the scene liquid is being rendered.
+And when I scrub here, you see ghosts are being rendered.
+So, um, so this thing basically decides which scenes to render.
+Um, this demo is a bit special.
+So for example, now you see both lines are active for a while because they are actually crossfading,
+but this is, this is a bit more advanced.
+That's why we will not go into detail.
+Um, but yeah, so you can see it executing those subpatches we call them.
+So when I go in here, um, you see, this is the actual effect in there.
+So there's a lot of stuff hidden in those little, um, subpatch ops basically.
+I think, I think that's a good thing to say, Panda is just for people that might not be so familiar with cables.
+You know, the subpatch is just a collection of ops.
+So instead of having 5,000 on the screen, you can say, I'm going to work on the scene and it's all good.
+And now I'm going to tuck it into a subpatch because I'm pretty much done with it for now.
+And I'm going to jump back to the main, um, level and then I'm going to carry on doing this again.
+So each of those subpatches that you see, there's kind of an experiment.
+Right, Panda?
+Yeah.
+It's a scene basically.
+And then in the end, the scenes, uh, are drawn on the screen basically.
+So, um, so here we have like a little post-processing chain.
+It's super small.
+We will do a bigger one in our demo, but in the end, this stuff is rendered into a texture.
+And then we render this texture to the screen and put some effects on it.
+Um, and, and that's basically, um, the basic setup for this thing.
+So the demo that we will do today will also have like, uh, like three or four scenes or something like this.
+And, um, it will kind of look like the same.
+So here is the whole sound setup, but I don't want to show this.
+And here is, um, in here is post-processing and, um, the overlays.
+Oops.
+Um, yeah, I don't know why this is so laggy, but okay.
+Um, and yeah, here we have the post-processing stuff, but we will show that.
+So, um, yeah, let's, let's just start from zero and, um, try to make a demo now.
+Yeah.
+And one other thing I want to say to everybody is once again, I'm just assuming you need to demo.
+And so like that thing that you saw there from Panda, it could seem really complicated,
+but all those different scenes, you could just say, uh, we're going to, we're going to see a cube for the first 30 seconds.
+It's turning.
+And then we're going to see a rectangle turning for the next 30 seconds.
+It's the same concept.
+You just switching what you're seeing on the screen basically.
+So don't let all those ops and cables intimidate you.
+You just start with something really simple and go out from there.
+Yeah.
+Yeah.
+This is one, what we want to do now.
+So, um, so I will just create, um, um, a new empty project.
+Start from zero.
+Where the magic happens, the empty project.
+That's true.
+So I will add, um, main loop operator.
+Um, and then I will add a clear screen, a clear color just, just to show that we are rendering something.
+Yep.
+Um, and so now we will already add our timed sequence.
+So the time sequence is just like for programmers, it's like a switch case thing basically.
+So it routes, it routes, um, so those are the outputs that are executed.
+So I will just put something there like a clear color.
+And I will just, uh, put a few clear colors here.
+So for the people that are programmers, a switch statement is kind of like a bunch of commands or instructions, which happen under a certain condition.
+So you say, if this condition is true, switch and do this.
+So that's pretty much what, um, upon the showing down basically.
+Yeah.
+So, so when I press F, you can see what's, what's actually happening.
+So it is only triggering this clear color here, which is, uh, let's make it gray.
+Um, and when you click it and you see there's this parameter current, which is basically a current seam.
+So I can change this to one.
+And then you see this clear color is executed.
+So everything is green.
+And, um, when I put in a two, then it's blue.
+Um, and yeah, I can, I can, uh, put a three and that is our last one.
+Um, so I could actually connect an operator to this input port, um, to control it.
+So, um, for example, it would be easy to control this with your mouse and go through all the, all the outputs with your mouse.
+But we wanna, uh, we want to time it.
+We want to, um, um, make an animation of this.
+So I can click here and say set animated.
+So now you see the, the part is grayed out a little bit and the timeline just opened.
+And, um, so I can press play here and rewind and all this.
+Um, we don't see anything because we didn't create any keyframes.
+So, um, now I can go again to my current parameter here and I can just put in a one.
+Um, and then you see it created a key where my cursor is.
+So this, um, green line is my time cursor basically where we are in time.
+So when I go here and press two, it will create another keyframe.
+And, um, when I scrub the timeline, you see it's changed just from green, uh, from gray to green to blue.
+And when I press play or the space button, uh, the space key, then you see it's, uh, it's just playing automatically basically.
+So this is what our demo will do later.
+It will just automatically play from the beginning on.
+Um, so this is currently on linear interpolation, which we don't want basically because we just want to switch them.
+Um, so we can press, uh, control a and change the, um, interpolation to absolute.
+So control a is to select all of the keyframes.
+Yeah, exactly.
+Um, and then you, you, you have a selection of different curves and you can, um, you can select those, um, curves.
+So the timeline is like a little bit like the weak part of cables.
+Um, we want to redo it and rewrite it, but we are not there yet.
+So, um, yeah, um, but it's fine for, for, um, timing something, something like a demo.
+It's, it's totally fine.
+You don't want to keyframe like every effect we will show how to do it without keyframes.
+Um, but, um, yeah, so this is basically our timeline and this is basically our scene setup.
+So we are switching between multiple scenes right now.
+Um, so let me add the last one here.
+Ander, how do you zoom in and out of the timeline?
+Um, just with your mouse wheel.
+I'm not seeing any keys that you're pressing now to move around or anything like that.
+So when you right click, it's like up here, you can scroll.
+Okay.
+And when you press the mouse wheel, you can zoom this.
+And you can also, this gray line here is like the part that you see.
+So when I make this smaller, then I see, I zoom in basically.
+So I can also zoom in like this.
+Okay.
+Um, and when you double click it, you see, uh, your whole project.
+Everybody now knows how often I use the timeline.
+Um, okay.
+So, um, um, um, if you guys have any questions, just, just let us know.
+Otherwise we will just continue.
+And, um, I think I will just put in some music now.
+And then we can, uh, key frame our first, um, thing.
+But we're going to need a cube or two in there as well.
+A what?
+We're going to need a cube or two in there.
+Yeah, yeah.
+Let's do this.
+Um, let's do this later.
+I mean, we can, we, we'll just, um, yeah.
+Let's do it later.
+Um, I'm just hyped for the cube.
+That's all.
+Okay.
+Let's just put in one there.
+Yes.
+Then we know we end at the next scene for sure.
+Yeah.
+All right.
+Um, so one handy thing, um, to know is, um, you can.
+Um, so if you use cabins a lot or if you use cabins before, you probably know about the
+timer ops.
+So this gives you, uh, like the time since we loaded this patch.
+Right.
+But it is not, it does not react to the timeline basically, but we have, um, timeline time.
+Um, and this gives us the current time of the timeline.
+So when I scrub in the timeline, you see this number is changing basically.
+So, um, let me rotate it a little bit faster.
+So when I press play, you see the cube is moving or when I'm scrubbing the cube is moving.
+And if not, then not.
+And at this time it will always be this value basically.
+So, um, so you can, you can say, okay, maybe so we are at 1.5 seconds.
+So you want to have the cube like, um, perfectly, uh, perpendicular to the camera.
+Oops.
+Then you maybe just want to add something to this value.
+So, um, so like this.
+So now you're sure like this is still moving.
+Um, but you're sure that at 1.5, it's totally parallel to the camera basically.
+So, um, so you can use this time to synchronize stuff basically.
+Um, yeah, so let's load a music.
+So I will use, um, a track from our demo Moron, um, from, from Ronnie, who has also, um, a really
+cool YouTube channel.
+We'll just close it here.
+Um, and he made the music for the Moron demo.
+So to import an asset, uh, file to, um, two cables, you just drag it into the window.
+So I would just drag an MP3 file here and, um, release the mouse.
+So now it's, um, uploading this file.
+So now you see we have an MP3 file here.
+So this is how you basically, uh, import images or music files, uh, to your patch.
+Just in case you missed everybody.
+You've got two views there.
+Patch files, which are the patches you've uploaded and library files, which are the ones that you've
+got already inside of cables.
+Yeah.
+So here are some example images.
+Um, so usually, um, let's, let's, let's make some music.
+So, um, we need, um, audio buffer for, for playing music.
+So there are like multiple solutions in cables and how to play music because, um, in the web,
+there's like multiple ways to do this.
+And, um, um, for making demos, this audio buffer way, this, the web GL way, basic, uh, the web
+audio way is basically the best way to make visuals that are synchronized, that are playing
+at the same time because it's critical that we are at the same time as the audio.
+So we use this audio buffer and we use, uh, audio buffer player operator and we use an output.
+And this seems complicated and we need to make this easier, but, um, you can just copy and
+paste this from, from our template that we, that we will publish later.
+So this is, this will be our template.
+And you've also got the example patches for all the ops that you see there.
+They've already got like, um, setups that you can just copy.
+Yeah.
+So now I click the audio buffer and, um, I can select a URL or file here.
+So I select our MP3 file and, um, now I can, um, press this to start it.
+So I will make this not so loud, I hope this is okay.
+I think 0.2 will be fine, yeah.
+Okay.
+And, um, now the audio is playing, but, um, it's not connected to what we are doing here.
+So we need to connect it to the timeline.
+So we have this operator called timeline controls and this I can connect.
+This has an output like play stop or time.
+And this thing basically means this thing is controlled by the timeline.
+So I can connect play pause to, uh, start stop to this start stop point, uh, port and connect this.
+This is basically the, the time, like timeline time.
+We connect this to the offset point.
+And now when I press space or press play, um, you hear audio playing, so.
+I think I might sound it up a bit.
+Yeah, it's, it's really silent in the beginning.
+Ah, okay.
+So now you should hear.
+Can you audio the music?
+Yeah, there it is.
+Okay.
+Um, so, so now it's synchronized to the timeline.
+So when I press play here, it's always the same.
+So we are repeating.
+We can repeat this.
+And at that time, it's always the same time in the audio basically.
+And Bandai, I think you can put the volume at like 0.1 unless anybody says it's too quiet.
+I don't, I nearly don't hear it anymore.
+Oh, then if you, well, you need to hear it then.
+I was just checking it back on the stream.
+But I'll keep an eye on the stream if people say it's too loud or too quiet.
+Okay.
+Um, yeah, so now we can press play and, um, and hear the music.
+So let's go to the beginning.
+So the demo, the, the music, there is some intro music, which is going on for a long time.
+So I would say we just delete all the keyframes we did.
+And we would just start the demo when the music starts.
+So we would just listen to it.
+So there the music is starting.
+So roughly here it was.
+So I would just put a keyframe here.
+So now we listen again.
+it's nearly okay.
+So let's try it.
+It's already quite good.
+So usually you have to, have to move this keyframe left to right to just get the perfect moment.
+So, um, but this is okay.
+So basically we can now, like our gray clear screen could be the, the intro of the, of the whole demo.
+Um, so we can display, I don't know credits there or some introduction or like fading in, um, slowly.
+And then when the music starts, uh, the demo would start.
+I'd just like to say a little something there for people, you know, what you see here, the panda set up.
+This is your template for making a demo.
+You've got some music from somebody, or you, if you don't have music from somebody,
+we've got MP3s in the library files that you can just use to make something to get the hang of it.
+And this is all you need, like your timeline time, where you are and a way to swap between patches
+and all those clear co-ops that you see that they represent anything.
+It could be a sub patch.
+It could be an entire 3d scene.
+This is actually just your template to make a basic demo.
+It doesn't get more complicated than this.
+Um, yeah.
+So, um, so let's, let's make this intro a bit better somehow.
+Um, so maybe we want to fade in from black to, um, to gray, to, uh, or to the green color we have, uh, where the cube is.
+So we could either go here and, um, keyframe our color values, but we can also do a different without keyframes.
+We can just say, um, timeline time.
+So this also returns the time on the timeline now.
+So when we go back to the beginning, it's just zero.
+And when we press play, um, it just increases.
+So, uh, we could connect this to our RGB channels from the clear color.
+So then it would just fade in.
+Like after one second, the screen would be white.
+Um, but we, we want to have it much slower.
+So we can use the map range, which is super handy for, for timing stuff without keyframes basically.
+So I can say something like, um, from 10 seconds to 14 seconds, I want this value to go from zero to one.
+So now when I press play, you see it's black all the time until we hit, uh, 10 seconds.
+And then it will fade into wild in four seconds.
+So I actually want to synchronize this on this effect.
+So this is roughly starting at 14.2.
+I don't know, to 18.
+Let's try it.
+And I can now also say, I can press those keys, um, B to begin and M to end.
+Let me try this again.
+So now you see this gray area here.
+When I press play now, it will only, will always play this area.
+And when we reach the end, it will just go there again.
+So you can say, um, let's go to 14 here.
+So maybe to 18.
+Yeah.
+So you can, if you synchronize stuff, like two instruments or something, you can just keep
+this and loop over this time frame and actually synchronize stuff or fine tune stuff.
+So to remove this, I press, uh, B again, twice.
+And then it's going again.
+Now it will play in the whole range.
+So maybe we will do like a little, um, we will just display a little circle or something.
+Or Martu, you have a better idea.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+I'm just playing around because I just realized that with our audio set up that we've got right
+now, I'm not hearing the music.
+I can only hear it via Twitch.
+Oh, okay.
+So six, seven seconds of like.
+Um, can I, yeah, I've just been trying to figure out how to get the audio from your computer
+without, um, disturbing you over there.
+I'm not there yet.
+But don't mind me.
+You just carry on.
+I'm still listening to everything and I can see it all.
+It's no problem.
+Um, let me try this.
+Um, can you hear it now?
+No.
+No.
+Okay.
+One more.
+I need to press apply.
+No.
+It's really strange because I've got air with the, um, play computer sounds and music.
+I'm not hearing it.
+Uh, uh, don't worry about it.
+Okay.
+It's no problem.
+Okay.
+Um, so, um, I want to let this circle grow basically.
+Until the, the scene starts.
+So I will add another map range.
+Um, and connect it to time and time and go from, I don't know where I'll be to, uh, like 17.
+Okay.
+One little finger when I just, um, say, um, uh, by the way, Panda, I think something that
+just got changed with audio.
+I'm hearing, maybe I'm quieter.
+Uh, can anybody on the switch just confirm if I'm audible, if I can be heard?
+Can you hear a mic?
+Okay.
+Testing one, two, three, test, test.
+One, two, three.
+Can everybody on the channel hear me?
+Hello, hello.
+All right, but, um, am I audible now?
+Uh, steam, uh, steam, uh, steam on the radio.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+I'm going to be able to hear a mic.
+All right.
+I'll just take a look here.
+I'm taking a look as well.
+Hey, hey, hey.
+Hey, hey, hey.
+Bando, can I just take a look?
+Yeah, yeah.
+Do it.
+Sorry, everybody.
+Technical difficulties.
+Just give me a moment.
+I might be a little bit noisy now, but hopefully I'm going to be louder.
+Test one, two.
+Test one, two.
+Hey, hey, hey.
+Test, test, test.
+I'm still the same, I think.
+All right.
+I think I've got it.
+Yeah.
+Okay.
+Yay.
+All right.
+Okay.
+There we go.
+I'm releasing control.
+Yeah.
+Yeah.
+Okay.
+I hope it's fine that you don't hear the sound.
+It's just...
+The setup is crazy.
+That we have here, but yeah.
+All right.
+I'm pretty sure this is good now.
+No worries.
+Okay.
+So, um, I just, I just created this circle here so it grows until we, um, hit the first scene.
+So, um, I, I want to just make it a bit bigger.
+Um, and there's just one little thing I want to say to everybody.
+Cause like, I, I didn't understand how amazing the map range up.
+Uh, it wasn't so fun to really give me a couple of explanations with it.
+One thing I wanted to say is, it's like, you know, it, it, uh, ignores values outside of the old men and the old max.
+Right.
+So like under puts in like old men is 15 and old max, like that 17 and 28, you know, anything below 17 and anything above 28 gets ignored.
+Um, and it's just, you can basically use multiple map ranges after each other and create entire things, um, sequences of events.
+It's really good.
+We've also got a tutorial about it on YouTube.
+Definitely worth checking out.
+Um, yeah.
+Um, so I would say we have like a little introduction intro scene, uh, for the start.
+So I would just create a sub patch for this.
+So it doesn't come in my way, uh, all the time that we will work on this.
+So I will just select all those operators and I can click here, create sub patch.
+So they are all hidden away in this, um, in this operating.
+So I can double click this and then I'm back, um, and see, uh, what I did before.
+Um, and it's still rendering basically.
+So everything is just hidden away and we, we can just go here and say, let's call this intro.
+Yep.
+Um, so now we tuck this away in a sub patch.
+And also if you want to go in, in one sub patch, you don't really have to scroll here.
+So here's now always a list and you can click this and then you are in the intro, um, sub patch.
+So basically we will create a sub patch for all the scenes that we, we will do.
+So, um, yeah, let's just create, just, let's just create some scenes.
+So normally when we do a demo, like everyone that's working on the visuals is just creating patches from zero.
+Like not, not like this, but like just creating patches, um, like you can see on cables.
+So, um, um, um, uh, I wanted to use the one from channel.
+Um, uh, I think it got pushed out of the top of the month.
+Today, right?
+Yeah.
+Today.
+So I asked her, I'm allowed to use this.
+All right.
+Um, so, um, so imagine she was working with us on the demo and, um, everybody is just building stuff.
+And we, in the end, we just copy things over to our demo patch when we are happy with like basic, um, our, our basic effects or something.
+So I want to show you something from, um, our, um, revision demo, um, where we, um, so I created visuals basically.
+And then gave them to uncle X, um, who was like the, the, um, producer or like the, like he, he decided the, the look of the demo in the end.
+So, um, so we talked about what, what scenes we can, we could have in the demo.
+And, uh, one idea was let's just, let's do some old school lasers and synchronize them to the music.
+Um, so we didn't have a demo patch yet.
+Um, and we just created patches.
+I don't know why machine is so slow.
+We created patches, uh, from zero.
+So this is basically, uh, the laser patch that you maybe saw in the demo earlier.
+Um, right here.
+It's not, it's not animated.
+It's animated when I press play and, um, um, um, I just built this scene and then we took it and put it in our demo patch.
+And then we animated there and put post processing and more effects on top of it, uh, in the demo patch.
+But this is just our effect basically how it looks before it is going through the whole post processing.
+So it looks totally different.
+Oh, just a quick question.
+Um, you know, you say people are working on separate patches, right?
+So a minute ago at the beginning, you showed like, um, the timeline time, you know, controlling some parameters.
+Yeah.
+Is there a way that if people have worked in two or three patches and they've made keyframes and things like that, they're obviously doing in their own timeline to kind of like be able to paste that together.
+Or is that problematic?
+Uh, it's problematic.
+Um, you can copy keyframes, but you can only copy keyframes from one parameter basically.
+So I would just do the, um, the key framing in there.
+I mean, maybe synchronize to FFT or something.
+Okay.
+Okay.
+It would be easier and then copy it over there.
+So another example I want to show is, um, this thing.
+So we wanted for the demo, we wanted, um, kind of like old school retro CRT stuff next to the lasers.
+So, um, we wanted something that looks like an interlaced display or something.
+Um, and it's still loading.
+Um, so, um, so I created this patch and this is already quite big.
+Um, and this has, this is just pure chaos.
+Ignore me.
+I'm sorry for this, but I just want to show, I can click my mouse here and I can go through different presets that we created.
+Um, so we have this circle thing here and we have those lines and I click again and we have all those little animations here.
+Um, and I can just go through them and look at them.
+And, and that's basically it.
+We just copy all this stuff over then in the end and synchronize and time it.
+Um, and then it's not interactive anymore.
+Um, and then we just, um, synchronize it to musical instruments or something, um, to lay over the demo.
+Um, and you see this, this, this, this stuff in there, like the logic comma logo, we just did out of fanboyism, I guess.
+Um, we don't put it in the demo.
+We just played around with it.
+Or like this horrible thing.
+We decided it's too cheesy.
+Let's not do it in the, put it in the demo.
+But this is just, um, basically prototyping and trying stuff out, uh, what we want to put in the demo.
+Um, and we just do this in those, um, extra patches that we do.
+And then we copy them over to the final thing and, and put some final post-processing over there.
+Yeah.
+I mean, that's kind of an art form for everybody, you know, knowing how to like copy a patch.
+I mean, if we correct it upon the, like this patch from tuna, you see, there's a main loop there.
+And it's a big thing you should remember.
+You can only have one loop, uh, one main loop in your patch.
+So if you ever copy everything over, I did this at the beginning with cables and you copy a main loop.
+You know, cables doesn't know like which one should probably be drawn first.
+This can cause problems.
+This is why it's always good to do stuff in the sequence up.
+Uh, so just copy everything now, uh, below that main loop and paste it in and it should work.
+Yeah, exactly.
+So this is what we're going to do.
+Um, I would just copy all of this, um, from the sequence up down.
+Um, I mean, we can have a quick look at it.
+So basically this is, um, all generating images.
+So the shading here is generated, uh, with simple 2D image plans basically.
+Um, and then used as a matcap material.
+And then it renders, uh, the color into a texture and to get this nice glass, uh, refraction looking effect.
+It renders it into a black and white map, uh, which is totally not physically correct.
+But, uh, who cares?
+Looks cool.
+And then we have the, uh, the, the background, um, font and then we have some post processing.
+So both of the, um, uh, images that are generated are combined, uh, into multiple maps and then they are all put together here.
+Um, so yeah, but that's totally not important to our demo to know how this works.
+This is a different topic, but I can just go here and, um, press control C and copy all those operators, um, and just leave this patch and go into our patch.
+Um, and, um, I will just disconnect the cube for a while and then I will just paste it here.
+So usually this way faster, but I don't know OBS is taking all my CPU away.
+So now I pasted it in here and now I will connect it, um, to, uh, our second scene.
+So now when I, uh, uh, play again, you see, um, we see this Taurus now, so no, can I just say that?
+Yeah.
+So, uh, for everybody that just thinks like, oh, why did it just skip and pause there?
+Um, the first time if I'm correct.
+Um, it's, you, you, you need to, it's a good idea with like the loading up.
+It's a little bit deep now, but I just want to touch it.
+Yeah.
+Uh, you use the loading status up that when a patch loads, you want to like send out one trigger to all of your scenes.
+Basically it's like an initialization and then cables is ready, um, to render this stuff.
+So you saw when Panda went back there and then press play again, it was super smooth.
+I think he's going to cover this later.
+Yeah.
+Why it paused for a moment.
+That's why we'll get to that in a bit.
+Yeah.
+So this is basically performance, um, problem that we, we have.
+And so everything was just initializing the mesh and the shaders and, and the image compose, render us and all this stuff was just being, um, initialized.
+So this was why it was stuttering and also my machine is kind of struggling with the stream, I guess.
+So, so now we have our second scene here and I will again, just select all of this and click create sub patch.
+And, um, so we tucked it away again into a new sub patch and, um, we'll just call this donut.
+And, um, yeah, so we can just play it again.
+And there's the donut.
+So let's listen to the music a bit and let's decide where our next scene is.
+So maybe it starts there already.
+So let's just do it here.
+Um, do we have, cause I've never done much really with audio before and cables.
+Um, do we have a way of like getting the BPM from an artist and then being able to know what like a downbeat is on the timeline with the amount of frames?
+Uh, no.
+Okay.
+That's an idea for an app.
+Yeah.
+So also just an idea to make the timeline much better.
+Right now it's, it's working with frames and seconds.
+Um, but you actually, we also want beats in there.
+So, uh, the timeline will be like, there will be a lot of improvements, but before that we have to do some other stuff.
+Sure.
+More important to us now.
+So, um, but yeah, we can, we can get this BPM from the, from the MIDI file.
+Um, so, um, so for our other scene, I thought we use your tunnel.
+Um, so Mark did this, um, tunnel animation in, um, copycat video, I think.
+Uh, so you can find a tutorial on YouTube, um, from Mark, which shows like how to build this tunnel here.
+So, tunnel is always good in demos.
+So.
+Just as good as Anki.
+So I want to copy this scene over.
+So again, I'm, I'm looking here.
+So there's a camera in there, um, where you can see how it is made and, and all this stuff.
+So I don't want this actually.
+Um, so I hope I can just skip it.
+Yeah.
+Um, so I don't need all this stuff up here.
+So it all starts at this sequence of, so I would just copy this, um, which is select everything here.
+And I don't care what actually does.
+I just want to copy this and, and if you copy published patches on Kavis, please, please ask the creators, uh, if you're allowed to use it.
+Um, that's always important.
+So now I will connect it again to our, um, time sequence of, and there you see it.
+So here we have our demo and after that the tunnel starts.
+So again, I just want to select all of this and create a sub badge and move it here.
+Uh, and let's call it channel.
+So yeah, so this is basically the setup.
+Um, oops, how we, um, oh, how we create, uh, a basic setup for a demo in Kavis.
+Let me just quickly reload it.
+And, um, so a lot of times we change the effects and, and have to replace them.
+So at one point you basically have to decide if you want to replace it again and copy paste it over again.
+Or if you use it in this page, we don't have like a reference to an effect or something right now, but, um, yeah.
+Yeah.
+So at one point you just do it all in this patch.
+Okay.
+Okay.
+So, um, so the next step would be, we want to create, um, some post processing.
+Um, so basically we want to, um, use those, those textures, those, those images that we create and we want to apply some two dimensional effects on it.
+So, but we don't want this only for the tunnel or only for the donut.
+That's basically what we're doing in, in the sub patch here.
+We had this, uh, image treatment and the image compose, uh, the post processing stuff here, but we also want to do this for everything that's down here.
+So we can render all this to a texture again.
+So I will create a, uh, a render to texture here.
+And do any of those sub patches already have a render to texture working in them?
+Yeah.
+A lot of.
+Okay.
+Um, so the donut.
+My own tunnel, by the way.
+So they, they have a lot, lots of render to textures in there.
+Um, but I also want to like render everything that's happening there into another texture.
+So, so now you don't see any output anymore because we are all rendering into the texture and not to the, to the final canvas.
+Um, so we, I would just create a basic, um, set up for post processing.
+I think we have a lot of tutorials.
+Yeah.
+Yeah.
+We've got, uh, two or three, um, post processing tutorials on YouTube.
+So I will create a full screen rectangle.
+And, um, um, create an image compose.
+So basically what I'm doing is like set up a chain where I can use this image that we have and apply effects on it.
+So, so now I have an image compose.
+So everything I do below this image compose, I know why this is so annoying.
+Sorry.
+Wait a second.
+Yeah.
+I don't know.
+Um, so, so now we can modify this image.
+So for example, I can just, um, we have a lot of 2d effects in cables.
+I can just, uh, uh, add a color and, um, this color is now applied on top of the image.
+So I can select blend modes, um, like you do in Photoshop, for example, and I can select, um, a lot of different blend modes to just get the look I'm, I'm after.
+And, um, I can also, um, use other effects like, um, like a blur to blur the whole image.
+Um, and maybe we want to create a glow later, but actually like the tunnel already has a glow, right?
+Um, but, um, um, maybe just use brightness and contrast for now, just to kind of keep it simple.
+Yeah.
+Let's just add a little bit, um, um, of brightness.
+Yeah.
+I want something that you see.
+Um, and just detection.
+That's the obvious one.
+You can just show some effects.
+So you also have stuff like edge detection and then you see, um, everything, um, that's being rendered is going through the edge detection.
+So even, um, let me set this length of the demo.
+Um, so even the tunnel, uh, is now edge detected or the circle in the beginning is just the circle now because we added this edge detection.
+So I can turn this down and, um, and then you see the tunnel again, and then you see the donut again, it doesn't help with the donut.
+But yeah, so you see, we are applying this post-processing on everything that's rendered out here.
+So, um, maybe we will just change, um, and I think it's really easy to get rid of the post-processing.
+Huh?
+I think it'd be really easy to just get rid of the post-processing at least in the tunnel patch.
+Yeah.
+Yeah.
+Yeah.
+Um, I just want to make the background a bit brighter.
+Um, so, um, so for example, I can just add, uh, a bignette.
+So you see, we make the borders darker.
+Yeah.
+Um, just add some, some effects on there.
+Um, or we can add some chromatic aberration for example.
+So it looks a bit more analog, um, on the borders, but I actually don't want this right now, but this, there you can go wide.
+You can just, uh, create a whole post-processing chain.
+And there, there are a lot of tutorials that are covering this, like what effects we have.
+Um, we can just, we can just add them here.
+So, but I want to say this to everybody.
+So the time sequence set up there of Panda, right.
+You know, where you're swapping between different scenes, you could do this with post-processing too.
+So you could set up like two or three or four, um, effects chains, if incorrect.
+Right.
+Panda.
+And you could also make those swap at certain times of the timeline.
+Right.
+Yeah.
+Yeah, totally.
+Um, totally.
+We want to use, um, the audio to control, uh, some effects, uh, later, I think.
+Um, but yeah, you can, could just keyframe them or use, use the, the map range.
+Um, the map range to adjust those parameters.
+Also what I like to do is just like, if you want, for example, to, um, fade between, um,
+two scenes with the, with the black, uh, screen in between, you can just adjust this, uh, like
+time this amount of this color and then change the, the scene behind this color.
+And then you have like a smooth transition to another scene.
+Um, yeah.
+So maybe let's do some blur, um, some glow on top of it.
+So I will create another image compose.
+And we also have a tutorial with this on how to add blue and glow.
+It's like three minutes.
+And then you're going to be the envy of the demo scene.
+Um, so this is my, uh, uh, my image that I want to use.
+Um, so this should be a blood glow thing in the end.
+So I would just add some blur and I will add, um, um, um, there it was.
+Luma key operator.
+So, um, let me show this without the blur.
+So I can now, um, select like a color range.
+So if it's one, then it only shows you like the white parts of the image.
+So I can put it down and then we also have the brightest colorful parts in there.
+Um, and this is basically one I want to blur to get a nice glow.
+So I will just use fast blur, um, like this and make the resolution way smaller.
+So, this blurred image I want to put over my final result.
+So I can go here and add another draw image.
+And then I can plug this over here.
+And then now we see this.
+So to mix those posts together, I can just change the amount here, but I can also change the blend mode again.
+So I want to put this blend mode on screen.
+So only the bright parts, um, are added on top of the original image.
+So I don't know if you see this on the stream, but now there is some, some glow around it.
+So if I disable it, so I can click an operator and press shift D to enable or disable this.
+And then you can see like the difference that is happening.
+So there is some glow now.
+Um, yeah.
+So in, in this way you can just add effects on top of your, um, of your final, final image, basically.
+So, um, so those three change here branches are basically our post-processing setup.
+So I want to also tuck this away.
+Um, so I can just create another sequence.
+So the sequence allows us to control like what is executed first.
+So basically it's always from left to right and from up to down in cables.
+So those, this is executed first and then this is executed and then it's finally drawn on the screen.
+So the full screen rectangle here is basically our final result.
+So I just want to put this away because I want this patch to be clean in the end.
+So I create another sub patch and I will just call this, um, post pro.
+So now you see the image goes into the sub patch.
+And when I go in here, um, it's, it's just being rooted into the sub patch, um, the inputs that we have.
+Yeah.
+So, um, so, um, so I'm, I'm saving all the time, by the way, when you see this, I'm, I'm saving the patch.
+Um, you should always, always save it.
+And, um, and also create backups.
+And when you're working on a demo, you can also go to patch settings.
+Um, you can go to versions and you can load an old version from yesterday or something in there.
+If you, if you talk something up or something is bad or something you want an old stage, you can go there and load an old version.
+But you can also always say save as, and save it as a backup thing.
+Um, so, uh, just one little thing I want to, um, say, because I've finished a really cool feature with cable.
+So, you know, you could, you could make like five or six patches and they're all different things.
+Um, the, uh, Panda, if you go back to the patch settings, just the thing we've given, um, oh, I'm forgetting that.
+Um, the, the project, uh, namespace namespace is a really handy one.
+Um, so you could call it like, um, evoke, um, demo 2020.
+And if you would give that namespace to all of your separate patches, you can later on cables and filter everything.
+So instead of typing a big, long name in the namespace is a great way to bench some of your patches together.
+So you can find them easily.
+Yeah.
+You can basically create like collection of patches.
+Okay.
+Um, so do you have anything to add Mark?
+Do you have any, anything before we go to the FFT stuff?
+No.
+I mean, I think you've pretty much covered that.
+Like we've got some patches there.
+We've showed how you can just 10 seconds copy and paste something from one patch, um, into another.
+Um, with the post-processing, I would have, I don't know, but that's just me.
+Okay.
+So I'm just curious here right now, Panda.
+Like, can you have more than one full screen rectangle in a patch?
+And if you disable the trigger on one, that the other one is automatically visible.
+You know what I mean?
+If you'd have like two of those like post-processing chains and you'd be doing something like the time sequence, they wouldn't overlap each other with the full screen rectangle.
+Right?
+No, you can do that.
+Yeah.
+Okay.
+Sure.
+Yeah.
+There was just a little thing that came up to me while I was looking at it.
+Okay.
+Yeah.
+So you can basically switch, um, both things.
+You can also, um, so what we also do, uh, a lot is we have multiple time sequences like one for the background and one for the foreground.
+So for example, if I go here and create another one and, um, just, I don't know, add some simple meshes here.
+Yeah.
+Yeah.
+Right.
+You can see, um, the rectangle frame here or, um, at zero, you see the circle.
+Um, and this is actually quite cool.
+This set up with one, so I could just cycle through them through all those shapes and position them and they are like the overlay stuff.
+And, um, and we, we want to do this later with the, um, midi, um, input.
+Okay.
+So, um, yeah, but you can have multiple of them, you can have, you can layer multiple, uh, full screen rectangles, uh, over each other.
+Um, it's all no problem.
+So where I connected this, there's an output here, which says, uh, trigger always.
+So, um, this thing here is now always triggered.
+So those are triggered by the value that you input here.
+Um, but this one is always triggered after everything else is rendered.
+Um, so we are always sure that, uh, that those overlays basically are rendered, um, after the background is rendered.
+Um, that's a great thing to show as well.
+Yeah.
+You can just do this.
+Yeah.
+Let's just make it white.
+Um, yeah, so, um, yeah, I think that's the post-processing part or like, this is basically like the super basic setup.
+Yep.
+How to make a demo.
+And, um, we saw key framing and this map range stuff is pretty hard or like, it's, it's a lot of work to do.
+So we want to look at, uh, audio analysis to, uh, synchronize our demo or to just control effects with the data of the audio.
+Yeah.
+I would just delete this cube.
+Sorry.
+Sorry, cube.
+Um, sorry.
+Um, so, um, I know that what's the audio set up, right?
+No, no, no, audio setups to the right.
+Uh, there you go.
+Okay.
+So that's our audio setup.
+Maybe we also put it in the subpatch later.
+It's a good way to show how you can use one or two variables as well to just send data out of one subpatch to another, maybe.
+Yeah, maybe.
+So, yeah, let's do this when we, when we have the setup.
+So, um, so we want basically control values or like get information from the, from the audio, like how loud is it right now?
+Or like, uh, what are the different frequencies?
+How, how loud is the music and, and filter this.
+Um, and for this, we have, uh, some operators.
+One is called, um, audio analyzer.
+Um, and, um, this one takes the audio, uh, signal basically in, and you also have to connect it, uh, to the renderer.
+And, um, so when I play this, you see here it outputs, uh, already the average volume of the music right now.
+So this is already quite handy, so I can, I can take this, um, and, uh, where do I put it?
+Maybe just to the size of the rectangle frame?
+Yeah.
+I will, I will create a scale, um, op, and, um, plug it in here before the, the overlap stuff.
+So when I press play, um, it's quite hard to see because the tunnel is so bright in the middle.
+Um, maybe just turn the brightness down on the post-processing?
+Yeah, let's just add a number there.
+So, now you see the rectangle is shaking to the music already.
+I did quite well.
+Um, so, yeah.
+So, sorry, sorry.
+No, it's fine.
+I just wanted to say to people, if you're not experienced with audio and, uh, output from
+Audio Analyzer, you can use a cool little op called, um, Smooth.
+And basically it allows you to smooth out jumps in data because, you know, everybody's got
+different music.
+It could jump up really quickly and jump down really quickly.
+And with the smooth up, you can, it's like a transient with like a drum sound.
+You can decide how long it takes to go up when it's moving out and how it's moving out and
+how it's moving out and how it's moving out and how it's moving out and how it's moving
+out and how it's moving out and how it's moving out and how it's moving out.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+you can decide how long it takes to go up when it's smoothing out and how long it takes to smooth down.
+So if you imagine something like a drum being like a "bats" sound, you know at the beginning it's really loud, it's very fast,
+and then later on it like fades out. And smooth up is a really great way to just control jittery data, data that jumps around a lot.
+Yeah, but not really in this case, I think.
+Oh, it looks pretty good. I mean it's pretty full the track, that's the problem. It worked probably better with the intro.
+Yeah, so you can use this for a lot of things. You can also add a transform and use this for rotation.
+I've got disconnected from the scale.
+Yeah, so I can control the rotation.
+And then one little thing I want to say, which I think is also really cool, we've got this up called "Freshhold".
+So what that means is you get something like the average volume and you can put a threshold like say 0.7, depending on the audio.
+And when that threshold is crossed, it will send out one trigger. And you can use that trigger with a lot of different things like the bang, up or something like that.
+So you can make like something only happen when a certain volume threshold is crossed.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+There's a lot of things you can do with this basically.
+Exactly.
+And we have we have another, so the audio analyzer is not the only one. We also have FFT area average.
+But I would just show the example patch with this. So in case you can go click any op and you can click view documentation or view example.
+And view documentation always brings you to a site like this where you get like more or less a description of what the operator does.
+And hopefully in most cases we try to do this all the time to create like little examples for those operators.
+So this is probably way too long.
+I'll just do it quick before it kicks in.
+So here you can change, you can change like an area that you want to center.
+How do you say this in the music screen?
+The frequency spectrum there, so the left is bass and it goes bass, bass mid, mid, high.
+So the left side is the bass, right high is the high, right side is the high.
+So that little rectangle that Panda's putting there, that allows you to sample a piece of the frequency spectrum basically.
+Yeah. The bigger you make it like basically like, so the result you get here, that line that you see is like the average value of what is in this rectangle.
+So if I make it pretty small, then you see it's, it's super fast. Like it's changing super fast. And if I make this bigger, then it's, it's quite smooth because the average is, is not that.
+One little thing I want to say here is like, so if, if Panda would want to get the bass, right, just for the kick, you'd make the width not so wide, you'd move it all the way to the left.
+Right. And then you'd high max and you'd probably move it up a bit. And now you'd only be, it would only be responding to the bass kick basically.
+And just this little shape that he's got there. You could now make two or three copies of that and you could have it respond to the bass, the snare and a high hat for example.
+Yeah. Yeah. Yeah. You can have multiple of those and, um, um, and use them to analyze the audio. Um, so I'm not sure if we should do this right now.
+Um, we can, let's, let's, let's try it. So I will remove the, um, average volume that we used before and we're just connected to FFT area average.
+And, um, this one has another input, um, FFT array. So the audio analyzer outputs an array, um, with, um, with those values, like the frequencies that we just saw, those little bars.
+Um, this is in this area and we can use this in the FFT area, um, to analyze them. So, so this is why I had this zoom here.
+So when I click this off, you see this little graphic again that we saw before in this example. So when I press, um, um, play again, I'm muted.
+You see it's already, uh, looking quite good. So when I click this off, you see this, this thing again. So I can go here and, um, make this a little bit bigger.
+So with this base, uh, panda, you basically want to, um, move it a little bit to the right with X cause that's sub, sub base.
+Yeah. And then you get X and you move it a bit to the right. Cause like sub base is really slow. Yeah. That's your kick basically.
+Yeah. So you can, you can try to find this very much depending on the music, like how, how the music is basically. So we most of the time only use this for like stroboscope effects or something.
+So, um, um, I basically, uh, no, I tucked it away. So, so I want to use this value here now for, uh, make a stroboscope effect. So, um, I just do this. I will just connect this to our post pro sub patch.
+So I have the value in here, so I can use this and just add, uh, color on top of everything.
+Um, just went a little bit faster people that aren't used to this. Um, the sub patches, they have a port called dynamic port. So if you pull like a trigger or a number or just a different kind of data connection there and you let go, it will create that input port type. And then it will create an input port inside of the sub patch.
+Yeah. So, um, yeah, so I rooted this, this number that we get from the, from the, uh, FFT into the sub patch.
+You can also use, uh, variables, um, to send something without the cable here because this cable is already annoying. Um, maybe we just do this. Let's do this.
+So this is one way to get a value in there, but it's a bit messy because maybe this value we want to use in all the sub patches later.
+So we can send this, uh, value there in another way. We can create a variable. So I can say var set number.
+And, um, and, um, call this, I don't know base FFT base. Yep. FFT base. Yep. So like this. And, um, um, so this number goes into a variable and we can create an operator var get number to get a value from a variable back.
+So I can here select FFT base. And when I press play again, then you see, we have this number here, but we don't have the cable because we don't want like 20 connections later from this, uh, FFT op to all our sub patches.
+And a lot of ops, we just don't want that many cables in this case, because it's cleaner without. So I just copy this var get number and go into our post processing and just connect it to the amount of this color.
+So when I play it, you see this flashing of the base. So, um, when I turn it red, you see it more, more drastic. So this is probably too bright right now, but in general, like, this is quite like helping to make the demo alive, like, because it's already reacting to the music.
+It's just working. I don't know this adds so much to the demo. I mean, we probably it's a bit too bright. So let's multiply this down to like 0.6 or something. So that's just a little bit. You could also, um, like that.
+I'd, I'd, I'd use the threshold up with this and bang, but that's me. That's my patching style.
+Yeah. This I want to use with the midi stuff basically. So this is for me just like, you get some value. I'd use it. And the midi stuff is more like you get like a trigger, like a bang. And I'd use it then.
+So do we have any questions or anything? It's really quiet. I think you've got the whole audience captivated, uh, Panda.
+Pardon? You've got them captivated. It's, uh, very quiet over there. Is everybody still in the stream? Or did it just drop out? And we don't know.
+Okay. Okay. Um, so, uh, another method, uh, to get like information about the, the audio track is that you create a midi file. So, um, you know, those old midi music files that you can hear that sounds really crappy. Um, they are really good for something because they are just the data.
+The data, which instrument is played when, and you just don't want to play it, but you just want to read those information.
+Like when is which instrument playing basically. Um, so I prepared something. Um, we can, I wanted to build this whole thing, but, um, I would just show it like this.
+So, um, I can upload a midi file here. So, um, I can upload a midi file here. So, um, I can upload a midi file here. So, um, I can upload a midi file here. So, um, I can upload a midi file here.
+So, um, I have my file manager and I can just drag a midi file into here and then I can, um, so it's automatically converted. So I uploaded this midi file and now we have a midi eight mid dot JSON file. So this contains like the information, like when, which instrument is being played and all this stuff.
+So, um, and then there's also like the PPM in there and a lot of metadata, uh, that you could use. So, but I want to use this, uh, midi file. So, um, so I prepared a patch to show how this looks.
+So, um, um, basically you get a list of tracks, uh, with instruments in them. So, um, so Ronnie named them like this. So we know what's, what's in the different tracks. So.
+Uh, I got something multi. All right. Sorry. I got stuck trying to show that. So when I press play, you can see the different effects of the different instruments. Like how long they play. And they grow as long as they are playing. So.
+And down here the P2, this is like the note name. Basically.
+So what we can do now is we can, we can use this information and maybe synchronize something to a snare.
+Uh, or to a bass drum or, or whatever, to a hi-hat. And then we can, then we have an exact timing and not something that's analyzed after the audio is played. Basically. Um, so.
+Uh, just one little thing I want to say for people that don't have any musical background or they're not familiar with MIDI.
+The easy way to think about MIDI is it's like, you've got a piano keyboard in front of you, right?
+So if you can press a key in, you know, it's on, you let go of it. It's off. That's like a zero or one.
+That's the first thing you can do with it. Your velocity, which like is how loud is the note that you've pressed in.
+It's a number between zero and 127. So if you press it in really gently, it's low, like 10. If you press it really hard, it's 120.
+And you know, um, when you let go of the note, that's this note off and that information is all you need to do. Amazing things.
+Just want to say that one for the people that don't know MIDI.
+Yeah. Um, yeah. So, um, let's try it. Um, so.
+Um, so I can now create, um, an operator that is called, um, MIDI Jason. So we converted it to a Jason file.
+So the browser, uh, can read this easier, I would say. Um, and, um, so we need to load this file.
+So we, we use, uh, operator called Ajax request. It's also a bad name, but with this op, you can load Jason files.
+Um, so I can just select the, the MIDI Jason file that I uploaded. And, um, um, um, it already outputs me, um, some information here.
+So track names. So track names. So you see, we have those, um, tracks in the audio file.
+So there is one mute glitch. I think, uh, he called it glitch because we wanted to use this for visual effects.
+So we created a track with only instruments that we want to synchronize. Um, that was the idea, um, back then.
+So, um, actually, um, let me open that other patch again. And then we look at the data.
+So this right now is a different, it's not our sound that we are using. It's a different one.
+So I want to, um, or am I wrong? No, right? Sorry. Um, so this is, yeah, no wrong, fine. Okay.
+So we'll just use this patch to load in our, um, mp3 and MIDI file. So upload the MIDI and upload the MP3.
+So now I will select, uh, the right MP3 file.
+And use, uh, the right Json file.
+And use, uh, the right Json file.
+There we go. Moron is the right one.
+So now we hear.
+Let me turn this down a bit.
+So you see those instruments there.
+It's just one instrument, this whole bass effect. So it takes a long time to finish, but it's, it's nice to see.
+Um, so we, um, the progress of that. So we could also use, we can already use this information to make our intro better.
+That we, um, basically synchronized by hand, we could just use the progress of those notes.
+That progress we get from the MIDI off.
+And, um, yeah, after the intro, let's see.
+One thing I just want to say to everybody, cause this can look like a lot of stuff and it is, but you shouldn't worry about that.
+You kind of like make this set up once, right? That, you know, you have your musician that you, you agree with them.
+Please format your MIDI data in this way.
+They'll get it. They're an electronic musician.
+And you set this at once and you can just reuse this patch later on.
+So, uh, don't let it intimidate you.
+Um, yeah, so basically what I'm after is, I think, the C#2 one. Um, I'm not sure.
+I think that's a good one. I mean, drum machine, I think it's the kick.
+Oh no, it's not. I was doing the kick and the snare drum machine.
+So C2 is your, uh, kick and E2 is your snare.
+Microtonic Monty is adding some extra drum sound.
+Yeah. So we want to basically get this C, this one, like the, uh, Microtonic Monty, right?
+Um, so, um, yeah, let's just try it.
+So, um, should I go into detail this patch here?
+So this patch actually gets all the track names and the displays them next to each other.
+And then it gets, so the MIDI outputs, um, the track names, then the instrument names like the B2 and the C3.
+Um, then it gives you a progress and a velocity.
+Mm-hmm.
+And, um, so what you see here, the, the size of the circle here, this is the progress basically.
+So how long is this note being pressed?
+Basically it's the original idea, I guess.
+Um, I think the information in, uh, uh, in velocity is not really used or it's not really exported like in a correct way or something.
+I don't know.
+Like I've, I've, I'm totally not an audio guy.
+So I have no idea about this.
+So most of the time I just use the progress to display stuff because, um, most of the time this was the best part.
+Okay.
+Let's, let's use the MIDI JSON app.
+So, um, we could go here and basically just copy all of this into our patch, but I don't want to do this right now.
+Um, um, um, but often we, we just do this, um, because we need it really often to look like, ah, okay, what's this new instrument or something like this.
+So we, we make like a keyboard shortcut, uh, to, to show this as an overlay and then you can, you can toggle between it.
+So also, also like the FFT area, um, texture that we saw with the yellow rectangle, you can, you can create like a little setup that this is your overlay.
+You can turn it on and off while you work on the demo.
+Um, I closed my patch.
+I think, ah, no, that is okay.
+Um, so I already created a MIDI JSON app and, um, um, um, so this also works like the, the audio buffer player.
+You basically, you just put in a time and then it gives you some results.
+So we want to connect this time input here also to, uh, timeline time.
+And one thing I just want to say to everybody is this, right?
+So let's say in this case, just correct me from Range Panda.
+Uh, Panda has been working with Ronnie on this demo.
+So Ronnie supplies like an audio track.
+And after he's exported the audio track, he exports the MIDI data as well.
+And because they both, they're both connected to timeline time.
+They're in synchronization with each other.
+Just want to explain that for the people that don't normally use this stuff.
+Yeah, exactly.
+Totally, totally.
+Right.
+So, um, this basically works like an audio player, but without outputting any audio, but we have those information here.
+For example, we have an array of names.
+So this is our instruments that are right now, like at this point in time, those instruments are being active or played, right?
+So we see here in the third track, it's E2 right now.
+Um, so maybe we just try to look at it.
+What, what, how does it, what is E2?
+What is it doing here?
+So we can use the names array and just say, um, array get string.
+So basically we are accessing.
+So this is a number of values, right?
+So, um, this is value zero.
+This is value one.
+This is value two.
+And this value is E2 right now.
+So we can say from this array of, of names, we want the second one, because this is our, the track, um, I closed it.
+Um, this is some track we want to get information from.
+So we just say, give us the value at index two.
+So right now the value is E2.
+So let's just display this, um, on top of everything.
+So I will just create, um, um, um, called text mesh, um, that can just display text basically.
+So let me make the preview small again.
+Um, um, let's make it red.
+So when I press play now, you see what's, what's happening in this channel there.
+So we can say like, okay, what's, what's happening in channel three.
+So this is, this is actually what we were after.
+Right.
+So this is C sharp too.
+So, um, we could.
+How do we just, so sorry, I mean, some threats.
+How would we just, you know, for the people that would never do this before anything.
+I just want to get one no out of this and do something with it.
+Right.
+Exactly.
+So, um, that's what I want to do.
+So, um, we can, uh, so we get this string out here.
+So you see, um, when we go earlier, you see, um, it's outputting the name, so we can say, um,
+um, equals string, so we can check if this is actually C sharp too.
+So, okay.
+And you see the result is false.
+So when I press play, you see for a short amount of time, then, um, it's true.
+Because that's where it could be shown.
+So basically no, um, going on basically.
+Okay.
+Cool.
+Yeah.
+So, um, maybe we want this whole overlay.
+The circle and the rectangle frame, we only want to show this, um, when this note is being
+played, so we can add an if true.
+So you see right now, nothing is executed down here, but when I, uh, activate this, then you
+see the circle is drawn.
+Right.
+So I can create, uh, connect this string equals to the if true then.
+And now it's only shown when the string is exactly C sharp too.
+Let me just remove the text.
+That's really cool.
+So one thing I just want to say here is like this, this little chain that Bunga has built.
+Uh, you know, if you, if you've just got like, um, kick, snare, hi-hat and a baseline and leads.
+And, you know, you've already got like five or six channels of information that you can use to, um, drive things.
+And, you know, the sky's the limit, right?
+You could get that number.
+You could put it into a variable and it could be driving something on the intro patch.
+And it could be driving something different on the donut patch and something different on the tunnel patch.
+Um, really wild with it.
+Yeah, so Mark has this Twitch stream where he like controls cables with, uh, with Ableton.
+And there he's doing it like in a similar way but totally different by sending real MIDI, uh, data to cables and control cables this way.
+And we just do it basically like in an offline mode, like without the, the DAW, like the, without the music program that created the MP3.
+Um, but you can also use this for live visuals and live synchronization to, to music software.
+Um, and, um, so you talked about the bang.
+Um, so I want to show we can, like, can we?
+What do you want to do, Pando?
+Um, so I want to trigger an animation basically when this note is playing.
+So, um, basically we have this bang on.
+So this is triggered, um,
+Yeah.
+So trigger, you need a trigger, trigger if true.
+Yeah.
+I just want to explain it.
+So, um, when I connect this, um, to our material, so we have, um, alpha input here.
+So when I connect this and I click the bang button, you see, uh, it could be a bit longer.
+You see it's fading out.
+It's, it's appropriately there and then it's fading out.
+And this is what we want with our MIDI signal.
+So we have a MIDI signal.
+Yeah.
+But right now this MIDI signal basically is a Boolean and not a trigger.
+So, um, we have to convert it basically.
+So we have an operator that's called trigger.
+Trigger, um, trigger.
+Trigger.
+Trigger true.
+Trigger true.
+I always type in.
+It finds it for me.
+Trigger trains true.
+So we can connect this to our bang.
+Let's see flow mode.
+Yeah.
+My computer is dying.
+I think it's OBS.
+I had this with one stream where after about an hour and a half, that's about now, I started
+like losing some CPU.
+Oh, there we go.
+It's good again now.
+It's super strange now.
+Um, yeah, so, let's see.
+Are you a part of the demo where that closed?
+So you see, we are triggering now when the mode is on.
+And now we have like a little take off.
+And if you want to make this like more dynamic or like you don't want to spend too much time
+time on, uh, actually timing the different, um, elements that we see here.
+So maybe I would just add, uh, another circle around one this time.
+And try and, uh, and now I want to cycle through them.
+Okay.
+So I can, I can create a trigger increment.
+Yeah.
+So, um, and this one every time, um, let me just show it like this.
+Every time this increment is being triggered it outputs, it counts up by one.
+So I can just connect this to a trigger change true and get this number in here.
+And let's say like the length is four because on it, let's say five because we only have like four inputs.
+And sometimes I don't want to have this happen.
+So when I press play now, you see like the, the element is changing all the time.
+Like it's just cycling through them.
+So when I enable flow mode, we see if this, then this, then this, then this.
+So this is a great example of how you can just come up with a very simple rule and then get really different visuals from that.
+Yeah.
+And if you just would put even five or six or 10 of these rules together, you basically have a demo.
+Yeah.
+Um, totally.
+Um, I mean, um, maybe this is a bad example.
+Maybe it's like you, you want a random number so you can just remove this incrementer here and you just create a random.
+Trigger random number.
+There we go.
+Um, to current and let's change.
+Put it on integer, maybe just so people know it's possible.
+So right now it's outputting floats like this and it outputs full numbers.
+Yeah.
+So now it's just randomly decided which one, uh, which one it plays.
+Oh, there's the instrument.
+Yeah.
+Okay.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+And all this is just off one note on click null, right?
+So we just convert a Boolean to a trigger.
+And then that trigger, we can create an animated sequence with a bang, create random numbers, disguise the line up with this kind of stuff.
+And this is why it's really good to know you have simple ops like bang and trigger change true and trigger random number.
+Cause the moment you've got the grasp of those basic ops inside the cables, um, you can really combine them and come up with so many different ways of making things happen.
+things happen. Yeah, it's not happening in the early part. Yeah, so this is the media input. And, like, normally in a demo, when my computer is not that slow, I would say:
+You do something, you create a little overlay in the end. As we just did, I will do it again, text mesh, and I will create a system that shows me stuff. So we have this text mesh here, and we have another text mesh, which we want to show the current time.
+Sorry, I wanted to interrupt. Don't we have an op called Timeline UI, which bundles a lot of this stuff all into?
+Yeah, not really. Oh, okay. Yeah, the plan is that it does that, but it's really not that good right now.
+Okay, all right. So basically, Panda right now is creating visual feedback for himself, so he knows where he is and what's happening and things like that. That's always a really handy thing to do.
+Yeah, so I want to see, like, the current time that we are at.
+And just put it up here. And you think we have to just restart OBS for this? Or?
+Yeah, you could do. I mean, really, Panda, for what you're showing with the stream, it's fine. I can see it's quite annoying with the FPS drops there on the renderer, but everything you're doing right now is completely visible.
+Yeah. A lot of people watching what you're watching what you're watching right now.
+So I'm just creating this debug information basically and so I could create another if true then and add an op that's called keypress learn.
+So I just want to press D and then I want to see this debug information basically. So I can click learn here and press D and now when I press the D button, I see this value so I can watch my demo again and also in full screen or something and then I can press the patch and press D and then I see that information.
+That's correct. So often we create like an overlay with a lot of information like all the MIDI signals or the FFT stuff and just create an overlay. So we see what's happening right now and then we can say let's maybe use this node to trigger something. And then we connect it somewhere else. So it's super handy to build.
+Yeah.
+Like the debug system.
+And I would just put this away again.
+What Panda just said makes complete sense. You know, if you're using any kind of program, if it's Photoshop or Illustrator or After Effects or something, you know, if you wouldn't have visual feedback of what's going on where you are at time and things like that, it's really difficult to use. So, you know, it's a good idea to kind of make that yourself like Panda just did. Just a really quick, simple thing with keypress. Great. I don't know if you're going to use it. It's a good idea to kind of make that yourself like Panda just did. Just a really quick, simple thing with keypress.
+Great. I didn't think of it.
+Yeah, it's just, it's just a handy shortcut for some things. Yeah. That was the media information.
+Great. That was great. Do we have, do we, do we have like an example MIDI file in the library files? No. No. Yeah, we should totally do that. Yeah. I mean, I can probably get like a really small audio snippet on the MIDI file from somebody or you could as well. I think that'd be really handy for people.
+that, um, see this kind of thing. But yeah. I also want to have, um, I never did that. Like a display, like a tracker where like all the media data scrolling. Yeah. Scrolling, um, from, from bottom to top. And you can, um,
+get more books to patch. You can see, like, like, you can see, like, like, all the media data scrolling. Yeah.
+Like, like, it would also look really cool at one point.
+I think that'd be really handy for people that see this kind of thing, but they're not efficient, you know.
+I also want to have, I never did that, like a display, like a tracker where all the media data is scrolling from bottom to top and you can...
+I can move books to patch.
+You can see, like, it would also look really cool.
+Yeah, so that's actually it for the whole content part.
+Right.
+So the last thing is basically you want to export your demo and to upload it to a party system.
+Did you have anything, Mark, or did you want to say?
+I think the thing I just want to, like, just say to close off this part of what you've done is, you know, everybody that looks at this, you know, everything starts small, right?
+The subpatches, the root trigger and the time, sorry, the time sequence, you know, it's like, you don't have to think when you look at a big cables patch and go, good God, how did people put this together?
+Because it all started like this. It was really small and there's lots of little ideas.
+And if you just learn the basics of, like, how to copy paste, how to do time sequence and things like that, it's really not that difficult to make a sequence of events which can add up to the demo.
+Because I've heard at least quite a few times, especially in the meetups of people like, wow, how do people do this kind of stuff?
+Yeah, they start like this. They have something really small on the screen, just out of a cube and a circle and things like that. And then they build it out from there.
+So I'm just trying to encourage people not to be intimidated whenever they see like a big cables patch because everybody can make a demo, like everybody.
+Like, we just did something in two hours. And I think with a little bit of training, I think everyone can pull this off. And I mean, ignore the media stuff and just chaining like the time sequence, like just chaining scenes together.
+Um, this is already half, half of the rent, right? Um, and, um, and yeah, just don't, don't concentrate on the whole, like concentrate on the little things like on the scenes, this is important stuff, putting it together like this, like if you did this once, it's, it's a really easy setup.
+Um, the most important thing is basically to have like the scenes and they look good and they fit together. And, and this is the kind of stuff.
+Uh, one thing I was thinking of Pando before you carry on is, um, you know, so a lot of people that make demos, everybody, it's a collaborative effort, right?
+It could be one person making all the visuals and one person doing the music. Maybe there's two people working on the visuals. So imagine that Pando would want to make me a collaborator of this patch, right?
+You know, normally his patch would be private right now, but he's like, Hey, Andrew, I want you to go in there and paste that stuff that you've been working on and put it in there.
+So you can go to collaborators. You can type in the name of the user there. Uh, you hit the send invitation button. I will, if I accept that invitation, I now have access to that patch together with Pando. Um, and you don't want to both be working on it on the same time.
+Cause you know, you've only got one state that you can save, but you could arrange of each of like, Hey, you're going to work on a patch tomorrow. Cool. And basically you can do that without publishing your secret demo.
+So yeah, most of the time we have like one, one person that is basically like the master of the demo, like the, um, the one who puts stuff in here.
+And, um, and then often we, we just switch seats basically. And, um, everyone is working on it, but most of the time there's one that puts everything together.
+And, uh, the others are producing scenes basically. And then they say, here's my patch. Here's my effect. Uh, just copy it over. And, um, this is how we do it most of the time. Yeah.
+And if you're working with a musician, for example, and they think, Oh, I'm working on some music tonight and Pando's not online. You know, if he's a collaborator, he can export his music, just reimport it.
+And as long as he knows which two ops to go to, to say, browse to this file and browse to that file, he can see the visuals and go, Oh, is this working the right way?
+So that opens up a lot of possibilities. I would to collaborate. I think.
+Yeah.
+Yeah, totally. Also, it's much easier to show people what you are working on. Um, um, um, they just can anytime go there and look at it. It's not, you don't have to send an Excel file.
+Sure.
+Or something like this, um, or compile it yourself or something. You can just go there.
+Yep.
+And look at it basically. Um, yeah. So one thing I wanted to mention. Um, so we had this, I don't, I cannot show the performance of right now because it will always be crappy, but you saw in the beginning, like the first time we load the patch, it takes a long time to, um, uh, to load the different effects.
+Right. So we have an operator that's managing all the loading stuff.
+Right.
+And, um, this also plays automatically the demo. This is what is happening right now. So, so this op doesn't execute anything before every image and all the audio is loaded.
+And after everything is loaded, then it just starts rendering before that. It show, uh, just triggers this loading output here. So we can add something here.
+That says loading.
+So when we reload this patch now, hopefully you can see the loading text.
+No, this is too quick.
+I don't know.
+Yeah.
+Yeah.
+And then it switches and now it's, it's playing the demo.
+Uh, Panda, can you just explain to people how you could use the loading status up to do the like initialization of like, um, the, the things that haven't been triggered yet.
+You know, that's sure at the beginning.
+I think it's really hard to explain right now because I cannot like the, um, performance of would just show.
+Hmm.
+Well, maybe just explain it.
+Just like, yeah.
+So basically what you want to do when you start the demo for the first time, you want to initialize all the shaders and all the measures that they are probably compiled and uploaded through the graphics card.
+So you need some, so, so Cavus doesn't do this for you.
+Um, so you need some setup to do this.
+So for example, uh, when it's loading, you can, um, or when, when the loading is finished, you can just trigger all your effects.
+So we have, uh, like the variables, we have something where you can send trigger somewhere.
+So we have a trigger send and the trigger receive.
+Yep.
+And, um, I mean, you just plug that into all of those sub patches, right?
+For example, you plug it, uh, you plug it in, um, there and you plug it into every sub patch, basically.
+So this would mean when the patch is loaded, um, it will just once trigger all of those ops.
+So then all the shaders, you, you can be sure all the shaders are compiled and everything is initialized.
+So I can demonstrate this when I add another trigger send and enable flow mode.
+So now I can press Y.
+Oh, we don't have a button now.
+Okay.
+Okay.
+I will just add this.
+Uh oh, I'm just doing it a lot.
+So we have a, this op has a nice handy button there.
+So when I click this button, um, I need to select, uh, I, I haven't created one.
+So we create a new trigger.
+Variable.
+Yeah.
+We call it create in it.
+Um, and we want to receive this.
+So we have to select it here.
+So I can now click this.
+And it's just dying.
+Um, and then you see all of those things are triggered.
+Um, so this would happen then in the loading.
+Sequence.
+Yep.
+Yep.
+Um, so this trigger send has the free on it.
+And this is when it's being loaded.
+It will just initialize like pre rendering all of this.
+And then you don't have the first time you run it.
+You will have stuttering between the scenes.
+This way you can just, uh, initialize it.
+And then it should be smooth because everything was, was rendered before already.
+Right.
+Cool.
+Um, yeah, you will see this when, when you are doing it.
+Um, you will see this, the stuttering, but also like if you have problems, uh, like this,
+then just contact us and ask us questions.
+Uh, we, we, we, we want to have, uh, have you do a demo basically.
+So, okay.
+So let's imagine we finished the whole demo.
+Um, and we are the demo party and you just have to upload your, your release to the party
+system there.
+Um, but right now we are in the web.
+Um, but right now we are in the web.
+So we want to create an executable file that runs on windows and they don't need to have
+a web server or, uh, the right browser or whatever.
+We just want to create an exit file.
+So in cables, you can, you can always click, um, the export button and this will create a zip
+file for you with all the files in there, uh, that are needed to display this demo.
+I mean, this demo doesn't have really a lot of files, uh, except like, okay, so you can
+see the files here.
+So we have like a font file and we have this MIDI file.
+We have the MP3.
+So the MP3 is basically the biggest file.
+Um, and, um, also the media Jason, so we can download this file and we get, uh, a zip file.
+Um, so, um, let me just open this and so we have a zip file, uh, my little demo is called
+in this case.
+Um, and here you have all the files like your MP3 file, your font file, your MIDI file.
+And here you have like the, the code that is needed to run, um, the whole patch.
+So, so it's all in there.
+So you can take this and upload this to a web server and then you can open it in your browser,
+the URL, and then you can watch the demo online basically.
+Um, so this is what we often do when we work for clients or something.
+But, um, so we want to create an, um, an Excel file.
+Um, so, um, so we have, so we are working on a better solution right now, but, um, you can download, uh, I created this repository actually today.
+Um, so.
+One, one, one, one.
+Yeah.
+Um, yeah.
+So we, we are, we, we will have a better solution soon, but right now it's, it's not there yet.
+So you can go into this repository.
+Um, we will also write this in the YouTube channel.
+And this basically is just the windows executable.
+So, um, I'm on a Mac right now, but I just want to see, uh, show you how, how it works without executing it.
+But, um, I hope you believe me that it, it will work.
+So, so you download this, this zip file and, um, um, wait a second.
+So you download the zip file and, um, you can, uh, uncompress it and then you see, um, this is wrong.
+Um, you see, um, you see, there is a demo.exe in there.
+So, um, this is, uh, your exit.
+If you execute it on windows, it would, we'll just start the demo.
+Okay.
+We have the export and we have this.
+So we have to take the files from the export and put them into the resources app folder.
+So you just copy the JS and the asset folder in here.
+And then you can start the Excel file and then it will show your demo.
+This is all explained here.
+Um, all the steps that are necessary.
+Okay.
+Cool.
+Um, so this is, this thing is called electron.
+This is basically like Chrome without the UI.
+So this is just a browser without the back button and the URL input bar and something and stuff like this.
+So it is quite big, but this is just the most handy way to submit a demo to a demo party because they, maybe they don't have internet.
+They cannot open your URL.
+So we package it like this and then you have an, uh, Excel file that you can double click and then you can just run it.
+That's awesome.
+And then, uh, the windows user sees it in full screen.
+Yeah.
+Cause I mean, I just want to say this, like, um, you know, there's a difference between making a demo and being somebody that makes tools that enable people to make, um, demos.
+Um, when I started with the demo scene, um, I had no idea how to make a 64 K executable and these kinds of things.
+And a lot of people told me, don't bother doing it.
+It's a world of pain.
+So they made this tropical travel in this regard from Puber.
+And, you know, he, he made this tool, uh, which allowed me to make a demo.
+So don't, don't get stuck with how all this works.
+If you can follow the instructions and make a cool demo and it works, just do that and enjoy a beer on the way.
+That's my, uh, model with this kind of thing.
+Yeah.
+Yeah.
+Maybe the next step is you code a demo or something like this.
+Just start making a demo.
+We need demos at demo parties.
+That's the thing.
+Yeah.
+Wow.
+That's, uh, I, I, I, I, I, I learned a lot of new stuff off tonight, you know, like whenever I normally see one upon those demo patches, of course, it's a lot more bigger than this one.
+So this is a really nice way to deconstruct, uh, how this stuff gets put together.
+I think there's a wealth of information in there for people.
+Yeah.
+Um, yeah, we would love to hear how, how you, what you think of this, um, tutorial and, uh, what do you think could be easier or what do you want to see?
+And, um, yeah, we will do those live streams every week.
+So just ask us what you want to see in the future.
+I'm planning on showing the custom shader op.
+So, ah, yeah.
+Um, so with this op, you can write your own shaders.
+Um, so you, you can combine basically shader, like your own shaders with meshes, uh, or you can write a particle system with it.
+Um, I really want to go deep, uh, with this.
+Yeah.
+That's going to be awesome.
+I've seen the stuff that you do with that.
+That's going to be really exciting for people.
+Yeah.
+So this is one of the things I want to do in the next weeks.
+Um, so, um, uh, it's a bit more coding related, but, um, yeah, I think we should do this.
+Um, because it's also like for many people, they, so I think it's also people want to write shaders and make a demo out of them without building the whole framework.
+So you can code, you can code shaders and cables without coding the whole framework stuff around it.
+You can just write the shaders and then synchronize them with, uh, FFT or the MIDI stuff and, uh, use them with that.
+So this is one of the plans we want to show.
+Yeah.
+Yeah.
+One thing I was thinking of, like after watching you do this whole stream, I'm thinking of maybe, um, bugging Ronnie or, uh, obverse, um, to see if I can just get like a little fragment of some audio and MIDI.
+I was thinking it might be really cool to give like a breakdown on like lots of cool, um, tips and tricks, you know, with triggering events.
+Um, like what you were doing there with the, um, string equals and things like that, because that, that can just give somebody so much, um, potential to make a demo of just getting that bait or a mangling it and using it in different ways.
+There's a lot of different ways we can go with this.
+There's not enough, uh, hours in the time to make all the streams that we'd like to, to show everything basically.
+Now I'm super hyped.
+Yeah.
+But maybe, maybe like, I mean, you do this VJ thing, like maybe, um, you do one episode where you just repatch it.
+Uh, so it runs off a MIDI file or something.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+For sure.
+Well, that's the cool part.
+Yeah.
+That sounds like a good one.
+Yeah.
+Hardy.
+That would be super awesome.
+This is why I said this because I saw you there.
+So, uh, maybe, maybe I, I think you would have.
+Have a lot of fun with the, uh, custom shader operator.
+Yeah.
+Yeah.
+And Hardy, um, I'm going to look for it now.
+We actually have, um, because, well, like Tom said, you know, we've got, uh, a hundred, um, YouTube.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+Yeah.
+And Hardy, um, I'm going to look for it now.
+We actually have, um, because, well, like Tom said, you know, we've got, uh, a hundred, um,
+YouTube tutorials now, and we've actually got, um, um, the basic, um, video, which gets you
+completely and utterly started with the custom shader.
+Like we made a tutorial about this one time ago.
+I'm just going to post it.
+Yeah.
+Yeah.
+We've got it.
+I'm going to post it now.
+Um, did you just say really?
+That's so cool.
+Well, there it is.
+Uh, we've got like a 10, 11 minute, uh, eight minute 40.
+And you now know how to use the basic custom shader and put it into a texture.
+I'll just use it.
+It's all in that.
+Um, yeah, there we go.
+Oh God.
+Hearing my voice back from over a year ago.
+That's terrible.
+Okay.
+So yeah.
+So we, we already have, uh, I didn't know this really.
+Yeah.
+So I just wanted to say that now.
+So when Pando is going to do the custom shader tutorial, you might want to just dive into this
+one for 10 or 15 minutes and try it a bit yourself.
+And then it's going to be a lot easier to follow.
+I think one or two small things have changed, but pretty much almost everything is exactly
+the same.
+Yeah.
+Um, yeah.
+I have to watch this again.
+Sorry.
+It's okay.
+No worries.
+That's what you get when you've got a hundred videos or you forget a few.
+Yeah.
+I just want to concentrate probably more on the, um, vertex shader, um, stuff.
+Yeah.
+Yeah.
+Sure.
+Um, yeah.
+So, um, yeah, I think we should do more about audio synchronization.
+I mean, um, that's, that's one big topic.
+We, we already, uh, uh, do, but I think there could be even more, but yeah.
+Okay.
+Okay.
+So I think, uh, I think we are through, right?
+Uh, are there any questions?
+That's the main thing.
+If you, if you, if you want to plunder the demo scene as a brain, now is the time.
+I mean, I think everybody's been sat there at home, pen and paper writing down all these
+questions or they didn't.
+Yeah.
+Probably.
+Let's just give everybody like 20 seconds due to the, the time delay of the internet and
+lag and stuff like that.
+all right.
+All right.
+So it's kind of quiet.
+Um, I think, uh, I don't think, uh, I also, uh, fuck racism from steamer.
+Definitely.
+Um, definitely.
+Um, definitely.
+Yeah.
+That's, uh, that's been a really big thing going on for every last few days.
+That's why we've got the title of the stream there.
+Uh, like that basically, yeah.
+Fuck racism.
+Yeah.
+Crazy times, crazy times, crazy times, crazy times indeed.
+All right.
+Uh, Panda.
+I don't think, um, anybody's got any questions.
+I mean, I think that was already a great overload of good information.
+Uh, there you go.
+You explained too well, no questions left.
+Well, that's, that's an amazing statement.
+Thank you.
+There we go.
+Ah, thanks everybody.
+That's so, uh, that's so nice to hear that kind of stuff.
+Um, well, I think it's a great question.
+Um, okay.
+So I think that's pretty much it for tonight then.
+Right, Panda?
+Yeah.
+That's it.
+Okay.
+Yeah.
+Thank you all for joining in and, um, see you next week.
+Ah, sorry, Panda.
+One quick question.
+Are we, are we going to try and make a really stripped down version of this patch for people
+and publish it at some point in the near future?
+Yeah.
+I would just publish this, right?
+Or do you think it's too big already?
+Ah.
+Uh, I don't publish this and maybe we will do a, uh, tell you what you publish this.
+And then if I've got a little bit of time, um, in the next day or two, I'll do what I call the beginner super strict down version with just a couple of cool cubes and some stuff like that.
+And just make an even simpler version.
+Yeah.
+I think this is great by the way, especially if someone's watching the video.
+Um, but it'd be good to just have that as a template.
+Maybe we can make a new template demo.
+Yeah, with a few more comments and stuff like this, but yeah, um, yeah, that we will do.
+Okay.
+Cool.
+Awesome.
+Okay.
+Uh, all right.
+Well, I'd like to say massive thanks to everybody that, um, joined us and watched us.
+Um, again, it's great that you, uh, participated and, uh, we're here and, uh, we're looking really
+forward to all the demos you're all going to make because we know who you are.
+You know who you are.
+You are watching.
+We expect great things.
+Oh yeah.
+Totally.
+Okay.
+Great.
+Thank you all.
+All right.
+Goodbye.
+Thanks everybody.
+Bye.
+Bye.

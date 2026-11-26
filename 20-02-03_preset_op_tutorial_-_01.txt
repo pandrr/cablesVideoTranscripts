@@ -1,0 +1,124 @@
+https://www.youtube.com/watch?v=2eKIpiTv6ww
+Hi there, welcome to another video of Made with Cables. My name is Mark, my handle on the forums
+is Andro and today I'll be showing you how to use the brand new preset op inside of cables. We're
+really excited to release this op as it opens up a whole new world of possibilities working within
+your current and future cables patches. So without further ado, let's get started. What is the preset
+op? Well the preset op allows you to store the state of your ops and their parameters. You ever had it
+where you're in a patch and you think oh this is really great and I want to keep this and I also
+want to try something else out? You'll probably end up saving a new version of your patch. So you've got
+patch A and B. How would you go between these two states of your patch or parts of your patch? Well
+that's where the preset op comes in. So without further ado, let's get started. I'd like you to
+pause the video and just make what you see here. Great. So let's give this Matcap material a texture.
+So we click the texture op. We're going to click file. We're going to browse down to the Matcap library.
+I'm just going to grab one of these material six. Okay, we've got a great cube. Good place to start with.
+So first of all, I want to show you the preset op with just color. Something really nice and simple.
+And after that, I'll show you with transforming and scaling. So I'm going to press escape and I'm going
+to type in preset. Here we say state management of all parameters connected to it. So I'm going to click
+it, click add. So this is the preset op. There's a few buttons over here. Don't worry about it right now.
+We just have to figure out how to connect it to something. So right now, I'm going to grab the HSB to RGB
+op. And I'm going to connect the red to the red, green to the green, blue to the blue. Now if I click
+the op and I move hue, as we can see, I can change the colors like this. So I want to control hue, saturation
+and brightness with this preset op. So we first of all need to connect it. So grab this dynamic port here
+and I click and drag and I let go and I click hue. Now look, the port grayed out. If I now click the
+preset op, we have the parameter here. It's connected. If we now click the original op, we can see there's a
+variable assigned here. Just don't click this right now. You don't need to. You need to control everything
+now with the preset op. So I'm going to click and drag this. I'm going to let go of it on saturation
+and on brightness. And as you can see, we now have the three parameters that have appeared here. So now
+I can control the hue and the saturation. So right now, I just want to make red. So I want to make a
+preset for the color red. So I just click the button, create new preset. This pops up and I'm going to
+type in red, enter. I'm now going to move this to green, create new preset, green, enter. I'm now
+going to move this to a kind of blue, create new preset, blue. So what happens is when you click create
+new preset, the states of the parameters here that are assigned to the op get stored. So now I can go to
+this drop down and I can click them and I can go back and forth between the states, nice and easy. So this
+preset op, you could connect to one op, 10, 20 ops, whatever you want to store the state of. That's
+it conceptually. It's really that simple. So now I want to just show you one or two other things that
+we can do with the op, really simple things just to lay the groundwork for what else we can do later on.
+So I think this is a little bit too dark. I want to update the preset. So I'm on preset blue and I'm going
+to move it this way a little bit. I want to light the blue and now just click update blue and it's now updated.
+If I now go between my presets, as you can see, that's been fixed. How would you make a copy of a preset?
+Well, that basically means you create a new preset of the state of the preset you have. Sounds more
+complicated than it is. Imagine that we had the state red and I wanted to make a copy of it. I just click
+it. The state is now here. I click create new preset. I can call it red 2. As you can see, these two
+presets are now the same. Now imagine I'd want to rename this preset. Nice and easy. We pick it, we click
+rename. I'm going to call it red copy, press enter. And as you can see, we now have it there. And if I want to
+delete a preset, we just select it and we click delete. That's the basics of the preset op. This is
+already enough to do amazing things with storing the state inside of your cables patches. But we went a
+little bit further with designing this op and decided it would be cooler to do some more interesting things
+with it. So first of all, I'm going to introduce you to the first interpolation method, AB. So we have it now in
+interpolation mode, none, and this allows us to create presets. Okay, so now I'm going to click on AB. Now imagine just like the
+alphabet, A, B, C, D, it just continues, right? So we have that with presets, 0, 1, 2, it could be 0 to 10. So what
+preset A does is this. It allows you to do linear interpolation from one preset to the next. What does that mean? Well,
+this is why I made red, green, blue. So this is easy to understand. So preset 0 is red. Preset 1 is green.
+Preset 2 is blue. Let's press 0. So if I now move this, I'm doing linear interpolation
+between red and green, 0 to 1. If I continue, we're now going from green to blue. So I'm going to put
+this in 0. So if I put it on 0.5, we have half of preset 0 and half of preset 1. If I put it on 1.5,
+we have half of preset 1 and half of preset 2. So this allows you to just do linear interpolation
+between all of your presets. So now I'm going to just put this back to none. And as you can see,
+it now updates to the preset here with the dropdown. Another thing you could do is just to show you,
+in case you had a MIDI controller or something like that, I'm going to just grab a number up. Okay,
+this just gives me a number. And I'm now going to plug this into preset A. Now nothing's going to
+happen. And I just want to show you this now. Why? Because we're not on an interpolation mode.
+So now I'm going to click AB. As you can see, it just jumped. So here's the number input from this.
+And now I'm using this. So I could, I could now just basically animate through my presets with other
+ops inside of cables. So I'm just going to get rid of this. So it's the preset A input that will allow you
+to, as you can see, interpolate between your presets here. I'm going to put it on non. That's the basics
+of the preset up. If you can do this, you can store the state of all of the ops and parameters that are
+connected to it. It's not more difficult than that. It just takes a few minutes to wrap your head around.
+It's nice and easy. Best part is you can have multiple preset ups. And now I want to show you
+the X fade mode. But to do that, we need to go a little bit further down this rabbit's hole.
+That is the preset up. So I'm going to click here. I'm going to press escape. I'm going to make a new
+preset up. So now I want to use this preset up to change the position, the rotation, and the scale
+of this cube. So you might be wondering why I'm using scale X, Y, Z instead of changing the width,
+height, and length. Well, if we do width, height, and length, we have to rebuild the geometry,
+the mesh, which is not very efficient. So we're going to do it with this up.
+So I'm going to go a little bit quick now because it's just to show you how easy this goes. So I get
+the dynamic port. I'm going to connect it to position X, position Y, position Z. I'm going to skip scale
+because I'm doing that with the other op. Rotation X, rotation Y, rotation Z, and now I'm going to
+connect this to scale X, scale Y, scale Z.
+So now all of those parameters from these two ops here are now available here. Okay, so far so good.
+So I'm going to just create a couple of presets really quick, nothing amazing, just to show off what
+we can do with the X fade mode in a moment. So I'm now going to just move the cube over here.
+I'm going to move it up a bit. I'm going to rotate it 45 degrees. I'm going to change its scale.
+And I'm going to create a new preset. I'm going to call it 1. I'm now going to move it back 2.
+I'm going to put this to 0. I'm going to put this on 45. This on 90. I'm just picking some wild numbers here.
+Preset 2. As you can see, it goes really quick and easy. I can just now manage these two things together.
+So I'm just playing around a little bit here.
+I just want to make something like five presets. And then I'm going to put this on 0.
+This on 0. This on 180. And this on 90. And this on 90.
+Now I'm going to create a new preset. And then I'm just going to put it back
+to be in a simple cube. So now five presets.
+Did you see how quick and easy that went? I already know how to rename, delete, and update.
+So, let's just say I want to get 0 and I want to put it back to the middle.
+So, 0, like this. Update 1. And I'm done.
+Okay. So now I could use linear interpolation and watch what's going to happen here.
+It's like animating between one preset to another. How cool is that?
+That's a really, really nice thing that we can do there.
+So if you would want to do this with different ops or with animation,
+you know, this could take quite a while. Putting in keyframes and things like that,
+or using ops to create conditional conditions that things are triggered under.
+It's a lot to manage. If you want to just like store the state of like nine or ten parameters,
+it's a lot of work. And when you want to go from one state to another, it's even more.
+So this is the whole idea of the preset up. So now I want to show you the xfade parameter.
+So the xfade parameter is really cool. So AB will let you linearly, in a linear fashion,
+interpolate between preset 0 to 1, 1 to 2, 2 to 3, 3 to 4. What if you wanted to do linear
+interpolation between preset 1 and 4? Well, you couldn't do that now. With xfade, you can. So I'm
+going to put this on 1. I'm going to put this on 4. And now this fade is a number that goes between 0 and 1.
+So now I fade between preset 1 and 4. I could now say I want to fade between preset 1 and 3.
+As you can see, we now get something different. I could say I want to fade between preset 3 and 0.
+I could say I want to fade between preset 3 and 2.
+So this opens up a whole lot of interesting possibilities. And you know, you have to think
+a little bit up front, like, how you'd want this to be. Because this is something I'm going to cover
+in the next video. You might think, but Mark, how do I manage this, this state of like preset 0 to 3 and
+1 to 4 and things like that? Well, the best part is you can control this preset up with another preset up.
+So it's kind of like making your ideas and your sketch pad and getting them all together. And then just off
+connecting these three parameters to another preset up, you've created even more possible presets that
+you can then morph and interplay between. It's a little bit dizzying to wrap your head around at
+the beginning, but it's not really that difficult once you get into it. And I'm going to be covering
+that in some future videos. So this was the basics of the preset up. It allows us to do state management
+inside of cables with our ops and with our parameters, and it allows us to do really cool interpolation
+methods between one to the other. So you can use this for post-processing. You could use this to
+store the state of your cameras, viewing an object. There's so many different things you can do with
+this, and I'm very excited to be bringing out some future videos of this, showing some of the actual
+useful, practical, real-world applications that you could use this op for. I hope this video has been
+educational and informative. If you've got any questions or comments, please feel free to leave them
+under the video below or to post them on the forums. Thanks for watching, and have a good one. Bye!

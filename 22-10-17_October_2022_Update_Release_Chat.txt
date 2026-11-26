@@ -1,0 +1,249 @@
+https://www.youtube.com/watch?v=KTg74UNNCxg
+welcome everyone to the cables october 2022 update my name on discord and on cables is pandora my
+real name is tom hello um i'm stefan yeah welcome everyone and as we did with the last release we're
+gonna do a little chat so um the both of us sit down and walk you through what we also mentioned
+in the blog post um release again is packed with um lots of features so check the blog post but we
+will walk you through a few things that we think is um are especially worth worth mentioning um and
+the four topics that we want to talk about mainly are our new capabilities for doing stuff in virtual
+reality how you can collaborate on patches um together and invite and request access to patches
+some small um improvements to the editor to make your life easier while patching and we have an
+awesome new feature where we can work with geometries and obj export them freeze them to optimize
+performance but we will walk you through um in the few next minutes and i guess we just dive in with
+the most obvious hero feature of this release which is um vr support by using um webxr yeah exactly and just
+to to show you to show you the you can just go to block dot cabits gl and you see the whole release in in
+detail and there's there's a bit more here that you can explore and we will only highlight we will only
+show a few highlights so the first topic here is is web vr and um as you can see there's there's directly
+examples so i want to show you this example first so this uh is our example this is the more complicated
+example patch which has already quite a few features um but we don't want to go into detail we just want
+to show so if you have if you open this on your quest headset for example you can you can directly open
+it from the browser and start it we will show you this but first like this patch it has some interactive
+3d elements which play audio um and you can uh you can teleport around on on the pc you can press t and
+then you get the teleport array and then you can move around in in the in the room and um um if you press
+this button it would it will start uh vr in your browser um yeah we're kind of cheating with this
+one right now to um show you this but the blog post also links um a few extensions for um the browser
+to have um a browser emulation um web exe emulation in the browser so you've been presented with this icon
+and we kind of tested this on the quest 2 and with the hololens and um some selected android devices so um
+you should be good to go on most of these devices um and have this icon and jump into the rf yeah so to
+show you how easy it is really um let me show you a little test patch
+a little uh example so we just use our old random cluster to put some cues there and the pbr material
+and um now the only thing i have to do to to see this in vr is at the vr op so when i add this you
+see this uh this icon here so this means i can start vr now um let me quickly add a key press learn
+and bind it to my escape key so i can escape the vr experience when i started so i don't have a
+headset on my pc but i can see this thing because i installed um an extension which is super handy for
+for debugging this or just working it without putting the headset on and off the whole time so
+it is linked in the blog post this extension um you can find it you can just open your developer tools
+and then you go to the tab web xr and then you see there's a simulated headset here so when i take this
+headset i can sorry i have to start this first so i click this button so now the browser switched to vr mode
+so you see for each eye you see a rendering of the scene and now i can go to this um
+to this simulation thing here and i can move the headset and then you see okay i can i can watch my
+random cluster from the outside um you can you can rotate your headset and look around and those
+two things are the controllers i will not go into detail but there's also an an op called vr controller
+and this gives you which button is pressed and what the position in the room is and the rotation
+and it also gives you already a transform trigger where you can just draw a cube and then it would be
+attached to your controller yeah so all of this is basically the normal cable setup right so um you just
+just drop in vr and then that just works exactly so that just works then uh for sure you have to do some
+uh case management so uh the the op also tells you um the vr also tells you if it's supported or not
+um and then you should just show a message or something like this um yeah so to show you
+uh if you open this patch on a vr headset it looks like this so this is the normal cables page with
+the the the patch page basically and you can uh click the button the the same button is also here now
+uh in in uh in the vr headset and then you can start it and then you're in the experience so
+this is this is then you moving your head around already i mean it's a video but yeah yeah exactly so
+so this is the whole way from beginning to end so um yeah that's great i mean we had this room and we
+said it's a kind of um more complex example um but basically it's um taking the cables room that we
+introduced with the last update i think and then putting vr in and then making it all work so exactly
+the the complicated stuff is this whole teleportation thing which is not an op it can be patched with
+existing ops so it's uh it's a sub patch there then there's also all those materials from the room
+and the whole ray casting so that you can point on things and detect that it's pointed on and um
+the whole character movement is also a bit more complicated um but yeah so this can all be patched together
+yeah and also maybe mentioning something that we introduced in one of the last releases as well
+since we are all working in a browser and we're opening a browser on the quest um it is even possible
+to work with the remote viewer on the quest so if you um open this you can patch and then sit in and
+um put on and off your glasses and work in a patch yeah yeah that's the web xr vr news basically yeah it's
+that's great i mean looks easy um let us know if it works on all the devices that we um didn't get a hold
+of and um yeah as with everything we will um tell this a few more times let us know give us feedback on
+um how you use this and what you do with it yeah for sure and if if you then um we go to the next
+topic which would be the collaboration which is a good um thing to start here so um
+in cables we um we really encourage people to work together you know this from
+publishing patches and making um remixes and also sometimes um the cables jams and everything so um
+we make it now a bit easier and a bit more controlled on um who to collaborate with on patches um even
+on non-public ones so um if you now open the patch settings and you know this um there's a generate a
+secret url so um whenever you want to send something to a client that you don't want them to edit the
+patch or um you want to for example post on a forum and don't want to publish your patch but you want to
+decide on um who could should help you and in what manner um you generate a secret url and then send it
+to someone via discord for example or email or um whatever is a means of communication and this person
+will then um be able to open this patch and view it and be presented a new link a new button um we will
+simulate this now i will go there with my firefox so in firefox i'm locked in as a different user
+so yeah that's the the small tiny request access button is all the magic there is um
+so this person can now um request the um access um click on it and um the owner of the patch will be
+sent an email and be also notified so if you go back to um cables the next time um the website um you
+will be seeing a notification yeah so i go back in my browser where i'm with my user account
+and then i see this red bubble here yeah and if you click on this now you will be taken directly
+to the invites page we kind of reworked this um and now you can choose the level of access this new
+person this other person gets so you um we decided it would be a good idea to um give some people read
+only access or full access um to the patch um and then the owner of the patch can um basically decide um
+on the level of access and if you then go back to the other browser and reload you will see that it
+will um let you open it in the editor yeah so now this person can open it in the editor
+but i cannot save so it says no rights to save so that's that's what's expected
+yeah and this way um this way it should be a lot easier to um actually work together with people you
+can also invite people um from the patch setting page um as you can see you can change the level of
+access um access um later on and when sending invites you can um immediately decide um that the person
+should get um read only access or full access for example um so this is a bit more fine grained now
+um and should make it a lot easier to um invite other people to um collaborate and patches and everything
+exactly exactly so and one last yeah sorry yeah you can still change the the access that you want to
+give so if you want to change to full access then you can still change it here so this is a bit more
+flexible yeah this also goes for all existing patches so all collaborators on patches that are existing
+right now um will have full access um as it was before so you can now go and demote people if you want
+and one thing if you're missing um if you're not seeing the request access button on um on your patch
+page then that might be because you're having a public patch that's the only place where we're not
+showing just because we don't want all your fanboys to request access um to your awesome patches um use
+invites them yeah so the ideas for example we see this on discord a lot people ask for help but they for
+sure they don't want to publish their patch because they're still working on it or for some other
+reason so you can create a secret link post it on discord or something and you can you can delete the
+secret link later and nobody can go there anymore and then people can ask to help and or like if you
+want help they can request access and you can say read only and they can play around with your patch and say
+i i think it's fixed if you change this and that and then you can chat with them and
+yeah i think it just helps to communicate and help other people and work together so that's that's the
+main goal of this feature yeah i think so too and um again i said um let us know because i think we
+we will be um building on this functionality and uh make it work with um with teams and have more fine
+grade control over um what parts and maybe even um operate um ops uh can be edited to edit and um
+who's allowed to do this so um also let us know what your um what do you think how it works for you
+or what you're missing um and we will improve on that yeah great so next topic uh ui editor improvements
+and and uh new ops and features so i would just start with the first one which is um math ops shortcut
+so this was already asked quite a few times so and it's so good in the end it's a little change so right
+until now you always had to write some or multiply to to multiply numbers but now you can just press
+uh the mathematical science or the star for multiplying or you can press plus and the op will
+automatically be inserted and it's uh the workflow is so much faster and feels so much better so uh that
+that was user request and this is a good thing that like we just you could just get blind and you're
+so used to type divide all the time and you think uh it's fine but then someone says like yeah but
+it would be awesome if you can just type this character uh and then you realize yeah it's much
+better so give us always give us feedback uh in the discussions or or in on discord um we really
+appreciate it and we implement it sometimes yeah i also think that um the tiny ops look a lot better they
+make for cleaner patches if you don't have a multiplier sum or divide in there and it like visually it it's
+a lot more clear what's happening yeah i think so too um that's that and uh another thing that's also
+kind of like this is we improved um the suggestions so if you drag out uh out of a part you we already have
+this since the last release you get this suggestion panel here and this gives you a few options um
+often there are ops here that are really often used with this kind of part so here for example we see
+uh this number so you can you can you can visualize the number or you have a um with graph or you can
+create a variable all this kind of stuff so we are always improving uh what on the options so for example
+here i can just create a texture so i'm always like typing texture a thousand times per day but it's just
+so much faster when you click this and you just press this and then you have a texture there so
+yeah i got some some getting used to it but um yeah keep an eye open for these suggestions and um like
+rework on your workflows um took me some time to actually look there and not type texture texture all the
+time but it's like super helpful to um use these shortcuts yeah i think so too so um it really it
+really helps and and makes the workflow faster um yeah the next feature uh also helps also makes stuff
+easier especially when you're using a graphic tablet or a pen or a touchpad um we call it the long press
+helper or the long press linker so when you go to an op and i would just click the mouse on it until
+you see this flashing rectangle and then you see this this line um and i can drag this line somewhere
+and click again and then you see uh possibilities how to link those two up so when i click it here and
+link this one then you see those possible links so i can say i want to link this to key code
+and sometimes when i would do this for example oh sorry when i click this and click this then you see
+first you see the output port so you only see possible connections that are really that makes sense
+basically so there's one trigger so this one would directly connect trigger to learn and this one
+it's not clear where to connect so you press index and then you select the next part where to where to
+link it and then you can you can link it like this um that was a bad idea but yeah so um yeah it's called
+long press i mean that's not really visible on stream obviously but you press the um the up long and then
+you leave it i mean if you're not pressing anymore you don't have to drag your mouse but you're then
+um having this line attached to your um to your cursor to your pointer device um and then you press
+again to release it on on the up yeah so yeah the idea behind this is for situations where you don't
+have like command or control key or other keys or like a left and right click so like a like a pen or like a
+stylus uh in this situations it's much easier also when you're zoomed out like it's it's way easier
+it's like oh where's this part it's so hard and now you can just long press this and go somewhere and
+click it there and then uh you it's it's way more easy to to link those tiny parts so um yeah we think
+it's a really good helper for accessibility and for small displays and uh input methods that are not uh
+mouse or that are not a mouse yeah and so sometimes it's a bit like if you're i'm always uh clicking a
+knob and then thinking where to move them and then it's activated so if you don't like this feature you
+can always go to my editor preferences and um there you can turn it off basically
+yeah yeah great stuff and um we were talking about suggestions which are really great for um
+for for example opening um all the visual ops that are super helpful um for debugging and um we got a few
+uh more of these a few new ones um for example the um this long string yeah for this i would just go to
+the documentation and open the example patch
+um yeah so here you see it um basically just prints a really long string uh on your screen and you can
+you can visualize it also really great use of one of my favorite ops the lorem ipsum op
+exactly yeah so so we didn't have this we only had the this string which is really uh just for
+really short strings so if you have just a one liner then this is this is fine and this is not too
+too big on your screen so we decided we want two ops one which is really big and one which is really
+for small stuff most of the time the small stuff is was fine in the in the in the past and
+now we realized we we also want this sometimes
+yeah and another one is the um this array chart exactly so i will open again the
+example patch
+um yeah so this draws a pie chart of
+all the values in an array so i have connected the random arrays here
+and um i can change the the amount of arrays in here and then you see there's only three
+pie parts left and you can also connect an array with words and then they will be
+shown next to it so this was really helpful for debugging like for measuring the time
+part of the patch uses and then we can just quickly visualize this in the patch so
+um probably we will improve it later but it's really just a quick way to see
+how your how your values are distributed or how
+like how the distribution is in your in the random areas or
+or in other arrays basically
+yeah with all these um visuals we also um check the blog post again um we updated the documentation of
+cables um on how to um code these on your own so if you need um um a custom visualization of whatever
+data you have or um whatever op you want to work with um there's documentation now on how to code
+these on your own um pretty easy yeah basically it's if you have a programmed a canvas in javascript and
+html canvas it's that basically so this is the way those are drawn yeah
+um yeah then we have another new of the player control panel
+yeah i will again open the documentation here
+um um yeah we found that um it seemed to be really hard to do something like um this audio player that
+has like this um what's called skipping and is it called scrubbing um capabilities play pause
+um and everything and um we kind of reworked um the old really old timeline ui op
+um um to allow for this uh so this now gives you a simple um ui to play audio um well basically to um to
+skip through um time and then work with that on the timeline control audio video whatever can be
+skipped um even animations i guess yeah yeah often you would just want this control uh user interface
+and you can just copy paste this and then you can you can use it and you can you could also style it
+with css so this is an html element basically so um it's also flexible then but yeah we never had this
+and it's it's really handy if you figure something to the client and want to give them some control over
+an audio player or video player or whatever
+yeah yeah um this example patch is also maybe something to to copy from um if you want a really
+simple audio player that um yeah just plays audio often requested um i think that's a pretty neat way of
+um of doing that yeah yeah um then there's free smashes um which we are really happy about and i think it
+will it will become a big feature of cables in the future
+um so what it basically does is so it's called freeze meshes so it's somehow freezing meshes so what it
+does is often we have a ton of static meshes that are not changing or always drawn the same way on the
+screen and often you just want to combine them into one mesh and only draw this one mesh because drawing many
+measures is slow because that's called draw calls it can be slow if you draw thousands of meshes because
+you are not you cannot use the meshing sensor for example then yeah you always have this uh
+problem what's what's better in this situation so and this is basically to combine many meshes
+uh to one and the cool part is it's not like the merge geometry that we have
+but it works with the normal cables workflow so i'm using a random cluster here
+with a cube and a sphere and a cross and um they are now drawn as one mesh in the end with the render
+geometry um which is also yeah also a nice way of doing i mean the thing is that we're talking about
+cables generated meshes right so um if you have a 3d file and use these meshes then you have like these
+generated meshes um but this way um now you can have yeah the same thing with cables generated meshes
+yeah um see how the performance then improves yeah so yeah i can switch here so this is how the random
+cluster works because the random class is really stupid it's just um we see how how often it triggers
+uh the the meshes so it's basically it's really a basic stupid op so it's triggering all those things
+and this is how it looks if this does it uh every frame triggers uh thousand meshes and if i switch
+this then it will only render this geometry uh and it's already one draw call and then it's it's super
+fast i mean this example you could also do with a mesh instance and it would be basically the same it's
+really because machine sensor is also really fast but there are situations where you really want this and
+uh one situation is not only for performance reasons but it's also because i want to download this
+this geometry that i generated here so i can press download as obj and my browser will start a
+download of an obj file and i can open this file in blender or whatever 3d software and i have this whole
+scene in there and um this is really cool because you can basically print the stuff that you built in
+cables and on the 3d printer or you can render it with i don't know octane with path tracing renderers or
+whatever renderer you want you can print it in really high resolution all the stuff that we have problems in the
+web with but this way you can export it and use it in some other tool and um right now this is really
+really basic it's it's a really basic op but we will work on this and we also want your feedback
+how would you use it where do you want to use it what are your use cases what are your ideas um we want to
+work on this and um make this better but uh yeah we think it's already quite usable and quite interesting
+for many use cases but we want to improve it for example that it works with multiple materials and you
+still have the materials in the end etc so there's a there's a lot of ideas floating around um but yeah we
+also want to hear your ideas about this but also for now i mean um now already and the mesh is frozen
+but i can still work with the geometry in a normal cables way later on do um deformations on on them or
+work with them so they are not really static i mean the mesh is but we can work with that in the cables
+right exactly so you can still do all the vortex shader the shader effect ops you can use on them
+or you can use geometry ops on the geometry directly it's yeah basically this is
+the same as i would uh connect the cube or sphere to this render geometry
+yeah yeah a great way of um of doing this i'm really looking forward to the first 3d printed mesh
+instances yeah so this will give the printer a hard time i guess
+yeah for a random cluster would be hard to print i guess yeah um yeah yeah so what do we have on the
+list i mean we talked about vr we talked about the patch collaboration we had some improvements right
+let's check the block again but i think we're pretty much done with it again go to the blog post check it
+yourself there's lots of uh of more stuff um in there um let us know um these were just the four to five
+things that we thought um would be worth mentioning um and we really like yeah
+and also come to our meetup we also did this uh on wednesday in our meetup we talked about this already so
+that's always a bit more in depth and you can ask us directly talk with us and we will show
+we will patch we will live patch always we always answer the questions we need more questions in the
+meetup so join us there yeah yeah apart from that um leave questions in the comments leave feedback in
+the comments join discord patch stuff let us know what you think about the release yeah cool that's it yeah
+that's it bye thank you bye

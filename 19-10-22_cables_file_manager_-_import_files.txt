@@ -1,0 +1,93 @@
+https://www.youtube.com/watch?v=k4YFYjFF2nw
+Hi there, and welcome to the third video of an introduction to cables.
+My name is Mark, my handle on the farms is Andro, and today I'll be showing you how to
+use the file manager, how to import your own files, and how to use the code editor inside
+of cables.
+So let's get started.
+If I'm going to click on views, files, it's going to bring up the file manager.
+So let's go over here.
+So here I have various textures that can be used inside of cables.
+They come bundled as a kind of default.
+We have some 3D models, we have some music, and we have some videos.
+So let's scroll up to the top.
+So if I'm going to grab this texture now and pull it in and let go, cables are going to automatically
+create this texture up so I can just use it straight away.
+This is the same for all file types that are supported by cables.
+So if I go down here now, and I want to get a 3D model, don't grab the original, say for
+example, OBJ file, you need to grab the converted JSON file.
+I'm going to grab and pull that in, and now I have a 3D mesh that I can use.
+Same with audio.
+I'm going to pull on this track.
+It's going to add to the audio player.
+Videos, also the same.
+Pull that in, and I get the video texture up.
+Nice, quick, and easy.
+So we've got a couple of options here where you can reload.
+You can upload a file.
+You can click this to create a file, like a text file inside of the file manager directly.
+So any files you've uploaded are here in patch files.
+We've got the ones we've got here, they're library files.
+So if I click this now, I go to the detail view, and then the icons disappear.
+And this can give you a little bit more of an overview on some things.
+So let's say I now want to import just a texture file.
+And this procedure is the same for everything that's supported by cables, audio or video.
+So I'm just going to do this.
+And I'm going to pull this over here.
+Okay.
+I'm just going to drag this in.
+And this part appears.
+Drop files to upload.
+Let go.
+It gets uploaded.
+It goes into the file manager.
+I can now click and drag and pull it in here.
+So a little warning here, this texture file is now associated with this patch.
+If I would now go over here and I would do save as and I'd make a new version of this file.
+Let's say I do two or three versions.
+This will not be visible anymore.
+It gets referenced from this original file, which is good because it saves server space.
+And if you would go back into your original file and delete this, that would break the other patches that we use in Git.
+So that's just a little thing I wanted to warn you about there.
+Let's go back to full screen.
+We can also filter here by type.
+So if we do .png, go to library files.
+As you can see, I'm only now going to see PNG files.
+So if I go over to patch files and I click this now, you can see that I get all this useful information about the file,
+like the resolution, the last change.
+I could click this to add an op into the patch, which will then display the texture.
+I can use resize to make it half the size.
+Let's convert it.
+OK.
+Click it again.
+As we can see, it's now half its resolution.
+We can convert it to a YPG and we can resize it to the next power or two,
+which is necessary for some texture operations.
+And you can just check around for more things over here.
+But right now I just want to show you that you can click it and delete it and get rid of it.
+OK, so that's the basics of the file manager.
+Nice and easy.
+Importing is also really nice and easy.
+Now let's just say you want to open the editor.
+I would want to look at the code for this op that texture focus.
+You just click the op, press the E key, and here we get the editor.
+If I would want to clone this op and work on it by myself, I can then go over here.
+As we can see, it's got an attachment file, which is like a text file.
+And I'm just going to go in and I'm going to say clone op code.
+I'm going to type in delete me later because I need to get rid of this stuff once I'm done.
+OK, let me press enter.
+Sorry, it has to be uppercase.
+It just told me about that.
+And I say create.
+Now you don't see the op yet, but I press escape.
+And I type in delete me later.
+As you can see, I now have a copy of this op right here.
+Pressing E again would allow me to go in there and then change the code.
+So that's the basics of the file manager.
+How to import your own files and how to get started with the code editor.
+We've got a lot of other tutorials and playlists on this channel that you should just check out
+because they'll just take you in the direction that you need to go
+and teach you everything that you're looking for.
+I hope this video has been educational and informative.
+This has been the end of the introduction to cable series.
+And I'll see you somewhere in the future.
+Thanks for watching and have a good one. Bye.

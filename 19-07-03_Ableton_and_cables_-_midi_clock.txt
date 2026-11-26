@@ -1,0 +1,38 @@
+https://www.youtube.com/watch?v=ieozmhPy8jc
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the forums is
+Andro and today I'll be giving you the first part of an ongoing tutorial series which will show you
+how to start from the very basics and then create an entire set with cables in Ableton. And Ableton
+will drive your live visuals and there's a lot of tricks we can do but we're just going to try
+and keep it simple. So the first thing we've got to do is make sure that Ableton can talk to cables
+and cables can receive its signals. So if you're on Macintosh you need to just make sure you have
+IAC MIDI drivers set up, just google that, it's really easy. With Windows you want to go here to
+Loop MIDI and you want to download this amazing program from Tobias Ericsson, I hope I said that
+right Tobias, and get that installed. Now what that does is that gives you a virtual MIDI port and what
+that means is you then have a virtual MIDI port on your computer which will allow your applications to
+talk to each other. So in this case we want to get the MIDI clock signal from Ableton, later on the
+MIDI notes and the MIDI CC. We're going to keep it nice and easy today, it's a bit of a hello world and
+let's just get it started. So first of all go into live, click on options, preferences, click on the
+MIDI section and make sure that with your outputs, track, sync and remote are all on. This then means that
+those are getting sent out to the Loop MIDI port on Mac, IAC MIDI driver. Okay, so now what I'm going to do
+is I'm going to press play. And we can see here with this little flashing icon that Ableton Live is
+sending out MIDI clock. So now we just need to set up cables. Let's close this. So I'm going to go here and
+I'm going to type in MIDI input device, connect to MIDI device output port, press enter. Okay,
+now we have a couple of outputs here, event, notes, CC, nrpm and clock. We're interested in clock right
+now, it's the easiest thing to get started. So I drag out and then I type in MIDI clock. Okay, so now we're
+going to get MIDI clock signals. Now we're not getting anything yet because we need to go to the MIDI input
+device and we need to select the device. So now I'm going to click Loop MIDI port. And as you can now see, I'm
+getting clock data. I click this up, scroll down a bit. And as you can see, we've got the BPM here. I'm going to
+change it in live to say 58. This will change accordingly. So let me just put it back to 121. We get the tick duration and the sub tick.
+So I'm going to go more into using this later on, but this is like a hello world. I just want to show
+you how to get it started. So I just want to show you a cool new feature with this new version of the
+MIDI clock up. I'm going to pull this out and I'm going to grab a sweet sequence up. So here we've got
+one bar, half, quarter, eighth, sixteenth. So now I'm just going to pull these out and I just want to show you
+basically what this does nice and easy. So as you can see, this is a really quick and easy way now
+just to get some triggers. So let's now unplug all of these.
+So I'm going to go over here and now we have triggers out for ticks out, clock start and clock stop.
+So I'm going to put this in clock start. I'm going to put this in clock stop. So if I now press stop with live,
+we get a trigger, press play, we get a trigger. This is really handy when you want to initialize
+the state of your entire cable set, like to a lot of default values when it starts and to something
+else when it stops. Okay, this was the basic introduction on how to set up Ableton Live with
+cable so that they're talking with each other and getting the MIDI clock up working. I'll see you in the next
+tutorial. Thanks for watching. Bye.

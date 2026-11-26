@@ -1,0 +1,46 @@
+https://www.youtube.com/watch?v=qMKcF54YjJA
+Hello and welcome to our last part. For now the last part. I somehow mixed up all the tutorial numbers in the videos, but whatever, check out the playlist. All tutorials are in there.
+So, yes, so this is the most advanced part and I want to show what you can do with the Animorph that we saw in the clip tutorial, but you can use it for so much more and probably will always be extended in the future.
+But yeah, okay, so we will create a bit more visual thing now. So I will just create a orbit controls operator and I will render a cube and I want to render this cube with the PBR material.
+And so now we have a nice three-dimensional cube here. And so we want to animate this cube now with the Animorph. So I will create an Animorph. I will create a transform operator.
+And now, how do we use the Animorph? So we saw how we use the Animorph operator to create clips and then use those clips in the transform, for example. That would be easy now.
+But you can use this Animorph differently too. So you can have an AnimGetValue operator. And this operator, so first of all, let's have a look at our animation here.
+And create some keys. Let's have a look in here. And create some keys. Let's have a look in here. Make them smooth. So now we have this curve and now we have this new operator, AnimGetValue.
+And let's have a look in here. So what this, also this animation is really long, so let's make it, let's make it a bit shorter.
+So press F. So 60 frames, so this is about, this is two seconds, so this is a good length for now.
+So, okay. Now this AnimGetValue operator, what it does is, this will sample or get the value of the animation curve that we have at this point in time.
+So this is always in seconds. So now I can scrub here and you will see, we will see some values coming out here. So, this is super handy.
+This is super handy because you can just use a timer operator or a different animation to drive this animation, right?
+So let's connect this to the X position of our cube. Now when I scrub here, you will see, let's use the Y position.
+Now when I scrub this time here, you will see, it will move up. So there's our animation, right?
+But we want to have this constantly changing number for sampling on the timeline. So for this we can use, we can use a timer.
+And now you will see, it just moved once and now it's stopped, right?
+Because the timer is now at six seconds and we don't have anything at this point in time in our animation.
+So we can, one simple thing to do is to use a modulo. So a modulo is an operator that gives you, if I, so I will put in a number here.
+Like our timer number that's always increasing and I set the number to two and then our output will always be between zero and two.
+And when it reaches zero, it will jump back to, and when it reaches two, it will jump back to zero.
+As you can see in this sawtooth graph here. So this is our, this is the animation that we created with the modulo parameter.
+So this is basically a procedural animation, right? So, and we can use this animation to get our curve animation here.
+So you see the, the acceleration of the cube is not, is not linear. So it's using our curve here for, for moving the, the cube up and down.
+So, and I can, I can change this. Let's go back to linear and maybe it's easier to see then and create more keys here.
+And now you see the cube is sampled as, at those points. So let's add another point at zero.
+Then we will have a smooth animation because the cube will return to its first point, which is also zero.
+So, okay, this seems really complicated for, for what it's doing because we had this before, right? But now I can, I can do some tricks.
+So I can reuse this multiple times, for example, with the repeat operator. So when I add the repeat operator and, um, now we have six cubes here, right?
+And now they are all animated the same as it was before. Let's make the cube a little bit smaller. So we see the different cubes. We have five cubes.
+So now they are sampled at the same time, but now I can use this index. So for the first cube it's zero, for the second it's one and so on. I can use this, um, index of this cube and add it to the timer.
+So let's add it here. And now you see, like, we have something, something new, some, some new animation. So, um, I can adjust this. This is basically the offset that we sampled the animation with. So, right.
+So this is full number. So for the second one, it's one second offset. And for the third one is two seconds offset. This is why the, the first and the third are now in sync because it's two, our animation is two seconds long.
+And the second cube, so index one is delayed by one second. So half of our animation lengths. And the third one is two seconds. So it's the same as the first one, because it's exactly two seconds long.
+Just, you have, just have to play with this, with those values, and then you get a feeling for it, how, how it works, how it relates, and, and you can play with it.
+So I added this multiply up now to the output of the repeat. And with this, I can change the multiplier of this offset. So when I make this smaller, you will see now we have like this little snake animation because we are, the offset is really low now.
+And then the offset is not so big anymore. And the animation is smoother between those points. And now I changed the offset multiplier to 0.1. And then like the cubes are really close to each other in, in the animation.
+And, and, and this is super handy because you have the full control of your animation still. You can just animate, like just change values and you will see in real time, you will see the outcome of this, right?
+But you can also, um, you're so flexible now. So, okay, let's, let's have 10 cubes, right? So now we have 10 cubes and now the animation is already, um, repeating.
+Um, and so you can really be flexible and sample this animation wherever you want. Um, you can also, if you multiply this number that comes out of the AnimGetValue, you would, you would change the amplitude.
+So this will, um, oops, this will change the Y, like the maximum and minimum Y position. So if I multiply this with three, then you will see the animation.
+The animation, the animation is still the same, but now like the amplitude is much higher. So the cubes are jumping higher. So now they are really high.
+And when I changed this to zero, the cubes are not moving at all. So you can, you can even control when this is starting and then like the, the amount of, like the strength of the animation or something.
+And you could, you could also, you could also, every other parameter of this could be controlled by another animation. Um, be it fixed to the timeline or is it like a dynamic animation, like it is here.
+And, um, this way, yeah, you have, you have so many possibilities to create, uh, to create stuff with this. Um, yeah, let me know what you do with it. And thank you for watching. Bye.
+Thank you for watching. Bye.

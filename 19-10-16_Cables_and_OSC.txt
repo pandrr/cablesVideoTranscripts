@@ -1,0 +1,141 @@
+https://www.youtube.com/watch?v=1cIhDfrHM74
+Hi there and welcome to a tutorial video on how to set up OSC inside of cables.
+My name is Mark, my handle on the forums is Andro and today I'll be showing you from start to finish how you can configure your system to run OSC with cables.
+So first of all I'll be doing this tutorial video on a Windows 10 machine but pretty much everything is almost the same on a Linux and Mac system.
+So you should just be able to follow this video and get it running no problem.
+So if you click on the first link underneath the video below you're going to get taken to this page OSC to WS which stands for Open Sound Control to Websocket.
+So we're going to scroll down and the first thing I've got to do is I've got to install Node.js for my operating system.
+So you just go to the Node.js main page and I downloaded the Windows installer and now let's go here to downloads and here you can see it.
+So I just double click this.
+I click next.
+I agree.
+Next.
+Just install on the default location.
+Next.
+Make sure that all of these options are on.
+Click next again and then click install.
+Maybe I should put some elevator music on now.
+Okay.
+I'll be back in a moment.
+Great.
+So Node.js is successfully installed.
+So I click finish.
+I'm just going to minimize this.
+I'm going to go back over here.
+So now it says open a terminal in the OSC to WS directory and type NPMI.
+Well, we don't have this yet.
+So we go up here to clone a download.
+I click download zip.
+I'm going to put that into documents.
+Click save.
+I'm going to say show in folder.
+So here it is.
+This is it's file.
+So now I'm going to click extract all to the same location and let's just do this.
+So here it is.
+If I go in, I can see that I've got the same folder twice.
+OSC to WS master.
+So I'm just going to go in once.
+I'm just going to cut this.
+I'm going to go back to the top level.
+I'm going to paste.
+And that now makes sure that everything is just here in one folder with that name.
+So this is what you should just see there right now.
+Okay.
+So, so far so good.
+And then it says here, open a terminal in that directory and type NPMI.
+So on Windows, you just go to here, click in this top part there.
+Type in CMD and this will open the command prompt.
+Now, there it is.
+You're going to have to do something different on Mac and Linux, obviously.
+So now I just type in NPMI and hit enter.
+The node package manager is now going to download, extract and pack everything together that OSC to WS needs to run.
+Okay.
+So far so good.
+That's installed.
+Let's look at a repository.
+And to start, we type in node_main.js.
+So go here and type in node_main.js.
+Now, the handy part here is that you see your IP address of your local computer.
+You're going to need this in a minute to set up your OSC software.
+So as you can see over here, I've got TouchOSC from the awesome Hexler Industries.
+So I'm going to go back and I'm going to click this part here with the IP address.
+Because right now it doesn't match.
+I've got 231.
+That's my last numbers.
+And here it's 127.
+So I'm just going to tap here.
+I'm going to type in 127.
+Enter.
+You need to make sure that your outgoing port matches this one here.
+So OSC receiver is listing on port 9000.
+So your outgoing port should be 9000.
+I go back and back and I click done.
+So TouchOSC is now ready to go.
+So now I need to send that data to the WebSocket app.
+So I click here.
+We have an empty patch.
+Let's get rid of that.
+I'm going to type in WebSocket.
+And as you can see in the repository, I need to put this URL in.
+There we go.
+Into there.
+I'm going to press enter.
+Now connected isn't like showing anything right now.
+So sometimes I've had this the first time I installed this.
+If I now click here on the command prompts and press control C, it's kind of like a reset.
+It just gets it out of this stuck loop that it's in.
+And now it's all good.
+It'll just continue to work.
+So now it says connected true.
+Which is great.
+So it shows me that the WebSocket client has connected.
+So I go to the WebSocket and I drag out from this port.
+I'm going to type in OSC number.
+Let's keep it nice and simple.
+So I'm going to press F and I drag out from this port.
+I'm going to type in OSC number.
+Let's keep it nice and simple.
+So I'm going to press F and I drag out from this port.
+And I'm going to type in OSC number.
+Let's keep it nice and simple.
+So I'm going to press F and I drag out from this port and I'm going to type in OSC number.
+So I'm going to press F for flow mode first of all.
+And if I now move this, as you can see, we have activity.
+So we've got a connection and it's all working.
+So I'm going to click OSC number.
+I'm going to click learn.
+I'm going to move this.
+So you could type in an OSC address here that you've got yourself.
+And don't forget, if you're moving things here and then you inspect this,
+it'll show you the name of the address that that data is coming in.
+So if I now go over here and I press this toggle button and I press this, it's going to show me the name there.
+So you can type them over by hand.
+We think it's a lot cooler if you can just click learn.
+So I could click learn here and move it again to a different one.
+So just to show you what's happening, I'm going to just move this number.
+And as you can see, it's connected.
+So we're almost near the end of the tutorial.
+I just want to show you something else.
+So if you need more than one number, then we get OSC numbers.
+And this will output four numbers from a defined OSC address.
+Now this XY pad will output two numbers at the same time.
+So I click learn.
+I move this.
+And as you can see, we've got X and Y working down.
+We also have the OSC rate up, which I could also use right now with the XY pad.
+I don't have anything that outputs more than two values.
+As you can see, we've got this stuff right here.
+So that's how you set up OSC inside of cables.
+It's really nice and easy.
+And just to recap it from now on, once you've got it installed, the one thing you've got to do is you've got to go into control C is what breaks you out of this, by the way.
+So to recap, you're going to have to go into this folder, OSC to WS master.
+And then you just go in there and you just type in node main dot JS.
+And now it will run and there's nothing else that you have to do.
+And as you can see, after the first time it's run, you don't have to press control C anymore to kind of reset it.
+It's just picked it up and it's all good.
+So that's the end of this tutorial video.
+I hope it's been educational and informative.
+If you've got any questions or comments, please feel free to leave them under the video below or to post them on the forums.
+Thanks for watching and have a good one.
+Bye.

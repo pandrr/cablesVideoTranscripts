@@ -1,0 +1,197 @@
+https://www.youtube.com/watch?v=tib3dAo6ji8
+Hi there and welcome to another video of coding with cables. My name is Mark. My handle on the
+forums is Andro and today I'm going to be showing you how to recreate the random walker algorithm
+inside of cables. So let's go to Google. Now we have some images here which basically show
+the idea of a random walker and it basically means you have like a point, an agent and all
+it can do is each frame it can move in four possible steps. That's the thing we're going
+to implement today and here we've got some images which can come out of this and they're
+a really cool way to get started with generative art and to just like wrap your head around
+random systems and this here does a great, this shows basically what's happening in like
+fast forward. So we're going to recreate something like this in cables today and you've got an
+amazing video from the one and only legendary Daniel Shiffman. I'm such a fanboy of Daniel
+because he makes amazing videos and he makes this stuff really accessible and he's just got
+a huge amount of learning resources so you should also definitely check his video out while you're
+doing this. Thank you Daniel. I'm such a fanboy of this guy. Anyway, he's also got an amazing
+webpage called The Nature of Code. I've gone to this a lot through the years to learn about
+techniques and things that I like to do with generative art and right over there we've got
+this random walker. So let's get started. So this video is going to be broken down into
+three sections. This first one is going to show you just how to code the basic op and how to use
+it with other cable ops to make the random walker. The second video is going to like go way more in
+depth with how we can use other cable ops to modify it without having to code more and the third
+video is going to show you how to do all of this in 3D. So I'm going to like copy paste some code today so
+the video doesn't take too long. So in those moments I'll say you should just pause the video if you want
+to study what's going on. But I'll explain it as best as I can as this is a new approach for me with
+doing this kind of stuff. So first of all, I'm going to make a main loop. Let's zoom in a little bit.
+I'm going to come out and then I'm going to grab a sequence op. Now I'm going to grab a render to texture.
+I'll explain why in a minute. Come down a little bit. I'm going to grab another sequence op.
+And now I'm going to grab a transform. And now I'm going to get a basic material new.
+Sorry, basic material muscle memory. And then I'm going to grab a circle. Okay, circle mesh. Great.
+And we're not seeing anything right now because we're rendering to a texture. So we go over here.
+We make a full screen rectangle. We grab the texture out and we plug it in. There we go. Now we go over
+here. Turn on HDR. We put MSAA on 8. Now I'm going to make the circle a lot smaller. So first of all,
+processing does this random walker normally on the CPU. Okay. And it's an operating on a per pixel basis.
+Now, because we're like in 3D space and because we're doing everything in OpenGL real time, we have
+to kind of like adapt some of these techniques, which is something I found really interesting with this
+challenge. So if I go here to transform, for example, and I'm just going to grab a sign anon because I
+just want to demonstrate something here. So it's just going to output a sign number, as you can see,
+and I'm going to grab another one and I'm going to grab this. I'm going to click that into Y and I'm
+going to give it a different frequency. And as you can see, we now get the shape going over the screen.
+So what I want to do is like in processing, you want to kind of paint over the canvas, basically,
+and this is the canvas, like right here. So if I go to render to texture and I turn off clear,
+as you can see, we now get this, which is just already pretty cool in of itself. And if I now
+lower the opacity of the material to say like 0.25, and then I'm just going to turn clear on and off
+again. As you can see, we get this like softer look, which allows you to draw repeatedly over parts
+and will kind of like get brighter until they hit the threshold. You can see it here. So this is cool,
+but I want to be able to like reset this really quickly and easily. So I'm going to get the mouse up.
+And I want this to happen when I click the right mouse button, which is here. So I'm going to pull it
+out and I'm going to grab the toggle ball up. Now, if I click here now, as you can see down there,
+this goes to true and false. So I'm going to make it that if I click twice and I clear it,
+and then it's ready to go again. So I click once to clear, second time to bring it back.
+Okay, so far, so good. So now we've got like the basic thing that you can do in processing,
+where you just got a canvas and you're not clearing at each frame. You're just continuously drawing into
+it. So I'm just going to get rid of these sign items. Okay. Now, what I need to do here is I need
+to just like, when you want to code an op, you need to think what does it, what does this op do? What do
+I want it to do? And the challenge to me with this one was like coming up with an op, which kind of like
+works with the other ops inside the cable. So it's modular. So you're like, you're not stuck with only what this
+op can do. You can expand upon it. So first of all, we're going to just make an op and I'm going to go
+here. Sorry, I'm going to go to op, create, and I'm going to type in random walker. I'm going to say create.
+So now the editor pops up. Op isn't here yet. So I press escape twice. I type in random walker.
+So I'm going to go to this one. Here we go. I click on the op and I press E and that brings up the editor.
+Press escape to close it. Click on the op, press E. So you're going to be doing that a lot.
+So we've got an empty file. So the first thing is, I need to pass in a number which will pick a
+direction. So this will be north, east, south, or west. So that's zero, one, two, three. So I need an
+input number basically. So I'm going to go here and I'm going to type in const in direction
+equals op dot in int. And then I'm going to call it direction. And just for myself,
+I'm going to say zero to three. And the default value is zero. I'm going to press control s. You
+know what? I'm going to press control plus, make the screen a little bit bigger. So hopefully it's a little bit
+easier to read. Okay. So this now gives me a port here where I can input a number. So now I need to,
+like, I want to change the circles position on X, Y, and maybe Z. So the X, Y, Z position. So I'm going
+to go over here. I'm going to say, and I'm just going to copy paste this because this will then go a
+little bit quicker with the tutorial and I'll explain it. So I'm going to paste it. So as you can see,
+I've made three ports, out X position, out Y position, out Z position, and the op dot out number,
+and they're labeled like this. So do control s, you can just pause the video and type that in.
+And then I get these three outputs there. So now I need to make three variables to store this position,
+because it's going to accumulate. It could be zero, one, two, minus eight, it's going to keep adding up and
+becoming smaller. So I'm just going to make three variables and I'm going to call them X, Y, and Z.
+Now I'll put them here in a global scope because I don't want them to be reset each time we're going
+to call a function later. I want them to be persistent. So now I'm going to make a function called
+update. And I want update to be called each time that this indirection changes. So click indirection,
+copy it, go down here, and I say dot on change equals update. This now means that whenever indirection
+changes, like here, it's going to call this function update with anything in there. So far, so good.
+So now what I'm going to do is, I'm just going to, I'm just going to grab a little bit of code
+because otherwise the video can take really long time. So I'll explain what I'm doing. I make a
+variable here called dir, which is for direction. Okay. I do math.floor so that if the user accidentally
+passes in the float, that it becomes an integer number. And then I say here indirection.get. So I
+get the value from this port. And I'm now doing a modulo of four. Why? Because no matter what the user
+puts in as a random number, I always want it to output zero, one, two, or three. Now later on,
+if you're not getting that, just remove this modulo part here and you'll understand exactly what's
+happening. So now what we need to do is we need to say that we want to change the value of x and y
+depending on the direction. Okay. So zero is north, one is east, two is south, three is west. So I'm
+going to grab this code and I'm going to just paste it here. So I'll just run through it and we say
+if direction, this number is equal to zero, y gets one added to itself. Else if direction is equal to one,
+x gets one added to itself. And then here we go in reverse. We subtract one and we subtract one.
+That's really it in its simplest form. So I'm going to press ctrl s. Right. So basically, let's go over
+here. And as we can see, nothing's happening. Why? We need to set the output. So I'm going to go over
+here. I'm going to grab a little bit more code just to keep this tutorial a little bit on the shorter
+side. I'm going to go down here. And we're now going to say, as you can see, we've got these three
+parts up here out x position, y position, z position, and then we just say out x pos dot set. We pass the
+variable x, which has been modified here through out y position y, set y. So hopefully this is like
+self-explanatory so far. So now we just saw a number here change. So let's put this in zero,
+one, two, one, two. And as we can see, we're now getting changes here in output. Okay, so that's great.
+So now we want to generate some random numbers. So let's go over here and let's just grab the random
+two up. This generates a random number on the trigger. And as you can see, it's going bonkers
+here because it's generating a random number per frame. Okay, so let's get this. Let's just line
+it up here. We're going to put it down. Okay, and as you can see, this is flying off the scale.
+Why random is only generating numbers between zero and one. So I'm going to put it on integer and then
+I'm going to put it on say four. And now we can see these numbers here. So you have to imagine we're
+passing this in now into a circle.
+with x, y, and z. But look at those numbers, like this is minus one, and this is one. So this
+circle is like off a million miles away, we need a way to reset it. Okay, so I'm going to go over here,
+and I'm just going to grab this. And what you do is you can make a reset button. So I'm going to go
+here and I'm going to put it right at the top. And say const reset button is equal to op dot in trigger
+button reset. Save. If I now click on the op, we have an input port and a reset button. So now I want to
+call a reset function whenever this occurs. So copy paste again. Remember, just pause the video when you
+want to keep up. I just want to keep this video a bit short. It took too long the first time or two.
+Control S. So we have a function here called reset, and it resets x, y, and z to zero. So now,
+just like the indirection unchanged, I'm now going to say something different. Reset button dot on
+triggered equals reset. So whenever that button is pressed, we reset it. And let's just see how this is
+going to work. So we can see these values here. They're going up. If we click reset, it got back
+to zero. So now I can put the circle back in this original position. Okay. That's great because we
+want to reinitialize it every single time. So what's happening here? I mean, if I reset this now,
+we see this. Wow. Okay. This is something. So what's happening? So it's taking steps of one,
+right? X and Y. So this is zero, zero, zero. And this is like minus, minus, minus one, minus one,
+and so on. So it's just drawing randomly over those positions, but the random walker takes really tiny
+steps. Okay. But because we're not operating on the CPU and pixel space, we need to add a multiplier.
+So I'm going to go over here and I'm going to grab this, this line of code, and we're going to just make an
+input port here. I'm going to call it in multiplier and basically it's a float and we're going to give
+it a default value of 0.5. Okay. So now we need to update this. I'm going to say here times, sorry,
+we're now going to grab, um, we're now going to grab this multiplier. My bad. There we go. So we say here,
+a shorthand, mult is in multiplier.get. Okay. So now I get this variable. So it's getting it from that port,
+which is over here, and I'm just going to multiply all of these numbers here by that value.
+And then I press control S. Well, we already saw something different happening. So let's put on a
+really small number 0.1 and right click twice to reset. And we need to reset. Look. Ah, okay. So
+wouldn't it be handy if when I right click that mouse button, we reset the random walker, right click,
+right click. Great. So every time we do this now, it goes right back to the middle and this is looking more
+like a random walker. So I'm going to make the circle a little bit smaller. 0.01 reset.
+This is starting to look a little bit like it. So now we're going to go over here. I'm going to just
+make the material white for now. So it's easier to see. Okay. So now we have this other problem. Um,
+the random walker is now out of bounds. It's, uh, it's gone to, it's gone to some, uh, area offside the
+screen. So now we need to set up some boundaries. Okay. So boundary is like, we want to say if you go
+too far to the left, then you pop out to the right. And if you go too far up, you're going to pop out at
+the bottom. So it's always within this kind of square. So I'm going to make another input port.
+I'm going to call it const in boundary. And once again, it's just a float. Okay. So we have that here now,
+a boundary of one. So now we need to just need to just do like a simple, um, if else, if check like
+before. And once again, I'm going to copy paste the code because it's just really boring to just see me
+type this all out. I discovered. So I'm going to go here. I'll press enter and go down. So here,
+I'm going to just type in bounds. Okay. So here we say bounds is not defined. This is great. It threw an
+error. This is going to happen a lot. And we see this red dot pop up. What he's saying is bounds,
+the variable doesn't exist. And this is completely correct because I didn't declare it. So now I'm
+going to go and grab this line of code. I forgot to do this. And this is good to see because this can
+happen a lot when you're developing your ops. So now I've made a variable called bounds and it gets it
+from in boundary. So I'm going to do control S and watch what happens. We still have this red dot.
+And he says, error, an operator has crashed. Reload. So I'm going to just click in the patch,
+press control S and then say reload. Sometimes you just need to re-initialize an op. Okay. And now we
+see that the red dot is gone. Awesome. So this is already looking a lot closer to the random walker
+than a few minutes ago. So, so far, so good. As we can now see what's happening when it goes outside of
+the bounds of one, it comes back in again. So that's really, really cool. But it's going a bit
+too slow because my whole aim with this is just to be able to, um, make a generative piece and then save
+a screenshot because normally in cables, we're doing everything in real time and this we're doing in
+real time, but we're using it to create more of a picture. Um, because that was just a challenge and
+that was something I thought would be great to do. So how are we going to do this? Well, we've got a
+really great op called repeat and repeat does literally that, and I'm going to add it here.
+I'm going to say repeat. I'm just going to put it on, ah, wrong one. My bad.
+You need to get this blue one. Repeat triggers all ops below x times. So I'm going to add it.
+Okay. I'm going to just put it on one for now. And first of all, I want to kind of recreate that look
+from the random walker. So there's an interesting thing. I want to make the background white and the
+random walker black. So I'm going to go over here and I'm going to grab the clear color op and I'm
+going to just like put this on white and look, everything's gone. You know, I mean, I don't have
+it anymore. Well, we only just want to trigger this once. So we go here to trigger once. Okay.
+And the cool part of trigger once is it has a reset button and I'll show you why we get the mouse,
+right click button, click it in there, right click, right click. Now we go to the basic material and we
+make it black. So this is a great way to be able to set that clear color to something different.
+See that? Awesome. So let's put this back on white. So let's just get one step closer to the typical random
+walker. So now I'm going to put the multiplier in a really small number.
+Hi, and I'm back. So I made a little mistake then. So basically, um, I want to be able to
+change the scale of the circle quickly and easily. So I'm going to go to the circle,
+I'm going to put the radius in one and I'm going to go in between and I'm going to add a scale up.
+And then I'm going to put this and say 0.01 reset. There we go. Okay. So, so far, so good. This is
+looking okay. Um, but I want it to, uh, go faster. So this is why we added this repeat up and I'll click
+here and press F. And as you can see, there's not a lot happening, but if I now go here and I put this
+on a hundred, we kind of brute force this thing to render a hundred times per frame. And you can
+see that here with the activity, right? But look, now we've got something that is really close to the
+random walker. So now we just have to kind of like tweak it. So I'm going to go to the basic material
+and I'm going to put it on 0.05 and reset. And that's still a little bit too much for my liking.
+0.01. Now, something that was a bit weird that I discovered yesterday was like, and this is random
+in JavaScript, I think I'm going to just throw this number on 64. And then I kind of get this behavior
+that I wanted it to have, where it's just like walking around in a much more random manner. Now,
+depending on your computer and what it can handle, we could now put this on say a thousand. As we can
+see, it's going way, way faster now. So this is how we've created the basic random walker inside of
+cables like we've seen in processing. So if you're over here, you can click this and you could make the
+patch bigger now and you can click this icon here and then it'll save that as a screenshot. So you could
+just sit here and grab as many screenshots as you want. And I want you to experiment with the basic
+material, with the alpha, with the circle. You could go in here and you can like slightly change
+that color. And as you can see, that's starting to add something there as we go along. So in the second
+video that's coming up, I'm going to show you how to use other ops inside the cables to kind of animate
+this and to make something way more generative with the output and the result. Okay. Thanks for watching. If you've got any
+questions or comments, please feel free to leave them under the video below or to post them on the
+forums and I'll see you in the next video. Have a good one. Bye.

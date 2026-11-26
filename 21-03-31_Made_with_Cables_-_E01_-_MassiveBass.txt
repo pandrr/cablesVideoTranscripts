@@ -1,0 +1,254 @@
+https://www.youtube.com/watch?v=1fIRL-kfpOM
+Welcome to KBiz YouTube channel and today we want to start a new series of
+videos that we want to show where we not explain like ops or like patterns in
+KBiz but we want to show real-life projects or stuff that is used outside of
+KBiz so finished products for example or finished websites and microsites or art
+installations or whatever if you have any ideas or anything you wanna see in
+here just write us yeah so the first this is the first time and now today we
+want to show you a little microsite that we did at Undev especially Eduardo and
+Stefan did this and I only did some small performance fixing and yeah it
+launched on Wednesday this Wednesday the website and you can find the URL below and
+um yeah let's let's start talking about it so this is the site
+um maybe you guys can guide us through or tell us something about it yeah basically we created this
+one pager site for um massive music um they have like a new product that's called massive base for
+which they surveyed like 500 000 people um to then find out some archetypes and brand values um that then
+are being used to um to find out the sound that fits to your brand um to pitch this um um this product we
+created this is how we created this microsite and had a small experience uh to visually work with what
+they have in in sound so what you see here is like the loading screen it loads um
+and then you arrive at a selection where you can select your archetypes
+and yes of course is best enjoyed with headphones and music um
+yeah so right now you cannot yet but uh yeah please go to the site and experience the music there
+so we created these i will we created these figures that represent the archetypes and um the whole idea
+is like once you click on an archetype you then jump into um a custom environment for every archetype and on
+the lower left you can select like the brand values that then um play the sound that is connected to this
+combination
+that was fun
+yeah
+so i can go to another environment and it will be completely different
+yeah every environment has like different colors obviously different um effects and all the um three
+different distinct sounds that then interact with um with also the effects in the environment that you
+have they might be more exaggerated or not okay
+uh
+yeah so the the so what was the
+how was the project so the client came and said like we have those 12 archetypes please visualize them or
+yeah kind of like that we're working for kids creative agency and they came around and said like hey
+hey you guys have like basically two weeks to do something with this and the initial briefing i think
+eduardo can tell something about yeah the initial briefing was pretty much yeah we want
+they like the idea of having this running character in different environments
+where where stefan said each archetype would we would would be represented there and each environment would
+change differently according to the archetype um
+so so exactly so one of the challenges for me was yeah i guess pretty much different things but the first
+thing that i needed to figure out was okay how does this character look like because the care the the client briefed us
+um that he wanted for sure have a character that it looks like glass and we didn't have a glass shader in cables
+so so i had to kind of do this uh yeah by myself um and um exactly so so he briefed that and said okay we we have a couple of um how to say words to describe uh some attributes that we can have as an influence on how how to dictate how the environments look like
+so i don't i don't remember exactly which one is what but they gave us words like okay one is edgy and
+it's playing maybe with some cubes and the other one should look a bit more organic so we have more
+smooth and organic looking shapes and um the other one should be something that relates to nature
+uh so it was pretty much open for for us to to interpret that as how we thought it would be fitting to the
+the project and um and from a visual standpoint they had a completely different idea on
+what would be this environment in the terms of um colors and text not colors but textures
+they wanted to to play somehow somehow with textures um and i i kind of found this visual different direction
+along the way where i wanted to almost make a very minimalistic background where um where you have just
+a slightly tone difference between the floor and um i don't know a horizon and some element there's there
+which we proposed and they they actually really enjoyed it somehow um but yeah that that was the briefing
+like we have those 12 archetypes they would need to be somehow rendered in a glass glass look and we need
+to come up with uh at least how at least 12 i know what we said like how many environments we created in
+total i think was let me think uh quickly one two three i think like we created eight or nine different
+environments because within the time was was also part of the challenge like okay how can i find this middle
+point of having two weeks to model something and then animate and then create the logic in cables
+uh plus materials plus how can i generate environments that are not relying on me having to model something
+so i came up with the solution of um depending on the environment we are different solutions but mainly
+we are playing just with uh displacements and uh a rectangle where i put different textures in it and
+let's go into the patch and then we can also look look at this at this stuff i'm interested in the glass
+shader and you said like the timing was uh uh an issue or was a challenge yeah it was a challenge just
+because of the sheer amount of things that uh we had to create and and we weren't sure yet how how close
+would be something to what they wanted so one solution that uh i had which is great by having cable is that
+i could expose a lot of things on a sidebar for them to to tweak different looks and colors themselves yeah
+yeah yeah let's open the sidebar it is basically um what we did so we didn't have um like enough time
+to actually nail it and have like big feedback rounds so we took small steps and just export um variables
+on a sidebar and then um let the agency and the kids basically um play with it and they actually then
+send back screenshots and say like okay we like this please implement that
+yeah so what you see here this is the the sidebar it's like huge part of the project so
+that was really an important thing so this is off now we work often with undeft we create
+a new prototype like every day and and send this to the client and uh and then the client can
+try this out for example and like see difference in the patch and say like this skirt or this is the
+right direction or this has to be more soft or more harsh and then and then we do then we do the
+feedback rounds with with this input and the client can also adjust stuff on on their own and discuss it
+without uh without us uh being in the loop um and also without us doing i don't know deployments all the
+time and having it a bit more red and then checking on now this is still not there so um this saves a lot
+of time actually yeah so actually they sent us screenshots of the values or they're saying like
+yeah change the tint to 12 or something and then then we can make those adjustments uh together more or less
+yeah but we were lucky enough from the glass shader part that they were super happy right ahead with
+it and they changed slightly some things and uh but uh yeah so so yeah i want to show this like the
+glass shader is so cool to adjust so uh right now this is the icons part uh yeah so i divided the the
+the the glass shader in two themes kind of so reflection and refraction
+and um there are some things tom which takes more effect on the second stage of when you're running
+there uh i think ior and tint maybe can be more visualized maybe ior unless you have something
+behind the character it's hard to have it yeah as you can yeah as you can see not just changing every gets
+you uh every time gets you a beautiful uh result but um but yeah under those two themes of like okay how
+much reflection do i want and how this highlights on the glass looks like do i want it harsher do i want
+it more soft um do i want some dispersion and like a chromatic aberration uh dispersion do i want a tint as
+well because this also was a bit of a part of the challenge they they weren't sure in the beginning
+um i think when they briefed us they're like okay we want to bring the colors of the archetypes in the
+overview somehow so so i had to build options for example where where in the overview the characters
+are each one has a different color or an option where they would be transparent like you would expect
+to glass or no no tinting or anything but then you would put it background colors on the background
+somehow um but yeah again a lot of things were exposed that that was easy for us to really generate
+different looks until we were happy and proposed something that i was happy with and um yeah luckily
+they took it yeah also maybe interesting oh sorry all right so you're rendering it like the glass stuff
+in two passes like one for the front and one for the back side or yes in the post processing it's combined
+yeah exactly so is it in here can i see some textures no you can neutral archetypes yeah you can see some
+textures there
+uh good question now
+yeah so this is the diversion without any post processing so this the chromatic aberration is in in
+the post processing yeah so this is the base of so so pretty much what i needed to do was uh so we use
+something in cables that we call matcaps right it's one type of material that uh you can out of an image
+get some pretty cool looks so um there is a i think tom there is a matcap you can look at the matcap
+actually sorry you're you're looking at the render to texture inside the neutral archetypes you have also
+the matcap generator so pretty much uh besides what's being done on the post processing you have also like
+a bit of those effects being applied to the to the matcap but maybe just try to find a matcap yeah exactly so
+okay yeah so funny so this is the base of of the of the material so pretty much um
+if i removed all the the the blend modes effect like this would be just exactly like this uh texture
+there would be just character a black character uh with some with some white highlights pretty much
+and then i was using something which is uh called a blend mode not to add so all the black would be
+just removed and you would just see highlights so that was the first step for me to like okay how can
+i make something that has highlights and it's transparent pretty much and then in post processing
+i was doing things like okay now that i if i look through the character um i made a selection like a
+silhouette selection so i could affect only in the what's ever being uh view um how do you say how
+what's ever being viewed through the character so i could say okay uh whatever i have there behind the
+character can be blurred when he's on front um what else
+yeah and then different things like uh yeah like um again the chromatic aberration to have a little bit
+of um rgb shift on the edges and uh and then a little bit of tint as well because at some point they they
+they said okay maybe everything is a bit too too transparent so i said okay here we can have a slider
+that you can make the glass a bit darker as well and and so things like this
+yeah and um so so lucky wise we we were already since the beginning of the project with the glass things
+in a good direction like that was the first time that i did this um and uh it was pretty fun was
+really i really enjoyed and and for me i was a bit afraid that performance would be an issue somehow
+and uh and in the end uh yeah the glass shader stuff was running very fast even though i'm abusing a bit
+on the post-processing of how much effects i was uh using but yeah everything was uh very very fast somehow
+i don't know maybe it's my lack of knowledge i always had a feeling of like oh man to create a glass shader
+from scratch in using simply post-processing in cables if that would be an issue but um
+yeah it was really cool so i mean they created a video out of this just fine so yeah
+this may be also interesting like if you press uh in this version i think if you click on the um on the
+patch and then press h um you can basically hide all the ui elements which they then used for recording
+and i think you can navigate using your arrows uh arrow keys to go back and forward and then when
+you're in the overview you can use left and right arrows but but um to select and record with you yeah
+yeah exactly yeah because this is something that sometimes clients ask a lot like uh because it's
+possible to do that in cables that um yeah we can hide things around so they can record things for
+social media afterwards or um or or a video case or something about the project
+um yeah great and um
+maybe let's talk a bit about the and the different environments like so i guess you
+created uh methods so they can all work the same more or less right yeah i think the only one that
+it's not working in this uh in this method would be the nature one which i i mean was a bit hard to
+just say hey how can i use a texture and a and a rectangle that texture that displays a rectangle like
+i'm doing this one for example to create those little mountains and besides the i mean we also have
+some spheres flying but yeah let's see those textures right now but but yeah the nature one was the only one
+that i needed to model something and bring a model in because i needed a tree and i don't know rocks in
+the floor or something like this is this the one that it's being triggered uh yeah yeah that's the one
+organic and this is only this already the texture for the yeah floor i think there's i think it might
+have i don't know if this one has two images composes but uh mainly i was yeah mainly it's always
+something like this which is generating the the displacement on the floor cool so i'm pretty much using
+noises black and white colors to to say okay push this up and then push this down and and i was yeah
+using that as the main thing because it was easy to iterate and and to scale up and to have different
+looks already so i think this was a good decision in this one you can uh clearly see the path that's
+been generated right so you got the left and right with the displacement and in the middle it's just black
+yeah yeah yeah cool so and then the end it's just like basically a basic material and some color areas
+for the darker shades and then the vertex displacement or yeah a simple rectangle and um yeah and then just
+extrude those um vertices yeah pretty much that yeah oops shouldn't have clicked that um yeah great
+um yeah really cool um what else can we talk about what else what what was another challenge or like
+yeah i think for me was also like um using bones uh so using character doing some character animation
+which uh which also can be sometimes depending if i wanted to say hey i want to have 10 characters next
+to each other and um like this was something that i had to put some thought into okay what is the decision
+there on how to bring a bit of randomness to the movement and and how to have us because for me it's
+pretty important to have always cool seamless transitions which you can notice with the camera and things
+popping out of the floor and uh and the characters like spacing away and the camera rotating so but um
+i guess one of the problems for me in the big well not problem but just something i worried until i tried
+and saw that was okay was like okay how can i solve this because i cannot have like a different animations like
+10 i don't know how many we had how many archetypes we had stefan 12 12 yeah so i cannot have like 12
+different animations so uh of of a guy being in some sort of standing idle mode and then 10 different
+animations of running so so i was like okay how can i still bring some some variance and randomness to it and um
+uh and still not i don't know making performance intensive so um but yeah without getting technical like um
+yeah this is just using one so when you've seen the the overview if you go back like um a bit just to
+the overview so you see that they all uh they do the same movement but i just offset the timing of that
+standing somehow so this one would already bring a bit of randomness to it and some variance and uh
+uh so once this was was good and working i was quite happy with it and um
+another issue which you helped me tom was the fact that i needed to put them i needed 12 of them
+in a circle but having always this um view of i don't know how much we have there like six
+yeah so we only calculate the animations and render the animations of the archetypes that are visible on
+on the screen right so you helped me with this because otherwise even though you're seeing only
+seven at a time or six you had the other archetypes uh behind the camera pretty much still rendering
+and you helped me with a solution for that which was great um uh yeah that helps to to optimize
+performance because this also needed to run in mobile and of course when we do something in cables we
+want to be everywhere as as possible 60 fps or something so it doesn't get sluggish in the device
+or uh so yeah so this was also solved yeah this is a cool background background like is this a bend
+is this a bending this was another extra thing that i added to this one which is again is just a texture on
+a rectangle displacing but then i added a bend to go from a tubular view to a flat view to
+two different layouts yeah which which i i i think it worked quite cool as well yeah and this is a depth
+texture and yeah this is apparently also a color area right yeah so so this kind of uh i think the method
+that i chose to color everything was a bit was a bit was a bit i don't know it was a bit trial and
+error in the beginning i was using fog and different things to like tint but then in the end i was like
+okay if if i'm gonna do if if the environments will stay color wise simple so i'm just playing with offsets
+of the tones of the color i decided pretty much to to to use color areas to dictate where i wanted something
+to get darker and where i wanted something to fade away in in the nature one for example i had different
+objects so so i had to come up with a decision on how to color those as well and color areas were great
+for what i needed as well because i i needed to there was some sort of issue i think with my workflow that
+i couldn't just like say okay make something opaque right now like i had an issue somehow with with
+the workflow that i created that i couldn't just make something transparent and say okay go away
+so then i was using color areas to engulf objects in the background color pretty much you know when i
+needed to make them disappear so yeah so this helped as well to make all yeah i think it looks great i mean
+it has this foggy feeling but you have way more control than with the fog i think with the with the color areas
+yeah exactly so that for me was like more fine grain control on the on what i want to tint and where and
+how especially because i have directions and you have spherical areas that you can color something you
+can color something the z axis and so yeah this was great yeah cool and um something that we get a lot of
+questions from users is like how can i create like a ui or something so um stefan you want to talk about this
+a bit yeah also with the challenge of doing this in two weeks we kind of try to separate this um as much
+as possible so um eduardo could work on the 3d rendering part and i um took the challenge of creating this
+ui this is like um all of it is in html and also in cables um and some of the challenges where um of
+course they're all um all of the responsiveness of um this whole thing to be working on mobile
+um but as you see here for example um on the left side like we have static text right so um all the text
+that is on the next screen actually um changes by um by triggers or variables that are being set by
+eduardo's part of the rendering and then i'm setting css variables to exchange texts in uh the buttons for
+example um so this way um i was able to actually do a lot of this um yeah these buttons right um so these
+are always the same buttons but from the um from the 3d rendering part i get a state and then i know
+which text to put in for what archetype um also like what where it says caregiver now this is all um
+driven by um by css variables and by doing this actually um i was able to do most of this stuff um
+completely outside of cables like all the um all the testing and development um of the ui was done in
+visual studio code and then put into this massive text elements uh diff elements um if you edit the content
+or look into the content of one of those for example yeah um this actually contains down like a whole snippet of
+um of html that um we're then using and rendering okay and um if you look into the css so you were like you didn't want to
+patch the whole html structure so you would have like 100 diff elements you really just have like
+one container diff element and put like external i mean these are labeled somehow so these basically
+are just like small snippets that are then placed by css and um the contents in there like the actual
+texts and stuff like this um are then controlled by css variables from the patch
+this allowed um um um uh to work on the patch while i was working on the ui and then i just had to like
+drop it all in there and um that worked in a day or something like this right so not lots of integration
+work and also less ops um and another thing that was interesting is um that also the um if you go to the
+overview room again um um all of these names and like caregiver caring for example um small challenge
+but also really great these are also diffs so they are um rendered in 2d and being actual um text so we
+used um the browser rendering to have like smoother sharper fonts there but we wanted to attach them to the shins of
+these um these um characters and um yeah we basically created um this using the um what's it called
+transferred element transform element up and this way you can like pin the position of a 2d diff element
+overlaying to a 3d position and that worked really great this way yeah yeah before they were the text was
+rotating with um which would be possible as well right now but um before they were rotating with the characters
+and um yeah yeah great um awesome awesome project and uh really love the result
+you go uh do you want to show the particles maybe also you can play a bit just to show that you can
+configure it somehow this was also mainly a challenge like they wanted for the intro this idea of like some
+flocking behavior for particles and uh flocking behavior for particles and they wanted for you to push the
+particles with the mouse somehow or have the particles following the mouse and uh so this was also something
+that was a challenge to i guess do it and um and so also the same way we did with the glass shader we
+exposed some parameters for them so they could use find the right values that they would be happy with it
+but um yeah was was quite flexible maybe you can um yeah s yeah and then you go on particles
+so the the maybe show the more the behavior because there is no particle texture anymore but they could
+increase the size and uh they could set some randomness to the size of the particles they could
+change the the the the the colors they could randomize the colors as well somehow there's a tractor force for
+example and attractor size yeah so they could choose like i want to push the particles away no i want to
+suck the particles in with the mouse and and um so positive is pushing away
+yeah cool great um yeah i think that's the main the main things to say about this project right yeah
+yeah it was a fun two weeks thanks for the kids for this project that was really cool yeah no we had a lot
+of fun working on this and uh yeah it was a good challenge it was one of the good ones
+yeah right okay um so yeah if there are any questions let us know uh let us know how you like this and if we
+should go more into detail or what what parts of a real world project are interesting to you is it more the
+patching or is it more the i don't know the workflow the technical side whatever um let us know and yeah
+we will try to do this more often now and if you have any projects that you want to see and that that
+you want to have inside um just let us know um but we will continue this okay cool i think that's it then
+okay thank you bye thank you guys bye

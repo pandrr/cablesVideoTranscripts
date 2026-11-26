@@ -1,0 +1,102 @@
+https://www.youtube.com/watch?v=zWfwC-GH7qk
+hello this is alex from cables.gl i want to show you media recorder operator this thing is so easy
+to use i think this video is going to be super quick and actually what i'm going to do now is
+use it so i got my patch here i want to show it to my friends and i don't want to send them my
+patch i just want to send them a video so i'm going to hold down space rotate it around zoom
+out a bit let go of space and bam here is my video ready to go all right so what happened
+i used media recorder operator i didn't really mess too much around with the settings and then
+to record instead of using the default toggle here i just used a key press learn operator that was
+assigned to my spacebar so what did it do it started to record whatever is seen here
+in this renderer window inside the cables editor and this size is very important for the media recorder
+operator because if i change it that is how big my video is going to be so if you're going to be using
+it for some specific sizes uh don't forget that if you deselect everything and then click on the renderer
+you have this um a little pop pop-up bar at the bottom that will allow you to select the exact size so for
+example 512 x 512 and then it will resize the actual window and media recorder is going to use that dimension
+for the video so if you want to experiment recording like 4k or something like that or maybe
+okay maybe a little bit more realistic stuff maybe like 2k or maybe just a thousand by a thousand you can use this
+change scale of renderer setting that you'll find in your parameter command palette sorry command palette so
+uh the scale scale scale canvas will allow you to go into like percentages of the um
+renderer so if i do 0.5 and then press ok you'll see that the window got smaller but also the performance
+text is smaller and if i click and then hold down shift and use this little um arrow on the on the side
+here to scale my canvas without resizing it um you'll see that although it looks small it's actually
+half the size and the real resolution of the render is 1500 by whatever 900 so media recorder will use that
+and create like a large video but what are the drawbacks of using media recorder well it's in your browser so
+it highly depends on your um how much of a beast your computer is and uh you know you have to be kind of
+realistic with with uh keeping in mind you know how heavy your patch is on your cpu and gpu and then um
+you know that will affect how well uh your media recorder operator will record a video at the settings that you give it so
+what settings do we have here actually we have of course if i disable this key press learn we'll have this
+toggle for the recording so whenever i toggle it on it will start recording and then when i toggle toggle
+it off it'll stop recording and then my video will automatically download from my browser
+then we have this encoding section which is pretty much the most important section of the operator
+and here you'll select the mime type or kind of the encapsulating um format so uh a web m in in my
+browser's uh instance um and then of course the codec for the recording um that you'll be doing and um
+this is going to be uh hopefully close to what you have but if not you know don't be surprised it's uh
+highly dependent on your operating system and your browser so if i click on this drop down you'll see a
+bunch of um a bunch of crazy words and numbers and and all these weird abbreviations but what are all these
+things these are basically the encapsulating formats so web m and also i have uh the matroska um format here
+and then there's different settings for uh each of those so the codec will be vp9 and then there's also vp9
+opus and then vp9 pcm and if i'm not mistaken opus and pcm are actually audio codecs as well
+and why do we have audio codecs and media recorder operator yes there is an audio input which is pretty awesome
+so that means if you want to do some um like record some videos of uh
+video synchronized to audio or maybe even like a vj session where you're using media to manipulate your
+visuals while audio is going through cables um you can easily uh quickly create a video with
+this audio input um port on the media recorder so um i'm not gonna show that because uh it's it's pretty
+i mean it works and it's quite self-explanatory um once you press record it'll record it so
+um definitely have a play around with that comment below if you if you um uh want to share some videos
+and and uh things you've tried with it but anyway um what else can we do um yeah then we have the megabits
+which is kind of the the bit rate of your video so here i had it set to five so that's uh kind of a
+reason why it was a bit smudgy and and funky looking when i uh opened the video you can go into pretty
+extreme numbers like 20 30 megabits but that again is highly dependent on your system um but you can get
+pretty good quality out of this um but again uh try it out before you totally commit i think it depends
+highly on your system and the codex that you've selected then you have the frame rates per second
+which i've set to 60 and of course if you want some smooth video uh definitely make sure
+you set it to something like 60 um unless you're doing some uh frame rate limiting in your project
+would and then you know adjust this accordingly it's good to kind of keep everything synchronized and
+and uh stable you know so if if i'm going to be recording here with frame rates uh set to 60 and maybe my
+main loop is uh limited with this uh i've selected the main loop here and i've used and i would for
+example be using the fps limit to like 15 for whatever reason then obviously it doesn't make sense to
+create a video at 60 frames a second but um you know for good measure actually i recommend setting this
+to 60 as well so you kind of uh try to lock as many uh unknowns in your patch as you can so um my top
+frame rate for my project is 60 and then my frame rate for my video is also 60 so i would expect my video
+to look as best as it can um to show my project um what else do we have here i'm just gonna uh ramble
+on and look at some other projects i have open here um here i think i was most mostly showing that
+you know i have um animation like uh procedural animation going on and you know media recorder
+really doesn't care what's happening as long as it's happening inside your renderer here but one thing
+to keep in mind is for example this overlay here is in css so for example if we have a website that
+we're working on in cables where it's html and css over some webgl content and we expect to use media
+recorder to record that stuff uh you won't see those overlays in your video because the video is strictly
+focused on your um gl canvas and that's what will be recorded so keep that in mind if you want to do
+some uh animation with text or you're uh doing some uh interactive elements like they need to be in webgl
+because that's the way uh media recorder is set up to work at the moment but you know this is a fairly
+new operator that came out uh just like a month ago or something like that so uh definitely leave some
+feedback about how you're using it and what sort of things you've run into with it because we'd love to hear
+some feedback on it and uh yeah um what else uh yeah so what can you do with these videos for example sure
+you can you can send them to your friends or post them online but uh you can also just put them back
+into cables right so there's really um really kind of cool effects that you can do with generated videos
+that then you bring back into cables and maybe uh you just want to show some preview videos of a patch
+that you know your user could open through your cables project so for example if you have a
+portfolio website or something like that you can quickly go through your projects record little videos
+make sure they look great for the resolution you need and then put them into kind of an overarching
+project where you're browsing the different artworks but you're using very light very small videos to
+preview um what your user would expect to see when they click on it and then open you know an interactive
+version of your project um what else yeah i this is an example that i wanted to kind of just test for
+myself is i have a relatively um precise and kind of uh you know what's it called uh um it's it's a project
+or an effect that really needs frame rate precision to function so you know the uh media recorder is it
+going to mess this up is it is it going to kind of break the timing inside my patch and uh ruin this
+kind of feedback effect which is highly dependent on um everything being stable and and running well
+and uh i don't think so let's try it actually we'll we'll try it live so we'll have a media recorder
+here i just placed it down in my project i'll select maybe vp9 uh i'll change this to 60
+what do i have yeah um 1024 it's actually scaled here so we'll see if this works
+and then i'll press record wait a little bit and then stop recording and then let's look at our video
+yeah it looks looks fine so we'll actually play it and then i'm gonna look at my codec information
+and pause it yeah so you see it's 1024 by 1024 and in our editor we've actually scaled our
+render it to 0.5 so it's it's uh visually smaller than what it actually is and media recorder is
+looking strictly at this resolution that we have here um yeah i hope that makes sense but you see
+that it doesn't really affect the the effects that you have in your um super precise feedback for
+example uh effect here that's nice um oh yeah and then here i just have some random cluster doing some
+uh animations and i wanted to see will media recorder record this so media recorder
+will set this to vp9 maybe just change this to 60 and then press record
+and then stop recording
+and yeah working fine all right that's it uh i think i've rambled on enough i don't know if anyone's
+still watching but definitely try this operator it's super easy to use post some stuff in our discord um
+yeah share the stuff bye

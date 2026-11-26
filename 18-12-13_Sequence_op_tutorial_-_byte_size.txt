@@ -1,0 +1,19 @@
+https://www.youtube.com/watch?v=1PtJG-Plz4Y
+Hi there, and welcome to another video on the Bytesize channel. Today I'll be
+giving you an introduction to the sequence op. I'd like you to pause the
+video and just make what you see here. Great, okay let's get started. If I click
+inside of the patch and press F we see flow with the direction of what's
+happening in the patch. So if I'm gonna copy this here and I'm gonna make this
+one green and I'm gonna plug it in here. Where did the red rectangle go? Well
+they're both exactly in the same position and what's happening is in one
+frame and we have 60 frames per second first the red rectangle is rendered and
+then exactly the same position the green one is rendered. So if we would want to
+see the red one we could grab when it happens which is basically after the
+green one and now it's red. So what happens is outlet zero triggers first and we
+carry on like this until we get to the end. So let me just plug this back here. If I
+use transform I can move this to the left. If I use transform here I can move this to
+the right. You know what let's just grab one more shape. Whoa got a little bit mixed up
+there and let's make this one blue and plug it into three and move it up. So red renders first then green then blue and that's what we see here. Red, green, blue. If we would want the green to render before the blue we would just grab this and we put it somewhere afterwards.
+Let me move this down. So as you can see this is the best way I could come up with to show you what sequence is doing. You determine the draw and render order and even more the order of execution of everything inside of the patch. You could have one outlet here connected to a hundred of ops and they would all do their thing. And if you would then go to the next outlet and have another hundred ops, they would then all do their thing.
+This is such an essential ops to impose order inside of your patches and to know when things happen. So this is my basic explanation of the sweet sequence op. I hope this video has been informative, educational. If you have any questions or comments, please feel free to leave them in the video below. Thanks for your time. Bye.
+Bye.

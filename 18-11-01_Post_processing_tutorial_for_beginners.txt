@@ -1,0 +1,65 @@
+https://www.youtube.com/watch?v=x2jKZgmFVq4
+Hi there and welcome to another video of Made with Cables. My name's Mark, my handle on the forums is
+Andro and today I'll be giving you a brief introduction on how to do image post-processing
+inside of cables. Okay let's get started. First off we're going to start by making a main loop.
+We're going to connect this to an orbit controls so later on we can rotate the scene.
+We're going to plug this into a sequence and now I'm going to get a matcap material new this is
+material to add to a shape but I'm going to get a random cluster op which will allow me to generate
+many instances of a shape and then I'm going to make a sphere and now I want to apply a texture to
+the matcap material so I make a texture op I click here on file browse go to the library and I want to
+find something nice and shiny
+grab this one okay now I can look around because of the orbit controls so now I have something on the
+screen we need to turn this into a texture now there's a very easy way to do this we go here
+and we click in between and then we type in render to texture op the image has now disappeared because
+we've rendered it to a texture to see this it's really simple we make a full screen rectangle op render to
+texture has a texture out and a depth texture out we're only going to use this one today so we're
+going to get the out and plug it to the input of full screen rectangle if I make this bigger you can see
+that there's a few jagged edges it's not so crisp this is because of the texture sampling so we click
+the render to texture op go down here to anti-aliasing and put it on times eight and then we get a sharp
+crisp image again so let's just explain a little bit what's happening here if I press F we see the signal flow
+so what happens is render to texture looks at what's underneath it sees the material sees the random
+cluster and it sees the sphere this information then comes back here and is then sent out a lot
+of people expect it to work the other way around but that's not how it happens so starts here flows down
+the processed result comes back out there so now I want to do some basic post processing so you're going to use
+two ops for this the first one is image compose this allows you to compose an image into what we're looking
+at on the screen and underneath this we'll get the draw image up now we're going to recreate this
+disconnect get the output and we plug it into the image input of draw image we get the output from image compose
+and now we have the original image again this is our basic pipeline to do basic post processing so for
+example if I go down here and I type in flip which is a GL texture effect just to show how this is working
+like I said before hit signal flow image compose looks at draw image calculates flip brings it back here
+sends it through to that so I click on flip and this will allow me to flip the image on its x or y axis I
+can delete this I can replace it with blur and if I now click blur I can lower the amount these things can be
+stacked though so I could now go underneath blur and get the flip effect again so in this way we can just
+stack post processing ops easily and simply but I want to show you today how to composite two layers
+together so I'm going to grab an op called edge detection as you can see speaks for itself edges as shown
+we have an amount so this is the basic edge detection and what I want to do is I want to put this back into the original image so that my spheres have like a glowing white outline to them so if I go here now and press ctrl c c ctrl v I'll make a copy and connect to trigger and I'm now going to get the original image
+and put this one and just to show you what's happening here I'll disconnect this one reconnect
+this one now I've lost the edge detection so if I want to compose these two together it's really simple
+I just make another draw image up and I now get the output from the edge detection and I plug it in here
+but now we've lost the screen that we originally had with the spheres now I'll explain why
+almost all draw image and post FX ops have here a blend mode and an amount so remember the top to bottom
+order so this is contributing an amount of one if I turn this to 0.5 and lower we start to see the original image
+come back now the way this is added to this is determined by blend mode this is something you can google
+they're just photoshop blend mode basically it's far too extensive for me to cover in this video
+I'm interested right now in adding the white edge so I click add and as you can now see I have a white glowing edge around my spheres
+if I pull amount down it's gone add it back so now let's say that I would want to change the color of the edge detection
+I can go here I can pull down I can grab color select it and an interesting thing happens the whole screen goes white
+why is this well this has to do with the blend mode and the amount once again so what's happening is color is
+the color is doing normal so the whole screen becomes a color so what I'm going to do is I'm going to put this on multiply
+sorry and now what happens is only the edges are multiplied with this color just to show you what's happening here
+I can disconnect this and I can put it there so now I can pick a different color
+so let's put it back the way it was
+now let's say I want this glow to be a little bit warmer and softer I could grab a blur
+10 is way too much and I'm going to turn it down to 1 and as you can see we now get this warm glowing look to everything
+if I put this on 0 it becomes hard put it on 1 we get a kind of like very gentle subtle bloom effect
+so something that's really interesting in cables it's a new edition is the texture preview pipeline
+so I'm going to click here and as you can now see I can see different stages of the rendering pass
+so if I click this it jumps to this render to texture object and shows me this is what is coming out there
+if I click this this shows me now the edge detection pipeline if I click this this shows me the image compose
+pipeline this is a really handy way to be able to look at things without having to disconnect and
+connect things like you saw me doing but I just wanted to show you how things get connected basically
+so one last thing is this is just again another image composed pipeline so I could go here now and I could apply
+something to everything so let's get chromatic aberration this simulates a lens shift by shifting the RGB channels I'll just turn it up a lot so you can see what's happening
+so let me put this on 10 it's really exaggerated I'm going to put it on smooth and do this just add it a little bit and now I can add lens distort which kind of shows what's going on it's really exaggerated but I want to make clear what we're doing here so now I've got a scene which looks a little bit more post-processed I could now go here and add for example a vignette 2 effect which makes it look like an old image
+which makes it look like an old image so if I make the radius less you can see kind of fades out fades in and I could continue to add things to the end of this channel or I could add new image compose channels to composite again into a new image so those are the basics of doing post-processing inside the cables I hope this video has been helpful to you if you have any questions please feel free to leave them on the forums or to post them in the comments below
+thanks for your time and happy patching

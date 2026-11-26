@@ -1,0 +1,73 @@
+https://www.youtube.com/watch?v=iEeytqLJkb8
+Hi there! Welcome to another Copycat with Cables. My name is Mark, my handle on the forums is
+Andro, and today I'm going to be recreating a piece that I've seen on a webpage from Monochrome
+and Minimal. Well, I'm not going to be recreating it exactly, but it's heavily inspired by. So this
+is a really great webpage, which I would recommend checking out. I've been kind of inspired by this
+one so I'm going to make a variation of it today. As you can see, some really nice stuff. Very simple
+tessellating patterns. It's basically kind of very similar, if you look at this one, to the C64
+GoTo10 Classic, which is just basically this one line of code which picks a line which either points
+like this or like this, and then by randomly putting them together, you get this kind of like magic maze
+generator. So I'm going to go around, I'm going to recreate something like this today in cables. So
+without further ado, let's get started. So I'm going to press escape. I'm going to put in a
+main loop. This I'm going to plug into a orbit controls so I can control the viewport with the
+mouse. And then I'm going to plug this into a transform view. More on that later. A global scale, because that's just something we normally always need. And then I'm going to plug this into a sequence up. I'm going to want to render everything to a texture. So I put in render to texture. I'm going to make a full screen rectangle. So I have a render context. Put that in.
+that in. And just to get the basics going. I'm going to grab a transform.
+up. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material.
+I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to go to
+render context. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to get a matcap material. And then I'm going to go to files. And just to show you how you do it by yourself. I already have it here. You could click here. Upload file. I've made a very simple object.
+It's inside a blender. I'm just going to load it now. It's going to get reloaded. So when you want to use this, you can download it from the file or just upload your own model with this template. So we're interested in the JSON file, not the OBJ. This is the converted model, which cables understands. So we just pull that in. I'm going to pull this down. And there we have a shape on the screen. I want to use a texture which illuminates it better. So I'll go here. And it expects
+some matcap material. So we do that by grabbing the texture up. And we go to file. Our built in library of cables. And we've got a huge selection of matcap materials here at the bottom.
+I'm looking for skeleton. It's a nice warm one. And as you can see, this is just basically a cube where this corner is just pulled down to there. This is a really simple shape, really simple rule. So now we've got the basics in place. So this isn't too small for you all to see. We now need to think, how do we recreate what we saw there? So basically, we need a grid of shapes.
+So we've got a really cool op for this, it's called repeat 2d triggers all ops underneath number x, number y times. So I'm going to plug that in. I'm going to put this on 10 by 10. And I'm going to plug x into transform position x, y into transform position z. And as you can see, it all kind of like flies out right now.
+So I'm going to go to transform view, I'm going to use position z to move it back. And I'm going to rotate on x to say, 90 degrees. Now the center of this repeat 2d is there, basically. So if you click repeat 2d and click center, it looks like the maximum bounds and centers the array of shapes, basically, it's going to click transform view, I'm just going to move it back.
+There we go. So this is a nice thing to start with. So basically, it's really simple. This shape can be rotated in four ways: zero, 90, 180, or 270 degrees. So we need to come up with a way to rotate each of these shapes by a random, by one of those four random numbers, right? So first of all, we need to make a list of numbers. So I'm going to go to
+pass array. And then I'm going to click edit. And as you can see, we make a new index in the array by using the comma. So I'm going to go 0.0, 90, 180,
+First of all, we need to make a list of numbers. I'm going to go to "Parse Array" and then I'm going to click "Edit" and as you can see we make a new index in the array by using a comma.
+So I'm going to go "0.0,90,180,270" and I'm going to click "Save". A very important thing here is click "Numbers" because right now they're a string and later on I want to do some stuff with it.
+So if you want them just to be treated as numbers, it's important to select this.
+So I now have this "Parse Array" up. Let me just make a little bit more space on the screen.
+And I'm going to plug this into "ArrayGetValue".
+So this allows me to get a value out of the array.
+So if I click "Parse Array" and click this little magnifying glass, you can see the contents of the array: 0, 90, 180,270.
+Okay, so I'm going to plug "ArrayGetValue" into "RotateY" and just to show you what's going to happen here. So if I put it on one, we look up the index of one.
+If I put this on two. So as you can see, we're making the whole thing rotate here. So we're closer to where we need to be right now. So this works. That's great.
+So we're going to have a little trick here. We're looking this up with like a value and number. So I'm going to plug in a floor, which makes the number integral, which means it's like not a floating point number with decimal values.
+So I'm going to plug in the index output from repeat2d. And what this does is it outputs a number for each occurrence here. So as you can see, we rotate, rotate, rotate, rotate, and then it's just stuck because there's nothing more.
+So first cool trick we could do is a modulo in between. So a modulo returns the remainder. And if I'm going to put this on three, well, we've got this pretty cool shape here.
+One, two, three. We could ping pong it. This is just to show you that we can already get some really cool results of just like a very simple rule here.
+So just wanted to show that for a moment. So we're going to get rid of modulo. So we want to look up a random number. So for this, the random numbers op is our friend.
+So I'm going to click here and I type in random numbers. So some people that aren't familiar with arrays, don't worry about it.
+They'll become more familiar with time. We want to look up one of the values from this array. So there's four values in here.
+0, 90, 180, 270. So this is 0. This is 1. This is 2. And this is 3. Something that confuses beginners is this array has a length of 4. There's 4 values.
+So if we look at parse array, we can see we've got a length here. So I'm going to plug this into random numbers max.
+And now I'm going to make sure that the minimum is 0. So the problem we've got is we don't have a fourth value in our array. We have 0, 1, 2, 3. So we can easily fix this
+by just go in here. And we say subtract. We just want to subtract 1. And now our maximum number is 3. And our minimum number is 0. So, wow, we've already come pretty close to making something based upon what we saw.
+So what about if we want to get a different variation on this? Well, we just go to seed, which is here. I'm just going to pull it out so it's easy to see.
+Grab a value up, and as you can see, it's called a random seed. And now by clicking and dragging here, I can get all these variations on this piece.
+So this is pretty cool. In a very short amount of time, we've got like a little generative piece going on here. So this is pretty cool.
+We've got the basics like nailed. But this is cables, and I like doing stuff in real time with cables. So this is something I'd like to do.
+I'd like this to be able to morph between, say, two different arrays. So we have a basic array here. So how about I do this?
+I pull out the array and I type in shuffle array. Now shuffle array expects an array to come in. And if I now click this, I can see that the contents
+of shuffle array are shuffled, as its name says. If I click execute, we get a different shuffle there. So this is great.
+But how do we like mix between the two? Well, that's really simple. We have the array interplay up and this interplays between two arrays.
+So I'm going to grab this up. So I'm going to get my original array and plug it into array one. I'm going to get my shuffled array.
+I'm going to plug it into array two. And this expects a trigger. So I'm going to just go to render to texture. I'm going to plug that in. And here we're going to have like a shuffled array and a normal array.
+Okay. So I'm now going to the array get value. I'm going to disconnect that. I'm going to get this new array here and I'm going to plug it in there. Now if I click array
+into play and move this number, we can morph from one array to another, which I just think is all kinds of awesome, basically. So this is like a really, really simple trick.
+So while we're at this, let's just do something very quickly. I'm going to make a sidebar, which is to build custom controls. I'm going to add a slider and I'm going to get rid of this random seed and I'm going to plug this in there and plug it into random seed.
+And that's just so I can now just quickly do this in the window. Okay. Awesome. So we've already come like really close to just recreating this piece and we could now create any set of rules.
+We could go into parse array and add more different rotations here and it'd all be dynamic and fit because we've used subtract random numbers with max. So this will always adapt to whatever we're going to put in here.
+We can replace the 3d model with any one of our own. We could use different materials. So there's one last thing I want to do because I kind of like was building all this to animate it.
+So I'm going to make a timer 2 and the timer 2. I'm going to plug into a modulo because I want it to kind of loop and I'm just going to leave that on 2. That's okay.
+But I don't, I don't want, sorry, I don't want this with the floating point numbers. I want them whole. So I'm going to plug this into the floor and the floor.
+I'm now going to plug into a average interpolation op. And as you can see, we've got a number that swaps between zero and one, zero and one.
+And I'm going to put the divisor on like 64, which means it's going to become a lot smoother. You know what? I'll just put that back for now.
+So you can just see what's happening. So this expects a trigger. So I'm going to go to render to texture. I'm going to plug that in.
+And this array interplay, I want values between zero and one, right? So I'm going to get this. I'm going to plug it into interplay.
+And as you can see, it's going really fast now. So we've just got to tweak this. So it's more what we want.
+So I'm going to put the time on zero point one, first of all, and it's going to take a while to hit like a whole number. Let's give it a moment.
+There we go. And I now want it to go slower. So I'm going to put this on say 64. So let's see what's going to happen here. So it's going to hit one and then boom.
+There we go. We have a piece which morphs from one state to another. We can also now use slider to generate different random seeds.
+So this is my introduction to recreating the pieces that I saw from monochrome and minimal. Please check out their work. It's really cool stuff.
+I hope you found this video inspiring, educational, and you've learned some cool new tricks along the way. The link to the patch will be underneath the video.
+Thanks for your time. Have a good day. Bye.

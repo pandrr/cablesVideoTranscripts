@@ -1,0 +1,51 @@
+https://www.youtube.com/watch?v=cn_PcwI7vO0
+hello this is Alex from cables.gl I'd like to show you a really tiny easy to
+use animation operator called the LFO and the LFO sounds a bit scientific in
+the name low frequency oscillation for animations so this low frequency
+oscillator is something you might hear about or see and maybe like lab equipment
+or synthesizers and things like that and they're basically slow moving waves of
+values that will allow you to hook them up to other parameters and kind of
+manipulate other stuff with it and in cables is pretty much no different so the
+name should kind of be familiar to you if you're from that field and the way it
+works is pretty much the same okay so if we look at this example scene and focus
+on one of these LFOs here we'll see that it has a time input so if I unhook this
+then that particular LFO is not doing anything with value output and if I unhook
+this one it's also not doing anything and this rotation will just get rid of for
+now because it's not an LFO and might be confusing okay so once we hook up a timer
+to these LFOs we get something happening and that means the speed of the timer is
+also going to be affecting the speed of the LFO so that's already kind of handy
+right we have really fine control over this animation of the values so if we mouse
+over here in the parameter bar we'll see that this sine wave is animating and the
+amplitude sets the kind of min and max of the value output so it's going from 0.71 to
+negative 0.71 and if we change it to something bigger our sphere starts to fly
+off the screen but you know personally I usually don't get too deep with this
+amplitude parameter because we have another operator called map range and if you're not
+familiar with that one definitely check out the tutorial I'll link it below and I
+think that one kind of lets you adjust things a lot finer but anyway okay so what
+do we what else do we have we have this thing called phase and the phase basically
+means from what value or from what point in this wave will the oscillation start
+so what I mean by that is for example maybe we can we can do this visually or
+or actually I have a graph texture operator will get a value from one of these LFOs and we'll
+see it on screen as a graph so let's see if this will work and then we'll hook up this one and then I think it's just tiny okay so here is a graph that's easy for us to see and then I'll try to restart this one and then I think it's just tiny okay so here is a graph that's easy for us to see
+and then I'll try to restart this one and then I'll try to restart by I have a mouse button hooked up to the timer so whenever I click it it will restart the timer and I'll try to show you what this phase parameter does so if I click on my canvas you'll see that the
+parameter does so if I click on my canvas you'll see that the the sine wave
+starts from the bottom right and then it goes up and then if I change this phase
+to 0.5 and I click it now it's kind of starting from the middle right so when I
+click you'll see that it it jumps from the middle and then if I do one we're
+going from the top now so what you can do is use this phase which you know the
+best range to use here is 0 to 1 and it will kind of offset the the beginning of
+this shape that you've selected so if I select triangle now we're seeing a
+triangle and if I restart my timer we're going from the top and then if I do my
+phase at 0.5 again we'll go from the middle and then from 0 we'll go from the
+bottom so you can use this phase to kind of offset the animation of your LFO which is
+something I did here with this funny sphere bouncing around because I have my
+phase set to 0.5 on the x-axis and on the y-axis I don't have a phase set and what
+happens when I'm changing the x and y position of the sphere with this offset I get this kind of circular movement because look if I set this phase to 0 now we're just going from corners to the
+I get this kind of circular movement because look if I set this phase to zero now we're just going from corner to corner constantly right so I guess it's a little bit confusing but I think if you if you start to understand like the basics of the LFO you should get some ideas of how can I manipulate the animation or the the
+different values that are coming out of it you know it just LFO by itself is really relatively simple but then when you start combining them with other LFOs you can get really kind of complex shapes or complex value animations from it and let's try this again with the graph so I'll disable this sphere in the background we're just going to look at this
+triangle LFO okay so we can imagine this animation from we'll make it one from one to negative one could be useful right for maybe moving something or maybe we'll change a color or a hue of something back and forth or for example if we want to go from zero to one we can use the ramp and we can maybe change the hue that way so we'll animate from zero to one
+but what if we have a sign here and then we'll change the amplitude with another LFO and I'll animate this one as well timer
+so right now right now and if I start to offset them we'll start getting an interesting shape and then I'll make this one a bit faster so maybe the effect is even clearer so you see we have this repetitive animation but because we're starting to stack our LFOs we can start to get kind of interesting repetition in our pattern and of
+course you can change the shape of course you can change the shape and then maybe even modulate the phase with an LFO so we'll plug in an LFO to the phase and then time this
+and you start to get into not exactly random like completely not random shapes here but you'll start to get interesting patterns that you can offset and they will kind of change over time and I think that's about it and yeah basically I think stacking LFOs is completely un-on-on-one
+it's not common but I think it's it should be because you can get really funky shapes with it all right that's it bye

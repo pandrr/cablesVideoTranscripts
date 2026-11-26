@@ -1,0 +1,233 @@
+https://www.youtube.com/watch?v=vwxtACYwij0
+Hello everyone and welcome to the Monthly Cables Meetup this time in November in 2023 and for this week or for this month basically we got Ilya from Digital Panda to show us how they made their amazing experience game quiz thingy
+which is called haunted by nostalgia and use cables on the way and then later on we will show you what we did with this month release of cables we got a few new features to show we will run down to the blog post as we used to and yeah all of this as you might see if you're watching on YouTube will be recorded
+and put up as a video on demand on YouTube later on and yeah so let's see how this works
+Ilya is around and he said he's open to questions anytime basically so feel free to ask questions in the Meetup channel I will relay them or
+also kind of I don't know put your hands up or just shout in between we will see how this works
+Ilya if something's too annoying to you just like also feel free to correct people and let you talk I'm really excited to have you here thanks for doing this
+and also really interested in how you integrated cables with all the front end technologies and see how how state is managed
+in your game but now stage is yours go for it thank you okay thank you so much so as mentioned my name is Ilya I'm the founder of the digital panda I've been using cables for about a year now just happened to discover it and have started integrating it into most of the web projects that we do that involve 3d and kind of some more sophisticated experiences
+uh even for just webgl in general um and just a quick quick background we are a creative agency based in Vancouver we work with a large number of clients um large and small um all of this entire website is done using webflow mixed with cables
+uh so these pandas uh so these pandas that you see uh over here are in cables and then scrolling uh with the site so with that in mind I'll just close that um and today we're talking about uh our haunted house experience
+so for those of you that have not seen it yet um we built this in September uh for a kind of Halloween experience we really wanted to um the goal of the project was to create something quickly um and test ourselves from a both design and implementation perspective
+how fast can we turn around a whole new concept that's seasonal uh and continue to develop these over the course of a year um so our first experience is uh called haunted by nostalgia
+haunted by nostalgia and the idea was to create a game so we originally came up uh with some mood boards uh about um the concept so you know multi-level kind of diorama style game um what would it be you know first we had an escape
+escape room concept with very sophisticated um mechanics uh we scrapped the mechanics uh to make it a very simple kind of puzzle game where you just or quiz sorry puzzle where you identify movie posters based on uh scenes from horror movies
+uh and so uh so we created this as a concept uh we quickly did this i think as a mock-up in uh mid journey and then kind of
+modified it modified it a bit so we modified it a bit so we had the idea of three levels uh in a house um and then we started creating uh concepts within figma as well
+where we actually identified what movies we would feature and so uh our lead 3d modeler and animator who is actually on this call
+um and listening uh created uh created all of these items uh for the set and all of the props that were put within the game
+so to give you guys just a quick rundown uh of the experience so when you start the experience uh we have this little um panned over here
+saying whoa this looks like a creepy house maybe we should go in uh there is sound uh design implemented throughout the experience
+uh the idea and uh i should just make this smaller so that you guys see it a little bit bigger uh the idea is
+to create a very creepy uh sound so um i just made it quiet but you probably won't be able to hear it
+anyway because of volume suppression or whatever background noise suppression uh one thing that i wanted
+to note is that uh the audio actually pans left and right depending on your mouse position um there are a
+couple of things that we implemented that uh made it feel a little bit more creepy such as the camera
+actually moving around left and right um it just moves on a sine and cosine curve um we've created a cursor that
+closes by itself when you're not moving it uh and in general this cursor is a lamp that you just kind of move
+around and and highlights the dark pieces so what was the final point of the game once you click on any of
+these items you have to kind of guess what movie they're from if you know your halloween scary or scary movies um you'll be able to do this pretty quickly
+and if you get all of them right um then you will be delighted with a 3d rendered uh little animation uh that
+murillo put together and if you get them wrong you will just be kicked out let's see get a wrong one cut
+and so there's two paths um that we created and so one of the things that we'll cover today is um
+how we thought about state and how we thought about paths throughout this it's it's really very simple
+um and using uh javascript for that which which might not work here uh but works in the actual final game
+which i'll just quickly show you guys here
+actually skip that all right so now i would like to show you uh the cables implementation
+so this is the entire uh canvas that we've done so we have it broken up into multiple sections
+we have we are using intersects a lot uh for the items so all of the items that you saw within this game
+are are connected to an intersect and so i will just quickly show you what how that looks like
+so each one of these when you hover over uh you should be able to uh identify
+and change the color of the cursor and so what we're doing is we're looking for uh trying to hit the
+intersect and because intersects are in 3d space uh we've decided to um filter them so basically have an if
+statement uh to make sure that they are only the ones that are uh on the level that you're at are shown
+or or working so right now we are on level one if we go up to level two then we'll see only these ones
+and then you can see just based on my transform when i click on transform where their positions are
+so in that way whenever i highlight over an item i'm able to see the cursor change to purple signifying
+that there is something underneath um there's also some variables that are at work here and i'll just
+move over to that uh very quickly um so the current view i just wanted to identify is are the level the
+different levels so we have current view one current view two current view three this plays into quite
+a few uh different things so uh you may notice on the uh lamp we have go upstairs so depending on if
+you're on level two or level three so if you're here now you're going downstairs um and then this is
+down stairs when you're on this floor so just kind of created a i created a toggle between strings depending
+on um what you're on so uh the other thing that i wanted to focus on uh which is very important for
+for us was uh how to set up the ui in the game itself uh so you'll notice that we have a bunch of different
+things such as um the narrator at the bottom as well as the game ui so every time as soon as you make
+your first interaction with the game uh it will show you how many lives you have left
+uh and what we did there is we identified i'll just scroll down here um so we identified uh that uh if you're
+um using css variables we can actually just show and hide certain items uh using css variables
+um and then that creates a very simple interaction to create it doesn't really require um using event
+listeners in javascript and we can very simply just turn sorry uh just for clarification um so you you
+decided to not use the cables html elements um but do it on on like your uh usual workflow or frameworks or
+um html development that's correct yeah that's correct so um i i personally have um like a long
+background of uh front-end development and so one of the things that we're trying to do is uh to understand
+how we can integrate cables more tightly with cms's that we use webflow for example uh in this particular
+case i we built the html by hand basically um and so i wanted to make it so that the javascript um populates
+all of the movies so uh for that reason i i actually wanted to keep it on the front end
+um in case you know we can create a kind of template or boiler boilerplate for implementing this into more
+sophisticated cms situations and so in this case like we have you know movie list comes out
+and then based on this movie list um we're populating a whole bunch of things and we're
+um identifying um what items you know we're displaying this is randomized every time you click
+on it so every time that we click on this it's going to be a random uh list except for
+interesting that i found out quite quickly that if you go like this then the right one will always be
+in there yeah so you just click a few times and exactly right i mean this was just done again like
+over the course of a few weeks so we just wanted to go really quickly um and create something that still
+is impactful and visually cool uh not so much like foolproof or anything like that uh but yeah for
+those that figured it out right you just click through okay i see the repeating one it's it um
+and so what what you could do um in this case so we have if you see over here we have one out of 13
+that was shown after um after
+you clicked a specific score so um for example if uh start experience is one and uh data game equals
+start or the data game start element uh becomes opacity zero and pointer events none and then if you
+know you can do conditions and like this in css that's really interesting yeah it's it's actually it's so
+basically um because this is a css variable um you can just identify and highlight its value uh from
+the body tag or from the body dom element and so uh it's kind of like a a trick or or a hack or whatever
+but it works really well and um it allows us to keep the code very light and identify you know very
+very simple and create very simple animations and transitions just using css animation and then you
+use that css variable i guess right that's right so if i go back to here um i can show you that uh i'm
+looking at the current view i'm converting it into a number and then i'm pushing it into
+um um the current view css variable and i do this a number of times um load progress project ready uh if
+i can actually you know use um load progress from zero to one and show or hide a specific element as a
+progress indicator uh on my css um you could also i mean then if you basically just keep your whole
+html front end you could even do like fade in fade out in css exactly exactly and that's exactly what
+we're doing so we're gonna watch what happens when we do uh we get something wrong um as the
+scream happens and then this shows up right so these added uh animated in
+um so the i also have for example like when the score is equal to 13 uh i'm not going to display
+the tooltip close anymore because uh we've now won the game there's really only one thing that you can
+press um i'm also hiding the close button and the complete button to display none um if game over is
+one then i'm showing like the overlay gui you know these these kind of things uh are so easy to control
+in here also uh you can combine them so if it's game over and the score is 13 uh show overlay uh one
+or to show the overlay opacity with the transition and everything um and if you have live zero show the
+overlay again um and then the overlay has a few things like um play you know we play the final video so
+that is where we originally started with uh with js so we would you know show um let me just try to
+understand where it's already been a month and a half so i'm sure some of you know that's like a million years
+ago uh so we have like right choice wrong choice and then we have a game over uh function and that helps us
+that sets uh things to game over and then show uh game end elements and what that does is it just uh
+shows the game end and then plays the final video and then mutes everything again
+right so we're kind of like restarting it interesting yeah i mean i yeah i i just want to mention that
+that could also all be done in cables with the with the html operators but it's always a choice of your
+favorite weapon right so if you're used to this workflow then it's it's you're much faster to the end
+result um with the end result um with the workflow that you do every day um but yeah i like the idea
+uh with the css variables that's that's a new one i haven't seen before yeah i i mean i i created this
+workflow on the fly uh as we were doing this and uh i found it incredibly useful um in case anybody is
+wondering um the audio actually like we have a bunch of audio that's happening i know that this is a very
+audio driven community so this is probably the simplest thing for you guys but um um we chose to
+uh you know look at is it game over is it not a game over create a bunch of if statements
+on um are we looking at like what what view are we on so this house creek versus that house creek this is
+playing on the first level and or sorry the top level and the basement and this one is playing only uh on the
+um on the main floor and so they just kind of go on and off um and then it's it i apologize that it's not
+very you know cleaned up but we did rush things again um and then similar to like if it's not
+uh a win so if you if it's not a win and if you didn't lose uh then or sorry if it is a win and it's and you didn't lose then we play the game over sound
+uh and then success is played yeah i i think it's really real i mean it's really not uh i thought it's
+more complicated it looks really really easy and simple i i tried i tried to make it as simple as
+possible so that you know should i ever have to show this to anybody i'm not embarrassed
+um yeah but i mean it's like i don't know 10 audio files mixed together with various states and i think
+it's looks yeah right appreciate that um if anybody's interested the cursor um there is something
+interesting that happens with this cursor uh so if you notice that when you move it left and right it
+actually um it actually rotates a little bit as if you know you were moving uh a lamp left and right and uh
+what's happening here is we're just doing a basic transform uh and on that transform we're just modifying
+the position as well as the rotation of it um the other thing is that you may notice that we're creating
+this um kind of light uh as if you're kind of looking in the darkness that is a very very simple um circle
+and that circle is just done to a render to texture and then um it is used being used as a mask over top
+of um one of two draw images so there's you know this kind of soft thing and uh the image can compose just
+puts them together so this is something that i think a lot of you know know very well um another
+thing for the effect uh on the final game we are using uh bloom a lot and this is the exponential bloom uh
+i can't believe i can't remember who created this but uh it's a very great tool uh and uh we kind of put it
+together here as a single thing single patch so it's uh i really appreciate it yeah yeah i really appreciate
+him or uh or her for creating that um what else uh could i cover here
+layer sequences uh the the introductory uh pre-render so um we are having a loading image if you noticed uh
+so every time you load this i wanted to make sure that um you know we're we're kind of following
+progress so i get the progress from the loading um progress css so and that is connected to
+uh all the way uh all the way down to the loading indicator which i don't know where it is right now
+yeah so loading status um i'm i put this before the scene render so that every um glb as well as uh texture
+uh is being loaded first and then all of that in data is passed to loading progress and then loading
+finished uh that way i'm not waiting for something to load before i'm actually showing the loading
+indicator um and finally uh we actually decided to um because we are you know a an agency that prefers um
+fast loading and everything one of our main goals was to make sure that this is a very small file
+um and so i believe let me just put this in here i believe that we are a maximum or we were a maximum
+of like 20 something megabytes um but the action that's like as a result of the movie itself the all of
+the um textures are hosted on s3 uh externally as webp files um and then the glbs are um pretty light as
+well so it's 1.6 megabytes for the entire house as well as all of the elements in there that's really
+good that you use compression or it's not drug or compressed even right it's just um clean modeling i guess
+low poly yeah that's that's all murillo so murillo if you want to say hello um you can let us know how
+you modeled all that i don't know if your microphone is working it was just uh it's pretty much
+low poly and uh yeah i did polish it a bit so it performs well there's not much to talk about it to be honest but
+it if you guys want to know anything in particular please let me know yeah actually we've i or we both
+do appreciate that people actually have a look at size of of things so um if you do something like this
+and have all the all the images and all the sound and everything in there and keep it under 20 megabytes
+that's like really really impressive if you look at other websites that basically just display text and
+double the size oh yeah for sure that's i'm all about that too uh i i actually didn't realize that
+the house background oh it was 12 megabytes so we could have easily just turned that into something
+very small um audio yeah but that's also being streamed right uh yeah maybe but but yeah no really
+great work i mean if like it happens so fast that you have too many polygons or the textures are too big
+and you really have to uh look at it and and control it every time and yeah absolutely it's only one
+gltf file in the end um yeah it's it's all one glb um uh where is it so it's it's called uh sorry one sec
+glb is called where was it here
+i don't have a search sorry i'll just go in here everything is from here yeah so we have the entire
+scene as uh this halloween house uh version 19 so we we did quite a few versions uh every single one of
+the items uh has a texture applied to it so um the environment the outside the roof the floors the
+objects uh the basement etc um and then all of the movie props are ox actually um so there's a movies
+at the movie props at the mid top and basement uh and they're all just just like this very are you
+baked all the light information into everything is baked in yeah yeah um we wanted to take this a
+little bit further um because we have been experimenting with um baking in video uh and then using the video
+as a texture so that you could potentially move your mouse around and then create shadows throughout the
+entire house by playing a textured video or a video as a texture forward and backward
+yeah yeah i thought i thought the the cursor is a point light um but yeah yeah it's easy tricks easy
+tricks to create um yeah i guess i guess that's really it um and so the result of all of that is uh that we
+got an fwa of the month for last uh for october uh which actually surprised me a little bit i thought we
+would get maybe of the day but uh really happy at the result and appreciate uh thomas and you guys for
+you know creating such an awesome platform that we can build such easy amazing experiences on thank you
+like congratulations on the award yeah thank you but you said like you um you worked on this as a team
+and you said you started and wanted to see how far you come and how fast you can be in this so um this
+was a project on your own or um so just your agency for um flex ourselves yeah that's it yeah that's that's
+it so um you know we wanted to see how fast we could do this and i think murillo what was it like
+four weeks five weeks in total this thing uh i guess the 3d on my end took about three weeks
+for something like that but we had other projects in the middle right so
+yeah we were still working on client files and we had uh maybe five weeks total but
+it was three weeks of work on the 3d there was the both of us so two people four weeks something
+yeah it was no no there was um we had ui design as well um yeah so there's a ui designer that that this
+was like maybe a couple of days maybe maybe a week um we had a story uh like we had to conceptualize a
+story um i think five people in total worked on the project yeah four weeks from start of concept
+to um to finalizing this and releasing this is awesome thank you thank you and are you planning a
+christmas house or something like this we actually were thinking about something like that but at this
+point we're actually um just a little bit overwhelmed with work so uh yeah maybe we'll do something for new
+years something something like that for 2024
+anybody have any questions i'm happy happy to answer um on this meetup or whatever
+so apart from the um the what you got what was the reaction from the audience like do you have any
+numbers how many people played it and how it was received did you get any feedback or something um yeah
+yeah we i mean we posted it on on just linkedin and and sent it to our clients um just to show them like
+you know some things that we've been up to and the reactions were incredible um a lot of people had a lot of
+fun with it uh some like shared it internally to their entire organizations um and uh i think we yeah we got
+a new project just based on this one uh they really want one of our one of our existing clients like
+they're like we want something just like that so yeah yeah i also kind of spread it in my circle of
+friends and everyone was like hey this is super nice and um yeah thank you really fun to play thank you
+yeah i appreciate that um there is a like there's a small um i guess you don't really think about it but you
+can actually move this around by holding um it's kind of like an easter egg yeah what happens um with
+a lot of our projects is like um we leave in the sidebar unless you we put it on d for debug mode or
+something like this and then we kind of forget to to disable it yeah for sure i i try yeah i actually
+created um in order to work on this i created a uh keyboard shortcut um and and maybe this will help
+you know and it's somebody but um if so if you press let's see so is it q yeah so you can quit that so
+you can go d will open up uh debug mode and then so now so now i've basically can kind of move around
+and see you know where the textures are um this was really instrumental in just placing the objects
+and then i can just sorry but you disabled this in the final experience right yeah yeah so you can't
+press the key press yeah how did you animate the cameras is it a camera from gtf or did you do ah okay
+yeah that's that's a great one thank you that's actually the first thing that we started with
+um so the cameras are animated using just the anim uh the multiply view matrix um and this is the
+standard thing that you went over maybe six months ago i i think uh so we have uh you know we have orbit
+controls which are on the outside of a debug true or false um and then we have a route trigger so um this
+is connected to the current view so when you animate or or tell a view to go to a specific um one
+two three or four uh it'll change the camera yeah and so that made it super easy to just adjust you know the camera
+position uh you know whatever uh and we can animate it all um that's it yeah we also do it in some of our
+projects it's really convenient and yeah you can also you could also even go from the basement directly
+to the top camera or something like this it wouldn't be sure yeah absolutely absolutely you could um we've
+played around with the idea of like letting people switch from from all those things but i i thought
+about like oh well it doesn't you know not necessarily that game experience as opposed to just
+yeah the journey but it's so yeah super flexible absolutely yeah and then you could you know press
+quit i think and just at any point so this was uh my my cue yeah so you press q and it goes back to here
+yeah yeah yeah good good thank you so much more questions from from anyone else
+nope okay no it doesn't seem like thanks a lot for showing this um yeah really nice and both like
+technical stuff like i like the um the attention to detail even in file sizes and request sizes and um
+everything feels just like polished i also like the the looks and all the graphics and uh and everything
+even sounds like super fitting felt like really really great thanks for um for showing this and this
+css variable workflows also really really nice thank you so much thank you guys thank you okay then i would
+say we go over to the update part right

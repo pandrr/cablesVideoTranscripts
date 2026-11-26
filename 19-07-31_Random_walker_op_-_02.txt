@@ -1,0 +1,80 @@
+https://www.youtube.com/watch?v=e8gi-XjRppo
+Hi there and welcome to another video of coding with cables. My name is Mark, my handle on the
+forums is Andro and today I'll be showing you the second part of our random walker tutorial series.
+So today I'm going to show you a little bit more the playful side after the hard work of making the
+random walker op and today I'm just going to show you how to use a couple of really simple techniques
+and ops inside the cables to get like really wildly different output from this. I'm going to kind of be
+winging it a little bit as I go along so it's a bit of a more of a playful thing. You might see me
+make a mistake or two because predicting that output from this kind of thing is really difficult to do.
+So here we've got a random walker and he's happily walking over the screen doing this thing.
+So, something I want to work on here is this. I want to change the steps, like the multiplier here,
+right, so 0.001. So if I put it on 0.001 it's going to start taking bigger steps and I'm going to just
+crank up the material for a minute. There we go. Let's slow it down just a touch, go on 400, reset. So the multiplier
+determines how big the steps of the walker are. So if I put it on 0.1 this is how far 0.1 is. If I put it on 0.05 it's now going to start drawing in between them as you can see. If I put it on 0.025 it's going to start drawing in between there. So as you can see this is already like a really cool pattern and the only reason it's becoming black so quickly is because the alpha is a little bit high.
+So what would happen if I would animate this number? So I want to have a minimum and a maximum. So I'm going to say like, OK, so 0.05 reset this size. And now let's go for the smallest one 0.001.
+OK, so I'm going to go here and I'm now just going to grab this out and I'm going to grab a sine anim. So as you can see a sine anim gives this shape here between minus one and one has a frequency and amplitude. So I'm going to grab a map range of.
+OK, OK, I'm going to say old min minus one max one and the same new minimum 0.001 and the new maximum 0.05. And now I'm going to plug this into multiply. Sorry, with the random walker.
+And reset. And let's see what's going to happen here. Wow, look at that. So it's taking big steps and then it's going into smaller steps.
+And the output is just already really different, but I think it's a little bit too high with the 0.05. So I'm going to put it on 0.02 and reset.
+And let's see what's going to happen. This is a lot smoother. I like this a lot more. So as you can see, it's not drawing these parts very often.
+So I hope you understand this, that the sine anim is just like being mapped to this range. So we have this shape here. Let me just click it.
+And that is changing the multiple, sorry, let's scroll down. And that is changing the multiplier step there. And as you can see, we get a wildly different result.
+So let's just zoom back in again. So I think it's still a bit blotchy and pixelated. So I'm going to make that just 0.01 and reset.
+OK, so that's like one cool little rule that we kind of came up there. Last thing, change the frequency. If I put this now on eight, it's going to happen a lot more often.
+Watch. As you can see, the little parts coming back, that's happening way more often now.
+We shouldn't change the amplitude because map range is set for that. And what would happen if we put this on, say, 40, then we're going to get lots of little bits.
+And it's almost become like a painting, right, that somebody's just like gently going over there with a bit of pencil and then throwing paint at it.
+So I'm going to just put this a little bit more on black. Not completely black.
+OK, look at that. It's a really interesting outcome. So I can now repeat this. Right.
+So I'm going to just copy these two ups. I'm going to paste them down there.
+These are kind of like logic rules, like rules that we're applying to this algorithm from the random walker.
+So what would happen if I would animate the boundary? I don't know. I've not done that yet. So sign on in minus one to one map range.
+Let's put the boundary on 0.25 and then one. And let's see what's going to happen. I have no idea. I've not done this yet, really.
+So let's reset. Wow. Look at that. So we're changing the boundary size. It's like this invisible square here.
+Ah, it's got the same frequency as this one and it's got 40 40. But this is already really interesting.
+I love these to quote the famous Bob Ross, one of my heroes. Happy accidents. Look at that. Wow.
+I've got to remember this one for later. Let's change this frequency to a very different number that's not equal to.
+So let's put it on 11 and reset. And now we can see that the boundary is becoming smaller and larger at a different number.
+So if you think about it, this is going at this speed. Let's say frequency 11. And this here is going at this speed really fast.
+And this is just alone creating really interesting results. I totally didn't discover yesterday. I'm absolutely loving this. This is a lot of fun. I'm really enjoying this.
+We could change the color, right? So let's let's keep it really simple. Let's just do RGB first with black and white.
+So do control C, control V. And I put this down here. And now I'm going to put the frequency and say 3.5 to some other number than the rest.
+Because we don't want it to like repeat. If you'd have this on frequency 2 and this on 4, they'd kind of like match up to 2 is 4. So we don't want that.
+So I go here and I say, let's put this to red, green, blue all at the same time. So we say new minimum 0, max 1. So this is black. This is white.
+And then I'm going to plug this into red. I'm going to hold the Alt key in and right mouse button. Click and drag to copy these cables.
+Well, we already got some color there. We can see where this is going. So I'm going to change the clear color because if it's white or black, we won't see it. So I'm just going to put it on like some kind of in between blue.
+Let's reset and see what happens. This is already leading to like really interesting results. So this is animating the color here RGB between 0 for black and 1 for white.
+Right. So say we wouldn't want it to be absolutely black. We wouldn't let the minimum be zero. We'd put it on say like 0.5. Let's reset. And now we get white and like shades of gray. So in this way, we can really create this very organic structure.
+And as you can see, we're painting with pixels. I mean, I love this stuff. I was so excited when I got this working inside of cables because I think a lot of people might think cables is only really good at lending itself towards real time stuff.
+And I was really intrigued with the challenge of how can we approach and create stuff like generative art like you can do in amazing other programs like process. And how can we do that in the cables ecosystem? So this is already really cool.
+So let's let's just back this up for a minute. Let's get one of my favorite ops, HSB to RGB. I love this guy. So first of all, I'm going to show you on a simple level. I'm just going to plug this into red, green, and let's move up a bit.
+I'm going to plug this into blue. Now, I have this hue slider here. And with that, I can change the color. I know it's a bit hard to see, but you can see it's drawing on top, right? These are really like outrageous colors. So I'm going to put the saturation on 0.5. But as you can see, I can change the colors here with the hue slider, right? And the best part is with the hue slider. Let me just pull this out for a minute.
+He has to refresh by the way. We can get colors like this with one slider. So let me just put this back. So we're now going to get map range. And I'm going to say, give me 0.2 to 0.4, which is a real tight range. And I'm going to plug it into hue and reset.
+And now, as you can see, I'm getting a very defined color palette, which is like this greeny yellow. So if I would want to now increase it, I could say, give me to 0.6. And let's reset.
+As you can see, I'm now getting this little bit of blue coming in. So with this, we can completely and utterly control like the colors that are coming out. And it's like a way more pleasing thing because by using the slider, the colors, they kind of like match up a lot more.
+So let's go another step further now, because I'm really loving the way this is going. Let's grab the sine anim and the map range. And as you can see, we're just doing this in the simplest way.
+We grab this. And now I think I want to change the radius of the circle because all the circles are the same size. So be warned, if you would plug this now into radius, you rebuild this mesh every frame.
+And that's really slow. When you do the scale, this is going to work a lot better. So I just say to myself, 0.01. That's this size. I like that. That's good.
+So I'm going to say minimum is 0.01 and max is going to be 0.1. Let's just see what's going to happen. I really have no idea.
+And we're going to plug this now into scale. We reset. And look at that. Let's change the frequency here to something like 0.6.
+And to me, the opacity isn't good. It's kind of like we're drawing over everything and that's okay. But I want to lower the alpha. So I'm going to put it on like 0.01. Like really gentle.
+Even a little bit less. 0.001. Let's see what happens. That's way more subtle now with the way that it's drawing. And we get these really big points, but I'd like the smaller points to come back more, right?
+So I'm going to go here and I'm going to put the frequency on say 4.7, some other number and reset. I'm enjoying that a lot more. And if I think that circle's a bit too big, I go to map range and I say 0.075 reset.
+And now I have like this framework in place, right? I mean, anything in cables which produces a number like Perlin or something like that, I'll show that in a moment, will also allow us to create these kinds of things.
+I mean, before I really loved it when I had this, which was going to the boundary. I really enjoyed it when it was like on this really fast setting, like let's put it on like 32 and reset.
+As you can see, it's kind of like limiting most of the things to be drawn here in the middle. I really loved this kind of stuff. We could make it even bigger.
+We can make it go to the edges of the canvas. Let's try that. And so it should be popping out more and more. But of course, this is relative to where the random walker is.
+So you've got to give it a while to get going. So as you can see, we're now like really just creating really generative output with this random walker.
+And what would happen if we would say, I don't use a circle. I want to use a rectangle. Let's put that down. And now let's just turn that scale up for a minute so we can see what's happening.
+As you can see, we've got like a rectangle now, and this is giving like a completely different kind of brush, right? So let's animate, because I'm winging this as a go.
+Let's animate the size of this. And I'm going to put it on, say 0.2, which is really big. And I put it really small and say 0.01. And let's now plug that into scale. Reset.
+And we get these small and big blotches. I like the way that's going. But we can change the size of this rectangle. So we can put it on two and say 0.01.
+And we're getting a completely different look here. But I want it to happen a little bit less. So I'm going to put it on 16. And I think it's still a little bit too big. So put it on 0.01. And now let's just go absolutely wild here. We've got like a random number here between 0 and 64.
+How about we say, I'm going to get another random number and I'm going to make this turn around. So I'm going to grab this and I'm going to say 0 to 180 degrees. And I'll turn off integer because I want it to be floats.
+And I'm going to grab this and now I'm going to plug it into Rotate X. I think. That's not the one I'm looking for. Let's turn this up a little touch. Wow. I have no idea exactly what is happening here. But I really like it. But I think it's this one that I need. Yes.
+So this might be really hard to see. So I'm just going to slow it down. And reset. And I'm going to turn the multiplier up a little bit so we can see. Let me just disconnect these. So we can see what's happening. There we go. See what's happening.
+So we have these rectangles and they're getting rotated. Right. So that's just basically it in a nutshell. And if we turn the repeat down to say one, we can see exactly what's happening. Sorry, I might be going a bit faster. I'm just really enthusiastic with this. So we can now crank this back up to 300 and then we can plug this back in again.
+So this goes into the multiplier and this goes back into the boundary and I'm going to reset it. And this is like painting with cables. It's like coming up with generative rules and algorithms. So let's put the boundary minimum on one. There we go. And now it's filling up more of the screen. I could keep doing this for hours and I actually will later on tonight because I'm really enjoying the way this is going. And I just like work this stuff out over the last day or two.
+So I have to pull myself off the screen now. Hopefully this has given you guys a lot of inspiration to show you that you can just like code your own little custom op inside of cables. It doesn't have to do with OpenGL or shaders. This is just logic and generative algorithms. Right. And all based off the simplest rules and some other rules that you could do in code. We're just actually doing here with the ops inside of cables. So I hope this video has been educational and informative. I hope you've enjoyed watching that as much as I have making.
+And I look forward to seeing you in the next video. The third part will show us how to implement this algorithm in 3D and then we're going to be using this with splines and mesh instances. And we're really going to go wild with that one. And it's going to be great to just show how easy it is to implement this thing with one extra dimension. Okay. I've got to go. Thanks for watching and have a good one. Bye.
+And I'll see you in the next video. Bye.

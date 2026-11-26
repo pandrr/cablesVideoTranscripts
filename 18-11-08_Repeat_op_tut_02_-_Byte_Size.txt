@@ -1,0 +1,38 @@
+https://www.youtube.com/watch?v=KqQixTP0O2M
+Hi there and welcome to another video tutorial on the Bytesize channel.
+This video will continue from the previous one, so please load that example patch if you want to follow this.
+So in the previous video tutorial we made this with the repeat op.
+Right now I want to show you a very simple other thing that we can do.
+So we're going to get rid of the multiply here and we're going to disconnect the x position.
+We're now going to plug this sign into position x and this sign into position y.
+We're going to move everything back to the center and we're just going to make it a little bit bigger with the scale.
+Now with the sign I'm going to put it on phase 0, frequency 1, amplitude 2.
+With this one phase 0, frequency 1, amplitude 1.
+And now we get this line here, sorry 2.
+Now by just playing around with the phase, if I actually go to like half of p, which is 1.57,
+we get this really cool thing here with a circle.
+So I'm going to make the sphere a little bit smaller so it's easier to see.
+And I'm going to increase the scale.
+Now the nice part here is we can start to do some really cool stuff.
+So let's move it back to the middle.
+So if I go here to multiply for example and slowly move it down, as you can see we can start to make a circle grow or shorten.
+So let's just say I'm going to put it on this for now.
+We can start to do some really cool stuff here by playing around with the frequency, though it's very sensitive.
+So if I now put the frequency on a different number, as you can see I start to get these really cool different displacement patterns.
+As some people will know them, it's called a list issue.
+So if I'm going to put this on a hundred now, we start to make some really, really cool funky shapes.
+And as you can see, we've got a clear beginning and end.
+So let's put this frequency on one point zero five.
+Let's put this one on one point zero eight.
+And as you can see, we start to get some really cool complex patterns.
+So this could also be animated with the sun anim up.
+So I'll just plug it quickly into main loop.
+I'll give it a amplitude of zero point two and a frequency of zero point five.
+And now I'm going to plug this into the frequency.
+And this is going really fast.
+But as you can see, I can start to make some really cool stuff, slow it down a lot.
+So this was just a basic explanation.
+Again, with some cool stuff that we can do with the repeat op.
+I hope you've enjoyed this tutorial.
+If you've got any comments or any requests, please feel free to leave them in a comment section below on the channel.
+Okay, thank you.

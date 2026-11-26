@@ -1,0 +1,120 @@
+https://www.youtube.com/watch?v=lTqmBtL3w68
+Hi there, and welcome to the first video of the Copycat series.
+We, the Cables team, decided it would be a nice idea to try and find some stuff that we thought was really cool visually and to recreate that inside of Cables.
+So, we're going to start off today with trying to recreate something that's from one of my favourite games, Elite Dangerous.
+Elite Dangerous has this really nice effect on the loading screen where you see the ship and it's outlined in orange and you have this nice glow.
+And if you look at different ships, you get kind of different effects.
+I just really love this and I thought it was a really great simple thing to start off with for the Copycat series.
+So, I'd also like to say thanks to Panda for showing me how to get this done because I was a little bit stuck with it.
+So, let's get started.
+So, we're going to go to our Cables patch here.
+First of all, I'm going to set up with a Main Loop.
+And now I'm going to plug this into a Sequence Op.
+And now I just want to get going with a basic spaceship model that I downloaded.
+So, I now need to get this model.
+So, I'm going to look for the OBJ object that's here and I'm going to pull that in.
+And then, as you can see, the file's been uploaded.
+And what I'm interested in here is the JSON file.
+The original objects file has to be converted into a format that cables can use.
+So, great.
+Here we go.
+Here's a ship.
+Now, let's add an Orbit control.
+So, I can just see what's happening.
+Great.
+There it is.
+And before I forget, it's very important.
+And this will be added later on.
+This model was downloaded from here by this user.
+Credits will be given later.
+Okay.
+So, how do we now go around about making this effect that we saw like in Elite Dangerous?
+So, we're going to have to do a couple of image composed layers here.
+So, first of all, I want to make a full screen rectangle.
+And I want to render the current scene to a texture.
+So, I do this now.
+I get the texture out and I put it there.
+A little bit of aliasing going on.
+So, we crank this up to 8.
+We get our smooth lines back.
+Let's make the ship a little bit bigger.
+So, we can see what's happening.
+Great.
+Okay.
+So, let's move this over here.
+We now want to make a second pass.
+So, I'm going to go here and I'm going to create an image compose op.
+And then I'm going to make a draw image op.
+I'm now going to plug this into Edge Detection.
+And I'm now going to use the texture preview window here.
+One moment.
+Just get a bit of stuff on the screen now.
+Now, obviously, I have to plug this in here.
+There we go.
+So, now I'm using texture preview.
+And now I can see the edge detection version.
+By clicking here, I can go over there.
+So, let me just plug this in here.
+Because I just want to see it big for a moment.
+So, I can tweak it.
+So, if we look at edge detection, I can control the amount here.
+So, let's just leave it on one for now.
+I'm now going to add a blur.
+And I'm going to put this on, say, two.
+Maybe three or two for now.
+Okay.
+Now, I'm going to need another image compose channel.
+So, I'm going to go here.
+I'm going to make image compose.
+And then I'm going to do a draw image.
+And I'm now going to grab the original texture output.
+And plug that in here.
+Let's plug that in there.
+So, we can see what's happening.
+So, this is the Mac app view there.
+Now, I'm going to go here.
+And I'm going to add another edge detection.
+Now, I'm going to go here.
+And I'm going to add another draw image.
+And this will allow me to add this back in.
+And now, let's put this on add.
+There we go.
+And now, I'm going to go to color.
+And I'm going to put this on multiply.
+And I'm going to make it this kind of like orangey red.
+A little bit like what we saw in the video.
+Now, I'm going to add interlacing.
+As you can see, we now get these scan lines effects.
+A little bit heavy, but it's just to show what's going on.
+And now, I'm going to just add good old fashioned vignettes over here.
+I'm not really going to see too much of that, I think.
+Yeah, we can just add a bit there just to fade it in.
+So, now we want to rotate the model, obviously.
+So, I'm going to go over here, move this down.
+And then I'm going to add a transform up.
+And I'm going to rotate it on Y.
+So, I'll go to rotate Y.
+Pull it out.
+Add a time of two.
+I'm going to crank the speed up to, say, 10.
+And as you can see, we've now got a very basic recreation loading screen.
+So, I can play with the blur factor here to pump it up a little bit.
+So, as you can see, we can start to mix all these different parts together here.
+Interlace.
+Put the amount really heavy or really subtle.
+Let's put this there.
+As you can see, we can make it really big, but I don't like that.
+Let's put it on four.
+Okay.
+So, one last tweak because it's all about the tweaking.
+Make the radius really subtle.
+Let's make the scale a bit bigger.
+Great.
+So, we've just recreated the loading screen from Elite Dangerous.
+This was the first video in the copycat series.
+I hope you've enjoyed it.
+If you've got any questions or comments, please feel free to leave them under the video below.
+I'll post them in the forum.
+Thanks for your time.
+Bye.
+Thank you.

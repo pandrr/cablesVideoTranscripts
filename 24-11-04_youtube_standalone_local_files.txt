@@ -1,0 +1,138 @@
+https://www.youtube.com/watch?v=6CTWhGxDEws
+- Hello, and welcome to another tutorial.
+My name is Tom on cables.
+My nickname is Pandua and I want to talk today
+about the standalone again and about working
+with local files in the standalone version.
+So just something to explain about URLs
+and local files and so on.
+So cables, until now it was only available on the web, right?
+And on the web, working with files or external assets
+is done via URLs.
+So this is why all the operators that are in cables already,
+they work with URLs.
+So for example, so I'm now in the standalone
+and when I choose a file or when I,
+in the web version, upload a file,
+I can just drag it into the patch field
+and then I get this operator, like an automatic operator.
+So when I hover this file, I'm here,
+you see file colon double slash.
+So on cables.jl, you see an asset pass.
+And both of those use URLs,
+like URLs, like starting with HTTPS colon double slash,
+or in this case, file colon double slash.
+So this is that this operator works in the standalone
+with local files, but it works through URLs.
+So all those operators that we brought for the web version
+are still compatible with the standalone version,
+even though it works with local files.
+So we do this via this URL scheme
+with the file colon double slash in the beginning.
+So, so this is why the texture op still works, but URLs,
+you cannot just delete files or like watch directories
+or even list files in the directory with URLs, right?
+So you need to work with local files.
+So with local file passes, and this is not possible
+with the texture operator,
+but now we have some new operators that only work
+with the standalone.
+So in the, in the op select, in the op search,
+when you search for standalone,
+you see all those extensions standalone operators
+that are made for the standalone.
+So they don't work in the web version.
+They, you can create them there, but they won't do anything.
+They, they will just be dumped and not output something.
+So that we can still be compatible,
+have those patches on the web version
+and on the standalone version,
+but only in the standalone version,
+they will, they will do something.
+So I want to read a local file on my hard drive.
+For example, this one, so I will use the read texture file
+because I want to read a text file.
+So I will use my terminal to, to show files and edit files,
+but you sure can just do this with your file explorer
+or the finder or whatever.
+But I just want to use the terminal
+because it's just more handy and quicker for me to show
+without working with many windows.
+So I have this directory here and it is empty.
+So there are no files in there.
+So I want to create a file, for example, hello.txt.
+And I will just write something in it.
+Hello.
+So now we have this file here.
+Hello.txt.
+That's the only file in this directory.
+So now I want to read this file into cables.
+So I can use this read text file
+and I just enter the full path here.
+Hello.txt, the, the full path to this file.
+And then I can click read.
+And then you see the content is output directly.
+So let me add a viz string operator and you see the hello here.
+So nice.
+So now I can edit the file again and add something here and save it.
+And this is still the same.
+So I can click read again.
+And then you see it changes to hello world, to the actual content of the file.
+So, so this is basically how you read a text file from like an absolute path into cables.
+So, but now we want a bit more magic.
+So I want to see the current value, even if the file changes.
+So cables should just update this when the file changes.
+So this is something that you could not do with an URL, right?
+So there is an operator standalone files watch.
+And this operator takes a, takes a path and will, for example, trigger something event happened.
+It's called if something changed with those files.
+So I will put in my path where my file lies without the file name, without the actual file name.
+So everything that changes in this directory will trigger an event.
+So I will connect this to, to my retext file operator.
+And now when I edit this file and just put something in there, then you see the, the value has changed.
+So, so, so I can just write this and save it.
+And then you see it's popping up there directly because it's, it's watching changes in this directory.
+So even, so I, I will just add like a counter trigger counter here so we can just see stuff happening.
+So this was zero times triggered.
+Now, right now I will create a new file.
+Another TXT and put something in here.
+And then you see the times triggered has increased because I created a new file and wrote it.
+So, um, you can also receive changes.
+You will also receive changes from anything that changes in this directory.
+So we can also, also visualize what's, what's happening here.
+What's happening here and with another of which is really great.
+And it's called readdir, uh, standalone files readdir.
+And I can add this and now I will put in my path again.
+And we will get an array because we will get, uh, all the directory entries, all the files and
+subdirectories from this, uh, directory in an array.
+So I can use array, uh, this array and then I see all the files in here.
+So, um, when I, uh, I can also connect this to the watcher.
+So when I, um, rename something, for example, another, I will rename into file.txt.
+You see it changed to file.txt.
+And something strange you might have seen before is, uh, when I added this file,
+there's another entry here.
+So this is actually my editor.
+It creates a swap file.
+It creates like a temporary file while working, uh, on a new version of that file.
+Um, so this, this will just go when I quit the editor, then it's gone.
+But so with this readdir, you can just see
+everything that's happening in this directory.
+So if I copy a file, so imagine you have like a directory and you render something in blender
+after effects or whatever, and it just renders into one directory.
+You just get all the files that are rendered to it.
+So you can react to those changes.
+And I don't know, like load them and display them in 3d or, you know, you can, you can just create workflows
+with local files from other program that you react and that you, that you do something with it.
+Um, yeah, so that's, that's, uh, some of those, uh, standalone file operators.
+Um, just explore them and have a look.
+So there's something called exist that, that tells you if a file is lying there,
+stat, which tells you like the size of a file and the date of a file and all this stuff.
+There's even make here.
+So you can create sub directories and then you can write files into that sub directory and so on.
+So there's a lot of stuff, uh, to explore, um, and, and to create, uh, with this.
+And yeah, if you have any questions or maybe you have an idea for a workflow,
+like with working with local files, let us know.
+And, uh, maybe I will create a tutorial from this.
+Okay.
+Thank you very much.
+Bye.

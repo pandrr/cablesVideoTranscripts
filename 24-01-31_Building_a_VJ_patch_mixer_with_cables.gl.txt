@@ -1,0 +1,239 @@
+https://www.youtube.com/watch?v=Zr_7wRBmRmA
+Hello and welcome everyone to a new video about Cables GL and with us for a quick interview today is Pavel who is a Cables user and supporter and also a VJ and he will show us how to create a video mixer that is battle proven in live concert situations and will show us around how he did this in Cables and also show it in the editor and we also didn't see this so far
+So there will be a few questions from our side and we are as excited as you are to see what's going on. So hi Pavel. Hi, hello. Hello, hello. So this is the mixer that I'm working on. This is still a work in progress. So it's not a finished finished product so far. But as Stefan said, I tested it on a few concerts and improving it over
+time. So it's get better. It's getting better. And yeah, this is the Cables patch and what it does it mixes patches. So before when I was when I was VJing with some interactive patches, I was basically making a new patch for each concert. And in this patch, I want to have all the patches under one main program and control it
+And yeah, I want to have all the patch. And yeah, I want to be able to put everything, any kind of patch into one piece and then mix it. And this is how it looks. I started working on it when Pandur told me about this new feature of external render. And after I saw it, then I started to build it.
+So here when I open new window. So here when I open new window, I have this renderer. I can't show it like here because it goes to another screen and it wouldn't be useful. So we'll have the preview in the background.
+But the nice thing is that I can just put it on another screen. Get it on full screen. And it doesn't work on the same one. But when I put it on the projector, then I have the full screen preview of the things that I'm mixing.
+Yeah, and it's like a mirror without the UI, right?
+Yeah, yeah. And the UI, I will also talk about the UI because it was, I was, yeah, that's the second UI I made, but I will talk about it a bit later.
+But yeah, here's the UI. So on the left I have all the settings like, yeah, open renderer, close renderer, I can set the resolution. Then I have the audio input. So here's some slider full gain. I can see them.
+I can see volume and stuff. And now when I press play, I can see that it's reacting to the microphone. And the point cloud in the background is reacting to the audio. And what else here? Yeah, here's some debug stuff. It's not interesting, I guess.
+So yeah, basically, when I open it, I just open the new renderer, then hide it. And that's it. And here on the right, oh, I heard it. I have the controls. And those controls are also mapped to the MIDI controller. So right now it's hard wired to my Akai MIDI mix.
+And yeah, so I have a MIDI controller that I can use to control the visuals. And right now when I switch to these knobs, I can see all the controllers. And I can also control it from here. So you don't need a MIDI controller to use it. You can use the sliders, but of course it's easier to use the controller.
+So yeah, I will hide the controls. It's like, this is like some debug stuff. If you don't have a controller connected, I will use the controller. And this is the UI. So I have a deck and a deck. Here are previews for both. I can set it to full screen to see it better.
+And I have some visuals plugged to this. So let's say I will choose this one for the deck A. And this is my old point cloud. I had it on cables. It was on the main page for some time. And this one is a remixed version.
+Okay, so what it does, it reacts to music. And then with the controller, I can scale it. I can set some alpha intensity of animation. So yeah, basically all the cable stuff, all the magic you can do with cables, map to the controller.
+And then let's say I will have a second visual on the B deck. So this is the tunnel. And now, yeah, when I use the controller, I can switch between A and B. Oh, there are also blend modes. So for example, I can have like regular blend between A and B.
+And I can also set it to add. So I can mix two decks and put some object in the middle and then put some background.
+And I also have separate controllers for deck A and deck B. So that's like the main functionality of it.
+Great. So your setup when you're going into a club would be to set up a microphone to get the audio basically from the club itself. And that gives you the audio reactivity.
+And then you're mixing with a MIDI controller between these scenes and selecting that on the laptop.
+Yeah, yeah. So this is the main UI. I have the controller. I usually use mic from the laptop. It depends on the setup in the club. So sometimes I get the cable or I get just the microphone from the laptop and it also works.
+Sometimes there are problems with the internet. So like if the internet is weak, then then it takes some time to load all the assets.
+But I think that this is a good project for cable standalone. That would be perfect to launch it standalone.
+And what else?
+So now you said like, can you, can you scale it a bit down? Like the video streaming is dying because of the particles. Yeah, this is much better. Thank you.
+Okay. Yeah. The particles are hard to compare, but that's also the thing I like about doing real time visuals because you don't have the compression problem.
+And yeah. So this mixer is not video mixer. I don't take any video input, but just, you know, do the point clouds and stuff in real time. And that's, yeah, it's, it's nice.
+And the audio reactivity thing. This is awesome because I can go to a concert, I can plug in the microphone and it reacts to music right away. So each time I have, you know, this fast music or slow music, I can adapt to anything.
+I can switch the visuals. So like, yeah, let's take this one. Can zoom it in. Then let's say I will make it brighter. Give it more saturation. And then I have a knob to change the colors. Or I can add some feedback effect and start drawing like this. Rotate.
+Like, do you always crossfade like automatically or do you do it with an animation or with a button?
+I have a knob for it or some slider on the controller. And so yeah, I can, I can use the slider to, to mix it. And the nice thing I can do, for example, is to take a, yeah, let's take an object like this one.
+Or maybe some other object. Let's take this one. Then I will scale it down. And then I take, yeah, so this is the object. I will change this saturation back to the normal value. Then I will take some background.
+And now I can mix, so I have two. So you're showing both at the same time always?
+Yeah, yeah, I can show both of the, at the same time. Yeah. So basically like more features can be added. I have some basic, like, yeah, basic stuff for mixing.
+I can add some more blend modes and some more effects on it. But like, yeah, the main thing I wanted to achieve here is to create some universal patch that I can, you know, develop over time and to be able to plug anything.
+And I think I will show the patch how it looks. Yeah, while you're at that, I was just about to say that I like to set up with a microphone.
+There's a lot of like dealing with audio in and leveling that and even getting like a connection from the DJ and should be a lot easier on the technical folks at the club as well.
+So if that works good enough, then it's nice. But don't you use like a BPM tab operator? I really find this much.
+Which operator? There's a BPM tab. So you can like click BPM in there and then it's basically synchronized.
+Yeah, I don't, I didn't use it. Like I think that there's a lot of room for improvement because right now for audio, I got some like some basic stuff. So there's what I have here. It's just audio analyzer. Then I measured the volume. And I'm also using a texture from the waveform.
+And for the BPM, I guess I have some, yeah, I prefer to do like automated bit detection. But this is the thing I need to improve. And I see, yeah, I think I will add like a BPM tab and some other modules to it.
+And yeah, this is a work in progress. Yeah, so no, it's also like, I mean, it's a preference. Yeah, I think like I want to add this BPM tab. There are some, there are also some softwares that do like automatic. I don't know. I just saw some, some software that does it automatic and you don't have to tap.
+Yeah. And there could be some way to connect it. I don't know. Yeah, there's also a MIDI signal if you have a DJ with the, but it's really a hassle if you don't know the DJ and you have no time to test.
+Yeah, yeah. I usually do some small parties and most of the time it's like, there is no time to test it. It's like I just go to the party and
+Yeah, something like that. Yeah, but it's like, if you have time to do the testing and you have you can contact with the DJ and stuff, it's you can set it up. But like my end goal here is to create the app that you can use on the browser and you don't have to be a, you know, a programmer. So you can just use it.
+Use it. And it should be easy. And with this one, you can just launch it on the website. You don't need to install, you know, touch designer or Resilium. You just open it in browser and it works. And I also tested with my students. So they have a little, very little knowledge and experience with cables and programming, and they are able to use it, mix it and it works. So that's all.
+Yeah, it seems really out of the box. Also with the sidebar. So you don't really need a MIDI controller. I get that it's a lot easier, but this might run from a laptop with a microphone and that's that then, right?
+Yeah, yeah. And I think I didn't implement it yet. But I also want to add a gamepad. So everyone can get a gamepad. And many people have a gamepad. And with gamepad, you can control just with the sticks, you can control like four different parameters.
+And then you have buttons and then you have buttons and it will be a nice interaction, I think, with the gamepad. And yeah, very intuitive. Yeah.
+And about the patch, I can show how it's made. So right now, this is a big patch. Yeah, like, if I zoom in here, yeah, setup, no, setup is some old stuff, I guess.
+But yeah, most of the time I start the patch with main loop, then I have the sequence and trigger send. So it's like I name everything here. Then I have UI. UI? Is it? I guess? No, this is not the UI.
+I made UI in HTML. So before I tried with Ammo, but Ammo was slowing it down. Like most of the performance was eaten by just, you know, by buttons. So then I switched to HTML. And this is, yeah, it works nice. It's scaling and
+I used, which one is it? This is, that's it. Reckless CSS. It took me some time to learn it, but yeah, now it works. And so yeah, basically I made this divs with buttons as divs. And I put thumbnails as CSS property. So this everything here is
+HTML. And it works nice. And yeah, it works nice. Before that, when I was using Ammo, I had very big performance issues, but now it's working okay. So the first, I think first two concerts, it was breaking, like, I was binging and then the browser.
+But this is also technically closed. But this is also technically, I think it's a really good solution also, like for the mirroring with the external canvas. So you automatically only have to see the important stuff on the external display then.
+Yeah, yeah. So this is, yeah, it's like here, I have this, this is external canvas. And if I unplug it, so here's the preview. Okay.
+Yeah, basically those two rectangles with the previews are just rendered here. And yeah, this is HTML. Okay, and...
+Maybe for everyone not familiar with the external canvas thing, it's a fairly recent addition to cables where you're able to render to another browser window, basically, whatever you're rendering, which here is used to...
+To render to a different screen, basically.
+Yeah, yeah. And when I learned about it, I was so excited. And I think the same day I started to build this thing.
+And what else? Yeah, here. Okay, so here I have this preview. Okay, this is not important, I think.
+The important thing is this one. So I have the render. And then I'm rendering to texture to deck A. And then I have, I render to the second texture, deck B. And I send a named trigger. So I name the trigger A and then put number like, let's say I click A12. And I get A12. And then this big chunk of the patch, like all these blue areas.
+Are the actual visuals. So, 12, this is my another patch, like Fungi, it was on the... I published it on cables before. And I basically copied the entire patch, put it in this area.
+I did some changes, like, yeah. Here I have these controls that are universal for every sub-patch, like every area here. So I had to plug some controls for, like, audio reactivity control, controlling rotation and stuff. But the rest of it is just a patch copied inside this area, plugged to this named trigger.
+So here I can see if it's trigger A or B. And then, yeah, I can see the data flow. So this is trigger A. It's rendering to deck A. And I have a preview on deck A in the UI.
+So they are really like 2D, like two layers, basically.
+Yeah, yeah. And then those two layers are mixed. So it's like the mixer is pretty simple. So yeah, I guess I add some amid occlusion here in the image compose. And then I just do image compose and draw the second image on it. And then I just, yeah.
+So there are some effects like hue, saturation, vibrance, brightness, contrast. And then I output this on the screen. And about those areas. So it's like--
+It's very small, right?
+So do you have any more sub patches in there? Or is every effect just that small areas minus the controls that are shared? Pretty impressive also.
+Yeah, yeah, yeah. So every area is-- There are no sub patches, like-- But mostly, this is a nice combination of AI plus cables. Because I can get some AI generated models or images. And then just, you know, put it here. And for most of the-- of those areas, it's the same. But the only difference is this--
+And here I have a GLTF model. And it's like, yeah, this area and this area, the difference is just this GLTF model. I think the-- I can optimize it like-- I can do it more dynamic without copying all over the same areas. So my idea is to make like a few generators, then send the texture to the generator. And--
+And I think I will use this-- I don't remember how's it called, but Pandu showed this. When you send the trigger, you can assign textures to the trigger, yeah?
+Yeah, yeah, yeah. Yeah, it's a new upcoming feature. Yeah, I used it for something like this, too. And yeah, also, the new sub patch ops will be super useful for you for this kind of stuff. Like, where you repeat a lot of stuff always in the same manner, then you can really--
+you can really have less ops, less visible ops, yeah.
+Yeah, yeah. So right now, this patch is heavy. When I open it in editor, sometimes, if I have a slow internet, it can load for like 15 minutes, and there are some errors and stuff.
+But that's all the point cloud data, I think, right?
+I think it's like there are a lot of assets in here. Because for example, for this one-- oh, I opened Pandora's box, I guess. But yeah, it's working. So I have all these assets. And some assets are copied from another patches. So it's even more textures here. So this is heavy to load. It's good to-- I'm thinking about doing some local server for it.
+to work offline. Yeah, I mean, you can-- I mean, this solution is also-- you can just export it and then run it locally in the club, right? You don't need internet.
+Yeah. I think I'll test it for the next show. Because we have-- it's underground and the internet--
+like, yeah, it's-- it doesn't work too good.
+Yeah, it doesn't work too good.
+Yeah, it's-- it doesn't work too good.
+Yeah, I'm thinking about doing some local server for it to work offline.
+But--
+Yeah, I mean, you can-- I mean, this solution is also-- you can just export it and then run it locally in the club, right? You don't need internet.
+Yeah.
+I think I'll test it for the next show. Because we have-- it's underground and the internet, like, yeah, it's-- it doesn't work too good.
+And also, once it's running, you're good, right? So, you can sit at home and prepare by downloading everything, opening the patch, and then going into the club and try--
+Yeah, but sometimes there are things like, oh, this band wants a logo of them. And, yeah, do it. And, you know, it's like you have to save it and then change it and, you know, some last minute fixes.
+But, oh, about the-- about the effects themselves, I have some nice things here also. Like, yeah, this is a-- this is a logo for-- for some musician that was on the concert.
+I want to do it full screen. Let's make it full screen.
+Okay, so, this is a logo. And, yeah, it reacts to music, so you can see that there are some, yeah, blocks extruding.
+Then I can change to some Perlin noise. There could be, of course, many more different variants of the animation itself.
+But the nice thing is that I have this-- I have this patch. Where is it? It's-- this is number three, yeah.
+Yeah, but with 30 different patches, it's starting to get hard to navigate through it.
+But, yeah, this is the texture, like, just the-- just the mask.
+And, yeah, I have this mini patch that does this kind of animation from the texture, so I have a point cloud.
+And I just need to upload the mask.
+And then the rest of it is automatic, so I have a slider to change the color of the logo, the saturation on the other slider.
+Which, I guess, is really nice, because if the band comes and has a logo, then you just have to create this mask from it and upload it.
+And then they have some individual touch to their VJ-ing setup, right?
+Yeah, yeah, and you can do it in a minute, yeah.
+It's like the main thing right now is to, you know, upload the asset, change the thumbnail, because right now the thumbnails are just-- yeah.
+The thumbnail is just a variable with the texture.
+And this is, like, what I want to do next is do some kind of backend, like, to send the-- yeah, let's say you open it, you send this logo with some button in the UI.
+And so you don't need to hardcode it in the patch.
+So, like, basically I want to get rid of all these areas and just replace it with some generators.
+And then do it more dynamically, so I can upload the texture.
+I don't need to do it in the cables patch, but send it to some server and get it from the server dynamically.
+That would be more user-friendly to work with, yeah?
+Without going to the editor.
+This would actually be one of the perfect use and also test case for the standalone version.
+And then you might just have logo SVG or some place lying around.
+You just exchange the file and maybe pick from your local file explorer and then have it running offline.
+You don't need to upload somewhere.
+Yeah, yeah, I can't wait for it.
+It's like, this will be awesome.
+But the other way, I want to do it on the website.
+So you can go to the website and just open it in the browser.
+You can do this kind of visuals, you know, on some party like home party and just open it.
+I don't know, take a picture with your phone and upload it and then have some effects from it.
+But yeah, it's like also AI stuff is nice for it.
+Because let's say I have this kind of tree here.
+And the tree is also, there was a concert in the library and they have this kind of logo.
+So there's a tree growing on a book.
+And I wanted to do some visuals with this tree.
+And I didn't have to, you know, go and 3D model something or paint anything.
+I just took Stable Diffusion, uploaded the logo and I made some variants of it.
+Yeah, so this is one, there's another.
+And I have something like, I don't know, 15 textures on the same tree.
+And then I'm switching between those variants.
+And this is also nice because like, if you upload the mask, so if you just take a black and white mask, you can connect it to Stable Diffusion, generate it on the go.
+And if I have something like, you know, a mixer in the browser, and then if it's connected to the Stable Diffusion server, you could generate those kind of visuals like in the browser during the show.
+You don't need to prepare it before.
+But yeah, for this, I have some other demos, but I don't want to show it here because it will be a mess.
+But I also made this kind of connection that you can generate it with Stable Diffusion, and it's rendering as point cloud in 3D, and it's running in real time, basically.
+Yeah.
+OK.
+Yeah, interesting.
+So what's the plans on this patch?
+Are you planning to publish it eventually, or at least the setup?
+Yeah.
+Yeah.
+Yeah, I think--
+I'll be interested to have this as a test case for the standalone version.
+Yeah, I will publish it for sure.
+Like, yeah, I guess I could publish it right away, but I would clean it up a bit.
+And, yeah, I can publish it on cables, like, before it's perfect, because on cables, like, people, you know, can understand it.
+But I want to also improve it and then publish it on the website.
+So that's-- but it needs to go-- it needs to be more polished to get to, like, you know, to users, yeah, to be user friendly.
+Pretty tidy to me, to be honest.
+Yeah.
+What I mean is, like, I want to make it the way that you can just open it.
+Don't go to cables editor and just, you know, upload some files and be able to, you know, drag and drop, you know, this old interface thing, yeah.
+But that's-- yeah, the UI is more complicated than the patch itself.
+So the UI and the backend, I think, that's-- yeah, but that's-- that's some plans for the future.
+It's, like, I don't know, like, exactly what I do with it.
+But, yeah, I think I will publish it soon.
+And how many parameters did you-- do you bind to MIDI?
+Like, I guess you have some for post-processing or do you also have some for each effect or do you manage that?
+Yeah, so I have-- let's switch to some-- this one is nice.
+So I have some parameters that drive some basic controls for deck A and deck B.
+So this is alpha, scale, intensity of the effect.
+So right now it's not reacting to music.
+Then-- now it's reacting, yeah.
+Then I have seed, so it's, like, a different kind of noise.
+But what I want to do is to make a limited amount of sliders.
+Because when you have 20 different parameters to control for each effect, then it gets really messy, yeah.
+And I understand it because I wrote it.
+But if someone else, you know, is getting the controller and try to fiddle with it, then it's-- you know, you get the black screen and you don't know what's broken, yeah?
+So I have some, like, a few different parameters for post-processing.
+So this is universal and this is only for this mixing part, not for generator itself.
+Then I have global, like, rotation of it.
+So rotation works on both decks.
+And some slider for smoothing the animation.
+So if I have, like, yeah, if I want intense animation, I can-- I cancel the smooth, yeah?
+It's, like, this is zero smooth.
+And this is smooth one, so this is more-- it's not that, you know, it's not that dramatic, yeah?
+And, yeah, at the end, I want to, for example, for gamepad controls, I want to limit it to, like, four hot parameters that you can control with sticks.
+And then maybe add some sliders that you can-- that are not that crucial and not that, you know, dynamic.
+But you can control them on the UI itself, yeah?
+Of course, then it's a matter of, you know, connecting different controllers, get some automapping, like, you know, some JSON files with the different mappings.
+And this is the hard part, I guess, because it's working with my controller, but if I want to do it with other controllers, then I would have to do all the MIDI mapping and stuff.
+And stuff, this is, like, time-consuming thing.
+Yeah, especially for MIDI.
+For gamepads, it's actually always the same.
+Yeah, yeah.
+Yeah, nice, really great project.
+Thanks, thanks.
+And so, yeah, maybe one thing more I want to add here.
+I didn't manage to do it for the last concert, but I want to add Gaussian spreading.
+And, but yeah, I still have to do the sorting process.
+It's like, it's kind of working, but it's slow, so I'm not showing it yet, but I think I will handle it in some time.
+And I will add also Gaussian spreading to this mixer.
+Cool.
+So, do you guys have any more questions?
+No, I think we summed up everything pretty nicely.
+I like the rendering, I like the usability of it, and also the plug-and-play style, so you don't need anything except for maybe a halfway decent internet connection to just start VJing in the club.
+And if you make this public, it's also a pretty nice collection of good visuals to pick from, if you publish these as well.
+So, yeah, the visuals will be public, so it's like, I publish all my patches on Creative Commons, so public domain, so it will be free to use.
+But also, what I'm thinking about is to do, like, the NFT market for the visuals.
+So, but this will require some blockchain connection.
+So, what I'm thinking of is to open, like, make a standard that KBOOS users could use to make their patches work with this mixer.
+Okay.
+And then to just make some kind of, yeah, standardized parameters, and some connection to, connect it with the blockchain and read it directly from, from the NFT, from the interactive NFT.
+And that's, that's the idea I have.
+So then, everyone could sell the visuals and they could be used in this VJ mixer.
+Yeah, interesting.
+Actually, for the, for the structure of this whole thing and having, like, an interface to work with this video mixer, we might have something in the next release.
+Or we would definitely have something in the next release with the new sub patch-ups, basically, that can be shared.
+And everything, I think that's a pretty good, also, use case to work with that and test with that and then plug in different kind of visuals from, from everywhere into this general mixing structure setup.
+Yeah, yeah.
+It's like, in my case, I work with point clouds, but it can also work with shaders or anything, like, it's like any kind of, you can just copy paste cables patch, connect some variables, and it will work, yeah.
+Yeah.
+But yeah, I guess, like, restructuring this into different sub patches is something for the, for the next time.
+Yeah, yeah, for sure.
+For the time being, thanks for showing us around in this awesome patch.
+You said you will record a video of this in action.
+We will link this on YouTube.
+And once you publish the patch, we will also definitely link this on YouTube.
+For everyone listening or watching this on YouTube.
+If you have more questions or also something to show, come to our meetups on, on Discord.
+We announce them also on Discord.
+Every first Wednesday of the month.
+And we usually see something like this and cover the topics.
+And Pavel is also a regular and will answer questions happily, I guess.
+Right?
+Yeah, sure.
+I love the meetups.
+And I can also add, go to the Patreon and support cables, because cables is awesome.
+Thank you.
+Great.
+Thank you.
+Bye-bye.
+Thank you.
+Bye, everyone.
+Goodbye.

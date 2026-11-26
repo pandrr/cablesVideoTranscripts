@@ -1,0 +1,48 @@
+https://www.youtube.com/watch?v=XmOk70epdf0
+Hi there and welcome to another video on the Bitesize channel.
+Today I'll be showing you how to create a bloom glow effect inside of cables.
+I'd like you to pause the video and just make what you see here.
+Great, let's get started. First of all, click Render to Texture.
+Make sure MSAA is on 8 so we don't have any jaggies.
+Click the sphere and lower the radius so we're not stuck inside of some shape.
+Great, so now we're going to make a blurred channel.
+So I'm going to go and make an image compose up.
+Underneath this I'm going to add a draw image.
+And now I'm going to add a blur.
+I'm going to disconnect this from here.
+So I'm going to get the Render to Texture output, plug it into draw image,
+get the image compose output and plug it in here.
+Here we have the blurred result.
+So if I now click image compose, it's using the viewport size,
+which is, as we can see, 720 by 480.
+A blur really doesn't need to be this big as it's very expensive to use.
+So we click use viewport size to deselect it.
+I'm going to put the width and the height on 256 by 256.
+This is going to be our basic glow effect.
+Now I'm going to go over here.
+I'm going to make an image compose.
+Underneath of it I'm going to create two draw image.
+So the top draw image is going to have the original texture
+and the bottom one is going to have the blurred texture.
+So I'm now going to plug this back into here.
+We click on the blur and we turn it down.
+So now what we want to do is we want to put the blend mode on screen.
+I'm going to turn the blur from 10 down to 5.
+Now, as you can see, we've already got our basic glow effect.
+If I now click on draw image and change the amount, I can decide how much of this gets added.
+So this is very important to optimize your patch.
+If you want this to be dynamic, we could pull this out and say divide by 4.
+I'm going to copy this.
+And this is the width and the height of the canvas.
+So I'm now going to plug these into here.
+And now they're always going to scale along with the canvas size.
+So as you can see, if I change the size of this and click here,
+we get the resolution changing key and it still looks pretty good.
+So the last thing I want to show you is if you want to only selectively blur
+the brighter parts of an image, you can go between blur and draw image and add a luma key.
+Now, if we use luma key, we can add a threshold, which will only blur and glow
+the brighter parts of the image, which you can see here.
+So this was the basics of how to add a bloom glow effect into cables.
+I hope this video has shown you some cool new tricks.
+If you have any questions or comments, please feel free to leave them in a video below or on the forum.
+Thanks for your time. Bye.

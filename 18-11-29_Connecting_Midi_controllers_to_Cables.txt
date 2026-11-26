@@ -1,0 +1,101 @@
+https://www.youtube.com/watch?v=eDlaFD_d5lc
+Hi there and welcome to another video of Made with Cables. Today I'll be giving
+you an introduction in how to set up a basic MIDI controller with cables. I'd
+like you to pause the video and just build what you see here. Okay great let's
+get started. As you can see in the bottom left hand corner of the screen I have
+here a MIDI controller which is called a MIDI fighter twister. A MIDI fighter
+twister has 16 rotary knobs and these knobs also have a button which can be
+pushed on and off. So we're going to get started with just connecting this to
+cables and just explain some of the things that we can encounter along the
+way. First of all we need to make this device visible to cables this is really
+easy so I'm going to press escape I'm going to type in MIDI and then I'm going
+to look for MIDI input device which is here. This now appears inside of the
+patch and now go over here and I click device and I can see my device MIDI
+fighter twister has been recognized and I'll click this. Now what's going to
+happen is MIDI events will come out as events from this port here. So I'm going
+to pull down and let's say for example first of all I just want to get the value
+of this knob as it turns. You can see it there with the lights. So now I'm going to
+get the op MIDI value which reads a value from a MIDI knob. It's really easy with cables to get this stuff set up.
+So all I have to do is click the op, click on learn and now turn the knob and as you can see
+here it's now already connected. Really fast, really simple, very easy. Here we see the notes, here we see the channel.
+So now I'm going to pull down and I'm going to make a MIDI button. Now the MIDI button is going to happen when I press down on this knob here. So I'm going to click learn.
+click it in and as you can now see we now have this. As you can see when I release it we have the value false.
+When we hold it in it's true. So there may be times when you want to do something called the toggle where it doesn't go to false when you release it.
+So I'm going to show you how we do that now. So I'm going to make another MIDI value up right here.
+I'm going to do learn. I'm going to turn this and I have the second MIDI knob matched there. And now I'm going to grab another op called MIDI toggle.
+And I'm now going to click learn and I'm going to click the button in on the second one. And as you can now see when I click and let go it doesn't jump to false.
+We just toggle between the values. These are pretty much the only two behaviors that you would expect off a button with a MIDI controller.
+So why don't we get this data now and turn it into something useful. I'm going to just move this over here for a moment.
+So the MIDI fighter has values coming again which are just between 0 and 1. Now we'll always need to get these numbers and map them into something more meaningful.
+So I like to have my patches a little bit tidy. Some people like to have their cables all over the place. But when you're going to be using 16 values later on you might want to get rid of a few patch cords of very simple things.
+So I'm going to get the op called set variable. And this will basically allow me to send a value from one part of the patch to the other without having to use cables.
+So I'm going to use cables and I mean actually the cables inside of cables itself. So I'm now going to click on set variable and click here. I'm going to say create a new variable.
+I'm going to call this MIDI fighter knob one. I'm now going to repeat the same for the rest here. So I'm just going to do the other knob quickly. So I go down here.
+And I create a new variable and I call this MF knob two.
+I now need to do the same for the buttons. So copy paste this and put it here.
+And now I want it to be a little bit more obvious what's going on. So I click the set variable.
+I say create new one. I say MF button one.
+Now I'm going to copy paste this.
+And I'm now going to create one more variable. I'm going to call this MF toggle and I'm going to give it a number two because that's the knob here.
+This is just going to help play around with keeping track of things. If it's knob button or toggle two, one or three, I'll always know where it's coming from inside of the patch.
+So now I click OK. Let's click inside of the patch. Press F so we can see flow mode.
+So if I now turn this, we can see that the event is passed through, but we only have output here.
+If I now click this button, we can see that we have output here.
+If I turn MIDI knob two, we can see it's working here. And if I click it, we can see it's working there.
+So I'm doing this so I can just put this anywhere else I want inside of the patch later without having to worry about really long patch cords going everywhere.
+So now I'm going to press escape. I'm going to type in variable because now I want to read a variable value.
+So I want to first use this one, MIDI fighter knob one. So I click variable. I go over here and I select MIDI fighter knob one.
+Now, if I hold the mouse here and just turn this knob, as you can see, we're getting that value nice and easy.
+So now I want to use this to just rotate the cube on two axes. Sorry, I'm going to use this to rotate it on X and I'll use this one to rotate it on Y.
+So let's go through some of the problems beginners might hit. So now I'm going to put some rotation X.
+Rotation isn't going to really do anything because we expect values between zero and 360 degrees and this is zero to one.
+So I click in between and I type in the map range up. Now let's say I now want it to rotate from zero to 360.
+If I now turn the knob, the cube rotates. Let's say I want to do bigger values like 720. We're going to hit a little problem,
+which is a small step here is a big one there. As you can see, I'm turning it very slowly, but the cube is
+moving in a very jittery fashion. It actually looks like we've got a low frame rate, even though we don't.
+So one of the techniques I would use to fix this is actually the average interpolation up. It's a little
+tutorial about this on the bite size channel. It's three minutes long. I'd advise you to check it out.
+The easy way to think about this, this is just going to smooth things out. So let me just tidy this up a
+little bit. Average interpolation expects a trigger. I connect this and the divisor has a default value of
+five. So now when I turn, we get a much smoother value. By even putting it on two, all of a sudden
+that jittery movement is almost eliminated. So I'm just going to put it on four for now. Now the good part
+is I've now set up a chain to use for midi fighter knob two. I'm going to just select all of this,
+copy and paste them. I now click here on variable and I pick MF knob two. And this is pretty much the
+only pattern you'd have to repeat to set this up for multiple connections from your midi device. So I'm
+now going to map this to rotation Y. And now by using this and this, I can move the cube together.
+So that's the basic part there with getting this set up. So this is nice and easy. Map range is your
+friend. Average interpolation is a great way to smooth out jumps from small steps to bigger steps.
+So let's just zoom out a little bit of our patch, make a little bit more space.
+So now we want to use the buttons. So let's start with a really simple one. I'm going to get variable
+and I'm going to grab MF button one.
+Now, I'm going to go ahead and output in a value that's true or false. So there's a lot of things
+here you can try. I'm only going to focus on one or two. So bulletin number is a handy one if you just
+want to have absolute values. So if false comes in, the output is zero. If true comes in, the value is one.
+So I'm just going to connect this to the material, just to the red, just to demonstrate it really nice
+and simple. So as you can see, I push in the button and here the red value of the cube is changed. So
+that's one possibility. I'm now going to add a bool anim, which will animate between two values based
+upon a booling value of true or false. It expects a trigger. So I'm going to put that here. Now,
+if I click on bool anim, this is the value when it's false. This is the value when it's true.
+So I'm going to put the duration just on two, so it's easier to follow.
+And now I'm going to click the button in. And as you can see, we now have this problem.
+The true false is kicking in. It's only changing for a moment. So if I hold the button in,
+we change color. If I let go now, it'll change back. So this is why I showed you at the beginning,
+you have the momentary button behavior, which is midi button, or you have midi toggle.
+So if I now change this variable to read midify to toggle two, and I just press this button in once,
+as you can see, we change the value even when we release. This can sometimes be more of the expected
+behavior with what you want. So this was the very basics. We're starting with mapping midi inside
+of cables. As you can see, it's a pretty quick and painless process. And it really lends itself to
+enabling you to do a lot of things. The last thing I want to show you, which I almost forgot, is this.
+So I had a really big patch, which I'll show you in a minute, where I have this whole
+controller here matched in the way that I want. And this becomes a little bit big and unwieldy.
+So you can always go here, and you can select all of these, and then you can say create sub patch.
+Now I have a sub patch here, and I'm going to call it midi fighter main. Now, if I double click this,
+I go inside of it. And as you can see, we have a patch. I'm just going to move these things over here.
+As you can see, we have flow. And the best part is now, we pretty much set that up, and we probably
+won't want to change it anymore, because we're just receiving the values here. And these values are
+constant. And what we want to do with them, that's what we decide over here. So now I can just put this
+out of the way. And as you can see, the midi values still come in. This is a really handy way to just
+be able to tidy up your patch. I'll be giving out more tutorials in the future, with more advanced
+things that we can do with midi and midi controllers. I hope this tutorial has been educational,
+and taught you a lot, and showed you how quick and easy it is to start with getting a midi controller
+set up and running with cables. Thanks for your time. Bye!

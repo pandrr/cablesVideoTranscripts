@@ -1,0 +1,113 @@
+https://www.youtube.com/watch?v=1TwP5DQoef4
+hello this is Alex from cables.gl and I'm joined yet again by Stefan hey there hi so we're gonna
+look at another awesome export option from cables and I think this one is super neat and
+I guess it's a new concept for me because I usually just export a zip and then upload
+somewhere but this way is similar to what we did with Netlify as well but now we're working with
+github which everyone knows and that's like a huge repository of open source and closed source and
+private and public projects and with lots of discussions and things going on so pretty huge
+giant network of people and that's pretty neat that we can export directly from cables right
+yeah what we're going to do is export to github which gives you the option to have the your whole
+patch and your export in a repository on github and use version control whatever you want and then we
+also have the github as this neat features called github pages we're able to basically host a repository as a
+website so if you don't have a service and with netlify that might be a good way to to put your
+patch out on the web be it for previews for clients or also to then later on in github register your own domain
+and have your stuff there oh yeah that's right because I was still thinking like the old way of using github which
+is kind of this code repository which I guess also makes sense right if you make a project you want to share with
+people or uh show your cables projects just via code or maybe make some custom or user operators and then put them on github you can do
+that but we're gonna look at how to then turn this repository of your cables project into like an actual web page that then you can share and
+uh link to people that aren't gonna like run a web server for for hosting your project or something or or download and upload it somewhere they can just
+directly interact and use your stuff
+yeah um absolutely and um yeah let's get started so we got this nice patch here that we also used for the um last tutorials on exporting so we put it all over the web i guess
+and um yeah as seen before um we uh click on this menu and go to export and if you're the owner of the
+patch and um it's yours you see all these options and one of this is uh github and we have some links
+to documentation which also explains the whole process um again um but we'll walk you through it and we need a
+few um pieces of information that um we need so um this is all the fields that we needed
+they're gonna be retained so you do this once per patch basically um and we try to export this then
+cool so our project is ready but nothing else is ready like i have a github account that's pretty much it
+like yeah that's that's what we need at least right a github account yeah that's one of the first uh
+things um you register at github and then we have to create a repository on github so um free right
+github is free yes and all the pages stuff that we're um going uh looking into is also free um if
+you create public repositories which we now do i see um so let's switch to github and create a new
+repository so if you do this on github you're being presented with um this and there's how do i get to
+this like create a new repository is this something i access from my profile yeah um basically you go back
+so your profile will look like um this and then you have repositories and then this is new a big new
+button and then you go there i see thanks so now i'm um on this page and um there's only a few things that
+we have to um pick so um export with the red star yeah okay okay so um it says export tutorial is available
+so that name is fine um and then we um keep it public so we can later use um github pages and to initialize
+the repository um it needs some file in there it doesn't really um matter right now so we're adding
+an um a readme file um just an empty one and this then also gives us information about the branch as
+the default branch um but we'll keep all uh all of this in mind if we go once we've gone back to um cables
+so for now that's okay we're creating a repository and then github is creating this repository branches
+are kind of like versions of the same project folder you have on github yeah yeah different parts but um
+we're not really going into this i mean um i guess if you're on github you know all this git stuff um but
+for now and especially for um github pages um it's not it makes sense to just keep it um as is and use the
+defaults uh-huh so now we're here um and now we have a repository and now we need to create a way of cables
+to tell github that um it's actually me who's trying to put data into um this repository from cables
+okay to do this um we click on our um account setting on the top right and it opens and then we go to
+settings uh and then scroll down and it should say something like developer settings and there we go
+and click on personal access tokens which gives us some kind of password shared secret um that we're
+going to be using um and it's also really easy so we just generate this new token give it a name um
+export tutorial
+so that's the name of your key yeah yeah um and i will give it an expiration date or no expiration um you
+can basically pick and give the seven days in case i forget to delete this after um after this tutorial
+so after seven days for example if we use this key with cables then it will no longer work right yes
+okay and then uh we click this and um ripple um permission scroll down generate this token
+so now we got this token and as github says make sure to copy your personal access token now you won't
+be able to see it again so we're um copying it okay and i'm also copying this here just to make sure that
+i'm actually not really uh using uh losing it and then we're good to go so we go back to um to our
+repository to see the contents um go back a few steps um this is now my repository still empty
+right um with only the readme that we generated and now we're good to go back to cables sweet
+so here we are again and um this done again we go to export i'm the owner of the patch so i see the
+github um option and then i put in my name and also the exact name or from your github account right that's
+my github username and the repository name is export to tutorial which i also still have in here in the
+tab conveniently so yeah yeah and then branch as said is um default main we can keep this and subdirector
+we can also keep it um like this and this is the place where we need the access token so going back here
+um putting the access token in here and then we should be good to go so now we're deploying to github
+and quick question about this key a visibility i put this in into this project right so i would assume now
+um this patch on cables.gl has connection to github with this secret key password thing we generated from
+github that's but then if if i publish this uh patch on also cables.gl make the patch public
+people won't see all these export settings because they're not the owners of this patch that's right
+okay cool yeah awesome so i don't have to worry about like oh i need to delete my keys before i publish this
+on cables cool so now we export it we just saw the progress information and instead it's done so we
+can now switch back to github and basically just reload this page and see that all our stuff is in there
+super quick um so we also see okay the commit message as it calls is um set to export from cables gl um
+and that's basically it if you just want to um have your patch in uh in a git repository in a github
+repository and um now you have all these version control features and um whatever you want to do
+with git but that's only half of it um because now we have the option if um this is our repository and
+we just created it so it is ours we can go into settings and then go to this um thing it's called pages
+and then we can enable pages and for this we have to select one branch
+and we keep the root directory and then we save this and and theme we don't touch we just leave that
+alone okay yeah this um also and we have more options on custom domain and do https and whatever
+we just leave it there and um this will now give us um a ul your site is ready to be published at um
+this export tutorial that's my url so it's my username github io slash export tutorial so if i open this
+page let's see what happens um this is now saying for four size not fun um which is fine because um
+what we have to wait for is um github to actually publish the page there i see whenever you push something
+so whenever you export um it it will run uh what they call actions um and we see that um this is now
+working and is cute um so whenever you go to cables and press export and um this um export this action is
+being triggered automatically um just go here um and then it will deploy usually a minute or something
+kind of depends on the github servers but it should be really fast i see so now we have this and we now
+could go back to this site not found uh and just reload the page but also what happened on github now is
+you go back to the repository and this now says okay i have and github pages environment um where i see all
+my versions of the patch that i deployed this is the last um deployment or also first uh and now we can
+view this and there we go there we go that's awesome and i i well i assume i don't know if you know this but
+like i could hook up completely custom domain to this address as well i can just forward my url or
+something to to this uh repository so i can host my entire website but have like a domain i purchased
+or something absolutely so if you um this is then on github settings so check out their features and
+they're also um working on this a lot but yeah this would be the place where you put in your custom
+domain um this then also has a link to their documentation cool and so do we right so um if
+i go back to export and export this to um github again yeah um then we have um this link to the
+documentation um as you can see all my um information is in there so whenever i want to update i can just
+deploy this again wait for github to complete this action um and have the page updated but
+let's take a look at the documentation so we're going here and this basically has more explanation
+also gives some um some things you need um before walks you through um creating this access token and
+explains some of the parameters a bit more um sweet so yeah that looks way easier than i thought it would
+be it's cool yeah i remember using git like git commands and that uh app github had it was uh pretty
+fun but this is uh super easy now especially to just publish a website on github yeah it's a good way to
+get like your um patch into uh any repository on github basically and this um github pages um feature also
+makes it really easy to um update and present anything on the web if you don't have a web server
+yeah super nice
+cool i guess that's it like that's awesome oh no definitely try this now
+yeah um do try um if you have questions um or um any problems um encounter any roadblocks just um
+put it in the comments and we um we try to be really fast to answer but we usually are yeah
+yeah or uh come to our discord and uh ask us there or or show us your github page hosted
+made in cables that's it that's it thank you bye bye

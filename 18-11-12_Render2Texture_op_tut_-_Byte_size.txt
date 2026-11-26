@@ -1,0 +1,28 @@
+https://www.youtube.com/watch?v=4mWkws5fn5w
+Hi there and welcome to another video on the Bytesize channel. Today I'd like to introduce
+you to the Render to Texture op which turns the current scene into a texture which we can then
+use to manipulate in different ways like with effects. So first of all I'd like you to pause
+the video and just build what you see here on the left hand side with all of the default settings.
+Okay let's get started. First of all I want to make a Render to Texture op by clicking in between
+the scene now disappears because it's a texture here. I'm going to go here and I'm going to make
+a full screen rectangle. This expects the texture out from Render to Texture. Click and drag, let go.
+We now have the scene here. As you can see I have some jagged lines. If we click the Render to Texture
+op we can turn on Anti-Aliasing onto 8 and now the image becomes smoother and sharper. With the Render
+Texture op we can also use the Viewport size which then defines the Texture size here or we could disable
+it and type in our own values like 64 by 64. Now I'm going to turn on Use Viewport size for now.
+Okay so this might not make it clear to some people what's happening so let's just actually get rid of
+the full screen rectangle. Now what I'm going to do is I'm going to make a basic material which accepts
+a texture input. I'm going to click and drag and I'm going to put it onto Texture and this material
+I'm now going to apply to a rectangle. Okay I now want to be able to manipulate this so I click here
+and I type in Orbit Controls. Orbit Controls is an op which allows you to click and drag here and then
+manipulate a scene. Now as you can see this entire scene here with the random cluster is being turned
+into a texture which we're then applying as a material to a shape. I could get the Orbit Controls,
+take it out and now put it here and let go and now when I click and drag I'm moving the random cluster
+but I'm not moving the rectangle. So we could also go a little bit further now and we could apply
+some effects. So if I go here I can make an image compose op. I can then do draw image.
+Now I can get the texture output from here. I can plug it into draw image. I can get the output from
+image compose and plug it here. We have the same setup as before and this is just to show one last
+thing before we wrap up. I'm going to get a blur effect and as you can see I've now blurred the image
+and I can change it here. This is a basic introduction to the render to texture op. I hope this tutorial has
+been handy for you. If you've got any comments or suggestions please feel free to leave them in the video
+below. Thanks. Bye.

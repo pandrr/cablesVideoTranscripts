@@ -1,0 +1,30 @@
+https://www.youtube.com/watch?v=tFM2Ixf-ixs
+Hi there and welcome to another video on the Bytesize channel. Today I'll be giving you an
+introduction to the point material and point cloud from ArrayOps. I'd like you to pause the
+video and just make what you see here. Great let's get started. So right now the point material is
+designed to be used with the point cloud from ArrayOps but we don't see anything. That's because
+point cloud from Array expects you can guess an array of data. So let's go to random array 3x.
+This is going to give us xyz coordinates. Great so now we've got something on the screen. I'm going to
+click and drag with orbit controls. As you can see we've we've got points. So let's click the point
+material up and just run through some of its parameters. So here we have point size which
+changes the size of the points and this is really designed to be used with random size. So these two
+kind of work together. Random size can add like a bit of an organic touch to things. So as you can
+see if we go further away or closer the size doesn't seem to kind of like add up. So if we now enable
+scale by distance if we zoom away let me just make it a little bit bigger. If we now zoom away it becomes
+smaller and if we come closer it becomes bigger. So it's kind of like a perspective thing. So that's
+another one. Here we have the color picker. It speaks for itself. We can use this to pick a color
+for the points. So now we're going to look at something really interesting. Point material has
+a texture input. So let's make a texture up and let's go to my favorite picture which you all know
+is the beach. I'm going to click this and as you can now see we have the texture of the beach
+here on all of the points. We can also click on the point material. Click colorize texture and we
+can add this color that we pick here to the texture down which is kind of cool. And last but not least
+and this is like a really handy thing is the texture lookup. So if we click this now as you can see
+everything gets a different color. So basically what we're doing is we're grabbing a color by grabbing a
+random color from this texture and then we're assigning it to one of these points. And one
+other thing that we've got here is round. So if we turn this off everything becomes square which just
+can be really handy to get like a cool effect with stuff. So as you can see we can go here we can now
+put this on 300 and make more of them. We could go to the point material change the opacity so that they
+start to blend through each other. So the point material and the point cloud from ArrayOp are two
+really cool ops which allow you to just generate a lot of data there on the screen and it's very fast
+and efficient. So I hope this video has been educational and informative. If you have any questions or comments
+please feel free to leave them under the video below or to post them on the forums. Thanks for your time. Bye!

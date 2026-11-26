@@ -1,0 +1,87 @@
+https://www.youtube.com/watch?v=zRorQ_ah2eg
+Welcome to the third part of our timeline animation tutorial series.
+So in this part we want to talk about clips.
+So clips are reusable animations.
+So you define an animation or a curve once
+and then you can reuse it at multiple parameters
+or multiple other things that you want to animate
+and you can change it and it will change everywhere.
+And for this we need a new operator
+and this operator is called anim.
+So just anim.
+And the difference here is until now everything that we animated
+was a parameter that was visible directly.
+So the animation was bound to the parameter
+and was fixed on the timeline.
+So at point x the animation had always the same value
+every time you replay the timeline.
+So with the anim.op we can go around this
+and reuse this animation at any point in time
+on a different parameter.
+So let's try this out.
+So I create the anim.op and the first part
+the value part was already animated.
+So let's play around with it.
+Just go somewhere, create another key
+and create another key again.
+Make this a little bit smaller.
+And if we click, if we want to see.
+So we have the graph view, right?
+So we see the curve here.
+But we can also see the curve in the track view.
+And we can do this by clicking the track.
+So this is the port name.
+And then you have this little size button on the right.
+And when I click this, you will see,
+we will now see the curve here.
+And I will just enable this
+or just toggle this for both of our tracks here.
+So for our anim.op and for the X animation.op.
+Okay, so now we have this little curve here in our anim.op.
+So we want to reuse this.
+To do this, we have to give it a name.
+So I click the anim.op and check the clip checkbox here.
+So then the clip will be available to other operators.
+So let's give it a name, for example, fade in.
+And now when I change the interpolation method.
+We saw it before.
+There's like this fifth type of interpolation method.
+So when I click this, I get this little drop down here.
+And I can choose clip fade in.
+So this is our fade in clip here.
+And now you will see the exact same curve that we have down here.
+We will see again here.
+So now when I change this animation.
+You will see this curve is just changing.
+So I can just adjust this animation again.
+And add more keyframes.
+Change the curve of this animation.
+And you will see this is also happening up here.
+And you can go further from that.
+So I can just go here.
+And for this key I also want to choose interpolation clip.
+And then change fade in.
+And now you see we have the same animation again.
+And if I drag the next key around.
+You will see the animation will be stretched.
+So you can select exactly the time length that you want for this animation.
+And then in the future we will extend this.
+So you can have more repeat modes.
+Or have one repeat.
+Or multiple repeats.
+Or whatever.
+And then you can adjust your clip.
+Like how it's displayed here.
+And yeah.
+So you can also, for example, create another clip.
+So let's call this fade out.
+And now I can change this clip that I used in here to the out clip.
+And just quickly reverse it.
+So now you see at this point we are using this animation here.
+So yeah.
+You can just easily switch between clips.
+And stretch them.
+And change them.
+And everything should be very flexible to use this way.
+Okay.
+Thank you.

@@ -1,0 +1,65 @@
+https://www.youtube.com/watch?v=wzpKR7vbCXg
+Hello and welcome to another Cables tutorial.
+My name is Pandor on Cables and today I want to talk about animation.
+So in Cables there's a lot of ways and operators to create animations, mostly procedurally,
+but sometimes you want to have full control over your animation.
+What is happening, when is it happening, how fast is stuff happening.
+To have this full control we have the timeline and you can create a keyframed animation with
+this to have this kind of control.
+So what we are looking here is a little demo animation, a little example created by Frank
+for the timeline, so let's have a look at it.
+So I will just open it in the editor and down here we see the timeline and we see a lot of
+stuff so let's inspect it and let's have a look at what is happening here.
+So the biggest area down here, this shows the keys and the animation tracks.
+So those lines here, those rows are animation tracks and they are mostly, or they are all
+animated parts.
+So when I move my mouse here and click them you will see we are focusing an operator.
+So this is the transform post main operator here.
+And you see those dots here, this means those parts are animated.
+And we see all the animation data on the right side and we see keyframes here.
+So those little dots and squares and whatever are our keys in the animation.
+And they were all set by hand basically.
+So what else are we seeing here?
+So in the top line here, this is the control panel of the timeline.
+So you can press play or rewind or jump from key to key, stuff like this.
+You can, you can zoom in and zoom out.
+You can switch between multiple views.
+We will look at this later and all of those buttons we will look into detail later.
+Then we have what we see here, this is a complete overview over our animation.
+So you see, you basically see all the keys in our animation and where in relation we are
+with the cursor of our full animation length.
+So this right here symbolize our last key and this is our first key.
+So this is always showing the whole animation.
+Then we have the scrub area here.
+So when I move my mouse here, it will change the current time of the patch to that time.
+And the time you see here, this is our cursor or our play head.
+And it right now it says 1.5 seconds.
+So we also see this here.
+This is our time info display, our time display.
+And when I click this, we can switch between frames and seconds.
+So on the right, you saw it also changed to frames.
+So now we see the frames of our animation or like the time is displayed in frames.
+So right now it is set to 30 FPS.
+The rendering is always way higher.
+Like the rendering is based on your display, how fast your display is.
+But the keys in your animation, they snap to 30 FPS right now.
+We can change this with the configuration.
+But for now it's 30 FPS.
+Okay, so this means when I move my mouse here, it will always jump to full frames.
+Okay.
+So when I select some keys, we will also have on the right side, we will have information about those selected keys and can change stuff.
+And we will look into that later.
+But yeah, so this is important to remember.
+And we can also click on an animation here.
+And then we see information about this animated port.
+So this animated port has two keys.
+So when I press +Y, we will see this port has 10 keys and they are, like the whole animation, this port is 3.75 seconds long.
+And you can, you have a lot of functions here to help you work with this animation.
+Another thing is when you select some keys, you get this little box down here, this little control thing.
+We call this drag area.
+So when I click this and drag around, I can move all those keys around.
+I can also click the right side of it and then I can just scale the whole animation that I selected.
+So this is really handy for adjusting position and scaling all the keys of multiple ports.
+So that's really handy.
+So these are the main components of animation of our timeline.
+So let's create an animation by ourselves.

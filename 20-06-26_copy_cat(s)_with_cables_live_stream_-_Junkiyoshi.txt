@@ -1,0 +1,3045 @@
+https://www.youtube.com/watch?v=tu49qg8BpBU
+that great thanks panda okay so I had a lot of fun with that I think it was just
+over two three weeks ago yeah that was a really interesting stream I really
+loved it so we're gonna start again in a minute in the meantime I just want to
+say and so the copycats cables that I'm gonna do tonight let me just grab a link
+it's by an artist I really like I hope I'm gonna say his name correctly young
+Kiyoshi I already did two copycats with cables tutorial videos on YouTube from
+two of his pieces I don't know why I just really like the minimal aesthetics and a
+lot of them seem really simple but to make them is not as easy as it seems so
+tonight I'll be doing my best to recreate some of his things inside of cables so
+I'm just gonna give us like another minute or two before we before we get
+started right now just kind of setting up my desktop environment a little bit so I
+can see the stream hey family good evening thanks for joining us yeah I just got a
+brand new update from Windows 10 which magnificently managed to force me to have
+to use edge for a little while and restart some stuff with my computer just
+before the stream always good but we're back in action and everything seems to be
+working okay okay so basically what I'm gonna do is I'm gonna start with this one
+this one tonight and then I'm not too sure I opened a couple of tabs up was somewhere I was like what that should be possible to do because you know of course I don't want it to be boring for anybody to watch because watching me get stuck on something really heavy and technical well yeah there's got to be a fine line between watching Andrew suffer and pulling off something creative and I'm hoping everybody tonight is going to be able to help me out when I get stuck with this stuff.
+I'm already racking my brain a little bit with how to do this one right now I think I've got a clue and as you can see I'm
+completely and completely completely and utterly unprepared for this which is just the way it should be with copycats or cables because then you see how everybody can struggle with creating stuff but eventually do some problem solving and pull through in the end all right we're gonna give it just one more minute before we get into it it's really warm today in my room so you're gonna see me move around a lot to get some
+air in here and if you hear the occasional car horn I'm sorry this stream I have to do with my window
+open basically all right let's hope the car alarm doesn't go off underneath the window again if it does I'll be muting the microphone until it's over because you do not want to hear that
+all right um I say without further ado let's get started so this is the one I'm gonna make right
+right now so I think it's just a good idea to try and make like one line of this first
+um yeah let's get started so I'm gonna go to create can you guys please help me remember to save the patch
+um when I'm done with it because like last stream I forgot to save two or three of them and I had to
+rebuild them and by the way um if you missed it we did a blog post based upon the last copycatcher cables
+uh we've got like uh one mini patch on the blog of everything that we did with a link to the web page
+that's a format that I really like to put them together uh so I'll be doing that again after this
+so um yeah if you were if you missed the last stream or you wondered oh how was that done just pop that open
+later on all right so we're gonna do this so we're first of all gonna start with a main loop
+okay and then what I'm gonna do is we need a white background okay so I'm gonna go here I'm gonna go
+clear color and I'm gonna put this start I'm gonna leave this microphone down a bit it's blocking my view
+there we go okay so um for this we're gonna use believe it or not meshing sensor that's gonna make
+life a lot easier and there's no shading going on so I can just use a basic material the color is black
+um so I'm gonna grab a mesh instance and I don't actually want any perspective so I'm probably gonna
+use orthogonal but I'll do that again in a minute so right now I'm just gonna use a rectangle as the
+geometry um and I'm gonna plug this into here and let's make the width less I don't know let's sort of
+put two so point one for now all right let's just like get a line set up right so we're gonna go here
+so I'm gonna just use the array uh can I uh control one control two then I can stay in full full screen
+mode that's great um so I want to just generate coordinates from zero to uh one basically so I'm
+gonna put this on zero to one mode and this is gonna go into the x component left to right so I'm gonna do
+array pack uh free x y z so I'm gonna get that and I'm gonna give it this um so the y component is zero so I'm gonna put it on number zero and what I'm gonna do is I'm gonna get the array length out and I'm gonna make sure that all of these match up and this is gonna be the same for y and z basically so I'm just gonna put this in here and there and I'm gonna make sure that all of these match up and this is gonna be the same for y and z basically so I'm just gonna put this in here and there and there and I'm gonna make sure that all of these match up and this is gonna be the same for y and z basically
+match up and this is gonna be the same for y and z basically so I'm just gonna put this in here and there and I'm gonna plug this into positions so this is zero to one but we're in 3d space so let's say we're going from minus one to one so we just need to do a little bit of math maybe I should even add this mode to the array up like minus 0.5 to 0.5 because this is something
+I always end up doing so we do array subtract so we're going to go from 0 to 1 we're going to subtract 0.5 now we go from minus 0.5 to 0.5 and then we're going to do array multiply and we're going to put it on 2 ok so now we've got the basic thing there and we need to have more of these so I'm going to put it on say 20
+and we're going to put this on say 3 ok close enough for now
+so first of all let's just get them moving up and down first so that's something we need to do with the y component so they just look pretty random
+okay so it's got like this it moves stops moves stops so let's pull up main loop let's grab a trigger limiter
+um I don't know let's just put it on 2000 milliseconds so every 2000 milliseconds we're going to get a trigger
+and then I'm going to say trigger random number and I'm going to say minus 1 to 1
+okay
+so what I want to do is I want to throw them through an array sin because I'm lazy and then I want to give them all a random number
+basically so I'm going to go here and type in I'm going to get the erase sin object this doesn't have to be this because this is just zero so erase sin will do nothing
+so we're going to pull this out and get a random numbers array with the same length so we're going to get just 20 random numbers here
+um I want the max to be 3.14 which is something like pi and I'm going to throw that in there
+okay
+so we hit the first problem
+um let's
+yeah so we've got this number it's going to change
+let's plug this into the smooth up
+um this requires
+um a trigger
+to work
+so now we're going to get like this um smoothed um number as it jumps from one value to another
+so I'm going to just put this on 12
+I want that curve to be a little bit uh longer as we can see there
+so
+now what I do is I get an eraser
+because the erase sin is going to make every number go between minus 1 and 1
+and I'm going to plug this in here
+okay so we need a way bigger number
+minus 10 to 10
+that's too much
+minus 4 to 4
+okay
+so um as you can see
+in his original thing it's like they only scale out from the center
+so if I go over here
+um I'm going to
+a lot of people really don't know this
+and it's so good
+to ponder at this long time
+I'm going to use it all the time
+so align geometry
+align the geometry
+changes pivot
+center
+origin point
+and the example
+the example patch is really good
+at showing this
+so I'm going to add this
+uh
+and it's the y component
+I'm going to say
+min
+I thought
+ah
+hmm
+okay
+I'm doing this completely wrong
+let's go over here
+see I'm just warming up with the stream tonight
+so
+that's all
+good with the position
+this is for the scale array
+of course
+all right
+so
+let's grab this
+so this is an array of zeros
+so this is x y z
+going from
+let's say minus three to three
+this is y and z
+there and zero
+just to
+just to clarify that
+okay
+so it's the scale
+that I've got to work with
+it's okay
+early days
+the night is young
+so
+um
+I'm going to
+create another array
+so I want them to have a scale
+of
+one
+so I'm going to go here
+put a number
+default value
+one
+and let's just plug that in
+there
+there and there
+just to check
+that it's going to work
+and I just want to show you now
+oh sorry
+I just want to show you now
+the line geometry
+before I change it all
+so y is now a minimum
+we can put it on
+center
+or max
+so it's moving
+the center of origin
+basically
+all right
+so
+um
+this whole thing here
+that I was doing
+on the position
+actually has to happen
+on the scale
+so
+it's going to
+scale from the center of origin
+which with the rectangle
+is normally in the middle
+but now we've moved it
+down to its minimum point
+so it's getting the
+the
+the
+the height
+of the rectangle
+and it's saying
+right
+this is where I scale from
+this is my center of origin
+so if I rotate it now
+it's also going to rotate
+like this
+it's not going to rotate
+from
+the middle
+just a little
+explanation there
+so
+let's now plug this
+into
+there
+voila
+that's kind of close
+um
+too big though
+so
+I'm going to go to
+the erase in
+and I'm going to put
+the amplitude on
+the 0.5
+okay
+is this perfect
+no
+so let's make those
+random numbers
+less
+you know
+we could change the seed
+here
+until we find something
+that we
+like
+let's put it on
+minus one and one
+because we want it to be
+underneath
+and above
+basically
+alright
+now the thing is
+this isn't going to
+always be
+exactly the same
+because the erase sum
+is getting a different number
+and that's fine
+actually
+I could try and make this
+more tweaked
+but
+you know
+it's just to
+get stuff basically
+working
+tonight
+so minus five
+five
+you know
+put smooth
+on a
+longer number
+just to make it
+that feels a little bit
+better
+let me just save for a moment
+okay
+ah yeah
+panda
+I just saw it
+right now
+yeah
+it's only scaling
+with no position change
+definitely
+so
+this should be
+possible
+should be able to
+just do this
+with a repeat
+pretty sure
+so let's do a
+transform
+first of all
+let's just scale
+everything
+just so I've got it
+on the screen
+for now
+let's put a repeat
+up
+there
+let's put it on
+free
+and then we've got
+this index
+put this on
+transform
+y
+ah
+of course
+all right
+sure
+so we have this
+index
+I'm going to say
+multiply by
+a small number
+you know
+everything could go
+wrong tonight
+ladies and gentlemen
+it's a
+it's a copycat
+live stream
+okay yeah
+I'm not
+why
+what am I missing
+here
+you know what
+this would cause
+a problem
+with the repeat
+up
+obviously
+hmm
+I was really sure
+that I could use
+repeat
+with
+with
+the mesh
+instance
+of course
+this is true
+they're not getting
+offset
+on the
+y
+axis
+so
+that's it
+so they're all
+there
+they're all just
+on the same spot
+I think
+I could be horribly wrong
+here
+let's try this out
+oh boy
+it's already going wrong
+first patch in
+hmm
+so actually
+let's get rid of
+this for now
+I would expect
+this
+click
+let's get repeated
+says panda
+okay
+yeah that's true
+aha
+thank you panda
+that was it
+okay
+there we go
+all right
+so
+yeah let's just
+put that on
+one
+for now
+we'll grab that
+transform
+I think I need to
+put this on
+free
+okay
+we're getting
+closer
+thanks for that
+catch
+panda
+appreciate it
+okay
+I'm not trying to
+make this perfect
+right now
+everybody
+let's put this
+on say
+30
+oh look at that
+we already
+get a really
+cool
+different look
+we can turn
+this up
+let's put it
+on
+five
+for now
+and
+basically
+we can now
+if I'm correct
+just get
+this number
+and plug that
+into the random
+seed which should
+be a constant
+no
+that was weird
+I think
+that was
+because of
+the smooth
+op
+if I plug
+this in
+here
+no
+okay
+that is
+weird to me
+because it's
+working correctly
+there
+but not
+there
+why is that
+maybe
+I can do
+it
+differently
+maybe I can
+just add that
+to the array
+sum
+yeah
+that's
+so
+we're gonna
+add this
+to
+that was
+it
+so we're gonna
+get a
+zero is always
+different
+thank you
+yes ladies and
+gentlemen
+zero with
+the seed
+is always
+different
+so if we're
+gonna go
+here
+well actually
+I'll just do it
+this different way
+for now
+thanks for pointing
+that out
+panda
+so you know
+I've got this
+repeat number
+that's
+that's already
+an offset
+right
+you know
+so I can
+add this
+number here
+and that's
+just an offset
+to everything
+going on
+and if I
+now add
+this one
+number there
+from smooth
+there we go
+follow up
+it's kind of
+close
+I mean
+outside of
+the way
+the page
+is put
+together
+so I
+want to
+zoom like
+this
+that's
+messing that up
+a little bit
+let's
+let's
+just
+I'm
+not gonna
+put too
+much work
+into this
+doll
+whoops
+let's put
+that there
+and
+let's
+do this
+multiply
+there
+oh yeah
+okay
+alright
+yeah I
+could do
+this better
+where it
+goes from
+the center
+but I
+don't want
+to put too
+much time
+into that
+right now
+but this
+is looking
+okay
+this is
+close enough
+for a copy
+count
+and this
+is actually
+a pretty
+surprisingly
+clean patch
+all things
+considering
+okay
+so
+yeah you
+know we
+could go
+here and
+you could
+do this
+min or
+max
+it wouldn't
+really
+matter
+I'd say
+this one's
+pretty close
+I mean
+this
+the one
+from him
+is a lot
+more
+smoother
+mine
+has a lot
+of differences
+so I think
+if I lower
+the frequency
+this has a lot
+more of a
+synoidal
+like look
+to it
+and I think
+it's like
+how much
+this goes
+out
+you know
+I could get
+like a
+I could get
+like a
+sin based
+array
+and add
+that
+to
+something
+so I've
+got a
+sine curve
+and I add
+that to
+this
+but I
+think
+that's
+just
+going to
+overcomplicate
+the patch
+right now
+but maybe
+I should
+just do
+it
+because
+reasons
+so let's
+grab this
+one
+zero to
+one
+let's plug
+it in
+there
+let's just
+try this
+first
+okay so
+look we get
+this right
+so we're
+going to
+turn this
+up
+and we're
+going to
+pull
+out
+the
+frequency
+see
+there we go
+and I'm
+going to
+grab pi
+and I'm
+going to
+put it
+on
+4
+okay so
+we get
+this
+right
+and then
+what we
+do is
+we do
+get this
+one
+yeah that
+was it
+okay
+this one
+we plug it
+in there
+and we do
+array
+math
+array
+and what
+we're going
+to do
+is we're
+going to
+add
+that
+to
+this
+to get
+more of
+that curve
+look
+that he's
+got
+that looks
+more like
+it
+and let's
+put this
+in the
+0.5
+already
+I could
+put this
+on 0.25
+so yeah
+you know
+we could
+tweak these
+two
+things now
+to look
+better
+we can get
+a lot of
+different looks
+with multiply
+so you know
+we have to
+put this
+on
+yeah
+hey
+I think
+I think
+that's
+more like
+it
+no
+yeah
+there's
+like
+more of
+these
+sign
+based
+yeah
+you can
+see
+there's
+a sign
+function
+kind of
+in there
+even though
+it's
+noise
+so
+yeah
+I'd say
+I'd say
+that's
+close enough
+for now
+I'd actually
+say that
+was
+pretty cool
+Banda
+thank you
+so much
+for the
+catch
+it's
+kind of
+this is
+that stuff
+where you
+sometimes
+sit there
+and go
+half an
+hour
+long
+like
+why
+isn't
+this
+working
+and then
+you find
+that one
+thing
+so
+that's
+great
+alright
+so
+I'm gonna
+save this
+one
+sorry
+patch
+settings
+let's call
+this
+kiyoshi
+copycat
+one
+I'm gonna
+save it
+I'm gonna
+go here
+I'm gonna
+I'm gonna
+do a good
+job
+with this
+tonight
+and save
+myself
+work
+for later
+and I'm
+gonna do
+this
+alright
+should I
+just like
+make this
+thing
+public
+like right
+now
+or should I
+tidy it all
+at first
+what do you
+ladies and gentlemen
+think
+then I'll
+publish it
+later
+no problem
+okay
+alright
+so
+next one
+and I only
+I went
+through his
+page and I
+just picked
+load quickly
+before we
+started
+so let's
+go on to
+the next
+one
+and you
+know
+try to
+pick like
+two or
+three at
+the beginning
+which wouldn't
+be too
+impossibly
+difficult
+to have
+the small
+successes
+as we
+say it
+here's
+one
+alright
+I would
+love to
+do this
+one
+with
+textures
+completely
+possible
+with the
+rotate
+texture
+up
+with
+a
+multiply
+texture
+but I
+would not
+know
+how to
+create
+each
+square
+of that
+to fit
+within
+one to
+three
+values
+which is
+actually a
+really cool
+idea
+for an
+op
+so we're
+probably
+going to
+do
+this
+with
+a
+mesh
+instancer
+though
+that would
+make it
+really
+hard
+to
+do
+the
+balls
+there
+on
+the
+end
+alright
+I might
+not pull
+off
+those
+circles
+on the
+end
+basically
+maybe I
+can
+let's
+let's
+first
+of
+all
+try
+and
+get
+this
+thing
+set
+up
+alright
+so I'm
+going to
+do
+save
+and let's
+do
+save
+as
+two
+alright
+so we've
+got a
+backup of
+the old
+one
+and
+ok
+now
+you know
+I'm
+going to
+just
+delete
+quite a
+bit
+of
+this
+right
+now
+because
+it's
+just
+going to
+make
+life
+easier
+because
+this
+is
+just
+my
+default
+starting
+thing
+so
+let's
+get rid
+of
+the
+repeat
+I
+don't
+need
+that
+let's
+get rid
+of
+this
+and
+I
+don't
+need
+this
+so
+what
+I
+need
+is
+the
+circle
+up
+up
+stuck
+gl
+meshes
+draws
+a
+circle
+great
+let's
+get
+that
+let's
+put
+that
+in
+and
+what
+I'm
+actually
+going to
+do
+is
+I'm
+just
+going to
+disconnect
+all this
+and just
+plug it
+to the
+side
+for
+now
+so
+let's
+go to
+points
+points
+is when
+you want
+to have
+multiple
+points
+typing
+points
+and you
+normally
+get all
+the
+ups
+like
+points
+cube
+points
+plane
+points
+circle
+so
+you've
+got
+like
+we've
+got
+one
+which
+lets
+you
+do
+this
+in
+2D
+I
+just
+always
+use
+points
+cube
+and I'll
+show
+you
+why
+so
+I'm
+going to
+plug
+this
+into
+positions
+and
+let's
+add
+an
+orbit
+controls
+for
+now
+I'll
+get
+rid
+of
+it
+in
+a
+minute
+just
+want
+you
+to
+be
+able
+to
+see
+this
+in
+3D
+so
+we've
+got
+these
+5x5x5
+circles
+so
+you know
+if I put
+this
+on
+4x3x2
+1
+great
+now we've
+got a
+grid
+so
+let's
+just
+say
+this
+is
+20x20
+20x20
+cool
+let's
+reset
+the
+orbit
+controls
+and
+let's
+use
+the
+transform
+view
+up
+this
+allows
+us
+to
+transform
+the
+view
+matrix
+so
+I'm
+going
+to
+move
+it
+back
+and
+we
+have
+the
+scale
+here
+on
+something
+really
+small
+so
+I
+always
+try
+and
+keep
+my
+scale
+on
+1
+you
+want
+to
+know
+what's
+going
+on
+there
+so
+let's
+just
+put
+it
+like
+this
+for
+now
+we
+have
+this
+offset
+on
+put
+on
+zero
+cool
+okay
+so
+we
+go
+to
+the
+circle
+and
+we're
+gonna
+tweak
+that
+in
+a
+radius
+to
+go
+up
+all
+right
+um
+I
+think
+I already
+shot myself
+in the
+foot
+here
+so
+I'm
+just
+thinking
+like
+how
+can
+I
+how
+can
+I
+make
+this
+three
+quarters
+of a
+circle
+all
+right
+yeah
+we're
+gonna
+we're
+gonna
+just
+cheat
+why
+would
+I
+do
+this
+for
+mesh
+this
+is
+just
+making
+life
+hard
+there
+is
+no
+cheating
+in
+the
+realm
+of
+the
+copycats
+okay
+we're
+gonna
+get
+this
+rectangle
+yeah
+okay
+of course
+now
+now
+I get
+it
+this
+this
+makes
+sense
+0.8
+0.8
+I'm just
+making it
+small
+so we
+can
+see
+each
+rectangle
+right now
+is it
+percent
+okay
+panda
+thank you
+so yeah
+panda was
+right
+I could
+use the
+percent
+I'll just
+show you
+quickly
+yeah
+I work
+here
+but we've
+got so much
+stuff I can't
+remember it all
+I'll just show you
+quick for the sake of
+the stream
+so
+I wouldn't want
+panda to feel
+not listening
+and just
+caught between
+everything
+there we go
+and percent
+thank you panda
+look at this
+all right
+so the only
+problem I've
+gotten now
+ah this is so
+this is so
+so it's those
+rotations with
+the two
+um circles
+on the end
+right
+like there's
+two ways to
+do this
+if I would
+just do
+this now
+with
+mesh
+instancer
+it's
+really quickly
+and
+um
+no no
+panda
+please don't
+shut up
+this is the
+whole idea
+it's great
+so
+panda's
+saying
+this is for
+the video
+you can also
+merge and
+transform
+geometries
+to get the
+dot at
+the end
+so I'm
+just wondering
+if merge
+geometries
+will work
+with that
+circle
+um
+transform
+geometries
+do we
+have a
+transform
+geometry
+yes we do
+oh this is
+this is going
+into unknown
+territory
+right now
+um
+hmm
+ah well
+I've never
+used this
+one before
+okay
+um
+let's
+let's just
+do this
+so we're
+gonna go
+to
+merge
+geometry
+geometry
+geometry
+merge
+let's do
+that one
+first
+um
+and let's
+get
+um
+so that's
+the circle
+we need
+another circle
+so you know
+what I'm
+just gonna
+unplug this
+for now
+I'm gonna
+I'm gonna
+just check
+that I've
+kind of
+like got
+this
+correct
+so I'm
+gonna grab
+the circle
+right
+this might
+get messy
+for a minute
+let's get rid
+of that
+rectangle
+so I
+just want
+to make
+sure
+I'm
+doing
+this
+right
+and I
+think
+I don't
+want to
+do it
+with
+everything
+kind of
+plugged in
+so maybe
+transform
+geometry
+I'm gonna
+plug that
+in there
+I've never
+used this
+art before
+right
+okay
+so
+hmm
+so let's
+make this
+really small
+and now
+I wanna
+okay
+so I wanna
+just check
+if I'm
+moving it
+off the
+center
+here
+right
+so let's
+grab a
+grid mesh
+let's do
+it here
+actually
+there we
+go
+let's put
+that in
+number
+20
+so I
+just wanna
+do this
+just to
+check that
+I'm gonna
+move
+the dot
+off the
+center
+because
+otherwise
+I don't
+have a
+visual
+reference
+right
+now
+so
+if I
+try
+ah
+cool
+okay
+so
+ponder
+great
+so all
+I've gotta
+do now
+is
+you know
+I could
+do like
+three separate
+mesh
+instances
+but I
+wanna try
+what
+ponder
+just said
+so I'm
+gonna try
+and merge
+one
+circle
+let's
+put that
+there
+and
+there
+let's
+click
+merge
+right
+okay
+ah
+it
+doesn't
+probably
+um
+ah we
+have a
+reset
+and a
+merge
+button
+ah
+I would
+have
+expected
+it to
+change
+when I
+update
+the
+geometry
+but no
+problem
+I'm
+not
+sure
+what
+the
+number
+is
+here
+ah
+this
+would
+allow
+you
+to
+stack
+merging
+okay
+I
+kind of
+get
+that
+alright
+that's
+too big
+let's do
+0.1
+close
+close
+enough
+for now
+um
+and you
+know
+what
+with the
+points
+cube
+this
+is
+hmm
+so
+this
+means
+that
+grid's
+gonna
+stop
+working
+but
+I
+just
+I
+need
+to
+see
+that
+circle
+thing
+kind
+of
+good
+alright
+that's
+that's
+that's
+close
+actually
+I
+am
+doing
+this
+all
+wrong
+I've
+just
+gotta
+make
+that
+circle
+thinner
+so
+we've
+gotta
+make
+that
+in
+a
+radius
+bigger
+now
+we're
+gonna
+reset
+merge
+there we
+go
+is it
+exact
+probably
+not
+good
+enough
+for now
+though
+yeah
+because his
+circles
+they just
+touch
+and they
+can
+overlap
+okay
+so
+then
+we're
+gonna
+get
+another
+one
+of
+these
+right
+we're
+gonna
+put
+it
+here
+let's
+pull
+this
+down
+so
+we
+need
+to
+get
+this
+result
+in
+geometry
+and we
+need
+to
+merge
+it
+again
+so
+if I'm
+correct
+it's
+on
+y
+I
+have
+a
+positive
+or
+negative
+let's
+get
+this
+and
+plug
+that
+there
+let's
+go
+full
+screen
+let's
+grab
+this
+let's
+put
+that
+one
+down
+I'm
+gonna
+say
+reset
+merge
+reset
+merge
+and
+it
+was
+the
+other
+way
+because
+the
+dots
+at
+the
+top
+needs
+to
+be
+at
+the
+bottom
+so
+I
+should
+I
+have
+to
+reset
+this
+one
+and
+merge
+wow
+yep
+brilliant
+pando
+thanks
+so
+now
+comes
+the
+easy
+part
+we
+just
+need
+to
+make
+them
+all
+rotate
+rotate
+270
+degrees
+so
+for
+that
+we're
+gonna
+do
+something
+with
+the
+rotation
+matrix
+matrix
+sorry
+the
+rotation
+array
+so
+I'm
+gonna
+say
+it only has
+to rotate
+once
+so I'm
+gonna get
+the
+total
+points
+and I'm
+gonna grab
+an array
+actually
+actually I
+already have
+this
+but
+here
+so let's
+just get rid
+of this
+for now
+and this
+number
+let me just
+start like
+this
+sometimes it's
+just easier
+to start
+from scratch
+I'm gonna
+hold an alt
+right click
+and I can
+copy
+so I just
+wanna
+make sure
+I've got
+the right
+thing there
+so we're
+gonna
+go here
+I'm gonna
+pull that
+out
+okay
+let's just
+tidy this up
+a touch
+it's easier
+for you
+people to
+see
+so we're
+gonna get
+this array
+out
+and we're
+gonna plug
+this into
+rotations
+and because
+I just
+sometimes forget
+which ones
+which
+I'm pretty
+sure
+it's this
+one but
+I could
+be wrong
+let's
+grab an
+eraser
+and
+let's
+see if
+I've got
+the right
+one
+there we
+go
+okay
+so that's
+the one
+we're
+interested
+in
+so
+yeah
+let's
+do
+what
+I
+did
+before
+deleted
+it
+silly
+oh well
+I can't
+anticipate
+what I'm
+gonna do
+as you
+can see
+this
+stuff
+goes
+really
+quickly
+so we're
+gonna
+trigger
+that
+random
+number
+again
+and
+let's
+just
+say
+0
+to
+99
+1
+to
+99
+and
+then what
+we're
+gonna
+do
+is
+we're
+gonna
+get
+a
+random
+numbers
+array
+right
+and
+we're
+gonna
+say
+the
+min
+max
+is
+1
+2
+3
+and
+we're
+gonna
+put
+some
+integers
+so
+we'll
+only
+output
+integer
+numbers
+great
+I don't
+want
+0
+because
+then
+that's
+not
+going
+to
+work
+for
+the
+one
+and
+then
+we
+do
+smooth
+array
+smooth
+out
+jumps
+of
+values
+in
+an
+array
+basically
+let's
+go
+ahead
+okay
+and
+we're
+gonna
+trigger
+that
+random
+number
+and
+we're
+gonna
+put
+that
+in
+the
+seed
+so
+that's
+going
+way
+too
+often
+let's
+put
+it
+on
+goes
+pretty
+quickly
+with
+this
+patch
+let's
+put
+it
+on
+half
+a
+second
+for
+now
+and
+then
+we're
+gonna
+replace
+this
+one
+so
+the
+thing
+is
+this
+is
+hmm
+okay
+I'm
+doing
+this
+wrong
+ah
+there we
+go
+so
+I'm
+outputting
+numbers
+between
+1
+to
+3
+so
+then
+I'm
+just
+going
+to
+say
+array
+multiply
+by
+90
+and
+this
+should
+then
+give
+me
+90
+80
+or
+270
+because
+his
+piece
+is
+called
+switch
+270
+degree
+arcs
+okay
+so
+now
+I
+should
+just
+be
+able
+to
+plug
+this
+into
+oh
+there
+pretty
+close
+so
+far
+okay
+okay
+that
+triggers
+bother
+let's
+just
+do
+it
+like
+this
+makes
+it
+a little
+bit
+more
+readable
+ah
+just
+use
+a
+trigger
+extender
+just
+like
+the
+readability
+inside
+of the
+patch
+basically
+okay
+so
+that's
+pretty
+close
+feels
+a bit
+off
+though
+so
+you
+see
+they
+they
+all
+move
+independently
+right
+that's
+a really
+interesting
+trick
+if i'm looking
+at them
+hmm
+hmm
+hey
+bagoof
+glad you could join us
+okay
+hmm
+that's a really
+interesting one
+so it's kind of like this stepped thing
+let me just slow it down
+it's kind of intense to look at
+so what i'm thinking is this
+that's a random number array
+right
+let's get
+an eraser
+so there are numbers of one two or three
+i'm going to add a timer
+to this
+okay so that
+that's one number getting added to everything there
+and then i'm going to do array flow
+because
+these are integer numbers
+right
+um
+and when i'm adding value to them based upon time they become floats
+which is not what i want because they have to jump like that
+um
+and then i think i just do array math array and because of the random number
+hopefully there's a kind of offset if not then i've got to add another one
+close
+okay so i've got to add a little bit more variance to that so i'm gonna get this plug that in there
+and i'm gonna i'm gonna make this like really different zero to um ten it's not gonna be an integer
+and i'm gonna do another array because when in doubt throw more arrays at it
+closer
+so we slow this down
+and you know this is causing most of the change right now
+actually do i even need this
+no i don't think i do
+no i don't think i do
+wow that that works out pretty good
+oh let's just put it on 0.3
+try to generate more different random numbers but only react on two of them
+oh
+circles have to overlap perfectly
+are you sure about that
+um okay let's do that then
+i mean because i think that is how it is in this original one
+yeah they
+it's a really nice one
+yeah well spotted
+all right so let's make that circle a little bit bigger
+i'm gonna have to reset it although
+um
+reset
+reset so i'm gonna
+merge this one
+and this one
+that's better
+the only problem is now i've gotta
+change
+uh
+the translate here
+so that's minus 0.5 if i'm correct and
+0.5
+i need to please
+i need to please
+okay
+reset
+okay
+merge
+merge
+wow
+yeah
+ah
+dark retroid
+that was that was the missing sauce right there
+i think
+definitely
+and we've still been able to
+um
+keep it
+pretty much grid
+aligned
+aligned
+perfect
+that's really
+really awesome
+yeah wow
+look at that
+that that that came out
+pretty cool
+i'm really happy with this one
+super cool
+all right let's just change the
+scale a bit
+so it's a bit bigger
+that's okay like this
+that's true
+that's true
+they're only rotating
+left
+is that a problem
+um so what his does is um they alternate between 270 degrees
+they go backwards and forwards um backwards and forwards um so basically if we now do this
+this
+they turn the other way
+they turn the other way
+hmm
+so actually we can just do with this then work i know that's one two three that's for the original
+rotation
+uh actually um i don't have a value of zero though but i won't get that because i'm getting a number added
+it's not easy to look at this stuff and go oh yeah it's all rotating one way
+yeah um
+hmm
+yeah i'm not gonna worry about that right now
+uh basically that they're only rotating to the left
+it's something i could fix if i'm gonna pull a lot of this apart
+uh i'm just really not in the mood to um do that right now i suppose
+uh that's something uh somebody else could do if they wanted to
+you know i mean we could we could just have even basically um generated a random number say between
+uh minus two and two in an array and then just use the smooth array
+and that could also work but then you don't get this click click click uh thing where it's like going from one end to the other
+could have also got an array sin with time plus a random number um array because then the sin going up and down would make them turn
+like this
+actually would that would that just work let's give it a try then
+okay okay as long as long as it doesn't take too long
+let's do a race in
+small and one way to do this let's get this um timer
+i'm gonna put that into phase
+um this is gonna output values between minus one and one
+so now let's put it on free
+and now let's get array floor
+and put that in here
+so this then still needs to get
+this part here added
+won't be perfect but let's just see if it works quickly
+this is really hard to follow
+and this is going too fast
+so this is values between one and three so we need to make those
+smaller because that does not work
+with erase sin so we've got values one to three let's put it on zero point two
+so now they're kind of alternating right and left it ain't perfect
+but at least they're going a little bit right and left right now
+so i don't know if the complexity was worth it but uh there we go
+um sometimes it's uh how things um seem
+all right um i'm gonna call that one down
+what what do you guys think
+it's okay right it's close enough
+i mean considering how quick uh that went i'm pretty happy with a great tip there from panda with the um merge um geometry merge up that was i've never used it before and it was pretty self-explanatory so that was really really cool
+all right i would say totally nailed okay so this one's um saved copycats two so we're going to save a new one now
+so we're going to save a new one now uh kiyoshi copycats three okay just give me a moment
+yeah so this one should hopefully go really really quickly because i'm gonna just rip a tutorial thing that i did uh so he's done uh switch 10 print which i think is a kind of ode like what i did a while ago to um the commodore 64
+go to 10 so this is how we do it kids um we uh well ring one there's only one cables and that's cables gl
+okay so um i'm just gonna go here i'm just gonna find this patch that i did um ages ago and then sweet and modify because this is how it goes as well you know it's completely uh fine doing this stuff
+um so i'm gonna click copycat cables for playlist 20 go to 10. i'm just interested in the patch uh basically i'm probably gonna have to add one or two ops and it's all good
+but actually i'm gonna have to do like the merge geometry thing
+so um let's open up the patch right look at that all right
+yeah okay this is kind of coming back to me wow i did it with so little ops
+wow back in the day back in the day kids okay um let's just copy this and just put it in
+here yeah you know what let's just let's just get rid of this
+be gone all right so i'm just gonna save
+um trigger once we don't need that anymore with mesh instance so that was like back in the day now
+mesh instance knows if the geometry um changed or not don't need these sliders
+okay so this was like actually one of my favorite things i did um a long time
+ago it was kind of like a glyph generator and then i realized it was like this kind of
+um yeah um the commodore 64 20 go to 10. uh i think i'm looking at the chat
+uh
+create an issue for a simpler version without triggers yeah cool awesome all right
+uh that was the merge geometry op i think okay so um let's go here um and we're actually just gonna do
+again what we did because it's okay you know i mean there's a certain visual style going on here
+so we have um we have a line and we have two points
+right so let's use this cube let's put the width and say
+zero point zero five um let's put this wow this is
+this is weird yeah let's just do it like this for now um i don't i don't know this is like an old
+patch so why everything is like that i'll tweak it later i suppose why it has to be that long i don't
+know okay so we're going to put this on say um 20 by 20 okay um and we're going to do the same thing
+as we did in the other parts because i think it's an epic uh technique basically that i did not know about
+um geometry merge so you know let's let's do that trick that we did before
+let's get rid of the evidence um are we got a scale down ah okay why is it on scale 0.1 i don't know
+let's uh fix this some other time actually no let's fix it now because it always bites me when uh
+scale isn't like a really tiny number like that so we're going to put on 0.1
+and we're going to do it the correct way and we're going to just transform the view
+i forgot how to type all right transform view let's pull this back so we're just moving our viewpoint
+back in 3d space we're not scaling anything okay so i'm moving your phone away from something that
+you're filming all right so there's that grid um let's get a circle uh mesh there we go let's just plug
+this in for now and what was it we used before that was it transform geometry
+hmm hmm i'll i'll cross that bridge when we get down this might not be as simple as i thought it would
+be okay um let's make this a 0.05 okay um and what i need to do now is i just need to see how the cube
+is by default because we're rotating the geometry so it's standing straight up so i've just got to put a
+circle at the top and the bottom so i'll go here and let's say i don't know 0.5 i'm going to make another
+one and i'm going to put that transform geometry on minus 0.5 okay and then what we're going to do is
+we're going to get this you know i'm just going to merge both circles together here so i can just connect
+these with the trigger okay so i'm going to get this one plug it there so this is merging um
+both circles together right
+okay and we're going to get another geometry merge so i'm just going to merge these two together right
+now yeah okay merge so those two circles have been merged i'm going to get this cube and i'm going to get
+this and this and i'm going to click merge and get that and i'm going to plug that into there
+and now i'm going to plug the rotational array back in
+looking more like it but for some weird reason those circles that's so good all right let's move the view back again
+more like this and of course because now we're further back and those circles should be way bigger
+so let's do it like this so i'm gonna do a reset and a reset i just want to get the circles the right size first
+uh more like it and now they're a little bit big but no problem and i'm going to move into say 0.6
+and minus 0.6 and let's reset merge reset merge closer
+forgotten how to oh so they go to exactly the same place okay i think that's like 0.7
+some magic number here putting it together this quick
+reset merge reset merge there we go okay um
+and if i'm correct i already built in this patch with a random array like i did before
+uh between 0 and 2 because you know it only has to um turn in two ways array floor i could have done it
+with integers i don't know why but we'll just leave that by now so we multiply it by 90 and we add 45
+degrees because if we don't add 45 degrees we get this which is also kind of cool but not what we're
+going for right now and then we're just gonna pull this out i'm gonna go here i'm gonna grab the
+smooth array up we're into trigger from the array pack i'm gonna plug that in and we're gonna put that
+into rotations and um so that moves all of them okay so now we've got this kind of problem from before
+there's only a few moving right
+okay so let's grab a different random array
+just so i can keep my sanity here let's get rid of let's clear that comment
+um hello undefined country boy nice of you to join us all right so um you know what it is i want to
+i want to create a condition that only a few of them um move so that basically means i want to generate
+like a random number between let's say zero and one random zero um and then i want to do
+array logic which is like a comparison
+um can you tip your horse to me
+um i hope you guys don't hear that car alarm too loudly how bad is it
+pretty bad if so i can mute the microphone until it's over
+my car gets stolen you you want to i'll just mute the mic oh okay it came at the perfect time it
+needs to be like one of those air horns you know then then it'd be great all right so i've got a random
+array values between zero and one just break it down in small problems array logic so what happens
+is if the value is true it's going to output a one the value is false it's going to output zero
+so the number for comparison is 0.5 so half of the time
+that would mean that they would rotate i can tweet this number in a minute so what we do now is we do
+array math array because you know math is also like a logical comparison
+basically so we're going to plug this in here we're going to put this on multiply and if i now
+change this only a few of them change and there's still too many for my liking so i'm
+going to put it on like say 0.8 so the number has to be 0.8 or higher let's put it on greater or equals
+that feels more like it so you know what we can be really lazy with the random c2
+but let's just grab the good old trigger limiter
+um and then we're going to put it on say 500 and you know we can just use like a trigger counter
+counts how often the port was triggered you can use that as a seed as well
+uh you don't want it to you want it to be more off so i want to have this one uh having different
+values than this so i'm just going to get multiply i'm going to do it twice so this is going to be like
+say i don't know 0.22 blah this is going to be like 0.31 doesn't matter you know as long as they're
+both different and now i'm going to plug this into the random seed and you know as you can see that's
+kind of already enough because the only ones that are allowed to rotate are the ones that fulfill this
+condition here i think 0.8 is a bit too high 0.65 but these will never change it will only be the same
+ones ever rotating so that's why we want to change the seed on this one as well
+it's going too fast for my liking i'm going to put on a thousand and we can just make it take longer to
+smooth out
+i don't know how it felt in his
+ah his is very uh is very clinky so this is way this is taking way too long so let's put it on eight
+and it needs to be a little bit faster let's put it on 750.
+actually his yeah i think they never really
+yeah you know i could do this again with the
+with the the random
+you know what this
+this should be here
+if i want to do that
+if i want to do that
+so we want them to cascade right because in his patch they don't all move at the same time even
+though it looks kind of cool
+so once more too many rotating
+as we can see they keep on changing around now so it's just one or the other
+um break a brain how do we do this now
+the initial panda says but you lose the initial randomness by multiplying with zero um not really because
+um i only want them to flip between zero and one
+i don't want them to do anything different than that uh basically i don't want them to turn
+um more than that because then they'll spin a lot and we'll lose this look of them just
+switching because i think that's what he's got
+yeah his pieces they they never they only alternate between two states i think that's at least what i'm
+picking out of it um
+so let's get a
+random numbers array
+yeah okay so i'm gonna get a random numbers array
+um this works on values between zero and one this is also going to output values between zero and one
+so we're going to plug this in we're going to get the array length
+and then we're going to get um an array sum and we're going to add time to this
+and then we're going to do array
+um fract
+yeah
+yeah if i'm going to add that to this
+maybe i can just get away with multiply
+array math array
+let's get this and plug it in
+or actually i can just be really lazy and just say you know i know it's going from zero to two
+right now so if i put it on one point seven five we get that kind of effect
+um and the problem is
+yeah this is just way too fast
+i think this is happening too quickly
+is this another case of where we could have just like dropped this off
+yes we get this kind of thing
+it's not perfect there's one or two parts where it flies back
+um which makes sense because the array fract
+um and if we do multiply
+do we get rid of that problem
+but i think and now see what ponder was saying with the multiplying by zero
+of course they're all looking like that right so then we need to do
+this feels more like it um let's save let's just take a peek
+you know we could even just do something like a race in and a random number and so many ways to
+um solve this problem but this i don't need this i don't need
+let's just put the random seed on zero and zero which means it's always different
+and the patch is loaded put it on a pack uh give it a number if you want it to be a consistent
+seed basically all right actually this can just go here
+a bit more readable
+yeah okay well you know for me this is uh this is kind of close uh it's close enough
+i mean uh yeah no basically they should all turn once it's because of this array fract we're going
+to get a certain look but i think this is okay um for now
+it's really difficult to follow uh everything at the same time um i'm going to call this one done
+okay all right so let's save it let's go for another one um save as
+kiyoshi copycats for and one thing i want to point out is you know um let's just save it it's really
+cool with um young kiyoshi's webpage because you know if you go here like on twitter um you can see
+the the source code here so it's really cool that he's so open with sharing um this stuff it's really
+great so if we go here to his webpage just give it a moment to load um here you go here you've got um
+you've got the source code uh for the stuff that he does which i think is uh really really cool
+basically because if you're a coder and you're wondering how to get into this with cables and you
+can kind of read some of this and then translate that um into ops of course this is made with like
+the the width and the height as we can see here i could do that with um pixel projection but that
+would slow the stream down a lot so that was how i completely ripped an old um tutorial patch and
+made it into that okay let's take a look at another one all right i'll do
+this one this one seems really simple and i think it's gonna be
+pretty difficult to get that feel
+i'm wondering if i should do this one it's a little bit like the first one which means i could just grab
+that one if i break it down you know that top line
+that's not so difficult but that second one i don't know i'd kind of fake it with scaling a rectangle um
+in the width um
+hmm
+hmm
+okay you know what um let's just reuse the setup that i did um with the first one
+let's just do that
+so let's go here all right so i'm gonna
+just gonna do the lazy way
+so i'm gonna so do control a control c
+i'm just gonna go here now i'm gonna delete all of this
+so i'm gonna paste it all in um so let's just let's just let's just tweak this and make it work
+so we're gonna solve the first one there at the top so this whole line geometry thing i don't need
+just happens from the center um i'm not bothered about changing the scale with all this random stuff
+so let's just look at what i don't what i shouldn't delete here
+yeah because actually let's just make this work for me so um
+actually i shouldn't have gotten rid of the align geometry
+all right let's do this why men all right so i basically let's let's just let's just get this the
+way that i want so i just see them all go from there cool all right i've got this let's put some more space
+between them let's put it on two let's put it on whoops three and let's use the transform
+actually let's just do transform view at the top
+just to zoom out so i can see it okay let's just nail that top line first
+i think
+i don't think i need to do all this random stuff pretty sure i don't
+pretty sure let's get these two array sins
+let's get a timer
+first of all let's plug this into phase
+i want an array going from zero to one
+so do we have that here yeah we do the razor to one i'm gonna grab this i'm gonna plug it in there
+and i'm gonna put this into
+zoom in a bit
+array two okay so look i've got this
+and i'm going to do this really lazy now um i don't want it to go low so i'm going to do um
+array abs i could use the array map range but i'm just going to go for this bouncing effect
+basically um let's turn the frequency up i don't know
+12 okay now let's get this one and plug the interface get multiply and let's just put it on a different
+number an odd number something really small like this okay so i'm going to get um the same array for now
+alt right click and i'm going to go here
+array math array okay i'm going to multiply them together
+this isn't doing what i want right now i am of course
+i also need to do array abs again
+and you know let's put this on a
+frequency number for now i don't know we'll see how this is going to work out so he's got lots of
+lines there so let's increase this to something like 60. let's done increase the gap a little bit
+um they're a lot thinner actually so let's go to the rectangle 0.05
+let's do it like this and then lower that multiply again
+yeah this is like endless tweaking but hey just do it like this for now
+so let's go ahead and basically what i want to do is i want one way to oscillate back and forth
+so i'm going to get that timer i'm going to plug it into sign and then we have
+this multiplied number so we're going to go some
+get that kind of thing i can add the repeat
+number later to get something different and they just they pop in and out so now we can make life really
+simple for ourselves and just say um array logic array uh array logic sorry so let me say
+something something like this not perfect he's got a lot more motion back and forth um
+ah okay let's do it like this
+um and let's do another sun before it goes into a race sin because we will now want to know how
+to have this differently with every single uh repeat right
+that's not working the way that i want that's too big a number so let's go here
+multiply it by a smaller number i think let's see
+i think i've got to do that here as well let's just grab a copy of this just dirty patching right
+now with this one just trying that as i go along
+i have to make this bigger
+yeah kind of this one probably as well
+ah okay
+yeah all right
+yeah this is i'm just throwing horrible stuff together right now
+this can be cleaner just give it a minute like i said some of this stuff can seem really really
+simple and it's not let's just let's just do this correctly so we're going to get this timer
+um um yeah and then we're gonna do some there and we're gonna i think that was just the one that i was missing
+um let's go ahead to multiply just add that there
+it feels better now
+he's just got like less gaps i suppose maybe i'm overthinking this too much
+who knows
+yeah okay
+so let's just put this like there for now
+um and let's get this one
+yeah it's just tweaking these numbers until it kind of feels right i suppose
+this will do for now i could add some randomness uh to it to make it look a bit more like that but
+i don't want to get too stuck in the details
+okay okay let's get this put this over here
+this ain't too bad all right
+it could be cleaner but we're just going as we go along this one all right
+so this is
+this again there's something different now from if i'm smart
+if i'm smart i can reuse this stuff right
+so let's try and do this so
+no guarantees if this will work ladies and gentlemen let's just give this a try
+so i'm going to reuse this basic material um i'm just going to pull it like this so it's um
+easier for me to to do
+i did to see something let's do transform here
+what is i'm doing now okay
+just appeared on the screen for a minute does it really i think it needs its own material again
+because it's mesh instant so
+there it is shows you how tired i am all right so let's get
+the positions plug that in okay great so we're using the transformer to
+move this stuff right so let's just do it like this for now
+and put the material back in black okay so let's make them a little bit wider
+let's see 0.15
+hey alchemai uh what's that omg omg omg we has a poo brainer uh just for us
+alchemai is this the first time that uh you're you're seeing the cables gl live stream
+alchemai is a really nice guy i know from the demo scene he's been really
+no i mean you've been here before right yeah that's what i thought
+memory is a little bit fuzzy you should totally check out what alchemai does with um shaders uh the
+last year it's been really really good stuff and he's also participated in some shader showdowns
+all right um let's see if we can get this working so i'm i'm i'm trying to feel lazy right now so we've
+got this kind of like uh we've got this thing jumping out from the array logic right so what happens if
+we plug that into scale okay we're getting something like this that's not doing what i want
+because obviously we need to do this so i'm just gonna this is this is quick and dirty but it works
+you know i mean i could i could copy everything i'd rather not um basically so let's plug this into scale
+so we get this array logic right and we're then going to plug that into the humble smooth array
+so what we want to do is we want to decide if the shape is just visible right and because we're doing
+the line geometry by putting it between zero and one on the y component we can make it disappear right
+it's just it's flat it's like really really tiny basically i mean if we put this in like say 0.1
+we see those things at the bottom okay so let's just do that for now so everybody can kind of follow
+what's going on so you know that's that's the flattened shape right now so i'm going to get this i'm going
+to plug that in there
+so what we do is
+this but we want it to
+go like this on x
+that's what i thought give me a moment
+so why am i not seeing anything now
+uh one well all right
+ah of course we cannot use so smooth array is based upon this this difference between previous frames and
+doing this for repeat up um is not going to work so let's let's let's let's come up with a workaround
+first of all let's go in there let's say rotate array
+and let's do that again for this one just so they seem to be
+different so the rotate up rotate array up is really cool because it allows you to as it says rotate the
+contents of an array so as you can see it's now not exactly the the same as the the one above it and i
+can do this with the y one and now they've kind of got the same motion but um we've offset them
+basically we just so the rotate array up it allows you to um shift the values inside of an array so if you've
+got a value zero to nine and you shift it um up by one and then you'll have um
+nine zero one two so you can do this so it's just circular it just goes around which is really handy for this kind of stuff
+but how do we get around this problem um
+i want this to kind of go
+smoother i have this race in here this could be useful
+interesting when you patch that's getting like this don't worry about it just focus on that one
+part you're trying to solve just isolate that and go from that so we've got this race in array abs i don't
+know if i need that right now i'm going to plug that into here and now we're getting something
+that's um more smoother that's not exactly what i wanted
+even though it's actually not too bad you know if i change this it's going to change that as well
+i'm going to get more of them i'll just put it back where it was nine and let's get that array logic
+and put it back in zero
+not too bad
+multiply that by a bigger number just so it all looks slightly different okay
+wow that became a bigger patch than i was expecting though don't let it intimidate you you know this
+this here um we're reusing parts of that this is for the the black part there let's take a peek
+you know it's not exactly the same but i could sit down and spend a really long time tweaking these kind
+of like magic numbers the only thing you can see is is that these lines are a bit thicker
+so we can go here put on maybe say 0.03 0.04 like this
+the whole point is just trying to just recreate something that comes close enough
+which i'm already kind of happy with uh this works out pretty good
+ctrl s i think this one is good to go and it's not centered so i'm just gonna be
+um i'm just gonna move this down minus one there we go
+close enough i've got the links open there i'll put them in the patch later
+um that's not perfect but no that's that's pretty close actually
+you know and i think i think i think here if i click um the source code let's just see if it's using noise
+because it's line times noise
+yeah so where's the noise value
+yeah okay so he's using nicer he's getting the frame number and he's feeding that through there
+okay so you know we're not using noise uh we could have um you know we've got things like uh the purlin
+array up but you know noise functions are inherently um they're gonna be expensive i mean that's just the
+nature of um using them even if they're fast so me i always try and say fake it till you make it learn
+that one from the demo scene uh that's why i'm just using this array sin sin also isn't the cheapest
+thing but it's always going to be computationally cheaper than doing something like purlin
+i didn't want to do six purlin arrays with the repeat for this basically oh sorry three and then
+rotate them so no this is okay this is uh this came out all right let's just tidy this up a little bit
+there we go that makes a lot more sense now all right i'm going to save it i'm going to call this one
+done so save and save as go to the next one kiyoshi copycats um five okay so saving a new wonder
+i completely and utterly forgot to tag uh yankiyoshi uh to tell i was doing this today on twitter
+but i think he's in a pretty different um time zone basically um okay
+let's try this one
+so what i'm gonna do now is
+not the cheapest way to do it but it hopefully will work
+okay all right um we need to this is just too much i need to i need to clean all this up
+let's just get rid of all this i don't need the repeat op
+um yeah i just i just need to get rid of most of this okay
+so i'm going to use um
+let's just move this over here okay
+so um i'm gonna just make this all a bit smaller so everybody can see what i'm doing okay
+um let's just get rid of this transform view okay
+first of all i want a grid right so i'm going to say points cube i'm going to plug that into positions
+uh let's do
+it looks like about 32 to me let's just let's just say 32 by 32 by 1. let's use that transform view go back
+and see it on screen i don't need a line geometry you're going to go to the rectangle and put it on one
+so that's too much because i want to see each square cool so we've got a grid
+okay you know they're not moving here it looks like that but they're not it's um a trick with scale
+so uh let's do a horribly inefficient thing it's actually really not that bad um for what we're
+going to do right now i'm sorry i'm always busy trying to optimize everything as good as possible
+let's get that flaming like effects going on
+let's make an image compose you know what while we're at it let's let's just do something fancy
+right now yeah because i don't have to keep clicking that up to see this stuff so i'm going to go to
+basic material then make a rectangle i'm going to put it on orthogonal mode
+and then i'm going to do a transform this isn't perfect but it'll it'll do the trick
+let's just put this here for now this is going to vanish sometimes okay um so let's go here and
+let's just grab fbm nice okay and scroll y okay let's just plug this in here great
+i'll fix the rest of the stuff in a minute let's just go from here
+okay okay okay all right so we need a timer
+and we're going to plug this into
+um scroll y i'm going to reverse it say minus 0.75 for now
+uh was it luma key
+yeah this could be it okay so you know i only i only want but this looks like it's
+okay so click so as you can see this like these gray and so it's got some shades there right so it's
+letting everything above 0.5 go through if we do black and white and the pixel is only zero or one
+so black or white which is exactly what we want because we're going to use this thing to change the
+scale now the thing is um on kiyoshi's patch here at the bottom you know there's nothing there right so
+there's one or two ways we can do that um right now i'm just thinking like if that'd be
+cheating or not but maybe not i could use a gradient maybe so if i do uh
+ah okay one minute so i'm going to say wave form gradient okay
+so let's put it on frequency one
+let's rotate by 0.25
+um let's put it on let me just disable this for a minute
+and put it on sawtooth
+so i want the reverse right i i i don't want it i do want it full scale at the bottom yeah
+so i'm going to change the power factor like this right
+cool so we kind of created this um line that we can now move upload down wow that came up pretty cool
+okay but now that isn't working why not
+um
+hmm
+this has something to do with some blending motor
+i've got a feeling this should just be way simpler than it is right now i'm missing something
+really obvious i think
+do i have to leave the key this again no
+but i'm just going to luma key it again i'm not sure what it is right now i don't want to spend
+a long time trying to figure out what that is
+um and of course this waveform gradient you know it's going in gradient but we don't want that we just
+want like a hard um cut uh basically um all right let's go from here
+yeah okay so what we do now is we do and this always trips me up texture to
+color array so we extract the colors from a texture okay so this needs a trigger
+let's do the same um so this is going to give me
+this is an important one see this floating point false and this is huge because image compose is using
+the viewport size right which is really bad because you know i mean look at how big that was but i'm
+amazed i didn't just crash the browser go cables let's put it on 32 by 32. all right that is more
+like it and you see that black line there at the bottom that's because of the um the wrap mode some
+repeat so we need to put some clamp to edge voila and then we've got this white thing here all right
+so that's what we want to use right now so we've got this texture to color array and we're going to do
+array unpack for you've got to get the rgb alpha values out of a texture there's no way to um avoid this
+um so we do this okay
+now actually i oh like you're gonna you're gonna see me probably fail really hard here um
+which is fine that's the whole idea of the live stream occasionally um
+so we should just be able to do this now okay let's put on 32 by 32 and there's always like this offset
+um so i need to do stuff with scale so i'm going to say arraypack
+three xyz right whoops my bad so this is going to be for scale i'm going to put it over here
+i'm just going to grab one of them basically uh i'm going to plug that into array one array two and
+array three so let's get this here now so these array lengths i'm not going to match up it's got something
+to do with the amount of pixels um so this has an array line for 3072
+ah this does match up what am i okay so this is a good one that i want to say before so it's not on
+floating point false so the you know the the scale of these meshes like one is like its default size
+uh but you know image compose and this textures color array is basically outputting um 255 or zero
+basically um scroll yeah see 255 zero so you know each of these rectangles is now 255 units wide
+so to get around that and this is why texas color has this floating point warning it says floating point
+false so we're working on with integers so we go here and we put it on hdr mode hey and now floating
+point becomes true cool so um do we have this yet oh no we definitely don't but we're going to work on it
+so um we're going to go to this luma key here and we're going to turn that down
+that's closer
+this is probably not going to work yeah that's what i was afraid of smooths it out a little bit but
+then it uh that's that little little annoying dot there and i don't want to use a rain map range for this
+got to be a better way but i mean i might that off and he's also got this really hard line there
+so this is acceptable i think he's just got a lot more um
+hmm you know what let's plug this into width and height
+so i can change this dynamically
+so i can put down 48 and we can get the transform view and we can
+go back so it looks a bit finer a little bit more like what he had
+and what i think is the fpm noise also needs the
+the anim to change as well just that's this little feeling thing that i'm missing
+yeah and then going on and off
+and you know i could spend forever um tweaking this i mean i think it's too clumpy
+so if we put on like three or four or eight i don't know probably way too much
+and we get this i'm not sure why um let me just see for a minute
+i just want to do a right clamp to be sure it's between zero and one
+um yeah it's because of this gpu interpolation that's why we're getting that flickering there
+i think but i just want to be sure
+yeah i'm not too sure you know we could we could kind of fake it and say hey we're gonna
+slow it down and then it's not so bad
+his goes up pretty quick so kind of not acceptable so yeah we're gonna get that flickering part
+and this isn't gonna make a difference
+yeah like i said this could help a bit but it's gonna make values
+bleed over as you can see there we get something like this which is not what i want
+yeah i don't i'm not too sure how i'm gonna
+fix that right now stuff is too small is the noise scale panda just said all right let's let's give that a try
+yeah panda is right
+yeah yeah definitely okay once again uh thank you to panda for the catch
+i'm just gonna leave it on this one for now
+oh yeah that was titleable okay
+yeah all right
+panda like the smooth version better anyway is that the one with the the blur panda yeah you know because
+i mean i could do a smooth array on this i'm thinking you know what let's just try it for a minute i've
+been throwing smooth array at everything tonight i don't know how it's gonna work out
+yeah we need to do the severe tech show this definitely that's that's another one of those
+things on the list that we want to do wow okay that's not the same as uh what yunkiyoshi has but i
+really like this and even if we put it on two oh whoa i i think that i think that's pretty epic
+actually i mean this two luma key thing i don't know why um that is but it is what it is let's let's
+bring this down a bit yeah i mean there's no way to get around to that basically yeah then we get this
+which is also okay i mean i'm not a big fan of this hard line um there but you know he's using a noise
+uh function so i'm not sure what it is that he's adding but let's just try and keep it um a bit
+similar you know that's the the whole idea of this uh we can change that power factor and bring it down here
+for now yeah i don't know i like it with the the the smooth array up i mean it's not the same but you
+know it doesn't exactly um it doesn't have to be uh basically i mean that this is um this is an fbm noise
+shader he's using cpu based noise so to get that exact same look that's just going to be a sit down
+and tweak stuff for a really long time to try and get the numbers
+um yeah sure alchemer alchemer says you could scale the noise as a trapezoid less resolution on
+the bottom and high resolution on the top would make more frequency in the top and lower on the bottom
+for sure but i don't want to sit down and do stuff with um custom shader code um during the live stream to me that's um
+that's kind of a separate uh stream all in of itself so if you feel like learning cables and doing some
+shader stream stuff that would be awesome yep that's only for an invite out to alchemer definitely
+um yeah of course we can do this
+um
+yeah you know so we can get a different smoothing amount uh if the number's increasing or decreasing
+actually
+lights up a bit more like this
+yeah so we can make it like really super fast i don't know i like this it's not exactly the same
+um but i i like the smoothing style more because actually i was i was like oh i've got this flickering
+thing but you know yunkiyoshi's also got it there this is like as they're flying up
+so yeah you know it's not too bad that we had that it was uh keeping it real with the original
+yeah alchemer yeah it's an idea uh we should uh we should talk about it with uh with this kind of
+stuff because oh hell no i ain't doing any uh shader live stream uh right now i'm a little bit rusty
+i've been doing lots of other stuff except that i don't remember any of my stuff from shader showdown
+things back in the day that i was learning all right you know i think this one's kind of done
+um and you know if people don't like it they can just turn off the smooth basically and they get
+something pretty close i know what let's just i step yeah banda was right it's the scale of the noise
+basically i mean this is more like yunkiyoshi had it yeah you know and if we put this um
+uh i kind of get why this is happening now that i'm seeing it like this i think maybe this just isn't
+really a bad thing after all and it's more than he's got that's for sure
+um so panda was definitely right with that
+i'm wondering if
+i know this is only gonna make it bigger
+ah yeah and then we've got here clamped edge so that isn't gonna work the same yeah i know okay
+you know what you gotta know when to start i'm just gonna plug it back in the way it was that that was
+okay it was cool copycat is not about getting it 99 uh the same it's about being inspired uh by things
+so i think this is already pretty cool basically
+okay oh i didn't see that so tuna chan said maybe just one luma key and levels yeah that probably
+could have worked definitely uh levels is an op i just somehow don't use a lot
+but i'm just gonna keep it on this for now i think this is i think this is pretty cool all right so now
+i'm gonna save a new one kiyoshi
+copycats
+and i think um i'm gonna make this the last one um i'm a little bit on the tired side um
+right now
+yeah right okay so the last one i wanted to do
+i think was this one i might be might bite enough more than the consumer oh pandas online um
+something like this
+i mean we're not going to create something of a random walker
+i don't even know if that's gonna work
+is this my brain's kind of melting with how to do this right now um yeah we've got this really cool
+no let's just get rid of that section for now let's get rid of this this and this okay
+uh oh we've got this i've forgotten the name of it it's an op it allows us to create
+a lot of um primitives really cool primitives africa no okay so when you've forgotten it's time to use
+that control f uh function pretty sure it's a mesh what
+why is ops dot mesh taking me here i want to have ops dot gl mesh
+uh ops dot gl dot mesh okay this is where i want to be
+uh cross cubes
+polyhedron now you know i'm i'm not going to go exactly for this um sphere that yeah geosphere i think
+it's this one panda uh polyhedron do we have a triangle sphere up one minute that would be really cool
+uh hey yeah
+okay um sphere mesh of uniform distributed vertices
+that's that thanks tuner let's just check
+not sure what's going on there with the rendering
+it could be a really old patch because i don't even know this i don't even know this one existed
+okay um
+iterations free free let's just give them a material
+um
+that looks good enough to me yeah i'm totally going to save over the
+um patch so people know this one there okay actually let's just do it like this because
+that's if mouse over
+just give me one moment everybody i just want to do this
+uh lambert okay let's just save this for now okay thanks tuna um all right so i'm glad panda's there
+because we're going into um i have no idea exactly how this um stuff works territory
+so first of all let's paste this in
+now i already asked panda tonight um what the uh ops were um
+i should probably use for this let's just take a look again ah there we go so
+randomized triangles randomized the order of triangles and the geometry
+um so let's get this and let's grab the render
+geometry up
+let's disable drop okay i'm not doing what i want um
+actually let's just check the example patch that's what we've got them for
+don't need this don't need this that can go let's just save
+yeah cool okay ah this is it so we have this vertex number limit
+mm-hmm
+so if we go here and we do vertex number limit
+and the triangle sphere has
+three iterations
+let's take a peek let's take a peek so hold it in this example we have a material vertex number limit
+and then we're in the geometry so material
+does it make a difference
+should that matter
+should that matter
+what am i missing here i've never done this combo before everybody so i could really be
+missing the obvious here i mean when i look at this limit vertex by example
+do i have to trigger only once
+let's put that down
+i don't think that's it though it could be though
+maybe it's just rebuilding it all the whole whole time
+so this is outputting
+so this is outputting the geometry
+i don't have an object it says
+ah randomize triangles okay that's a different one
+i've got the one here okay what am i missing
+well i think it's got to be off on the triangle sphere
+because we don't want to see the original sphere
+you know this should still output the objects it's like with mesh instances you know you also don't
+want to draw your shape you're just displaying the um geometry you're just interested in the geometry data
+i'm just really curious right now i don't think i've got to have it on draw
+let's just do this for a minute
+let's just grab this part let's just see what i'm doing wrong
+that is drawing so tuna could be right just debugging as i go here
+all right so this is what i meant you know so this is the geometry so this doesn't need to be there
+to see that you know we've got this transform there
+okay now so in theory i should just be able to do this
+and plug this into
+there
+wow okay that's different
+that's tessellated a lot okay do i need to isolate geometry if it's already tessellated
+yeah so that'll show the original
+that is weird
+whoops okay it didn't like that
+let's just do a save and reload
+all right i'm not sure what it is
+i think i need the geometry and index for the randomized to work
+ah right
+bomb thank you panda panda panda explained this to me quite a while ago
+um i've forgotten um what it does now exactly
+um but is this gonna crash again if i remove this material yeah okay that's a bug
+it's okay that's why we look for this stuff
+all right so
+all right so
+so that changes how many we've got available
+and this is the max
+and this is the max so hold it he's got this black and white look going there yeah i would
+i would not have any clue how to get that black and white look uh right now i mean
+i can obviously
+put this
+right and he doesn't have any shading like with fun material yeah it's gonna crash
+yeah i don't even need to keep this this isn't gonna do anything for what i want yeah i think
+i think i'm gonna be close enough to stream in a bit with it not working out um this way basically
+um conceptually i've got a good clue on how to um do it it's like basically if it was kind of like
+doing this like with the mesh instance so you know if i could have a triangle with the orientation
+and the rotation correct all offset from the center so it would make the sphere
+um then i could just really easily um change the scale basically
+um but this seems to be uh problematic
+to pull off i mean we can make it go random and we can limit it but this there's no way to get this
+this um snaking pattern right now now this could do with a two-dimensional
+um array and then we could use the the geo op something which gets you the latitude and longitude
+and maps it to a sphere it'd just be to create like this triangle strip that would be really difficult
+uh basically so i don't uh i don't think this one's um gonna work out i'm sorry to say
+um i'm trying to think of a way to do it but i just don't think it's gonna work uh i'm not too sure
+and this is just purely random there's no way to get it to flow from one value to another like with a
+walker or with noise uh basically draft
+um you could sample only once for each triangle on a custom shader
+probably
+but not tonight because i wouldn't have a clue where to start with that that's probably more uh pandas
+uh thing to show maybe he can do that at some point in the future because he
+he still wants to do this uh the stream with vertex um show the stuff which by the way there's
+amazing stuff that comes out from that um yeah so okay this one didn't work out um i'm sorry to say
+that's the whole idea you can't you can't win them all uh within uh the confines of the time of the
+live stream uh but i'm really happy actually with how it went tonight um and it was nice i thought to
+like pick an artist that's got a particular visual style you know some elements do come back
+like missions and things like this um and i think that's the thing that i really like about using
+cables uh you know you can look at some source code from somebody like young kioshi and go how do we
+how do we make this with with node-based programming you know once you get the hang of the basics um it's
+not uh it's not um it's not that difficult but i mean it's it's problem solving so you know you gotta
+uh you gotta you gotta just keep at it until you get the the muscle memory with certain things especially
+erase some people go ah raise it's really difficult yeah you know everything's difficult at the beginning
+but you put some time and effort into it and you can learn it also without really cool tutorials on youtube
+um they will really help you um get them some memory with this kind of stuff well you know um i tried six
+of them tonight i'd say five of them were really successful and this one at least has random triangles
+on the sphere not bad i learned a lot of new stuff tonight or so uh big thanks to panda for pointing
+out um some catches and some tips uh i also learned some new um ops tonight which is great uh because the
+more ups you know the more you can do i suppose uh the merge geometry one that's really cool and i think
+panda's gonna probably make a version where you don't need to um trigger it but i'll just probably update
+uh when you change uh the geometry uh going in um so yeah i think i'm gonna wrap it up at this i'm a
+little bit tired it was a bit of an intense stream i think two hours it's not a bad uh amount of time
+um so i'd like to give a big thank you uh to everybody that uh came and joined along tonight and uh
+uh supporting us along the way um i'm gonna it's gonna take like a day or two um to
+publish these patches tidy it up and stuff just we're busy but uh they'll come out and this video
+will come back into youtube so you can follow it later again on twitch or you can watch it later on
+our youtube twitch um channel um so yeah i'd like to say once one last time thank you so much for joining
+us and um following us and um i think we're gonna be back with a new um stream next week i'm not too
+sure what that will be uh right now that's kind of not being um decided um but we'll get there thank you
+panda um yeah i think i'll i think i'll be able to do uh the stream again uh next week but i'm blank right
+now with what it will be maybe it's another copycats maybe i'll continue with the vj software um i've been
+investigating some new stuff with svgs uh inside of uh cables and scalable vector graphics um so maybe
+that'd be great to do like hi i'm completely thumbling around through this with uh results from
+inkscape going into cables and things like that we'll see as always it's got to be playful it's got to be
+fun otherwise why would you want to watch for an hour or two right um so i'm gonna wrap it up i'm gonna
+wish all of you lovely people um a wonderful night uh hopefully uh i'll see you uh next week and um
+hope you're all well thanks for watching have a good one bye

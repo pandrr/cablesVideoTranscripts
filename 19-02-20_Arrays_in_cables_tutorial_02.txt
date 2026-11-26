@@ -1,0 +1,158 @@
+https://www.youtube.com/watch?v=pdM0j8oDQ8A
+Hi there, and welcome to another video of Made with Cables.
+My name is Mark, my handle on the forums is Andro,
+and today I'll be showing you how to create a basic circle in 3D space
+with the array ops and the mesh instance op.
+So first of all, I'd just like you to pause the video and make what you see here.
+And please pay attention that your scale op here is set to 0.5.
+Okay, so let's get started.
+So first of all, I'm going to make a continuous number array op,
+and its values are 100.
+I'm going to pull out a value op,
+and I'm going to use this to define the array length.
+So I'm just going to go here and type this in.
+Okay, now I want to normalize the array.
+So I grab array divide.
+I'm going to divide the contents of this array with the length of the array.
+So I'm going to put that in here,
+and as you can see, we now get these nice normalized numbers going from 0 to 1.
+Okay.
+So now I'm going to go down here and I'm going to grab an array pack 3.
+So I just want to make an x, y, z array out of this.
+And I can just do that by grabbing the same array and putting it into x, y, and z components.
+This expects a trigger, so I'm going to put it there.
+And now I'm going to put the resulting array into positions.
+Now, this circle, this sphere looks a little bit big.
+So I'm going to put this on 0.05.
+I'm going to go back to trigger once and reset.
+Now, this looks more like it.
+So we need the sine and a cosine to make a basic circle.
+I'm not going to make this a video about trigonometry.
+There's plenty of resources for that.
+So let's grab the array sin up.
+And this is going to be the x component.
+And as you can see, this is on sin.
+I'm going to copy this.
+I'm now going to put this on the y component.
+I'm going to label this y.
+I'm going to put this on cosine.
+And I'm going to copy this again.
+And let's just make a bit of space.
+I'm going to put this on the z component.
+For now, I'm just going to turn this amplitude to 0.
+And I'll leave on cosine.
+I'm just going to label this z.
+So we have something here on the screen, but not a lot.
+So we need a magic number here, which is p.
+So I'm going to grab the p up.
+And if we now plug that into the frequency inlet, as you can see, we get half of a circle.
+So to get a full circle, we need to multiply this by two.
+So I'm going to grab the multiply up.
+It's already on two.
+And I'm just going to get these, connect them there.
+And I'm going to plug p into here.
+And we've now, in under a minute or two, got a basic circle on the screen.
+So if I go here to the array length and I put it on 10, 20, or 50, because we normalized it, it's always going to fit perfectly.
+So now we've got a basic circle.
+So far, so good.
+So what we want to do now is we want to make it a little bit more interesting.
+So I'm just going to tidy this up a little bit.
+I'm going to grab this, and I'm going to move all this up here.
+So we want to add, like, a little bit of motion to this.
+So first of all, I want to make this just a bit more interesting than a basic circle.
+So I'm going to drag this out from here.
+I'm going to make a multiply up.
+And then let's just move it over here so it's easy to see.
+I'm going to grab the seal up.
+This turns like a floating point value into a whole number, easiest way to say it.
+And we're now going to grab a value up.
+And as you can see, if I move this to a value like 3.64, it becomes 4.
+It becomes a whole number.
+So, wow, we see some stuff going on here, which is looking kind of cool,
+but it's not exactly matching up if we look at it.
+So first of all, let's put this amplitude on 1.
+And as you can see, it's now become kind of 3D.
+So what we need to do is we just need to multiply this number by P, right?
+So if I'm going to get the output from this, and I'll plug it into there, let's now disconnect it from here.
+And if I now change this, and we just need to get more points.
+So let's put this in like 400.
+All right.
+So as you can see here, by changing this, we're changing the amount of waveforms, right?
+So if I put this on 1, we get a perfect circle.
+If I put it on 2, we get this, and so on.
+So this is already looking pretty cool.
+So I'm going to just grab the amplitude of array, sin, y, and I'm just going to lower it so it's just a little bit easier to see.
+So how do we animate this?
+Well, we have the phase here.
+But as you can see, something weird happens.
+Look, this isn't what we want.
+We want it to just turn around.
+So there's kind of two ways to do this, so I'll show you the first way.
+Let's grab the phase.
+Just pull it all the way over here so it's easy to see.
+And we grab the timer 2 up.
+Okay?
+And we're now going to plug this into the phase for the Y component and for the Z component.
+And as you can now see, everything is rotating perfectly.
+So let's just make it a little bit bigger so it's easier to see.
+All right.
+Slow down the timer and touch.
+Put it on 0.25.
+There we go.
+Now we can put this on 100 points.
+Might make it a little bit easier to see what's happening.
+So this is like the very basic way of making a circle and then using P and really basic trigonometry to add waveforms to the arrays.
+And as you can see, they always perfectly connect.
+That has to do with P and normalizing the array.
+So we can go a little bit further now and just make this a touch more interesting.
+So let's just take a look here at what we can do.
+So we want to just like modulate this with like another copy of itself, basically.
+So I'm going to grab the array sin output from here.
+I'm going to plug this into array sin.
+And I'm going to put this then on sin.
+And we're now going to go down here and we're going to grab an array math op.
+And we're going to put this on multiply.
+And we're now going to grab this.
+So this was the cosine from Y.
+This is the sin.
+And we're doing multiply.
+So what happens if we then go over here and we grab an array interpolate.
+And don't worry, this can be a bit tricky to follow, but it's just to show you how you can experiment.
+I'm going to just give it the trigger.
+And I'm going to get the original Y component and I'm going to plug it in here.
+I'm going to disconnect it in this interpolated array and I'm going to plug into array two.
+And if you look at what's going on here, this is the original array, just this part that we built before.
+And if we now put it over here, as you can see, this here is modulating the sin again.
+So if we use the phase, we can start to get some really cool, interesting stuff.
+So let's just grab a time or two and just put that on there and slow it down a bit.
+Put it on like 0.66.
+Now, as you've noticed, we're not using P right now, right?
+So if we just grab P and plug it into frequency, what do we get?
+Wow, this looks really kind of cool.
+So let's lower that amplitude to say 0.5.
+And as you can see, we've got some really interesting modulation happening now with the shape.
+So this can seem a little bit complicated at first, but if you're building it from the ground up,
+then it's really not so difficult to get your head around.
+And I just wanted to show you how, with a few operators, you could create really interesting harmonic motion.
+So let's use this to just put it back to the way it was before.
+The last stop I want to show you before we close this tutorial off is a really handy one.
+And it's called Array3xTransform.
+This is like really one of your best friends here.
+Transform is translate, rotate, and scale positions in an array of three.
+So I'm going to grab this.
+I'm going to put it here.
+Everything stopped because we need a trigger.
+So I'm going to put that there.
+And let me just turn the timer off here.
+So it's standing still.
+Now if you look here, we can now rotate this on X, Y, and Z.
+And you might think, why would we be using this and not a standard transform op?
+Because this allows you to keep the flow of array data, basically.
+And there's going to be times when you're going to find this really handy to do.
+So this was the basics of this tutorial with how to make a circle,
+how to make it a little bit more interesting and modulate it with different waveforms.
+And so I hope this tutorial has been educational and informative.
+If you have any questions or comments, please feel free to leave them under the video below
+or to post them on the forums.
+Thanks for your time.
+Bye.

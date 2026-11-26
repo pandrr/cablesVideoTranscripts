@@ -1,0 +1,50 @@
+https://www.youtube.com/watch?v=5pucC-GuDcs
+Hi there and welcome to another video on the Bytesize channel.
+Today I'll be giving you an introduction to the transform and scale ops.
+I'd like you to pause the video and just build what you see here.
+Great, let's get started.
+So here I have a cube in 3D space.
+Let's just click here and press F so we can see the flow.
+If I want to move this, rotate it or scale it, I can use the transform op that we have here.
+So if I now click and drag on position X, position Y, position Z,
+as you can see the shape moves around in 3D space.
+I can also change the scale, which is the overall size.
+I can also change the rotation of the shape on the same three axes.
+So let's just put this back to the way it was.
+Let's say I want to do this now with a second cube.
+We're going to create something called a parent-child relation,
+which is just pretty normal in 3D software.
+So I'm going to just grab all of this and copy and paste it.
+And I'm going to move it down here.
+You only see one cube because they both occupy the same space.
+So let's click transform here and press position X.
+As you can see, I now have a second cube.
+The screen's pretty full.
+So let's jump now to the scale ops.
+I'm going to click this one at the top, which is now going to affect everything underneath.
+So I click scale and I click and drag, and as you can see, everything goes together.
+So if I now click transform here and I change the scale, it affects everything underneath it.
+But if I now click the transform here in the child cube, I change the scale.
+It's independent because things pass down to each other with the flow that you see there.
+Let's just make this one have a different color for a moment so it's a bit clearer what's going on.
+Okay, so I can now transform this cube independently from the other one.
+But I can now go to the parent and this will follow it like this.
+This is a kind of hierarchy.
+So now I'm going to go to the scale op.
+As you can see, this changed it for everything underneath.
+We also have scale X, Y, Z, which does what it says.
+It scales everything on the X, Y, Z axis.
+This is a good idea to do instead of changing the width, height, or length of meshes
+because that forces cables to recreate the mesh.
+Using scale means it's for free, basically.
+So just try and follow that practice.
+And for the beginners that might be a little bit confused right now with how to do two shapes separately from each other,
+we're just going to get the sequence up here and create a second trigger.
+And I'm now going to move this shape out.
+And as you can see, I now have these two shapes here working together.
+And they're independent from this one here.
+This is an introduction to the transform scale ops.
+Play around with it.
+See what you get.
+If you have any questions or any comments, please feel free to leave them in the comment section.
+leave them in the comment section or in the forums. Thanks for your time. Bye.

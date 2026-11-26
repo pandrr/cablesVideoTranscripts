@@ -1,0 +1,111 @@
+https://www.youtube.com/watch?v=r4_EHvNTntE
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the forums is
+andro and today I'll be giving you an introduction to more cool post-processing tricks that you can
+use inside of cables. So the goal today is to get a very simple scene and to use a couple of
+established techniques to make it look a lot better, flashier and snazzier. So I'm going to
+make some basic spheres and then use some techniques to just make it look a lot better.
+So let's get started. First of all I'm going to make a render to texture up and then I'm going to
+make a full screen rectangle. The texture output goes in here and now I'm going to get a matcap material.
+Then I'm going to get a random cluster up because I want to generate a lot of spheres
+and then I'm going to get a sphere mesh. So right now we're inside of everything so I'm going to put
+the size down to 1.4 and I'm going to put the radius of the sphere and say 0.2. Great, so now we've got
+something on the screen. A few jaggy edges so I'm going to click render to texture and I'm going to
+turn anti-aliasing on. Now it becomes smoother. So first of all I want to make the spheres look a little bit
+cooler. So let's go to texture and now let's grab a matcap material. So click on texture, click on file,
+click on library, I'm going to scroll down and I'm going to get where did it go? Here, genetic view aqua.
+Great. So this is nice but a little bit ordinary. I want to go a bit more for that generative art look. So
+you know what, let's move this over here and before that let's make an interesting material. So I'm going
+to go to image compose and then I'm going to grab a stripes 2 up and the output from this I'm going to
+plug into the diffuse. Great, so this color is coming from the stripes 2 up so I'm going to click the color
+picker. I'm just going to put it on white for now. It's already looking a little bit more stylish so I'm
+just going to put the width on 0.75 actually the other way 0.25 and I'm going to grab another stripes up
+and I'm going to put that here. I'm going to rotate it 0.25 and as you can see it can blend between the
+two so I'm going to just pick a blend mode. Let's look for something that's pretty nice. This one,
+this is pretty cool. So, so far so good. I've now got this like little generative artistic material on
+my sphere so let's get started. So one of the first tricks we're going to use is ambient occlusion. So I'm
+not going to go in depth with every effect today. That's why we have Google but I'll explain it in
+brief. Ambient occlusion is when two surfaces, two edges are close together and it becomes a little bit
+darker. So if you look in the room around you, you can see this if you look into the corners, that will
+be a little bit darker than the rest. So we can do this inside the cables. So I'm going to grab an image
+compose up and with this I'm going to make my final render chain. So let's call this IC
+render chain. This is where everything's going to come together. So let's grab the draw image up.
+And first of all, I'm just going to get the default texture like we just had. And now I'm going to go
+under here and I'm going to grab an SSA02 up screen space ambient occlusion. I'm going to click that.
+It expects here a depth texture. We get this from render to texture. So I'm going to plug that in here. And you
+can instantly see something's happened with the image. I mean, if I press D here now, we can bypass
+it. So it just looks like things have become darker on some like circular edges here. So I'm just going to
+put the radius on one. I'm going to put the clamp down a little bit. I'm going to put the samples on
+three because I want it to be a little bit heavy. And actually, let's just turn this down. I'm going to
+really exaggerate it so you guys can just see what's happening. There we go. So as you can see,
+we've got this darkened edge here now. It's a very subtle effect. So if I'm going to press D without it,
+everything is just very bright and flat. There's no depth. If I'm going to click here and press D
+again, we get this like kind of fake depth. So I'm going to just leave it like this. It's a bit over
+the top because normally it's used in a much more subtle manner. But I'm going to do this today with all
+the effects. I'm going to exaggerate them so you can see what's happening in this small window. So
+great. In one minute, we've got ambient occlusion. So the next effect we want to use is depth of field.
+So let's go over here, make an image compose, and then we're going to grab the op depth texture focus.
+So this is just like a way to simulate a camera lens, making some parts of an image sharp and the
+parts that aren't in the focus are going to become blurry. So I'm going to grab depth texture. I'm
+going to plug it in here. And just so you guys can see what's going on, I'll grab this, plug it in there.
+So the far point is too much. I'll put it on five. There we go. So now I can use center to
+move the center part, the focus point. So the easy way to say this is the brighter a pixel is, the more
+blurry it's going to become. So if we want the front to be sharp, it's got to be dark. And if we want the
+back to be blurry, then they've got to be white. So this would make this part sharp, this part blurry.
+So let's just blur this and put it on, say, two. Now, blurs are a little bit expensive. So I'm going
+to turn off use viewport size, and I'm going to just put it on 512 by 512. So, so far, so good.
+Let's get the original composition back. So we're now going to go down here, and we're going to add
+a draw image. Sorry, we're going to add a blur. As you can see, it blurs everything. So now we're
+going to get the output from this, and we're going to plug it in there. And this is way too much,
+because it's on 10. So I'll put it on 3. And all of a sudden, you can see we've now got this depth of
+field effect. So we're going to have to just tweak this a little bit to make it kind of cooler. So I'm
+going to go here to center. I'm going to move it back a little bit, and I'm going to increase the width,
+and move the center back. It's just something you've got to tweak with, basically depth of field. So it's a
+very subtle effect now, but it works. It adds this kind of realism to the image. So, so far, so good.
+We've got this working. So now we're going to add a kind of glow, a kind of bloom. So let me just
+label this for a minute so you guys can see what's going on. DI if you draw image, and I'm going to call
+this depth of field. And this one I'm going to call DI original. So as you can see, we're just chaining
+everything together here. So now I'm going to go over here, and I'm going to grab an image compose.
+And then I'm going to grab a draw image.
+And now I'm going to add a luma key. So the easy way to explain what a luma key does is it only allows
+pixels to go through if they're, they've got a brightness that they're above a certain threshold.
+So I grab the texture output, plug it in here, and I click luma key. And now I push the threshold up.
+And as you can see, only the brighter parts of the image are going through. So this is pretty cool.
+So now I want to add this glow. So I'm going to grab a blur. Way too much. So I'll just put it on,
+say, four. There we go. So now I need to put this back into the image. So go over here, and I say,
+draw image. And let me grab the original image back. And I'm going to get that luma keyed blur,
+our glow, and I'm going to put it here. And we've got to change the blend mode. So I'm going to put it on
+screen. And as you can see, we've now got these brighter patches here to see the difference. We
+can turn this on, off. It's very subtle, but once again, it's adding something to the image. It's a
+little bit more than I'd normally have, but I just want to exaggerate it so you guys can see what's
+happening there. So now we've added this bloom. Let's say DI bloom. So, so far so good. This is going
+pretty cool. It's already looking a lot better. Click here, press D. This is with no post processing.
+Press D again. This is with, it's just adding more artistic flair to the image. So now I'm going to go
+here and I'm going to type in noise. I want to add some kind of like film grain. So I'm going to turn
+off animated. I'm going to turn down the amount. And I actually want to put the mode on add. I want to
+make the image just a little bit brighter. Now, noise, you add too much. It looks terrible. So I'm
+just cranking it up so you guys can see it now. I'd normally put this on say even just like 0.1. It's
+got to be really subtle because no image is perfect. I can already see it here still. It's a little bit
+too much. I'm going to put them save 0.07. It's a bit much, but it's cool. It gets the point across. So that's like a rough,
+easy, cheap film grain. So I'm now going to add the last op. And there's way more ops to do this
+kind of stuff. Gamma correction. So I'm not going to go into an explanation about gamma correction.
+You can Google this. Basically, I'm just going to show you just now how to add a bit of oomph to your
+image. So I'm going to pre multiply the texture with like say 1.2. And I'm going to put this on say 0.76.
+And now the whole image just becomes darker, richer. It just seems to pop more. So I'll click
+here again, press D, press D. I'm liking the way this is going. So the last thing which I find a little
+bit boring is the standard black background. A background can do so much to change an image.
+So I'm going to go here and I'm going to add a clear color op. So I've got to be careful with this
+because too much and I'll trigger the bloom. Let's grab this kind of color here. And let's just add
+this. Now, as you can see, the noise is now not working in a way that I'd like. So I don't add,
+I'm going to subtract. So that's more like it. And I still think it's a bit too much. So I can shake it,
+disconnect it, and I could put it after the gamma correction. You can just change this stuff however you
+see fit. So there we go. And you know what? One last trick because I really like doing things in real
+time cables. Can't help it. Got to throw this one in. So let's grab a timer to put it on 0.1 and let's
+add it to the offset stripes. And let's put this actually on 0.05. And let's add it over here as well.
+And all of a sudden, we've got this kind of like animated patch where everything's moving. We've got
+basic post processing. And in under 10, around 10 minutes, we've managed to get a bunch of spheres and
+make it look really way better than the thing that we started with. And the sky's the limit. You can
+tweak this stuff how you see fit. Let's just put this a little bit bigger so we can see this.
+Yeah, wow. Look at that. That's really not bad. To say that we just started out with a couple of
+simple spheres. This is a pretty cool end result. So this was the end of this tutorial. I hope you've
+enjoyed it. If you have any questions or comments, please feel free to leave them under the video
+below or to post them on the forum. Thanks for your time. Bye.

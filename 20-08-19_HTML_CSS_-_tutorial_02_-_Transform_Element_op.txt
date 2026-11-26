@@ -1,0 +1,27 @@
+https://www.youtube.com/watch?v=E-IZCKf_0c0
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
+forums is Andro and today I'll be giving you an introduction to the transform element op inside
+of cables. So here I have a main loop and a clear color op and here I have a div element left over
+from the previous tutorials. Now if you want to recreate what you see here just create a div element,
+go to the style and just pause the video and type in the text that you see here. Great. Now normally
+if you want to position a HTML element on the screen you'd normally use CSS styling like this. So I could
+do left 10% semicolon save, top 20% save. Now because this is a percentage it's going to scale along with
+the canvas like this. If I'd want to make it fixed I'd do something like 100 pixels and then 100 pixels
+and save. And now if I change the canvas size as you can see it's fixed with the top and left. Now
+the other way that we can do it is we can just get rid of this, do control s. Now what we do is we go to
+the DOM element output here, we pull it out and we grab the transform element op. Move the HTML element to
+the current transformation in screen space. I'm going to add that. Need to trigger. I'm going to connect it
+to main loop and as you can see the div element has now moved down to the bottom right. So I'm going to
+put a line vertical and a line horizontal on center center. Now here we can use the scale. You could
+also rotate it. Put that back to zero. So how do I move it left right up or down? Well we go in between
+because now it's in screen space and we just add the transform op like you would normally move 3d
+objects around inside the cables. And now I can use position x and position y to move it around. Now the
+handy part with this is is you've now got the transform hierarchy like you normally would with
+other cable ops like the cube or the circle meshes. So I can just copy this whole thing here and it's
+not going to look great but it's just to show you how this can work. So I'm going to use this as the
+parent. I'm going to connect this and now I'm going to put the transform in 0 0. So both div elements
+are now overlaid with each other. I'm just going to pull this down for now. So as you can see I've now
+got two div elements and the best part is I can now move this transform and move them
+as a group together. Okay, I hope this video has been useful. If you've got any questions or comments
+please feel free to leave them under the video below or to post them on the forums. Thanks for
+watching and have a good one. Bye!

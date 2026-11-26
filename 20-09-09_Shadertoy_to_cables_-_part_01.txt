@@ -1,0 +1,94 @@
+https://www.youtube.com/watch?v=j_ins4RW0c8
+Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
+forums is Andrew and today I'll be showing you how to put this shader from shadertoy.com into
+a Cables GL patch with the custom shader op. Now we get this question quite a lot sometimes like
+how do I put something from shadertoy into cables and it's actually really not that difficult once
+you know how. So I really like this shader, it's a great way to start the tutorial series off with
+and it's audio reactive which is also really cool. So the audio level here is changing the brightness
+and the intensity in this kind of like bloom effect. So what is shadertoy? Fragment shader in
+the browser converts that shader into a texture. That texture is shown here on this quad on these
+two triangles. That's it in a nutshell. So let's keep it really nice and simple for today. So we're
+going to recreate a way to be able to edit a fragment shader and see the output here. So we're
+going to go into the cables patch. I've got a main loop already. I'm going to pull this out and I'm
+going to grab the sequence op and then I'm going to pull this out and I'm going to grab the custom
+shader op and then I'm going to pull the trigger out. I'm going to do shader to texture and I'm going to
+get the shader output, plug that in here and this is now going to output a texture. So I'm going to go here and I'm going to grab a full screen rectangle. We're going to get the texture output and I'm going to plug it in there.
+Now if I click custom shader, I go to the fragment code section here and click edit.
+edit. This brings up the editor. Now we've basically got everything we need like here and shader toy and its simplest form. So let's just check this is working. So I'm going to go down here to Vec4 call and it's RGB alpha. So I'm going to put it on one, zero, zero. So just pure red.
+Great. Great. That works. Now for the people that are used to shader toy, there's normal this thing that you do to get the UV coordinates on the screen, which is where you get the, let's go down here.
+It's this part. We get the frag coordinate and we divide it by the resolution, right? So just wanted to show you, we've got a quick thing already built in there. Text quad, control C.
+So I'm just going to put this on the red and the green section. There we go. Just wanted to show that to the people that are used to how this works and shader toy. Okay.
+So let's continue to the next step. So if we look here at shader inputs, these are uniforms. These are inputs to the actual shader. So these are things that have already been declared like resolution, eye time.
+And here you can see the type, like is it effect free, which is like free float numbers, or is it a float or is it an int? I'm not going to go into all of this now. I'll make a list of what all of these are inside of cables, basically.
+So like here, the eye channel, that's the biggest one. I'd say uniform sampler XX. We normally just use uniform sampler 2D, but I'll make a list for this later.
+Okay. So let's just minify this. So we don't have those uniforms, so we're already going to get some problems. So we're going to grab this part here, control C, above main image.
+I don't want to paste everything in one go. That just causes too many problems. So I'm going to go in here. I'm going to go underneath the uniform, paste it in with control V, and I'm going to press control S.
+And we get errors. So let's look at the first one. Error on line 45, eye channel 0 is an undeclared identifier.
+Okay. And you might be thinking, oh, line 45 doesn't match up with what you see there. Well, this is the compiled shader that you see here.
+So as you can see, it's added some extra information. So just scroll down, and we can see here in the function float sample music, there's an error.
+Eye channel 0 just basically doesn't exist. So we're going to go up here, and I'm going to type in uni, which is how we make a uniform.
+Sampler, and I want sampler 2D. I'm going to press space, and I'm going to type in i, channel, autocomplete comes on, semicolon, control S, errors gone.
+That's all we're interested in now, just getting rid of the errors. So let's go back here to ShaderToy, and here we see main image, and it's a little bit different than what we've got in cables, right?
+So it's got an out vec4 frag color and an in vec2 frag coordinate, which is like the pixel values. So here we've got void main. So we don't want to change this.
+We don't want to break that. So let's first of all back this up. Control C, go down, and we just select it all. Control forward slash, got a backup then, I don't have to remember all of this.
+And I'm just going to copy everything. That's it. Okay. So let's now go here and paste it in. Now I'm going to save it. We're going to get errors, guaranteed, because there's uniforms that don't exist yet. Control S.
+So the first thing I know I've got to fix is this one. Frag color does not exist. We use out color. So I'm going to replace that there. Control S again.
+Okay. So if we go down here, we've got frag coordinate and iResolution are undeclared. Okay. So first of all, I just know that the frag coordinate dot xy divided by iResolution is the equivalent of text coordinate.
+That's why I showed it at the start. I'm going to do Control S. iResolution is an undeclared identifier. Let's go back here. As you can see, it's a uniform VEC 3.
+I'm going to just do a VEC 2 right now. So I'm going to do uni VEC 2 iResolution semicolon Control S iTime. Okay. What's iTime? Let's just show you again. Uniform float iTime. Okay. So go back here. Uni float iTime.
+And the reason that I pasted that code in is because the autocomplete already brings it up. Control S. Now we have no errors. Great. But we don't see anything. Well, why is that? Let's think about this for a minute.
+Right here, we have the iResolution, which is the resolution, right? Which is the x and y size of the canvas in pixels. So whenever this changes, you know, that's getting passed through as a uniform.
+But all we've done here is we've declared the uniforms, but there's no information being passed through. And here we can see it, right? So we click the custom shader up, our resolution x and y.
+But there's nothing there. It's zero. So let's put this on, say, 128 by 128. There we go. Now we've got this, but it's not now changing to the size.
+So the size is displayed there, but this isn't changing. It's really easy to do. Click main loop. And here you get the width and the height of the canvas.
+So we get width. We plug that into iResolution x. And we get height. We plug it into iResolution y. And now it's getting the data in uniform. Lovely.
+All right. Let's go over here, pull this down. So the last one we're missing now is time. So I'm going to pull that up, type in timer, and there we go.
+That's how quick and easy it was to put that part of the shader from ShaderToy. So I'm going to press Ctrl S. Great.
+Let's do the next part, the audio analysis. Now the beauty of ShaderToy is the constraints. This makes people create really beautiful things.
+And if we scroll up here, we can see the function sample music just returns a float one number. And what he's doing is, if I'm correct, is he's got the audio here.
+It gets turned into a texture. And from what I'm looking at here with the sampling, he's sampling like the bass and the high, I think, a little bit.
+And he adds them together, multiplies them by 0.5. We can do this way easier in cables because we're not working inside of ShaderToy, right?
+So what I'm going to do is, I'm going to go into cables. And I'm first of all going to add a play button.
+Now you need this if you want to trigger sound most of the time in a web browser, this play button. You'll see why in a minute.
+So I've got that. And now what I'm going to do is, I'm going to grab a SoundCloud op.
+Now this allows me to stream music, right? So I've already got a URL. I'm just going to copy it. You could grab any one. It's going to be underneath the video.
+So I'm going to put that there. And here we have the URL. I'm going to grab the string new to old.
+So that gets the red string type and it converts it into the old one.
+I'm having to do that right now because audio player has the old string input.
+Just follow this here and this will work.
+We don't hear anything right now. So we need to get the output op.
+And this sends an audio signal to the speakers.
+Now I'm going to get the play button here. I'm going to plug this into audio player.
+Play, right? And if I now press this, it's now playing.
+You're going to need that if it's playing inside of a browser somewhere else later.
+So I'm going to put this down to like 0.75.
+So now we've got the audio.
+So basically what I need to do is I need to analyze the audio, right?
+So we're going to pull this out and we're going to get the audio analyzer op.
+I'm going to get this trigger. I'm going to plug it in there.
+Okay. And I'm just going to use the average volume for now. That'll do.
+So we just need to put it inside of the custom shader.
+So I'm going to click this.
+And I'm just going to make a uniform.
+Uni float, because sample music is a float.
+I'm going to call it audio level, do control S.
+So I can get rid of all of this.
+I'm going to do times, audio level, control S.
+And now we just need to plug it in.
+So we're going to get the average volume and we're going to plug it into audio level.
+Okay. And I'm going to just pull all this down.
+So it's a bit more readable.
+As you can see, this is now already working.
+Great. Let's say I want to have a little bit more control over the audio.
+I'm going to grab the smooth op.
+Smooth op jumps in values and allows us to control the transients.
+So I'm going to get this.
+I'm going to plug that in there.
+And I'm going to put it on 12 and 4.
+There we go.
+That's how we converted this shader from ShaderToy, including audio analysis, into a patch inside the Cable's GL.
+I hope this video has been educational and informative.
+If you've got any questions or comments, please feel free to leave them under the video below or to post them on the forums.
+Thanks for watching and have a good one.
+Bye.
+you

@@ -1,0 +1,80 @@
+https://www.youtube.com/watch?v=B4M9FddXk1I
+Hello, this is Alex from cables.gl, and today I'm joined by Stefan from Undev, who are responsible for developing cables.gl, and we're going to cover a very interesting topic, which is exporting projects from cables.gl onto various services and your own server, so you can then put it on a website or make a website in cables and upload it. So, introduce yourself.
+Yeah, hello from me too. So, yeah, I'm joining Alex today for a tutorial that's more on the technical side and has to do with putting your patches on your website. So, let's say you created a nice patch, it's the one that we're looking at currently, and you want to export this, and cables gives you a few options to put your patch on the web or just simply download it.
+So, if you go to the menu and click this export option, then you will be presented with this window, that gives you a few choices, and also links to the documentation for each of these.
+So, definitely check out these pages on the documentation. We'll explain everything in detail again there, but today we want to show you how to download your patch with everything that's in there and put it on your private website.
+So, what would be the situation when I would use this download export option? Would it be when I have my own server or I guess subscribe to a service which allows me to upload directly to the server, right?
+So, it doesn't matter if it's FTP or SSH or maybe even through a web interface, right?
+Right. Doesn't matter. You're basically being presented with, as you can see here, a zip file with all the contents and a perfectly prepared HTML file that just displays your patch as it is.
+So, if you have access to a server and rented some hosting somewhere, you're good to go to put this in there and this will recover, yeah.
+So, I don't need to know any HTML, I built my thing in cables, and okay, cool.
+So, let's say this is this awesome patch that I want to put on my server, and I have no idea what I'm doing.
+So, you just click the menu, click the export button, see this window might look different for you because some of the options are only available to the owner of the patch.
+So, if you created the patch on your own or copied it from any of the public examples, for example, then this gives you a few more options, but the download option is always there.
+So, basically what we're doing is going through a few of these options, these dropdowns present you with a few options.
+The defaults should be fine. If you want to know what these are about, mostly about the files that your patch includes,
+like images that you use for textures, for example, or how to make this compatible with older browsers.
+Defaults should be fine by now. So, everything that's to do here is select the download tab and then export a zip file.
+Okay. So, what do I see here? It tells me everything that was in my patch was exported,
+and then there's some credits and legal text and some JavaScript that I guess I used in my patch.
+So, would I see errors here, for example, or this is just like a progress of like, okay, it's successfully exported.
+Yeah, that's basically a progress short statistics and what we basically put in the zip file that we're about to download.
+If it errors, it will show you an error, but in general, this shouldn't error.
+Okay.
+So, again, export zip file, we're being calculated this, and then we press this download button, and then your browser downloads a zip file that I now have in my download folder.
+Mm-hmm.
+And I can extract this, and then I'm being presented with everything that's in there.
+Mm-hmm. And I even see there is a screenshot. So, that's the screenshot I see on Cable's GL, like in the library.
+Yeah, whenever you save the...
+It opened the wrong folder. So, this is the one we just downloaded.
+And we're going with this one. So, as we see, this one doesn't have a screenshot because we didn't create one yet.
+But in general, there's a screenshot in there. And these are then the files that we could upload to a web server, basically.
+Nice. Okay.
+So, now I have this website, and it is really simple now. I have my own domain and my own subdirectory, and it just says, "Hello, we want to replace this with the patch."
+So, we're grabbing an FTP client to upload, and I'm already connected to the server, and everything's in there.
+Right. And this index is just like some old thing that says, "Hello."
+Yeah, that's basically just this saying, "Hello."
+Mm-hmm. So, now I open this, mark all these files and directories, and just copy it over.
+And this will then tell me that it will override the index HTML, and then can refresh this, and then refresh the page, and there we go.
+Oh, yeah. Nice.
+So, now I'm completely, like, no strings attached to cables.go.
+True. All of the stuff that you do is now the downloaded version of your patch.
+So, if you make changes here now, you need to re-export and upload it again.
+And this is not talking to any cable servers at all anymore. So, this is yours now.
+Nice. That's pretty awesome. And I guess at this point, if I want to, for example, use this as the background, or I see that it works, now I just work in cables to maybe, like, remove the sidebar or something like that.
+And then I can then open the index HTML and then enter more CSS and all sorts of, like, HTML code on top of that.
+It's not like running some application or something. It's just running all the patch stuff from cables inside a regular JavaScript.
+Yeah, if you want to do stuff, if you want to customize this, for example, you can always look at what we put in the index HTML, which is just a basic example on how to work with patches and how to integrate patches.
+Now it's common fit, nice.
+Yeah, it's common that it has some default styles that make it full screen, for example, or disable user select for mobile devices.
+So, that's kind of failsafe and a good starting point to work from.
+And the basic idea here is, okay, you have this canvas element, which is basically drawing the patch.
+And then the whole integration of the patch itself is just these few lines of JavaScript, which reference the idea of this canvas element.
+Yep.
+So, this is where to draw.
+And it gives you some callbacks that are also mentioned in the documentation where you can do something once the patch is loaded.
+And that's how you, like, if you want to integrate this into an existing web page, maybe not have it full screen, but just on a hero image or menu item or whatever, then just go in here, download the zip file and take the integration from here and go from there.
+It's really simple.
+Okay, cool.
+That's pretty awesome.
+And I guess that's pretty much it for uploading to FTP.
+I'm trying to think of what other gotchas there are.
+Yeah, basically, that's just like the old school way of uploading HTML to a web server.
+A web server also doesn't need any kind of CMS or back-end language or database.
+So, wherever you can put basically static HTML files that a web server can put, you can put the contents of this zip file and serve your website from there.
+And as you said, it doesn't matter.
+You can upload FTP, SFTP, SSH.
+If you find a web formula website where you can upload stuff, that's also fine.
+And there are some services that offer this, like GitHub and Netlify, and this we will cover in another video.
+But it's similarly easy, I'd say.
+Nice.
+Well, yeah, this is pretty interesting because then one thing I'm thinking of is there was some stuff in documentation I saw that allows you to then take your cables patch and to start integrating it with other JavaScript elements or callbacks and all sorts of, like, outside of cables services.
+Or interactions on your web page.
+So, if you want to get into that stuff, like, hopefully, you know, you can watch the series of tutorials and then start experimenting with connecting your cables patch to the rest of the world.
+And, yeah, experiment with it.
+And if you have any questions about this, definitely comment below.
+And we'll be happy to answer and see you on our Discord.
+See you.
+Bye.
+Yeah.
+Bye.

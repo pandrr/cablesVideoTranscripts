@@ -1,0 +1,92 @@
+https://www.youtube.com/watch?v=TdHgjqOLpnM
+hello this is Alex from cables.gl i want to talk about switch trigger but also the friends of switch
+trigger which are a bunch of new ops well okay they're not that new but we didn't really talk
+about them so they're sort of new and i want to use them a bit more and hopefully you'll also use
+them a bit more because it's a super handy concept and we'll cover what we kind of are used to with
+switch trigger then maybe introduce some of these and just see how to use them and after that
+maybe we'll maybe like introduce or hint at the other things i want to show you that are sort of
+related because once we get the concept of this you might think what about the opposite way of doing
+this stuff but anyway so how does it work switch trigger takes a bunch of triggers right so things
+coming out of your main loop so for example from this phong material we'll plug in it into our like
+first choice trigger index zero and then this will go to our cube all right that's cool
+so let's maybe put down a basic material and then maybe give it like a i don't know color area
+and don't know how it's going to look but we're just going to plug it into this other
+option right so now we have these two material setups um not that beautiful i just want to add a sequence
+there so it's uh a bit better right now i'm holding shift alt and i'm holding and i'm clicking with the
+right mouse button on the cable and then just lifting it up and placing it kind of handy actually
+have i've ever talked about that before so shift alt hold this end put it down and then if i want to
+place something here or place it somewhere else on this end i move my mouse all the way to the end
+shift alt and then pick up this end anyway tangent so now we have two materials the phong one is visible
+on our cube right i can change the color this is what the cube is getting great um and that's uh
+brunel on the phong as well that's what that green thing is there kind of freaked me out for a sec
+so switch trigger uh let's say we have some setup to switch these indexes or indices indices indices
+uh and we can switch between our materials so maybe you have a sidebar or some sort of condition trigger
+to go from um zero to whatever and then five six seven and then you choose all these different
+choices that's great so for example what if i want a material that has a different texture on
+my cube right i would basically have to let's just let's just try this so basic would get maybe
+like a noise texture and maybe make it a bit more visible so i'll do like four by four
+and we have this kind of messy colorful noise on our choice number two which is index zero uh one
+and then it's got this funky color area or whatever reason maybe make it smaller yeah so that's our
+choice number two so i want another material with a different texture what do i have to do do i have
+to create another setup like this so i just selected it and copy pasted it and then maybe plug in
+this into my first choice and then maybe a different material texture for this basic and
+do it this way
+so see now i have well i'll remove this color area so it's clear it's our first choice we have this one
+and then if i go to this one uh choice number two i have these two materials with different textures
+but that seems a little bit overkill right because now we can use all these other cool operators for
+you know certain things like this where you want a material but you just want to change the texture in it or
+you have maybe an array for your mesh instancer you don't want to use a switch trigger to like recreate
+a whole different setup for your
+maybe spherical point cloud or something like that you just want to switch the array so
+um once you have an idea of a project where you know what you're going to be switching
+uh you definitely should um take a look at these new
+newer operators that allow you to switch just parts of your patch so
+what uh i was demonstrating here was yeah okay
+we can have two materials with different textures
+but in uh a more compact setup i guess is we have the one basic material going into a cube right
+and then we have the switch textures that are that is getting two different textures into our like amount
+of choices and um just real quick tangent this default texture is transparent so for example if i go to
+a choice that doesn't have uh any any texture plugged into here right this operator has this uh switch here
+let's make this a bit wider so it's it's called default texture transparent right
+so if there is a selection made for example number five right this thing will be uh transparent
+or not right so that's pretty much the only like i mentioned before the only uh extras choice and all
+these um um from this group of operators because every other one is basically
+choices and then an index selection for that choice except for this texture one and that's what it does so
+you can either have a transparent texture or not a transparent kind of like weird uh default
+missing texture uh striped choice there um that's pretty much it okay tangent over so we're back to
+our uh selection of textures one material uh going into our cube and then we're switching textures with this
+index number pretty sweet right so we don't have to recreate that whole setup of different
+different materials and add different textures to them what else i guess that's pretty much it uh
+definitely leave uh some comments below if you want me to cover a specific um use case for example for
+something like this no i'm really interested about this one actually because i i do remember some operators
+that strictly take a file and they don't allow me to like animate things i think on on my spare time i'm gonna
+try to plug this thing in and uh by the way what does it do switch files so it's actually pretty handy uh
+you can you can of course do something like you know if you have an operator that comes out from a file
+you uploaded for example i have in my library um you know some textures and then when i drag it out into my
+uh editor field i get a texture operator with a texture output that's great um but you can also use this
+file selection right so i can maybe go into here and then it just goes into my library and then i can select
+the beach as one of my file choices right so now it's kind of compact so now i can maybe plug in a texture
+operator texture operator texture operator yeah yeah so kind of interesting so um it's it's like a better
+maybe optimal way of uh um keeping all your stuff organized so you know that you've uploaded a bunch
+of files into your library or into your project and you want to use those specifically and then just have one
+texture operator and then connect that to something else
+um but yeah switch file uh super handy actually um really uh want to try that out switch object
+it could be geometry objects um json stuff like that switch array of course arrays
+um and it doesn't matter what length they are they can all be completely different arrays and whatever
+one you select with the index that comes out switch string put in your string plug in a string and then
+switch through those uh number switcher cool and then of course switch textures which we looked at
+now as an outro let's say i like this is what i had an issue with okay that's great if i have a bunch of
+choices and then i want to um connect that to like a single cube so i have a bunch of materials that go
+into a single cube or a bunch of textures that go into a single single material but what if
+i want to do is i want to select to what geometry this goes to for example right so i'll have like
+uh maybe a flatter cube wait i edited the wrong one so this one i have like a flat plane or something then
+maybe a sphere so i like this material right and then i switch
+maybe to this one and now i want to have a different shape do i have to somehow like recreate
+all this to use a switch actually no because there's kind of a similar operator family i want to say like
+this but it's it's like flipped up like upside down i guess so you have one input and then many outputs so
+these ones are called routes um i don't know route operators so route trigger route trigger
+like that so we can plug this into here and then we also have a switch value or like the index
+of uh which output port will go to so i think this one is triggered right now and then we plug in the
+other flattened cube and then the sphere and then here we can select one oh there's our flattened one and
+then two there's our sphere so that's not some other family but uh we can cover it later but actually i think
+this that should suffice it all right bye
