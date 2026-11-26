@@ -1,7 +1,7 @@
 https://www.youtube.com/watch?v=X8731HN0Ah0
-Hello and welcome to another KBITS tutorial. My name is Tom on KBITS and Discord. My name is pandur
-and I want to talk about Handlebars. Handlebar template engine in KBITS today. So Handlebars is
-a little library that we can use for HTML, for dynamic HTML generation. And we do this in KBITS
+Hello and welcome to another cables tutorial. My name is Tom on cables and Discord. My name is pandur
+and I want to talk about Handlebars. Handlebar template engine in cables today. So Handlebars is
+a little library that we can use for HTML, for dynamic HTML generation. And we do this in cables
 all the time. So if you click any op, you see the parameter panel on the right. All of this is
 generated HTML using Handlebars. And we have this handy Handlebar HTML op, which is quite underrated
 and I want to show this to you. So in this example that we will build, we will generate a list of words

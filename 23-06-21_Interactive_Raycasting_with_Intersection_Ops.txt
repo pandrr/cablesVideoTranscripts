@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=lNbfCp0T55c
-- Hello and welcome to another KBIT tutorial.
+- Hello and welcome to another cables tutorial.
 Today I want to talk about the new set of ops
 that are called intersections.
 Those ops make it really easy to pick an object,

@@ -202,7 +202,7 @@ And if you make this public, it's also a pretty nice collection of good visuals 
 So, yeah, the visuals will be public, so it's like, I publish all my patches on Creative Commons, so public domain, so it will be free to use.
 But also, what I'm thinking about is to do, like, the NFT market for the visuals.
 So, but this will require some blockchain connection.
-So, what I'm thinking of is to open, like, make a standard that KBOOS users could use to make their patches work with this mixer.
+So, what I'm thinking of is to open, like, make a standard that cables users could use to make their patches work with this mixer.
 Okay.
 And then to just make some kind of, yeah, standardized parameters, and some connection to, connect it with the blockchain and read it directly from, from the NFT, from the interactive NFT.
 And that's, that's the idea I have.

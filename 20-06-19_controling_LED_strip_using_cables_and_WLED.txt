@@ -92,7 +92,7 @@ so we just came up with um a general thing that might also be interesting in oth
 you have problems with web security um we made an often mentioned thing that is called da player
 which basically gives you the um the ability to run um cables patches in an uh in a different
 app in a standalone app that basically is just a browser and you won't have all the um all the
-security restrictions in there so this is also if you want to run cabits patches as an executable like
+security restrictions in there so this is also if you want to run cables patches as an executable like
 offline or give an executable somebody then you can use the player to just run it outside of a browser
 without a browser and um and just just run it without needing any chrome or going to a url or something
 like this um so this is a handy tool that we use for this and um as you can see and uh also um how the

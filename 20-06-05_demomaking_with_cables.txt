@@ -350,7 +350,7 @@ Then we know we end at the next scene for sure.
 Yeah.
 All right.
 Um, so one handy thing, um, to know is, um, you can.
-Um, so if you use cabins a lot or if you use cabins before, you probably know about the
+Um, so if you use cables a lot or if you use cables before, you probably know about the
 timer ops.
 So this gives you, uh, like the time since we loaded this patch.
 Right.

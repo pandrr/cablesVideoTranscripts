@@ -66,19 +66,19 @@ And maybe to sender him a bit better, we can just throw in a transform and then 
 Alright, so how do we animate this guy?
 We can first kind of explore this GLTF scene again and remind ourselves that there's this thing all the way at the bottom which is called anims.
 And this is an array that you can inspect and you'll see the name of your animation that was applied.
-So in case you're not using MixML, you might be able to put in a bunch of actions in Blender, upload it to cables and then choose the exact animation that you want to play.
+So in case you're not using Mixamo, you might be able to put in a bunch of actions in Blender, upload it to cables and then choose the exact animation that you want to play.
 But we're not going to cover that either.
 We have this one, we don't have to set the name for it, it's just going to play the topmost scene animation which is the only one we have.
 So all we need to do is type in or put in a timer here.
 And pretty much it.
 And we can put in an orbit.
 And give him a phong material for now because the other project I have over here is obviously a little bit more intricate with PBR material that I applied and looks pretty nice.
-So here's our guy with a new material and he's using the animation from MixML.
+So here's our guy with a new material and he's using the animation from Mixamo.
 So incredibly easy, right?
 That's the beauty of cables.
 So, tell me what you think.
 Ask me questions if you have issues with this stuff.
 Because, you know, I'm covering like a very nice example here where everything just works.
-But, you know, even using MixML you can get into some interesting jams.
+But, you know, even using Mixamo you can get into some interesting jams.
 So, I'll be happy to cover that and we can talk about it.
 Thank you, bye!

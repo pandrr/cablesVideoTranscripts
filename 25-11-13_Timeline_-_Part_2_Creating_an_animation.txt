@@ -1,10 +1,10 @@
 https://www.youtube.com/watch?v=KMhAjqn_fGg
-- Hello and welcome to another KBITS tutorial.
-On KBITS my name is pandur and today I want to show you
+- Hello and welcome to another cables tutorial.
+On cables my name is pandur and today I want to show you
 how to create your own keyframed animation
 with a new timeline.
 So I prepared a really simple patch here
-and I want to animate the KBITS logo
+and I want to animate the cables logo
 to move around on the screen.
 So, and I don't want to use a timer or a sign animation
 or something like this, I want to create manual keyframes.
@@ -32,7 +32,7 @@ So this is because I'm in the curve layout so you can or in the graph view, you 
 So when I click this, this is the default view where we only see the key frame.
 So when I, when I move the cursor again somewhere else and then drag the value, you will see it created another key and I can switch between this view and this view.
 And then I see the, the curve of those keys.
-And this is the most simple way to create, uh, keys in KBIT.
+And this is the most simple way to create, uh, keys in cables.
 So I can rewind this and press play.
 You can press space, you can press control space to, um,
 automatically play and start from zero.

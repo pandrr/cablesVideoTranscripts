@@ -50,7 +50,7 @@ So we will export this model to use it in cables.
 So you have to click export model and then you have to click upload my model.
 So this uploads your model to the teachable machine database.
 And now we have this shareable link generated so we can copy this link.
-And we can go in our cabets patch and we create a cabets patch from zero and I would just do that.
+And we can go in our cables patch and we create a cables patch from zero and I would just do that.
 And so I will create a main loop and I will create a full screen rectangle because I first want to show my webcam.
 So I use the webcam text job.
 So now you see my webcam image here and now we search for teachable and then you see those three ops I talked about.
@@ -62,7 +62,7 @@ Just try them.
 Yeah.
 So I select this and edit and now you see there's an input for model URL.
 So you can just paste now the URL that you got from teachable machines.
-You can also download that file and upload it into your cabets patch if you want.
+You can also download that file and upload it into your cables patch if you want.
 But this way is the fastest.
 So now I have to connect it to the main loop and now it's already.
 Now it needs the webcam texture needs to be connected to this up for it to work.

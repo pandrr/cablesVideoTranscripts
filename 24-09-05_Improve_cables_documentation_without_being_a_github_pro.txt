@@ -3,7 +3,7 @@ hello and welcome to another cables tutorial this time it's a bit different beca
 you how you can contribute to cables without being a programmer or without being a github
 profi at all but still can help us with cables it's a question that we get often that something
 is off in the documentation or there's a typo in the documentation or something like this and
-people want to help so this is now easier than ever because as you hopefully know cabbage is now
+people want to help so this is now easier than ever because as you hopefully know cables is now
 completely open source and on github and that makes us much easier to contribute and other people see
 that you contribute to the project so fully fully open source workflow so so you saw this
 nice operator and you found like a typo in the in the summary here so this says numbers it should
@@ -36,7 +36,7 @@ whatever this source code is compatible or it does merge and now it's our turn n
 a notification from github that you submitted a change and we get the same view and we see
 which file you changed and what the changes and then we can accept the change and push it back
 into the repository and then automatically when we do this it's basically like two minutes later it's on
-dev.cablesgl the change and then you can see it there so this is really integrated in our usual
+dev.cables.gl the change and then you can see it there so this is really integrated in our usual
 cables development workflow so yeah um please help us feel free to help us and um and try it out and
 we will be really happy and also if you're a programmer it's the same way right so don't
 be afraid to make a mistake or something because we can always uh say no we don't want this change or we

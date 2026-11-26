@@ -168,7 +168,7 @@ So there's some explanation about those, uh, run commands.
 But the most convenient one is, uh, this watch standalone, which is also shown after you install, use the local install.
 It will also be shown to you, um, that this is the most convenient one.
 Okay.
-So for this, I, uh, I have to go to, sorry, um, to the root directory, to the cabits dev directory.
+So for this, I, uh, I have to go to, sorry, um, to the root directory, to the cables dev directory.
 And then I will type npm run, run watch standalone.
 And this will watch for changes.
 So, um, when I save this file, you see something happens, right?

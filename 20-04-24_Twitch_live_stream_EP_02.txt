@@ -22,7 +22,7 @@ the rules of that will be um so um basically we're gonna run through um some of 
 changelog so first of all i'm gonna ask pandur if you can just open the changelog page yeah so people
 can see where it is so you can always find it um when you hover in the menu and go to changelog basically
 or you find it in the footer but you can go here and then we see the changelog and the changelog for
-us is like so all the developers on kbiz.gl they are collecting like all the stuff they do um
+us is like so all the developers on cables.gl they are collecting like all the stuff they do um
 when they just update ops write new ops fix some bugs and stuff like this we just collect this and
 we just when we do the update we compile this big list and you can always find it here so so when you
 scroll down all the way you see like there's the updates from a year ago so we just we just want
@@ -624,7 +624,7 @@ um yeah so this is this is quite handy and we should also do a tutorial
 about this um at one point i'm working on it yeah yeah maybe we also do it together um
 uh oh yeah so um so what what's possible now is so the problem always is that you can you can
 reference files in a css file image files for example or svg files stuff like this or fonts
-and this was always a problem with kbit so we cannot there's no easy way there was no easy way to
+and this was always a problem with cables so we cannot there's no easy way there was no easy way to
 reference files that you uploaded so now you can basically um let me go to my
 files and now you can just upload an image like a like you would upload a texture or something
 and you can references in the in css ah so you can you can set this image now as a background image for
@@ -715,7 +715,7 @@ are complete sites done with cables and we will update this um
 we will update this even more um oh there was a nice example today
 uh okay can you look in can you look at the general in in discord yeah sure one minute
 yeah and uh is that uh from farm
-barium yeah does the plus six create uh so this is a website uh the cabits user did um
+barium yeah does the plus six create uh so this is a website uh the cables user did um
 on its own and i i really like it
 it's a bit slow from europe i think
 yeah he said that it's only being hosted in korea i think so it's a bit slow

@@ -39,7 +39,7 @@ from, from the app, from the Ableton Note app.
 So this is what we want to do.
 Okay.
 So first of all,
-I will start our standalone version of KBITs.
+I will start our standalone version of cables.
 So let's start by creating a new operator.
 So let's call it Ableton Link.
 So let's start by creating a new operator.
@@ -146,19 +146,19 @@ You can also read that back in, in Ableton and connect, uh, musical programs.
 So, yeah.
 So this is, uh, nice example, how to, uh, use MPMs in your operator.
 And that worked pretty good.
-So this is, if you download the electron version of KBITS, it's a bit different because, um,
+So this is, if you download the electron version of cables, it's a bit different because, um,
 this is what I'm using is the, um, self-compiled version.
 The, what I showed in the last tutorial or one of the last tutorials.
 And I want to show how it is in the downloaded version because, um, because this, uh, NPM module
 uses native stuff.
 So it has to compile native code basically in the background to work.
-And to use this with the downloaded version of KBITS, you need to have those development
+And to use this with the downloaded version of cables, you need to have those development
 tools installed.
 So, so this is why it's a bit different.
 So I just want to show this, um, how this would work there because you get a little
 error message and then you have to do it yourself.
 Um, but most stuff is the same.
-So, okay, let's just, um, try our, um, so I downloaded the latest version of KBITS here.
+So, okay, let's just, um, try our, um, so I downloaded the latest version of cables here.
 Um,
 and I will just go to this, uh, uh, okay, let's, let's see.
 Um, so when I execute this, it's already working fine because we already compiled and installed the
@@ -194,7 +194,7 @@ But usually you also have to do the NPM install.
 So yeah, I hope that was understandable and, um, please let us know what you do with it.
 Because there's a lot of native or a lot of nice NPMs out there that can be used for awesome stuff.
 That's not easily possible in the web.
-And we think KBITS can be just, uh, yeah, the, the functionality can be extended, uh, quite much with NPMs.
+And we think cables can be just, uh, yeah, the, the functionality can be extended, uh, quite much with NPMs.
 So let us know what you try to use, what you want to use, if you have any problems, um, yeah.
 And have fun with it.
 Okay.

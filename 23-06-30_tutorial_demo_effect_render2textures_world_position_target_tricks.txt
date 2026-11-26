@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=B9GyRzov5Bg
-hello and welcome to another kbitz tutorial today we don't want to do something more visual
+hello and welcome to another cables tutorial today we don't want to do something more visual
 and more practical and there was a request under a youtube video on the kopsache by holan it's a
 little demo graphical demo and it's mostly based on one effect and youtube user asked
 does this use custom shader code or standard operators and i want to show how this is built

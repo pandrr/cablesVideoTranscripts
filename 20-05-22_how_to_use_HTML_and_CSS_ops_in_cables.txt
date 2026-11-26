@@ -89,8 +89,8 @@ and make a decision with this um i can also um for example link to another websi
 we don't really have a link element on a anchor element um we currently only have the diff element
 but i can connect this to an op which is called hyperlink
 and um so this op um can open a window to another website so i can say
-open cablesgl in a new blank tab so when i click this now you see it opens a new tab here
-on cablesgl so um this is super handy if you want to link to another website or or something like this
+open cables.gl in a new blank tab so when i click this now you see it opens a new tab here
+on cables.gl so um this is super handy if you want to link to another website or or something like this
 there's another port on the div element that says hover can you show what that does
 oh right uh totally forgot about that oh yeah so we have another output
 which which means says hover and this becomes true when the mouse is over the element
@@ -645,7 +645,7 @@ the webgl background so in many cases we have modal
 dialogue so what's a modal dialogue so for example this is a modal dialogue right
 right this up select just you can only do the up select right now everything in the background is
 great out and when i click in the background i go back i just close my modal dialogue we use this all
-the time in cabits basically um so for example is that like an often used pattern on websites to basically
+the time in cables basically um so for example is that like an often used pattern on websites to basically
 grab the attention of the user and block everything out yeah it's just a normal ui pattern uh like this is also a
 a modal dialogue basically so um so you use it like website uses all the time so um we can we can build
 this with the development that is has opacity and then we put another development on top and all the

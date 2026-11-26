@@ -41,7 +41,7 @@ but maybe we will have the, use the waveform op
 in cables to, to draw stuff to the timeline
 and that you can see, that you can see your audio track there.
 - Yeah, so another nice thing about keys
-or another nice feature on the KBITS timeline
+or another nice feature on the cables timeline
 is that you can, you can just select keys
 and scroll down here in the, in the little panel here.
 And you will see there's a comment and a color,

@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=WQM37Jr_NHI
-hello and welcome to another cabins tutorial today it's again about interactivity and i want to work
+hello and welcome to another cables tutorial today it's again about interactivity and i want to work
 on this example and show you how this works so in this example we want to pick between
 thousands of spheres so rendering thousands of spheres and and testing which one the mouse is
 hovering over and we are using this with the completely different technique than the

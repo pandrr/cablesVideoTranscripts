@@ -128,7 +128,7 @@ expectations i'm not a coder i never did anything um cool in my life i was excit
 by every little cube i managed to spin around was like whoa damn cool that's almost demo scene and um
 of course there was a stream of course there was a stream of always like it would be so cool to make
 a demo someday maybe in a few years oh god but definitely not soon because i'm such a noob
-but then i um i also watched basically every single tutorial android did also because it was kind of
+but then i um i also watched basically every single tutorial andro did also because it was kind of
 relaxing to just follow along and basically bob ross uh the entire thing along with andro thank you
 yeah because there was there was so much when you when you open uh a patch which for example uses tons of
 arrays it doesn't really make sense um mathematically until you do it in an in an order for me because i'm
@@ -239,7 +239,7 @@ yeah but doing the patch in a different way especially like yeah like doing one 
 for all the scenes and not each scene has its own post processing that basically would have fixed it
 yeah memories there for wasting it i think
 there is there is like basically i had you i hadn't used any like 3d
-complicated meshes stuff i also haven't used repeat op because i learned from android that
+complicated meshes stuff i also haven't used repeat op because i learned from andro that
 mesh instancer is the only way to put everything on on screen so there was some computing power to spare
 for that yeah i mean i'm a big fan of the mesh instance but there are some things especially the
 smaller ones that you know the repeat op is actually really really good um it's just it's just when
@@ -601,13 +601,13 @@ you create a word and then you put stuff in there and then you can interact with
 simulate the physics or uh cast a ray from your mouse to see what's under your mouse we will see this
 later so um so we have an op um that's called world so you see it's in the physics namespace and it's called
 world um
-uh minimum size of the kbsgl exported project is around 50k or 80k something like below 100k for sure
+uh minimum size of the cables.gl exported project is around 50k or 80k something like below 100k for sure
 so so we create this world uh object here and um now we can um
 um but we can make it smaller outcome if you want what do you mean
 i was wondering if you if he finds this small or big um but yeah so so we can add a cube to this
 um for now so
 and um
-like usually like this is attached to a mesh or something in cabins it isn't so you have to create
+like usually like this is attached to a mesh or something in cables it isn't so you have to create
 like a real cube and put it at this position um so you can easily do tricks like the the physics cube is
 a bit bigger than the um than the real cube um but yeah that's not important for now so
 um so we have this this outline here and this outline means there is a physics object there

@@ -10,7 +10,7 @@ some small um improvements to the editor to make your life easier while patching
 awesome new feature where we can work with geometries and obj export them freeze them to optimize
 performance but we will walk you through um in the few next minutes and i guess we just dive in with
 the most obvious hero feature of this release which is um vr support by using um webxr yeah exactly and just
-to to show you to show you the you can just go to block dot cabits gl and you see the whole release in in
+to to show you to show you the you can just go to blog.cables.gl and you see the whole release in in
 detail and there's there's a bit more here that you can explore and we will only highlight we will only
 show a few highlights so the first topic here is is web vr and um as you can see there's there's directly
 examples so i want to show you this example first so this uh is our example this is the more complicated

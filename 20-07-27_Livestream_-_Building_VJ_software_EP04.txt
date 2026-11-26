@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=b54nxwEdPTg
-Good evening and welcome to another Twitch live stream with CablesGL. I'm Andro and tonight I'll
-be doing another episode of building my VJ software inside of CablesGL. Just kind of getting ready
+Good evening and welcome to another Twitch live stream with cables.gl. I'm Andro and tonight I'll
+be doing another episode of building my VJ software inside of cables.gl. Just kind of getting ready
 right now into the flow of things. I hope I'm audible and that everybody can hear me. We did
 a quick test upfront a little while ago. So hopefully that's all okay right now. So as usual,
 I'm just going to give it a little while for people to be able to get into the stream. All

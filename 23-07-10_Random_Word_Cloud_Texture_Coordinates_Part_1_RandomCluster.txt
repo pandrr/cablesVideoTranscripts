@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=fHayPTVRH5k
-hello everyone welcome to another kbiz tutorial thank you for the positive feedback from the last
+hello everyone welcome to another cables tutorial thank you for the positive feedback from the last
 one that was really good and i think it's the right way to do more visual visual examples visual
 tutorials and this is what i want to do today so i we want to create this random word cloud
 that just scrolls by and we want to build a texture that contains those words and then
