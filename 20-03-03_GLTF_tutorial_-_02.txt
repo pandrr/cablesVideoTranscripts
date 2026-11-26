@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=D2iecoKFUtw
 Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the forums is
-Andrew and today in the second part of the ongoing tutorial series I'll be showing you how to get this
+andro and today in the second part of the ongoing tutorial series I'll be showing you how to get this
 textured model from Sketchfab and how to prepare it to import it inside of Cables to get something
 similar to what we see here. So without further ado let's get started. So the link to the model is
 underneath the YouTube video or inside a comment inside of the patch. So just click that to go here.

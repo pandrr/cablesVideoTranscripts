@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=glY1s9PCb00
 Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the farms is
-Andrew and today I'll be showing you how to use MIDI CC data from Ableton Live to control and
+andro and today I'll be showing you how to use MIDI CC data from Ableton Live to control and
 animate a post-processing chain inside of cables. This is the third part of an ongoing tutorial
 series and I'd just like to give a quick shout out to everybody for all the positivity and all
 the feedback that we got. It's been really good and overwhelming so anytime you've got something good

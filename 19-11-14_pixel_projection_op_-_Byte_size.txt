@@ -1,5 +1,5 @@
 https://www.youtube.com/watch?v=xkIrVtSU4FU
-Hi there, and welcome to another video on the Bytesize channel. My name is Mark, my handle on the farms is Andrew, and today I'll be showing you how to use the pixel projection app. I'd just like you to pause the video and make what you see here.
+Hi there, and welcome to another video on the Bytesize channel. My name is Mark, my handle on the farms is andro, and today I'll be showing you how to use the pixel projection app. I'd just like you to pause the video and make what you see here.
 Great, let's get started. So I've got this rectangle on the screen, I'm going to move it to the left. Now watch what happens if I resize the screen. Its position in relation to the left side and the top and the bottom, it changes.
 So imagine we want to get around that and say I want this rectangle to always be in the bottom left corner, no matter what.
 So we're going to grab the pixel projection app, and this simply remaps the 3D coordinate system of space into a 2D pixel coordinate system.

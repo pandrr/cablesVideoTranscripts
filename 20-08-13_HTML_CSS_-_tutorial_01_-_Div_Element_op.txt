@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=ooW2FL0vnWM
 Hi there and welcome to another video I've made with Cables. My name is Mark, my handle on the
-forums is Andrew and today I'll be giving you an introduction to the div element op inside of
+forums is andro and today I'll be giving you an introduction to the div element op inside of
 Cables and how you can use it to create some simple interactivity inside of your patches.
 So first of all I'm going to press escape and I'm going to type in main loop and now I'm going to
 pull out the trigger and then create a clear color op and then use this to change the color of the

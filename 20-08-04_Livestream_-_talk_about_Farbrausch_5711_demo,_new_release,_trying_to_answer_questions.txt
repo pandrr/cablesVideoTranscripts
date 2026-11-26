@@ -129,10 +129,10 @@ by every little cube i managed to spin around was like whoa damn cool that's alm
 of course there was a stream of course there was a stream of always like it would be so cool to make
 a demo someday maybe in a few years oh god but definitely not soon because i'm such a noob
 but then i um i also watched basically every single tutorial android did also because it was kind of
-relaxing to just follow along and basically bob ross uh the entire thing along with andrew thank you
+relaxing to just follow along and basically bob ross uh the entire thing along with andro thank you
 yeah because there was there was so much when you when you open uh a patch which for example uses tons of
 arrays it doesn't really make sense um mathematically until you do it in an in an order for me because i'm
-not also i'm also very not good at math so following andrew along i started to see okay what happens when
+not also i'm also very not good at math so following andro along i started to see okay what happens when
 we uh take the points and multiply them okay gets bigger and so on this is this is when when but you
 kind of can't get overwhelmed by all these big pictures the patches but uh chunk down it suddenly
 started making sense and yeah you need to develop a feeling for it right so so yeah and then and when you
@@ -796,7 +796,7 @@ um yeah so we could we could try to if there's nothing else
 um i want to try something so so i want to count like the clicks on each cube basically so
 um i just did string equals with the output and uh if it equal to the trigger change true and then
 just triggered
-no i want to counter for each cube basically okay you're gonna do it in the less ops than andrew method
+no i want to counter for each cube basically okay you're gonna do it in the less ops than andro method
 i don't know what i i just i just want to try this so
 uh okay let's let's see what happens um
 probably i will i will fail miserably

@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=Nre7LH0OVw4
 Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
-forums is Andrew and today I'll be showing you how to create a simple kind of particle-like
+forums is andro and today I'll be showing you how to create a simple kind of particle-like
 explosion with the array ops and the point material and point cloud from array ops. So
 without further ado let's get started. I'd like you to just pause the video and just make what
 you see here. Great so I'll just explain briefly what's going on. We've got the full screen rectangle

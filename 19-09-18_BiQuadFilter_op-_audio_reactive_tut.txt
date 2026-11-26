@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=68iSILnuLnA
 Hi there and welcome to another video of Made with Cables. My name is Mark, my handle on the
-forums is Andrew and today I'll be giving you the second part of an ongoing tutorial series
+forums is andro and today I'll be giving you the second part of an ongoing tutorial series
 in how to build audio reactive patches inside of cables. Today we're going to be focusing on
 learning how to use the bi-quad filter op. This will allow us to isolate certain parts of the
 audio spectrum like bass, mid or high and this will make it easier for us to get things like a

@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=AF3CMq_PzaQ
 Hi there, welcome to another video of Made With Cables. My name is Mark, my handle on the forums is
-Andrew and today I'll be showing you with the second tutorial how we're going to go further
+andro and today I'll be showing you with the second tutorial how we're going to go further
 with the weave array up. So I just like you to follow what I'm doing and after a minute or two
 I'll give a brief explanation of where we're going to go with this. So just make a main loop. Now
 we're going to add a clear color up and I'm just going to turn this up a little bit and now we're

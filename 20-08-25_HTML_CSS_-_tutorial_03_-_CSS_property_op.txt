@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=qnPFY8qYBUQ
 Hi there and welcome to another video made with cables. My name is Mark, my handle on the forums
-is Andrew and today I'll be giving you an introduction to the CSS property ops inside
+is andro and today I'll be giving you an introduction to the CSS property ops inside
 of cables. So here I have a main loop and a clear color and a div element. Just create a div element,
 pop open the style with the edit button and copy this text over here if you want to get what I've
 got there. Great. So these are CSS properties like padding, color, font size, border. So we can

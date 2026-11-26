@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=cpjlm9tjgGo
 Hi there, and welcome to another video of coding with cables. My name is Mark, my handle on the
-forums is Andrew, and today I'll be showing you how you can get started with coding your own array
+forums is andro, and today I'll be showing you how you can get started with coding your own array
 ops inside of cables. So I'm going to click here, press escape, and I'm going to type in array tester
 seven, because this video has taken a few takes today. I'm now going to click the create button,
 press escape. I want to add the op to the patch. So I'm going to type in array tester seven, add, you

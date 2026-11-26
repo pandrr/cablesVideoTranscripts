@@ -438,7 +438,7 @@ yeah but you're not gonna get this pedal effect uh where it does this with a cir
 unless okay this could go horribly wrong let's try this one let's try and make one pedal first okay
 uh oh boy let's give it a try all right so um
 um
-about goose a happy man he's like ah andrew you're gonna make such a fool of yourself buddy
+about goose a happy man he's like ah andro you're gonna make such a fool of yourself buddy
 let's try this right so um we're gonna get um the spline
 mesh all right and just if you've never used this before and you want to know it works just get a
 random numbers array free and just throw that in there and there you go and if you want to get curvy
@@ -446,7 +446,7 @@ lines it's just a quick tip for anybody that's new to cables we're going to get 
 we get this and basically adding more points to the thing and we can make it smoother right so let's
 put this on 20. this is a really great way to just make some curvy stuff so i think this is what like
 um a goof um going on about there's a twist twirl shader effect up yes there is um right now i'm just
-going to try and make one um one pedal and then use the andrew never uses that repeat up if i can get
+going to try and make one um one pedal and then use the andro never uses that repeat up if i can get
 that to work um okay hold it so uh we want to have sir points circle okay i just want to get like one of
 these working okay so this isn't closed i think we had an up for that um loop array free make the first
 last point of an array the same tada okay um let's throw that one in there right so let's get array transform
@@ -504,7 +504,7 @@ bit sure what else all right let's just let's just roll with this for now it's o
 this will do for now okay um
 so now like you never see me using this up everybody it's going to be history in the making
 on stream it's um it's um it's only been seen a few times in the undev office because and
-andrew and other users repeat ops because it's on the cpu not the gpu it's not okay
+andro and other users repeat ops because it's on the cpu not the gpu it's not okay
 but let's do this so i'm gonna grab a repeat up okay uh yeah right
 so um let's rotate i think from here right whoops
 ah um can't can't swear in the stream okay rotate x

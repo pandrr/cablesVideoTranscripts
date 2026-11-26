@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=d3jGof4GSCc
 Hi there and welcome to the second video of an introduction to cables. My name is Mark. My handle
-on the forums is Andrew and today I'll be showing you how to get started with creating your own
+on the forums is andro and today I'll be showing you how to get started with creating your own
 projects and patches inside of cables. So if you haven't registered yet please head over to cables.gl register as we just launched a public beta and then come back over here and we'll continue
 with this video. So I'm going to go over here to create and I'm going to make an empty project and
 click it. Now we're not done anything yet but I just want to show you that when you're working on

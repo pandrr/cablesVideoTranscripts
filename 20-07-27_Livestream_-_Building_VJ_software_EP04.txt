@@ -84,7 +84,7 @@ patches later. So it's just a one-time process basically. So,
 and I really love this one function. It stops you just having to create an op and then pick the right
 CC and everything like that. So real awesome time saver. Okay.
 Let's just align these. Okay. Almost there. So as you can see, I'm just building what the controller basically looks like.
-Now you might be thinking, why is Andrew disconnecting all that stuff? Well, you'll see that in a minute.
+Now you might be thinking, why is andro disconnecting all that stuff? Well, you'll see that in a minute.
 I mean, I just want to keep the patch nice and tidy. So a little explanation there. I'm going to press
 F to go into flow mode. So if I turn a knob, you can see activity. So this is CC data. So we've got
 event data, which is all of the MIDI data that comes out of this, just like everything. We have note data,

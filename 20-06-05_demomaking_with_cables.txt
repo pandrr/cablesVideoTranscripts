@@ -65,7 +65,7 @@ Yeah.
 Let's see, um, how long this takes, but I think we can do this in like two hours or something and have a, have a, have a decent setup.
 Um, yeah.
 Okay.
-So, so if you have questions, ask us, there's, um, steam war in the chat and, um, Mark or Andrew will also read it.
+So, so if you have questions, ask us, there's, um, steam war in the chat and, um, Mark or andro will also read it.
 Um, I will also try to read it, but I'm mostly patching probably.
 So if you have any questions about anything, just, uh, just say so.
 Um, and yeah, so, uh, what I want to say is about the content.
@@ -1419,7 +1419,7 @@ Um, this is already half, half of the rent, right? Um, and, um, and yeah, just d
 Um, the most important thing is basically to have like the scenes and they look good and they fit together. And, and this is the kind of stuff.
 Uh, one thing I was thinking of pandur before you carry on is, um, you know, so a lot of people that make demos, everybody, it's a collaborative effort, right?
 It could be one person making all the visuals and one person doing the music. Maybe there's two people working on the visuals. So imagine that pandur would want to make me a collaborator of this patch, right?
-You know, normally his patch would be private right now, but he's like, Hey, Andrew, I want you to go in there and paste that stuff that you've been working on and put it in there.
+You know, normally his patch would be private right now, but he's like, Hey, andro, I want you to go in there and paste that stuff that you've been working on and put it in there.
 So you can go to collaborators. You can type in the name of the user there. Uh, you hit the send invitation button. I will, if I accept that invitation, I now have access to that patch together with pandur. Um, and you don't want to both be working on it on the same time.
 Cause you know, you've only got one state that you can save, but you could arrange of each of like, Hey, you're going to work on a patch tomorrow. Cool. And basically you can do that without publishing your secret demo.
 So yeah, most of the time we have like one, one person that is basically like the master of the demo, like the, um, the one who puts stuff in here.

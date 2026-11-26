@@ -989,7 +989,7 @@ So we wanted this for a long time.
 So finally we have it.
 Um, super handy, I think.
 So that's the math array ops, uh, math expression ops.
-I think also like, uh, uh, uh, Andrew Mark will show it in some tutorials.
+I think also like, uh, uh, uh, andro Mark will show it in some tutorials.
 Um, I, I'm pretty sure about that for a particle systems or something like this.
 It's super handy.
 Also super duper.
@@ -1215,7 +1215,7 @@ You're pressing O and not P.
 Uh, right.
 Um, we got this patch statistics.
 Um, do you remember what's the record on that one?
-Aren't like Andrew?
+Aren't like andro?
 I think four and a half thousand ops.
 Yeah.
 Yeah.
@@ -1488,7 +1488,7 @@ I don't see it because it's under the floor.
 Yeah.
 Yeah.
 So for this, I would say we just use a, and let's just ignore this for now.
-This can be solved with ArrayMath like Andrew showed this a million times.
+This can be solved with ArrayMath like andro showed this a million times.
 I'm just lazy and remove the rectangle.
 And then we have, we have it going through around the cube.
 So now I will use the look at camera for this.
@@ -1527,7 +1527,7 @@ I don't know.
 I don't know.
 I don't know.
 Do we have this?
-Like, Andrew would know this.
+Like, andro would know this.
 Uh, so what you could do is like, you sort the array, uh, sort array three.
 No.
 Uh, what are you trying to do?
@@ -1585,7 +1585,7 @@ So, uh, that's, that's not working.
 Yeah.
 Yeah.
 We need some more array ops, I guess.
-We need to show this Andrew.
+We need to show this andro.
 Then you, when he's back from vacation, like he will fix this in one day, probably.
 Or he knows already a solution, but, um, yeah, so, um, it's quite strange that we don't have this sort thing because that would solve it.
 Because we have this array crop and you could say like sort this and then crop by half of it, because it's probably like roughly half of the points are below.

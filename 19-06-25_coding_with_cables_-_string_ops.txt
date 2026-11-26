@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=SuhEH3TQvT4
 Hi there, and welcome to another video of coding with cables. My name is Mark. My handle on the
-forums is Andrew. And today, I'll be giving you an introduction with how to get started with
+forums is andro. And today, I'll be giving you an introduction with how to get started with
 creating your own basic string ops inside of cables. So without further ado, let's get started.
 I'm going to click on the patch, press escape. And I'm going to call my op, my string op,
 I'm going to click this button, create ops dot user dot and draw my string op. Editor pops up. I'm

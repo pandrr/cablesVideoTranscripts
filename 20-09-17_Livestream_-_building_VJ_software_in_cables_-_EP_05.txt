@@ -122,7 +122,7 @@ working it's not activated so i'll go here to loop midi live controllers okay i'
 into flow mode and if you watch my hands for a minute this is now the bcf 2000 coming again but on
 the same device we have the launch pad right so that's how we get around this limitation uh basically
 so we're just streaming the the midi through okay so far so good so that's not so difficult if you
-just know how to do it so let's go back to live you might be thinking andrew why would you be doing
+just know how to do it so let's go back to live you might be thinking andro why would you be doing
 this well basically like i said i want to use this as my master midi clock right so i'm going to go to
 midi learn here and what this allows me to do is if you're not familiar with live and midi it allows me
 to click on any of the elements on the screen now that is this kind of bluey color i click it if i press a
